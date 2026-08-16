@@ -1,0 +1,15 @@
+[
+  {
+    "id": "iktisat",
+    "title": "İktisat Defteri",
+    "subtitle": "Bilimi ve tarihi bir arada",
+    "description": "Kavramları örneklerle öğren, interaktif grafiklerle sına, düşünce tarihini zaman çizelgesinde izle.",
+    "icon": "📈",
+    "accent": "#1b6b4f",
+    "accentDark": "#5cc79c",
+    "lessons": 35,
+    "questions": 105,
+    "charts": 21,
+    "file": "courses/iktisat.json"
+  }
+]
