@@ -236,5 +236,19 @@
     "questions": 36,
     "charts": 4,
     "file": "courses/biyoloji.json"
+  },
+  {
+    "id": "kuantum",
+    "title": "Kuantum fiziği",
+    "subtitle": "Kriz, kuram, sonuçlar",
+    "description": "Kara cisim ışımasından dolanıklığa: yirminci yüzyılın en tuhaf ve en çok sınanmış kuramı ne söylüyor, neyi söylemiyor ve hangi teknolojilerin altında duruyor.",
+    "icon": "⚛️",
+    "accent": "#4a4fb0",
+    "accentDark": "#a0a5f2",
+    "category": "klasik",
+    "lessons": 12,
+    "questions": 36,
+    "charts": 5,
+    "file": "courses/kuantum.json"
   }
 ]

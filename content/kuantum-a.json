@@ -1,0 +1,484 @@
+[
+  {
+    "id": "kara-cisim-krizi",
+    "moduleId": "kriz",
+    "order": 1,
+    "title": "Kriz: sıcak bir cisim ne yayar",
+    "subtitle": "Klasik fizik sonsuz enerji öngördü ve orada bitti.",
+    "minutes": 9,
+    "keyTerms": ["kuantum", "kara cisim ışıması", "Planck sabiti", "Wien yasası"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Ondokuzuncu yüzyılın sonunda fizik neredeyse bitmiş sayılıyordu. Geriye birkaç küçük pürüz kalmıştı ve bunlardan biri şuydu: sıcak bir cisim hangi dalga boylarında ne kadar ışık yayar? Soru sıradan görünüyordu — bir demirci ısınan demirin önce kızıla, sonra sarıya, sonra beyaza döndüğünü zaten biliyordu. Ama klasik fizikle hesaplandığında cevap saçmaydı."
+      },
+      { "kind": "chart", "chartId": "kara-cisim" },
+      {
+        "kind": "text",
+        "body": "Klasik hesap, kısa dalga boylarına gidildikçe yayılan gücün sınırsız arttığını söylüyordu. Buna göre sobanın önünde oturan biri sonsuz miktarda morötesi ışınla kavrulmalıydı. Bu sonuca 'ultraviyole faciası' dendi ve tam olarak bir facia olduğu için ciddiye alınmak zorunda kalındı. Planck 1900'de doğru eğriyi veren bir formül türetti, ama bunu ancak tuhaf bir varsayımla yapabildi: enerji sürekli değil, ancak belirli paketler hâlinde alınıp verilebilir."
+      },
+      {
+        "kind": "formula",
+        "title": "Bir paketin enerjisi",
+        "expression": "E = h · f"
+      },
+      {
+        "kind": "list",
+        "title": "Bu varsayımın anlamı",
+        "items": [
+          "Enerji, su gibi istenen miktarda değil, ancak tam sayıda paket olarak aktarılır.",
+          "Paketin büyüklüğü frekansla artar: yüksek frekanslı ışığın paketi daha pahalıdır.",
+          "Kısa dalga boylu titreşimler bu yüzden zor uyarılır ve klasik hesabın sonsuzluğu kesilir.",
+          "Planck sabiti o kadar küçüktür ki gündelik ölçekte hiçbir şey kesikli görünmez; bu yüzden kuantum etkileri geç fark edildi.",
+          "Planck bu varsayıma yıllarca inanmadı ve onu 'çaresizlikten yapılmış bir hile' diye nitelendirdi."
+        ]
+      },
+      {
+        "kind": "example",
+        "title": "Renginden sıcaklığını okumak",
+        "body": "Sıcaklık arttıkça en çok yayılan dalga boyu kısalır. Bir yıldıza bakıp rengini ölçerek yüzey sıcaklığını hesaplayabilirsiniz: kırmızı yıldızlar üç bin, Güneş beş bin sekiz yüz, mavi yıldızlar otuz bin kelvin civarındadır. Aynı kural termal kameranın, kızılötesi ateş ölçerin ve fırın telinin renginden sıcaklık tahmininin de temelidir. Güneş'in en çok yaydığı dalga boyunun gözümüzün en duyarlı olduğu yere denk gelmesi ise tesadüf değil: göz, o ışığın altında evrildi."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "'Ultraviyole faciası' nedir?",
+        "options": [
+          "Morötesi ışığın zararlı olması",
+          "Klasik fiziğin, kısa dalga boylarına doğru sonsuz enerji yayımı öngörmesi",
+          "Bir deney kazası",
+          "Güneş'in morötesi yayması"
+        ],
+        "answerIndex": 1,
+        "explanation": "Hesap, sobanın önünde oturan birinin sonsuz morötesiyle kavrulmasını gerektiriyordu. Bu açık saçmalık, kuantum varsayımını zorunlu kıldı."
+      },
+      {
+        "id": "q2",
+        "prompt": "Planck'ın varsayımı neydi?",
+        "options": [
+          "Işık dalga değil parçacıktır",
+          "Enerji sürekli değil, belirli paketler hâlinde alınıp verilir",
+          "Atomlar bölünemez",
+          "Isı bir sıvıdır"
+        ],
+        "answerIndex": 1,
+        "explanation": "Paket büyüklüğü frekansla artar. Yüksek frekanslı titreşimlerin uyarılması pahalı hâle gelince klasik hesabın sonsuzluğu kesilir."
+      },
+      {
+        "id": "q3",
+        "prompt": "Kuantum etkilerinin gündelik hayatta görünmemesinin sebebi nedir?",
+        "options": [
+          "Kuralların büyük ölçekte değişmesi",
+          "Planck sabitinin çok küçük olması; paketlerin ayırt edilemeyecek kadar ince olması",
+          "Ölçüm aletlerinin yetersizliği",
+          "Sıcaklığın düşük olması"
+        ],
+        "answerIndex": 1,
+        "explanation": "Kesiklilik her ölçekte vardır ama paket büyüklüğü o kadar küçüktür ki makro dünyada süreklilik gibi görünür."
+      }
+    ]
+  },
+  {
+    "id": "foton",
+    "moduleId": "kriz",
+    "order": 2,
+    "title": "Fotoelektrik olay",
+    "subtitle": "Işığın şiddeti değil, rengi belirleyici çıktı.",
+    "minutes": 8,
+    "keyTerms": ["foton", "fotoelektrik olay", "eşik frekansı"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Bir metal yüzeye ışık düşürdüğünüzde elektron kopabilir. Klasik dalga kuramına göre bu basit olmalıydı: ışık ne kadar şiddetliyse elektronlar o kadar çok enerji alır ve o kadar hızlı fırlar. Zayıf ışıkta ise elektronun yeterli enerjiyi biriktirmesi biraz zaman alır ama sonunda yine kopar. Ölçüm bunların hiçbirini doğrulamadı."
+      },
+      {
+        "kind": "list",
+        "title": "Ölçülenler",
+        "items": [
+          "Belirli bir frekansın altında hiç elektron kopmaz — ışık ne kadar şiddetli olursa olsun.",
+          "Eşiğin üstünde ise elektron anında kopar; beklenen gecikme hiç görülmez.",
+          "Kopan elektronun hızı ışığın şiddetine değil, frekansına bağlıdır.",
+          "Şiddeti artırmak elektronların hızını değil, sayısını artırır.",
+          "Eşik frekansı metale göre değişir; bu, elektronu tutan bağın gücüyle ilgilidir."
+        ]
+      },
+      {
+        "kind": "text",
+        "title": "Einstein'ın açıklaması",
+        "body": "Bu sonuçların hepsi tek bir varsayımla açıklanır: ışık, enerjisi frekansıyla orantılı paketler hâlinde gelir ve bir elektron ancak tek bir paketle etkileşir. Paket yeterince büyük değilse elektron kopmaz; kaç tane küçük paket gelirse gelsin fark etmez. Bu, birikimli bir süreç değil, hep ya hiç bir alışveriştir. Işığın şiddeti paket sayısını, frekansı ise her bir paketin gücünü belirler."
+      },
+      {
+        "kind": "formula",
+        "title": "Kopan elektronun enerjisi",
+        "expression": "E = h·f − W"
+      },
+      {
+        "kind": "example",
+        "title": "Nerede karşınıza çıkar",
+        "body": "Güneş paneli tam olarak bu olayla çalışır: bant aralığından küçük enerjili fotonlar hiçbir işe yaramaz, çok büyük enerjili olanlarınsa fazlası ısıya gider. Bu iki kayıp, tek katmanlı bir panelin verimine kuramsal bir tavan koyar. Otomatik kapı sensörleri, fotoğraf makinesinin ışık ölçeri ve gece görüş cihazları da aynı ilkeye dayanır. Einstein'ın Nobel ödülü göreliliğe değil, bu açıklamaya verilmiştir."
+      },
+      {
+        "kind": "quote",
+        "text": "Işığın enerjisi uzayda sürekli dağılmış değil, sonlu sayıda enerji paketinden oluşuyor gibi düşünülebilir.",
+        "source": "Albert Einstein, 1905"
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Eşik frekansının altındaki çok şiddetli bir ışık ne yapar?",
+        "options": [
+          "Yavaş yavaş elektron koparır",
+          "Hiç elektron koparmaz",
+          "Elektronları hızlandırır",
+          "Metali eritir"
+        ],
+        "answerIndex": 1,
+        "explanation": "Elektron tek bir paketle etkileşir. Paket yeterince güçlü değilse kaç tane geldiğinin önemi yoktur; bu, ışığın tanecikli olduğunun doğrudan kanıtıdır."
+      },
+      {
+        "id": "q2",
+        "prompt": "Işığın şiddetini artırmak ne değiştirir?",
+        "options": [
+          "Kopan elektronların hızını",
+          "Kopan elektronların sayısını",
+          "Eşik frekansını",
+          "Hiçbir şeyi"
+        ],
+        "answerIndex": 1,
+        "explanation": "Şiddet paket sayısını belirler, frekans ise her paketin enerjisini. Hız yalnızca frekansa bağlıdır."
+      },
+      {
+        "id": "q3",
+        "prompt": "Güneş panelinin verimine tavan koyan iki kayıp nedir?",
+        "options": [
+          "Yansıma ve ısınma",
+          "Bant aralığından küçük enerjili fotonların hiç işe yaramaması ve büyük enerjili olanların fazlasının ısıya gitmesi",
+          "Bulut ve toz",
+          "Kablo kaybı ve gölge"
+        ],
+        "answerIndex": 1,
+        "explanation": "İki kayıp da fotoelektrik olayın doğrudan sonucudur ve tek katmanlı bir panelin kuramsal verim sınırını belirler."
+      }
+    ]
+  },
+  {
+    "id": "atom-modelleri",
+    "moduleId": "kriz",
+    "order": 3,
+    "title": "Atom neden çökmüyor",
+    "subtitle": "Klasik fiziğe göre madde bir saniyenin milyarda birinde yok olmalıydı.",
+    "minutes": 8,
+    "keyTerms": ["tayf çizgileri", "enerji düzeyi", "Bohr modeli"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Altın yaprak deneyi, atomun kütlesinin çok küçük bir çekirdekte toplandığını ve geri kalanının boşluk olduğunu gösterdi. Bu, hemen bir felaket doğurdu: klasik elektromanyetizmaya göre çekirdek etrafında dönen bir elektron sürekli ışıma yapmalı, enerjisini kaybetmeli ve saniyenin milyarda biri içinde çekirdeğe düşmelidir. Yani klasik fizik, maddenin var olamayacağını söylüyordu."
+      },
+      {
+        "kind": "text",
+        "title": "Tayf çizgilerinin ipucu",
+        "body": "Aynı dönemde başka bir bilmece vardı. Isıtılan bir gaz her dalga boyunda değil, yalnızca belirli dalga boylarında ışık yayıyordu ve bu çizgi kalıbı her element için farklıydı — bir parmak izi gibi. Hidrojenin çizgilerinin dalga boyları basit bir sayı formülüyle veriliyordu ama kimse bu formülün neden çalıştığını bilmiyordu. İki bilmece de tek bir cevaba işaret ediyordu: elektron her enerjiye sahip olamaz."
+      },
+      {
+        "kind": "list",
+        "title": "Bohr'un önerisi",
+        "items": [
+          "Elektron yalnızca belirli enerji düzeylerinde bulunabilir; aradaki değerler yasaktır.",
+          "Bu düzeylerde dolaşırken ışıma yapmaz — bu bir varsayımdır, açıklama değil.",
+          "Işık ancak bir düzeyden diğerine atlarken yayılır ya da yutulur.",
+          "Yayılan ışığın enerjisi, iki düzey arasındaki farka tam olarak eşittir.",
+          "Model hidrojenin bütün çizgilerini doğru verdi; iki elektronlu helyumda çöktü.",
+          "Yanlış bir modeldi ama doğru soruyu sordu: enerji neden kesikli?"
+        ]
+      },
+      {
+        "kind": "example",
+        "title": "Tayf bir kimlik kartıdır",
+        "body": "Her elementin çizgi kalıbı benzersiz olduğu için, bir ışık kaynağının tayfına bakarak içinde hangi elementlerin bulunduğunu söyleyebilirsiniz. Helyum, Dünya'da bulunmadan önce Güneş'in tayfında keşfedildi ve adını buradan aldı. Bugün aynı yöntemle yıldızların bileşimini, ötegezegen atmosferlerini ve kan tahlilinizdeki element derişimlerini ölçüyoruz. Kuantum kuramının en pratik mirası, maddeyi uzaktan tanıyabilmektir."
+      },
+      {
+        "kind": "text",
+        "title": "Gerçek cevap",
+        "body": "Atomun neden çökmediğinin gerçek cevabı Bohr'un varsayımı değil, belirsizlik ilkesidir. Elektronu çekirdeğe yaklaştırdıkça konumu daha da belirlenmiş olur; bu da momentum belirsizliğini, dolayısıyla kinetik enerjiyi büyütür. Bir noktadan sonra bu enerji artışı, elektriksel çekimin kazandırdığı enerjiyi aşar. Atomun boyutu, bu iki eğilimin dengelendiği yerdir. Yani maddenin hacim kaplaması doğrudan kuantum kuramının sonucudur."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Klasik fiziğe göre atomdaki elektron ne yapmalıydı?",
+        "options": [
+          "Sonsuza kadar dönmeli",
+          "Sürekli ışıma yapıp enerjisini kaybederek çekirdeğe düşmeli",
+          "Çekirdekten kaçmalı",
+          "Hiç hareket etmemeli"
+        ],
+        "answerIndex": 1,
+        "explanation": "Hesaplanan çöküş süresi saniyenin milyarda biri mertebesindedir. Yani klasik fizik maddenin var olamayacağını söylüyordu."
+      },
+      {
+        "id": "q2",
+        "prompt": "Tayfın çizgili olmasının sebebi nedir?",
+        "options": [
+          "Ölçüm aletlerinin sınırı",
+          "Elektronun yalnızca belirli enerji düzeylerinde bulunabilmesi; ışığın ancak düzeyler arası farkla yayılması",
+          "Gazın seyrek olması",
+          "Işığın kırılması"
+        ],
+        "answerIndex": 1,
+        "explanation": "Aradaki enerjiler yasak olduğu için yalnızca belirli dalga boyları yayılır. Bu kalıp her element için benzersizdir."
+      },
+      {
+        "id": "q3",
+        "prompt": "Atomun boyutunu belirleyen şey nedir?",
+        "options": [
+          "Elektronun yörünge yarıçapı",
+          "Elektronu sıkıştırmanın kinetik enerjiyi artırması ile elektriksel çekimin dengelenmesi",
+          "Çekirdeğin büyüklüğü",
+          "Sıcaklık"
+        ],
+        "answerIndex": 1,
+        "explanation": "Belirsizlik ilkesi gereği elektronu sıkıştırmak pahalıdır. Maddenin hacim kaplaması doğrudan kuantum kuramının sonucudur."
+      }
+    ]
+  },
+  {
+    "id": "dalga-parcacik",
+    "moduleId": "kuram",
+    "order": 1,
+    "title": "Dalga mı, parçacık mı",
+    "subtitle": "Cevap: soru yanlış.",
+    "minutes": 10,
+    "keyTerms": ["madde dalgası", "girişim", "çift yarık deneyi", "kuantum silici"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Işığın dalga olduğu, iki yarıktan geçirilip ekranda çizgiler oluşturulduğunda kanıtlanmıştı. Fotoelektrik olay ise ışığın tanecikli olduğunu gösteriyordu. İki sonuç da sağlamdı ve birbiriyle çelişiyordu. 1924'te de Broglie, çelişkiyi çözmek yerine büyüttü: madde de dalga olabilir mi? Üç yıl sonra elektronlar bir kristalden geçirildi ve tıpkı ışık gibi kırınım deseni oluşturdu."
+      },
+      { "kind": "chart", "chartId": "cift-yarik" },
+      {
+        "kind": "text",
+        "body": "Deneyin asıl rahatsız edici kısmı, parçacıkları teker teker göndermekle ortaya çıkar. Ekrana her seferinde tek bir nokta düşer — yani parçacık gibi davranır. Ama binlerce nokta biriktiğinde ortaya girişim çizgileri çıkar. Tek bir parçacık, aynı anda iki yarıktan geçmiş ve kendisiyle girişmiş gibi davranmaktadır. Bu deney elektronla, nötronla, atomla ve bugün yüzlerce atomdan oluşan moleküllerle yapılmıştır; sonuç hep aynıdır."
+      },
+      {
+        "kind": "text",
+        "title": "Bakmak neden bozuyor",
+        "body": "Hangi yarıktan geçtiğini ölçmeye kalktığınızda çizgiler kaybolur. Yaygın açıklama, ölçüm aletinin parçacığa çarpıp yolunu bozmasıdır. Bu açıklama yanlış değildir ama eksiktir. Kuantum silici deneyleri, yol bilgisi hiç 'çarpma' olmadan kaydedildiğinde de desenin bozulduğunu, o bilgi geri dönülmez biçimde silindiğinde ise desenin geri geldiğini gösterir. Belirleyici olan aletin kabalığı değil, yol bilgisinin ilke olarak var olup olmamasıdır."
+      },
+      {
+        "kind": "list",
+        "title": "Neden bunu masada görmüyoruz",
+        "items": [
+          "Her nesnenin bir dalga boyu vardır ve bu, momentumla ters orantılıdır.",
+          "Bir elektronun dalga boyu atom boyutlarındadır; ölçülebilir.",
+          "Yürüyen bir insanın dalga boyu, atom çekirdeğinden trilyonlarca kat küçüktür.",
+          "Bu kadar küçük bir dalga boyuyla girişim yapmak için, atomdan küçük yarıklara ihtiyaç olurdu.",
+          "Yani kural değişmez; yalnızca etkisi ölçülemez hâle gelir.",
+          "Ayrıca büyük nesneler çevreyle sürekli etkileştiği için girişim yeteneğini hemen kaybeder."
+        ]
+      },
+      {
+        "kind": "quote",
+        "text": "Bu deneyde kuantum mekaniğinin bütün gizemi vardır.",
+        "source": "Richard Feynman, çift yarık deneyi üzerine"
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Parçacıklar çift yarığa teker teker gönderildiğinde ne olur?",
+        "options": [
+          "Girişim deseni oluşmaz",
+          "Her biri tek bir nokta bırakır ama biriktikçe girişim deseni ortaya çıkar",
+          "İki çizgi oluşur",
+          "Parçacıklar birbirine çarpar"
+        ],
+        "answerIndex": 1,
+        "explanation": "Parçacıklar birbiriyle değil, her biri kendisiyle girişir. Deney elektron, nötron, atom ve büyük moleküllerle tekrarlanmıştır."
+      },
+      {
+        "id": "q2",
+        "prompt": "Yol bilgisi ölçüldüğünde desenin bozulmasının en doğru açıklaması nedir?",
+        "options": [
+          "Alet parçacığa çarpar",
+          "Yol bilgisinin ilke olarak elde edilebilir hâle gelmesi; bilgi silinirse desen geri gelir",
+          "Ölçüm gürültü ekler",
+          "Parçacık yavaşlar"
+        ],
+        "answerIndex": 1,
+        "explanation": "Kuantum silici deneyleri, çarpma olmadan da desenin bozulduğunu ve bilgi silindiğinde geri geldiğini gösterir."
+      },
+      {
+        "id": "q3",
+        "prompt": "Gündelik nesnelerde dalga davranışı neden görünmez?",
+        "options": [
+          "Kurallar makro ölçekte değişir",
+          "Dalga boyları ölçülemeyecek kadar küçüktür ve nesneler çevreyle etkileşerek girişim yeteneğini hemen kaybeder",
+          "Nesneler çok yavaştır",
+          "Sıcaklık yüksektir"
+        ],
+        "answerIndex": 1,
+        "explanation": "Yürüyen bir insanın dalga boyu atom çekirdeğinden trilyonlarca kat küçüktür. Kural aynıdır, etkisi ölçülemez."
+      }
+    ]
+  },
+  {
+    "id": "dalga-fonksiyonu",
+    "moduleId": "kuram",
+    "order": 2,
+    "title": "Dalga fonksiyonu ve olasılık",
+    "subtitle": "Kuram, ne olacağını değil neyin ne olasılıkla olacağını söyler.",
+    "minutes": 9,
+    "keyTerms": ["dalga fonksiyonu", "Born kuralı", "üst üste binme", "orbital"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Schrödinger 1926'da, kuantum sistemlerinin zaman içinde nasıl evrildiğini veren denklemi yazdı. Denklemin çözümü olan nesneye dalga fonksiyonu denir ve sistem hakkında bilinebilecek her şeyi içerir. Bir sorun vardı: bu nesnenin neyi temsil ettiğini kimse bilmiyordu. Schrödinger onu gerçek bir madde dalgası sanıyordu. Born, birkaç ay sonra doğru yorumu verdi: karesi, bir sonucun olasılığını verir."
+      },
+      {
+        "kind": "text",
+        "title": "Denklemin kendisi belirlenimcidir",
+        "body": "Sık kaçırılan bir incelik: Schrödinger denklemi tamamen belirlenimcidir. Dalga fonksiyonunu bir anda bilirseniz, her sonraki anda ne olacağını kesin olarak hesaplarsınız. Olasılık, denklemin evriminde değil, ölçüm sonucunda ortaya çıkar. Kuramın tuhaflığı bu iki parçanın birbirine dikilmiş olmasıdır: pürüzsüz ve belirlenimci bir evrim, artı ölçüm anında olasılıkla tek bir sonuca inme. İkincisinin nasıl ve neden olduğu, doksan yıldır açık duran sorudur."
+      },
+      {
+        "kind": "list",
+        "title": "Üst üste binme ne demek değildir",
+        "items": [
+          "'Aynı anda iki yerde olmak' popüler ama yanıltıcı bir ifadedir.",
+          "'Hangisi olduğunu bilmiyoruz' da yanlıştır; bilgisizlik olsaydı girişim deseni oluşmazdı.",
+          "Doğru ifade daha soğuktur: sistemin durumu, iki olasılığın toplamıyla tanımlanır ve bu toplamın kendisi ölçülebilir sonuçlar üretir.",
+          "Girişim, tam olarak bu toplamın varlığının kanıtıdır — bilgisizlik girişim yapmaz.",
+          "Ölçüm yapıldığında tek bir sonuç görülür ve o sonuç bir daha değişmez."
+        ]
+      },
+      {
+        "kind": "example",
+        "title": "Orbital bir yörünge değildir",
+        "body": "Ders kitaplarındaki atom resimlerinde elektronlar çekirdeğin etrafında elips çizer. Bu resim yanlıştır. Elektronun bir yolu yoktur; olan şey, bulunma olasılığının uzaydaki dağılımıdır ve buna orbital denir. Bazı orbitallerin tam ortasında elektronun bulunma olasılığı sıfırdır — yani elektron bir yandan diğerine 'geçmez', çünkü zaten bir yol izlemiyordur. Kimyanın bütün bağ geometrisi, bu bulutların biçiminden çıkar."
+      },
+      {
+        "kind": "text",
+        "title": "Ne kadar iyi çalışıyor",
+        "body": "Bütün bu tuhaflığa rağmen kuantum kuramı, insanın ürettiği en hassas doğrulanmış kuramdır. Elektronun manyetik özelliğine dair öngörüsü, ölçümle ondan fazla anlamlı basamağa kadar örtüşür — bu, İstanbul ile New York arasındaki mesafeyi bir saç teli kalınlığında bilmeye karşılık gelir. Kuramın yorumu tartışmalıdır; hesapları tartışmalı değildir."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Born kuralı ne der?",
+        "options": [
+          "Dalga fonksiyonu gerçek bir madde dalgasıdır",
+          "Dalga fonksiyonunun karesi, bir sonucun olasılığını verir",
+          "Elektron yörüngede döner",
+          "Enerji kesiklidir"
+        ],
+        "answerIndex": 1,
+        "explanation": "Bu yorum, kuramı deneyle bağlayan köprüdür ve kuramın olasılıkçı yapısını kalıcı hâle getirmiştir."
+      },
+      {
+        "id": "q2",
+        "prompt": "Schrödinger denkleminin kendisi belirlenimci midir?",
+        "options": [
+          "Hayır, rastgeledir",
+          "Evet; olasılık denklemin evriminde değil, ölçüm sonucunda ortaya çıkar",
+          "Kısmen",
+          "Yalnızca küçük sistemlerde"
+        ],
+        "answerIndex": 1,
+        "explanation": "Kuramın tuhaflığı, belirlenimci bir evrimle olasılıkçı bir ölçüm kuralının birbirine dikilmiş olmasıdır."
+      },
+      {
+        "id": "q3",
+        "prompt": "Üst üste binme ile 'hangisi olduğunu bilmemek' arasındaki fark nasıl gösterilir?",
+        "options": [
+          "Gösterilemez",
+          "Girişim deseniyle: bilgisizlik girişim üretmez, üst üste binme üretir",
+          "Ölçüm hassasiyetiyle",
+          "Sıcaklıkla"
+        ],
+        "answerIndex": 1,
+        "explanation": "Girişim, toplamın gerçekten var olduğunun deneysel kanıtıdır. Klasik bir bilgisizlik durumu böyle bir desen üretemez."
+      }
+    ]
+  },
+  {
+    "id": "belirsizlik-ilkesi",
+    "moduleId": "kuram",
+    "order": 3,
+    "title": "Belirsizlik ilkesi",
+    "subtitle": "Bilgisizlik değil, aynı anda var olmayan bir kesinlik.",
+    "minutes": 8,
+    "keyTerms": ["belirsizlik ilkesi", "dalga paketi", "sıfır nokta enerjisi"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Belirsizlik ilkesi en çok yanlış anlatılan kuantum sonucudur. Yaygın anlatım şöyledir: 'ölçmek için bakmak gerekir, bakmak için ışık göndermek gerekir, ışık parçacığa çarpar ve onu bozar.' Bu anlatı, sonucu doğru ama sebebi yanlış verir. İlke bir ölçüm beceriksizliğinden değil, dalga doğasının kendisinden çıkar."
+      },
+      { "kind": "chart", "chartId": "belirsizlik" },
+      {
+        "kind": "text",
+        "body": "Sebebi görmek için dalgaları düşünün. Belirli bir dalga boyuna sahip saf bir dalga, uzayda sonsuza kadar uzanır — nerede olduğunu soramazsınız. Dalgayı belirli bir yere sıkıştırmak için farklı dalga boylarındaki dalgaları üst üste bindirmeniz gerekir. Ne kadar dar bir paket isterseniz, o kadar çok farklı dalga boyu karıştırmanız gerekir. Kuantum kuramında dalga boyu momentum demektir. Yani konumu daraltmak, momentumu zorunlu olarak yaymaktır. Bu bir ölçüm sorunu değil, matematiksel bir zorunluluktur ve ses dalgalarında da aynen geçerlidir."
+      },
+      {
+        "kind": "formula",
+        "title": "Belirsizlik bağıntısı",
+        "expression": "Δx · Δp ≥ ħ / 2"
+      },
+      {
+        "kind": "list",
+        "title": "Somut sonuçları",
+        "items": [
+          "Atomun boyutu: elektronu sıkıştırmak kinetik enerjiyi büyütür; atom, bu maliyetin çekimi dengelediği yerde durur.",
+          "Sıfır nokta enerjisi: mutlak sıfırda bile hareket sıfırlanamaz. Helyum normal basınçta hiçbir sıcaklıkta donmaz.",
+          "Tayf çizgilerinin genişliği: kısa ömürlü bir düzeyin enerjisi tam belirli olamaz, çizgi kalınlaşır.",
+          "Tünelleme: parçacığın enerjisi ve konumu aynı anda kesin olmadığı için yasak bölgede bulunabilir.",
+          "Boş uzay boş değildir: enerji ve süre arasındaki benzer bağıntı, ölçülebilir vakum etkilerine yol açar.",
+          "Bunların hepsi ölçülmüştür; ilke bir felsefe değil, hesaplanabilir bir kısıttır."
+        ]
+      },
+      {
+        "kind": "example",
+        "title": "Ne kadar sıkı bir kısıt",
+        "body": "Bir elektronun konumunu bir atom çapı kadar bir aralığa sıkıştırırsanız, hız belirsizliği saniyede binlerce kilometreye çıkar. Aynı hesabı bir toz zerresi için yaparsanız, hız belirsizliği evrenin yaşı boyunca bir atom çapı kadar yol almasına yetmez. Kısıt her ikisinde de aynıdır; fark, kütlenin bölen olarak devreye girmesidir. Kuantum etkilerinin gündelik hayatta görünmemesinin sebebi tam olarak budur."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Belirsizlik ilkesinin kaynağı nedir?",
+        "options": [
+          "Ölçüm aletinin parçacığa çarpması",
+          "Dalga doğası: dar bir dalga paketi kurmak çok sayıda farklı dalga boyu gerektirir",
+          "Bilgi eksikliği",
+          "Teknolojik sınırlar"
+        ],
+        "answerIndex": 1,
+        "explanation": "Aynı matematiksel zorunluluk ses dalgalarında da geçerlidir. Dalga boyu momentum demek olduğu için konumu daraltmak momentumu yayar."
+      },
+      {
+        "id": "q2",
+        "prompt": "Sıfır nokta enerjisi nedir?",
+        "options": [
+          "Mutlak sıfırdaki enerji miktarı",
+          "Mutlak sıfırda bile kalan, sıfırlanamayan en küçük hareket",
+          "Boş uzayın enerjisi",
+          "Ölçüm hatası"
+        ],
+        "answerIndex": 1,
+        "explanation": "Hareket tümüyle durursa hem konum hem momentum kesinleşirdi. Helyumun normal basınçta hiç donmaması bunun görünür sonucudur."
+      },
+      {
+        "id": "q3",
+        "prompt": "Aynı kısıt neden toz zerresinde görünmez?",
+        "options": [
+          "Kural makro ölçekte geçerli değildir",
+          "Kütle bölen olarak devreye girdiği için hız belirsizliği ölçülemeyecek kadar küçülür",
+          "Toz zerresi ölçülemez",
+          "Sıcaklık etkisi baskındır"
+        ],
+        "answerIndex": 1,
+        "explanation": "Kısıt aynıdır. Toz zerresinde hız belirsizliği, evrenin yaşı boyunca bir atom çapı kadar yol almaya bile yetmez."
+      }
+    ]
+  }
+]

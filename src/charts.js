@@ -3138,5 +3138,214 @@
           "Küçük hayvanlar hızlı yaşayıp erken ölür, büyükler yavaş yaşayıp geç; ama kalpleri kabaca aynı sayıda atar. " +
           "İnsan bu kuralın dışındadır: tıbbın ve güvenli çevrenin sağladığı ömür, kütlemizin öngördüğünün çok üstünde." };
       }
+    },
+
+    /* ---- kuantum ---- */
+
+    "kara-cisim": {
+      title: "Ultraviyole faciası ve Planck'ın çözümü",
+      note: "Klasik fizik (Rayleigh-Jeans) kısa dalga boylarına doğru sonsuza gider: sıcak bir fırın sonsuz enerji yaymalıydı. Planck, enerjinin ancak belirli paketler hâlinde alınıp verilebildiğini varsayarak ölçümle tam örtüşen eğriyi elde etti — kuantum fikri buradan doğdu.",
+      controls: [{ key: "t", label: "Sıcaklık", min: 1000, max: 9000, step: 250, def: 5800,
+        fmt: function (v) { return v + " K"; } }],
+      draw: function (p) {
+        var h = 6.626e-34, c = 3e8, kb = 1.381e-23, T = p.t, i;
+        var L0 = 5e-8, L1 = 2.5e-6;
+        var X = function (l) { return (l - L0) / (L1 - L0); };
+        var planck = function (l) {
+          return ((2 * h * c * c) / Math.pow(l, 5)) / (Math.exp((h * c) / (l * kb * T)) - 1);
+        };
+        var rj = function (l) { return (2 * c * kb * T) / Math.pow(l, 4); };
+        var lmax = 2.898e-3 / T, BM = planck(lmax);
+        var pl = [], rl = [];
+        for (i = 0; i <= 90; i++) {
+          var l = L0 + ((L1 - L0) * i) / 90;
+          pl.push([i / 90, planck(l) / BM]);
+          rl.push([i / 90, Math.min(1.05, rj(l) / BM)]);
+        }
+        var s = frame("Dalga boyu", "Yayılan güç");
+        s += gRect(X(4e-7), 0, X(7e-7), 1, { c: "var(--accent)", o: 0.08, r: 0 });
+        s += gTxt(X(5.5e-7), 0.55, "görünür", { a: "middle", s: 8.5 });
+        s += gPoly(rl, { c: "var(--no)", w: 1.8, d: "4 3" });
+        s += gPoly(pl, { c: "var(--accent)", w: 2.6 });
+        s += gTxt(0.99, 0.55, "kesikli: klasik fiziğin öngörüsü", { a: "end", c: "var(--no)", b: 1, s: 8.5 });
+        if (X(lmax) > 0.02 && X(lmax) < 0.98) {
+          s += gDot(X(lmax), 1, { c: "var(--ink)" });
+          s += gTxt(X(lmax), 1, r0(lmax * 1e9) + " nm", {
+            a: X(lmax) > 0.6 ? "end" : "start", dx: X(lmax) > 0.6 ? -7 : 7, dy: 12, c: "var(--ink)", b: 1, s: 10 });
+        }
+        [[5e-7, "500 nm"], [1.5e-6, "1500"]].forEach(function (v) {
+          s += gTxt(X(v[0]), 0, v[1], { a: "middle", dy: 12, s: 8.5 });
+        });
+        var guc = 5.67e-8 * Math.pow(T, 4);
+        return { svg: s, text: T + " kelvinde en çok yayılan dalga boyu " + r0(lmax * 1e9) +
+          " nanometre ve yüzeyin yaydığı toplam güç metrekare başına " + r1(guc / 1e6) + " megawatt. " +
+          (lmax < 7e-7 && lmax > 4e-7
+            ? "Bu değer görünür ışığın tam ortasına düşüyor: Güneş'in yüzey sıcaklığı ile gözümüzün duyarlı olduğu aralık tesadüf değil, birlikte evrildi. "
+            : lmax >= 7e-7
+              ? "Bu sıcaklıktaki bir cisim çoğunlukla kızılötesi yayar; gözle görünmez ama termal kamerayla görünür. "
+              : "Bu sıcaklıkta yayılım morötesine kayar; yıldız mavi görünür. ") +
+          "Kesikli kırmızı eğri klasik fiziğin öngörüsüdür ve kısa dalga boylarına doğru sonsuza gider. " +
+          "Planck bunu, enerjinin sürekli değil paketler hâlinde alınıp verildiğini varsayarak düzeltti — ve kendisi de bu varsayımı yıllarca matematiksel bir hile saydı." };
+      }
+    },
+
+    "cift-yarik": {
+      title: "Çift yarık: bakmak deseni siliyor",
+      note: "Girişim deseni I ∝ cos²(πd·sinθ/λ) · sinc²(πa·sinθ/λ) ile hesaplandı. 'Hangi yarıktan geçti' bilgisini elde etmek deseni yok eder; bunun sebebi ölçüm aletinin kabalığı değil, yol bilgisinin var olmasının kendisidir.",
+      controls: [
+        { key: "g", type: "choice", label: "Düzenek", def: "acik", options: [
+          ["acik", "İki yarık açık"], ["olc", "Hangi yarık ölçülüyor"]] },
+        { key: "d", label: "Yarıklar arası mesafe", min: 10, max: 60, step: 5, def: 30,
+          fmt: function (v) { return v + " µm"; } },
+        { key: "l", label: "Dalga boyu", min: 400, max: 700, step: 25, def: 550,
+          fmt: function (v) { return v + " nm"; } }
+      ],
+      draw: function (p) {
+        var d = p.d * 1e-6, a = d / 4, lam = p.l * 1e-9, TH = 0.045, i;
+        var zarf = function (th) {
+          var u = (Math.PI * a * Math.sin(th)) / lam;
+          var sc = u === 0 ? 1 : Math.sin(u) / u;
+          return sc * sc;
+        };
+        var yog = function (th) {
+          var v = (Math.PI * d * Math.sin(th)) / lam;
+          return zarf(th) * Math.cos(v) * Math.cos(v);
+        };
+        var pts = [], zf = [];
+        for (i = 0; i <= 200; i++) {
+          var th = -TH + (2 * TH * i) / 200;
+          pts.push([i / 200, p.g === "olc" ? zarf(th) : yog(th)]);
+          zf.push([i / 200, zarf(th)]);
+        }
+        var s = frame("Ekrandaki konum", "Parçacık sayısı");
+        if (p.g === "acik") s += gPoly(zf, { c: "var(--muted)", w: 1.2, d: "3 3" });
+        s += gArea(pts.concat([[1, 0], [0, 0]]), { c: p.g === "olc" ? "var(--no)" : "var(--accent)", o: 0.2 });
+        s += gPoly(pts, { c: p.g === "olc" ? "var(--no)" : "var(--accent)", w: 2.4 });
+        s += gTxt(0.5, 0, "merkez", { a: "middle", dy: 12, s: 8.5 });
+        var arali = (lam / d) * 1000;
+        return { svg: s, text: p.g === "olc"
+          ? "Hangi yarıktan geçtiğini ölçtüğünüz anda çizgiler kayboluyor ve geriye tek bir tümsek kalıyor — yani parçacıkların iki ayrı delikten geçip toplanmış hâli. " +
+            "Desenin silinmesinin sebebi aletin parçacığa çarpması değil; yol bilgisinin ilke olarak elde edilebilir hâle gelmesidir. " +
+            "Bilgiyi kaydedip sonra silen deneylerde desen geri gelir."
+          : "İki yarık da açıkken ekranda çizgiler oluşuyor; çizgi aralığı yaklaşık " + r1(arali) +
+            " miliradyan. Şaşırtıcı olan şu: parçacıklar teker teker gönderildiğinde bile aynı desen birikiyor. " +
+            "Yani her parçacık kendi kendisiyle girişiyor. Kesikli eğri, tek yarığın çizeceği zarftır." };
+      }
+    },
+
+    "belirsizlik": {
+      title: "Belirsizlik: birini daralttıkça öteki genişler",
+      note: "Δx·Δp ≥ ħ/2. Bu bir ölçüm beceriksizliği değil, dalga doğasının doğrudan sonucudur: dar bir dalga paketi kurmak için çok sayıda farklı dalga boyunu üst üste bindirmek gerekir ve dalga boyu momentum demektir.",
+      controls: [{ key: "x", label: "Konum belirsizliği", min: 0, max: 40, step: 1, def: 20,
+        fmt: function (v) {
+          var d = 0.01 * Math.pow(10, v / 13.33);
+          return d < 1 ? r2(d) + " nm" : r1(d) + " nm";
+        } }],
+      draw: function (p) {
+        var sx = 0.01 * Math.pow(10, p.x / 13.33), s0 = 0.1, i;   // nm
+        var hbar = 1.055e-34, me = 9.109e-31;
+        var dv = hbar / (2 * me * sx * 1e-9);                     // m/s
+        var wx = Math.max(0.012, Math.min(0.075, 0.055 * (sx / s0)));
+        var wp = Math.max(0.012, Math.min(0.075, 0.055 * (s0 / sx)));
+        var gauss = function (c, w) {
+          var pts = [], j;
+          for (j = 0; j <= 60; j++) {
+            var u = c - 0.23 + (0.46 * j) / 60;
+            pts.push([u, Math.exp(-((u - c) * (u - c)) / (2 * w * w))]);
+          }
+          return pts;
+        };
+        var s = frame("", "Olasılık");
+        s += gLine(0.5, 0, 0.5, 1, { c: "var(--rule)", w: 1.2 });
+        var sol = gauss(0.26, wx), sag = gauss(0.74, wp);
+        s += gArea(sol.concat([[0.49, 0], [0.03, 0]]), { c: "var(--accent)", o: 0.18 });
+        s += gPoly(sol, { c: "var(--accent)", w: 2.4 });
+        s += gArea(sag.concat([[0.97, 0], [0.51, 0]]), { c: "var(--ok)", o: 0.18 });
+        s += gPoly(sag, { c: "var(--ok)", w: 2.4 });
+        s += gTxt(0.26, 0, "konum", { a: "middle", dy: 12, c: "var(--accent)", b: 1, s: 9 });
+        s += gTxt(0.74, 0, "hız", { a: "middle", dy: 12, c: "var(--ok)", b: 1, s: 9 });
+        return { svg: s, text: "Bir elektronun konumu " +
+          (sx < 1 ? r2(sx) : r1(sx)) + " nanometrelik bir aralığa sıkıştırılırsa, hızı en az " +
+          (dv > 1000 ? r0(dv / 1000) + " km/s" : r0(dv) + " m/s") + " belirsiz kalır. " +
+          (sx < 0.15
+            ? "Bu, bir atomun çapı mertebesindedir ve ortaya çıkan hız belirsizliği elektronun atom içindeki hızıyla aynı büyüklüktedir — atomun neden çöküp çekirdeğe düşmediğinin cevabı burada."
+            : "Aralık genişledikçe hız belirsizliği düşüyor; gündelik nesnelerde bu belirsizlik ölçülemeyecek kadar küçüktür. Kuantum etkilerinin masa üstünde görünmemesinin sebebi kuralın değişmesi değil, ħ'nin çok küçük olmasıdır.") };
+      }
+    },
+
+    "tunelleme": {
+      title: "Duvarın içinden geçmek",
+      note: "Geçiş olasılığı T ≈ 16·E(V−E)/V² · e^(−2κL) ile hesaplandı; engel yüksekliği 5 elektronvolt alındı. Üstel bağımlılık, taramalı tünelleme mikroskobunun tek tek atomları görebilmesinin sebebidir.",
+      controls: [
+        { key: "l", label: "Engel kalınlığı", min: 10, max: 200, step: 5, def: 60,
+          fmt: function (v) { return (v / 100).toFixed(2) + " nm"; } },
+        { key: "e", label: "Enerji / engel yüksekliği", min: 10, max: 90, step: 5, def: 50, fmt: pctS }
+      ],
+      draw: function (p) {
+        var V = 5, E = (p.e / 100) * V, me = 9.109e-31, hbar = 1.055e-34, q = 1.602e-19, i;
+        var kappa = Math.sqrt(2 * me * (V - E) * q) / hbar;
+        var on = (16 * E * (V - E)) / (V * V);
+        var T = function (L) { return Math.min(1, on * Math.exp(-2 * kappa * L)); };
+        var L1 = 2e-9;
+        var Y = function (t) { return Math.max(0, Math.min(1, (Math.log10(t) + 12) / 12)); };
+        var pts = [];
+        for (i = 0; i <= 80; i++) {
+          var L = (L1 * i) / 80;
+          pts.push([i / 80, Y(T(L))]);
+        }
+        var s = frame("Engel kalınlığı", "Geçme olasılığı");
+        [[1, "%100"], [1e-4, "on binde 1"], [1e-8, "yüz milyonda 1"]].forEach(function (v) {
+          s += gLine(0, Y(v[0]), 1, Y(v[0]), { c: "var(--rule)", w: 1, d: "2 4" });
+          s += gTxt(0.99, Y(v[0]), v[1], { a: "end", dy: -4, s: 8.5 });
+        });
+        s += gPoly(pts, { c: "var(--accent)", w: 2.6 });
+        var LL = (p.l / 100) * 1e-9, TT = T(LL);
+        s += gDot(LL / L1, Y(TT), { c: "var(--ink)" });
+        s += gTxt(LL / L1, Y(TT), TT > 0.01 ? "%" + r1(TT * 100) : TT.toExponential(1), {
+          a: LL / L1 > 0.6 ? "end" : "start", dx: LL / L1 > 0.6 ? -7 : 7, dy: -6, c: "var(--ink)", b: 1, s: 10 });
+        [[4e-10, "0,4 nm"], [1e-9, "1 nm"]].forEach(function (v) {
+          s += gTxt(v[0] / L1, 0, v[1], { a: "middle", dy: 12, s: 8.5 });
+        });
+        var kat = Math.exp(2 * kappa * 1e-10);
+        return { svg: s, text: "Klasik fizikte enerjisi engelin altında olan bir parçacık kesinlikle geçemez; kuantum kuramında geçme olasılığı " +
+          (TT > 0.01 ? "%" + r1(TT * 100) : TT.toExponential(1)) + ". " +
+          "Bağımlılık üsteldir: kalınlığı yalnızca bir atom çapı kadar (0,1 nm) artırmak olasılığı " + r1(kat) +
+          " kat düşürüyor. Taramalı tünelleme mikroskobu tam olarak bunu kullanır — akımın bu kadar keskin değişmesi, " +
+          "iğnenin yüzeydeki tek tek atomları ayırt etmesini sağlar. Güneş'in yanmasını sağlayan füzyon da bu olasılığa bağlıdır." };
+      }
+    },
+
+    "bell-esitsizligi": {
+      title: "Klasik bir açıklamanın aşamadığı sınır",
+      note: "CHSH birleşimi S = 3cos φ − cos 3φ olarak hesaplandı; kuantum kuramının iki parçacık korelasyonu için verdiği E(θ) = −cos θ bağıntısından çıkar. Yerel ve gizli değişkenlere dayanan her açıklama S ≤ 2 vermek zorundadır.",
+      controls: [{ key: "f", label: "Ölçüm açısı ayarı", min: 0, max: 90, step: 5, def: 45,
+        fmt: function (v) { return v + "°"; } }],
+      draw: function (p) {
+        var i;
+        var S = function (fi) {
+          var r = (fi * Math.PI) / 180;
+          return 3 * Math.cos(r) - Math.cos(3 * r);
+        };
+        var LO = 0, HI = 3.2, Y = function (v) { return Math.max(0, Math.min(1, (v - LO) / (HI - LO))); };
+        var pts = [];
+        for (i = 0; i <= 90; i++) pts.push([i / 90, Y(S(i))]);
+        var s = frame("Açı ayarı", "S değeri");
+        s += gRect(0, Y(2), 1, Y(2 * Math.SQRT2), { c: "var(--ok)", o: 0.1, r: 0 });
+        s += gLine(0, Y(2), 1, Y(2), { c: "var(--no)", w: 1.8, d: "4 3" });
+        s += gTxt(0.99, Y(2), "klasik sınır: 2", { a: "end", dy: 12, c: "var(--no)", b: 1, s: 8.5 });
+        s += gLine(0, Y(2 * Math.SQRT2), 1, Y(2 * Math.SQRT2), { c: "var(--ok)", w: 1.4, d: "3 3" });
+        s += gTxt(0.99, Y(2 * Math.SQRT2), "kuantum tavanı: 2,83", { a: "end", dy: -5, c: "var(--ok)", b: 1, s: 8.5 });
+        s += gPoly(pts, { c: "var(--accent)", w: 2.6 });
+        var s0 = S(p.f);
+        s += gDot(p.f / 90, Y(s0), { c: "var(--ink)" });
+        s += gTxt(p.f / 90, Y(s0), r2(s0), {
+          a: p.f > 55 ? "end" : "start", dx: p.f > 55 ? -7 : 7, dy: 12, c: "var(--ink)", b: 1, s: 10 });
+        [30, 60].forEach(function (v) { s += gTxt(v / 90, 0, v + "°", { a: "middle", dy: 12, s: 9 }); });
+        return { svg: s, text: "Bu ayarda kuantum kuramının öngördüğü S değeri " + r2(s0) + ". " +
+          (s0 > 2.001
+            ? "Bu sayı 2'nin üstünde ve orası önemli: yerel, gizli değişkenlere dayanan hiçbir açıklama 2'yi aşamaz. Yani sonuçlar 'parçacıklar zaten baştan anlaşmıştı' diye açıklanamaz."
+            : "Bu ayarda kuantum öngörüsü klasik sınırın altında kalıyor; ayrım görünmez. Deneyin ayrımı gösterebilmesi için açının doğru seçilmesi gerekir.") +
+          " En büyük ihlal 45°'de, 2√2 ≈ 2,83 değerinde. Deneyler 1970'lerden beri bu ihlali ölçüyor; 2015'te açıkları kapatılmış düzeneklerle sonuç kesinleşti ve 2022 Nobel Fizik Ödülü bu deneylere verildi." };
+      }
     }
   };

@@ -1,0 +1,476 @@
+[
+  {
+    "id": "spin-ve-pauli",
+    "moduleId": "kuram",
+    "order": 4,
+    "title": "Spin ve dışarlama ilkesi",
+    "subtitle": "Bir yasak, bütün kimyayı üretiyor.",
+    "minutes": 8,
+    "keyTerms": ["spin", "Pauli dışarlama ilkesi", "fermiyon", "bozon", "simetri ve korunum"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Elektronun, klasik karşılığı olmayan bir özelliği vardır: spin. Adı 'dönme' anlamına gelir ve ilk düşünüldüğünde elektronun kendi ekseni etrafında döndüğü sanılmıştı. Bu benzetme yanlıştır — hesap yapıldığında elektronun yüzeyinin ışıktan hızlı gitmesi gerekirdi. Spin, parçacığın taşıdığı ve dönmeyle aynı matematiksel yapıyı paylaşan içsel bir büyüklüktür; başka bir şeye indirgenemez."
+      },
+      {
+        "kind": "text",
+        "title": "İki tür parçacık",
+        "body": "Doğadaki bütün parçacıklar spin değerine göre ikiye ayrılır ve bu ayrım davranışlarını tümüyle belirler. Yarım spinli olanlara fermiyon denir: elektron, proton, nötron. Tam spinli olanlara bozon denir: foton ve benzerleri. Fark şudur: iki özdeş fermiyon aynı kuantum durumunu paylaşamaz, bozonlar ise seve seve aynı duruma yığılır. Bu tek cümlelik ayrım, maddenin katı olmasından lazerin çalışmasına kadar her şeyi açıklar."
+      },
+      {
+        "kind": "list",
+        "title": "Dışarlama ilkesinin sonuçları",
+        "items": [
+          "Elektronlar aynı düzeye yığılamadığı için atomlarda kabuklar oluşur.",
+          "Kabuk yapısı, periyodik tablonun bütün düzenini üretir: elementlerin neden sekizli gruplar hâlinde tekrarlandığı buradan çıkar.",
+          "Kimya, dış kabuktaki elektronların davranışıdır; yani bütün kimya bu yasağın sonucudur.",
+          "Madde hacim kaplar: elini masaya bastırdığında geçmemesinin sebebi elektrik itmesi değil, esas olarak bu ilkedir.",
+          "Beyaz cüce ve nötron yıldızları, çöküşe karşı bu ilkenin ürettiği basınçla direnir.",
+          "Bozonlarda tersi olur: aynı duruma yığılma, lazerin ve süperiletkenliğin temelidir."
+        ]
+      },
+      {
+        "kind": "example",
+        "title": "Periyodik tablo bir kuantum sonucudur",
+        "body": "Mendeleyev periyodik tabloyu, elementlerin özelliklerinin belirli aralıklarla tekrarlandığını fark ederek kurdu — ama neden tekrarlandığını bilmiyordu. Cevap kuantum kuramından geldi: her enerji düzeyi belirli sayıda elektron alabilir ve dışarlama ilkesi gereği fazlası bir sonraki kabuğa geçmek zorundadır. Dolayısıyla dış kabuğunda aynı sayıda elektron bulunan elementler benzer davranır. Kimyanın en temel düzeni, tek bir yasağın aritmetiğidir."
+      },
+      {
+        "kind": "text",
+        "title": "Simetri ve korunum",
+        "body": "Modern fiziğin düzenleyici ilkesi, her sürekli simetrinin bir korunum yasasına karşılık gelmesidir. Fizik yasalarının zamanla değişmemesi enerjinin korunmasını, konuma bağlı olmaması momentumun korunmasını, dönmeye göre değişmemesi açısal momentumun korunmasını verir. Parçacık fiziği bu fikrin üzerine kuruludur: parçacıklar, soyut simetri gruplarının temsilleri olarak sınıflandırılır. Türkiye'den Feza Gürsey'in çalışmaları da bu alanda, grup kuramını parçacık fiziğine uygulayan öncü katkılar arasındadır."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Elektronun spini için 'kendi ekseni etrafında dönüyor' demek neden yanlıştır?",
+        "options": [
+          "Elektron dönmez",
+          "Hesap yapıldığında yüzeyinin ışıktan hızlı gitmesi gerekirdi; spin başka bir şeye indirgenemeyen içsel bir büyüklüktür",
+          "Spin hayalidir",
+          "Elektron nokta değildir"
+        ],
+        "answerIndex": 1,
+        "explanation": "Benzetme matematiksel yapıyı doğru yakalar ama fiziksel resmi vermez. Spin klasik karşılığı olmayan bir özelliktir."
+      },
+      {
+        "id": "q2",
+        "prompt": "Periyodik tablodaki tekrarın sebebi nedir?",
+        "options": [
+          "Atom ağırlığı",
+          "Dışarlama ilkesi gereği her kabuğun belirli sayıda elektron alabilmesi ve fazlasının bir sonrakine geçmesi",
+          "Çekirdek yükü",
+          "Kimyasal bağlar"
+        ],
+        "answerIndex": 1,
+        "explanation": "Dış kabuğunda aynı sayıda elektron bulunan elementler benzer davranır. Kimyanın temel düzeni tek bir yasağın aritmetiğidir."
+      },
+      {
+        "id": "q3",
+        "prompt": "Bozonlarla fermiyonların davranış farkı nedir?",
+        "options": [
+          "Bozonlar daha ağırdır",
+          "Fermiyonlar aynı durumu paylaşamaz, bozonlar aynı duruma yığılabilir",
+          "Bozonlar yüksüzdür",
+          "Fermiyonlar daha hızlıdır"
+        ],
+        "answerIndex": 1,
+        "explanation": "Maddenin hacim kaplaması fermiyon davranışından, lazerin çalışması ise bozon davranışından gelir."
+      }
+    ]
+  },
+  {
+    "id": "dolaniklik",
+    "moduleId": "kuram",
+    "order": 5,
+    "title": "Dolanıklık ve Bell",
+    "subtitle": "Einstein bunu bir kusur diye gösterdi; deney kusurun doğa olduğunu söyledi.",
+    "minutes": 10,
+    "keyTerms": ["dolanıklık", "Bell eşitsizliği", "yerellik", "sinyal gönderilemezliği"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "İki parçacık öyle bir ortak durumda hazırlanabilir ki, ayrı ayrı hiçbirinin tanımlı bir özelliği olmaz — yalnızca ikisi birlikte tanımlıdır. Buna dolanıklık denir. Birini ölçtüğünüzde çıkan sonuç rastgeledir; ama diğerini ölçen kişi, sizinkiyle kusursuz biçimde ilişkili bir sonuç bulur. Aradaki mesafe ne olursa olsun."
+      },
+      {
+        "kind": "text",
+        "title": "Einstein'ın itirazı",
+        "body": "1935'te Einstein ve iki arkadaşı bunu kuramın eksikliğini göstermek için öne sürdü. Argüman şuydu: eğer bir parçacığı ölçmek diğerinin durumunu anında belirliyorsa, ya uzaktan anlık bir etki vardır — ki görelilikle çelişir — ya da parçacıklar sonucu baştan beri taşıyordu ve kuram bunu göremiyor. İkinci seçeneğe 'gizli değişkenler' denir ve makul görünür: iki eldiven ayrı kutulara konur, birini açan diğerinin hangisi olduğunu anında bilir. Ortada gizem yoktur."
+      },
+      {
+        "kind": "text",
+        "title": "Bell'in katkısı",
+        "body": "Tartışma otuz yıl boyunca felsefe sayıldı, çünkü iki seçeneği ayırt edecek bir deney yoktu. 1964'te Bell bunu değiştirdi. Gösterdi ki, eğer sonuçlar baştan belirlenmişse ve uzaktan etki yoksa, farklı ölçüm açılarındaki korelasyonlar belirli bir sayısal sınırı aşamaz. Kuantum kuramı ise bu sınırın üstünde bir değer öngörüyordu. Yani soru artık felsefi değil, ölçülebilirdi."
+      },
+      { "kind": "chart", "chartId": "bell-esitsizligi" },
+      {
+        "kind": "text",
+        "body": "Deneyler 1970'lerde başladı, 1982'de ölçüm açılarının parçacıklar yoldayken değiştirilmesiyle en ciddi açık kapatıldı ve 2015'te bilinen bütün açıkları aynı anda kapatan düzeneklerle tartışma pratikte sona erdi. Sonuç her seferinde aynı: sınır aşılıyor. Bunun anlamı, doğanın 'yerel gizli değişkenler' resmiyle açıklanamayacağıdır. 2022 Nobel Fizik Ödülü bu deneylere verildi."
+      },
+      {
+        "kind": "list",
+        "title": "Ne demek değil",
+        "items": [
+          "Işıktan hızlı bilgi gönderilemez. Her iki tarafın da gördüğü şey rastgele bir dizidir; korelasyon ancak sonuçları klasik bir kanalla karşılaştırınca görünür.",
+          "Bir parçacığı 'ayarlayarak' diğerine mesaj yollayamazsınız; ölçüm sonucunu seçemezsiniz.",
+          "Dolanıklık bir bağ ya da kablo değildir; ortak bir hazırlanmışlıktır ve tek bir ölçümle tükenir.",
+          "Zihinle, niyetle ya da uzaktan şifayla hiçbir ilgisi yoktur; bu iddiaların kuramda karşılığı yoktur.",
+          "Kullanışlı olduğu yerler gerçek ve dar: kuantum anahtar dağıtımı, kuantum ışınlama protokolleri ve hassas ölçüm."
+        ]
+      },
+      {
+        "kind": "quote",
+        "text": "Uzaktan hayaletimsi etki.",
+        "source": "Einstein'ın dolanıklığı nitelemek için kullandığı ifade — bir eleştiriydi, sonradan alanın adı oldu"
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Bell'in katkısı neydi?",
+        "options": [
+          "Dolanıklığı keşfetmesi",
+          "Felsefi görünen tartışmayı, ölçülebilir bir sayısal sınıra dönüştürmesi",
+          "Deneyi yapması",
+          "Kuramı çürütmesi"
+        ],
+        "answerIndex": 1,
+        "explanation": "Yerel gizli değişkenlere dayanan her açıklamanın uymak zorunda olduğu bir eşitsizlik türetti. Soru böylece laboratuvara taşındı."
+      },
+      {
+        "id": "q2",
+        "prompt": "Bell deneylerinin sonucu nedir?",
+        "options": [
+          "Sınır aşılmadı, kuram yanlış çıktı",
+          "Sınır aşıldı: doğa yerel gizli değişkenlerle açıklanamaz",
+          "Sonuçlar çelişkili",
+          "Deney yapılamadı"
+        ],
+        "answerIndex": 1,
+        "explanation": "1982'de en ciddi açık, 2015'te bilinen bütün açıklar kapatıldı. 2022 Nobel Fizik Ödülü bu deneylere verildi."
+      },
+      {
+        "id": "q3",
+        "prompt": "Dolanıklık neden ışıktan hızlı bilgi göndermeye izin vermez?",
+        "options": [
+          "Sinyal çok zayıf olduğu için",
+          "Her iki tarafın gördüğü rastgele bir dizidir; korelasyon ancak klasik bir kanalla karşılaştırınca görünür",
+          "Mesafe kısıtı olduğu için",
+          "Ölçüm çok yavaş olduğu için"
+        ],
+        "answerIndex": 1,
+        "explanation": "Ölçüm sonucunu seçemezsiniz. Bu yüzden dolanıklık, göreliliğin sinyal hızı sınırıyla çelişmez."
+      }
+    ]
+  },
+  {
+    "id": "tunelleme-ders",
+    "moduleId": "sonuclar",
+    "order": 1,
+    "title": "Tünelleme",
+    "subtitle": "Yeterli enerjin yoksa bile geçebilirsin — bazen.",
+    "minutes": 8,
+    "keyTerms": ["tünelleme", "taramalı tünelleme mikroskobu", "alfa bozunması"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Klasik fizikte bir top, tepeyi aşacak enerjisi yoksa kesinlikle öbür tarafa geçemez. Kuantum kuramında ise parçacığın dalga fonksiyonu engelin içinde sıfıra düşmez, hızla söner. Engel yeterince inceyse, sönme tamamlanmadan öbür tarafa ulaşır ve orada sıfırdan farklı bir bulunma olasılığı kalır. Yani parçacık, aşamayacağı bir engelin öbür yanında bulunabilir."
+      },
+      { "kind": "chart", "chartId": "tunelleme" },
+      {
+        "kind": "text",
+        "body": "Grafiğin gösterdiği üstel bağımlılık, tünellemeyi hem şaşırtıcı hem son derece kullanışlı kılar. Kalınlıktaki çok küçük bir değişiklik, geçme olasılığını kat kat değiştirir. Taramalı tünelleme mikroskobu tam olarak bunu kullanır: keskin bir iğne yüzeye çok yaklaştırılır, aradaki tünelleme akımı ölçülür ve akım bu kadar keskin değiştiği için tek tek atomların yüksekliği ayırt edilebilir. İnsanlığın atomları ilk kez tek tek görüntülemesi bu ilkeyle oldu."
+      },
+      {
+        "kind": "list",
+        "title": "Nerede karşımıza çıkıyor",
+        "items": [
+          "Güneş: çekirdeklerin birbirine yaklaşması için gereken enerji, Güneş'in merkezindeki sıcaklıkta bile yetersizdir. Füzyon tünellemeyle olur — yani Güneş kuantum kuramı sayesinde yanar.",
+          "Alfa bozunması: çekirdekten parçacık kaçması, tünelleme olasılığının yarı ömrü belirlemesiyle açıklanır. Yarı ömürlerin milyar kat farklı olabilmesinin sebebi üstel bağımlılıktır.",
+          "Flash bellek: bilgiyi yazmak ve silmek için elektronlar ince bir yalıtkanın içinden tünellenir.",
+          "Enzimler: bazı tepkimelerde proton transferi tünellemeyle hızlanır.",
+          "Transistör küçüldükçe sorun: kapı yalıtkanı birkaç atom kalınlığına inince elektronlar istenmeden sızar. Çip küçültmenin fiziksel sınırlarından biri budur."
+        ]
+      },
+      {
+        "kind": "example",
+        "title": "Neden duvardan geçemiyorsunuz",
+        "body": "Aynı formülü insan için uygularsanız, geçme olasılığı o kadar küçük çıkar ki bilim insanları bunu ifade etmek için evrenin yaşını bile yetersiz bulur. Sebep kütledir: sönme hızı kütlenin kareköküyle büyür ve insan kütlesi elektronunkinin on üzeri yirmi dokuz katıdır. Kural aynıdır, sonuç ölçülemez. Kuantum kuramının 'her şey mümkün' anlamına gelmediğini gösteren en somut örneklerden biridir."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Tünelleme olasılığı engel kalınlığına nasıl bağlıdır?",
+        "options": [
+          "Doğrusal",
+          "Üstel: küçük bir kalınlık artışı olasılığı kat kat düşürür",
+          "Ters orantılı",
+          "Bağlı değildir"
+        ],
+        "answerIndex": 1,
+        "explanation": "Bu keskin bağımlılık, taramalı tünelleme mikroskobunun tek tek atomları ayırt edebilmesinin sebebidir."
+      },
+      {
+        "id": "q2",
+        "prompt": "Güneş'in yanmasıyla tünellemenin ilişkisi nedir?",
+        "options": [
+          "İlişkisi yoktur",
+          "Merkezdeki sıcaklık bile çekirdekleri birleştirmeye yetmez; füzyon tünellemeyle gerçekleşir",
+          "Tünelleme Güneş'i soğutur",
+          "Yalnızca yüzeyde etkilidir"
+        ],
+        "answerIndex": 1,
+        "explanation": "Klasik hesapla Güneş'in yanmaması gerekirdi. Kuantum tünellemesi olmadan yıldızlar enerji üretemezdi."
+      },
+      {
+        "id": "q3",
+        "prompt": "İnsanın duvardan tünellememesinin sebebi nedir?",
+        "options": [
+          "Kuralın makro ölçekte geçersiz olması",
+          "Sönme hızının kütleyle büyümesi; insan kütlesinde olasılığın ölçülemeyecek kadar küçük olması",
+          "Duvarın kalın olması",
+          "Enerjinin yetersiz olması"
+        ],
+        "answerIndex": 1,
+        "explanation": "Kural aynıdır, sonuç ölçülemez. Kuantum kuramı 'her şey mümkün' demez; olasılıkları hesaplanabilir biçimde verir."
+      }
+    ]
+  },
+  {
+    "id": "yorumlar",
+    "moduleId": "sonuclar",
+    "order": 2,
+    "title": "Ölçüm sorunu ve yorumlar",
+    "subtitle": "Kuram ne olacağını hesaplıyor; ne olduğunu söylemiyor.",
+    "minutes": 9,
+    "keyTerms": ["ölçüm sorunu", "çökme", "Kopenhag yorumu", "çok dünyalar yorumu", "eş uyumun kaybı", "gözlemci", "kuantum mistisizmi"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Kuantum kuramının iki parçası vardır. Birincisi Schrödinger denklemidir: pürüzsüz, belirlenimci ve son derece başarılı. İkincisi ölçüm kuralıdır: ölçüm yapıldığında birçok olasılık tek bir sonuca iner ve hangisinin çıkacağını yalnızca olasılıkla biliriz. Sorun şudur: birinci parça ikincisini içermez. Kuram, ölçümün ne olduğunu tanımlamaz — nerede biter Schrödinger evrimi, nerede başlar çökme?"
+      },
+      {
+        "kind": "list",
+        "title": "Başlıca yorumlar",
+        "items": [
+          "Kopenhag: dalga fonksiyonu doğanın kendisi değil, sonuçlara dair bilgimizdir; ölçümde çöker. En yaygın öğretilen yorumdur ve 'çökme'yi açıklamak yerine kabul eder.",
+          "Çok dünyalar: çökme yoktur; bütün sonuçlar gerçekleşir ve evren dallanır. Matematiği sadeleştirir, ontolojiyi ağırlaştırır ve olasılıkların nereden geldiğini açıklamakta zorlanır.",
+          "Pilot dalga: parçacıkların gerçek konumları vardır, bir dalga tarafından yönlendirilirler. Belirlenimcidir ama açıkça yerel değildir.",
+          "Nesnel çökme: çökme gerçek fiziksel bir süreçtir ve kütleyle hızlanır. Bu, öngörü üretir ve sınanmaktadır.",
+          "İlişkisel ve bilgi temelli yaklaşımlar: durum, sistemin kendisine değil sistemler arasındaki ilişkiye aittir.",
+          "Bugüne dek hiçbiri diğerinden ayırt edilebilir bir deney sonucu vermedi; hepsi aynı hesapları verir."
+        ]
+      },
+      {
+        "kind": "text",
+        "title": "Eş uyumun kaybı ne çözer, ne çözmez",
+        "body": "Bir sistem çevresiyle etkileştiğinde girişim yapabilme yeteneğini son derece hızlı kaybeder. Buna eş uyumun kaybı denir ve iyi anlaşılmış, hesaplanabilir ve ölçülmüş bir süreçtir. Kuantum tuhaflığının neden masa üstünde görünmediğini büyük ölçüde açıklar: bir toz zerresi, havadaki tek bir molekülle çarpışarak bile üst üste binme durumunu kaybeder. Ama tek bir sonucun neden gerçekleştiğini açıklamaz; yalnızca hangi sonuçların mümkün olduğunu daraltır. Ölçüm sorunu bu yüzden hâlâ açıktır."
+      },
+      {
+        "kind": "example",
+        "title": "'Gözlemci' bir zihin değildir",
+        "body": "Kuantum kuramındaki gözlemci, ölçüm yapan herhangi bir fiziksel düzenektir: bir dedektör, bir hava molekülü, bir fotoğraf plakası. Bilinçli olması gerekmez ve kuramda bilincin hiçbir rolü yoktur. Buna rağmen 'gözlem gerçekliği yaratır' cümlesi, kuantum kuramını bilinç, şifa, çekim yasası ve zihin gücüyle ilişkilendiren geniş bir alana kapı açtı. Bu iddiaların kuramda karşılığı yoktur. Fizikçilerin tuhaf bulduğu şey, evrenin zihnimize itaat etmesi değil; bir dedektörün varlığının bile deseni değiştirmesidir."
+      },
+      {
+        "kind": "quote",
+        "text": "Kuantum mekaniğini anladığını sanan biri, onu anlamamıştır.",
+        "source": "Richard Feynman'a atfedilir — kuramın hesaplarına değil, yorumuna dair bir söz"
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Ölçüm sorunu nedir?",
+        "options": [
+          "Ölçüm aletlerinin hassasiyeti",
+          "Kuramın, tek bir sonucun neden gerçekleştiğini söylememesi; ölçümün ne olduğunu tanımlamaması",
+          "Sonuçların tekrarlanamaması",
+          "Hesapların çok zor olması"
+        ],
+        "answerIndex": 1,
+        "explanation": "Schrödinger evrimi pürüzsüz ve belirlenimcidir; ölçüm kuralı ise ona dışarıdan eklenmiştir. Bu dikişin nerede olduğu belirsizdir."
+      },
+      {
+        "id": "q2",
+        "prompt": "Eş uyumun kaybı neyi açıklar?",
+        "options": [
+          "Tek bir sonucun neden gerçekleştiğini",
+          "Kuantum tuhaflığının büyük ölçekte neden görünmediğini",
+          "Belirsizlik ilkesini",
+          "Dolanıklığı"
+        ],
+        "answerIndex": 1,
+        "explanation": "Çevreyle etkileşim girişim yeteneğini hızla yok eder. Ama hangi sonucun çıkacağını açıklamaz; ölçüm sorunu açık kalır."
+      },
+      {
+        "id": "q3",
+        "prompt": "Kuantum kuramında 'gözlemci' nedir?",
+        "options": [
+          "Bilinçli bir varlık",
+          "Ölçüm yapan herhangi bir fiziksel düzenek; bir dedektör ya da hava molekülü de olabilir",
+          "Deneyi tasarlayan kişi",
+          "Kuramda böyle bir kavram yoktur"
+        ],
+        "answerIndex": 1,
+        "explanation": "Bilincin kuramda hiçbir rolü yoktur. 'Gözlem gerçekliği yaratır' cümlesinden çıkarılan mistik iddiaların kuramda karşılığı bulunmaz."
+      }
+    ]
+  },
+  {
+    "id": "teknoloji",
+    "moduleId": "sonuclar",
+    "order": 3,
+    "title": "Kuantumun teknolojisi",
+    "subtitle": "Bugünkü ekonominin önemli bir kısmı bu kuramın üstünde duruyor.",
+    "minutes": 8,
+    "keyTerms": ["lazer", "yarı iletken", "bant aralığı", "manyetik rezonans", "kuantum alan kuramı"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Kuantum kuramı çoğu zaman soyut ve uzak bir konu gibi anlatılır. Oysa cebinizdeki telefonun içindeki hiçbir parça, bu kuram olmadan tasarlanamazdı. Kuramın felsefi tartışması sürerken, mühendislik tarafı yirminci yüzyılın en büyük teknolojik dönüşümünü üretti ve bugün dünya ekonomisinin kayda değer bir bölümü doğrudan buna dayanıyor."
+      },
+      {
+        "kind": "list",
+        "title": "Doğrudan kuantum ürünleri",
+        "items": [
+          "Transistör ve bütün elektronik: yarı iletkenlerdeki enerji bantları ancak kuantum kuramıyla anlaşılır. Bilgisayarlar, telefonlar, otomobil elektroniği — hepsi buradan çıkar.",
+          "Lazer: bozonların aynı duruma yığılabilmesi ve uyarılmış ışıma. İnternet omurgasındaki fiber iletişim, göz ameliyatı, barkod, mesafe ölçümü.",
+          "LED ve güneş paneli: bant aralığı, ışığın rengini ve panelin verimini doğrudan belirler.",
+          "Manyetik rezonans: çekirdek spinlerinin manyetik alanda hizalanması. Tıpta ameliyatsız görüntülemenin temel aracı.",
+          "Atom saati: enerji düzeyleri arasındaki geçiş frekansı. GPS'in çalışması için nanosaniye hassasiyette zaman gerekir.",
+          "Flash bellek: tünelleme ile yazma ve silme.",
+          "Elektron mikroskobu: elektronun dalga boyu ışığınkinden binlerce kat kısa olduğu için çok daha küçük ayrıntı görülebilir."
+        ]
+      },
+      {
+        "kind": "text",
+        "title": "Ne kadar doğru",
+        "body": "Kuantum elektrodinamiği, ışık ile maddenin etkileşimini tarif eden kuram, insanın ürettiği en hassas doğrulanmış kuramdır. Elektronun manyetik özelliğine dair öngörüsü, ölçümle onuncu anlamlı basamağa kadar örtüşür. Karşılaştırma için: bu hassasiyet, Ay'a olan mesafeyi bir saç telinin kalınlığıyla bilmek gibidir. Kuramın yorumu üzerine anlaşamayan fizikçiler, hesapları üzerine hiç tartışmaz."
+      },
+      {
+        "kind": "example",
+        "title": "GPS iki kuramı birden kullanır",
+        "body": "Telefonunuzdaki konum servisi iki büyük yirminci yüzyıl kuramına aynı anda ihtiyaç duyar. Uydulardaki atom saatleri, kuantum kuramına dayanan enerji geçişleriyle çalışır. Bu saatlerin okuduğu zaman ise özel ve genel görelilik yüzünden yerdekinden farklı akar; günde otuz sekiz mikrosaniyelik düzeltme yapılmazsa konum hatası günde on kilometreyi bulur. Yani soyut sayılan iki kuram, düzeltmeleri yapılmazsa yolu şaşırmanıza yol açar."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Transistörün çalışması hangi kuantum kavramına dayanır?",
+        "options": [
+          "Dolanıklık",
+          "Yarı iletkenlerdeki enerji bantları ve bant aralığı",
+          "Tünelleme",
+          "Belirsizlik"
+        ],
+        "answerIndex": 1,
+        "explanation": "Bant yapısı ancak kuantum kuramıyla anlaşılır. Bütün modern elektronik bu anlayışın üstünde durur."
+      },
+      {
+        "id": "q2",
+        "prompt": "Kuantum elektrodinamiğinin doğruluğu ne düzeydedir?",
+        "options": [
+          "Kabaca doğru",
+          "Öngörüleri ölçümle onuncu anlamlı basamağa kadar örtüşür; bilinen en hassas doğrulanmış kuramdır",
+          "Yalnızca laboratuvarda geçerli",
+          "Tartışmalı"
+        ],
+        "answerIndex": 1,
+        "explanation": "Kuramın yorumu tartışmalıdır; hesapları değildir. Bu ayrımı korumak, kuramı doğru anlamanın parçasıdır."
+      },
+      {
+        "id": "q3",
+        "prompt": "GPS neden hem kuantum kuramına hem göreliliğe ihtiyaç duyar?",
+        "options": [
+          "Sinyal gücü için",
+          "Atom saatleri kuantum geçişlerine dayanır; okudukları zaman ise görelilik yüzünden yerdekinden farklı akar",
+          "Uydu yörüngesi için",
+          "Şifreleme için"
+        ],
+        "answerIndex": 1,
+        "explanation": "Günde otuz sekiz mikrosaniyelik düzeltme yapılmazsa konum hatası günde on kilometreye çıkar."
+      }
+    ]
+  },
+  {
+    "id": "kuantum-bilgisayar",
+    "moduleId": "sonuclar",
+    "order": 4,
+    "title": "Kuantum bilgisayar",
+    "subtitle": "Gerçek bir imkân ve gerçek bir abartı bir arada.",
+    "minutes": 9,
+    "keyTerms": ["kübit", "eş uyum süresi", "kuantum hata düzeltme", "Shor algoritması", "kuantum üstünlük", "kuantum anahtar dağıtımı"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Klasik bir bit ya sıfırdır ya birdir. Bir kübit, ölçülene kadar iki durumun üst üste binmesini taşıyabilir. Yaygın anlatı buradan şöyle devam eder: 'n kübit aynı anda 2ⁿ hesap yapar, dolayısıyla her şey çok daha hızlı olur.' Bu anlatı yanlıştır ve alanın en büyük yanlış anlaşılmasıdır. Ölçüm yaptığınızda geriye tek bir cevap kalır; bütün hüner, doğru cevabın olasılığını girişimle yükseltip yanlış cevapları söndürecek bir algoritma tasarlamaktır."
+      },
+      {
+        "kind": "list",
+        "title": "Ne için iyi, ne için değil",
+        "items": [
+          "İyi: moleküllerin ve malzemelerin kuantum davranışını benzetmek. Bu, aslında ilk önerilen kullanımdı ve en gerçekçi olanı.",
+          "İyi: büyük sayıları çarpanlarına ayırmak. Bugünkü açık anahtarlı şifrelemeyi tehdit eder — ama gereken donanım henüz yok.",
+          "Kısmen: bazı arama ve eniyileme problemlerinde karekök mertebesinde hızlanma. Devrimsel değil, kayda değer.",
+          "Hayır: gündelik hesaplama, tablo, video, oyun. Kuantum bilgisayar hızlı bir bilgisayar değil, farklı bir bilgisayardır.",
+          "Hayır: her problemi hızlandırmaz. Hızlandırdığı problem sınıfı dar ve iyi tanımlıdır.",
+          "Ayrı ve çalışan bir teknoloji: kuantum anahtar dağıtımı. Dinlemenin fiziksel olarak fark edilmesini sağlar ve ticari ürünleri vardır."
+        ]
+      },
+      {
+        "kind": "text",
+        "title": "Asıl darboğaz: hata",
+        "body": "Kübitler son derece kırılgandır. Çevreyle en küçük etkileşim üst üste binmeyi bozar ve eş uyum süresi mikrosaniyeler mertebesindedir. Klasik bilgisayarlarda hata düzeltme kolaydır — biti kopyalarsınız. Kuantumda kopyalama yasaktır. Çözüm, çok sayıda kırılgan fiziksel kübiti tek bir güvenilir mantıksal kübite dönüştürmektir ve bunun bedeli ağırdır: bugünkü tahminler, bir mantıksal kübit için binlerce fiziksel kübit gerektiğini söylüyor. Alanın gerçek ilerleme ölçüsü kübit sayısı değil, mantıksal kübit sayısıdır."
+      },
+      {
+        "kind": "example",
+        "title": "'Kuantum üstünlük' iddialarını okumak",
+        "body": "Zaman zaman bir aygıtın klasik bilgisayarların yapamayacağı bir hesabı yaptığı duyurulur. Bu duyurular genellikle iki soruyla değerlendirilmelidir. Birincisi: yapılan hesap işe yarar bir şey mi, yoksa yalnızca kuantum donanımının doğal olarak iyi yaptığı bir şey mi? Şimdiye kadarki örneklerin çoğu ikincisidir. İkincisi: klasik tarafta daha iyi bir algoritma bulunabilir mi? Birkaç örnekte, duyurudan aylar sonra klasik yöntemler farkı büyük ölçüde kapattı. Alan gerçek ve önemli; ama takvim tahminleri düzenli olarak fazla iyimser çıkıyor."
+      },
+      {
+        "kind": "text",
+        "title": "Bugünden yapılması gereken",
+        "body": "Yeterince güçlü bir kuantum bilgisayar bugünkü açık anahtarlı şifrelemeyi kırabilir. Donanım henüz yok, ama bugün şifrelenip kaydedilen veriler gelecekte çözülebilir. Bu yüzden kurumlar şimdiden kuantuma dayanıklı şifreleme algoritmalarına geçiş planlıyor ve standartlar 2024'te yayımlandı. Bu, kuantum bilgisayarın en somut ve en yakın etkisidir: makine henüz yokken bile güvenlik mimarisini değiştiriyor."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "'n kübit aynı anda 2ⁿ hesap yapar' anlatısının hatası nedir?",
+        "options": [
+          "Sayı yanlıştır",
+          "Ölçümde geriye tek bir cevap kalır; hüner, doğru cevabın olasılığını girişimle yükseltmektir",
+          "Kübitler üst üste binemez",
+          "Hesaplar paralel yapılamaz"
+        ],
+        "answerIndex": 1,
+        "explanation": "Paralellik ölçüldüğünde tek bir sonuca iner. Algoritma tasarımının bütün zorluğu buradadır."
+      },
+      {
+        "id": "q2",
+        "prompt": "Kuantum hesaplamanın asıl darboğazı nedir?",
+        "options": [
+          "Kübit sayısı",
+          "Hata: kırılgan kübitleri güvenilir mantıksal kübitlere dönüştürmek binlerce fiziksel kübit gerektiriyor",
+          "Elektrik tüketimi",
+          "Programlama dilleri"
+        ],
+        "answerIndex": 1,
+        "explanation": "Kuantumda kopyalama yasak olduğu için klasik hata düzeltme yöntemleri kullanılamaz. Gerçek ilerleme ölçüsü mantıksal kübit sayısıdır."
+      },
+      {
+        "id": "q3",
+        "prompt": "Kuantum bilgisayarın bugünkü en somut etkisi nedir?",
+        "options": [
+          "Hesaplamayı hızlandırması",
+          "Henüz makine yokken şifreleme standartlarının değişmeye başlaması",
+          "Yapay zekâyı geliştirmesi",
+          "Hiçbir etkisi yok"
+        ],
+        "answerIndex": 1,
+        "explanation": "Bugün şifrelenip kaydedilen veriler gelecekte çözülebilir. Kuantuma dayanıklı şifreleme standartları 2024'te yayımlandı."
+      }
+    ]
+  }
+]
