@@ -152,5 +152,19 @@
     "questions": 36,
     "charts": 3,
     "file": "courses/medya.json"
+  },
+  {
+    "id": "mimarlik",
+    "title": "Mimarlık tarihi",
+    "subtitle": "Yapı, biçim ve kent",
+    "description": "Bir yapıyı ayakta tutan kuvvetlerden üslupların anlamına, kemerden betonarmeye ve depremden emsale: yapılı çevreyi okuma kılavuzu.",
+    "icon": "🏛️",
+    "accent": "#7a5230",
+    "accentDark": "#dfae78",
+    "category": "klasik",
+    "lessons": 12,
+    "questions": 36,
+    "charts": 4,
+    "file": "courses/mimarlik.json"
   }
 ]

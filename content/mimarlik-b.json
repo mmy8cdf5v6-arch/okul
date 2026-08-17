@@ -1,0 +1,498 @@
+[
+  {
+    "id": "ronesans-ve-barok",
+    "moduleId": "bicim",
+    "order": 3,
+    "title": "Rönesans ve Barok",
+    "subtitle": "Önce kural kuruldu, sonra kural bükülüp sahneye çevrildi.",
+    "minutes": 8,
+    "keyTerms": ["merkezî plan", "cephe", "barok", "modül"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Rönesans mimarlığı antik biçimleri geri getirmekle kalmadı; mimarlığı yeniden tanımladı. Ortaçağda yapı, şantiyede usta tarafından kurulurdu. Rönesans'ta yapı önce kâğıt üzerinde tasarlanır, sonra uygulanır. Bu ayrım mimarı ustadan ayırır ve bugün bildiğimiz mesleği doğurur. Perspektifin bulunması tesadüf değildir: yapıyı inşa etmeden görebilmenin aracıdır."
+      },
+      {
+        "kind": "text",
+        "title": "Merkezî plan fikri",
+        "body": "Rönesans mimarları için ideal yapı, bir merkez etrafında kurulan, her yönden aynı okunan yapıydı. Daire ve kare, evrenin düzenini temsil ettiği düşünülen biçimlerdi. Ancak bu ideal, kilisenin ayin düzeniyle çatıştı: ayin uzun bir eksen, bir yürüyüş yolu ister. Aziz Petrus Bazilikası'nın yüz yılı aşan inşa süreci büyük ölçüde bu iki mantığın çekişmesidir; merkezî planla başlar, uzun nefli plana döner. Mimarlıkta ideal biçimin kullanım karşısında geri adım atması, tekrar tekrar yaşanan bir hikâyedir."
+      },
+      {
+        "kind": "list",
+        "title": "Baroğun getirdikleri",
+        "items": [
+          "Eğrisel duvar: düz yüzey yerine içbükey ve dışbükey yüzeyler; mekân durağan değil hareketli algılanır.",
+          "Sahnelenmiş ışık: gizli pencerelerden gelen ışıkla belirli noktaların vurgulanması.",
+          "Bütünleşik sanatlar: mimarlık, heykel ve resmin sınırının bilinçli olarak silinmesi.",
+          "Kent ölçeği: meydan, aks ve perspektif etkisiyle kentin bir sahne gibi kurgulanması.",
+          "İzleyiciyi hesaba katmak: yapı artık nesnel bir düzen değil, belirli bir yerden bakan birinin deneyimi olarak tasarlanır."
+        ]
+      },
+      {
+        "kind": "text",
+        "title": "Neden barok?",
+        "body": "Barok mimarlığın gösterişini yalnızca zevk değişimiyle açıklamak eksik kalır. Reform sonrası Katolik Kilisesi, inananı akılla değil duyguyla kazanmayı hedefleyen bir program benimsedi; mimarlık bu programın en güçlü aracıydı. Aynı dönemde mutlak monarşiler de gücü görünür kılmak için aynı dili kullandı. Barok, iktidarın seyirci karşısında sahneye çıktığı mimarlıktır. Biçimi anlamadan önce kime ne söylemek istediğini sormak, çoğu üslup için en verimli sorudur."
+      },
+      {
+        "kind": "example",
+        "title": "Cephenin bağımsızlaşması",
+        "body": "Rönesans'tan itibaren cephe, arkasındaki mekânla zorunlu bir ilişki kurmaktan çıktı. Floransa'da bir sarayın cephesi, iç düzeninden bağımsız olarak kendi oran sistemini kurar. Bu, mimarlığa büyük bir serbestlik verdi ve aynı ölçüde büyük bir sorun yarattı: yapının dışı içi hakkında yalan söyleyebilir hâle geldi. Yirminci yüzyılda modernizmin en sert eleştirilerinden biri tam olarak bu ayrılığa yöneltilecektir."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Rönesans'ın mimarlık mesleği açısından getirdiği temel değişiklik nedir?",
+        "options": [
+          "Yapıların daha büyük olması",
+          "Tasarımın şantiyeden ayrılıp önce kâğıt üzerinde yapılması",
+          "Taş yerine tuğla kullanılması",
+          "Süslemenin azalması"
+        ],
+        "answerIndex": 1,
+        "explanation": "Yapının inşa edilmeden çizimle tasarlanabilmesi, mimarı ustadan ayırdı. Perspektifin geliştirilmesi de bu ihtiyacın aracıdır."
+      },
+      {
+        "id": "q2",
+        "prompt": "Merkezî plan ideali kiliselerde neden tam olarak uygulanamadı?",
+        "options": [
+          "Teknik olarak imkânsızdı",
+          "Ayin düzeni uzun bir eksen ve yürüyüş yolu gerektiriyordu",
+          "Çok pahalıydı",
+          "Malzeme yetersizdi"
+        ],
+        "answerIndex": 1,
+        "explanation": "İdeal geometri ile kullanım gereği çatıştı. Aziz Petrus'un uzun inşa süreci büyük ölçüde bu çekişmenin tarihidir."
+      },
+      {
+        "id": "q3",
+        "prompt": "Barok mimarlığın gösterişçi dilinin toplumsal karşılığı nedir?",
+        "options": [
+          "Sanayileşme",
+          "Reform sonrası Kilise'nin ve mutlak monarşilerin duyguyla ikna etme programı",
+          "Nüfus artışı",
+          "Ticaretin gerilemesi"
+        ],
+        "answerIndex": 1,
+        "explanation": "Barok, iktidarın seyirci karşısında sahneye çıktığı mimarlıktır. Biçimi anlamak için kime ne söylediğini sormak gerekir."
+      }
+    ]
+  },
+  {
+    "id": "anlam-ve-temsil",
+    "moduleId": "bicim",
+    "order": 4,
+    "title": "Mimarlık ne anlatır",
+    "subtitle": "Üslup seçmek, çoğu zaman taraf seçmektir.",
+    "minutes": 8,
+    "keyTerms": ["neoklasik", "eklektik", "ulusal üslup", "program"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Bir yapı yalnızca barındırmaz, aynı zamanda konuşur. Bir mahkeme binasının sütunlu cephesi, bir bankanın taş kaplamalı zemin katı, bir okulun simetrik girişi bir şey söyler. Bu dil doğal değildir; öğrenilmiştir ve tarihi vardır. Neoklasik cephenin 'ciddiyet' anlamına gelmesi için önce Antik Yunan'ın belirli bir siyasal geleneğin atası sayılması gerekmiştir."
+      },
+      {
+        "kind": "list",
+        "title": "On dokuzuncu yüzyılın üslup tartışması",
+        "items": [
+          "Neoklasik: akıl, düzen, devlet. Parlamento, müze ve mahkeme binalarının dili.",
+          "Neogotik: inanç, süreklilik, ulusal geçmiş. Kilise ve üniversitelerde tercih edildi.",
+          "Eklektik: farklı dönemlerin biçimlerinin bir arada kullanılması. On dokuzuncu yüzyıl İstanbul'unun resmî yapılarının çoğu bu dildedir.",
+          "Oryantalist: Batı'nın Doğu'yu temsil ederken kurduğu biçim dili. İlginç biçimde Osmanlı'da da 'kendi geçmişine dönüş' olarak yeniden ithal edildi."
+        ]
+      },
+      {
+        "kind": "text",
+        "title": "Türkiye'de üslup ve kimlik",
+        "body": "Yirminci yüzyılın başında Osmanlı'da ve ardından Türkiye'de mimarlık, kimliği temsil etme yükünü taşıdı. Birinci Ulusal Mimarlık akımı, klasik Osmanlı biçimlerini — geniş saçak, sivri kemer, çini — modern yapı programlarına uyguladı; postane, banka ve okul binaları böyle yapıldı. Erken cumhuriyet döneminde ise modern bir dil tercih edildi. Ardından İkinci Ulusal Mimarlık akımıyla yeniden anıtsal ve yerel referanslı bir dile dönüldü. Bu salınım bir kararsızlık değil, mimarlığın siyasal bir tercih alanı olduğunun kanıtıdır."
+      },
+      {
+        "kind": "example",
+        "title": "Aynı program, iki cevap",
+        "body": "Sedad Hakkı Eldem, geleneksel Türk evinin plan şemasını yüzlerce yapıyı ölçerek belgeledi ve bu şemayı modern malzemeyle yeniden kurdu. Onun için yerellik bir süsleme değil, plan mantığıydı: sofa etrafında düzenlenen mekânlar, cumbanın manzarayla kurduğu ilişki. Turgut Cansever ise soruyu daha da geriye taşıdı ve yapının insanla, mahalleyle ve doğayla ilişkisini bir sorumluluk meselesi olarak ele aldı. İkisi de aynı soruya — modern olanla yerel olan nasıl bir arada durur — bambaşka cevaplar verdi ve ikisi de taklitten uzak durdu."
+      },
+      {
+        "kind": "text",
+        "title": "Süsleme tartışması",
+        "body": "Yirminci yüzyılın başında süslemenin ahlaki bir mesele olduğu iddia edildi: süsleme emek israfıdır, geçmişe bağımlılıktır, dürüst değildir. Bu görüş modern mimarlığın çıplak yüzeyini meşrulaştırdı. Bugün bakıldığında iddianın kendisi de bir üslup tercihiydi ve kendi süslemesini üretti: kusursuz derz, saklanmış detay, pahalı sadelik. Süslemeden kaçmak da bir dildir ve o da bir şey söyler."
+      },
+      {
+        "kind": "quote",
+        "text": "Ev bir yaşama makinesidir.",
+        "source": "Le Corbusier, Bir Mimarlığa Doğru, 1923 — hem en çok alıntılanan hem en çok yanlış anlaşılan cümlelerden biri"
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Bir mahkeme binasının neoklasik cephesinin 'ciddiyet' anlamına gelmesi nasıl mümkün olur?",
+        "options": [
+          "Sütunların doğal olarak ciddi görünmesiyle",
+          "Öğrenilmiş bir dil olmasıyla: Antik Yunan'ın belirli bir siyasal geleneğin atası sayılmasıyla",
+          "Taşın ağır olmasıyla",
+          "Simetrinin evrensel anlamıyla"
+        ],
+        "answerIndex": 1,
+        "explanation": "Mimari anlam doğal değil kültüreldir ve tarihi vardır. Aynı biçim başka bir bağlamda bambaşka bir şey söyleyebilir."
+      },
+      {
+        "id": "q2",
+        "prompt": "Birinci Ulusal Mimarlık akımının yaklaşımı neydi?",
+        "options": [
+          "Tamamen Avrupa modernizmini benimsemek",
+          "Klasik Osmanlı biçimlerini modern yapı programlarına uygulamak",
+          "Süslemeyi tümüyle reddetmek",
+          "Yalnızca ahşap kullanmak"
+        ],
+        "answerIndex": 1,
+        "explanation": "Geniş saçak, sivri kemer ve çini gibi ögeler postane, banka ve okul gibi tamamen yeni yapı türlerine uygulandı."
+      },
+      {
+        "id": "q3",
+        "prompt": "Modern mimarlığın süslemeyi reddetmesi hakkında en dengeli değerlendirme hangisidir?",
+        "options": [
+          "Süslemeyi tamamen ortadan kaldırdı",
+          "Kendisi de bir üslup tercihiydi ve kendi süsleme dilini üretti: kusursuz derz, saklı detay, pahalı sadelik",
+          "Yalnızca maliyet gerekçesiyle yapıldı",
+          "Hiçbir etkisi olmadı"
+        ],
+        "answerIndex": 1,
+        "explanation": "Süslemeden kaçınmak da bir dildir. Sadeliğin kendisi bir anlatım aracı hâline geldi ve çoğu zaman ucuz da olmadı."
+      }
+    ]
+  },
+  {
+    "id": "demir-ve-cam",
+    "moduleId": "modern",
+    "order": 1,
+    "title": "Demir, cam ve sanayi",
+    "subtitle": "Duvarın taşımayı bıraktığı ikinci an.",
+    "minutes": 8,
+    "keyTerms": ["dökme demir", "çelik çerçeve", "asansör", "açıklık"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "On dokuzuncu yüzyıl mimarlığa iki şey verdi: hem basınca hem çekmeye dayanan bir malzeme ve o malzemeyi seri üretebilen bir sanayi. Dökme demir önce fabrikalarda ve köprülerde kullanıldı, çünkü oralarda üslup kaygısı yoktu. Anıtsal yapılara girmesi çok daha yavaş oldu; yeni malzeme uzun süre 'mühendis işi' sayıldı."
+      },
+      {
+        "kind": "list",
+        "title": "Neyi mümkün kıldı",
+        "items": [
+          "Uzun açıklık: tren istasyonu, sergi salonu ve pazar yeri gibi kolonsuz büyük hacimler.",
+          "İskelet sistem: yük kolon ve kirişlerden oluşan çerçeveye geçince duvar yalnızca kabuk olur.",
+          "Önden üretim: elemanların fabrikada üretilip şantiyede monte edilmesi; Kristal Saray dokuz ayda kuruldu.",
+          "Yükseklik: çelik çerçeve ile birlikte asansörün güvenlik freni, çok katlı yapıyı kullanılabilir kıldı.",
+          "Cam yüzey: taşıyıcı görevi olmayan duvar, tamamen cama dönüşebilir."
+        ]
+      },
+      {
+        "kind": "text",
+        "title": "Gökdelenin iki koşulu",
+        "body": "Yüksek yapı çoğu zaman tek bir buluşa bağlanır ama iki koşulu vardır ve ikisi de aynı derecede gereklidir. Birincisi çelik çerçevedir: yığma bir yapıda alt kat duvarları üst katların ağırlığı yüzünden metrelerce kalınlaşır ve belirli bir yükseklikten sonra zemin kat kullanılamaz hâle gelir. İkincisi asansördür; on katı merdivenle çıkmak istemeyen insanlar için üst katlar değersizdir. İlginç bir sonuç: asansörden önce en pahalı kat alt kattı, sonra en üst kat oldu."
+      },
+      {
+        "kind": "example",
+        "title": "Kristal Saray",
+        "body": "1851 Londra sergisi için kurulan yapı, standart demir profiller ve tek boy cam panellerle dokuz ayda tamamlandı. Bahçıvanlıktan gelen tasarımcısı Joseph Paxton, sistemi seralardan devraldı. Yapı sergiden sonra sökülüp başka bir yere taşındı. Mimarlığın önden üretilebilir, monte edilebilir ve sökülebilir olması fikri ilk kez bu ölçekte gösterildi; yirminci yüzyılın prefabrik hayallerinin hepsinin arkasında bu yapı vardır."
+      },
+      {
+        "kind": "text",
+        "title": "Gecikmeli biçim",
+        "body": "Yeni strüktürün kendi dilini bulması zaman aldı. İlk gökdelenler gotik kuleleri, ilk demir köprüler taş kemerleri taklit etti. Eiffel Kulesi'nin dönemin sanatçılarınca sert biçimde protesto edilmesinin sebebi çirkinliği değil, taşıyıcının hiçbir kılıf altına gizlenmeden ortada durmasıydı. Yapının biçimi rüzgâr yükünün hesabından çıkmıştı; mimarlığın alışık olduğu hiçbir gerekçeye dayanmıyordu."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Yüksek yapının yaygınlaşması için çelik çerçeveden başka hangi koşul gerekliydi?",
+        "options": [
+          "Betonarme",
+          "Güvenlik frenli asansör",
+          "Elektrik aydınlatma",
+          "Cam üretimi"
+        ],
+        "answerIndex": 1,
+        "explanation": "Çelik yapıyı teknik olarak mümkün kıldı, asansör ise üst katları kullanılabilir kıldı. Asansörden önce en değerli kat alttaydı."
+      },
+      {
+        "id": "q2",
+        "prompt": "İskelet sisteme geçiş duvarı nasıl değiştirdi?",
+        "options": [
+          "Duvarı kalınlaştırdı",
+          "Duvarı taşıyıcılıktan kurtardı; duvar yalnızca kabuk hâline geldi",
+          "Duvarı ortadan kaldırdı",
+          "Duvarı taşıyıcı yaptı"
+        ],
+        "answerIndex": 1,
+        "explanation": "Yük kolon ve kirişlere geçince duvarın tek görevi hava koşullarını ve mahremiyeti sağlamaktır. Cam cephe bu ayrımın sonucudur."
+      },
+      {
+        "id": "q3",
+        "prompt": "Kristal Saray'ın mimarlık tarihi açısından önemi nedir?",
+        "options": [
+          "En yüksek yapı olması",
+          "Önden üretilmiş standart elemanlarla hızla kurulup sökülebilmesi",
+          "İlk betonarme yapı olması",
+          "İlk kez asansör kullanması"
+        ],
+        "answerIndex": 1,
+        "explanation": "Dokuz ayda kuruldu, sonra sökülüp taşındı. Mimarlığın bir montaj işi olarak düşünülebileceğini ilk kez bu ölçekte gösterdi."
+      }
+    ]
+  },
+  {
+    "id": "betonarme",
+    "moduleId": "modern",
+    "order": 2,
+    "title": "Betonarme",
+    "subtitle": "İki malzemenin birbirinin eksiğini kapattığı buluş.",
+    "minutes": 8,
+    "keyTerms": ["betonarme", "donatı", "konsol", "serbest plan"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Beton, taşın modern hâlidir: basınca çok güçlü, çekmeye neredeyse dayanıksız. Çelik ise tam tersidir. Betonun çekmeye çalışan bölgesine çelik çubuklar yerleştirmek, iki malzemenin zayıflıklarını karşılıklı olarak siler. Bu birleşimi mümkün kılan tesadüfe yakın bir gerçek vardır: betonun ve çeliğin ısıyla genleşme katsayıları birbirine çok yakındır. Aksi hâlde sıcaklık değiştikçe ikisi ayrışır ve sistem çalışmazdı."
+      },
+      {
+        "kind": "formula",
+        "title": "İş bölümü",
+        "expression": "beton → basınç   ·   donatı → çekme"
+      },
+      {
+        "kind": "text",
+        "title": "Donatının yeri her şeydir",
+        "body": "Betonarmede en sık yapılan ölümcül hata, betonun kalitesizliği değil donatının yanlış yerde ya da yetersiz olmasıdır. Donatı, elemanın çekmeye çalışan bölgesinde olmalıdır: bir kirişte altta, bir konsolda üstte. Ayrıca kolonlarda sık aralıklı etriye — enine sargı donatısı — betonu bir arada tutar ve gevrek kırılmayı önler. Deprem hasar raporlarında en çok tekrarlanan bulgulardan biri, etriyelerin seyrek konması ve uçlarının 135 derece kancayla kapatılmamasıdır. Bu, çimentonun markasıyla ilgisi olmayan, tamamen işçilik ve denetim meselesidir."
+      },
+      {
+        "kind": "list",
+        "title": "Betonarmenin verdiği serbestlikler",
+        "items": [
+          "Serbest plan: taşıyıcı kolonlar bölücü duvarlardan bağımsızlaşır, iç düzen istenildiği gibi kurulur.",
+          "Serbest cephe: dış duvar taşımadığı için tamamen açılabilir ya da kapatılabilir.",
+          "Konsol: yapı, altında taşıyıcı olmadan boşluğa uzanabilir.",
+          "Sürekli döşeme: kalıba dökülen tek parça bir plak, kirişsiz geniş yüzeyler üretir.",
+          "Serbest biçim: kalıp neyse beton odur; eğrisel yüzeyler malzemenin doğal sınırı içindedir."
+        ]
+      },
+      {
+        "kind": "example",
+        "title": "Aynı serbestliğin bedeli",
+        "body": "Betonarme, ucuz ve her yerde uygulanabilir olduğu için yirminci yüzyılın ikinci yarısında dünyanın büyük kısmında tek yapı tekniği hâline geldi. Türkiye'de hızlı kentleşme dönemi tam olarak bu tekniğin yaygınlaştığı yıllara denk geldi. Sorun tekniğin kendisi değildir; betonarme doğru hesaplandığında ve doğru uygulandığında son derece güvenlidir. Sorun, denetimsiz ve hesapsız uygulanabilecek kadar kolay görünmesidir. Bir yığma duvarın ustalığı gözle görülür; betonun içindeki donatı dökümden sonra görünmez."
+      },
+      {
+        "kind": "text",
+        "title": "Karbon sorunu",
+        "body": "Çimento üretimi, kireç taşının ısıtılarak ayrıştırılması sırasında kimyasal olarak karbondioksit açığa çıkarır; yani yalnızca yakıttan değil, tepkimenin kendisinden salım doğar. Bu yüzden beton, küresel salımların yaklaşık yüzde yedisinden sorumludur ve elektrikle çözülemeyen bir kalemdir. Yapı sektöründe düşük karbonlu bağlayıcılar, mevcut yapıyı yıkmak yerine güçlendirmek ve ahşaba dönüş bu yüzden yeniden tartışılıyor. En düşük karbonlu yapı, çoğu zaman zaten yapılmış olan yapıdır."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Betonarmede beton ve çeliğin iş bölümü nedir?",
+        "options": [
+          "Beton çekmeyi, çelik basıncı taşır",
+          "Beton basıncı, çelik çekmeyi taşır",
+          "İkisi de basıncı taşır",
+          "Çelik yalnızca kalıp görevi görür"
+        ],
+        "answerIndex": 1,
+        "explanation": "Beton basınca güçlü, çekmeye zayıftır; çelik tersidir. İkisinin ısıl genleşmesinin yakın olması bu birleşimi mümkün kılar."
+      },
+      {
+        "id": "q2",
+        "prompt": "Deprem hasarlarında en sık rastlanan betonarme kusurlarından biri nedir?",
+        "options": [
+          "Betonun rengi",
+          "Kolonlarda etriyelerin seyrek konması ve uçlarının doğru kancayla kapatılmaması",
+          "Kalıbın ahşap olması",
+          "Kirişlerin fazla yüksek olması"
+        ],
+        "answerIndex": 1,
+        "explanation": "Sık ve doğru bağlanmış etriye, betonu sararak gevrek kırılmayı önler. Bu bir malzeme değil, işçilik ve denetim meselesidir."
+      },
+      {
+        "id": "q3",
+        "prompt": "Betonun iklim açısından zorlu bir malzeme olmasının sebebi nedir?",
+        "options": [
+          "Taşınmasının pahalı olması",
+          "Çimento üretiminde karbondioksitin yalnızca yakıttan değil kimyasal tepkimenin kendisinden çıkması",
+          "Geri dönüştürülememesi",
+          "Su tüketimi"
+        ],
+        "answerIndex": 1,
+        "explanation": "Kireç taşının ayrışması doğrudan karbondioksit açığa çıkarır. Bu yüzden fırını yeşil elektrikle çalıştırmak sorunu tümüyle çözmez."
+      }
+    ]
+  },
+  {
+    "id": "modernizm",
+    "moduleId": "modern",
+    "order": 3,
+    "title": "Modernizm ve eleştirisi",
+    "subtitle": "Bir program, bir zafer ve bir geri çekilme.",
+    "minutes": 9,
+    "keyTerms": ["işlevselcilik", "yatay pencere", "serbest plan", "yere aitlik"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Yirminci yüzyılın başında mimarlık, geçmişin biçimlerini tekrar etmeyi bırakıp kendi çağının araçlarıyla konuşmayı önerdi. Bu öneri teknik bir zorunluluktan doğmadı; betonarme ve çelik zaten vardı. Doğuran şey, sanayileşmiş bir toplumun mimarlıktan yeni bir cevap beklemesiydi: seri üretim, kitlesel konut, hijyen, güneş ve hava."
+      },
+      {
+        "kind": "list",
+        "title": "Modern mimarlığın beş ilkesi",
+        "items": [
+          "Kolonlar üzerinde yükselme: zemin kat boşaltılır, yapı yerden kalkar.",
+          "Çatı bahçesi: yapının kapladığı yeşil alan çatıda geri verilir.",
+          "Serbest plan: taşıyıcı kolonlar bölücü duvarlardan ayrılınca iç düzen özgürleşir.",
+          "Yatay pencere: taşıyıcı duvar olmadığı için pencere cephe boyunca uzanabilir.",
+          "Serbest cephe: dış yüzey strüktürden bağımsız olarak kurgulanır."
+        ]
+      },
+      {
+        "kind": "text",
+        "title": "İşlev, biçimi gerçekten belirler mi?",
+        "body": "Modern mimarlığın en bilinen sloganı biçimin işlevi izlediğidir. Sorun şu ki aynı işlev sayısız biçimle karşılanabilir; bir okul binası yüzlerce farklı biçimde kurulabilir ve hepsi işleyebilir. Slogan bu yüzden bir açıklama değil, bir tercihin gerekçesiydi: süslemeyi ve tarihsel referansı dışarıda bırakmanın meşru zemini. Bunu görmek modernizmi küçültmez, yalnızca onu da diğer üsluplar gibi tarihsel bir konum olarak yerine oturtur."
+      },
+      {
+        "kind": "text",
+        "title": "Eleştiri nereden geldi",
+        "body": "Modernizme yönelik itiraz üç ayrı yerden geldi ve üçü de haklı çıktı. Birincisi kent ölçeğindeydi: mevcut dokuyu yıkıp yerine kuleler ve geniş yollar koyan planlar, sokak hayatını ve komşuluk ilişkilerini yok etti. İkincisi iklim ve yerellikteydi: her yerde aynı cam kutuyu tekrarlayan bir mimarlık, ne Kuzey Avrupa'da ne Akdeniz'de ne de tropiklerde aynı ölçüde çalışır. Üçüncüsü anlam düzeyindeydi: insanlar tarih, süsleme ve tanıdıklık talep etmeyi bırakmadı. Sonraki kuşaklar bu üç itirazın her birine ayrı cevaplar geliştirdi."
+      },
+      {
+        "kind": "example",
+        "title": "Pruitt-Igoe",
+        "body": "Saint Louis'de 1954'te açılan büyük toplu konut yerleşkesi, on yedi yıl sonra yıkıldı. Yıkım görüntüleri modernizmin çöküşünün simgesi olarak kullanıldı. Gerçek daha karmaşıktır: yerleşke, bakım bütçesi kesilerek, ırk ayrımcılığı politikalarıyla çevresinden yalıtılarak ve sakinleri işsiz bırakan bir sanayi çöküşüyle birlikte yönetildi. Mimari kararların payı vardır ama tek başına belirleyici değildir. Yapılı çevreyi tek bir nedene bağlamak, hemen her zaman yanlış cevabı verir."
+      },
+      {
+        "kind": "quote",
+        "text": "Az, sıkıcıdır.",
+        "source": "Robert Venturi'nin, Mies van der Rohe'nin 'az çoktur' sözüne cevabı, 1966"
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Yatay pencereyi mümkün kılan teknik gelişme nedir?",
+        "options": [
+          "Cam üretiminin ucuzlaması",
+          "Taşıyıcı duvarın ortadan kalkması; yükün kolon ve kirişlere geçmesi",
+          "Isıtma sistemleri",
+          "Perde teknolojisi"
+        ],
+        "answerIndex": 1,
+        "explanation": "Duvar taşımadığı için cephe boyunca kesintisiz boşluk bırakılabilir. Beş ilkenin tamamı aynı strüktürel serbestliğin sonuçlarıdır."
+      },
+      {
+        "id": "q2",
+        "prompt": "'Biçim işlevi izler' ilkesinin en zayıf yanı nedir?",
+        "options": [
+          "Teknik olarak imkânsız olması",
+          "Aynı işlevin sayısız biçimle karşılanabilmesi — ilke biçimi tek başına belirlemez",
+          "Yalnızca konutlar için geçerli olması",
+          "Maliyeti artırması"
+        ],
+        "answerIndex": 1,
+        "explanation": "İşlev biçimi daraltır ama belirlemez. Slogan bir açıklamadan çok, tarihsel referansları dışarıda bırakma tercihinin gerekçesiydi."
+      },
+      {
+        "id": "q3",
+        "prompt": "Pruitt-Igoe örneği en doğru nasıl okunur?",
+        "options": [
+          "Modern mimarlığın tek başına başarısızlığının kanıtı",
+          "Mimari kararların pay sahibi olduğu ama bakım, ayrımcılık ve işsizliğin de belirleyici olduğu çok nedenli bir çöküş",
+          "Tamamen ekonomik bir mesele",
+          "Yapı tekniğinin yetersizliği"
+        ],
+        "answerIndex": 1,
+        "explanation": "Yerleşke bakım bütçesi kesilerek, çevresinden yalıtılarak ve sanayi çöküşüyle birlikte yönetildi. Yapılı çevreyi tek nedene bağlamak neredeyse her zaman yanıltır."
+      }
+    ]
+  },
+  {
+    "id": "kent-ve-konut",
+    "moduleId": "modern",
+    "order": 4,
+    "title": "Kent, konut ve deprem",
+    "subtitle": "Türkiye'de mimarlık, önce bir güvenlik meselesidir.",
+    "minutes": 10,
+    "keyTerms": ["emsal", "TAKS", "imar planı", "yumuşak kat", "kısa kolon", "salınım süresi"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Bir kentin nasıl göründüğüne mimarlar değil, büyük ölçüde birkaç sayı karar verir. Emsal, taban alanı katsayısı, kat sınırı, çekme mesafesi ve yol genişliği. Bu sayılar imar planında belirlenir ve bir parselde ne yapılabileceğini neredeyse tümüyle tanımlar. Kent tartışmalarının çoğu estetik gibi görünse de aslında bu sayılar üzerinedir."
+      },
+      { "kind": "chart", "chartId": "kent-yogunlugu" },
+      {
+        "kind": "text",
+        "title": "Yoğunluk ile biçim aynı şey değil",
+        "body": "Grafiğin gösterdiği ilişki, kent tartışmalarının en çok karıştırılan noktasını açar. Emsal yoğunluğu belirler; kat sayısı yalnızca o yoğunluğun biçimini belirler. Aynı emsal, üç katlı ve parselin yarısını kaplayan bir dokuyla da, on beş katlı ve parselin onda birini kaplayan kulelerle de karşılanabilir. İkisinde de aynı sayıda insan yaşar. Fark, sokakla kurulan ilişkide, gölgede, rüzgârda ve açık alanın kime ait olduğundadır. 'Yüksek yapı istemiyoruz' demek çoğu zaman yoğunluğa değil biçime itirazdır ve bu ayrımı yapmak tartışmayı ilerletir."
+      },
+      {
+        "kind": "list",
+        "title": "Deprem hasarının tekrar eden sebepleri",
+        "items": [
+          "Yumuşak kat: zemin katın dükkân yapılmak için duvarlarından arındırılması. Üstteki katlar sert, alttaki yumuşak kalır ve kuvvet tek katta toplanır.",
+          "Kısa kolon: bant pencere ya da kısmi dolgu yüzünden serbest boyu kısalan kolon. Kısaldıkça sertleşir, sertleştikçe daha çok kuvvet çeker ve gevrek kırılır.",
+          "Etriye eksikliği: kolonlarda enine sargının seyrek olması ya da uçlarının doğru kapatılmaması.",
+          "Düzensizlik: planda ya da yükseklikte ani değişimler, burulma etkisiyle köşe kolonlarını zorlar.",
+          "Zemin: yumuşak ve suya doygun zeminde büyütme ve sıvılaşma. Yapı sağlam olsa da zemin taşımayabilir.",
+          "Kat ekleme ve imar affı: hesap edilmemiş yükün sonradan bindirilmesi ve bunun yasallaştırılması."
+        ]
+      },
+      { "kind": "chart", "chartId": "deprem-tepki" },
+      {
+        "kind": "text",
+        "title": "Eşleşme meselesi",
+        "body": "Her binanın bir doğal salınım süresi vardır ve kabaca kat sayısının onda biri saniyedir: beş katlı bir bina yarım saniye, on beş katlı bir bina bir buçuk saniye civarında salınır. Her zeminin de büyüttüğü bir süre aralığı vardır. Kaya, kısa ve keskin sarsıntıları geçirir; kalın ve yumuşak alüvyon ise uzun salınımları büyütür. Tehlike, binanın süresi ile zeminin büyüttüğü sürenin çakışmasıdır. 1999 Adapazarı'nda ve 2023 Hatay'da orta yükseklikteki betonarme yapıların ağır hasar almasının nedeni budur. Aynı bina, kaya üzerinde bunun çok daha azını görürdü."
+      },
+      {
+        "kind": "example",
+        "title": "Bilgi eksikliği değil, uygulama eksikliği",
+        "body": "Türkiye'nin deprem yönetmeliği uluslararası ölçütlerle karşılaştırıldığında geride değildir; 2018 yönetmeliği performansa dayalı tasarımı esas alır. 2023 depremlerinden sonra yapılan incelemelerin ortak bulgusu, yıkılan yapıların büyük çoğunluğunun yönetmeliğe uygun olmadığı yönündedir. Yani sorun ne hesap yönteminde ne malzemede; sorun projenin uygulanmasında, denetimde ve sonradan yapılan müdahalelerde. Bu, mimarlığın teknik bir alan olduğu kadar kurumsal bir alan olduğunu gösterir."
+      },
+      {
+        "kind": "text",
+        "title": "Ne yapılabilir",
+        "body": "Bir binanın deprem davranışı hakkında dışarıdan bakarak kesin bir şey söylenemez ama bazı işaretler ciddiye alınmalıdır: kolonları kesilmiş ya da delinmiş bir zemin kat, sonradan eklenmiş katlar, kolonlarda görünen çapraz çatlaklar, komşu binaya çok yakın oturan bir yapı ve bilinen dolgu zeminler. Kesin cevap ancak bir yapı mühendisinin yapacağı performans değerlendirmesiyle alınır. Güçlendirme çoğu durumda yıkıp yeniden yapmaktan hem daha ucuz hem daha az karbonludur; kararı veren şey genellikle teknik uygunluk değil, arsa değeri üzerinden yapılan hesaptır."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Emsal aynı kalırken kat sayısını artırmak ne değişir?",
+        "options": [
+          "Yoğunluk artar",
+          "Yoğunluk değişmez, yalnızca yapının biçimi ve zemine oturan alanı değişir",
+          "Konut sayısı azalır",
+          "Parsel büyür"
+        ],
+        "answerIndex": 1,
+        "explanation": "Yoğunluk emsalde saklıdır. Kat sayısı aynı inşaat alanının nasıl dağıtıldığını belirler: geniş ve alçak mı, dar ve yüksek mi."
+      },
+      {
+        "id": "q2",
+        "prompt": "Yumuşak kat neden tehlikelidir?",
+        "options": [
+          "Zemin nemli olduğu için",
+          "Üst katlara göre çok daha az duvarı olduğu için deprem kuvveti o katta toplanır",
+          "Isı yalıtımı zayıf olduğu için",
+          "Kolonları daha ince olduğu için"
+        ],
+        "answerIndex": 1,
+        "explanation": "Dükkân yapmak için duvarları kaldırılan zemin kat, üstündeki sert katlara göre çok esnek kalır. Yapının bütün yer değiştirmesi tek bir katta karşılanmaya çalışılır."
+      },
+      {
+        "id": "q3",
+        "prompt": "Zemin büyütmesi hangi durumda en tehlikelidir?",
+        "options": [
+          "Bina ne kadar alçaksa o kadar",
+          "Binanın salınım süresi ile zeminin büyüttüğü süre birbirine yaklaştığında",
+          "Yalnızca kaya zeminlerde",
+          "Zemin türünden bağımsızdır"
+        ],
+        "answerIndex": 1,
+        "explanation": "Yumuşak ve kalın alüvyon uzun salınımları büyütür; orta ve yüksek katlı yapıların süresi bu aralığa denk geldiğinde kuvvet katlanır. Tehlike bina ya da zemin değil, ikisinin eşleşmesidir."
+      }
+    ]
+  }
+]

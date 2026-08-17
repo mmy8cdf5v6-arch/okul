@@ -2147,5 +2147,215 @@
             "Kimsenin fikri zorla değiştirilmedi; herkese yalnızca kendine benzeyen içerik gösterildi. " +
             "Kutuplaşmayı üreten şey içeriğin kendisi değil, dağıtım kuralı." };
       }
+    },
+
+    /* ---- mimarlık ---- */
+
+    "kiris-acikligi": {
+      title: "Bir kiriş kendi ağırlığıyla ne kadar açıklık geçer",
+      note: "Yalnızca kirişin kendi ağırlığı hesaba katıldı; gerçek yapıda üstüne gelen yük ve sehim sınırı açıklıkları çok daha aşağı çeker. Öğretici olan mutlak sayılar değil, malzemeler arasındaki oran.",
+      controls: [
+        { key: "m", type: "choice", label: "Malzeme", def: "tas", options: [
+          ["tas", "Taş"], ["ahsap", "Ahşap"], ["beton", "Betonarme"], ["celik", "Çelik"]] },
+        { key: "d", label: "Kiriş yüksekliği", min: 2, max: 20, step: 1, def: 6,
+          fmt: function (v) { return (v / 10).toFixed(1) + " m"; } }
+      ],
+      draw: function (p) {
+        /* Basit kirişte kendi ağırlığından doğan eğilme: σ = 0,75·ρ·g·L²/d.
+           Buradan L = √(σ·d / (0,75·ρ·g)). σ değerleri emniyetli çekme
+           gerilmeleridir; taşın çekmeye dayanıksızlığı bütün hikâyeyi kurar. */
+        var MAL = {
+          tas: ["Taş", 1.0e6, 2400, "var(--no)"],
+          ahsap: ["Ahşap", 8.0e6, 700, "var(--ok)"],
+          beton: ["Betonarme", 12.0e6, 2500, "var(--muted)"],
+          celik: ["Çelik", 160e6, 7850, "var(--accent)"]
+        };
+        var SIRA = ["tas", "beton", "ahsap", "celik"], TOP = 80, D0 = 0.2, D1 = 2.0, i, k;
+        var L = function (key, d) {
+          var m = MAL[key];
+          return Math.sqrt((m[1] * d) / (0.75 * m[2] * 9.81));
+        };
+        var X = function (d) { return (d - D0) / (D1 - D0); };
+        var s = frame("Kiriş yüksekliği", "En büyük açıklık");
+        for (k = 0; k < SIRA.length; k++) {
+          var key = SIRA[k], pts = [];
+          for (i = 0; i <= 40; i++) {
+            var d = D0 + ((D1 - D0) * i) / 40;
+            pts.push([X(d), Math.min(1, L(key, d) / TOP)]);
+          }
+          var secili = key === p.m;
+          s += gPoly(pts, { c: MAL[key][3], w: secili ? 2.6 : 1.2, d: secili ? "" : "3 3" });
+          s += gTxt(1, Math.min(1, L(key, D1) / TOP), MAL[key][0],
+            { a: "end", dy: -5, c: MAL[key][3], b: secili ? 1 : 0, s: 9 });
+        }
+        var dd = p.d / 10, LL = L(p.m, dd), yy = Math.min(1, LL / TOP);
+        s += gDot(X(dd), yy, { c: "var(--ink)" });
+        s += gTxt(X(dd), yy, r1(LL) + " m", {
+          a: p.d > 13 ? "end" : "start", dx: p.d > 13 ? -7 : 7, dy: yy > 0.9 ? 12 : -6,
+          c: "var(--ink)", b: 1, s: 10 });
+        [20, 40, 60].forEach(function (v) {
+          s += gLine(0, v / TOP, 1, v / TOP, { c: "var(--rule)", w: 1, d: "2 4" });
+          s += gTxt(0.01, v / TOP, v + " m", { a: "start", dy: -4, s: 8.5 });
+        });
+        [0.5, 1.0].forEach(function (v) { s += gTxt(X(v), 0, r1(v) + " m", { a: "middle", dy: 12, s: 9 }); });
+        var tas = L("tas", dd);
+        return { svg: s, text: r1(dd) + " metre yüksekliğinde bir " + MAL[p.m][0].toLowerCase() +
+          " kiriş kendi ağırlığıyla en çok " + r1(LL) + " metre açıklık geçebilir" +
+          (p.m === "tas"
+            ? ". Antik tapınakların sütun aralığının dört beş metreyi geçmemesinin sebebi budur: taş basınca çok, çekmeye çok az dayanır ve kirişin altı çekmeye çalışır. Kemer tam olarak bu sınırı aşmak için icat edildi."
+            : "; aynı yükseklikte taş ancak " + r1(tas) + " metre geçerdi, yani " +
+              r1(LL / tas) + " kat daha az. Malzeme değişince açıklık değişir, açıklık değişince mimarlığın söyleyebilecekleri değişir.") };
+      }
+    },
+
+    "kemer-itmesi": {
+      title: "Kemer yüksekliği ve yatay itme",
+      note: "Yatay itme, düşey yükün yaklaşık 1/(8·yükseklik oranı) katı alınarak hesaplandı; ayak genişliği devrilme dengesinden çıkarıldı. Basitleştirilmiş bir modeldir, mertebeler doğrudur.",
+      controls: [
+        { key: "y", label: "Kemer yüksekliği (açıklığın oranı)", min: 25, max: 85, step: 1, def: 50, fmt: pctS },
+        { key: "w", label: "Kemerin üstündeki duvar yükü", min: 0, max: 100, step: 5, def: 20, fmt: pctS }
+      ],
+      draw: function (p) {
+        var f = p.y / 100;
+        var W = 0.12 + (0.13 * p.w) / 100;          // düşey yük (birim yoğunluk, açıklık = 1)
+        var H = W / (8 * f);                        // yatay itme
+        var b = Math.sqrt(2 * H);                   // gereken ayak genişliği (açıklığın oranı)
+        var SP = 0.48, EX = 0.5 - SP / 2, SY = 0.798;  // çizim ölçeği: 1 açıklık = 0.48 birim x
+        var TAB = 0.04, OMUZ = TAB + 0.24 * SY;     // taban ve omuz (kemer başlangıcı) yüksekliği
+        var X = function (u) { return EX + u * SP; };
+        var Y = function (h) { return OMUZ + h * SY; };
+        var egri = [], i, u, h;
+        if (f <= 0.5) {
+          var R = (f * f + 0.25) / (2 * f), cy = f - R;
+          for (i = 0; i <= 60; i++) {
+            u = i / 60;
+            egri.push([X(u), Y(Math.sqrt(Math.max(0, R * R - (u - 0.5) * (u - 0.5))) + cy)]);
+          }
+        } else {
+          var cx = 0.25 + f * f;
+          for (i = 0; i <= 60; i++) {
+            u = i / 60;
+            var c = u <= 0.5 ? cx : 1 - cx;
+            h = Math.sqrt(Math.max(0, cx * cx - (u - c) * (u - c)));
+            egri.push([X(u), Y(h)]);
+          }
+        }
+        var s = gLine(0.02, TAB, 0.98, TAB, { c: "var(--rule)", w: 1.4 });
+        s += gRect(X(0) - b * SP, TAB, X(0), OMUZ, { c: "var(--ink)", o: 0.14, r: 0 });
+        s += gRect(X(1), TAB, X(1) + b * SP, OMUZ, { c: "var(--ink)", o: 0.14, r: 0 });
+        s += gPoly(egri, { c: "var(--accent)", w: 5 });
+        var ok = Math.min(0.22, H * 1.3);
+        [[X(0), -1], [X(1), 1]].forEach(function (a) {
+          s += gLine(a[0], OMUZ, a[0] + a[1] * ok, OMUZ, { c: "var(--no)", w: 2 });
+          s += gLine(a[0] + a[1] * ok, OMUZ, a[0] + a[1] * (ok - 0.022), OMUZ + 0.035, { c: "var(--no)", w: 2 });
+          s += gLine(a[0] + a[1] * ok, OMUZ, a[0] + a[1] * (ok - 0.022), OMUZ - 0.035, { c: "var(--no)", w: 2 });
+        });
+        s += gTxt(0.5, Y(f), f <= 0.45 ? "basık kemer" : f <= 0.55 ? "yarım daire kemer" : "sivri kemer",
+          { a: "middle", dy: -8, c: "var(--ink)", b: 1, s: 10 });
+        s += gTxt(X(1) + (b * SP) / 2, (TAB + OMUZ) / 2, "ayak", { a: "middle", dy: 3, s: 8.5 });
+        s += gTxt(0.02, TAB, "kırmızı ok: yanlara itme", { a: "start", dy: 12, c: "var(--no)", s: 8.5 });
+        return { svg: s, text: "Yüksekliği açıklığının %" + p.y + "'i olan bu kemer, taşıdığı düşey yükün %" +
+          r0((H / W) * 100) + "'i kadar bir kuvvetle iki yana itiyor; bunu karşılamak için her iki başında " +
+          "açıklığın %" + r0(b * 100) + "'i genişliğinde bir ayak gerekiyor. " +
+          (f > 0.55
+            ? "Kemer yükseldikçe itme düşüyor: gotik katedralin sivri kemeri bir üslup tercihi değil, duvarı inceltmenin yoluydu."
+            : "Kemer basıldıkça itme büyüyor; roma ve romanesk yapıların kalın duvarları bu itmeyi tutmak içindir.") +
+          " Üstteki duvar yükünü artırmak itmeyi de büyütür." };
+      }
+    },
+
+    "deprem-tepki": {
+      title: "Bina yüksekliği, zemin ve deprem kuvveti",
+      note: "Türkiye Bina Deprem Yönetmeliği'nin tasarım spektrumu sadeleştirilerek kullanıldı; zemin sınıflarına temsilî değerler verildi. Gerçek tasarım, sahaya özgü ölçümlerle yapılır.",
+      controls: [
+        { key: "z", type: "choice", label: "Zemin", def: "orta", options: [
+          ["kaya", "Kaya"], ["orta", "Sıkı"], ["yumusak", "Yumuşak"]] },
+        { key: "n", label: "Kat sayısı", min: 2, max: 30, step: 1, def: 8,
+          fmt: function (v) { return v + " kat"; } }
+      ],
+      draw: function (p) {
+        var ZEM = {
+          kaya: ["kaya", 0.80, 0.25, "var(--ok)"],
+          orta: ["sıkı zemin", 1.00, 0.55, "var(--accent)"],
+          yumusak: ["yumuşak zemin", 1.00, 0.90, "var(--no)"]
+        };
+        var SIRA = ["kaya", "orta", "yumusak"], TMAX = 3, SAMAX = 1.2, i, k;
+        var Sa = function (key, T) {
+          var z = ZEM[key], DS = z[1], D1 = z[2], TB = D1 / DS, TA = 0.2 * TB;
+          if (T < TA) return DS * (0.4 + (0.6 * T) / TA);
+          if (T <= TB) return DS;
+          return D1 / T;
+        };
+        var s = frame("Salınım süresi (sn)", "Tasarım ivmesi");
+        for (k = 0; k < SIRA.length; k++) {
+          var key = SIRA[k], pts = [];
+          for (i = 0; i <= 80; i++) {
+            var T = (TMAX * i) / 80;
+            pts.push([T / TMAX, Math.min(1, Sa(key, T) / SAMAX)]);
+          }
+          var sec = key === p.z;
+          s += gPoly(pts, { c: ZEM[key][3], w: sec ? 2.6 : 1.2, d: sec ? "" : "3 3" });
+          s += gTxt(1, Math.min(1, Sa(key, TMAX) / SAMAX), ZEM[key][0].split(" ")[0],
+            { a: "end", dy: -7, c: ZEM[key][3], b: sec ? 1 : 0, s: 9 });
+        }
+        var TT = 0.1 * p.n, aa = Sa(p.z, TT), yy = Math.min(1, aa / SAMAX);
+        s += gLine(TT / TMAX, 0, TT / TMAX, yy, { c: "var(--rule)", w: 1, d: "3 3" });
+        s += gDot(TT / TMAX, yy, { c: "var(--ink)" });
+        s += gTxt(TT / TMAX, yy, r2(aa) + " g", {
+          a: p.n > 18 ? "end" : "start", dx: p.n > 18 ? -7 : 7, dy: -6, c: "var(--ink)", b: 1, s: 10 });
+        [0.5, 1, 1.5].forEach(function (v) { s += gTxt(v / TMAX, 0, r1(v), { a: "middle", dy: 12, s: 9 }); });
+        var kaya = Sa("kaya", TT);
+        return { svg: s, text: p.n + " katlı bir binanın doğal salınım süresi kabaca " + r1(TT) +
+          " saniyedir. " + ZEM[p.z][0].charAt(0).toUpperCase() + ZEM[p.z][0].slice(1) + " üzerinde bu süreye düşen " +
+          "tasarım ivmesi " + r2(aa) + " g: binaya kendi ağırlığının yaklaşık %" + r0(aa * 100) +
+          "'i kadar yatay kuvvet gelir. " +
+          (p.z === "yumusak" && TT > 0.8
+            ? "Yumuşak zemin uzun salınımları büyütür; aynı bina kayada " + r2(kaya) +
+              " g görürdü, yani " + r1(aa / kaya) + " kat azını. 1999 Adapazarı ve 2023 Hatay'da yıkımı ağırlaştıran şey bu eşleşmeydi."
+            : "Zemin ile binanın salınım süresi birbirine yaklaştığında kuvvet katlanır; tehlikeli olan bina ya da zemin değil, ikisinin eşleşmesidir.") };
+      }
+    },
+
+    "kent-yogunlugu": {
+      title: "Aynı yoğunluk, farklı biçim",
+      note: "Emsal (KAKS) toplam inşaat alanının parsel alanına oranı, taban alanı oranı (TAKS) ise zemine oturan kısmın oranıdır. İkisi arasındaki bağ tek satırlık bir bölmedir: TAKS = emsal / kat sayısı.",
+      controls: [
+        { key: "e", label: "Emsal (KAKS)", min: 5, max: 40, step: 1, def: 20,
+          fmt: function (v) { return (v / 10).toFixed(1); } },
+        { key: "k", label: "Kat sayısı", min: 1, max: 20, step: 1, def: 5,
+          fmt: function (v) { return v + " kat"; } }
+      ],
+      draw: function (p) {
+        var E = p.e / 10, KMAX = 20, i;
+        var taks = function (k) { return E / k; };
+        var pts = [];
+        for (i = 1; i <= KMAX; i++) {
+          if (taks(i) > 1) continue;
+          pts.push([(i - 1) / (KMAX - 1), taks(i)]);
+        }
+        var s = frame("Kat sayısı", "Zemine oturan oran");
+        s += gRect(0, 0.5, 1, 1, { c: "var(--no)", o: 0.08, r: 0 });
+        s += gLine(0, 0.5, 1, 0.5, { c: "var(--no)", w: 1.2, d: "4 3" });
+        s += gTxt(0.99, 0.5, "parselin yarısı kapanır", { a: "end", dy: -5, c: "var(--no)", s: 8.5 });
+        s += gPoly(pts, { c: "var(--accent)", w: 2.6 });
+        var T = taks(p.k), acik = 1 - T;
+        var kx = (p.k - 1) / (KMAX - 1);
+        if (T <= 1) {
+          s += gDot(kx, T, { c: "var(--ink)" });
+          s += gTxt(kx, T, "%" + r0(T * 100), {
+            a: p.k > 13 ? "end" : "start", dx: p.k > 13 ? -7 : 7, dy: T > 0.9 ? 13 : -6,
+            c: "var(--ink)", b: 1, s: 10 });
+        } else {
+          s += gTxt(kx, 0.97, "mümkün değil", { a: kx > 0.6 ? "end" : "start", dx: kx > 0.6 ? -4 : 4, c: "var(--no)", b: 1, s: 10 });
+        }
+        [5, 10, 15].forEach(function (v) { s += gTxt((v - 1) / (KMAX - 1), 0, v, { a: "middle", dy: 12, s: 9 }); });
+        return { svg: s, text: T > 1
+          ? "Emsal " + r1(E) + ", " + p.k + " katta parsele sığmıyor: zemine oturması gereken alan parselden büyük. Bu yoğunluk ancak daha çok katla mümkün."
+          : "Emsal " + r1(E) + " ve " + p.k + " kat: parselin %" + r0(T * 100) + "'i kapanıyor, %" +
+            r0(acik * 100) + "'i açık kalıyor. Hektara kabaca " + r0(100 * E) +
+            " konut düşüyor ve bu sayı kat sayısından bağımsızdır — yoğunluk emsalde saklıdır. " +
+            "Kat sayısını artırmak yoğunluğu değil biçimi değiştirir: aynı insan sayısı ya zemini kaplar ya yükselip avlu bırakır. " +
+            "Yoğunluk tartışmalarının çoğu aslında biçim tartışmasıdır." };
+      }
     }
   };

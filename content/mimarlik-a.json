@@ -1,0 +1,501 @@
+[
+  {
+    "id": "kuvvet-ve-tasiyici",
+    "moduleId": "struktur",
+    "order": 1,
+    "title": "Yük, kuvvet ve taşıyıcı sistem",
+    "subtitle": "Her yapı, ağırlığı yere indirmenin bir yoludur.",
+    "minutes": 8,
+    "keyTerms": ["yük", "basınç", "çekme", "eğilme", "kiriş", "açıklık"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Bir binaya bakarken gördüğümüz şey biçimdir; ama biçimi belirleyen şey, çoğu zaman görünmeyen bir sorunun çözümüdür: bu ağırlık yere nasıl inecek? Çatının, katların, insanların, karın ve rüzgârın ağırlığı bir noktadan başlar ve kesintisiz bir yol izleyerek zemine ulaşmak zorundadır. Bu yola yük yolu denir. Yük yolunun kesintiye uğradığı her yer, yapının zayıf noktasıdır."
+      },
+      {
+        "kind": "list",
+        "title": "Yük türleri",
+        "items": [
+          "Ölü yük: yapının kendi ağırlığı. Değişmez ve hesaplanabilir.",
+          "Hareketli yük: insanlar, eşya, depo malzemesi. Yeri ve büyüklüğü değişir.",
+          "Kar ve rüzgâr yükü: iklime bağlıdır; hafif çatılarda rüzgâr yükü kaldırma yönünde çalışır.",
+          "Deprem yükü: kütlenin ivmelenmesinden doğan yatay kuvvet. Diğerlerinden farklı olarak binanın ağırlığıyla doğru orantılıdır — ağır bina daha çok kuvvet çeker.",
+          "Zemin ve su basıncı: bodrum duvarlarına yandan gelen itme."
+        ]
+      },
+      {
+        "kind": "text",
+        "title": "Üç temel zorlanma",
+        "body": "Malzemeler yükü üç ana biçimde karşılar. Basınç malzemeyi sıkıştırır, çekme uzatmaya çalışır, kesme birbirine komşu iki yüzeyi kaydırmaya çalışır. Bu ayrım mimarlık tarihinin en verimli anahtarıdır, çünkü tarih boyunca kullanılan malzemelerin çoğu basınca güçlü, çekmeye zayıftır. Taş kendi ağırlığının yüzlerce katını sıkıştırma yönünde taşır ama uzatıldığında kolayca ayrılır."
+      },
+      {
+        "kind": "text",
+        "title": "Kirişin sınırı",
+        "body": "Bir kiriş yük altında bükülür. Büküldüğünde üst lifi kısalır, alt lifi uzar: yani üstte basınç, altta çekme doğar. Taş bir kiriş bu yüzden ortasından, alttan çatlar. Kirişin gücü yüksekliğinin karesiyle artar ama açıklığın karesiyle azalır; bu iki etki birlikte, taşla geçilebilecek açıklığa çok erken bir tavan koyar. Antik tapınakların sütunları neden bu kadar sıktır sorusunun cevabı, zevkte değil bu formüldedir."
+      },
+      { "kind": "chart", "chartId": "kiris-acikligi" },
+      {
+        "kind": "formula",
+        "title": "Kendi ağırlığını taşıyan kirişte açıklık sınırı",
+        "expression": "L = √( σ · d / (0,75 · ρ · g) )"
+      },
+      {
+        "kind": "text",
+        "body": "Formülde σ malzemenin güvenle taşıyabildiği çekme gerilmesi, d kirişin yüksekliği, ρ yoğunluğudur. Buradan çıkan iki sonuç bütün kursu taşır. Birincisi, açıklık malzemenin dayanımının yoğunluğuna oranıyla belirlenir; ağır ve çekmeye zayıf olan taş en kötü ihtimaldir. İkincisi, kirişi yükseltmek açıklığı artırır ama karekök hızında artırır: kirişi iki katına çıkarmak açıklığı yalnızca yüzde kırk büyütür. Bu yüzden mimarlık, kirişi büyütmek yerine kirişten vazgeçen bir çözüm aradı."
+      },
+      {
+        "kind": "example",
+        "title": "Aynı sorunun üç çözümü",
+        "body": "Bir dere geçilecek. Ahşap bulunan bir yerde bir kütük atılır: kiriş. Yalnızca taş varsa iki yandan taşlar üst üste bindirilerek ortada buluşturulur ya da bir kemer örülür: basınç sistemi. Çelik varsa incecik bir kafes kurulur: çekme ve basıncı ayrı çubuklara dağıtan sistem. Üç çözüm de aynı sorunu çözer, üçü de bambaşka görünür. Mimarlığın biçim çeşitliliğinin büyük kısmı malzeme çeşitliliğinin gölgesidir."
+      },
+      {
+        "kind": "quote",
+        "text": "Sağlamlık, kullanışlılık ve güzellik gözetilerek yapılmalıdır.",
+        "source": "Vitruvius, Mimarlık Üzerine On Kitap, MÖ 1. yüzyıl"
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Taş bir kirişin ortadan çatlaması neden alt yüzeyden başlar?",
+        "options": [
+          "Alt yüzey daha az işlenmiştir",
+          "Kiriş büküldüğünde alt lif uzar, yani çekmeye çalışır ve taş çekmeye zayıftır",
+          "Nem alttan gelir",
+          "Alt yüzeye daha çok yük biner"
+        ],
+        "answerIndex": 1,
+        "explanation": "Eğilmede üst lif kısalır (basınç), alt lif uzar (çekme). Taşın zayıf olduğu yer çekmedir, bu yüzden çatlak alttan başlar."
+      },
+      {
+        "id": "q2",
+        "prompt": "Deprem yükünü diğer yüklerden ayıran temel özellik nedir?",
+        "options": [
+          "Sadece yüksek binaları etkilemesi",
+          "Yapının kendi kütlesiyle orantılı olması — ağırlaştıkça kuvvet de artar",
+          "Yalnızca temellere etkimesi",
+          "Hesaplanamaz olması"
+        ],
+        "answerIndex": 1,
+        "explanation": "Deprem kuvveti kütlenin ivmelenmesinden doğar. Bu yüzden ağır bir yapı, aynı depremde daha büyük bir kuvvetle karşılaşır; hafiflik başlı başına bir dayanım stratejisidir."
+      },
+      {
+        "id": "q3",
+        "prompt": "Kirişin yüksekliğini iki katına çıkarmak açıklığı ne kadar artırır?",
+        "options": [
+          "İki katına",
+          "Dört katına",
+          "Yaklaşık yüzde kırk — karekök hızında",
+          "Değiştirmez"
+        ],
+        "answerIndex": 2,
+        "explanation": "Açıklık, yüksekliğin kareköküyle artar. √2 ≈ 1,41 olduğu için kirişi iki katına çıkarmak açıklığı ancak yüzde kırk kadar büyütür; bu yüzden kirişi büyütmek verimsiz bir yoldur."
+      }
+    ]
+  },
+  {
+    "id": "kemer-ve-kubbe",
+    "moduleId": "struktur",
+    "order": 2,
+    "title": "Kemer, tonoz, kubbe",
+    "subtitle": "Çekmeden kaçmanın en zarif yolu.",
+    "minutes": 9,
+    "keyTerms": ["kemer", "kilit taşı", "yatay itme", "tonoz", "kubbe", "pandantif"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Kemer, taşın zayıflığını ortadan kaldırmaz; taşı zayıf olduğu duruma hiç sokmaz. Eğri bir dizilim boyunca her taş komşusuna yaslanır ve bütün sistem baştan sona basınç altında kalır. Çekme yoktur, dolayısıyla taşın en kötü özelliği devreye girmez. Bunun bedeli, yükün artık yalnızca aşağı değil, aynı zamanda yanlara doğru inmesidir."
+      },
+      {
+        "kind": "text",
+        "title": "Yatay itme",
+        "body": "Kemer ayaklarını dışarı doğru iter. Bu itme kemerin biçiminden doğar ve kaçınılmazdır: yükü eğri bir yol boyunca indirmenin bedelidir. İtmeyi karşılamanın üç yolu vardır. Kalın duvar ya da payanda ile ağırlık koymak, komşu kemerlerle karşılıklı dengelemek, ya da iki ayak arasına bir gergi çekip itmeyi çekmeyle tutmak. Osmanlı ve Bizans yapılarında görülen demir gergiler tam olarak bu işi yapar; sonradan eklenmiş bir kusur değil, sistemin parçasıdır."
+      },
+      { "kind": "chart", "chartId": "kemer-itmesi" },
+      {
+        "kind": "text",
+        "body": "Grafikte görülen tek bir ilişki, gotik katedralden Roma su kemerine kadar çok şeyi açıklar: kemer yükseldikçe itme azalır. Yarım daire kemer, taşıdığı düşey yükün yaklaşık dörtte biri kadar bir kuvvetle yanlara iter; sivri bir kemerde bu oran altıda bire kadar iner. Roma mimarlığı yarım daire kemeri kalın duvarla dengeledi. Gotik, kemeri yükselterek itmeyi küçülttü ve kalan itmeyi de binanın dışına taşıdı; böylece duvar inceldi ve yerini cam aldı."
+      },
+      {
+        "kind": "list",
+        "title": "Kemerden türeyen örtüler",
+        "items": [
+          "Beşik tonoz: kemerin bir doğrultuda uzatılması. Bütün uzunluk boyunca iter, bu yüzden iki yanında sürekli duvar ister.",
+          "Çapraz tonoz: iki beşik tonozun dik kesişmesi. İtme dört köşede toplanır, aralar boşaltılabilir — pencere buradan doğar.",
+          "Kubbe: kemerin ekseni etrafında döndürülmesi. Yükü her yöne dağıtır; itme de her yönedir, bu yüzden çepeçevre bir çember gerilmesi doğar.",
+          "Yarım kubbe: ana kubbenin yanına eklenip hem yükünü hem itmesini kademeli olarak alan örtü.",
+          "Pandantif: kare bir mekânın köşelerinden başlayıp yukarıda daireye dönüşen küresel üçgen. Kare plan üstüne yuvarlak kubbe oturtmayı mümkün kılar."
+        ]
+      },
+      {
+        "kind": "example",
+        "title": "Kubbenin gizli sorunu",
+        "body": "Kubbe aşağı doğru genişledikçe kendini dışa iter; eteğinde bir çember boyunca çekme gerilmesi doğar. Taşın en zayıf olduğu yer yine karşımıza çıkar. Pantheon'da bu, kubbenin eteğine giderek ağırlaşan bir kütle yığmakla çözüldü. Ayasofya'da yarım kubbeler ve payandalar kullanıldı; buna rağmen ilk kubbe yirmi yıl sonra çöktü ve daha dik bir biçimle yeniden yapıldı. Floransa'da Brunelleschi, kubbenin içine taş ve demir zincirler gömdü. Yirminci yüzyılda aynı iş, birkaç santimlik çelik donatıyla yapılır."
+      },
+      {
+        "kind": "text",
+        "title": "Biçimi hesapla değil, iple bulmak",
+        "body": "Bir zincir iki ucundan asıldığında kendi ağırlığı altında bir eğri alır ve bu eğri boyunca yalnızca çekme vardır. Bu eğriyi ters çevirirseniz, yalnızca basınç olan bir kemer elde edersiniz. Robert Hooke bunu on yedinci yüzyılda bir cümleyle yazdı; Gaudí ise yirminci yüzyılın başında ağırlıklarla yüklü asılı ip modelleri kurup fotoğrafı ters çevirerek yapılarının biçimini buldu. Hesap yapmadan doğru strüktürü bulmanın en zarif yollarından biridir."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Kemer taşın hangi zayıflığını devre dışı bırakır?",
+        "options": [
+          "Ağırlığını",
+          "Çekmeye dayanıksızlığını — sistem baştan sona basınç altındadır",
+          "Aşınmasını",
+          "Isı geçirgenliğini"
+        ],
+        "answerIndex": 1,
+        "explanation": "Kemerde yük eğri boyunca basınçla iletilir; taş hiçbir yerde uzatılmaz. Böylece taşın en zayıf olduğu durum hiç oluşmaz."
+      },
+      {
+        "id": "q2",
+        "prompt": "Bir kemeri yükseltmek yatay itmeyi ne yapar?",
+        "options": [
+          "Artırır",
+          "Azaltır",
+          "Değiştirmez",
+          "Önce artırır sonra azaltır"
+        ],
+        "answerIndex": 1,
+        "explanation": "İtme kabaca yüksekliğin tersiyle değişir. Sivri kemer, aynı açıklığı çok daha az yanal itmeyle geçtiği için gotik yapının incelen duvarını mümkün kılar."
+      },
+      {
+        "id": "q3",
+        "prompt": "Pandantif ne işe yarar?",
+        "options": [
+          "Kubbeyi hafifletir",
+          "Kare planlı bir mekânın üstüne yuvarlak kubbe oturtmayı sağlar",
+          "Yağmur suyunu toplar",
+          "Kubbenin akustiğini düzeltir"
+        ],
+        "answerIndex": 1,
+        "explanation": "Pandantif, köşelerden başlayıp yukarıda daireye dönüşen küresel üçgendir. Kare ile daire arasındaki geçişi çözerek Ayasofya ölçeğindeki mekânları mümkün kılmıştır."
+      }
+    ]
+  },
+  {
+    "id": "gotik-yapi",
+    "moduleId": "struktur",
+    "order": 3,
+    "title": "Gotik: strüktürün görünür olması",
+    "subtitle": "Duvarın taşıyıcılıktan kurtulduğu an.",
+    "minutes": 8,
+    "keyTerms": ["sivri kemer", "nervürlü tonoz", "uçan payanda", "payanda", "vitray"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Gotik, çoğu zaman bir üslup olarak anlatılır: sivri kemerler, yüksek mekânlar, renkli camlar. Oysa gotik önce bir mühendislik programıdır. Tek bir hedefi vardır: yükü taşıyan kısmı, yükü taşımayan kısımdan ayırmak. Bu ayrım bir kez yapıldığında, taşımayan kısım istenildiği kadar inceltilebilir — hatta tamamen kaldırılıp yerine cam konabilir."
+      },
+      {
+        "kind": "list",
+        "title": "Üç buluş, tek fikir",
+        "items": [
+          "Sivri kemer: aynı açıklığı daha az yatay itmeyle geçer ve farklı açıklıkları aynı yükseklikte buluşturmayı kolaylaştırır.",
+          "Nervürlü tonoz: yükü taşıyan ince kaburgalar örülür, araları hafif dolgu ile kapatılır. Taşıyıcı ile dolgu ayrışır.",
+          "Uçan payanda: tonozun itmesi, binanın dışındaki bir ayağa eğik bir köprüyle aktarılır. İtme duvardan alınınca duvar yalnızca kendini taşır."
+        ]
+      },
+      {
+        "kind": "text",
+        "title": "Sonuç: ışık",
+        "body": "Bu üç hamlenin toplamı, duvarın strüktürel görevden kurtulmasıdır. Romanesk kilisenin kalın duvarında küçük ve seyrek pencereler vardır, çünkü her boşluk duvarı zayıflatır. Gotik katedralde yük belirli hatlar üzerinde yoğunlaştığı için aradaki yüzey boşaltılabilir. Vitray, bir süsleme kararı olmadan önce bir strüktür kararının sonucudur. Dönemin ilahiyatında ışığın taşıdığı anlam bu teknik imkânla buluşunca, ortaya Avrupa'nın en tanınabilir iç mekânı çıkar."
+      },
+      {
+        "kind": "example",
+        "title": "Sınırı bulmak",
+        "body": "Gotik katedraller birbiriyle yarıştı ve yükseklik rekabetin ölçüsü oldu. Beauvais Katedrali'nde tonoz 48 metreye çıkarıldı; 1284'te kısmen çöktü ve yapı hiçbir zaman tamamlanamadı. Ortaçağ ustalarının elinde bugünkü anlamda bir hesap yöntemi yoktu; oranlara, geometrik kurallara ve önceki yapıların deneyimine dayanıyorlardı. Sınır, hesapla değil çökerek bulundu. Yapı mühendisliğinin sayısal hâle gelmesi için birkaç yüzyıl daha geçmesi gerekti."
+      },
+      {
+        "kind": "text",
+        "title": "Yığmanın gerçek güvenlik payı",
+        "body": "Modern bir okuma, yığma yapının ayakta durmasının gerilme değil geometri meselesi olduğunu söyler: kemer ve tonozda basıncın izlediği çizgi, taşın kalınlığı içinde kaldığı sürece yapı ayaktadır. Bu yüzden yığma yapılarda çatlak çoğu zaman çökme habercisi değildir; sistem kendine yeni bir denge yolu bulur. Aynı sebeple bu yapılar oturmaya karşı hoşgörülü, ani yatay kuvvete — yani depreme — karşı kırılgandır."
+      },
+      {
+        "kind": "quote",
+        "text": "Yığma bir yapının güvenliği, malzemenin dayanımından çok biçiminin doğruluğuna bağlıdır.",
+        "source": "Jacques Heyman'ın yığma strüktür kuramının özeti, 20. yüzyıl"
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Gotik mimarlığın temel fikri nedir?",
+        "options": [
+          "Daha ince taş kullanmak",
+          "Taşıyıcı olan ile taşımayan kısmı birbirinden ayırmak",
+          "Kubbe yerine tonoz kullanmak",
+          "Yapıyı daha ucuza mal etmek"
+        ],
+        "answerIndex": 1,
+        "explanation": "Kaburgalar ve payandalar yükü belirli hatlarda toplar; aradaki yüzey taşıyıcı olmaktan çıkar. Bu ayrım yapılmadan büyük cam yüzeyler mümkün olmazdı."
+      },
+      {
+        "id": "q2",
+        "prompt": "Uçan payanda ne yapar?",
+        "options": [
+          "Çatının ağırlığını azaltır",
+          "Tonozun yatay itmesini binanın dışındaki bir ayağa taşır",
+          "Rüzgârı keser",
+          "Süsleme amaçlıdır"
+        ],
+        "answerIndex": 1,
+        "explanation": "İtme dışarıdaki ayağa aktarılınca duvar bu kuvvetten kurtulur ve inceltilebilir; büyük pencereler bu sayede açılır."
+      },
+      {
+        "id": "q3",
+        "prompt": "Yığma bir kemerin güvenliği esas olarak neye bağlıdır?",
+        "options": [
+          "Taşın dayanımına",
+          "Basınç çizgisinin taş kalınlığı içinde kalmasına",
+          "Harcın kalitesine",
+          "Kemerin süslemesine"
+        ],
+        "answerIndex": 1,
+        "explanation": "Yığmada gerilmeler malzeme sınırının çok altındadır. Belirleyici olan geometridir: basınç çizgisi kesitin dışına çıktığında mafsal oluşur ve sistem devrilerek göçer."
+      }
+    ]
+  },
+  {
+    "id": "malzeme",
+    "moduleId": "struktur",
+    "order": 4,
+    "title": "Taş, tuğla, ahşap, toprak",
+    "subtitle": "Malzeme sadece bir seçim değil, bir kısıtlar bütünüdür.",
+    "minutes": 8,
+    "keyTerms": ["kâgir", "yığma", "harç", "hımış", "kerpiç"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Sanayi öncesinde malzeme seçilmezdi, bulunurdu. Ağır malzemeyi uzağa taşımak pahalıydı; bu yüzden yapı kültürü coğrafyanın doğrudan izini taşır. Ormanlık bölgelerde ahşap, taş ocaklarının yakınında taş, alüvyon ovalarında kerpiç ve tuğla egemendir. Yerel mimarlığın çeşitliliği bir üslup zenginliği değil, önce bir lojistik gerçeğidir."
+      },
+      {
+        "kind": "list",
+        "title": "Malzemelerin dili",
+        "items": [
+          "Taş: basınca çok güçlü, çekmeye zayıf, ağır. Kalın duvar, küçük açıklık, uzun ömür.",
+          "Tuğla: küçük ve standart. Taşa göre daha esnek bir geometri kurar; kemer ve kubbe örmek çok daha kolaydır.",
+          "Ahşap: hem çekmeye hem basınca dayanır ve hafiftir. Kiriş, makas ve çerçeve mümkün olur; ateş ve nem düşmanıdır.",
+          "Kerpiç: ucuz, iyi yalıtır, kalın duvar ister. Suya dayanıksızdır ve ağır olduğu için depremde tehlikelidir.",
+          "Harç: taşları birbirine bağlamaktan çok, yükü düzgün dağıtmaya yarar. Romalıların volkanik küllü harcı suyun altında bile sertleşiyordu."
+        ]
+      },
+      {
+        "kind": "text",
+        "title": "Anadolu'nun karma tekniği",
+        "body": "Anadolu'nun büyük kısmında yaygın olan hımış, ahşap bir iskeletin aralarının tuğla, taş ya da kerpiçle doldurulmasıdır. Bu birleşim iki nedenle akıllıdır. Birincisi, ahşap iskelet çekmeye çalışabildiği için yapı deprem sırasında bir bütün olarak davranır ve dağılmaz. İkincisi, hafiftir; deprem kuvveti kütleyle orantılı olduğu için hafiflik doğrudan güvenliktir. Yirminci yüzyılda bu teknikten hızla vazgeçildi, çoğu zaman güvenlik gerekçesiyle değil, moda ve maliyet gerekçesiyle."
+      },
+      {
+        "kind": "example",
+        "title": "Ahşap hatıllar",
+        "body": "Geleneksel yığma yapılarda duvarın belirli yüksekliklerine yatay ahşap kuşaklar gömülür. Bu hatıllar duvarı çepeçevre bağlar ve deprem sırasında taşların dağılmasını geciktirir. Aynı işi bugün betonarme hatıl ve donatı yapar. Teknik değişmiştir, fikir değişmemiştir: yığma bir kütleye çekme dayanımı katmak."
+      },
+      {
+        "kind": "text",
+        "title": "Malzeme biter, biçim kalır",
+        "body": "Mimarlık tarihinde tekrar tekrar görülen bir kalıp vardır: yeni bir malzeme çıkar, ama ilk yapılarda eski malzemenin biçimleri taklit edilir. İlk demir köprü taş kemeri, ilk betonarme yapılar taş cepheyi, ilk çelik gökdelenler gotik kuleyi taklit etti. Yeni malzemenin kendi biçimini bulması genellikle bir kuşak alır. Bugün de aynı gecikme yaşanıyor; sayısal üretimle mümkün olan geometrilerin çoğu hâlâ alışılmış biçimlerin içine sıkışmış durumda."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Hımış tekniğinin depremde iyi davranmasının iki sebebi nedir?",
+        "options": [
+          "Ucuz ve hızlı olması",
+          "Ahşap iskeletin çekmeye çalışabilmesi ve yapının hafif olması",
+          "Duvarların kalın olması",
+          "Temelinin derin olması"
+        ],
+        "answerIndex": 1,
+        "explanation": "Ahşap iskelet yapıyı bir arada tutar, hafiflik ise deprem kuvvetini küçültür. Deprem kuvveti kütleyle orantılı olduğu için ağırlık başlı başına bir risktir."
+      },
+      {
+        "id": "q2",
+        "prompt": "Geleneksel yığma duvarlara gömülen ahşap hatılların işlevi nedir?",
+        "options": [
+          "Duvarı yalıtmak",
+          "Duvarı çepeçevre bağlayarak yatay kuvvette dağılmasını geciktirmek",
+          "Nemi emmek",
+          "Duvarı hafifletmek"
+        ],
+        "answerIndex": 1,
+        "explanation": "Hatıl, yığmanın eksik olduğu çekme dayanımını duvara katar. Bugün aynı işi betonarme hatıl ve donatı görür."
+      },
+      {
+        "id": "q3",
+        "prompt": "Yeni bir yapı malzemesi ortaya çıktığında ilk yapılarda genellikle ne görülür?",
+        "options": [
+          "Malzemeye özgü tamamen yeni biçimler",
+          "Eski malzemenin biçimlerinin taklidi",
+          "Süslemeden tümüyle vazgeçilmesi",
+          "Ölçeğin küçülmesi"
+        ],
+        "answerIndex": 1,
+        "explanation": "İlk demir köprüler taş kemeri, ilk betonarme yapılar taş cepheyi taklit etti. Yeni malzemenin kendi biçim dilini bulması genellikle bir kuşak sürer."
+      }
+    ]
+  },
+  {
+    "id": "oran-ve-duzen",
+    "moduleId": "bicim",
+    "order": 1,
+    "title": "Oran, düzen ve klasik dil",
+    "subtitle": "Kuralın işlevi, tekrar edilebilmesidir.",
+    "minutes": 8,
+    "keyTerms": ["modül", "düzen", "entasis", "simetri", "altın oran"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Klasik mimarlık bir biçimler koleksiyonu değil, bir kurallar dizisidir. Bir yapının bütün ölçüleri tek bir temel birimden — modülden — türetilir; genellikle bu birim sütunun çapının yarısıdır. Sütunun yüksekliği modülün belirli bir katıdır, başlığın yüksekliği başka bir katı, saçağın çıkması bir başkası. Bu sistem sayesinde aynı yapı büyütülebilir ya da küçültülebilir; oranlar korunduğu sürece bütün aynı kalır."
+      },
+      {
+        "kind": "list",
+        "title": "Üç düzen",
+        "items": [
+          "Dorik: başlıksız denecek kadar sade, gövde kalın, oran ağır. Erken dönemin ve dünyevi ciddiyetin dili.",
+          "İyonik: başlıkta kıvrım (volüt), gövde daha ince ve uzun. Daha ölçülü ve zarif.",
+          "Korint: akant yapraklı başlık, en ince oran. Roma'da en sevilen düzen oldu; imparatorluk ölçeğine uyuyordu.",
+          "Roma bunlara Toskan ve Kompozit'i ekledi ve düzenleri bir hiyerarşiye oturttu: alt katta ağır, üst katta hafif düzen."
+        ]
+      },
+      {
+        "kind": "text",
+        "title": "Göze göre düzeltmek",
+        "body": "Parthenon'un hiçbir çizgisi tam düz değildir. Sütunlar hafifçe şişkindir (entasis), köşe sütunları biraz daha kalındır, taban ortada birkaç santim yukarı kavislenir, sütunlar merkeze doğru çok az eğiktir. Bu düzeltmelerin amacı, gözün algı yanılgılarını telafi etmektir: uzun düz bir çizgi ortadan çökük görünür, gökyüzüne karşı duran köşe sütunu daha ince algılanır. Klasik mimarlık geometrik değil, algısal bir kesinlik peşindedir."
+      },
+      {
+        "kind": "text",
+        "title": "Altın oran meselesi",
+        "body": "Altın oranın klasik yapıların gizli anahtarı olduğu iddiası yaygındır ve büyük ölçüde sonradan üretilmiştir. Antik metinlerde mimari oran için altın orandan söz edilmez; Vitruvius tam sayı oranlarını ve modül sistemini anlatır. Bir yapıya yeterince çok dikdörtgen çizerseniz 1,618'e yakın bir orana mutlaka rastlarsınız — bu, oranın kullanıldığını değil, aramanın esnek olduğunu gösterir. Bu tür açıklamalar ilgi çekicidir ama kanıt eşiğini geçmez; mimarlığın gerçek oran kültürü çok daha somuttur: 1:2, 2:3, 3:4 gibi müzikten ödünç alınmış basit oranlar."
+      },
+      {
+        "kind": "example",
+        "title": "Palladio'nun villaları",
+        "body": "Palladio, oda ölçülerini birbiriyle basit oranlar kuracak biçimde seçti: bir oda 12×18, komşusu 18×18, öteki 18×30. Bu ilişkiler planda gezinirken sezilir bir düzen duygusu yaratır. Palladio'yu asıl etkili kılan şey ise yapıları değil, kitabıdır: sistemi çizimle anlatınca, İngiltere'de ve Amerika'da hiç görmediği bir mimarlık onun kurallarıyla üretildi. Mimarlığın kitapla yayılabilir hâle gelmesi başlı başına bir dönüm noktasıdır."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Klasik mimarlıkta modül nedir?",
+        "options": [
+          "Standart bir yapı elemanı",
+          "Bütün ölçülerin katı olarak türetildiği temel birim, genellikle sütun çapının yarısı",
+          "Bir plan tipi",
+          "Cephedeki tekrar eden süsleme"
+        ],
+        "answerIndex": 1,
+        "explanation": "Modül sistemi yapının bütün ölçülerini tek bir birime bağlar; böylece yapı ölçek değiştirse de oranlar korunur."
+      },
+      {
+        "id": "q2",
+        "prompt": "Parthenon'daki entasis ve benzeri düzeltmelerin amacı nedir?",
+        "options": [
+          "Taşıyıcılığı artırmak",
+          "Gözün algı yanılgılarını telafi etmek",
+          "Yağmur suyunu akıtmak",
+          "Malzemeden tasarruf etmek"
+        ],
+        "answerIndex": 1,
+        "explanation": "Uzun düz çizgi ortadan çökük görünür, ince sütun daha da ince algılanır. Düzeltmeler geometrik değil algısal doğruluğu hedefler."
+      },
+      {
+        "id": "q3",
+        "prompt": "Altın oranın klasik mimarlıktaki yeri hakkında en doğru ifade hangisidir?",
+        "options": [
+          "Bütün klasik yapıların gizli kuralıdır",
+          "Antik kaynaklarda mimari oran için geçmez; iddiaların çoğu sonradan üretilmiş yorumlardır",
+          "Yalnızca Roma'da kullanılmıştır",
+          "Hiçbir sanatta kullanılmamıştır"
+        ],
+        "answerIndex": 1,
+        "explanation": "Vitruvius modül ve tam sayı oranlarını anlatır. Bir yapıda yeterince çok dikdörtgen ararsanız 1,618'e yakın bir orana rastlarsınız; bu kanıt değildir."
+      }
+    ]
+  },
+  {
+    "id": "osmanli-mimarisi",
+    "moduleId": "bicim",
+    "order": 2,
+    "title": "Osmanlı mimarisi ve Sinan",
+    "subtitle": "Elli yıl süren tek bir soru: kubbe nasıl taşınır?",
+    "minutes": 9,
+    "keyTerms": ["külliye", "yarım kubbe", "fil ayağı", "mihrap", "revak"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Osmanlı camisinin ana sorusu sadedir ve elli yıl boyunca aynı kalır: tek ve bölünmemiş bir mekân üstüne büyük bir kubbe nasıl oturtulur? Ayasofya bu sorunun hem ilham kaynağı hem rakibiydi. Sinan'ın yapıları, birbirini izleyen denemeler olarak okunduğunda mimarlık tarihinin en sistemli araştırma dizisi ortaya çıkar."
+      },
+      {
+        "kind": "list",
+        "title": "Üç büyük deneme",
+        "items": [
+          "Şehzade Camii (1548): kubbe dört yarım kubbeyle çevrelenir. Simetri kusursuzdur ama mekân merkezî ve durağandır. Sinan bunu 'çıraklık eserim' diye anar.",
+          "Süleymaniye (1557): iki yarım kubbe kullanılır, yanlar kemerli duvarlarla çözülür. Ayasofya'nın şemasına yaklaşır ama daha berrak bir düzenle.",
+          "Selimiye (1575): kubbe sekiz ayağa oturur, yarım kubbeler köşelere çekilir. Ortada hiçbir engel kalmaz; mekân tek bir hacim olarak algılanır. Sinan buna 'ustalık eserim' der."
+        ]
+      },
+      {
+        "kind": "text",
+        "title": "Fil ayağını gizlemek",
+        "body": "Kubbenin yükü ve itmesi kalın payelerle taşınır; bunlara fil ayağı denir. Sorun payelerin var olması değil, mekânı bölmesidir. Ayasofya'da payeler mekânı yanlardan sıkıştırır. Selimiye'de sekiz paye duvara yaklaştırılır ve galerilerin içine gizlenir; taşıyıcı hâlâ oradadır ama artık mekânın ortasında değildir. Sinan'ın ustalığı yeni bir taşıyıcı icat etmesinde değil, mevcut taşıyıcıyı mekânın algısından çıkarmasındadır."
+      },
+      {
+        "kind": "text",
+        "title": "Külliye: yapı değil, kent parçası",
+        "body": "Osmanlı mimarlığının en az konuşulan ama en özgün yanı, tek yapı yerine yapı topluluğu kurmasıdır. Külliyede cami çevresinde medrese, imaret, hamam, darüşşifa, kütüphane ve türbe toplanır. Bu topluluk vakıf düzeniyle finanse edilir; gelir getiren yapılar (han, bedesten, hamam) gelir tüketen yapıları (imaret, darüşşifa) yüzyıllar boyu ayakta tutar. Süleymaniye bir cami değil, eğimli bir arazi üzerine yerleştirilmiş bir mahalle programıdır."
+      },
+      {
+        "kind": "example",
+        "title": "Arazi ve siluet",
+        "body": "Süleymaniye'nin oturduğu yamaç düz değildir; Sinan altta çarşı ve dükkânlar kurup üstte teras oluşturarak hem eğimi çözmüş hem vakfa gelir kaynağı yaratmıştır. Yapının Haliç'ten görünüşü tesadüf değil, hesaplanmış bir siluettir. Osmanlı mimarlığı yapıyı manzaranın içine yerleştirmeyi bir tasarım problemi olarak ele alır; bu, Avrupa'da ancak çok sonra bilinçli bir mesele hâline gelecektir."
+      },
+      {
+        "kind": "quote",
+        "text": "Ayasofya kubbesi gibi kubbe dünyada yoktur diyen mimar taifesinin... Selimiye kubbesini altı zira ziyade ve dört zira derin eyledim.",
+        "source": "Sinan'ın hatıralarını aktaran Tezkiretü'l-Bünyan, 16. yüzyıl"
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Sinan'ın Selimiye'de çözdüğü temel sorun nedir?",
+        "options": [
+          "Kubbenin daha büyük yapılması",
+          "Taşıyıcı payelerin mekânı bölmemesi — kubbe sekiz ayağa oturur ve orta boşalır",
+          "Minarelerin yükseltilmesi",
+          "Yapının daha hızlı inşa edilmesi"
+        ],
+        "answerIndex": 1,
+        "explanation": "Payeler ortadan çekilip duvara yaklaştırılınca mekân bölünmeden tek bir hacim olarak algılanır. Yenilik taşıyıcıda değil, taşıyıcının yerleşiminde."
+      },
+      {
+        "id": "q2",
+        "prompt": "Külliyeyi maddi olarak ayakta tutan düzen nedir?",
+        "options": [
+          "Devlet bütçesi",
+          "Vakıf düzeni: han, hamam ve bedesten gibi gelir getiren yapılar imaret ve darüşşifayı finanse eder",
+          "Cemaatin bağışları",
+          "Kira gelirleri yasaktı"
+        ],
+        "answerIndex": 1,
+        "explanation": "Vakıf, gelir getiren yapıları gelir tüketen yapılara bağlar. Külliyenin yüzyıllarca işleyebilmesinin sebebi bu ekonomik kurgudur."
+      },
+      {
+        "id": "q3",
+        "prompt": "Fil ayağı nedir?",
+        "options": [
+          "Minarenin kaidesi",
+          "Kubbenin yükünü taşıyan kalın paye",
+          "Avludaki sütun",
+          "Temel altındaki kazık"
+        ],
+        "answerIndex": 1,
+        "explanation": "Fil ayağı, kubbenin düşey yükünü ve yatay itmesini karşılayan kalın payedir. Osmanlı mimarlığında bunları mekândan gizlemek başlı başına bir tasarım problemidir."
+      }
+    ]
+  }
+]
