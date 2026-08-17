@@ -2357,5 +2357,174 @@
             "Kat sayısını artırmak yoğunluğu değil biçimi değiştirir: aynı insan sayısı ya zemini kaplar ya yükselip avlu bırakır. " +
             "Yoğunluk tartışmalarının çoğu aslında biçim tartışmasıdır." };
       }
+    },
+
+    /* ---- sağlık ---- */
+
+    "goreli-mutlak-risk": {
+      title: "Aynı manşet, iki farklı gerçek",
+      note: "Göreli azalma oranı temel riskten bağımsızdır; mutlak azalma ise doğrudan temel riskle çarpılır. Haberlerde neredeyse her zaman göreli sayı verilir, çünkü daha büyük görünür.",
+      controls: [
+        { key: "t", label: "Tedavisiz temel risk", min: 1, max: 200, step: 1, def: 20,
+          fmt: function (v) { return "binde " + v; } },
+        { key: "r", label: "Göreli risk azalması", min: 5, max: 60, step: 5, def: 30, fmt: pctS }
+      ],
+      draw: function (p) {
+        var t = p.t, kalan = t * (1 - p.r / 100), arr = t - kalan;
+        var TOP = Math.max(5, t * 1.35), nnt = 1000 / arr;
+        var Y = function (v) { return v / TOP; };
+        var s = frame("", "Bin kişide olay sayısı");
+        s += gRect(0.10, 0, 0.34, Y(t), { c: "var(--no)", o: 0.75 });
+        s += gRect(0.56, 0, 0.80, Y(kalan), { c: "var(--no)", o: 0.75 });
+        s += gRect(0.56, Y(kalan), 0.80, Y(t), { c: "var(--ok)", o: 0.35, s: "var(--ok)", sw: 1.2, d: "3 2" });
+        s += gTxt(0.22, 0, "tedavisiz", { a: "middle", dy: 12, s: 9 });
+        s += gTxt(0.68, 0, "tedaviyle", { a: "middle", dy: 12, s: 9 });
+        s += gTxt(0.22, Y(t), r1(t), { a: "middle", dy: -6, c: "var(--ink)", b: 1, s: 10 });
+        s += gTxt(0.68, Y(kalan), r1(kalan), { a: "middle", dy: -6, c: "var(--ink)", b: 1, s: 10 });
+        s += gTxt(0.84, Y((t + kalan) / 2), "önlenen", { a: "start", dy: -2, c: "var(--ok)", b: 1, s: 9 });
+        s += gTxt(0.84, Y((t + kalan) / 2), r1(arr), { a: "start", dy: 9, c: "var(--ok)", b: 1, s: 9 });
+        return { svg: s, text: "Bin kişiden " + r1(t) + " tanesinin başına gelen bir olay, %" + p.r +
+          " göreli azalmayla " + r1(kalan) + " tanesine iniyor. Mutlak azalma binde " + r1(arr) +
+          "; yani bir olayı önlemek için " + r0(nnt) + " kişiyi tedavi etmek gerekiyor. " +
+          (t <= 20
+            ? "Temel risk küçükken 'riski üçte bir azaltıyor' cümlesi doğrudur ama neredeyse hiçbir şey söylemez."
+            : "Temel risk büyüdükçe aynı göreli oran çok daha anlamlı hâle gelir. Göreli sayı tek başına asla yeterli değildir; mutlak sayıyı sormak gerekir.") };
+      }
+    },
+
+    "fayda-zarar-dengesi": {
+      title: "Tedavi etmek ne zaman doğru",
+      note: "Göreli risk azalması %25 varsayıldı. Tedaviden fayda görecek kişi sayısı temel riskle değişir, zarar görecek kişi sayısı ise değişmez; bu yüzden aynı ilaç bir hastada doğru, diğerinde yanlış olabilir.",
+      controls: [
+        { key: "t", label: "Hastanın temel riski", min: 2, max: 200, step: 2, def: 40,
+          fmt: function (v) { return "binde " + v; } },
+        { key: "y", label: "Ciddi yan etki sıklığı", min: 1, max: 40, step: 1, def: 5,
+          fmt: function (v) { return "binde " + v; } }
+      ],
+      draw: function (p) {
+        var RRR = 0.25, T0 = 2, T1 = 200, i;
+        var nnt = function (t) { return 1000 / (RRR * t); };
+        var nnh = 1000 / p.y;
+        var X = function (t) { return (Math.log(t) - Math.log(T0)) / (Math.log(T1) - Math.log(T0)); };
+        var Y = function (v) { return Math.max(0, Math.min(1, Math.log(v) / Math.log(10000))); };
+        var pts = [];
+        for (i = 0; i <= 60; i++) {
+          var t = T0 * Math.pow(T1 / T0, i / 60);
+          pts.push([X(t), Y(nnt(t))]);
+        }
+        var esik = 1000 / (RRR * nnh);          // NNT ile NNH'nin eşitlendiği temel risk
+        var s = frame("Temel risk", "Kişi sayısı");
+        if (esik > T0 && esik < T1) s += gRect(0, 0, X(esik), 1, { c: "var(--no)", o: 0.07, r: 0 });
+        [100, 1000].forEach(function (v) {
+          s += gLine(0, Y(v), 1, Y(v), { c: "var(--rule)", w: 1, d: "2 4" });
+          s += gTxt(0.01, Y(v), String(v), { a: "start", dy: 11, s: 8.5 });
+        });
+        s += gLine(0, Y(nnh), 1, Y(nnh), { c: "var(--no)", w: 2, d: "5 3" });
+        s += gTxt(0.99, Y(nnh), "zarar görecek: " + r0(nnh), { a: "end", dy: -5, c: "var(--no)", b: 1, s: 9 });
+        s += gPoly(pts, { c: "var(--ok)", w: 2.6 });
+        s += gTxt(0.99, Y(nnt(T1)), "fayda görecek", { a: "end", dy: 13, c: "var(--ok)", b: 1, s: 9 });
+        var yy = Y(nnt(p.t));
+        s += gDot(X(p.t), yy, { c: "var(--ink)" });
+        s += gTxt(X(p.t), yy, r0(nnt(p.t)), {
+          a: X(p.t) > 0.6 ? "end" : "start", dx: X(p.t) > 0.6 ? -7 : 7, dy: -6, c: "var(--ink)", b: 1, s: 10 });
+        [5, 30].forEach(function (v) { s += gTxt(X(v), 0, "binde " + v, { a: "middle", dy: 12, s: 8.5 }); });
+        return { svg: s, text: "Temel riski binde " + p.t + " olan bir hastada bir olayı önlemek için " +
+          r0(nnt(p.t)) + " kişinin tedavi edilmesi gerekiyor; aynı tedavi " + r0(nnh) +
+          " kişide ciddi yan etkiye yol açıyor. " +
+          (nnt(p.t) <= nnh
+            ? "Fayda zarardan önce geliyor: bu hasta için tedavi makul."
+            : "Zarar faydadan önce geliyor: bu risk düzeyinde tedavi etmek ortalama olarak iyilikten çok kötülük yapar.") +
+          " Denge binde " + r1(esik) + " temel riskte kuruluyor. Bu yüzden 'ilaç işe yarıyor mu' sorusu eksiktir; doğru soru 'kimde işe yarıyor'dur." };
+      }
+    },
+
+    "erken-teshis-yanilgisi": {
+      title: "Erken teşhis sağkalımı kendiliğinden yükseltir",
+      note: "Aynı hastalar, aynı ölüm tarihleri. Değişen tek şey teşhisin ne kadar erken konduğu. Beş yıllık sağkalım teşhis anından sayıldığı için teşhisi öne almak tek başına bu oranı yükseltir; buna öne alma yanlılığı denir.",
+      controls: [
+        { key: "l", label: "Teşhis ne kadar erkene alındı", min: 0, max: 5, step: 1, def: 3,
+          fmt: function (v) { return v + " yıl"; } },
+        { key: "g", label: "Tedavinin gerçekten kazandırdığı süre", min: 0, max: 30, step: 5, def: 0,
+          fmt: function (v) { return (v / 10).toFixed(1) + " yıl"; } }
+      ],
+      draw: function (p) {
+        var N = 400, i, k;
+        var omur = function (j) {
+          var u = j / (N - 1);
+          return u < 0.75 ? 0.4 + 12 * Math.pow(u / 0.75, 1.7) : 30;
+        };
+        var g = p.g / 10;
+        var sagkalim = function (L) {
+          var c = 0;
+          for (k = 0; k < N; k++) if (L + omur(k) + g > 5) c++;
+          return c / N;
+        };
+        var olum = 0;
+        for (i = 0; i < N; i++) if (omur(i) + g < 10) olum++;
+        olum = olum / N;
+        var pts = [];
+        for (i = 0; i <= 5; i++) pts.push([i / 5, sagkalim(i)]);
+        var s = frame("Erkene alma (yıl)", "Oran");
+        s += gLine(0, olum, 1, olum, { c: "var(--no)", w: 2, d: "5 3" });
+        s += gTxt(0.99, olum, "on yıl içinde ölenler: %" + r0(olum * 100), { a: "end", dy: 13, c: "var(--no)", b: 1, s: 9 });
+        s += gPoly(pts, { c: "var(--ok)", w: 2.6 });
+        s += gTxt(0.02, sagkalim(0), "beş yıllık sağkalım", { a: "start", dy: 13, c: "var(--ok)", b: 1, s: 9 });
+        var yy = sagkalim(p.l);
+        s += gDot(p.l / 5, yy, { c: "var(--ink)" });
+        s += gTxt(p.l / 5, yy, "%" + r0(yy * 100), {
+          a: p.l > 3 ? "end" : "start", dx: p.l > 3 ? -7 : 7, dy: yy > 0.9 ? 13 : -6, c: "var(--ink)", b: 1, s: 10 });
+        [0, 2].forEach(function (v) { s += gTxt(v / 5, 0, v, { a: "middle", dy: 12, s: 9 }); });
+        return { svg: s, text: "Teşhis " + p.l + " yıl erkene alındığında beş yıllık sağkalım %" +
+          r0(sagkalim(0) * 100) + "'ten %" + r0(yy * 100) + "'e çıkıyor. " +
+          (p.g === 0
+            ? "Oysa tedavi hiç kimseye tek bir gün bile kazandırmadı: ölüm oranı olduğu yerde duruyor. Sağkalım oranı bir tarama programının başarısını ölçmez; ölçen tek sayı ölüm oranıdır."
+            : "Bu ayarda tedavi gerçekten " + (p.g / 10).toFixed(1) + " yıl kazandırıyor ve on yıl içindeki ölüm oranı %" +
+              r0(olum * 100) + "'e iniyor. Sağkalımdaki artışın ne kadarının gerçek fayda olduğunu ancak ölüm oranına bakarak ayırabilirsiniz.") };
+      }
+    },
+
+    "ortalamaya-donus": {
+      title: "Tedavi olmadan da iyileşen hastalar",
+      note: "Kimseye hiçbir şey verilmiyor. Ölçüm iki kez tekrarlanıyor ve ilk ölçümde en kötü çıkan grup ikinci ölçümde kendiliğinden daha iyi çıkıyor, çünkü kötü ölçümün bir kısmı o günkü dalgalanmadan geliyordu.",
+      controls: [{ key: "g", label: "Ölçümdeki günlük dalgalanma", min: 0, max: 100, step: 5, def: 50, fmt: pctS }],
+      draw: function (p) {
+        /* Sabit tohumlu üreteç: kaydırıcı oynatıldığında hastalar değişmesin. */
+        var N = 400, i, tohum = 20240517;
+        var rnd = function () { tohum = (tohum * 1664525 + 1013904223) % 4294967296; return tohum / 4294967296; };
+        var nrm = function () { return (rnd() + rnd() + rnd() + rnd() - 2) / 0.5774; };
+        var T = [], z1 = [], z2 = [];
+        for (i = 0; i < N; i++) { T.push(50 + 10 * nrm()); z1.push(nrm()); z2.push(nrm()); }
+        var sahte = function (gur) {
+          var sd = (gur / 100) * 15, m = [], j;
+          for (j = 0; j < N; j++) m.push([T[j] + sd * z1[j], T[j] + sd * z2[j]]);
+          m.sort(function (a, b) { return b[0] - a[0]; });
+          var K = Math.round(N * 0.15), s1 = 0, s2 = 0;
+          for (j = 0; j < K; j++) { s1 += m[j][0]; s2 += m[j][1]; }
+          return [s1 / K, s2 / K];
+        };
+        var TOP = 20, pts = [];
+        for (i = 0; i <= 20; i++) {
+          var r = sahte((100 * i) / 20);
+          pts.push([i / 20, Math.min(1, (r[0] - r[1]) / TOP)]);
+        }
+        var simdi = sahte(p.g), fark = simdi[0] - simdi[1];
+        var s = frame("Ölçümdeki dalgalanma", "Sahte iyileşme");
+        [5, 10, 15].forEach(function (v) {
+          s += gLine(0, v / TOP, 1, v / TOP, { c: "var(--rule)", w: 1, d: "2 4" });
+          s += gTxt(0.01, v / TOP, v + " puan", { a: "start", dy: -4, s: 8.5 });
+        });
+        s += gPoly(pts, { c: "var(--accent)", w: 2.6 });
+        var yy = Math.min(1, fark / TOP);
+        s += gDot(p.g / 100, yy, { c: "var(--ink)" });
+        s += gTxt(p.g / 100, yy, r1(fark) + " puan", {
+          a: p.g > 65 ? "end" : "start", dx: p.g > 65 ? -7 : 7, dy: -6, c: "var(--ink)", b: 1, s: 10 });
+        [0, 50].forEach(function (v) { s += gTxt(v / 100, 0, "%" + v, { a: "middle", dy: 12, s: 9 }); });
+        return { svg: s, text: p.g === 0
+          ? "Ölçüm hiç dalgalanmıyorsa kimse kendiliğinden iyileşmez: en kötü grup ikinci ölçümde de aynı çıkar. Sahte iyileşmeyi üreten şey hastalık değil, ölçümün gürültüsüdür."
+          : "Hiçbir tedavi uygulanmadan, ilk ölçümde en kötü %15'lik gruba giren hastaların ortalaması ikinci ölçümde " +
+            r1(fark) + " puan iyileşti (" + r1(simdi[0]) + " → " + r1(simdi[1]) + "). " +
+            "İnsanlar en kötü hissettikleri gün başvurdukları için, herhangi bir tedavinin ilk gözlemi neredeyse her zaman olumlu görünür. " +
+            "Kontrol grubunun varlık sebebi tam olarak bu payı ayıklamaktır." };
+      }
     }
   };

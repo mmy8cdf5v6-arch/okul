@@ -166,5 +166,19 @@
     "questions": 36,
     "charts": 4,
     "file": "courses/mimarlik.json"
+  },
+  {
+    "id": "saglik",
+    "title": "Sağlık okuryazarlığı",
+    "subtitle": "Kanıt, risk, karar",
+    "description": "Bir sağlık iddiasının ne kadar sağlam olduğunu anlamak, riski doğru okumak ve hekimle birlikte karar vermek için gereken çerçeve.",
+    "icon": "🩺",
+    "accent": "#0f6b76",
+    "accentDark": "#5fc3cf",
+    "category": "gunumuz",
+    "lessons": 12,
+    "questions": 36,
+    "charts": 4,
+    "file": "courses/saglik.json"
   }
 ]

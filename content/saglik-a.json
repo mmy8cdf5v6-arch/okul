@@ -1,0 +1,483 @@
+[
+  {
+    "id": "kanit-duzeyleri",
+    "moduleId": "kanit",
+    "order": 1,
+    "title": "Bir iddia nereden geliyor",
+    "subtitle": "Aynı cümle, bambaşka ağırlıklarda söylenebilir.",
+    "minutes": 8,
+    "keyTerms": ["kanıt hiyerarşisi", "vaka raporu", "gözlemsel çalışma", "kohort çalışması", "sistematik derleme"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Sağlıkla ilgili bir iddia duyduğunuzda sorulacak ilk soru 'doğru mu' değildir. Doğru soru şudur: bu iddia nereden geliyor? Aynı cümle bir kişinin deneyiminden de çıkabilir, yüz bin kişinin otuz yıl izlendiği bir çalışmadan da. İkisi arasındaki fark, iddianın içeriğinde değil, dayanağının gücündedir."
+      },
+      {
+        "kind": "list",
+        "title": "Zayıftan güçlüye",
+        "items": [
+          "Kişisel deneyim ve uzman görüşü: bir başlangıç noktası olabilir, kanıt değildir.",
+          "Vaka raporu: ilginç ve nadir bir durumu görünür kılar; neden-sonuç kuramaz.",
+          "Vaka-kontrol çalışması: hastalananlarla hastalanmayanların geçmişi karşılaştırılır. Hızlıdır, hatırlama yanlılığına açıktır.",
+          "Kohort çalışması: bir grup ileriye doğru izlenir. Sıralamayı doğru kurar ama karıştırıcı değişkenlerden kurtulamaz.",
+          "Randomize kontrollü deney: gruplar rastgele ayrılır. Nedenselliği kurabilen tek tasarımdır.",
+          "Sistematik derleme ve meta-analiz: bir sorudaki bütün çalışmalar önceden ilan edilmiş bir yöntemle taranır ve birlikte değerlendirilir."
+        ]
+      },
+      {
+        "kind": "text",
+        "title": "Hiyerarşi mutlak değildir",
+        "body": "Kötü yürütülmüş bir randomize deney, iyi yürütülmüş bir kohorttan daha zayıftır. Bazı sorular için deney yapmak da mümkün değildir: hiç kimseyi rastgele seçip otuz yıl sigara içirtemezsiniz. Sigaranın öldürdüğü, deneyle değil, birbirini destekleyen çok sayıda gözlemle ve net bir doz-yanıt ilişkisiyle kanıtlandı. Hiyerarşi bir kural değil, bir başlangıç varsayımıdır; asıl mesele çalışmanın nasıl yapıldığıdır."
+      },
+      {
+        "kind": "example",
+        "title": "Mekanizma yeterli değildir",
+        "body": "Bir mekanizma anlatısı çoğu zaman ikna edicidir: 'bu madde şu enzimi bloke eder, o enzim de şu hasara yol açar, demek ki koruyucudur.' Tıp tarihi, laboratuvarda kusursuz görünen zincirlerin insanda çalışmadığı örneklerle doludur. Kalp ritmi bozukluğunu düzelten bazı ilaçların, tam da düzeltmesi beklenen ölümleri artırdığı ancak büyük bir deneyle anlaşılmıştı. Mekanizma bir hipotez üretir; hipotezi sınamaz."
+      },
+      {
+        "kind": "quote",
+        "text": "Aynı sonuç farklı yöntemlerle, farklı topluluklarda, farklı araştırmacılarca tekrar tekrar bulunuyorsa güven artar.",
+        "source": "Bradford Hill'in nedensellik ölçütlerinden 'tutarlılık', 1965"
+      },
+      {
+        "kind": "text",
+        "title": "Pratik bir okuma sırası",
+        "body": "Bir haber ya da paylaşımla karşılaştığınızda dört şeye bakmak çoğu zaman yeter. Bu bir insan çalışması mı, yoksa hücre ya da hayvan çalışması mı? Kaç kişi katılmış? Karşılaştırma grubu var mı? Ve sonuç, gerçekten önemsediğiniz şeyi mi ölçüyor — ölüm ve hastaneye yatış mı, yoksa yalnızca bir kan değeri mi? Bu dört soru, dolaşımdaki sağlık iddialarının büyük kısmını sessizce eler."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Kanıt hiyerarşisinde en üstte ne bulunur?",
+        "options": [
+          "Uzman görüşü",
+          "İyi yürütülmüş sistematik derleme ve meta-analiz",
+          "Vaka raporu",
+          "Hayvan deneyi"
+        ],
+        "answerIndex": 1,
+        "explanation": "Tek bir çalışma yanılabilir. Bir sorudaki bütün kanıtın önceden ilan edilmiş bir yöntemle taranıp değerlendirilmesi en güvenilir dayanaktır."
+      },
+      {
+        "id": "q2",
+        "prompt": "Sigaranın akciğer kanserine yol açtığı nasıl kanıtlandı?",
+        "options": [
+          "Randomize kontrollü deneyle",
+          "Birbirini destekleyen çok sayıda gözlemsel çalışma ve net bir doz-yanıt ilişkisiyle",
+          "Hayvan deneyleriyle",
+          "Mekanizma açıklamasıyla"
+        ],
+        "answerIndex": 1,
+        "explanation": "Kimseyi rastgele sigara içmeye atayamazsınız. Kanıt, tutarlı gözlemlerin, doz-yanıt ilişkisinin ve zamansal sıranın birleşiminden geldi."
+      },
+      {
+        "id": "q3",
+        "prompt": "Mekanizma anlatısının sınırı nedir?",
+        "options": [
+          "Her zaman yanlıştır",
+          "Hipotez üretir ama onu sınamaz; laboratuvarda kusursuz görünen zincirler insanda çalışmayabilir",
+          "Sadece ilaçlarda geçerlidir",
+          "Kanıt hiyerarşisinin en üstündedir"
+        ],
+        "answerIndex": 1,
+        "explanation": "Kalp ritmi ilaçları örneğinde olduğu gibi, makul bir mekanizma insanda ters sonuç verebilir. Mekanizma sınamanın yerini tutmaz."
+      }
+    ]
+  },
+  {
+    "id": "randomize-deney",
+    "moduleId": "kanit",
+    "order": 2,
+    "title": "Randomize kontrollü deney",
+    "subtitle": "Yazı tura atmanın neden bir yöntem olduğu.",
+    "minutes": 9,
+    "keyTerms": ["randomize kontrollü deney", "randomizasyon", "körleme", "kontrol grubu", "tedavi niyetine göre analiz"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Bir tedavinin işe yarayıp yaramadığını anlamanın önündeki temel engel şudur: tedaviyi alanlarla almayanlar zaten farklı insanlardır. İlacı kullananlar daha bilinçli, daha varlıklı, hekime daha düzenli giden kişiler olabilir. Sonuçtaki fark ilaçtan mı, bu farklardan mı geliyor? Bilinen farkları istatistikle düzeltebilirsiniz; bilmediklerinizi düzeltemezsiniz."
+      },
+      {
+        "kind": "text",
+        "title": "Randomizasyon neyi çözer",
+        "body": "Katılımcıları rastgele iki gruba ayırdığınızda, gruplar yalnızca ölçtüğünüz özellikler bakımından değil, aklınıza hiç gelmemiş özellikler bakımından da ortalamada eşitlenir. Randomizasyonun gücü tam olarak buradadır: bilinmeyen karıştırıcıları da dengeler. Başka hiçbir yöntemin yapamadığı şey budur. Bu yüzden yazı tura atmak, tıbbın en güçlü aracıdır."
+      },
+      {
+        "kind": "list",
+        "title": "İyi bir deneyin bileşenleri",
+        "items": [
+          "Yeterli sayı: küçük çalışmalar gerçek etkiyi hem kaçırır hem abartır.",
+          "Gizli atama: kimin hangi gruba düşeceğinin önceden bilinememesi. Bilinirse hekim ağır hastaları bir gruba yönlendirebilir.",
+          "Körleme: mümkünse hasta da, uygulayıcı da, sonucu değerlendiren de bilmemeli.",
+          "Anlamlı sonuç ölçütü: kan değeri değil, ölüm, hastaneye yatış, ağrı, işlev.",
+          "Ön kayıt: hangi sonucun ölçüleceğinin veri toplanmadan ilan edilmesi.",
+          "Tedavi niyetine göre analiz: bırakanlar dâhil herkes atandığı grupta değerlendirilir."
+        ]
+      },
+      {
+        "kind": "example",
+        "title": "Bırakanları çıkarmak neden bozar",
+        "body": "Bir çalışmada ilacı bırakanların analizden çıkarıldığını düşünün. İlacı bırakanlar genellikle yan etki yaşayanlar, durumu kötüleşenler ya da düzenli takip edemeyenlerdir. Onları çıkardığınızda geriye ilacı iyi tolere eden, daha sağlıklı ve daha düzenli bir grup kalır. İlaç, tam da bu ayıklama yüzünden olduğundan iyi görünür. Tedavi niyetine göre analiz, randomizasyonun sağladığı dengeyi korumak için herkesi başlangıçta atandığı grupta tutar."
+      },
+      {
+        "kind": "text",
+        "title": "Deneyin sınırları",
+        "body": "Randomize deney her sorunun cevabı değildir. Katılımcılar genellikle gerçek hastalardan daha genç ve daha az ek hastalığı olan kişilerdir; sonuç bu yüzden pratiğe birebir taşınmayabilir. Süre çoğu zaman kısadır, uzun vadeli zararları göstermez. Nadir yan etkiler için örneklem küçüktür. Ve bazı sorularda deney etik olarak mümkün değildir. Bu sınırlar deneyin değerini düşürmez; hangi soruya cevap verdiğini doğru anlamayı gerektirir."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Randomizasyonun diğer yöntemlerden temel üstünlüğü nedir?",
+        "options": [
+          "Daha ucuz olması",
+          "Bilinmeyen karıştırıcı değişkenleri de ortalamada dengelemesi",
+          "Daha hızlı sonuç vermesi",
+          "Daha az katılımcı gerektirmesi"
+        ],
+        "answerIndex": 1,
+        "explanation": "İstatistikle yalnızca ölçtüğünüz farkları düzeltebilirsiniz. Rastgele atama, aklınıza gelmemiş farkları da dengeler."
+      },
+      {
+        "id": "q2",
+        "prompt": "Tedaviyi bırakanların analizden çıkarılması neden sorunludur?",
+        "options": [
+          "Örneklem küçüldüğü için",
+          "Bırakanlar genellikle yan etki yaşayan ya da kötüleşen kişilerdir; çıkarılmaları ilacı olduğundan iyi gösterir",
+          "Hesaplama zorlaştığı için",
+          "Etik olmadığı için"
+        ],
+        "answerIndex": 1,
+        "explanation": "Bu ayıklama randomizasyonun sağladığı dengeyi bozar. Tedavi niyetine göre analiz herkesi atandığı grupta tutar."
+      },
+      {
+        "id": "q3",
+        "prompt": "Gizli atama ne demektir?",
+        "options": [
+          "Sonuçların gizli tutulması",
+          "Kimin hangi gruba düşeceğinin atama anından önce bilinememesi",
+          "Hastanın ilacı bilmemesi",
+          "Verinin şifrelenmesi"
+        ],
+        "answerIndex": 1,
+        "explanation": "Sıra bilinirse, hekim bilinçsizce ağır hastaları bir gruba yönlendirebilir. Gizli atama, randomizasyonu uygulamada da korur."
+      }
+    ]
+  },
+  {
+    "id": "plasebo-ve-donus",
+    "moduleId": "kanit",
+    "order": 3,
+    "title": "Plasebo, doğal seyir ve ortalamaya dönüş",
+    "subtitle": "İyileşmenin üç sahte kaynağı.",
+    "minutes": 9,
+    "keyTerms": ["plasebo", "nosebo", "doğal seyir", "ortalamaya dönüş", "kontrol grubu"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Bir şey yaptınız ve iyileştiniz. Bu, yaptığınız şeyin işe yaradığı anlamına gelmez. Aradaki boşluğu üç ayrı mekanizma doldurur ve üçü de tek bir kişinin deneyiminde birbirinden ayrılamaz: hastalığın kendiliğinden geçmesi, beklentinin yarattığı değişim ve ölçümün ortalamaya dönmesi."
+      },
+      {
+        "kind": "list",
+        "title": "Üç kaynak",
+        "items": [
+          "Doğal seyir: soğuk algınlığı, bel ağrısı, çoğu baş ağrısı kendiliğinden geçer. Hangi gün müdahale ederseniz edin, iyileşme ona bağlanır.",
+          "Plasebo etkisi: beklenti, ilgi ve ritüel gerçekten bir şeyi değiştirir. Ancak etkisi çoğunlukla ağrı, bulantı, yorgunluk gibi kişinin bildirdiği belirtilerdedir; tümörü küçültmez, enfeksiyonu geçirmez.",
+          "Ortalamaya dönüş: insanlar en kötü hissettikleri gün başvurur. Bir sonraki ölçüm, hiçbir şey yapılmasa bile daha iyi çıkma eğilimindedir."
+        ]
+      },
+      { "kind": "chart", "chartId": "ortalamaya-donus" },
+      {
+        "kind": "text",
+        "body": "Grafik, kimseye hiçbir şey verilmediği hâlde 'iyileşen' bir grup üretiyor. Tek yaptığı, ölçümde en kötü çıkanları seçip aynı ölçümü tekrarlamak. Bu, sahte tedavilerin nasıl yaşadığını anlamanın anahtarıdır: en çok başvuru, şikâyetin en yoğun olduğu anda gelir ve o andan sonra ortalama iyileşme neredeyse garantidir. Bu yüzden 'yüzlerce hastam iyileşti' cümlesi, doğru söylense bile hiçbir şeyi kanıtlamaz."
+      },
+      {
+        "kind": "text",
+        "title": "Plasebonun gerçek boyutu",
+        "body": "Plasebo etkisi hem abartılır hem küçümsenir. Abartılır, çünkü ölçülebilir hastalık göstergeleri üzerinde etkisi çok sınırlıdır. Küçümsenir, çünkü ağrı ve bulantı gibi öznel belirtilerde gerçekten fark yaratır ve bu belirtiler hastanın hayatının önemli bir kısmıdır. Nosebo ise az konuşulan tersidir: yan etki bekleyen kişide gerçekten yan etki ortaya çıkar. Kolesterol ilacı bırakmalarının önemli bir bölümünde, körlemeli çalışmalarda plasebo alanların da benzer kas ağrısı bildirdiği görülmüştür."
+      },
+      {
+        "kind": "example",
+        "title": "Kontrol grubunun işi",
+        "body": "Kontrol grubu, tedavinin işe yarayıp yaramadığını değil, tedaviye eklenen şeyin işe yarayıp yaramadığını ölçer. Her iki grup da doğal seyri yaşar, her iki grup da ilgi görür, her iki grubun ölçümü de ortalamaya döner. Aradaki fark ne kalırsa, tedaviye ait olan odur. Sahte tedavilerin ortak özelliği kontrol grubuyla karşılaştırılmamış olmalarıdır; başarı hikâyesi anlatmak, karşılaştırma yapmaktan her zaman daha kolaydır."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Ortalamaya dönüş sahte iyileşmeyi nasıl üretir?",
+        "options": [
+          "Hastalar iyileştiklerini sandığı için",
+          "İnsanlar en kötü hissettikleri gün başvurur; bir sonraki ölçüm hiçbir şey yapılmasa da daha iyi çıkma eğilimindedir",
+          "Ölçüm aletleri bozulduğu için",
+          "Hekim iyimser davrandığı için"
+        ],
+        "answerIndex": 1,
+        "explanation": "Uç bir ölçümün bir kısmı geçici dalgalanmadan gelir. Tekrarında bu pay kaybolur ve iyileşme gibi görünür."
+      },
+      {
+        "id": "q2",
+        "prompt": "Plasebo etkisi en çok nerede görülür?",
+        "options": [
+          "Tümör boyutunda",
+          "Ağrı, bulantı, yorgunluk gibi kişinin kendi bildirdiği belirtilerde",
+          "Enfeksiyonun geçmesinde",
+          "Kan şekerinde"
+        ],
+        "answerIndex": 1,
+        "explanation": "Plasebo gerçek bir etkidir ama esas olarak öznel belirtilerde işler. Ölçülebilir hastalık göstergeleri üzerindeki etkisi çok sınırlıdır."
+      },
+      {
+        "id": "q3",
+        "prompt": "Kontrol grubu tam olarak neyi ölçer?",
+        "options": [
+          "Tedavinin toplam etkisini",
+          "Tedaviye özgü olan, yani doğal seyir ve beklentinin üstüne eklenen farkı",
+          "Yan etkileri",
+          "Maliyeti"
+        ],
+        "answerIndex": 1,
+        "explanation": "Her iki grup da doğal seyri ve ilgiyi yaşar. Geriye kalan fark tedaviye aittir; kontrolsüz gözlem bu ayrımı yapamaz."
+      }
+    ]
+  },
+  {
+    "id": "yayin-yanliligi",
+    "moduleId": "kanit",
+    "order": 4,
+    "title": "Yayın yanlılığı ve tekrarlanabilirlik",
+    "subtitle": "Literatür, gerçekten daha iyimserdir.",
+    "minutes": 8,
+    "keyTerms": ["yayın yanlılığı", "p-avcılığı", "ön kayıt", "tekrarlanabilirlik krizi", "çıkar çatışması", "vekil sonuç"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Yürütülen her çalışma yayımlanmaz. Olumlu, çarpıcı ve beklentiyi doğrulayan sonuçların yayımlanma olasılığı, 'fark bulunamadı' sonuçlarından belirgin biçimde yüksektir. Bunun sonucu şudur: yayımlanmış literatür, gerçekliğin tarafsız bir örneği değil, kayırılmış bir seçkisidir. On çalışmadan biri şans eseri olumlu çıkmışsa ve yalnızca o yayımlanmışsa, literatüre bakan biri kanıt görür."
+      },
+      {
+        "kind": "list",
+        "title": "Sonucu şişiren mekanizmalar",
+        "items": [
+          "Yayın yanlılığı: olumsuz sonuçlar çekmecede kalır.",
+          "p-avcılığı: anlamlı sonuç çıkana kadar farklı alt gruplar, farklı ölçütler, farklı düzeltmeler denenir.",
+          "Sonuç değiştirme: baştan ölçülmesi planlanan sonuç yerine, iyi çıkan başka bir sonuç raporlanır.",
+          "Vekil sonuç kullanımı: ölüm yerine kan değeri ölçülür; ara gösterge düzelirken asıl sonuç kötüleşebilir.",
+          "Küçük örneklem: az kişili çalışmalar gerçek etkiyi hem kaçırır hem de bulduğunda abartır.",
+          "Çıkar çatışması: sonuçtan maddi çıkarı olan bir tarafın finanse ettiği çalışmalar ortalamada daha olumlu sonuçlanır."
+        ]
+      },
+      {
+        "kind": "text",
+        "title": "Ne değişti",
+        "body": "Bu sorunlar bilindikten sonra somut düzenlemeler geldi. Önde gelen dergiler yalnızca önceden kaydedilmiş klinik deneyleri yayımlayacaklarını duyurdu; artık bir çalışmanın hangi sonucu ölçeceği veri toplanmadan ilan edilmek zorunda. Ön kayıt zorunluluğundan sonra, büyük kalp-damar çalışmalarında olumlu sonuç oranının belirgin biçimde düştüğü gösterildi. Bu, sistemin çalıştığının en açık işaretidir: kural değişince sonuçlar da değişti."
+      },
+      {
+        "kind": "example",
+        "title": "Tek çalışma nadiren yeterlidir",
+        "body": "Bir haberde 'yeni araştırmaya göre' cümlesini gördüğünüzde, bunun tek bir çalışma olduğunu varsayın. Tek çalışmalar sıkça birbiriyle çelişir ve bu bir skandal değil, normal bilimsel süreçtir. Anlamlı olan, aynı sorunun defalarca çalışılmasından sonra ortaya çıkan resimdir. Bu yüzden sistematik derlemeler tek makalelerden çok daha değerlidir ve bu yüzden 'kahve iyidir / kötüdür' haberleri sonsuza kadar döner durur."
+      },
+      {
+        "kind": "text",
+        "title": "Çıkar çatışması nasıl okunur",
+        "body": "Bir çalışmanın ilaç şirketi tarafından finanse edilmiş olması onu geçersiz kılmaz; büyük deneylerin çoğunu zaten onlar finanse eder, çünkü maliyeti başka kimse karşılayamaz. Bakılması gereken şey, finansmanın kendisi değil, tasarımın hangi yönde esnetildiğidir: karşılaştırma ilacının düşük dozda verilmesi, çalışmanın kısa tutulması, vekil sonuç seçilmesi ve olumsuz çalışmaların yayımlanmaması. Şüphe finansmana değil, bu ayrıntılara yöneltilmelidir."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Yayın yanlılığı nedir?",
+        "options": [
+          "Yanlış verilerin yayımlanması",
+          "Olumlu sonuç veren çalışmaların yayımlanma olasılığının daha yüksek olması",
+          "Dergilerin ücret alması",
+          "Hakemlerin yanılması"
+        ],
+        "answerIndex": 1,
+        "explanation": "'Fark bulunamadı' sonuçları çekmecede kalır. Bu yüzden yayımlanmış literatür gerçeklikten sistematik olarak daha iyimserdir."
+      },
+      {
+        "id": "q2",
+        "prompt": "Ön kayıt zorunluluğunun etkisi ne oldu?",
+        "options": [
+          "Hiçbir değişiklik olmadı",
+          "Büyük kalp-damar çalışmalarında olumlu sonuç oranı belirgin biçimde düştü",
+          "Çalışma sayısı azaldı",
+          "Yalnızca maliyetler arttı"
+        ],
+        "answerIndex": 1,
+        "explanation": "Hangi sonucun ölçüleceği baştan ilan edilince, sonradan iyi çıkan sonucu seçme imkânı ortadan kalktı ve olumlu sonuç oranı düştü."
+      },
+      {
+        "id": "q3",
+        "prompt": "Bir çalışmanın ilaç şirketince finanse edilmesi hakkında en doğru yaklaşım nedir?",
+        "options": [
+          "Çalışmayı otomatik olarak geçersiz saymak",
+          "Finansmanı değil, karşılaştırma dozu, süre ve seçilen sonuç ölçütü gibi tasarım ayrıntılarını incelemek",
+          "Fark etmez, hepsi güvenilirdir",
+          "Yalnızca akademik çalışmalara bakmak"
+        ],
+        "answerIndex": 1,
+        "explanation": "Büyük deneylerin maliyetini genellikle şirketler karşılar. Kayırma finansmanın kendisinde değil, tasarımın esnetildiği ayrıntılarda görünür."
+      }
+    ]
+  },
+  {
+    "id": "risk-dili",
+    "moduleId": "risk",
+    "order": 1,
+    "title": "Göreli ve mutlak risk",
+    "subtitle": "Aynı sayı, iki farklı cümleyle iki farklı karar doğurur.",
+    "minutes": 8,
+    "keyTerms": ["mutlak risk", "göreli risk", "mutlak risk azalması", "TGH (tedavi gereken hasta sayısı)", "doğal sıklık"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Sağlık haberlerinin neredeyse tamamı göreli sayılarla yazılır: 'riski yüzde otuz azaltıyor', 'riski iki katına çıkarıyor'. Bu cümleler yanlış değildir; eksiktir. Göreli bir oran, neyin yüzde otuzu olduğunu söylemediği sürece hiçbir karar üretmez. Yüz binde birin iki katı, yüz binde ikidir."
+      },
+      { "kind": "chart", "chartId": "goreli-mutlak-risk" },
+      {
+        "kind": "formula",
+        "title": "Tedavi gereken hasta sayısı",
+        "expression": "TGH = 1 / mutlak risk azalması"
+      },
+      {
+        "kind": "text",
+        "body": "Tedavi gereken hasta sayısı, kararın en anlaşılır özetidir: bir olayı önlemek için kaç kişinin tedavi edilmesi gerekiyor? Bu sayı 20 ise tedavi çok değerlidir. 2000 ise, tedavi edilen 1999 kişi hiçbir fayda görmeyecek ama yan etki riskini ve maliyeti üstlenecek demektir. Aynı ilacın aynı göreli etkisi, farklı risk düzeyindeki iki hastada bambaşka bir karar gerektirir."
+      },
+      {
+        "kind": "list",
+        "title": "Bir risk cümlesini sorgulamak",
+        "items": [
+          "Temel risk kaç? 'Yüzde elli artıyor' cümlesinin neyin yüzde ellisi olduğunu sorun.",
+          "Mutlak fark kaç? Bin kişide kaç kişilik bir değişimden söz ediyoruz?",
+          "Hangi sürede? Bir yıllık risk mi, ömür boyu risk mi?",
+          "Kimde? Çalışmaya alınan insanlar size benziyor mu?",
+          "Neye kıyasla? Hiçbir şey yapmamaya mı, mevcut standart tedaviye mi?"
+        ]
+      },
+      {
+        "kind": "example",
+        "title": "Doğal sıklıkla anlatmak",
+        "body": "Riski yüzdelerle anlatmak, hekimler dâhil herkeste hata oranını yükseltir. 'Bin kadından on tanesinde şu görülür, bunların dokuzunda test pozitif çıkar' biçiminde anlatmak ise aynı bilgiyi çok daha anlaşılır kılar. Bu, bir basitleştirme değil, aynı matematiğin insan zihnine uygun biçimde sunulmasıdır. Bir hekimden bilgi alırken 'bunu bin kişide kaç kişi olarak söyleyebilir misiniz' diye sormak, konuşmanın kalitesini tek hamlede değiştirir."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "'Riski yüzde otuz azaltıyor' cümlesini değerlendirmek için mutlaka bilinmesi gereken nedir?",
+        "options": [
+          "İlacın fiyatı",
+          "Tedavisiz durumdaki temel risk",
+          "Çalışmanın süresi",
+          "Katılımcı sayısı"
+        ],
+        "answerIndex": 1,
+        "explanation": "Göreli oran temel riskle çarpılmadan hiçbir anlam taşımaz. Binde 200'ün %30'u ile yüz binde 1'in %30'u bambaşka kararlar gerektirir."
+      },
+      {
+        "id": "q2",
+        "prompt": "Tedavi gereken hasta sayısı (TGH) 500 ise bu ne demektir?",
+        "options": [
+          "Tedavi 500 kişide işe yarar",
+          "Bir olayı önlemek için 500 kişinin tedavi edilmesi gerekir; kalan 499 kişi fayda görmez",
+          "Tedavi 500 gün sürer",
+          "500 kişide yan etki görülür"
+        ],
+        "answerIndex": 1,
+        "explanation": "TGH, mutlak risk azalmasının tersidir. Yüksek TGH, tedavi edilenlerin büyük çoğunluğunun fayda görmeyeceği anlamına gelir."
+      },
+      {
+        "id": "q3",
+        "prompt": "Doğal sıklıkla anlatım neden tercih edilir?",
+        "options": [
+          "Daha kısa olduğu için",
+          "Aynı bilgiyi yüzdelere göre çok daha az yanlış anlaşılır biçimde sunduğu için",
+          "Daha bilimsel olduğu için",
+          "Hesaplaması kolay olduğu için"
+        ],
+        "answerIndex": 1,
+        "explanation": "'Bin kişide on kişi' anlatımı, hekimler dâhil herkeste hata oranını düşürür. Matematik aynıdır; sunum farkı anlamayı belirgin biçimde artırır."
+      }
+    ]
+  },
+  {
+    "id": "tarama-ve-asiri-teshis",
+    "moduleId": "risk",
+    "order": 2,
+    "title": "Tarama, erken teşhis ve aşırı teşhis",
+    "subtitle": "Daha çok bulmak, daha çok iyileştirmek demek değildir.",
+    "minutes": 10,
+    "keyTerms": ["tarama", "aşırı teşhis", "öne alma yanlılığı", "süre yanlılığı", "sağkalım oranı", "ölüm oranı"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Tarama, belirtisi olmayan sağlıklı kişilerde hastalık aramaktır ve tedaviden temelde farklı bir işlemdir. Hasta gelip 'şu şikâyetim var' dediğinde denge tetkikin lehinedir. Tarama ise sağlıklı insanları çağırır; onların çoğu hiçbir fayda görmeyecek, bir kısmı ise zarar görecektir. Bu yüzden tarama programlarının kanıt eşiği tedaviden daha yüksektir."
+      },
+      { "kind": "chart", "chartId": "erken-teshis-yanilgisi" },
+      {
+        "kind": "text",
+        "title": "İki yanlılık",
+        "body": "Grafikteki mekanizmaya öne alma yanlılığı denir: sağkalım süresi teşhis anından sayıldığı için, teşhisi öne çekmek ölüm tarihi değişmese bile sağkalımı uzatmış gibi gösterir. İkinci mekanizma süre yanlılığıdır: yavaş ilerleyen hastalıklar vücutta uzun süre sessiz durur ve taramaya yakalanma olasılıkları yüksektir. Hızlı ilerleyen ve gerçekten öldürücü olanlar ise iki tarama arasında ortaya çıkar. Tarama, doğası gereği iyi seyirli hastalıkları toplar ve bu yüzden istatistikleri kendiliğinden güzelleştirir."
+      },
+      {
+        "kind": "text",
+        "title": "Aşırı teşhis",
+        "body": "Aşırı teşhis, yanlış teşhis değildir: bulunan şey gerçekten oradadır. Ancak o kadar yavaş ilerlemektedir ki kişi ondan değil, başka bir sebepten ölecektir. Kişi bunu asla bilemez, çünkü teşhis konduğunda tedavi edilir ve hayatta kaldığında 'tarama hayatımı kurtardı' der. Aşırı teşhisin bedeli ameliyat, ilaç, ışın tedavisi, ömür boyu takip ve kanser hastası olarak yaşamaktır. Tiroit kanserinde bu etki en açık belgelenmiş örneklerdendir: bazı ülkelerde tarama yaygınlaştıkça teşhis birkaç kat artmış, ölüm oranı ise hiç değişmemiştir."
+      },
+      {
+        "kind": "list",
+        "title": "Bir tarama programı hakkında sorulacaklar",
+        "items": [
+          "Ölüm oranını düşürdüğü randomize deneyle gösterilmiş mi? Sağkalım oranı bu soruya cevap vermez.",
+          "Hangi yaş ve risk grubunda? Kılavuzlar yaş aralıklarını rastgele seçmez.",
+          "Bin kişi taranırsa kaç kişi ölümden kurtulur, kaç kişi gereksiz teşhis alır, kaç kişi yanlış alarmla ileri tetkike girer?",
+          "Pozitif çıkarsa sıradaki işlem ne? Biyopsinin de kendi riski vardır.",
+          "Bulunan şey için gerçekten bir tedavi var mı, yoksa yalnızca izlem mi?"
+        ]
+      },
+      {
+        "kind": "example",
+        "title": "Tarama karşıtlığı değil, doğru tarama",
+        "body": "Bütün bunlar taramanın kötü olduğu anlamına gelmez. Rahim ağzı kanserinde tarama, hastalık ortaya çıkmadan öncesi bir aşamayı yakalar ve gerçekten ölümleri düşürür; bağırsak kanseri taraması da net fayda gösterir. Fark, taramanın neyi bulduğundadır: ilerleyen bir süreci erken kesmekle, hiç ilerlemeyecek bir bulguyu ortaya çıkarmak aynı şey değildir. Doğru soru 'tarama iyi mi kötü mü' değil, 'hangi tarama, hangi yaşta, hangi kanıtla'dır."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Bir tarama programının başarısı hangi sayıyla ölçülür?",
+        "options": [
+          "Beş yıllık sağkalım oranı",
+          "O hastalıktan ölüm oranı",
+          "Bulunan vaka sayısı",
+          "Katılım oranı"
+        ],
+        "answerIndex": 1,
+        "explanation": "Sağkalım oranı, teşhisi öne almak tek başına yükseltir. Yalnızca ölüm oranı, gerçekten hayat kurtarılıp kurtarılmadığını gösterir."
+      },
+      {
+        "id": "q2",
+        "prompt": "Aşırı teşhis nedir?",
+        "options": [
+          "Yanlış pozitif test sonucu",
+          "Kişinin ömrü boyunca sorun çıkarmayacak bir hastalığın bulunması ve tedavi edilmesi",
+          "Aynı testin çok sık yapılması",
+          "Hekimin fazla tetkik istemesi"
+        ],
+        "answerIndex": 1,
+        "explanation": "Bulunan şey gerçekten oradadır ama hiç ilerlemeyecektir. Bedeli gereksiz tedavi ve hasta olarak yaşamaktır."
+      },
+      {
+        "id": "q3",
+        "prompt": "Süre yanlılığı taramayı neden olduğundan iyi gösterir?",
+        "options": [
+          "Tarama daha çok kişiye ulaştığı için",
+          "Yavaş ilerleyen, zaten iyi seyirli hastalıklar taramaya daha çok yakalandığı için",
+          "Testler daha duyarlı olduğu için",
+          "Hastalar daha genç olduğu için"
+        ],
+        "answerIndex": 1,
+        "explanation": "Hızlı ilerleyen ve öldürücü olanlar iki tarama arasında belirti vererek ortaya çıkar. Tarama doğası gereği iyi seyirlileri toplar."
+      }
+    ]
+  }
+]

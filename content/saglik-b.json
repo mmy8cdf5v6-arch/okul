@@ -1,0 +1,482 @@
+[
+  {
+    "id": "test-sonucu-okumak",
+    "moduleId": "risk",
+    "order": 3,
+    "title": "Test sonucunu okumak",
+    "subtitle": "Pozitif çıkmak, hasta olmak değildir.",
+    "minutes": 9,
+    "keyTerms": ["duyarlılık", "özgüllük", "pozitif kestirim değeri", "yaygınlık", "rastlantısal bulgu"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Bir testin iki ayrı becerisi vardır ve ikisi birbirinden bağımsızdır. Duyarlılık, hastalığı olanları yakalama becerisidir: hasta olanların kaçta kaçı pozitif çıkıyor? Özgüllük, sağlıklı olanları rahat bırakma becerisidir: hasta olmayanların kaçta kaçı negatif çıkıyor? Bir test çok duyarlı ama az özgül olabilir; o zaman hiçbir hastayı kaçırmaz ama sayısız yanlış alarm verir."
+      },
+      {
+        "kind": "text",
+        "title": "Asıl merak edilen üçüncü sayı",
+        "body": "Testi yaptıran kişi bu iki sayıyı değil, üçüncü bir sayıyı merak eder: pozitif çıktım, gerçekten hasta mıyım? Buna pozitif kestirim değeri denir ve testin özelliklerinden başka bir şeye daha bağlıdır: hastalığın o toplumda ne kadar yaygın olduğuna. Aynı test, yaygın bir hastalıkta güvenilir, nadir bir hastalıkta neredeyse işe yaramaz sonuç verir. Bu, testin kalitesiyle ilgili değil, aritmetikle ilgilidir."
+      },
+      {
+        "kind": "example",
+        "title": "Bin kişiyle düşünmek",
+        "body": "Bir hastalık toplumda binde bir görülsün. Testin duyarlılığı yüzde doksan dokuz, özgüllüğü de yüzde doksan dokuz olsun — çok iyi bir test. Bin kişiyi tarayalım. Hastalığı olan 1 kişi büyük olasılıkla pozitif çıkar. Hastalığı olmayan 999 kişinin ise yaklaşık 10'u yanlışlıkla pozitif çıkar. Toplam 11 pozitif sonucun yalnızca 1 tanesi gerçektir: pozitif çıkan birinin gerçekten hasta olma olasılığı yüzde on civarındadır. Test kusursuza yakındır; sonuç yine de böyledir."
+      },
+      {
+        "kind": "list",
+        "title": "Pratik sonuçlar",
+        "items": [
+          "Şikâyeti olmayan birine yapılan test, şikâyeti olan birine yapılan aynı testten çok daha az bilgi taşır. Çünkü öncül olasılık düşüktür.",
+          "'Her şeye baktıralım' yaklaşımı, çok sayıda anlamsız pozitif üretir ve gereksiz tetkik zincirlerini başlatır.",
+          "Görüntülemelerde rastlantısal bulgu çok yaygındır; sağlıklı erişkinlerin önemli bir kısmında bir yerde bir şey görülür.",
+          "Negatif sonuç da mutlak değildir: çok nadir olmayan bir hastalıkta negatif çıkmak riski azaltır ama sıfırlamaz.",
+          "Testi tekrarlamak yanlış pozitifi azaltır ama aynı sistematik hatayı tekrarlıyorsa azaltmaz."
+        ]
+      },
+      {
+        "kind": "text",
+        "title": "Testten önce sorulacak soru",
+        "body": "Bir test istemeden önce sorulması gereken tek soru şudur: sonuç ne çıkarsa çıksın, yapacağım şey değişecek mi? Cevap hayırsa test bilgi vermez, yalnızca kaygı ve maliyet üretir. Bu soru, hekimlerin de kullandığı bir eşiktir ve hastanın sorması tamamen yerindedir. Türkiye'de kişi başı görüntüleme sayısının yüksekliği, kısmen bu sorunun yeterince sorulmamasıyla ilgilidir."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Özgüllük neyi ölçer?",
+        "options": [
+          "Hastalığı olanların ne kadarının yakalandığını",
+          "Hastalığı olmayanların ne kadarının doğru biçimde negatif çıktığını",
+          "Testin hızını",
+          "Testin maliyetini"
+        ],
+        "answerIndex": 1,
+        "explanation": "Duyarlılık hastayı kaçırmama, özgüllük ise yanlış alarm vermeme becerisidir. İkisi birbirinden bağımsızdır."
+      },
+      {
+        "id": "q2",
+        "prompt": "Çok iyi bir test, nadir bir hastalıkta neden çok sayıda yanlış pozitif üretir?",
+        "options": [
+          "Test bozulduğu için",
+          "Sağlıklı kişi sayısı çok fazla olduğu için, küçük bir yanlış alarm oranı bile gerçek vakalardan fazla pozitif üretir",
+          "Laboratuvar hatası yaptığı için",
+          "Hastalık değiştiği için"
+        ],
+        "answerIndex": 1,
+        "explanation": "Binde bir görülen bir hastalıkta 999 sağlıklı kişi vardır. %1 yanlış alarm bile 10 kişi eder ve tek gerçek vakayı gölgede bırakır."
+      },
+      {
+        "id": "q3",
+        "prompt": "Bir test istemeden önce sorulması gereken temel soru nedir?",
+        "options": [
+          "Testin fiyatı nedir",
+          "Sonuç ne çıkarsa çıksın yapacağım şey değişecek mi",
+          "Test ne kadar sürer",
+          "Kaç kişiye uygulanmış"
+        ],
+        "answerIndex": 1,
+        "explanation": "Karar değiştirmeyecek bir test bilgi üretmez; kaygı, maliyet ve gereksiz tetkik zinciri üretir."
+      }
+    ]
+  },
+  {
+    "id": "beslenme-arastirmalari",
+    "moduleId": "risk",
+    "order": 4,
+    "title": "Beslenme araştırmaları neden sürekli çelişir",
+    "subtitle": "Ölçmesi en zor şey, en çok konuşulan şeydir.",
+    "minutes": 9,
+    "keyTerms": ["karıştırıcı değişken", "sağlıklı kullanıcı yanlılığı", "ters nedensellik", "beslenme anketi", "Mendel randomizasyonu"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Beslenmeyle ilgili haberlerin birbirini yalanlaması bir tesadüf değil, alanın yapısal zorluğunun doğrudan sonucudur. İnsanları otuz yıl boyunca rastgele iki farklı diyete atayamazsınız. Elde kalan yöntem gözlemdir ve gözlemin üç büyük sorunu vardır: ölçüm hatası, karıştırıcı değişkenler ve ters nedensellik."
+      },
+      {
+        "kind": "list",
+        "title": "Üç sorun",
+        "items": [
+          "Ölçüm: beslenme çoğunlukla anketle ölçülür. İnsanların geçen yıl ne yediklerini hatırlaması zayıftır ve hata rastgele değildir — sağlıksız yiyecekler sistematik olarak eksik bildirilir.",
+          "Karıştırıcı: bir yiyeceği tüketenler genellikle başka bakımlardan da farklıdır. Gelir, eğitim, hareket, sigara ve hekime erişim birlikte gider.",
+          "Ters nedensellik: hastalanan insan iştahını ve kilosunu kaybeder. Kesitsel bakınca zayıflık hastalık sebebi gibi görünür.",
+          "Çoklu karşılaştırma: bir ankette yüzlerce besin ve onlarca sonuç varsa, tesadüfen anlamlı çıkan ilişkiler kaçınılmazdır.",
+          "Küçük etkiler: gerçek etkiler genellikle küçüktür ve bu büyüklükteki bir sinyali gürültüden ayırmak çok zordur."
+        ]
+      },
+      {
+        "kind": "example",
+        "title": "Sağlıklı kullanıcı yanlılığı",
+        "body": "Vitamin takviyesi kullananların daha uzun yaşadığını gösteren çok sayıda gözlemsel çalışma vardır. Aynı insanlar daha çok spor yapar, daha az sigara içer, daha düzenli kontrole gider ve geliri daha yüksektir. Takviyeler randomize deneylerle sınandığında ise, genel nüfusta çoğunun ölçülebilir bir faydası çıkmamıştır. Bazı vitaminlerin yüksek dozda zararlı olabildiği de aynı deneylerde görülmüştür. Gözlemin gösterdiği ilişki gerçekti; nedeni takviye değildi."
+      },
+      {
+        "kind": "text",
+        "title": "Yine de bildiğimiz şeyler var",
+        "body": "Bu zorluklar, beslenme hakkında hiçbir şey bilinmediği anlamına gelmez. Bazı bulgular birden çok yöntemle, birden çok toplumda ve büyük etki büyüklüğüyle tekrarlanır: aşırı işlenmiş gıda ağırlıklı beslenme kilo alımını artırır, tuz kan basıncını yükseltir, sebze ve baklagil ağırlıklı bir örüntü kalp-damar riskini düşürür, aşırı alkol her düzeyde zarar tarafındadır. Bilinmeyen şey, tek tek besinlerin ince etkileridir. 'Şu besin şunu yapar' başlıkları neredeyse her zaman bu belirsiz bölgeden gelir."
+      },
+      {
+        "kind": "text",
+        "title": "Daha iyi yöntemler",
+        "body": "Alan durmuyor. Mendel randomizasyonu, doğumda rastgele dağılan genetik farkları doğal bir deney gibi kullanır ve karıştırıcı sorununu büyük ölçüde aşar; kolesterol ve kan basıncı konusunda ulaşılan netliğin bir kısmı bu yöntemden gelir. Kontrollü besleme çalışmaları katılımcının bütün öğünlerini sağlayarak ölçüm hatasını yok eder ama kısa sürelidir ve pahalıdır. En sağlam bilgi, farklı yöntemlerin aynı yöne işaret ettiği yerde birikir."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Beslenme araştırmalarında randomize deney neden nadiren yapılabilir?",
+        "options": [
+          "Etik kurullar izin vermediği için",
+          "İnsanları uzun yıllar boyunca belirli bir diyete atamak pratik olarak mümkün olmadığı için",
+          "Ölçüm araçları yetersiz olduğu için",
+          "İlgi çekmediği için"
+        ],
+        "answerIndex": 1,
+        "explanation": "Otuz yıllık bir diyet ataması sürdürülemez. Bu yüzden alan büyük ölçüde gözleme dayanır ve gözlemin sorunlarını devralır."
+      },
+      {
+        "id": "q2",
+        "prompt": "Sağlıklı kullanıcı yanlılığı nedir?",
+        "options": [
+          "Sağlıklı kişilerin çalışmaya alınması",
+          "Bir şeyi yapan insanların genellikle başka sağlıklı alışkanlıklara da sahip olması",
+          "Anketlerin yanlış doldurulması",
+          "Hastaların iyileşmesi"
+        ],
+        "answerIndex": 1,
+        "explanation": "Takviye kullananlar aynı zamanda daha çok spor yapan, daha az sigara içen ve geliri yüksek kişilerdir. İlişki gerçek, neden farklıdır."
+      },
+      {
+        "id": "q3",
+        "prompt": "Mendel randomizasyonu neyi çözer?",
+        "options": [
+          "Ölçüm hatasını",
+          "Karıştırıcı değişken sorununu: genetik farklar doğumda rastgele dağıldığı için doğal bir deney gibi kullanılabilir",
+          "Yayın yanlılığını",
+          "Örneklem büyüklüğünü"
+        ],
+        "answerIndex": 1,
+        "explanation": "Gen varyantları gelir, eğitim ya da yaşam tarzına göre dağılmaz. Bu rastgelelik, gözlemsel veriden nedensellik çıkarmayı mümkün kılar."
+      }
+    ]
+  },
+  {
+    "id": "fayda-ve-zarar",
+    "moduleId": "karar",
+    "order": 1,
+    "title": "Fayda ile zararı tartmak",
+    "subtitle": "Doğru soru 'işe yarıyor mu' değil, 'kimde işe yarıyor'.",
+    "minutes": 9,
+    "keyTerms": ["ZGH (zarar gören hasta sayısı)", "temel risk", "ortak karar verme", "TGH (tedavi gereken hasta sayısı)"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Hiçbir tedavi yalnızca fayda üretmez. Her müdahalenin bir yan etki profili, bir maliyeti ve bir yükü vardır. Karar, faydanın var olup olmadığına değil, faydanın zararı geçip geçmediğine bakar. Bu tartıyı kuran iki sayı vardır: bir olayı önlemek için tedavi edilmesi gereken kişi sayısı ve bir ciddi yan etki oluşması için tedavi edilmesi gereken kişi sayısı."
+      },
+      { "kind": "chart", "chartId": "fayda-zarar-dengesi" },
+      {
+        "kind": "text",
+        "body": "Grafiğin gösterdiği asimetri, klinik kararın özüdür. Tedavinin faydası kişinin temel riskiyle orantılıdır: riski yüksek olan çok kazanır, riski düşük olan neredeyse hiçbir şey kazanmaz. Yan etki riski ise kişinin temel riskinden bağımsızdır; ilacı alan herkes aynı yan etki olasılığını üstlenir. Bu yüzden aynı ilaç, kalp krizi geçirmiş bir hastada açık biçimde doğru, hiçbir risk faktörü olmayan genç bir kişide açık biçimde yanlış olabilir. Değişen ilaç değil, hastadır."
+      },
+      {
+        "kind": "list",
+        "title": "Kararı besleyen sorular",
+        "items": [
+          "Benim temel riskim ne? Yaş, cinsiyet ve mevcut hastalıklara göre hesaplanan risk skorları vardır.",
+          "Bu tedavi bende riski ne kadar düşürür — göreli değil mutlak olarak?",
+          "Ciddi yan etki olasılığı ne? 'Ciddi' derken ne kastediliyor?",
+          "Hiçbir şey yapmazsam ne olur? İzleyerek beklemek bir seçenek mi?",
+          "Bu karar geri alınabilir mi? Ameliyat ile ilaç denemesi aynı ağırlıkta değildir.",
+          "Benim için önemli olan ne — daha uzun yaşamak mı, belirtilerin azalması mı, günlük hayatın bozulmaması mı?"
+        ]
+      },
+      {
+        "kind": "text",
+        "title": "Tercihe duyarlı kararlar",
+        "body": "Bazı kararlarda tek bir doğru cevap vardır ve kanıt açıktır: kırık kemik alçıya alınır. Bazılarında ise fayda ve zarar birbirine yakındır ve tercih belirleyicidir. Bir eklem ameliyatının ağrıyı azaltma olasılığı ile iyileşme süresi ve komplikasyon riski arasındaki denge, kişinin işine, yaşına ve neyi önemsediğine göre farklı sonuç verir. Bu kararlarda 'siz ne yapardınız' sorusu meşru ama yetersizdir; asıl gereken, seçeneklerin sayılarla ortaya konması ve kararın birlikte alınmasıdır."
+      },
+      {
+        "kind": "quote",
+        "text": "Hastanın değerlerini hesaba katmayan bir karar, ne kadar kanıta dayanırsa dayansın eksiktir.",
+        "source": "Kanıta dayalı tıbbın üç ayağı: en iyi kanıt, klinik deneyim, hastanın tercihleri"
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Bir tedavinin faydası ve zararı temel riskle nasıl ilişkilidir?",
+        "options": [
+          "İkisi de temel riskle artar",
+          "Fayda temel riskle orantılıdır, yan etki riski ise temel riskten bağımsızdır",
+          "İkisi de bağımsızdır",
+          "Zarar temel riskle artar, fayda sabittir"
+        ],
+        "answerIndex": 1,
+        "explanation": "Riski yüksek hasta çok kazanır; riski düşük hasta aynı yan etki olasılığını üstlenir ama neredeyse hiçbir şey kazanmaz."
+      },
+      {
+        "id": "q2",
+        "prompt": "'İzleyerek beklemek' ne anlama gelir?",
+        "options": [
+          "Hiçbir şey yapmamak",
+          "Hemen müdahale etmek yerine belirli aralıklarla kontrol etmeyi seçmek — planlı bir seçenektir",
+          "Tedaviyi reddetmek",
+          "İkinci görüş almak"
+        ],
+        "answerIndex": 1,
+        "explanation": "Pasiflik değil, tanımlı aralıklarla izlemeyi öngören aktif bir stratejidir. Bazı durumlarda en iyi seçenektir."
+      },
+      {
+        "id": "q3",
+        "prompt": "Tercihe duyarlı kararda doğru yaklaşım nedir?",
+        "options": [
+          "Hekimin tek başına karar vermesi",
+          "Seçeneklerin fayda ve zarar sayılarıyla ortaya konması ve kararın hastayla birlikte alınması",
+          "Hastanın internetten karar vermesi",
+          "En yeni tedaviyi seçmek"
+        ],
+        "answerIndex": 1,
+        "explanation": "Fayda ile zarar birbirine yakınsa, kararı belirleyen şey kişinin neyi önemsediğidir. Ortak karar verme bu durumun standardıdır."
+      }
+    ]
+  },
+  {
+    "id": "ilac-gelistirme",
+    "moduleId": "karar",
+    "order": 2,
+    "title": "Bir ilaç nasıl geliştirilir",
+    "subtitle": "Ruhsat, ilacın işe yaradığının değil, yeterince sınandığının belgesidir.",
+    "minutes": 8,
+    "keyTerms": ["faz çalışmaları", "ruhsat", "jenerik ilaç", "farmakovijilans"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Laboratuvarda umut veren bir molekülün eczane rafına ulaşması on yılı aşkın sürer ve büyük çoğunluğu bu yolu tamamlayamaz. Ayıklamanın sebebi bürokrasi değil, insanda beklenmeyen sonuçlar çıkmasıdır: hayvanda çalışan bir mekanizma insanda çalışmayabilir, güvenli görünen bir madde nadir ama ağır bir zarar verebilir."
+      },
+      {
+        "kind": "list",
+        "title": "Aşamalar",
+        "items": [
+          "Ön çalışma: hücre ve hayvan denemeleri. Binlerce molekülden birkaçı ilerler.",
+          "Faz 1: az sayıda gönüllüde güvenlik ve doz aralığı. Etkinlik henüz sorulmaz.",
+          "Faz 2: yüzlerce hastada etki sinyali ve doz. Çoğu ilaç burada elenir.",
+          "Faz 3: binlerce hastada, mevcut standart tedaviyle karşılaştırmalı büyük randomize deney. Ruhsatın dayanağı budur.",
+          "Ruhsat: düzenleyici kurumun izni. Türkiye'de TİTCK, Avrupa'da EMA, ABD'de FDA.",
+          "Faz 4 ve farmakovijilans: piyasadaki izlem. Nadir yan etkiler ancak yüz binlerce kişi kullandıktan sonra görünür hâle gelir."
+        ]
+      },
+      {
+        "kind": "text",
+        "title": "Ruhsat ne demek değildir",
+        "body": "Ruhsat, ilacın yeterince sınandığını ve fayda-zarar dengesinin kabul edilebilir bulunduğunu gösterir. Mevcut tedavilerden daha iyi olduğunu göstermez; birçok ilaç yalnızca plaseboya üstünlük göstererek onay alır. Uzun vadeli güvenli olduğunu da göstermez, çünkü deneyler genellikle kısadır. Bu yüzden yeni bir ilaç ile on yıldır kullanılan bir ilaç arasındaki seçim otomatik olarak yeninin lehine değildir; yeninin bilinmeyen yan etki profili bir belirsizlik kalemidir."
+      },
+      {
+        "kind": "example",
+        "title": "Talidomid ve düzenlemenin doğuşu",
+        "body": "1950'lerde gebelikte bulantı için yaygın olarak kullanılan talidomid, on binlerce ağır doğumsal bozukluğa yol açtı. Bugün doğal karşıladığımız zorunlu güvenlik çalışmaları, gebelikte kullanım kısıtları ve ruhsat sistemleri büyük ölçüde bu olayın ardından kuruldu. Düzenleme çoğu zaman bir felaketin ardından gelir; mevcut kuralların hepsinin arkasında benzer bir hikâye vardır."
+      },
+      {
+        "kind": "text",
+        "title": "Jenerik ilaçlar",
+        "body": "Patent süresi bitince aynı etken maddeyi içeren eşdeğer ilaçlar üretilebilir. Jenerik ilaç, orijinaliyle aynı etken maddeyi taşıdığı ve kanda benzer düzeye ulaştığı gösterilerek onaylanır; yeniden büyük bir deney gerekmez, çünkü etken madde zaten sınanmıştır. Fiyat farkı araştırma maliyetinin ortadan kalkmasından gelir, kaliteden değil. Etkisiz olduğu yönündeki yaygın kanı, denetlenmiş jenerikler için kanıtla desteklenmez. İstisna, kan düzeyi çok dar bir aralıkta tutulması gereken bazı ilaçlardır; orada marka değişimi hekim gözetiminde yapılır."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Faz 3 çalışması neyi ölçer?",
+        "options": [
+          "Sadece güvenliği",
+          "Binlerce hastada, karşılaştırmalı olarak etkinliği ve güvenliği — ruhsatın temel dayanağıdır",
+          "Doz aralığını",
+          "Üretim kalitesini"
+        ],
+        "answerIndex": 1,
+        "explanation": "Faz 1 güvenlik, faz 2 etki sinyali, faz 3 ise büyük ölçekli karşılaştırmalı kanıt üretir. Ruhsat kararı buna dayanır."
+      },
+      {
+        "id": "q2",
+        "prompt": "Ruhsat almış bir ilaç hakkında hangisi doğrudur?",
+        "options": [
+          "Mevcut tedavilerden daha iyi olduğu kanıtlanmıştır",
+          "Yeterince sınanmıştır ve fayda-zarar dengesi kabul edilebilir bulunmuştur; mevcut tedavilerden üstünlüğü gerekmez",
+          "Hiçbir yan etkisi yoktur",
+          "Uzun vadeli güvenliği gösterilmiştir"
+        ],
+        "answerIndex": 1,
+        "explanation": "Birçok ilaç yalnızca plaseboya üstünlük göstererek onay alır. Ruhsat, üstünlüğün değil yeterli sınamanın belgesidir."
+      },
+      {
+        "id": "q3",
+        "prompt": "Jenerik ilaç neden daha ucuzdur?",
+        "options": [
+          "Daha düşük kaliteli üretildiği için",
+          "Etken madde zaten sınanmış olduğundan araştırma maliyeti taşımadığı için",
+          "Daha az etken madde içerdiği için",
+          "Devlet sübvanse ettiği için"
+        ],
+        "answerIndex": 1,
+        "explanation": "Jenerik, aynı etken maddeyi taşıdığı ve kanda benzer düzeye ulaştığı gösterilerek onaylanır. Fiyat farkı araştırma maliyetinden gelir."
+      }
+    ]
+  },
+  {
+    "id": "asilar-ve-toplum",
+    "moduleId": "karar",
+    "order": 3,
+    "title": "Aşılar ve toplum",
+    "subtitle": "Bireysel karar, kolektif bir sonuç üretir.",
+    "minutes": 8,
+    "keyTerms": ["toplum bağışıklığı", "temel üretme sayısı", "aşı etkinliği", "ihmal yanlılığı"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Aşı, tıbbın en çok can kurtaran müdahalesidir ve bunu tuhaf bir bedelle yapar: başarılı olduğunda kendisini görünmez kılar. Çiçek hastalığının ne yaptığını gören kimse kalmadı; çocuk felcinin, kızamığın ağır seyrini gören kuşak azaldı. Hastalık görünmez olunca geriye yalnızca aşının riski görünür kalır ve tartışma çarpık bir zeminde yürür."
+      },
+      {
+        "kind": "text",
+        "title": "Toplum bağışıklığı",
+        "body": "Bir toplulukta bağışık kişilerin oranı yeterince yükseldiğinde, hasta olan biri bulaştıracak yeterli sayıda duyarlı kişi bulamaz ve salgın söner. Eşik, hastalığın bulaşıcılığına bağlıdır: bir hastanın ortalama kaç kişiye bulaştırdığı ne kadar yüksekse eşik de o kadar yüksektir. Kızamık bilinen en bulaşıcı hastalıklardan biridir ve eşiği yüzde doksan beşin üstündedir. Bu, aşılanamayanları — yeni doğanları, bağışıklığı baskılanmış hastaları — koruyan tek mekanizmadır ve yüzde birkaçlık düşüşlerde bile çöker."
+      },
+      {
+        "kind": "list",
+        "title": "Sık karşılaşılan yanlış anlamalar",
+        "items": [
+          "'Hastalananların çoğu aşılıydı': aşılı oranı yüksek bir toplumda vakaların çoğunun aşılı olması matematiksel olarak beklenir. Karşılaştırılması gereken şey sayılar değil, gruplardaki hastalanma oranıdır.",
+          "'Aşı yüzde yüz korumuyor': hiçbir tıbbi müdahale yüzde yüz değildir. Ağır hastalık ve ölümü belirgin biçimde azaltması yeterli bir gerekçedir.",
+          "'Doğal bağışıklık daha iyi': bazı hastalıklarda daha güçlü olabilir, ama bedeli hastalığı geçirmektir ve o bedel bazen ölümdür.",
+          "'Bu kadar çok aşı bağışıklığı yorar': bir çocuğun günlük olarak karşılaştığı antijen sayısı, aşı takviminin tamamından kat kat fazladır.",
+          "Aşı-otizm iddiası: dayandığı çalışma geri çekilmiş, veri manipülasyonu belgelenmiş ve milyonlarca çocuğu kapsayan çalışmalarda ilişki bulunmamıştır."
+        ]
+      },
+      {
+        "kind": "text",
+        "title": "Risk algısının asimetrisi",
+        "body": "İnsanlar, yapmaktan doğan zararı yapmamaktan doğan zarardan daha ağır bulur. Aşıdan kaynaklanan nadir bir yan etki, aşı yapılmadığı için gelişen bir hastalıktan psikolojik olarak çok daha ağır tartılır. Bu eğilim insani ve anlaşılırdır ama karar verirken farkında olunması gereken bir yanlılıktır. İki riski yan yana, aynı birimle koymak — bin çocukta kaç yan etki, bin çocukta kaç hastalık ve kaç ölüm — tartışmayı somut zemine çeker."
+      },
+      {
+        "kind": "example",
+        "title": "Güven meselesi",
+        "body": "Aşı tereddüdünün büyük kısmı bilgi eksikliğinden değil güven eksikliğinden doğar ve bu her zaman yersiz de değildir: geçmişte kamu otoritelerinin şeffaf davranmadığı örnekler vardır. Bu yüzden bilgi vermek tek başına çoğu zaman işe yaramaz; belirsizliği açıkça söylemek, bilinen yan etkileri saklamamak ve soruları küçümsememek daha etkilidir. İkna, karşı tarafı cahil ilan ederek başlamaz."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Toplum bağışıklığı eşiği neye göre değişir?",
+        "options": [
+          "Nüfusun büyüklüğüne",
+          "Hastalığın bulaşıcılığına — bir hastanın ortalama kaç kişiye bulaştırdığına",
+          "Aşının fiyatına",
+          "Mevsime"
+        ],
+        "answerIndex": 1,
+        "explanation": "Bulaşıcılık ne kadar yüksekse eşik de o kadar yüksektir. Kızamıkta bu eşik yüzde doksan beşin üstündedir."
+      },
+      {
+        "id": "q2",
+        "prompt": "'Hastalananların çoğu aşılıydı' cümlesi neden yanıltıcıdır?",
+        "options": [
+          "Doğru olmadığı için",
+          "Aşılı oranı yüksek bir toplumda bu matematiksel olarak beklenir; karşılaştırılması gereken şey gruplardaki hastalanma oranıdır",
+          "Aşılar işe yaramadığı için",
+          "Vakalar sayılmadığı için"
+        ],
+        "answerIndex": 1,
+        "explanation": "Toplumun %95'i aşılıysa, aşı çok iyi çalışsa bile vakaların önemli kısmı aşılılardan gelebilir. Mutlak sayılar değil, oranlar karşılaştırılır."
+      },
+      {
+        "id": "q3",
+        "prompt": "İhmal yanlılığı aşı kararını nasıl etkiler?",
+        "options": [
+          "Aşıyı daha cazip kılar",
+          "Yapmaktan doğan nadir zararı, yapmamaktan doğan daha büyük zarardan psikolojik olarak ağır tartmaya yol açar",
+          "Kararı etkilemez",
+          "Yalnızca hekimleri etkiler"
+        ],
+        "answerIndex": 1,
+        "explanation": "Eylemden doğan zarar, eylemsizlikten doğan zarardan daha ağır hissedilir. İki riski aynı birimle yan yana koymak bu yanlılığı azaltır."
+      }
+    ]
+  },
+  {
+    "id": "hekimle-konusmak",
+    "moduleId": "karar",
+    "order": 4,
+    "title": "Hekimle konuşmak ve sağlık haberi okumak",
+    "subtitle": "Kursun bütün araçlarının kullanıldığı yer burasıdır.",
+    "minutes": 9,
+    "keyTerms": ["anamnez", "ikinci görüş", "izleyerek beklemek", "ortak karar verme"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Teşhislerin büyük kısmı tetkikten değil, hastanın anlattığı öyküden çıkar. Bu yüzden muayenenin en verimli kısmı konuşmadır ve bu konuşmaya hazırlıklı gitmek sonucu doğrudan iyileştirir. Şikâyetin ne zaman başladığı, neyle arttığı, neyle geçtiği, kullanılan bütün ilaçlar ve takviyeler, ailedeki hastalıklar: bunlar hatırlanmaya çalışılacak şeyler değil, önceden yazılacak şeylerdir."
+      },
+      {
+        "kind": "list",
+        "title": "Sorulacak dört soru",
+        "items": [
+          "Benim seçeneklerim neler? Hiçbir şey yapmamak da bir seçenek mi?",
+          "Bu seçeneğin faydası ve zararı ne — bin kişide kaç kişi olarak?",
+          "Bu tetkikin sonucu kararımızı değiştirecek mi?",
+          "Bir şey kötüye giderse hangi belirtiye bakmalıyım ve ne zaman geri dönmeliyim?"
+        ]
+      },
+      {
+        "kind": "text",
+        "title": "İkinci görüş",
+        "body": "İkinci görüş almak, hekime duyulan güvensizliğin ifadesi değildir ve hekimler için de olağandır. Özellikle geri dönüşü olmayan kararlarda — büyük bir ameliyat, uzun süreli bir tedavi, organ kaybı — makul ve yaygın bir uygulamadır. İkinci görüşe giderken ilk hekimin raporlarını ve görüntülerini götürmek, tetkiklerin tekrarlanmasını ve gereksiz ışın maruziyetini önler."
+      },
+      {
+        "kind": "text",
+        "title": "Sağlık haberini okumak",
+        "body": "Bir sağlık haberiyle karşılaştığınızda birkaç saniyede uygulanabilecek bir süzgeç vardır. Çalışma insanlarda mı yapılmış? Kaç kişi? Karşılaştırma grubu var mı? Göreli mi mutlak mı konuşuluyor? Ölçülen şey gerçekten önemsediğiniz sonuç mu? Ve bu tek bir çalışma mı, yoksa bir derleme mi? Bu altı soruyu geçen haber sayısı şaşırtıcı derecede azdır ve geçenler genellikle en az heyecan verici olanlardır."
+      },
+      {
+        "kind": "example",
+        "title": "İnternete bakmak",
+        "body": "Belirtileri internette aramak yasak değil, ama nasıl arandığı önemlidir. Arama motoru sonuçları en çok tıklananı öne çıkarır, en olasıyı değil; bu yüzden nadir ve korkutucu teşhisler orantısız biçimde görünür. Daha iyi bir yol, ulusal sağlık kurumlarının hasta bilgilendirme sayfalarına ve bağımsız derleme kaynaklarına doğrudan gitmektir. Aranan şey teşhis değil, hekime soracak doğru soru olmalıdır."
+      },
+      {
+        "kind": "quote",
+        "text": "Bazen iyileştirmek, sık sık rahatlatmak, her zaman teselli etmek.",
+        "source": "On beşinci yüzyıldan kalma, tıp geleneğinde sıkça tekrarlanan bir söz"
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Teşhislerin büyük kısmı nereden çıkar?",
+        "options": [
+          "Kan tahlillerinden",
+          "Hastanın anlattığı öyküden",
+          "Görüntülemeden",
+          "Genetik testlerden"
+        ],
+        "answerIndex": 1,
+        "explanation": "Anamnez, muayenenin en verimli kısmıdır. Hazırlıklı gitmek — belirtiler, ilaçlar, aile öyküsü — sonucu doğrudan iyileştirir."
+      },
+      {
+        "id": "q2",
+        "prompt": "İkinci görüşe giderken ne götürmek gerekir?",
+        "options": [
+          "Sadece reçeteyi",
+          "İlk hekimin raporlarını ve görüntüleri — tetkiklerin tekrarını ve gereksiz ışın maruziyetini önler",
+          "Hiçbir şey, yeniden başlamak daha iyidir",
+          "Yalnızca kimlik"
+        ],
+        "answerIndex": 1,
+        "explanation": "Mevcut belgeleri götürmek hem zaman hem maliyet kazandırır, hem de gereksiz tekrar görüntülemeyi önler."
+      },
+      {
+        "id": "q3",
+        "prompt": "Belirtileri internette ararken temel sorun nedir?",
+        "options": [
+          "Bilgilerin hepsi yanlıştır",
+          "Arama sonuçları en olası teşhisi değil en çok tıklananı öne çıkarır; nadir ve korkutucu teşhisler orantısız görünür",
+          "Sayfalar çok uzundur",
+          "Türkçe kaynak yoktur"
+        ],
+        "answerIndex": 1,
+        "explanation": "Aranan şey teşhis değil, hekime soracak doğru soru olmalıdır. Kurumsal hasta bilgilendirme sayfaları daha güvenli bir başlangıçtır."
+      }
+    ]
+  }
+]
