@@ -124,5 +124,19 @@
     "questions": 36,
     "charts": 5,
     "file": "courses/iklim.json"
+  },
+  {
+    "id": "astronomi",
+    "title": "Astronomi",
+    "subtitle": "Ölçekler, yıldızlar, evren",
+    "description": "Işık yılından kırmızıya kaymaya, yıldızların ömründen karanlık maddeye: gökyüzünün nasıl ölçüldüğü ve neyin bilinip neyin bilinmediği.",
+    "icon": "🔭",
+    "accent": "#3b4b9c",
+    "accentDark": "#96a4ef",
+    "category": "klasik",
+    "lessons": 12,
+    "questions": 36,
+    "charts": 5,
+    "file": "courses/astronomi.json"
   }
 ]

@@ -1,0 +1,484 @@
+[
+  {
+    "id": "element-sentezi",
+    "moduleId": "yildizlar",
+    "order": 3,
+    "title": "Elementlerin kökeni",
+    "subtitle": "Periyodik tablo, farklı yerlerde ve farklı zamanlarda dolduruldu.",
+    "minutes": 8,
+    "keyTerms": ["nükleosentez", "ilksel bolluk", "yıldız füzyonu", "r-süreci", "metallik"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Evrenin ilk birkaç dakikasında yalnızca en hafif çekirdekler oluştu: hidrojen, helyum ve eser miktarda lityum. Bugün ölçülen kozmik bolluklar bu hesabın öngörüsüyle şaşırtıcı bir uyum gösterir ve Büyük Patlama modelinin en güçlü kanıtlarından biridir. Ama periyodik tablonun geri kalanı orada yapılmadı; sonradan, yıldızların içinde ve ölümlerinde üretildi."
+      },
+      {
+        "kind": "list",
+        "title": "Hangi element nerede yapıldı",
+        "items": [
+          "Hidrojen ve helyumun büyük kısmı: Büyük Patlama'nın ilk dakikaları.",
+          "Karbon, oksijen, azot: yıldızların içinde, sakin füzyon evrelerinde.",
+          "Silisyum, kükürt, kalsiyum: ağır yıldızların ileri yanma evrelerinde.",
+          "Demire kadar olan elementler: füzyonun enerji verdiği son basamağa kadar.",
+          "Demirden ağır elementlerin bir kısmı: süpernova patlamalarında hızlı nötron yakalamayla.",
+          "Altın ve platin gibi en ağırların önemli bir bölümü: nötron yıldızı birleşmelerinde."
+        ]
+      },
+      {
+        "kind": "text",
+        "title": "Altının kökeni",
+        "body": "Altının nerede üretildiği uzun süre tartışmalıydı. 2017'de iki nötron yıldızının birleşmesi hem kütle çekimi dalgalarıyla hem de teleskoplarla gözlendi. Patlamanın ardından yayılan ışığın tayfı, ağır elementlerin taze olarak üretildiğini gösterdi; hesaplara göre tek bir olayda Dünya kütlesinin birçok katı altın oluştu. Bir kuram, gözlemle bu kadar doğrudan doğrulandığında nadiren bu kadar somut olur."
+      },
+      {
+        "kind": "text",
+        "title": "Metallik ve gezegenler",
+        "body": "Astronomide hidrojen ve helyum dışındaki her elemente 'metal' denir. Bir yıldızın metalliği, doğduğu bulutun ne kadar zenginleşmiş olduğunu gösterir ve dolaylı olarak yaşını da ele verir. Evrenin ilk kuşak yıldızları neredeyse sıfır metallikliydi. Kayalık gezegenlerin oluşabilmesi için yeterli metallik gerekir; bu yüzden gezegen arayışı da galaksinin belirli bölgelerine ve belirli yıldız kuşaklarına yoğunlaşır."
+      },
+      {
+        "kind": "example",
+        "title": "Örnek: nefes aldığınız oksijen",
+        "body": "Ciğerlerinizdeki oksijen atomları, Güneş'ten önce yaşamış ve ölmüş yıldızların içinde yapıldı. Kanınızdaki demir, bir süpernovada. Yüzüğünüzdeki altının önemli bir kısmı, iki nötron yıldızının çarpışmasında. Bunlar mecaz değil, ölçülmüş bir köken zinciridir; tayf çizgileri bu üretim yerlerinin imzasını taşır."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Evrenin ilk dakikalarında hangi elementler oluştu?",
+        "options": [
+          "Bütün periyodik tablo",
+          "Hidrojen, helyum ve eser miktarda lityum",
+          "Demire kadar olanlar",
+          "Yalnızca hidrojen"
+        ],
+        "answerIndex": 1,
+        "explanation": "İlksel nükleosentez yalnızca en hafif çekirdekleri üretti. Ölçülen bolluklar hesabın öngörüsüyle uyuşur ve modelin güçlü kanıtlarından biridir."
+      },
+      {
+        "id": "q2",
+        "prompt": "Altın gibi çok ağır elementlerin önemli bir bölümü nerede üretilir?",
+        "options": [
+          "Güneş'in merkezinde",
+          "Nötron yıldızı birleşmelerinde",
+          "Büyük Patlama'da",
+          "Gezegen çekirdeklerinde"
+        ],
+        "answerIndex": 1,
+        "explanation": "2017'deki nötron yıldızı birleşmesi hem kütle çekimi dalgalarıyla hem ışıkla gözlendi; tayf ağır elementlerin taze üretildiğini gösterdi."
+      },
+      {
+        "id": "q3",
+        "prompt": "Astronomide 'metallik' ne anlama gelir?",
+        "options": [
+          "Demir oranı",
+          "Hidrojen ve helyum dışındaki elementlerin oranı",
+          "Yıldızın parlaklığı",
+          "Yüzey sıcaklığı"
+        ],
+        "answerIndex": 1,
+        "explanation": "Astronomik kullanımda hidrojen ve helyum dışındaki her şey metaldir. Metallik, yıldızın doğduğu bulutun zenginleşme düzeyini gösterir."
+      }
+    ]
+  },
+
+  {
+    "id": "otegezegenler",
+    "moduleId": "yildizlar",
+    "order": 4,
+    "title": "Ötegezegenler",
+    "subtitle": "Otuz yılda sıfırdan binlerceye: gezegenler kural, istisna değil.",
+    "minutes": 9,
+    "keyTerms": ["geçiş yöntemi", "dikine hız", "yaşanabilir kuşak", "sıcak Jüpiter", "gözlem yanlılığı"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "1995'e kadar Güneş dışında bir yıldızın etrafında dolanan tek bir gezegen bile doğrulanmamıştı. Bugün sayı binlerle ölçülüyor ve istatistikler, galaksideki yıldızların çoğunun en az bir gezegeni olduğunu gösteriyor. Gezegenler nadir değil, olağan. Bu otuz yıllık değişim, bir teknoloji atılımından çok bir ölçüm hassaslığı atılımıydı."
+      },
+      {
+        "kind": "list",
+        "title": "İki ana yöntem",
+        "items": [
+          "Geçiş yöntemi: gezegen yıldızın önünden geçerken parlaklıkta küçük bir düşüş olur. Düşüşün derinliği gezegenin büyüklüğünü verir.",
+          "Dikine hız: gezegen yıldızı da hafifçe çeker; yıldızın tayf çizgileri düzenli olarak ileri geri kayar. Bu, gezegenin kütlesini verir.",
+          "İki yöntem birlikte kullanılırsa hem kütle hem yarıçap, dolayısıyla yoğunluk bulunur — kayalık mı gazlı mı sorusunun cevabı.",
+          "Doğrudan görüntüleme: yalnızca genç, sıcak ve yıldızından çok uzak devlerde mümkün.",
+          "Kütle çekimsel mercek: nadir ama serbest gezen gezegenleri de yakalayabilen tek yöntem."
+        ]
+      },
+      {
+        "kind": "chart",
+        "chartId": "yasanabilir-kusak"
+      },
+      {
+        "kind": "text",
+        "title": "Bulduklarımız temsili değil",
+        "body": "İlk bulunan ötegezegenler yıldızlarına çok yakın devlerdi — 'sıcak Jüpiterler'. Bu, evrende en çok o tür gezegen olduğu anlamına gelmiyordu; yalnızca en kolay bulunanın o olduğu anlamına geliyordu. Geçiş yöntemi büyük ve yakın gezegenleri, dikine hız yöntemi ağır ve yakın gezegenleri kolayca yakalar. Küçük ve uzak gezegenler her iki yöntemde de zordur. Bu, seçilim yanlılığının astronomideki en temiz örneklerinden biridir ve bulguları yorumlarken daima düzeltilmesi gerekir."
+      },
+      {
+        "text": "Yaşam aramak, gezegen aramaktan çok daha zor bir iştir: gezegeni bulmak yalnızca ilk adım.",
+        "kind": "quote",
+        "source": "Ötegezegen araştırmasının yaygın uyarısı"
+      },
+      {
+        "kind": "text",
+        "title": "Biyoimza sorunu",
+        "body": "Bir gezegenin atmosferi, yıldız ışığı içinden geçerken tayfına iz bırakır. Oksijen, metan ya da ikisinin bir arada bulunması yaşam işareti sayılabilir. Ama her biri için yaşamsız açıklamalar da vardır; bu yüzden tek bir molekül kanıt değildir. Bugünkü araçlar en yakın birkaç sistemde bu ölçümü ancak yapabiliyor ve sonuçlar dikkatle, tekrarlanarak yorumlanıyor."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Geçiş yöntemi neyi ölçer?",
+        "options": [
+          "Gezegenin kütlesini",
+          "Gezegenin büyüklüğünü, yıldız parlaklığındaki düşüşün derinliğinden",
+          "Gezegenin sıcaklığını",
+          "Gezegenin atmosferini"
+        ],
+        "answerIndex": 1,
+        "explanation": "Düşüşün derinliği yarıçap oranını verir. Kütle için dikine hız yöntemi gerekir; ikisi birlikte yoğunluğu verir."
+      },
+      {
+        "id": "q2",
+        "prompt": "İlk bulunan ötegezegenlerin çoğunun 'sıcak Jüpiter' olması neyi gösterir?",
+        "options": [
+          "Evrende en çok o tür gezegen bulunduğunu",
+          "Yöntemlerin en kolay o türü yakaladığını — bir seçilim yanlılığı",
+          "Ölçümlerin hatalı olduğunu",
+          "Küçük gezegenlerin var olmadığını"
+        ],
+        "answerIndex": 1,
+        "explanation": "Büyük ve yakın gezegenler her iki yöntemde de en kolay bulunur. Bulguları yorumlarken bu yanlılığın düzeltilmesi gerekir."
+      },
+      {
+        "id": "q3",
+        "prompt": "Küçük kütleli yıldızların yaşanabilir kuşağı neden sorunlu olabilir?",
+        "options": [
+          "Çok uzakta olduğu için",
+          "Yıldıza çok yakın olduğu için gezegen büyük olasılıkla gelgit kilitlidir",
+          "Hiç kuşakları olmadığı için",
+          "Çok sıcak olduğu için"
+        ],
+        "answerIndex": 1,
+        "explanation": "Düşük parlaklık, kuşağı yıldıza çok yaklaştırır. Bu mesafede gelgit kilidi olasıdır: bir yüz daima gündüz, diğeri daima gece."
+      }
+    ]
+  },
+
+  {
+    "id": "galaksiler",
+    "moduleId": "kozmoloji",
+    "order": 1,
+    "title": "Galaksiler ve büyük yapı",
+    "subtitle": "Samanyolu evrenin tamamı sanılıyordu — yüz yıl önce.",
+    "minutes": 8,
+    "keyTerms": ["galaksi", "sarmal kol", "yerel grup", "kozmik ağ", "büyük tartışma"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "1920'de Samanyolu'nun evrenin tamamı mı yoksa sayısız benzerinden biri mi olduğu ciddi biçimde tartışılıyordu. Gökyüzündeki bulanık sarmal lekeler ya galaksimizin içindeki gaz bulutlarıydı ya da çok uzaktaki başka galaksiler. Hubble, Andromeda'daki bir Sefeid değişkeni ölçüp uzaklığını hesaplayınca tartışma bitti: Andromeda Samanyolu'nun çok dışındaydı ve evren bir anda tahmin edilenden milyonlarca kat büyüdü."
+      },
+      {
+        "kind": "list",
+        "title": "Galaksi türleri ve yapı",
+        "items": [
+          "Sarmal galaksiler: disk yapılı, gaz bakımından zengin, hâlâ yıldız üretirler. Samanyolu bunlardan biridir.",
+          "Eliptik galaksiler: yaşlı yıldızlardan oluşan, gazı tükenmiş, yıldız üretimi büyük ölçüde durmuş sistemler.",
+          "Düzensiz galaksiler: genellikle küçük ve çarpışmalarla biçimi bozulmuş olanlar.",
+          "Samanyolu yaklaşık 100 milyar yıldız barındırır ve merkezinde milyonlarca güneş kütlesinde bir kara delik vardır.",
+          "Galaksiler tek başına durmaz: gruplar, kümeler ve süper kümeler hâlinde bir ağ oluştururlar."
+        ]
+      },
+      {
+        "kind": "text",
+        "title": "Kozmik ağ",
+        "body": "Büyük ölçekte evren düzgün dağılmış değildir. Galaksiler ipliksi yapılar boyunca dizilir, bu iplikler kümelerde kesişir ve aralarında neredeyse boş dev boşluklar kalır. Bu yapıya kozmik ağ denir. Ağın biçimi, erken evrendeki minik yoğunluk farklarının kütle çekimiyle milyarlarca yıl boyunca büyütülmüş hâlidir; bilgisayar benzetimleri gözlenen yapıyı şaşırtıcı bir doğrulukla yeniden üretir."
+      },
+      {
+        "kind": "text",
+        "title": "Samanyolu ve Andromeda",
+        "body": "Samanyolu ile Andromeda birbirine yaklaşıyor ve yaklaşık dört milyar yıl sonra birleşecekler. Bu bir çarpışma değil, bir kaynaşma olacak: yıldızlar arası mesafeler o kadar büyük ki iki yıldızın çarpışma olasılığı ihmal edilebilir. Gaz bulutları ise çarpışacak ve yoğun bir yıldız oluşum dönemi tetiklenecek. Sonuçta ortaya büyük bir eliptik galaksi çıkması bekleniyor."
+      },
+      {
+        "kind": "example",
+        "title": "Örnek: 1920'deki tartışma",
+        "body": "Büyük Tartışma diye anılan oturumda iki astronom karşı karşıya geldi. Biri sarmal bulutsuların galaksimizin içinde olduğunu, diğeri ayrı 'ada evrenler' olduğunu savundu. İkisinin de elinde veri vardı ve ikisi de bazı noktalarda haklıydı. Tartışmayı kapatan şey daha iyi bir argüman değil, üç yıl sonra gelen tek bir ölçüm oldu. Bilimsel anlaşmazlıkların çoğu böyle biter: ikna ile değil, yeni bir ölçümle."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Andromeda'nın Samanyolu dışında olduğu nasıl gösterildi?",
+        "options": [
+          "Fotoğraf çözünürlüğü artırılarak",
+          "İçindeki bir Sefeid değişkenin ölçülüp uzaklığının hesaplanmasıyla",
+          "Renk ölçümüyle",
+          "Radyo dalgalarıyla"
+        ],
+        "answerIndex": 1,
+        "explanation": "Sefeidlerin değişim süresi gerçek parlaklığı verir; görünen parlaklıkla karşılaştırılınca uzaklık çıkar. Sonuç Samanyolu'nun çok ötesiydi."
+      },
+      {
+        "id": "q2",
+        "prompt": "Kozmik ağ nedir?",
+        "options": [
+          "Galaksiler arası manyetik alan",
+          "Galaksilerin ipliksi yapılar boyunca dizildiği, aralarında dev boşluklar bulunan büyük ölçekli yapı",
+          "Radyo teleskop ağı",
+          "Kara deliklerin dağılımı"
+        ],
+        "answerIndex": 1,
+        "explanation": "Erken evrendeki minik yoğunluk farkları kütle çekimiyle büyüdü. Benzetimler gözlenen ağ yapısını doğrulukla yeniden üretiyor."
+      },
+      {
+        "id": "q3",
+        "prompt": "Samanyolu-Andromeda birleşmesinde yıldızların çarpışması neden beklenmiyor?",
+        "options": [
+          "Yıldızlar birbirini iteceği için",
+          "Yıldızlar arası mesafeler yıldız boyutlarına göre akıl almaz ölçüde büyük olduğu için",
+          "Birleşme çok yavaş olacağı için",
+          "Kütle çekimi engelleyeceği için"
+        ],
+        "answerIndex": 1,
+        "explanation": "Galaksiler büyük ölçüde boşluktur. Gaz bulutları çarpışacak ve yıldız oluşumunu tetikleyecek ama yıldızlar birbirinin yanından geçecek."
+      }
+    ]
+  },
+
+  {
+    "id": "genisleme",
+    "moduleId": "kozmoloji",
+    "order": 2,
+    "title": "Genişleme ve kırmızıya kayma",
+    "subtitle": "Galaksiler uzaklaşmıyor; aradaki uzay büyüyor.",
+    "minutes": 9,
+    "keyTerms": ["kırmızıya kayma", "Hubble yasası", "ölçek çarpanı", "genişleme", "Hubble gerilimi"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "1920'lerin sonunda uzak galaksilerin tayfındaki çizgilerin sistematik olarak kırmızıya kaydığı fark edildi ve kayma miktarı uzaklıkla artıyordu. Bu, galaksilerin bizden uzaklaştığı anlamına geliyordu — ve uzaklık arttıkça daha hızlı. Yorum önemliydi: bu bir patlamanın merkezinden savrulma değil, uzayın kendisinin her yerde genişlemesidir. Merkez yoktur; her galaksiden bakan aynı şeyi görür."
+      },
+      {
+        "kind": "chart",
+        "chartId": "kirmiziya-kayma"
+      },
+      {
+        "kind": "text",
+        "title": "Kayma bir Doppler etkisi değil",
+        "body": "Yakın cisimler için kırmızıya kayma gerçekten bir hız etkisidir. Ama kozmolojik ölçeklerde farklı bir şey olur: ışık yolda ilerlerken aradaki uzay genişler ve dalga boyu bu genişlemeyle birlikte esner. Bu yüzden z değeri doğrudan bir hız değil, evrenin ne kadar büyüdüğünün ölçüsüdür. z = 1 ise ışık yola çıktığında evren bugünkünün yarısı büyüklüğündeydi. Bu ayrım, 'galaksiler ışıktan hızlı mı gidiyor' sorusunun neden yanlış kurulmuş olduğunu da açıklar."
+      },
+      {
+        "kind": "list",
+        "title": "Genişleme hakkında yaygın yanlışlar",
+        "items": [
+          "Genişlemenin bir merkezi yoktur; her nokta diğerlerinden uzaklaşıyor görünür.",
+          "Genişleme atomları, gezegenleri ya da galaksileri şişirmez: kütle çekimiyle bağlı sistemler birlikte kalır.",
+          "Andromeda bize doğru geliyor; yakın komşular genişlemeye kapılmaz.",
+          "Genişleme uzaya doğru değil, uzayın kendisinin büyümesidir; 'nereye genişliyor' sorusunun karşılığı yoktur.",
+          "Genişleme hızı sabit değildir; erken dönemde yavaşladı, sonra hızlanmaya başladı."
+        ]
+      },
+      {
+        "kind": "text",
+        "title": "Hubble gerilimi",
+        "body": "Genişleme hızını ölçmenin iki bağımsız yolu var: yakın evrende uzaklık merdivenini kullanmak ve erken evrenin ışığından hesaplamak. İki yöntem birbirinden anlamlı ölçüde farklı sonuç veriyor ve fark, ölçüm belirsizliklerinin ötesinde. Buna Hubble gerilimi deniyor. Ya ölçümlerin birinde henüz bulunamamış bir sistematik hata var ya da standart kozmoloji modeli eksik. Hangisi olduğu bugün kozmolojinin en canlı açık sorusu."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Kozmolojik kırmızıya kayma neyi gösterir?",
+        "options": [
+          "Galaksilerin uzayda hareket hızını",
+          "Işık yoldayken uzayın ne kadar genişlediğini",
+          "Galaksinin sıcaklığını",
+          "Yıldızların dönme hızını"
+        ],
+        "answerIndex": 1,
+        "explanation": "z değeri bir hız değil, ölçek çarpanındaki değişimdir. z = 1 ise ışık yola çıktığında evren bugünkünün yarısı büyüklüğündeydi."
+      },
+      {
+        "id": "q2",
+        "prompt": "Genişleme neden atomları ve galaksileri şişirmez?",
+        "options": [
+          "Çok yavaş olduğu için",
+          "Kütle çekimiyle bağlı sistemler birlikte kalır; genişleme yalnızca bağlı olmayan ölçeklerde etkilidir",
+          "Atomlar çok küçük olduğu için",
+          "Şişirir ama ölçemeyiz"
+        ],
+        "answerIndex": 1,
+        "explanation": "Bağlı sistemler genişlemeye kapılmaz. Andromeda bize doğru gelirken uzak galaksilerin uzaklaşması bu ayrımın doğrudan kanıtıdır."
+      },
+      {
+        "id": "q3",
+        "prompt": "Hubble gerilimi nedir?",
+        "options": [
+          "Teleskoplar arasındaki anlaşmazlık",
+          "Genişleme hızının iki bağımsız yöntemle ölçüldüğünde belirsizliklerin ötesinde farklı çıkması",
+          "Galaksilerin gerilmesi",
+          "Kırmızıya kaymanın ölçülememesi"
+        ],
+        "answerIndex": 1,
+        "explanation": "Yakın evren ölçümü ile erken evren hesabı uyuşmuyor. Ya bulunamamış bir sistematik hata var ya da standart model eksik."
+      }
+    ]
+  },
+
+  {
+    "id": "buyuk-patlama",
+    "moduleId": "kozmoloji",
+    "order": 3,
+    "title": "Büyük Patlama'nın kanıtları",
+    "subtitle": "Model bir anlatı değil; üç bağımsız ölçümle sınanmış bir hesap.",
+    "minutes": 9,
+    "keyTerms": ["kozmik arka plan ışıması", "ilksel bolluk", "yapı oluşumu", "son saçılma", "şişme"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Büyük Patlama modeli, evrenin bir patlamayla başladığını değil, geçmişte çok daha sıcak ve yoğun olduğunu söyler. Model kabul görmesini üç bağımsız öngörünün gerçekleşmesine borçludur; bunların hiçbiri modeli kurarken bilinmiyordu ve her biri modeli çürütebilecek nitelikteydi."
+      },
+      {
+        "kind": "list",
+        "title": "Üç dayanak",
+        "items": [
+          "Genişleme: uzaklıkla artan kırmızıya kayma. Geriye doğru sarıldığında sıcak ve yoğun bir başlangıç verir.",
+          "Kozmik arka plan ışıması: evren yaklaşık 380.000 yaşındayken serbest kalan ışık, bugün mikrodalga bölgesinde her yönden geliyor. 1964'te tesadüfen bulundu.",
+          "İlksel element bollukları: ilk dakikaların hesabı, gözlenen hidrojen-helyum-lityum oranlarını doğru veriyor.",
+          "Dördüncü bir dayanak: arka plan ışımasındaki minik sıcaklık farklarının, bugünkü galaksi dağılımını üretecek büyüklükte olması."
+        ]
+      },
+      {
+        "kind": "text",
+        "title": "Arka plan ışımasının anlamı",
+        "body": "Erken evren o kadar sıcaktı ki atomlar oluşamıyor, ışık serbestçe ilerleyemiyordu. Sıcaklık yeterince düşünce elektronlar çekirdeklere bağlandı ve evren birden saydamlaştı. O anda serbest kalan ışık hâlâ yolda; genişleme yüzünden esneyerek mikrodalgaya kaydı ve bugün mutlak sıfırın yaklaşık 2,7 derece üstünde bir sıcaklığa karşılık geliyor. Bu ışıma her yönden neredeyse aynı geliyor; farklar yüz binde bir düzeyinde ve bu minik farklar bugünkü bütün yapının tohumu."
+      },
+      {
+        "kind": "text",
+        "title": "Modelin bilmediği kısım",
+        "body": "Model, evrenin ilk anında ne olduğunu söylemez. Sıcak ve yoğun bir başlangıç durumundan itibaren fiziği takip eder; o durumun kendisinin nereden geldiği bugünkü kuramların dışındadır. Şişme kuramı, ilk saniyenin çok küçük bir kesrinde çok hızlı bir genişleme yaşandığını öne sürer ve birkaç gözlemi başarıyla açıklar; ama kesin olarak doğrulanmış sayılmaz. 'Büyük Patlama'dan önce ne vardı' sorusunun bugünkü fizikte bir karşılığı yoktur — cevabın olmaması ile sorunun anlamsız olması ayrı şeyler ve hangisi olduğu da açık değil."
+      },
+      {
+        "kind": "example",
+        "title": "Örnek: gürültü sanılan sinyal",
+        "body": "1964'te iki mühendis, bir radyo anteninde bir türlü gideremedikleri bir uğultu ile uğraşıyordu. Anteni temizlediler, güvercinleri çıkardılar, bağlantıları değiştirdiler; uğultu her yönden aynı şiddette geliyordu. Yakındaki bir ekip aynı sıralarda böyle bir ışımanın olması gerektiğini hesaplıyordu. İki grup bir araya geldiğinde, gideremedikleri gürültünün evrenin en eski ışığı olduğu anlaşıldı."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Kozmik arka plan ışıması nedir?",
+        "options": [
+          "Yıldızlardan gelen toplam ışık",
+          "Evren saydamlaştığı anda serbest kalan ve genişlemeyle mikrodalgaya kaymış ışık",
+          "Galaksi merkezlerinden gelen radyo dalgaları",
+          "Güneş'in radyo ışıması"
+        ],
+        "answerIndex": 1,
+        "explanation": "Evren yaklaşık 380.000 yaşındayken elektronlar çekirdeklere bağlandı ve ışık serbest kaldı. O ışık bugün 2,7 K'e karşılık geliyor."
+      },
+      {
+        "id": "q2",
+        "prompt": "Büyük Patlama modeli ne demek değildir?",
+        "options": [
+          "Evrenin geçmişte daha sıcak ve yoğun olduğu",
+          "Evrenin uzayda bir noktada patladığı",
+          "Evrenin genişlediği",
+          "İlk dakikalarda hafif elementlerin oluştuğu"
+        ],
+        "answerIndex": 1,
+        "explanation": "Model bir patlama merkezi tarif etmez. Uzayın kendisi her yerde genişler; geriye sarıldığında sıcak ve yoğun bir durum çıkar."
+      },
+      {
+        "id": "q3",
+        "prompt": "Arka plan ışımasındaki minik sıcaklık farklarının önemi nedir?",
+        "options": [
+          "Ölçüm hatası olduklarını gösterirler",
+          "Bugünkü galaksi ve kümelerin tohumu olan yoğunluk farklarıdır",
+          "Işımanın sahte olduğunu gösterirler",
+          "Güneş sisteminin hareketinden kaynaklanırlar"
+        ],
+        "answerIndex": 1,
+        "explanation": "Yüz binde bir düzeyindeki farklar, kütle çekimiyle milyarlarca yılda büyüyerek bugünkü kozmik ağı üretti."
+      }
+    ]
+  },
+
+  {
+    "id": "karanlik",
+    "moduleId": "kozmoloji",
+    "order": 4,
+    "title": "Karanlık madde ve karanlık enerji",
+    "subtitle": "Evrenin yüzde doksan beşi hakkında bildiğimiz tek şey, orada bir şey olduğu.",
+    "minutes": 9,
+    "keyTerms": ["karanlık madde", "karanlık enerji", "dönme eğrisi", "kütle çekimsel mercek", "hızlanma"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Galaksilerin dış bölgelerindeki yıldızlar, görünen kütleye göre olması gerekenden çok daha hızlı dönüyor. Bu hızda dönen bir yıldızın galaksiden savrulması gerekirdi; savrulmuyor. Aynı sonuç galaksi kümelerinde, kütle çekimsel mercek gözlemlerinde ve arka plan ışımasının deseninde bağımsız olarak çıkıyor. Ya görünmeyen bir kütle var ya da kütle çekimi büyük ölçeklerde bildiğimizden farklı işliyor."
+      },
+      {
+        "kind": "list",
+        "title": "Karanlık maddenin kanıtları",
+        "items": [
+          "Galaksi dönme eğrileri: dış yıldızların beklenenden hızlı dönmesi.",
+          "Kütle çekimsel mercek: arkadaki galaksilerin ışığının, görünen kütlenin bükebileceğinden fazla bükülmesi.",
+          "Küme dinamiği: galaksilerin küme içindeki hızları, görünen kütleyle bir arada kalamayacakları kadar yüksek.",
+          "Arka plan ışımasının desen istatistiği: yalnızca sıradan madde varsayımıyla açıklanamıyor.",
+          "Çarpışan kümelerde görünen madde ile kütle merkezinin ayrışması: gazlar çarpışıp yavaşlarken kütlenin büyük kısmı ilerlemeye devam ediyor."
+        ]
+      },
+      {
+        "kind": "text",
+        "title": "Karanlık enerji ve hızlanma",
+        "body": "1998'de iki bağımsız ekip, uzak tip Ia süpernovaların beklenenden sönük olduğunu buldu. Bu, evrenin genişlemesinin yavaşlamadığını, hızlandığını gösteriyordu. Kimse böyle bir sonuç aramıyordu; iki ekip de tersini bulmayı bekliyordu. Hızlanmayı sürdüren şeye karanlık enerji dendi. Ne olduğu bilinmiyor; en sade açıklama uzayın kendisine ait sabit bir enerji yoğunluğudur ama bu değerin kuramsal beklentiyle uyuşmaması fizikteki en büyük açıklardan biri olarak duruyor."
+      },
+      {
+        "kind": "text",
+        "title": "Adlandırmak açıklamak değildir",
+        "body": "'Karanlık madde' ve 'karanlık enerji' terimleri birer açıklama değil, birer etiket. Gözlenen bir etkiye ad vermek, o etkinin ne olduğunu bilmek anlamına gelmez. Alternatif olarak kütle çekimi yasasının büyük ölçeklerde değişmesi de öneriliyor; bu yaklaşım dönme eğrilerini iyi açıklıyor ama küme ölçeğinde ve arka plan ışımasında zorlanıyor. Bugünkü durum şu: bir model her şeyi tutarlı biçimde açıklıyor ama bileşenlerinin ne olduğunu kimse bilmiyor."
+      },
+      {
+        "kind": "example",
+        "title": "Örnek: Vera Rubin'in ölçümleri",
+        "body": "1970'lerde Vera Rubin ve Kent Ford, galaksilerin dönme hızlarını dikkatle ölçtü. Dış bölgelerde hızın düşmesini bekliyorlardı — Güneş sisteminde gezegenlerin uzaklaştıkça yavaşladığı gibi. Hız düşmedi, düz kaldı. Sonuç, bir tek galakside değil, baktıkları hemen her galakside aynıydı. Karanlık madde fikri, kuramsal bir zorunluluktan değil, ısrarla tekrar eden bir ölçümden çıktı."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Galaksi dönme eğrileri neyi gösterir?",
+        "options": [
+          "Galaksilerin yaşını",
+          "Dış bölgelerdeki yıldızların, görünen kütleye göre beklenenden çok daha hızlı döndüğünü",
+          "Galaksilerin uzaklığını",
+          "Yıldız sayısını"
+        ],
+        "answerIndex": 1,
+        "explanation": "Beklenen düşüş gerçekleşmez, hız düz kalır. Görünmeyen bir kütle ya da farklı işleyen bir kütle çekimi gerekir."
+      },
+      {
+        "id": "q2",
+        "prompt": "1998'deki süpernova gözlemleri neyi gösterdi?",
+        "options": [
+          "Evrenin genişlemesinin yavaşladığını",
+          "Evrenin genişlemesinin hızlandığını",
+          "Evrenin büzüldüğünü",
+          "Süpernovaların standart mum olmadığını"
+        ],
+        "answerIndex": 1,
+        "explanation": "Uzak süpernovalar beklenenden sönük çıktı. İki bağımsız ekip de tersini bulmayı bekliyordu; sonuç karanlık enerji kavramını doğurdu."
+      },
+      {
+        "id": "q3",
+        "prompt": "'Karanlık madde' terimi hakkında doğru olan nedir?",
+        "options": [
+          "Ne olduğu tam olarak bilinmektedir",
+          "Gözlenen bir etkiye verilen ad; bir açıklama değil bir etikettir",
+          "Kara deliklerden oluşur",
+          "Ölçüm hatasıdır"
+        ],
+        "answerIndex": 1,
+        "explanation": "Etkinin varlığı birçok bağımsız gözlemle sağlamdır; bileşeninin ne olduğu bilinmiyor. Ad vermek açıklamak değildir."
+      }
+    ]
+  }
+]

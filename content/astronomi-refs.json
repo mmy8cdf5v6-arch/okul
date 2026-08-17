@@ -1,0 +1,500 @@
+{
+  "meta": {
+    "title": "Astronomi",
+    "eyebrow": "Astronomi",
+    "subtitle": "Ölçekler, yıldızlar, evren",
+    "description": "Işık yılından kırmızıya kaymaya, yıldızların ömründen karanlık maddeye: gökyüzünün nasıl ölçüldüğü ve neyin bilinip neyin bilinmediği.",
+    "icon": "🔭",
+    "accent": "#3b4b9c",
+    "accentDark": "#96a4ef",
+    "category": "klasik",
+    "figuresLabel": "İsimler",
+    "timelineLabel": "Zaman çizelgesi",
+    "timelineTitle": "Gökyüzünün tarihi",
+    "timelineIntro": "Dünya'nın merkez olmaktan çıkışından karanlık enerjiye: her adımda insanın konumu biraz daha sıradanlaştı.",
+    "source": "builtin",
+    "hasCharts": true
+  },
+
+  "modules": [
+    {
+      "id": "olcekler",
+      "title": "Ölçekler ve gökyüzü",
+      "description": "Mesafeler, gökyüzünün hareketi, teleskop ve tayf, uzaklığın nasıl ölçüldüğü."
+    },
+    {
+      "id": "yildizlar",
+      "title": "Yıldızlar",
+      "description": "Yıldızı ayakta tutan denge, kütlenin belirlediği ömür, elementlerin kökeni ve ötegezegenler."
+    },
+    {
+      "id": "kozmoloji",
+      "title": "Kozmoloji",
+      "description": "Galaksiler, genişleme, Büyük Patlama'nın kanıtları ve evrenin bilinmeyen yüzde doksan beşi."
+    }
+  ],
+
+  "glossary": [
+    { "id": "isik-yili", "term": "Işık yılı", "definition": "Işığın bir yılda aldığı yol, yaklaşık 9,46 trilyon kilometre. Bir zaman değil uzunluk birimidir.", "lessonId": "mesafe-ve-isik" },
+    { "id": "astronomi-birimi", "term": "Astronomi birimi", "definition": "Dünya-Güneş ortalama uzaklığı, yaklaşık 150 milyon kilometre. Güneş sistemi içinde kullanılır.", "lessonId": "mesafe-ve-isik" },
+    { "id": "parsek", "term": "Parsek", "definition": "Paralaksı bir yay saniyesi olan uzaklık, 3,26 ışık yılı. Profesyonel yayınların standart birimi.", "lessonId": "mesafe-ve-isik" },
+    { "id": "geriye-bakis", "term": "Geriye bakış süresi", "definition": "Bir cismin ışığının bize ulaşması için geçen süre. Uzağa bakmak, geçmişe bakmaktır.", "lessonId": "mesafe-ve-isik" },
+    { "id": "gok-kuresi", "term": "Gök küresi", "definition": "Gök cisimlerinin üzerinde duruyormuş gibi düşünüldüğü hayalî küre. Konumları tarif etmek için kullanılan bir kurgu.", "lessonId": "gokyuzunun-hareketi" },
+    { "id": "eksen-egikligi", "term": "Eksen eğikliği", "definition": "Dünya'nın dönme ekseninin yörünge düzlemine göre yaklaşık 23,5 derecelik eğimi. Mevsimlerin tek sebebi.", "lessonId": "gokyuzunun-hareketi" },
+    { "id": "presesyon", "term": "Presesyon", "definition": "Dünya ekseninin topaç gibi 26.000 yıllık bir çevrimde salınması. Kutup yıldızı zamanla değişir.", "lessonId": "gokyuzunun-hareketi" },
+    { "id": "geri-hareket", "term": "Geri hareket", "definition": "Bir gezegenin gökyüzünde geri gidiyormuş gibi görünmesi. Dünya'nın onu içten ya da dıştan geçmesinin izdüşümü.", "lessonId": "gokyuzunun-hareketi" },
+    { "id": "milankovitch", "term": "Milankovitch çevrimleri", "definition": "Yörünge basıklığı, eksen eğikliği ve presesyondaki uzun dönemli değişimler. Buzul çağlarının zamanlamasını belirler.", "lessonId": "gokyuzunun-hareketi" },
+    { "id": "aciklik", "term": "Açıklık", "definition": "Teleskop aynasının çapı. Toplanan ışık çapın karesiyle artar; iki kat çap dört kat ışık demektir.", "lessonId": "teleskop-ve-tayf" },
+    { "id": "cozunurluk", "term": "Çözünürlük", "definition": "Birbirine yakın iki noktayı ayırabilme yeteneği. Dalga boyuna ve açıklığa bağlıdır.", "lessonId": "teleskop-ve-tayf" },
+    { "id": "tayf", "term": "Tayf", "definition": "Işığın dalga boylarına ayrılmış hâli. Astronominin gerçek bilgi kaynağı; bileşim, sıcaklık ve hız buradan okunur.", "lessonId": "teleskop-ve-tayf" },
+    { "id": "sogurma-cizgisi", "term": "Soğurma çizgisi", "definition": "Bir elementin belirli dalga boylarını soğurmasıyla oluşan koyu çizgi. Her element için özgün bir desen.", "lessonId": "teleskop-ve-tayf" },
+    { "id": "uyarlamali-optik", "term": "Uyarlamalı optik", "definition": "Aynayı saniyede yüzlerce kez esneterek atmosfer türbülansının bozulmasını geri alma tekniği.", "lessonId": "teleskop-ve-tayf" },
+    { "id": "paralaks-t", "term": "Paralaks", "definition": "Dünya yörüngesinin iki ucundan bakıldığında yakın bir yıldızın arka plana göre kayması. Uzaklık merdiveninin tek doğrudan geometrik basamağı.", "lessonId": "uzaklik-merdiveni" },
+    { "id": "standart-mum", "term": "Standart mum", "definition": "Gerçek parlaklığı bağımsız olarak bilinen, bu yüzden uzaklık ölçümünde kullanılabilen cisim.", "lessonId": "uzaklik-merdiveni" },
+    { "id": "sefeid", "term": "Sefeid değişken", "definition": "Parlaklığı düzenli olarak değişen, değişim süresi gerçek parlaklığını veren yıldız türü. Leavitt'in bulduğu ilişki.", "lessonId": "uzaklik-merdiveni" },
+    { "id": "tip-ia", "term": "Tip Ia süpernova", "definition": "Benzer koşullarda patladıkları için benzer parlaklığa ulaşan süpernovalar. Milyarlarca ışık yılına kadar uzaklık ölçer.", "lessonId": "uzaklik-merdiveni" },
+    { "id": "uzaklik-merdiveni-t", "term": "Uzaklık merdiveni", "definition": "Üst üste binen ölçüm yöntemleri zinciri. Her basamak bir alttakiyle ayarlanır; alttaki hata yukarı taşınır.", "lessonId": "uzaklik-merdiveni" },
+    { "id": "hidrostatik-denge", "term": "Hidrostatik denge", "definition": "İçe doğru kütle çekimi ile dışa doğru basıncın dengelenmesi. Bir yıldızın bütün hayatı bu dengeyi sürdürmekten ibarettir.", "lessonId": "yildiz-nedir" },
+    { "id": "fuzyon", "term": "Çekirdek füzyonu", "definition": "Hafif çekirdeklerin birleşip daha ağır çekirdek oluşturması. Aradaki kütle farkı enerjiye dönüşür.", "lessonId": "yildiz-nedir" },
+    { "id": "anakol-t", "term": "Ana kol", "definition": "Yıldızların merkezinde hidrojen yaktığı uzun evre. Bir yıldızın ömrünün büyük kısmı burada geçer.", "lessonId": "yildiz-nedir" },
+    { "id": "kutle-parlaklik", "term": "Kütle-parlaklık ilişkisi", "definition": "Parlaklığın kütleyle çok daha hızlı artması. Ağır yıldızların yakıtı orantısız biçimde çabuk tüketmesinin sebebi.", "lessonId": "yildiz-nedir" },
+    { "id": "kahverengi-cuce", "term": "Kahverengi cüce", "definition": "Merkezinde hidrojen füzyonunu başlatacak kütleye ulaşamamış gövde. Yıldız ile gezegen arasında kalır.", "lessonId": "yildiz-nedir" },
+    { "id": "kirmizi-dev", "term": "Kırmızı dev", "definition": "Merkezdeki hidrojen tükendiğinde dış katmanları şişen yıldız evresi. Güneş de bu evreden geçecek.", "lessonId": "yildiz-yasam-dongusu" },
+    { "id": "beyaz-cuce", "term": "Beyaz cüce", "definition": "Orta kütleli bir yıldızdan geriye kalan sıcak, yoğun çekirdek. Artık füzyon yapmaz, milyarlarca yıl soğur.", "lessonId": "yildiz-yasam-dongusu" },
+    { "id": "supernova", "term": "Süpernova", "definition": "Ağır bir yıldızın merkezinin çökmesiyle dış katmanların patlaması. Ağır elementleri uzaya saçar.", "lessonId": "yildiz-yasam-dongusu" },
+    { "id": "notron-yildizi", "term": "Nötron yıldızı", "definition": "Güneş'ten ağır bir kütlenin yirmi kilometrelik bir küreye sıkışmış hâli. Hızlı dönenlere pulsar denir.", "lessonId": "yildiz-yasam-dongusu" },
+    { "id": "kara-delik", "term": "Kara delik", "definition": "Kaçış hızının ışık hızını aştığı bölge. Hiçbir bilinen basınç çöküşü durduramadığında oluşur.", "lessonId": "yildiz-yasam-dongusu" },
+    { "id": "nukleosentez", "term": "Nükleosentez", "definition": "Çekirdeklerin üretilmesi. İlk dakikalarda hafif elementler, yıldızlarda ve ölümlerinde geri kalanlar üretildi.", "lessonId": "element-sentezi" },
+    { "id": "ilksel-bolluk", "term": "İlksel bolluk", "definition": "Büyük Patlama'nın ilk dakikalarında oluşan hidrojen, helyum ve lityum oranları. Ölçüm hesabı doğruluyor.", "lessonId": "element-sentezi" },
+    { "id": "metallik", "term": "Metallik", "definition": "Astronomide hidrojen ve helyum dışındaki elementlerin oranı. Yıldızın doğduğu bulutun zenginleşme düzeyini gösterir.", "lessonId": "element-sentezi" },
+    { "id": "gecis-yontemi", "term": "Geçiş yöntemi", "definition": "Gezegen yıldızın önünden geçerken parlaklıktaki düşüşü ölçme. Gezegenin büyüklüğünü verir.", "lessonId": "otegezegenler" },
+    { "id": "dikine-hiz", "term": "Dikine hız", "definition": "Gezegenin çekimiyle yıldızın tayf çizgilerinin düzenli olarak kayması. Gezegenin kütlesini verir.", "lessonId": "otegezegenler" },
+    { "id": "yasanabilir-kusak-t", "term": "Yaşanabilir kuşak", "definition": "Suyun sıvı kalabileceği uzaklık aralığının kaba tahmini. Yıldızın parlaklığıyla birlikte yer değiştirir.", "lessonId": "otegezegenler" },
+    { "id": "sicak-jupiter", "term": "Sıcak Jüpiter", "definition": "Yıldızına çok yakın dolanan dev gezegen. İlk bulunanların çoğu bu türdü — çünkü en kolay bulunan tür.", "lessonId": "otegezegenler" },
+    { "id": "gozlem-yanliligi", "term": "Gözlem yanlılığı", "definition": "Yöntemin belirli türden cisimleri kolay, diğerlerini zor bulması. Bulguları yorumlarken düzeltilmesi gerekir.", "lessonId": "otegezegenler" },
+    { "id": "galaksi", "term": "Galaksi", "definition": "Kütle çekimiyle bağlı milyarlarca yıldızdan, gazdan ve karanlık maddeden oluşan sistem.", "lessonId": "galaksiler" },
+    { "id": "kozmik-ag", "term": "Kozmik ağ", "definition": "Galaksilerin ipliksi yapılar boyunca dizildiği, aralarında dev boşluklar bulunan büyük ölçekli yapı.", "lessonId": "galaksiler" },
+    { "id": "yerel-grup", "term": "Yerel grup", "definition": "Samanyolu, Andromeda ve çevrelerindeki onlarca küçük galaksiden oluşan bağlı topluluk.", "lessonId": "galaksiler" },
+    { "id": "kirmiziya-kayma-t", "term": "Kırmızıya kayma", "definition": "Işığın dalga boyunun uzaması. Kozmolojik ölçekte bir hız değil, uzayın ne kadar genişlediğinin ölçüsü.", "lessonId": "genisleme" },
+    { "id": "hubble-yasasi", "term": "Hubble yasası", "definition": "Uzaklaşma hızının uzaklıkla orantılı olması. Genişlemenin merkezi olmadığının doğrudan sonucu.", "lessonId": "genisleme" },
+    { "id": "olcek-carpani", "term": "Ölçek çarpanı", "definition": "Evrenin göreli büyüklüğü. z = 1 ise ışık yola çıktığında evren bugünkünün yarısı büyüklüğündeydi.", "lessonId": "genisleme" },
+    { "id": "hubble-gerilimi", "term": "Hubble gerilimi", "definition": "Genişleme hızının iki bağımsız yöntemle ölçüldüğünde belirsizliklerin ötesinde farklı çıkması. Kozmolojinin en canlı açık sorusu.", "lessonId": "genisleme" },
+    { "id": "arka-plan-isimasi", "term": "Kozmik arka plan ışıması", "definition": "Evren saydamlaştığı anda serbest kalan ve genişlemeyle mikrodalgaya kaymış ışık. Bugün 2,7 K'e karşılık geliyor.", "lessonId": "buyuk-patlama" },
+    { "id": "son-sacilma", "term": "Son saçılma", "definition": "Elektronların çekirdeklere bağlanıp evrenin saydamlaştığı an; yaklaşık 380.000 yaşında.", "lessonId": "buyuk-patlama" },
+    { "id": "sisme", "term": "Şişme", "definition": "İlk saniyenin çok küçük bir kesrinde çok hızlı bir genişleme yaşandığı önerisi. Birkaç gözlemi açıklıyor ama kesin doğrulanmış değil.", "lessonId": "buyuk-patlama" },
+    { "id": "karanlik-madde", "term": "Karanlık madde", "definition": "Işıkla etkileşmeyen ama kütle çekimiyle etkisi ölçülen madde. Bir açıklama değil, gözlenen bir etkiye verilen ad.", "lessonId": "karanlik" },
+    { "id": "karanlik-enerji", "term": "Karanlık enerji", "definition": "Evrenin genişlemesini hızlandıran bilinmeyen etken. En sade açıklaması uzaya ait sabit bir enerji yoğunluğu.", "lessonId": "karanlik" },
+    { "id": "donme-egrisi", "term": "Dönme eğrisi", "definition": "Bir galakside yıldız hızının merkeze uzaklıkla değişimi. Beklenen düşüş gerçekleşmez, hız düz kalır.", "lessonId": "karanlik" },
+    { "id": "kutle-mercegi", "term": "Kütle çekimsel mercek", "definition": "Kütlenin ışığı bükmesi. Bükülme miktarı, görünen kütlenin sağlayabileceğinden fazladır.", "lessonId": "karanlik" }
+  ],
+
+  "figures": [
+    {
+      "id": "kopernik",
+      "name": "Nicolaus Copernicus",
+      "lifespan": "1473-1543",
+      "oneLiner": "Dünya'yı merkezden çıkardı ve gezegen hareketlerini sadeleştirdi.",
+      "contributions": [
+        "Güneş merkezli modeli matematiksel olarak işledi",
+        "Geri hareketi ek çemberler olmadan açıkladı",
+        "Yapıtı ölüm yılında yayımlandı"
+      ],
+      "lessonId": "gokyuzunun-hareketi",
+      "tag": "Devrim"
+    },
+    {
+      "id": "kepler",
+      "name": "Johannes Kepler",
+      "lifespan": "1571-1630",
+      "oneLiner": "Çemberi bırakıp elipsi kabul etti; yörüngeleri yasaya bağladı.",
+      "contributions": [
+        "Yörüngelerin elips olduğunu buldu",
+        "Gezegen hareketinin üç yasasını formüle etti",
+        "Tycho Brahe'nin hassas gözlem verisini kullanarak modeli veriyle sınadı"
+      ],
+      "lessonId": "gokyuzunun-hareketi",
+      "tag": "Yörüngeler"
+    },
+    {
+      "id": "galileo",
+      "name": "Galileo Galilei",
+      "lifespan": "1564-1642",
+      "oneLiner": "Teleskopu gökyüzüne çevirdi ve modeli gözlemle sınadı.",
+      "contributions": [
+        "Jüpiter'in uydularını buldu: her şey Dünya etrafında dönmüyordu",
+        "Venüs'ün evrelerini gözledi; bu gözlem yer merkezli modelle bağdaşmıyordu",
+        "Samanyolu'nun tek tek yıldızlardan oluştuğunu gösterdi"
+      ],
+      "lessonId": "teleskop-ve-tayf",
+      "tag": "Gözlem"
+    },
+    {
+      "id": "newton",
+      "name": "Isaac Newton",
+      "lifespan": "1643-1727",
+      "oneLiner": "Yerdeki düşmeyle gökteki dönmenin aynı yasa olduğunu gösterdi.",
+      "contributions": [
+        "Evrensel kütle çekimi yasasını formüle etti",
+        "Kepler yasalarını bu yasadan türetti",
+        "Yansıtmalı teleskopu geliştirdi"
+      ],
+      "lessonId": "gokyuzunun-hareketi",
+      "tag": "Kütle çekimi"
+    },
+    {
+      "id": "herschel",
+      "name": "Caroline ve William Herschel",
+      "lifespan": "1750-1848 / 1738-1822",
+      "oneLiner": "Gökyüzünü sistemli biçimde taradılar ve kızılötesini keşfettiler.",
+      "contributions": [
+        "Uranüs'ü buldular ve binlerce bulutsu katalogladılar",
+        "William, güneş tayfının kırmızı ucunun ötesinde görünmeyen bir ışıma ölçtü",
+        "Caroline, kendi adına ücret alan ilk kadın gökbilimcilerden oldu ve sekiz kuyruklu yıldız buldu"
+      ],
+      "lessonId": "teleskop-ve-tayf",
+      "tag": "Gözlem"
+    },
+    {
+      "id": "fraunhofer",
+      "name": "Joseph von Fraunhofer",
+      "lifespan": "1787-1826",
+      "oneLiner": "Güneş tayfındaki koyu çizgileri ölçtü; tayf çözümlemesini başlattı.",
+      "contributions": [
+        "Güneş tayfında yüzlerce soğurma çizgisini haritaladı",
+        "Çizgileri hassas biçimde ölçmenin araçlarını geliştirdi",
+        "Astronominin uzaktan bileşim ölçmesinin yolunu açtı"
+      ],
+      "lessonId": "teleskop-ve-tayf",
+      "tag": "Tayfölçüm"
+    },
+    {
+      "id": "leavitt",
+      "name": "Henrietta Swan Leavitt",
+      "lifespan": "1868-1921",
+      "oneLiner": "Evrenin ölçülmesini mümkün kılan ilişkiyi buldu.",
+      "contributions": [
+        "Sefeid değişkenlerde parlaklık ile değişim süresi arasındaki ilişkiyi keşfetti",
+        "Bulgusu, galaksiler arası uzaklıkların ölçülmesini mümkün kıldı",
+        "Harvard'daki hesaplayıcı kadınlar arasında, düşük ücretle ve sınırlı yetkiyle çalıştı"
+      ],
+      "lessonId": "uzaklik-merdiveni",
+      "tag": "Uzaklık ölçümü"
+    },
+    {
+      "id": "hubble",
+      "name": "Edwin Hubble",
+      "lifespan": "1889-1953",
+      "oneLiner": "Evrenin bir galaksiden ibaret olmadığını ve genişlediğini gösterdi.",
+      "contributions": [
+        "Andromeda'daki bir Sefeidi ölçüp onun Samanyolu dışında olduğunu kanıtladı",
+        "Uzaklaşma hızının uzaklıkla orantılı olduğunu gösterdi",
+        "Leavitt'in yöntemi olmadan bu ölçümlerin hiçbiri mümkün olmazdı"
+      ],
+      "lessonId": "galaksiler",
+      "tag": "Kozmoloji"
+    },
+    {
+      "id": "lemaitre",
+      "name": "Georges Lemaître",
+      "lifespan": "1894-1966",
+      "oneLiner": "Genişleyen evren fikrini denklemlerden çıkardı.",
+      "contributions": [
+        "1927'de genişleyen evren çözümünü yayımladı ve genişleme oranını tahmin etti",
+        "Evrenin geçmişte çok yoğun bir durumdan geldiğini öne sürdü",
+        "Yazısı ilk yayımlandığında geniş çevrelerce fark edilmedi"
+      ],
+      "lessonId": "genisleme",
+      "tag": "Kozmoloji"
+    },
+    {
+      "id": "payne",
+      "name": "Cecilia Payne-Gaposchkin",
+      "lifespan": "1900-1979",
+      "oneLiner": "Yıldızların büyük ölçüde hidrojenden yapıldığını gösterdi.",
+      "contributions": [
+        "1925 tezinde yıldız tayflarını çözümleyerek hidrojen ve helyum baskınlığını buldu",
+        "Sonucu dönemin görüşüne aykırı olduğu için tezine çekince koymak zorunda kaldı",
+        "Birkaç yıl içinde haklı olduğu anlaşıldı; tez astronominin en önemli doktoralarından sayılır"
+      ],
+      "lessonId": "element-sentezi",
+      "tag": "Yıldız bileşimi"
+    },
+    {
+      "id": "burbidge",
+      "name": "Margaret Burbidge ve ekibi",
+      "lifespan": "1957",
+      "oneLiner": "Elementlerin yıldızlarda nasıl üretildiğini adım adım gösterdiler.",
+      "contributions": [
+        "Yıldız nükleosentezinin kapsamlı kuramını yayımladılar",
+        "Hangi elementin hangi evrede üretildiğini haritaladılar",
+        "Çalışma, bedenimizdeki atomların kökenini fiziksel bir zincire bağladı"
+      ],
+      "lessonId": "element-sentezi",
+      "tag": "Nükleosentez"
+    },
+    {
+      "id": "rubin",
+      "name": "Vera Rubin",
+      "lifespan": "1928-2016",
+      "oneLiner": "Galaksilerin beklenenden hızlı döndüğünü ısrarla ölçtü.",
+      "contributions": [
+        "Kent Ford ile galaksi dönme eğrilerini hassas biçimde ölçtü",
+        "Dış bölgelerde beklenen hız düşüşünün gerçekleşmediğini gösterdi",
+        "Karanlık madde fikri kuramsal bir zorunluluktan değil, bu tekrarlanan ölçümden çıktı"
+      ],
+      "lessonId": "karanlik",
+      "tag": "Karanlık madde"
+    },
+    {
+      "id": "penzias-wilson",
+      "name": "Arno Penzias ve Robert Wilson",
+      "lifespan": "1964",
+      "oneLiner": "Gideremedikleri gürültünün evrenin en eski ışığı olduğunu öğrendiler.",
+      "contributions": [
+        "Radyo anteninde her yönden aynı şiddette gelen bir uğultu buldular",
+        "Yakındaki bir ekip aynı sırada böyle bir ışımanın olması gerektiğini hesaplıyordu",
+        "Buluş, Büyük Patlama modelinin en güçlü kanıtı oldu"
+      ],
+      "lessonId": "buyuk-patlama",
+      "tag": "Arka plan ışıması"
+    },
+    {
+      "id": "mayor-queloz",
+      "name": "Michel Mayor ve Didier Queloz",
+      "lifespan": "1995",
+      "oneLiner": "Güneş benzeri bir yıldızın etrafındaki ilk gezegeni buldular.",
+      "contributions": [
+        "Dikine hız yöntemiyle ilk ötegezegeni doğruladılar",
+        "Bulunan gezegen yıldızına çok yakın bir devdi ve mevcut oluşum kuramlarını sarstı",
+        "Otuz yılda binlerce ötegezegene uzanan alanı başlattılar"
+      ],
+      "lessonId": "otegezegenler",
+      "tag": "Ötegezegen"
+    }
+  ],
+
+  "eraLabels": {
+    "cıplak-goz": "Çıplak gözle",
+    "teleskop": "Teleskop çağı",
+    "tayf": "Tayf ve fizik",
+    "kozmoloji": "Kozmoloji çağı"
+  },
+
+  "timeline": [
+    {
+      "id": "aristarkhos",
+      "year": -270,
+      "yearLabel": "MÖ 270",
+      "title": "Erken bir güneş merkezli öneri",
+      "body": "Sisamlı Aristarkhos, Güneş'i merkeze koyan bir model önerir ve Ay ile Güneş'in uzaklık oranını ölçmeye çalışır. Öneri kabul görmez.",
+      "era": "cıplak-goz"
+    },
+    {
+      "id": "eratosthenes",
+      "year": -240,
+      "yearLabel": "MÖ 240",
+      "title": "Dünya'nın çevresi ölçülüyor",
+      "body": "Eratosthenes, iki şehirde aynı anda gölge açılarını karşılaştırarak Dünya'nın çevresini şaşırtıcı bir doğrulukla hesaplar.",
+      "era": "cıplak-goz"
+    },
+    {
+      "id": "batlamyus",
+      "year": 150,
+      "yearLabel": "150",
+      "title": "Almagest",
+      "body": "Batlamyus, yer merkezli modeli ek çemberlerle gözlemlere uyduran kapsamlı bir sistem kurar. On dört yüzyıl standart kalır.",
+      "era": "cıplak-goz"
+    },
+    {
+      "id": "kopernik-1543",
+      "year": 1543,
+      "yearLabel": "1543",
+      "title": "Güneş merkeze geçiyor",
+      "body": "Copernicus'un yapıtı ölüm yılında yayımlanır. Model, geri hareketi ek çemberler olmadan açıklar.",
+      "era": "cıplak-goz",
+      "figureId": "kopernik"
+    },
+    {
+      "id": "galileo-1610",
+      "year": 1610,
+      "yearLabel": "1610",
+      "title": "Teleskop gökyüzüne çevriliyor",
+      "body": "Galileo, Jüpiter'in uydularını ve Venüs'ün evrelerini gözler. Her şeyin Dünya etrafında dönmediği doğrudan görülür.",
+      "era": "teleskop",
+      "figureId": "galileo"
+    },
+    {
+      "id": "kepler-1619",
+      "year": 1619,
+      "yearLabel": "1619",
+      "title": "Üç yasa",
+      "body": "Kepler, yörüngelerin elips olduğunu ve dolanma süresiyle uzaklık arasındaki ilişkiyi ortaya koyar. Gökyüzü matematikleşir.",
+      "era": "teleskop",
+      "figureId": "kepler"
+    },
+    {
+      "id": "newton-1687",
+      "year": 1687,
+      "yearLabel": "1687",
+      "title": "Principia",
+      "body": "Newton, yerdeki düşme ile gökteki dönmenin aynı yasa olduğunu gösterir ve Kepler yasalarını bu yasadan türetir.",
+      "era": "teleskop",
+      "figureId": "newton"
+    },
+    {
+      "id": "herschel-1800",
+      "year": 1800,
+      "yearLabel": "1800",
+      "title": "Görünmeyen ışık",
+      "body": "William Herschel, güneş tayfının kırmızı ucunun ötesinde bir ışıma ölçer. Gökyüzünün görünür ışıktan ibaret olmadığı anlaşılır.",
+      "era": "tayf",
+      "figureId": "herschel"
+    },
+    {
+      "id": "fraunhofer-1814",
+      "year": 1814,
+      "yearLabel": "1814",
+      "title": "Güneş tayfındaki çizgiler",
+      "body": "Fraunhofer yüzlerce soğurma çizgisini haritalar. Uzaktaki bir cismin neyden yapıldığını ölçmenin yolu açılır.",
+      "era": "tayf",
+      "figureId": "fraunhofer"
+    },
+    {
+      "id": "helyum-1868",
+      "year": 1868,
+      "yearLabel": "1868",
+      "title": "Önce gökte bulunan element",
+      "body": "Güneş tayfında bilinmeyen bir çizgi görülür ve yeni bir elemente bağlanır. Helyum, Dünya'da bulunmadan önce gökte keşfedilmiştir.",
+      "era": "tayf"
+    },
+    {
+      "id": "leavitt-1912",
+      "year": 1912,
+      "yearLabel": "1912",
+      "title": "Sefeid ilişkisi",
+      "body": "Leavitt, değişim süresi ile gerçek parlaklık arasındaki ilişkiyi yayımlar. Evreni ölçmenin aracı ortaya çıkar.",
+      "era": "tayf",
+      "figureId": "leavitt"
+    },
+    {
+      "id": "buyuk-tartisma",
+      "year": 1920,
+      "yearLabel": "1920",
+      "title": "Büyük Tartışma",
+      "body": "Sarmal bulutsuların galaksimizin içinde mi dışında mı olduğu tartışılır. İki tarafın da verisi vardır; tartışmayı yeni bir ölçüm kapatacaktır.",
+      "era": "kozmoloji"
+    },
+    {
+      "id": "hubble-1924",
+      "year": 1924,
+      "yearLabel": "1924",
+      "title": "Andromeda dışarıda",
+      "body": "Hubble, Andromeda'daki bir Sefeidi ölçer. Evren bir anda tahmin edilenden milyonlarca kat büyür.",
+      "era": "kozmoloji",
+      "figureId": "hubble"
+    },
+    {
+      "id": "payne-1925",
+      "year": 1925,
+      "yearLabel": "1925",
+      "title": "Yıldızlar hidrojenden",
+      "body": "Payne, yıldız tayflarını çözümleyip hidrojen ve helyum baskınlığını gösterir. Sonuç dönemin görüşüne aykırıdır; birkaç yıl içinde doğrulanır.",
+      "era": "kozmoloji",
+      "figureId": "payne"
+    },
+    {
+      "id": "lemaitre-1927",
+      "year": 1927,
+      "yearLabel": "1927",
+      "title": "Genişleyen evren",
+      "body": "Lemaître, genişleme çözümünü yayımlar ve oranı tahmin eder. Yazı ilk çıktığında geniş çevrelerce fark edilmez.",
+      "era": "kozmoloji",
+      "figureId": "lemaitre"
+    },
+    {
+      "id": "hubble-1929",
+      "year": 1929,
+      "yearLabel": "1929",
+      "title": "Uzaklık-hız ilişkisi",
+      "body": "Uzaklaşma hızının uzaklıkla orantılı olduğu gösterilir. Evrenin genişlediği gözlemle desteklenir.",
+      "era": "kozmoloji",
+      "figureId": "hubble"
+    },
+    {
+      "id": "b2fh",
+      "year": 1957,
+      "yearLabel": "1957",
+      "title": "Elementler yıldızlarda",
+      "body": "Burbidge'ler, Fowler ve Hoyle yıldız nükleosentezinin kapsamlı kuramını yayımlar. Bedenimizdeki atomların kökeni fiziksel bir zincire bağlanır.",
+      "era": "kozmoloji",
+      "figureId": "burbidge"
+    },
+    {
+      "id": "cmb-1964",
+      "year": 1964,
+      "yearLabel": "1964",
+      "title": "Gürültü sanılan sinyal",
+      "body": "Penzias ve Wilson, her yönden aynı şiddette gelen bir uğultu bulur. Bu, evrenin en eski ışığıdır.",
+      "era": "kozmoloji",
+      "figureId": "penzias-wilson"
+    },
+    {
+      "id": "rubin-1970",
+      "year": 1970,
+      "yearLabel": "1970'ler",
+      "title": "Dönme eğrileri düz çıkıyor",
+      "body": "Rubin ve Ford, galaksilerin dış bölgelerinde beklenen hız düşüşünün olmadığını ölçer. Karanlık madde tartışması başlar.",
+      "era": "kozmoloji",
+      "figureId": "rubin"
+    },
+    {
+      "id": "cobe-1992",
+      "year": 1992,
+      "yearLabel": "1992",
+      "title": "Arka plandaki minik farklar",
+      "body": "Uydu ölçümleri, arka plan ışımasındaki yüz binde bir düzeyindeki sıcaklık farklarını saptar. Bugünkü yapının tohumları görülmüş olur.",
+      "era": "kozmoloji"
+    },
+    {
+      "id": "otegezegen-1995",
+      "year": 1995,
+      "yearLabel": "1995",
+      "title": "İlk ötegezegen",
+      "body": "Mayor ve Queloz, Güneş benzeri bir yıldızın etrafındaki ilk gezegeni doğrular. Bulunan cisim yıldızına çok yakın bir devdir.",
+      "era": "kozmoloji",
+      "figureId": "mayor-queloz"
+    },
+    {
+      "id": "hizlanma-1998",
+      "year": 1998,
+      "yearLabel": "1998",
+      "title": "Genişleme hızlanıyor",
+      "body": "İki bağımsız ekip, uzak süpernovaların beklenenden sönük olduğunu bulur. İkisi de tersini bulmayı bekliyordu.",
+      "era": "kozmoloji"
+    },
+    {
+      "id": "ligo-2015",
+      "year": 2015,
+      "yearLabel": "2015",
+      "title": "Kütle çekimi dalgaları",
+      "body": "İki kara deliğin birleşmesinden yayılan uzay-zaman dalgaları doğrudan ölçülür. Gökyüzünü ışık dışında bir kanaldan dinlemek mümkün olur.",
+      "era": "kozmoloji"
+    },
+    {
+      "id": "notron-2017",
+      "year": 2017,
+      "yearLabel": "2017",
+      "title": "Altının yapıldığı yer",
+      "body": "İki nötron yıldızının birleşmesi hem kütle çekimi dalgalarıyla hem ışıkla gözlenir. Tayf, ağır elementlerin taze üretildiğini gösterir.",
+      "era": "kozmoloji"
+    },
+    {
+      "id": "kara-delik-2019",
+      "year": 2019,
+      "yearLabel": "2019",
+      "title": "Bir kara deliğin görüntüsü",
+      "body": "Dünya çapına yayılmış radyo teleskoplar birleştirilerek bir kara deliğin çevresindeki ışık halkası görüntülenir.",
+      "era": "kozmoloji"
+    }
+  ]
+}

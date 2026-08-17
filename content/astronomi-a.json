@@ -1,0 +1,474 @@
+[
+  {
+    "id": "mesafe-ve-isik",
+    "moduleId": "olcekler",
+    "order": 1,
+    "title": "Mesafe ve ışık yılı",
+    "subtitle": "Gökyüzüne bakmak, geçmişe bakmaktır.",
+    "minutes": 8,
+    "keyTerms": ["ışık yılı", "astronomi birimi", "parsek", "geriye bakış süresi", "logaritmik ölçek"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Astronomi, gündelik sezginin en hızlı iflas ettiği alandır. Mesafeler o kadar farklı büyüklüklerde ki, aynı çizelgeye sığmazlar. Bu yüzden astronomi mesafeleri her zaman logaritmik düşünülür: her adım bir öncekinin on katıdır. Doğrusal düşünmek, Ay'ın mesafesiyle en yakın yıldızın mesafesini aynı kefeye koymaya yol açar; oysa aralarında yüz milyon kat fark vardır."
+      },
+      {
+        "kind": "chart",
+        "chartId": "mesafe-olcekleri"
+      },
+      {
+        "kind": "list",
+        "title": "Kullanılan birimler",
+        "items": [
+          "Astronomi birimi (ab): Dünya-Güneş ortalama uzaklığı, yaklaşık 150 milyon km. Güneş sistemi içinde kullanılır.",
+          "Işık yılı: ışığın bir yılda aldığı yol, yaklaşık 9,46 trilyon km.",
+          "Parsek: 3,26 ışık yılı. Paralaks ölçümünden doğar; profesyonel yayınların standart birimi.",
+          "Işık dakikası: Güneş 8,3 ışık dakikası uzaktadır — gördüğünüz Güneş, sekiz dakika önceki Güneş'tir.",
+          "Gözlenebilir evrenin yarıçapı yaklaşık 46 milyar ışık yılı; evren 13,8 milyar yaşında olduğu hâlde bu sayı daha büyüktür, çünkü ışık yoldayken uzay genişledi."
+        ]
+      },
+      {
+        "kind": "text",
+        "title": "Geriye bakış",
+        "body": "Işığın hızı sonlu olduğu için hiçbir gök cismini şimdiki hâliyle görmeyiz. Ay'ı 1,3 saniye, Güneş'i 8 dakika, en yakın yıldızı 4 yıl gecikmeyle görürüz. Andromeda galaksisine baktığınızda gördüğünüz ışık, insan türü henüz bugünkü biçimini almadan yola çıkmıştı. Bu bir kusur değil, astronominin en güçlü aracıdır: uzağa bakmak, evrenin geçmişine bakmaktır."
+      },
+      {
+        "kind": "example",
+        "title": "Örnek: ölçek küçültme",
+        "body": "Güneş'i bir futbol topu kadar düşünün. Dünya bu ölçekte 25 metre uzakta, bir bezelye tanesi büyüklüğünde olur. Neptün 780 metre uzakta. En yakın yıldız ise 6.500 kilometre ötede — yani İstanbul'daki bir topun en yakın komşusu Amerika'da. Güneş sistemi büyük ölçüde boşluktur ve yıldızlar arası uzay, sistemin kendisinden akıl almaz ölçüde boştur."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Işık yılı neyi ölçer?",
+        "options": ["Zamanı", "Uzunluğu — ışığın bir yılda aldığı yolu", "Parlaklığı", "Yıldızın yaşını"],
+        "answerIndex": 1,
+        "explanation": "Adındaki 'yıl' yanıltıcıdır; ışık yılı bir mesafe birimidir ve yaklaşık 9,46 trilyon kilometredir."
+      },
+      {
+        "id": "q2",
+        "prompt": "Gözlenebilir evrenin yarıçapı neden 13,8 milyar ışık yılından büyüktür?",
+        "options": [
+          "Hesap hatası vardır",
+          "Işık yoldayken uzayın kendisi genişlediği için kaynak şimdi çok daha uzaktadır",
+          "Işık hızı değiştiği için",
+          "Ölçüm belirsiz olduğu için"
+        ],
+        "answerIndex": 1,
+        "explanation": "Işık 13,8 milyar yıl yol aldı ama bu sürede aradaki uzay genişledi. Kaynağın bugünkü uzaklığı yaklaşık 46 milyar ışık yılıdır."
+      },
+      {
+        "id": "q3",
+        "prompt": "Astronomi mesafeleri neden logaritmik düşünülür?",
+        "options": [
+          "Hesaplama kolaylığı için",
+          "Büyüklükler o kadar farklı mertebelerde ki doğrusal bir ölçekte karşılaştırılamazlar",
+          "Gelenek olduğu için",
+          "Işık hızı logaritmik olduğu için"
+        ],
+        "answerIndex": 1,
+        "explanation": "Ay ile en yakın yıldız arasında yüz milyon kat fark vardır. Doğrusal bir eksende ikisi aynı grafikte gösterilemez."
+      }
+    ]
+  },
+
+  {
+    "id": "gokyuzunun-hareketi",
+    "moduleId": "olcekler",
+    "order": 2,
+    "title": "Gökyüzünün hareketi",
+    "subtitle": "Gördüğünüz her hareketin arkasında bizim hareketimiz var.",
+    "minutes": 8,
+    "keyTerms": ["gök küresi", "mevsimler", "burçlar kuşağı", "presesyon", "geri hareket"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Yıldızlar geceleri doğudan batıya doğru döner gibi görünür; bu Dünya'nın kendi ekseni etrafındaki dönüşüdür. Aynı yıldızlar her gece yaklaşık dört dakika daha erken doğar; bu, Dünya'nın Güneş etrafındaki yıllık hareketidir. Gezegenler bazen arka plana göre geri gider gibi görünür; bu da Dünya'nın onları içten ya da dıştan geçmesidir. Gökyüzünde gözlenen neredeyse her düzenli hareket, aslında bizim hareketimizin bir izdüşümüdür."
+      },
+      {
+        "kind": "text",
+        "title": "Mevsimler mesafeden değil",
+        "body": "Yaygın bir yanılgı, mevsimlerin Dünya'nın Güneş'e uzaklığından kaynaklandığıdır. Oysa Dünya Güneş'e Ocak ayında en yakındır — kuzey yarımkürede kışın ortasında. Mevsimleri yaratan şey eksen eğikliğidir: yaklaşık 23,5 derece. Eğiklik, güneş ışınlarının yüzeye hangi açıyla düştüğünü ve günün ne kadar uzun olduğunu belirler. Aynı anda iki yarımkürede farklı mevsimlerin yaşanması, mesafe açıklamasını doğrudan çürütür."
+      },
+      {
+        "kind": "list",
+        "title": "Uzun dönemli hareketler",
+        "items": [
+          "Presesyon: Dünya'nın ekseni topaç gibi 26.000 yıllık bir çevrimde salınır. Kutup yıldızı zamanla değişir.",
+          "Presesyon yüzünden burç tarihleri, adını taşıdıkları takımyıldızlarla artık örtüşmez; kayma yaklaşık bir burçtur.",
+          "Ay Dünya'dan yılda yaklaşık 3,8 santimetre uzaklaşıyor; gelgitler onu yavaşça iterken Dünya'nın dönüşü de yavaşlıyor.",
+          "Günün uzunluğu jeolojik ölçekte artıyor: 400 milyon yıl önce yıl yaklaşık 400 gündü.",
+          "Milankovitch çevrimleri: yörünge basıklığı, eksen eğikliği ve presesyondaki değişimler buzul çağlarının zamanlamasını belirliyor."
+        ]
+      },
+      {
+        "kind": "text",
+        "title": "Takımyıldızlar bir yanılsamadır",
+        "body": "Bir takımyıldızın yıldızları birbirine yakın değildir; yalnızca aynı bakış doğrultusuna düşerler. Orion'un kemerindeki üç yıldızın Dünya'ya uzaklıkları birbirinden yüzlerce ışık yılı farklıdır. Takımyıldızlar bir yapı değil, iki boyutlu bir izdüşüm üzerinde kurulmuş kültürel bir haritadır — ve her kültür kendi haritasını kurmuştur."
+      },
+      {
+        "kind": "example",
+        "title": "Örnek: geri hareket bilmecesi",
+        "body": "Mars zaman zaman gökyüzünde durup geri gider, sonra yine ilerler. Yer merkezli modelde bunu açıklamak için iç içe geçmiş ek çemberler gerekiyordu. Güneş merkezli modelde açıklama tek cümleye iner: Dünya daha hızlı hareket ettiği için Mars'ı içten geçerken Mars geride kalıyormuş gibi görünür. Aynı gözlemin iki modelde bu kadar farklı maliyetle açıklanması, sadeliğin neden bir ölçüt sayıldığının klasik örneğidir."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Mevsimlerin sebebi nedir?",
+        "options": [
+          "Dünya'nın Güneş'e uzaklığının değişmesi",
+          "Eksen eğikliği: ışınların düşme açısı ve gün uzunluğu",
+          "Güneş'in parlaklığının değişmesi",
+          "Ay'ın konumu"
+        ],
+        "answerIndex": 1,
+        "explanation": "Dünya Güneş'e Ocak'ta en yakındır. İki yarımkürede aynı anda farklı mevsimler yaşanması, mesafe açıklamasını doğrudan çürütür."
+      },
+      {
+        "id": "q2",
+        "prompt": "Bir takımyıldızın yıldızları hakkında doğru olan nedir?",
+        "options": [
+          "Birbirlerine fiziksel olarak yakındırlar",
+          "Yalnızca aynı bakış doğrultusuna düşerler; uzaklıkları çok farklı olabilir",
+          "Aynı anda oluşmuşlardır",
+          "Birbirlerinin etrafında dönerler"
+        ],
+        "answerIndex": 1,
+        "explanation": "Takımyıldız iki boyutlu bir izdüşüm üzerindeki kültürel bir haritadır. Orion'un kemerindeki yıldızların uzaklıkları yüzlerce ışık yılı farklıdır."
+      },
+      {
+        "id": "q3",
+        "prompt": "Gezegenlerin geri hareketi Güneş merkezli modelde nasıl açıklanır?",
+        "options": [
+          "Gezegenler gerçekten geri gider",
+          "Dünya daha hızlı hareket ettiği için dış gezegeni içten geçerken o geride kalıyormuş gibi görünür",
+          "Yörüngeler eliptik olduğu için",
+          "Işık kırılması yüzünden"
+        ],
+        "answerIndex": 1,
+        "explanation": "Yer merkezli modelde bunun için ek çemberler gerekiyordu. Güneş merkezli modelde tek cümleyle açıklanır; sadelik farkı budur."
+      }
+    ]
+  },
+
+  {
+    "id": "teleskop-ve-tayf",
+    "moduleId": "olcekler",
+    "order": 3,
+    "title": "Teleskop ve tayf",
+    "subtitle": "Gök cisimlerine gidemiyoruz; elimizde yalnızca ışıkları var.",
+    "minutes": 9,
+    "keyTerms": ["açıklık", "çözünürlük", "tayf", "soğurma çizgisi", "dalga boyu penceresi"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Bir teleskopun iki işi vardır: ışık toplamak ve ayrıntı çözmek. Toplanan ışık miktarı, aynanın çapının karesiyle artar; iki kat çaplı bir teleskop dört kat ışık toplar ve çok daha sönük cisimleri görür. Çözünürlük ise dalga boyuna ve çapa bağlıdır; büyük ayna daha ince ayrıntı ayırır. Bu yüzden teleskop tarihi büyük ölçüde ayna çapını büyütme tarihidir."
+      },
+      {
+        "kind": "text",
+        "title": "Tayf: ışıktan bilgi çıkarmak",
+        "body": "Astronominin gerçek devrimi teleskop değil tayfölçerdir. Bir yıldızın ışığını dalga boylarına ayırdığınızda düzgün bir gökkuşağı değil, üzerinde koyu çizgiler bulunan bir gökkuşağı görürsünüz. Her element belirli dalga boylarını soğurur ve bu desen o elemente özgüdür — bir parmak izi gibi. Böylece milyarlarca kilometre uzaktaki bir yıldızın neyden yapıldığını, sıcaklığını, dönüş hızını ve bize göre hareketini ölçebiliriz."
+      },
+      {
+        "kind": "list",
+        "title": "Tayfın söyledikleri",
+        "items": [
+          "Bileşim: hangi elementlerin bulunduğu, soğurma çizgilerinin deseninden.",
+          "Sıcaklık: sürekli tayfın hangi dalga boyunda tepe yaptığından.",
+          "Hız: çizgilerin kaymasından — yaklaşıyorsa maviye, uzaklaşıyorsa kırmızıya.",
+          "Dönme: hızlı dönen bir yıldızın çizgileri genişler.",
+          "Manyetik alan: kuvvetli alanda çizgiler yarılır.",
+          "Helyum, Güneş'in tayfında Dünya'da bulunmadan önce keşfedildi; adı da güneş anlamına gelen sözcükten gelir."
+        ]
+      },
+      {
+        "kind": "text",
+        "title": "Atmosfer bir engel",
+        "body": "Dünya atmosferi görünür ışığa ve radyo dalgalarına geçirgendir; mor ötesi, X ışını ve kızılötesinin büyük kısmına değildir. Bu, evrenin bazı yüzlerini yerden görmeyi imkânsız kılar. Uzay teleskopları tam bu yüzden fırlatılır. Ayrıca atmosferin türbülansı görüntüyü bulandırır; uyarlamalı optik denen teknik, aynayı saniyede yüzlerce kez esneterek bu bozulmayı büyük ölçüde geri alır."
+      },
+      {
+        "kind": "example",
+        "title": "Örnek: neden kızılötesi",
+        "body": "Çok uzaktaki galaksilerin ışığı, evren genişlerken esneyerek kızılötesine kayar. En eski galaksileri görünür ışıkla aramak bu yüzden işe yaramaz; kızılötesi teleskop gerekir. Aynı dalga boyu, toz bulutlarının içini görmeyi de sağlar: görünür ışık tozda kaybolurken kızılötesi geçer ve yıldızların doğduğu bölgeleri açığa çıkarır."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Bir teleskopun aynasının çapı iki katına çıkarsa ne olur?",
+        "options": [
+          "İki kat ışık toplar",
+          "Dört kat ışık toplar",
+          "Aynı ışığı toplar",
+          "Işık toplama değişmez, yalnızca çözünürlük artar"
+        ],
+        "answerIndex": 1,
+        "explanation": "Toplanan ışık ayna alanıyla, alan da çapın karesiyle artar. Bu yüzden teleskop tarihi ayna çapını büyütme tarihidir."
+      },
+      {
+        "id": "q2",
+        "prompt": "Bir yıldızın neyden yapıldığını nasıl biliyoruz?",
+        "options": [
+          "Örnek alarak",
+          "Tayfındaki soğurma çizgilerinin deseninden; her element kendine özgü dalga boylarını soğurur",
+          "Parlaklığından",
+          "Renginden"
+        ],
+        "answerIndex": 1,
+        "explanation": "Soğurma çizgileri elementlere özgü bir parmak izidir. Helyum bile Dünya'da bulunmadan önce Güneş tayfında keşfedilmişti."
+      },
+      {
+        "id": "q3",
+        "prompt": "Uzay teleskopları neden gereklidir?",
+        "options": [
+          "Daha büyük olabildikleri için",
+          "Atmosferin mor ötesi, X ışını ve kızılötesinin büyük kısmını geçirmemesi ve türbülansın görüntüyü bozması yüzünden",
+          "Daha ucuz oldukları için",
+          "Gece gündüz çalıştıkları için"
+        ],
+        "answerIndex": 1,
+        "explanation": "Atmosfer bazı dalga boylarını tümüyle engeller. Ayrıca türbülans görüntüyü bulandırır; uzayda bu sorun ortadan kalkar."
+      }
+    ]
+  },
+
+  {
+    "id": "uzaklik-merdiveni",
+    "moduleId": "olcekler",
+    "order": 4,
+    "title": "Uzaklık merdiveni",
+    "subtitle": "Hiçbir yöntem her mesafede çalışmaz; her biri bir sonrakini ayarlar.",
+    "minutes": 8,
+    "keyTerms": ["paralaks", "standart mum", "Sefeid değişken", "tip Ia süpernova", "kalibrasyon"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Astronomideki en temel ölçüm olan uzaklık, aslında doğrudan ölçülemez. Bunun yerine üst üste binen yöntemlerden oluşan bir merdiven kullanılır: her yöntem bir mesafe aralığında çalışır ve bir sonrakini ayarlamak için kullanılır. Merdivenin herhangi bir basamağındaki hata, üstündeki bütün basamaklara taşınır."
+      },
+      {
+        "kind": "chart",
+        "chartId": "paralaks"
+      },
+      {
+        "kind": "text",
+        "title": "İlk basamak: geometri",
+        "body": "Paralaks, merdivenin tek doğrudan geometrik basamağıdır. Dünya yörüngesinin iki ucundan bakıldığında yakın bir yıldız arka plana göre kayar; kayma açısından uzaklık üçgenle bulunur. Yöntem model gerektirmez, bu yüzden en güvenilir olanıdır. Ama açı uzaklıkla ters orantılı olduğu için hızla ölçülemez hâle gelir. Uzaydan yapılan ölçümler bu sınırı binlerce kat aştı ve galaksinin büyük kısmını geometrik olarak ölçülebilir kıldı."
+      },
+      {
+        "kind": "list",
+        "title": "Üst basamaklar",
+        "items": [
+          "Sefeid değişkenler: parlaklıkları düzenli olarak değişen yıldızlar. Değişim süresi gerçek parlaklığı verir.",
+          "Gerçek parlaklığı bilinen bir cismin görünen parlaklığından uzaklık çıkar; bu tür cisimlere standart mum denir.",
+          "Tip Ia süpernovalar: benzer koşullarda patladıkları için benzer parlaklığa ulaşırlar. Milyarlarca ışık yılına kadar görünürler.",
+          "Kırmızıya kayma: en uzak ölçeklerde kullanılır ama genişleme hızının bilinmesini gerektirir.",
+          "Her basamak bir alttakiyle ayarlandığı için, alttaki bir hata bütün merdiveni kaydırır."
+        ]
+      },
+      {
+        "kind": "example",
+        "title": "Örnek: Leavitt'in yasası",
+        "body": "Henrietta Swan Leavitt, 1908-1912 arasında binlerce değişen yıldızın fotoğrafını ölçerken bir düzenlilik fark etti: parlaklık değişim süresi uzun olan Sefeidler daha parlaktı. Hepsi aynı bulutta olduğu için uzaklıkları da aynıydı; bu, görünen parlaklık farkının gerçek parlaklık farkı olduğu anlamına geliyordu. Bulduğu ilişki, evrenin ölçülmesini mümkün kılan tek aracı verdi. Hubble birkaç yıl sonra Andromeda'nın Samanyolu'nun dışında olduğunu tam olarak bu yöntemle gösterdi."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Paralaks yönteminin sınırı nereden gelir?",
+        "options": [
+          "Teleskop büyüklüğünden",
+          "Ölçülecek açının uzaklıkla ters orantılı olması ve hızla ölçülemez hâle gelmesi",
+          "Yıldızların hareket etmesinden",
+          "Atmosferden"
+        ],
+        "answerIndex": 1,
+        "explanation": "Açı 1/uzaklık ile azalır. Yerden gözlem sınırı yaklaşık 0,01 yay saniyesidir; uzaydan ölçüm bunu binlerce kat aşmıştır."
+      },
+      {
+        "id": "q2",
+        "prompt": "Standart mum nedir?",
+        "options": [
+          "Sabit parlaklıkta bir yıldız türü",
+          "Gerçek parlaklığı bağımsız olarak bilinen ve bu yüzden uzaklık ölçümünde kullanılabilen cisim",
+          "Teleskop kalibrasyon aracı",
+          "En parlak yıldız"
+        ],
+        "answerIndex": 1,
+        "explanation": "Gerçek parlaklık biliniyorsa, görünen parlaklıktan uzaklık çıkar. Sefeidler ve tip Ia süpernovalar bu işi görür."
+      },
+      {
+        "id": "q3",
+        "prompt": "Uzaklık merdiveninin kırılganlığı nedir?",
+        "options": [
+          "Teleskopların yetersizliği",
+          "Her basamağın bir alttakiyle ayarlanması: alttaki bir hata bütün merdiveni kaydırır",
+          "Yöntemlerin çelişmesi",
+          "Ölçümlerin tekrarlanamaması"
+        ],
+        "answerIndex": 1,
+        "explanation": "Basamaklar birbiri üzerine kurulur. Bu yüzden en alttaki geometrik ölçümün hassaslaşması, en üstteki kozmolojik uzaklıkları da etkiler."
+      }
+    ]
+  },
+
+  {
+    "id": "yildiz-nedir",
+    "moduleId": "yildizlar",
+    "order": 1,
+    "title": "Yıldız nedir",
+    "subtitle": "Çökmeye çalışan bir gaz topunu ayakta tutan denge.",
+    "minutes": 8,
+    "keyTerms": ["hidrostatik denge", "füzyon", "kütle çekimi", "ana kol", "kütle-parlaklık ilişkisi"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Bir yıldız, kendi kütle çekimi altında çökmeye çalışan devasa bir gaz topudur. Çökmesini engelleyen şey, merkezdeki basıncın dışa doğru itmesidir. Bu iki kuvvetin dengesine hidrostatik denge denir ve yıldızın bütün hayatı bu dengeyi sürdürme çabasından ibarettir. Basıncı ayakta tutan enerji, merkezde gerçekleşen çekirdek füzyonundan gelir: hidrojen çekirdekleri birleşip helyum oluşturur ve aradaki kütle farkı enerjiye dönüşür."
+      },
+      {
+        "kind": "text",
+        "title": "Kütle her şeyi belirler",
+        "body": "Bir yıldızın hemen bütün özellikleri kütlesinden çıkar: sıcaklığı, parlaklığı, rengi, ömrü ve nasıl öleceği. Kütle arttıkça merkez basıncı ve sıcaklığı yükselir, füzyon çok daha hızlı işler. Parlaklık kütleyle kabaca üçüncü kuvvetin üstünde bir hızla artar; bu, ağır yıldızların yakıtlarını orantısız biçimde çabuk tükettiği anlamına gelir. Sonuç sezgiye aykırıdır: en büyük yıldızlar en kısa yaşayanlardır."
+      },
+      {
+        "kind": "chart",
+        "chartId": "hr-diyagrami"
+      },
+      {
+        "kind": "list",
+        "title": "Yıldız olmanın alt ve üst sınırı",
+        "items": [
+          "Alt sınır: yaklaşık 0,08 Güneş kütlesi. Altında merkez, hidrojen füzyonunu başlatacak sıcaklığa ulaşamaz.",
+          "Bu sınırın altındaki cisimlere kahverengi cüce denir: yıldız olamamış, gezegenden büyük gövdeler.",
+          "Üst sınır yaklaşık 150 Güneş kütlesi civarındadır; daha ağırı kendi ışıma basıncıyla parçalanır.",
+          "Güneş, kütle dağılımında ortalamanın üstündedir: yıldızların büyük çoğunluğu ondan küçüktür.",
+          "En yaygın yıldız türü olan kırmızı cücelerin ömrü, evrenin bugünkü yaşından çok daha uzundur; hiçbiri henüz doğal ölümle sönmedi."
+        ]
+      },
+      {
+        "kind": "example",
+        "title": "Örnek: Güneş'in enerji bütçesi",
+        "body": "Güneş her saniye yaklaşık 600 milyon ton hidrojeni helyuma çevirir ve bu dönüşümde yaklaşık 4 milyon ton kütle doğrudan enerjiye dönüşür. Beş milyar yıldır bunu yapıyor ve toplam kütlesinin yalnızca küçük bir kısmını harcadı. Merkezde üretilen bir enerji parçacığının yüzeye ulaşması ise on binlerce yıl sürer; yoğun iç katmanlarda sürekli soğurulup yeniden yayılır. Bugün gördüğünüz güneş ışığı, çok uzun zaman önce üretilmiş enerjidir."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Hidrostatik denge nedir?",
+        "options": [
+          "Yıldızın dönme dengesi",
+          "İçe doğru kütle çekimi ile dışa doğru basıncın dengelenmesi",
+          "Manyetik alanın dengesi",
+          "Yörünge dengesi"
+        ],
+        "answerIndex": 1,
+        "explanation": "Yıldızın bütün hayatı bu dengeyi sürdürmekten ibarettir. Füzyon durduğunda denge bozulur ve yıldız yapısını değiştirir."
+      },
+      {
+        "id": "q2",
+        "prompt": "Neden en büyük yıldızlar en kısa yaşar?",
+        "options": [
+          "Daha az yakıtları olduğu için",
+          "Parlaklıkları kütleyle çok daha hızlı arttığı için yakıtlarını orantısız biçimde çabuk tüketirler",
+          "Daha sıcak oldukları için",
+          "Daha uzakta oldukları için"
+        ],
+        "answerIndex": 1,
+        "explanation": "Kütle artarken parlaklık çok daha dik artar. Yakıt kütleyle orantılı, tüketim hızı ise çok daha hızlı büyür."
+      },
+      {
+        "id": "q3",
+        "prompt": "Kahverengi cüce nedir?",
+        "options": [
+          "Sönmüş bir yıldız",
+          "Merkezinde hidrojen füzyonunu başlatacak kütleye ulaşamamış gövde",
+          "Büyük bir gezegen türü",
+          "Yıldızın çekirdeği"
+        ],
+        "answerIndex": 1,
+        "explanation": "Yaklaşık 0,08 Güneş kütlesinin altında merkez sıcaklığı füzyona yetmez. Kahverengi cüceler yıldız ile gezegen arasında kalır."
+      }
+    ]
+  },
+
+  {
+    "id": "yildiz-yasam-dongusu",
+    "moduleId": "yildizlar",
+    "order": 2,
+    "title": "Yıldızların yaşam döngüsü",
+    "subtitle": "Nasıl öleceğini, doğduğu andaki kütlesi belirler.",
+    "minutes": 9,
+    "keyTerms": ["kırmızı dev", "beyaz cüce", "süpernova", "nötron yıldızı", "kara delik"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Yıldızlar soğuk ve yoğun gaz bulutlarının kendi çekimleri altında çökmesiyle doğar. Merkez yeterince ısınırsa füzyon başlar ve yıldız uzun süre kalacağı ana kola oturur. Bu evrenin sonunda merkezdeki hidrojen tükenir ve denge bozulur; yıldızın yapısı yeniden düzenlenir. Bundan sonrasını belirleyen tek şey kütledir."
+      },
+      {
+        "kind": "list",
+        "title": "İki ayrı son",
+        "items": [
+          "Güneş gibi orta kütleli yıldızlar: dış katmanlar şişerek kırmızı dev olur, sonra atılır ve geriye sıcak, yoğun bir beyaz cüce kalır.",
+          "Beyaz cüce artık füzyon yapmaz; milyarlarca yıl boyunca yavaşça soğur.",
+          "Yaklaşık sekiz Güneş kütlesinden ağır yıldızlar demire kadar element üretir. Demirin füzyonu enerji vermez.",
+          "Destek kesilince merkez saniyeler içinde çöker ve dış katmanlar süpernova olarak patlar.",
+          "Geriye kalan artık, kütleye göre bir nötron yıldızı ya da bir kara delik olur."
+        ]
+      },
+      {
+        "kind": "text",
+        "title": "Nötron yıldızı ve kara delik",
+        "body": "Bir nötron yıldızı, Güneş'ten daha ağır bir kütleyi yaklaşık yirmi kilometrelik bir küreye sıkıştırır; bir çay kaşığı maddesi milyarlarca ton gelir. Hızla dönenler düzenli radyo darbeleri yaydıkları için pulsar adını alır. Kütle daha da büyükse hiçbir bilinen basınç çöküşü durduramaz ve bir kara delik oluşur: kaçış hızının ışık hızını aştığı bir bölge. İki nötron yıldızının birleşmesi, 2017'de hem kütle çekimi dalgalarıyla hem ışıkla aynı anda gözlendi."
+      },
+      {
+        "kind": "text",
+        "title": "Ölüm bir sonraki kuşağı besler",
+        "body": "Yıldızların attığı ve patlattığı madde, yıldızlararası ortamı ağır elementlerle zenginleştirir. Bir sonraki kuşak yıldızlar bu zenginleşmiş buluttan doğar ve etraflarında kayalık gezegenler oluşabilir. İlk yıldızlar neredeyse yalnızca hidrojen ve helyumdan oluşuyordu; kayalık bir gezegen kurmaya yetecek malzeme yoktu. Dünya'nın var olabilmesi, ondan önce ölmüş yıldızlara borçludur."
+      },
+      {
+        "kind": "quote",
+        "text": "Bedenimizdeki azot, dişlerimizdeki kalsiyum, kanımızdaki demir — hepsi çöken yıldızların içinde yapıldı.",
+        "source": "Yıldız nükleosentezinin bir cümlelik özeti"
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Güneş gibi bir yıldızın sonu ne olur?",
+        "options": [
+          "Süpernova olarak patlar",
+          "Kırmızı dev olur, dış katmanlarını atar ve geriye bir beyaz cüce kalır",
+          "Kara deliğe dönüşür",
+          "Sessizce söner"
+        ],
+        "answerIndex": 1,
+        "explanation": "Süpernova için yaklaşık sekiz Güneş kütlesinden ağır olmak gerekir. Orta kütleli yıldızlar beyaz cüce bırakır."
+      },
+      {
+        "id": "q2",
+        "prompt": "Ağır yıldızlarda çöküş neden demirde başlar?",
+        "options": [
+          "Demir çok ağır olduğu için",
+          "Demirin füzyonu enerji vermediği için merkezdeki destek kesilir",
+          "Demir manyetik olduğu için",
+          "Demir yanmadığı için"
+        ],
+        "answerIndex": 1,
+        "explanation": "Demire kadar füzyon enerji açığa çıkarır. Demirden sonrası enerji tüketir; basınç desteği kesilir ve merkez saniyeler içinde çöker."
+      },
+      {
+        "id": "q3",
+        "prompt": "Kayalık gezegenlerin var olabilmesi neye bağlıdır?",
+        "options": [
+          "Güneş'in büyüklüğüne",
+          "Daha önceki kuşak yıldızların ürettiği ve saçtığı ağır elementlere",
+          "Gezegenin yörüngesine",
+          "Galaksinin yaşına"
+        ],
+        "answerIndex": 1,
+        "explanation": "İlk yıldızlar neredeyse yalnızca hidrojen ve helyumdan oluşuyordu. Kayalık gezegen kurmak için önce yıldızların ölmesi gerekiyordu."
+      }
+    ]
+  }
+]

@@ -567,6 +567,26 @@
     return fig;
   }
 
+  /* Anakol yıldızları: kütle (Güneş = 1), yüzey sıcaklığı (K), parlaklık
+     (Güneş = 1). Formül yerine tablo kullanılıyor, çünkü tek bir üs yasası
+     hem cüce hem dev kütlelerde aynı anda tutmuyor. Ara değerler log-log
+     doğrusal aradeğerlemeyle bulunur. */
+  var ANAKOL = [
+    [0.10, 2800, 0.0008], [0.20, 3300, 0.005], [0.50, 3800, 0.04],
+    [0.80, 5000, 0.40], [1.00, 5800, 1.0], [1.50, 7000, 5],
+    [2.00, 9000, 16], [3.00, 11000, 80], [5.00, 17000, 600],
+    [10.0, 25000, 8000], [20.0, 35000, 55000], [30.0, 40000, 150000]
+  ];
+  function anakol(M) {
+    var i = 0, L10 = Math.log(10);
+    while (i < ANAKOL.length - 2 && ANAKOL[i + 1][0] < M) i++;
+    var a = ANAKOL[i], b = ANAKOL[i + 1];
+    var t = (Math.log(M) - Math.log(a[0])) / (Math.log(b[0]) - Math.log(a[0]));
+    var lt = Math.log(a[1]) / L10 + t * (Math.log(b[1]) - Math.log(a[1])) / L10;
+    var ll = Math.log(a[2]) / L10 + t * (Math.log(b[2]) - Math.log(a[2])) / L10;
+    return { T: Math.pow(10, lt), L: Math.pow(10, ll) };
+  }
+
   /* ================= grafik tanımları ================= */
 
   var CHARTS = {
@@ -2252,6 +2272,185 @@
           "Gölgeli bant, bugünkü kanıtların işaret ettiği aralık. Kazanç 0,50'den 0,60'a çıkarsa ısınma " +
           r1(dT(0.5)) + " °C'den " + r1(dT(0.6)) + " °C'ye; 0,70'ten 0,80'e çıkarsa " + r1(dT(0.7)) + " °C'den " +
           r1(dT(0.8)) + " °C'ye gider. Aynı büyüklükteki belirsizlik, üst uçta çok daha pahalıya mal olur." };
+      }
+    },
+
+    "mesafe-olcekleri": {
+      title: "Bir'den evrene: mesafe ölçekleri",
+      note: "Eksen logaritmiktir: her adım on katıdır. Ölçeği doğrusal düşünmek, gök cisimleri arasındaki mesafeler hakkındaki sezgimizi tümüyle yanıltır.",
+      controls: [{ key: "k", label: "Mesafe", min: 0, max: 27, step: 1, def: 11,
+        fmt: function (v) { return "10^" + v + " m"; } }],
+      draw: function (p) {
+        var O = [
+          [0, "insan boyu"], [3, "bir kilometre"], [7.1, "Dünya çapı"], [8.58, "Ay"],
+          [11.18, "Güneş"], [12.65, "Neptün"], [16.6, "en yakın yıldız"],
+          [20.4, "galaksi merkezi"], [22.4, "Andromeda"], [26.6, "gözlenebilir evren"]
+        ];
+        var X = function (k) { return k / 27; }, i;
+        var yakin = 0;
+        for (i = 1; i < O.length; i++) {
+          if (Math.abs(O[i][0] - p.k) < Math.abs(O[yakin][0] - p.k)) yakin = i;
+        }
+        var s = gLine(0, 0.42, 1, 0.42, { c: "var(--rule)", w: 1.6 });
+        for (i = 0; i < O.length; i++) {
+          var on = i === yakin;
+          s += gLine(X(O[i][0]), 0.42, X(O[i][0]), on ? 0.56 : 0.49,
+            { c: on ? "var(--accent)" : "var(--rule)", w: on ? 1.8 : 1.2 });
+          s += gDot(X(O[i][0]), 0.42, { c: on ? "var(--accent)" : "var(--rule)", r: on ? 4 : 2.5 });
+        }
+        s += gTxt(X(O[yakin][0]), 0.56, O[yakin][1], {
+          a: O[yakin][0] > 20 ? "end" : "start", dx: O[yakin][0] > 20 ? 4 : -4, dy: -4,
+          c: "var(--accent)", b: 1, s: 9.5 });
+        [0, 9, 18, 27].forEach(function (v) {
+          s += gTxt(X(v), 0.42, "10^" + v, { a: "middle", dy: 14, s: 8.5 });
+        });
+        s += gLine(X(p.k), 0.16, X(p.k), 0.42, { c: "var(--ink)", w: 1.8, d: "3 3" });
+        s += gDot(X(p.k), 0.42, { c: "var(--ink)", r: 4.5 });
+
+        var m = Math.pow(10, p.k), sn = m / 2.998e8;
+        var uzunluk = m < 1e4 ? r0(m) + " metre"
+          : m < 1e10 ? r0(m / 1e3) + " kilometre"
+            : m < 1e16 ? r1(m / 1.496e11) + " astronomi birimi"
+              : m < 1e22 ? r1(m / 9.461e15) + " ışık yılı"
+                : r0(m / 9.461e15 / 1e6) + " milyon ışık yılı";
+        var sure = sn < 1 ? r1(sn * 1000) + " milisaniye"
+          : sn < 90 ? r1(sn) + " saniye"
+            : sn < 5400 ? r1(sn / 60) + " dakika"
+              : sn < 8.64e4 ? r1(sn / 3600) + " saat"
+                : sn < 3.15e7 ? r1(sn / 8.64e4) + " gün"
+                  : sn < 3.15e13 ? r0(sn / 3.15e7) + " yıl"
+                    : r1(sn / 3.15e7 / 1e9) + " milyar yıl";
+        return { svg: s, text: uzunluk + ". Işık bu mesafeyi " + sure + " içinde alır. " +
+          "En yakın kilometre taşı: " + O[yakin][1] + ". Bir adım sağa gitmek mesafeyi on katına çıkarır — " +
+          "bu yüzden gökyüzü haritaları doğrusal çizilemez." };
+      }
+    },
+
+    "paralaks": {
+      title: "Paralaks: uzaklığı üçgenle ölçmek",
+      note: "Dünya yörüngesinin iki ucundan bakınca yakın bir yıldız arka plana göre kayar. Kayma açısı uzaklıkla ters orantılıdır ve çok hızlı küçülür.",
+      controls: [{ key: "d", label: "Yıldızın uzaklığı", min: 1, max: 100, step: 1, def: 10,
+        fmt: function (v) { return v + " parsek"; } }],
+      draw: function (p) {
+        var i, pts = [];
+        for (i = 1; i <= 100; i++) pts.push([(i - 1) / 99, 1 / i]);
+        var here = 1 / p.d;
+        var s = frame("Uzaklık (parsek)", "Paralaks açısı (yay saniyesi)");
+        s += gArea(pts.concat([[1, 0], [0, 0]]), { c: "var(--accent)", o: 0.10 });
+        s += gPoly(pts, { c: "var(--accent)", w: 2.4 });
+        s += gLine(0, 0.01, 1, 0.01, { c: "var(--no)", w: 1.4, d: "4 3" });
+        s += gTxt(0.99, 0.01, "yerden gözlem sınırı ≈ 0,01″", { a: "end", dy: -5, c: "var(--no)", s: 8.5 });
+        s += gLine((p.d - 1) / 99, 0, (p.d - 1) / 99, here, { c: "var(--rule)", w: 1.1, d: "2 3" });
+        s += gDot((p.d - 1) / 99, here, { c: "var(--ink)" });
+        s += gTxt((p.d - 1) / 99, here, here.toFixed(3) + "″", {
+          a: p.d > 60 ? "end" : "start", dx: p.d > 60 ? -6 : 6, dy: -5, c: "var(--ink)", b: 1, s: 10 });
+        [25, 50, 75].forEach(function (v) { s += gTxt((v - 1) / 99, 0, v + "", { a: "middle", dy: 12, s: 9 }); });
+        return { svg: s, text: p.d + " parsek (" + r1(p.d * 3.26) + " ışık yılı) uzaklıktaki bir yıldızın paralaksı " +
+          here.toFixed(3) + " yay saniyesi. Bu açı, " + r0(206265 / (here * 1000) / 1000) +
+          " kilometre öteden bir metrelik bir cismi görmeye karşılık gelir. Yerden yapılan gözlemin sınırı " +
+          "yaklaşık 0,01 yay saniyesidir; uzaydan ölçüm bunu binlerce kat aşarak galaksinin büyük kısmını ölçülebilir kıldı." };
+      }
+    },
+
+    "hr-diyagrami": {
+      title: "Hertzsprung-Russell diyagramı",
+      note: "Yıldızlar bu düzlemde rastgele dağılmaz. Anakol üzerindeki yeri belirleyen tek şey kütledir — ve kütle aynı zamanda ömrü belirler.",
+      controls: [{ key: "m", label: "Yıldızın kütlesi", min: 10, max: 3000, step: 10, def: 100,
+        fmt: function (v) { return (v / 100).toFixed(1) + " Güneş"; } }],
+      draw: function (p) {
+        var M = p.m / 100, i;
+        var XT = function (T) { return (4.7 - Math.log(T) / Math.LN10) / (4.7 - 3.4); };
+        var YL = function (L) { return (Math.log(L) / Math.LN10 + 4.5) / (6 + 4.5); };
+        var pts = [];
+        for (i = 0; i <= 60; i++) {
+          var mm = Math.exp(Math.log(0.1) + (Math.log(30) - Math.log(0.1)) * (i / 60));
+          var a = anakol(mm);
+          pts.push([XT(a.T), YL(a.L)]);
+        }
+        var s = frame("← sıcak · soğuk →", "Parlaklık");
+        s += gRect(XT(5500), YL(10), XT(3000), YL(5000), { c: "var(--no)", o: 0.12, r: 3 });
+        s += gTxt(XT(4000), YL(600), "devler", { a: "middle", dy: 3, s: 9, c: "var(--no)" });
+        s += gRect(XT(25000), YL(0.0008), XT(9000), YL(0.04), { c: "var(--makro)", o: 0.14, r: 3 });
+        s += gTxt(XT(15000), YL(0.006), "beyaz cüceler", { a: "middle", dy: 3, s: 8.5, c: "var(--muted)" });
+        s += gPoly(pts, { c: "var(--accent)", w: 3 });
+        s += gTxt(XT(9000), YL(30), "anakol", { a: "start", dx: 4, dy: -4, s: 9, b: 1, c: "var(--accent)" });
+        var here = anakol(M);
+        s += gDot(XT(here.T), YL(here.L), { c: "var(--ink)", r: 4.5 });
+        var omur = (1e10 * M) / here.L;
+        return { svg: s, text: (M).toFixed(1) + " Güneş kütlesindeki bir yıldızın yüzey sıcaklığı yaklaşık " +
+          r0(here.T) + " K, parlaklığı Güneş'in " + (here.L < 1 ? here.L.toFixed(3) : r0(here.L)) + " katı. " +
+          "Anakoldaki ömrü kabaca " + (omur > 1e10 ? r0(omur / 1e9) + " milyar yıl — evrenin yaşından uzun, yani hiçbiri henüz ölmedi."
+            : omur > 1e8 ? r1(omur / 1e9) + " milyar yıl."
+              : r0(omur / 1e6) + " milyon yıl. Ağır yıldızlar yakıtı çok daha hızlı tüketir: dört kat kütle, yüz kat kısa ömür.") };
+      }
+    },
+
+    "kirmiziya-kayma": {
+      title: "Kırmızıya kayma",
+      note: "Çizgiler kaymaz, aradaki uzay genişler. Işık yolda olduğu sürece dalga boyu evrenle birlikte esner; z bu esnemenin ölçüsüdür.",
+      controls: [{ key: "z", label: "Kırmızıya kayma", min: 0, max: 500, step: 10, def: 100,
+        fmt: function (v) { return "z = " + (v / 100).toFixed(1); } }],
+      draw: function (p) {
+        var z = p.z / 100, LO = Math.log(300), HI = Math.log(4500), i;
+        // Logaritmik dalga boyu ekseni: doğrusal eksende dört çizgi üst üste biniyordu.
+        var X = function (nm) { return (Math.log(nm) - LO) / (HI - LO); };
+        var CIZGI = [[393, "Ca"], [434, "Hγ"], [486, "Hβ"], [656, "Hα"]];
+        var s = "";
+        [0.62, 0.18].forEach(function (y0, band) {
+          s += gRect(0, y0, 1, y0 + 0.2, { c: "var(--rule)", o: 0.35, r: 2 });
+          s += gRect(X(380), y0, X(750), y0 + 0.2, { c: "var(--accent)", o: 0.22, r: 0 });
+          CIZGI.forEach(function (c) {
+            var nm = band === 0 ? c[0] : c[0] * (1 + z);
+            if (nm > 4500) return;
+            s += gLine(X(nm), y0 + 0.01, X(nm), y0 + 0.19, { c: "var(--ink)", w: 1.8 });
+            if (band === 0 && (c[0] === 393 || c[0] === 656)) {
+              s += gTxt(X(nm), y0 + 0.2, c[1], { a: "middle", dy: -3, s: 8.5, c: "var(--muted)" });
+            }
+          });
+        });
+        s += gTxt(1, 0.86, "laboratuvarda", { a: "end", s: 9, b: 1, c: "var(--muted)" });
+        s += gTxt(1, 0.42, "gözlenen", { a: "end", s: 9, b: 1, c: "var(--ink)" });
+        s += gTxt(X(530), 0.06, "görünür", { a: "middle", s: 8.5, c: "var(--accent)" });
+        [1000, 2000, 4000].forEach(function (nm) {
+          s += gTxt(X(nm), 0.06, (nm / 1000) + " µm", { a: "middle", s: 8, c: "var(--muted)" });
+        });
+        var ha = 656 * (1 + z);
+        return { svg: s, text: z === 0
+          ? "Kayma yokken gözlenen tayf laboratuvardakiyle aynı: kaynak bize göre durgun."
+          : "z = " + z.toFixed(1) + " demek, ışık yola çıktığında evrenin bugünkünün " +
+            (1 / (1 + z)).toFixed(2) + " katı büyüklüğünde olduğu anlamına gelir. Hα çizgisi 656 nm'den " +
+            r0(ha) + " nm'ye kaymış" + (ha > 750 ? " — artık gözle görünmez, kızılötesinde." : ".") +
+            " Uzak galaksileri kızılötesi teleskoplarla aramanın sebebi bu." };
+      }
+    },
+
+    "yasanabilir-kusak": {
+      title: "Yaşanabilir kuşak yıldıza göre kayar",
+      note: "Kuşak, suyun sıvı kalabileceği uzaklık aralığının kaba bir tahminidir. Atmosfer, manyetik alan ve gelgit etkileri hesaba katılmaz.",
+      controls: [{ key: "m", label: "Yıldızın kütlesi", min: 10, max: 200, step: 5, def: 100,
+        fmt: function (v) { return (v / 100).toFixed(2) + " Güneş"; } }],
+      draw: function (p) {
+        var M = p.m / 100, L = anakol(M).L;
+        var ic = 0.95 * Math.sqrt(L), dis = 1.37 * Math.sqrt(L);
+        var LO = -2.3, HI = 1.0;                          // log10 AU
+        var X = function (au) { return Math.max(0, Math.min(1, (Math.log(au) / Math.LN10 - LO) / (HI - LO))); };
+        var s = gLine(0, 0.34, 1, 0.34, { c: "var(--rule)", w: 1.4 });
+        s += gRect(X(ic), 0.24, X(dis), 0.44, { c: "var(--ok)", o: 0.55, r: 2 });
+        s += gTxt((X(ic) + X(dis)) / 2, 0.44, "yaşanabilir kuşak", { a: "middle", dy: -5, s: 9, b: 1, c: "var(--ok)" });
+        s += gDot(0, 0.34, { c: "var(--accent)", r: 6 });
+        s += gTxt(0, 0.34, "yıldız", { a: "start", dy: 14, s: 8.5, c: "var(--accent)" });
+        s += gLine(X(1), 0.2, X(1), 0.48, { c: "var(--ink)", w: 1.6, d: "3 3" });
+        s += gTxt(X(1), 0.48, "Dünya (1 ab)", { a: "middle", dy: -5, s: 8.5, b: 1, c: "var(--ink)" });
+        [0.01, 0.1, 1, 10].forEach(function (au) {
+          s += gTxt(X(au), 0.24, au < 1 ? au + "" : au + " ab", { a: "middle", dy: 13, s: 8.5, c: "var(--muted)" });
+        });
+        var orta = Math.sqrt(ic * dis), per = Math.sqrt((orta * orta * orta) / M) * 365;
+        return { svg: s, text: (M).toFixed(2) + " Güneş kütlesindeki bir yıldızın parlaklığı Güneş'in " +
+          (L < 1 ? L.toFixed(3) : r1(L)) + " katı; yaşanabilir kuşak " + ic.toFixed(3) + " ile " + dis.toFixed(3) +
+          " astronomi birimi arasında. Kuşağın ortasındaki bir gezegenin yılı " +
+          (per < 400 ? r0(per) + " gün" : r1(per / 365) + " yıl") + " sürer. " + (M < 0.5
+            ? "Yıldıza bu kadar yakın bir gezegen büyük olasılıkla gelgit kilitlidir: bir yüzü daima gündüz, diğeri daima gece."
+            : "Kuşak yıldızdan uzaklaştıkça gezegen bulmak zorlaşır; geçiş yöntemi yakın yörüngeleri çok daha kolay yakalar.") };
       }
     }
   };
