@@ -9,6 +9,10 @@ Her kursun ölçüsü Finans'la aynı: **12 ders, 36 soru, 40+ terimlik sözlük
 değişir — kavramı kaydırıcıyla oynatmanın gerçekten bir şey öğrettiği yerde
 grafik yazılır, süs olacaksa yazılmaz.
 
+Program on iki kursta kapatıldı. Son iki başlık iskeletiyle birlikte aşağıda
+duruyor ama yazılmadı; kütüphaneye yeni kurs eklemek gerekirse başlangıç
+noktası olarak kullanılabilir.
+
 ## Sıra
 
 | # | Kurs | Kimlik | Kategori | Grafik | Durum |
@@ -27,8 +31,8 @@ grafik yazılır, süs olacaksa yazılmaz.
 | 10 | Mimarlık tarihi | `mimarlik` | Klasikler | 4 | ✅ |
 | 11 | Sağlık okuryazarlığı | `saglik` | Bugünü anlamak | 4 | ✅ |
 | 12 | Evrim biyolojisi | `evrim` | Klasikler | 4 | ✅ |
-| 13 | Hukuk okuryazarlığı | `hukuk` | Bugünü anlamak | 1 | |
-| 14 | Dilbilim ve Türkçenin yapısı | `dilbilim` | Klasikler | 3 | |
+| 13 | Hukuk okuryazarlığı | `hukuk` | Bugünü anlamak | 1 | yazılmadı |
+| 14 | Dilbilim ve Türkçenin yapısı | `dilbilim` | Klasikler | 3 | yazılmadı |
 
 ## Modül iskeletleri
 

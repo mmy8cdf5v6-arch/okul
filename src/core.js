@@ -5,7 +5,7 @@
   document.documentElement.lang = "tr";
 
   var KEY = "okul-v1";
-  var COURSE_PREFIX = "okul-course-";
+  var COURSE_PREFIX = "okul-course-";   // yalnızca eski sürüm artıklarını temizlemek için
   var PASS = 2 / 3;
   var DAY = 86400000;
   var BOX_DAYS = [0, 1, 3, 7, 21];
@@ -14,31 +14,52 @@
   function defaults() {
     return {
       v: 1,
-      prefs: { goal: 15, dir: "ileri", typed: false, limit: 15, model: "claude-opus-5" },
-      apiKey: "",
+      prefs: { goal: 15, dir: "ileri", typed: false, limit: 15 },
       days: {}, streak: { last: null, current: 0, best: 0 },
-      courses: {}, generated: []
+      courses: {}
     };
   }
 
   var state = load();
 
   function load() {
-    var s = defaults();
     try {
       var raw = localStorage.getItem(KEY);
-      if (!raw) return s;
+      if (!raw) return defaults();
       var p = JSON.parse(raw);
-      if (p.prefs) Object.keys(s.prefs).forEach(function (k) {
-        if (p.prefs[k] !== undefined && p.prefs[k] !== null) s.prefs[k] = p.prefs[k];
-      });
-      s.apiKey = p.apiKey || "";
-      s.days = p.days || {};
-      if (p.streak) s.streak = { last: p.streak.last || null, current: p.streak.current || 0, best: p.streak.best || 0 };
-      s.courses = p.courses || {};
-      s.generated = Array.isArray(p.generated) ? p.generated : [];
-    } catch (e) {}
+      var s = adopt(p);
+      if (temizle(p)) setTimeout(save, 0);
+      return s;
+    } catch (e) { return defaults(); }
+  }
+
+  /* Ham bir nesneden temiz bir durum kurar. Hem depodan okurken hem yedek geri
+     yüklerken kullanılır; tanımadığı alanlar sessizce düşer. */
+  function adopt(p) {
+    var s = defaults();
+    if (!p || typeof p !== "object") return s;
+    if (p.prefs) Object.keys(s.prefs).forEach(function (k) {
+      if (p.prefs[k] !== undefined && p.prefs[k] !== null) s.prefs[k] = p.prefs[k];
+    });
+    s.days = p.days || {};
+    if (p.streak) s.streak = { last: p.streak.last || null, current: p.streak.current || 0, best: p.streak.best || 0 };
+    s.courses = p.courses || {};
     return s;
+  }
+
+  /* Kurs üretimi kaldırıldı. Eski sürümü kullanmış tarayıcılarda depoda kalan
+     API anahtarını ve üretilmiş kurs verisini temizle; kullanılmayan bir
+     anahtarın localStorage'da durmasını istemiyoruz. */
+  function temizle(p) {
+    var vardi = false;
+    if (p.apiKey) vardi = true;
+    if (Array.isArray(p.generated) && p.generated.length) {
+      p.generated.forEach(function (g) {
+        try { localStorage.removeItem(COURSE_PREFIX + g.id); } catch (e) {}
+      });
+      vardi = true;
+    }
+    return vardi;
   }
 
   function save() {
@@ -101,9 +122,6 @@
     return String(s == null ? "" : s).toLocaleLowerCase("tr")
       .split("").map(function (ch) { return TR[ch] || ch; }).join("").trim();
   }
-  function slug(s) {
-    return norm(s).replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "").slice(0, 48) || "kurs";
-  }
   function shuffle(arr) {
     var a = arr.slice(), i, j, t;
     for (i = a.length - 1; i > 0; i--) { j = Math.floor(Math.random() * (i + 1)); t = a[i]; a[i] = a[j]; a[j] = t; }
@@ -126,53 +144,23 @@
   var course = null;       // açık kurs
   var loadError = null;
 
-  function generatedKey(id) { return COURSE_PREFIX + id; }
-
-  function readGenerated(id) {
-    try {
-      var raw = localStorage.getItem(generatedKey(id));
-      return raw ? JSON.parse(raw) : null;
-    } catch (e) { return null; }
-  }
-
-  function writeGenerated(c) {
-    try {
-      localStorage.setItem(generatedKey(c.id), JSON.stringify(c));
-      return true;
-    } catch (e) { return false; }
-  }
-
-  function removeGenerated(id) {
-    try { localStorage.removeItem(generatedKey(id)); } catch (e) {}
-    state.generated = state.generated.filter(function (g) { return g.id !== id; });
-    delete state.courses[id];
-    save();
-  }
-
-  function libraryEntries() {
-    return library.concat(state.generated.slice().reverse());
-  }
+  function libraryEntries() { return library; }
 
   function entryById(id) {
-    var all = libraryEntries();
-    for (var i = 0; i < all.length; i++) if (all[i].id === id) return all[i];
+    for (var i = 0; i < library.length; i++) if (library[i].id === id) return library[i];
     return null;
   }
 
   function loadLibrary() {
     return fetch("courses/index.json", { cache: "no-cache" })
       .then(function (r) { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); })
-      .then(function (list) { library = list.map(function (e) { e.source = "builtin"; return e; }); })
+      .then(function (list) { library = list; })
       .catch(function (e) { library = []; loadError = e.message; });
   }
 
   function loadCourse(id) {
     var entry = entryById(id);
     if (!entry) return Promise.reject(new Error("Kurs bulunamadı: " + id));
-    if (entry.source === "generated") {
-      var c = readGenerated(id);
-      return c ? Promise.resolve(c) : Promise.reject(new Error("Kurs verisi bu tarayıcıda bulunamadı."));
-    }
     return fetch(entry.file, { cache: "no-cache" })
       .then(function (r) { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); });
   }
@@ -320,10 +308,8 @@
     var s = document.getElementById("subtitle");
     s.textContent = sub || "";
     s.style.display = sub ? "" : "none";
-    /* üretim sürerken geri çıkışı gizle; kütüphanede zaten gerekmez */
-    var generating = route.screen === "uret" && job && !job.done && !job.error;
     var back = document.getElementById("back");
-    back.style.display = (route.screen === "kutuphane" || generating) ? "none" : "";
+    back.style.display = route.screen === "kutuphane" ? "none" : "";
     back.textContent = route.screen === "kurs" && route.lesson ? "← Dersler" : "← Kütüphane";
   }
 
@@ -332,7 +318,6 @@
     view.textContent = "";
     if (route.screen === "kutuphane") renderLibrary();
     else if (route.screen === "ayarlar") renderAppSettings();
-    else if (route.screen === "uret") renderGenerating();
     else renderCourseScreen();
     renderTabs();
   }

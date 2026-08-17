@@ -2,8 +2,8 @@
  * Okul — tarayıcı duman testi.
  *   python3 build.py && node test/smoke.mjs [--shots]
  *
- * Üretim akışı, api.anthropic.com'a giden fetch çağrıları sahteleştirilerek
- * uçtan uca denenir; gerçek bir API anahtarı gerekmez.
+ * Hazır kütüphaneyi uçtan uca gezer: kurslar açılır, dersler okunur, her
+ * kursun her grafiği uç değerlerinde çizdirilir, ilerleme ve yedek sınanır.
  */
 import fs from "fs";
 import path from "path";
@@ -65,85 +65,6 @@ async function step(name, fn, skipSettle) {
   }
 }
 
-/* --- sahte Anthropic API --- */
-await page.route("https://api.anthropic.com/**", async route => {
-  const body = JSON.parse(route.request().postData());
-  const props = Object.keys(body.output_config.format.schema.properties).sort().join(",");
-  let payload;
-
-  if (props.includes("modules")) {
-    payload = {
-      title: "Mitoloji", eyebrow: "Mitoloji", subtitle: "Tanrılar, kahramanlar, anlatılar",
-      description: "Yaratılış anlatılarından kahraman yolculuğuna, mitlerin yapısı ve izleri.",
-      icon: "🏺", accent: "#8a3d63", figuresLabel: "Kahramanlar",
-      timelineTitle: "Anlatının tarihi", timelineIntro: "Sözlü gelenekten yazıya.",
-      modules: [
-        { id: "yapi", title: "Mitin yapısı", description: "Anlatıyı kuran öğeler.", lessons: [
-          { id: "yaratilis", title: "Yaratılış anlatıları", subtitle: "Dünya nasıl başladı?", minutes: 8, keyTerms: ["kaos", "kozmogoni"] },
-          { id: "kahraman", title: "Kahraman yolculuğu", subtitle: "Tekrarlanan bir kalıp.", minutes: 7, keyTerms: ["çağrı", "dönüş"] },
-          { id: "tufan", title: "Tufan anlatıları", subtitle: "Aynı hikâye, farklı halklar.", minutes: 9, keyTerms: ["tufan", "ortak kaynak"] }
-        ]},
-        { id: "gelenekler", title: "Gelenekler", description: "Yunan'dan Anadolu'ya.", lessons: [
-          { id: "yunan", title: "Yunan mitolojisi", subtitle: "Olympos düzeni.", minutes: 9, keyTerms: ["Olympos"] },
-          { id: "mezopotamya", title: "Mezopotamya", subtitle: "Gılgamış ve ölümlülük.", minutes: 8, keyTerms: ["Gılgamış"] },
-          { id: "anadolu", title: "Anadolu mitleri", subtitle: "Hitit ve sonrası.", minutes: 9, keyTerms: ["Telipinu"] }
-        ]}
-      ]
-    };
-  } else if (props === "quiz,sections") {
-    payload = {
-      sections: [
-        { kind: "text", title: "", body: "Yaratılış anlatıları çoğu gelenekte bir düzensizlik durumuyla başlar ve ayrışmayla sürer.", items: [], expression: "", note: "", text: "", source: "" },
-        { kind: "text", title: "Ayrışma", body: "Gök ile yerin birbirinden ayrılması, farklı kültürlerde tekrarlanan bir motiftir.", items: [], expression: "", note: "", text: "", source: "" },
-        { kind: "list", title: "Ortak öğeler", body: "", items: ["Başlangıçtaki kaos", "Ayrışma", "İlk insanın yapılışı"], expression: "", note: "", text: "", source: "" },
-        { kind: "example", title: "Örnek: Enuma Eliş", body: "Babil anlatısında dünya, bir çatışmanın ardından kurulur.", items: [], expression: "", note: "", text: "", source: "" },
-        { kind: "quote", title: "", body: "", items: [], expression: "", note: "", text: "Mit, hiç olmamış ama daima olan şeydir.", source: "Sallustius'a atfedilir" }
-      ],
-      quiz: [
-        { id: "q1", prompt: "Kozmogoni nedir?", options: ["Tanrı listesi", "Evrenin oluşumunu anlatan anlatı", "Kahraman destanı", "Ritüel metni"], answerIndex: 1, explanation: "Kozmogoni, evrenin nasıl kurulduğunu anlatan mit türüdür." },
-        { id: "q2", prompt: "Yaratılış anlatılarında sık görülen motif hangisidir?", options: ["Gök ile yerin ayrılması", "Deniz savaşı", "Kral seçimi", "Kervan yolculuğu"], answerIndex: 0, explanation: "Ayrışma motifi birbirinden uzak geleneklerde tekrarlanır." },
-        { id: "q3", prompt: "Kaos ne anlama gelir?", options: ["Ceza", "Başlangıçtaki biçimsiz düzensizlik", "Yeraltı dünyası", "Kutsal dağ"], answerIndex: 1, explanation: "Kaos, düzenin kurulmasından önceki biçimsiz durumdur." }
-      ]
-    };
-  } else if (props === "figures,glossary") {
-    payload = {
-      glossary: [
-        { id: "kozmogoni", term: "Kozmogoni", definition: "Evrenin oluşumunu anlatan mit türü.", lessonId: "yaratilis" },
-        { id: "monomit", term: "Monomit", definition: "Kahraman anlatılarında tekrarlanan ortak kalıp.", lessonId: "kahraman" },
-        { id: "tufan", term: "Tufan anlatısı", definition: "Dünyayı silen su felaketini konu alan mit.", lessonId: "tufan" }
-      ],
-      figures: [
-        { id: "gilgamis", name: "Gılgamış", lifespan: "MÖ 2100 dolayı", tag: "Mezopotamya", oneLiner: "Ölümsüzlüğü arayıp ölümlülüğü öğrendi.", contributions: ["Gılgamış Destanı", "Enkidu ile dostluk"], lessonId: "mezopotamya" },
-        { id: "odysseus", name: "Odysseus", lifespan: "Destan çağı", tag: "Yunan", oneLiner: "Dönüş yolculuğunun kalıcı örneği.", contributions: ["Odysseia", "Truva atı"], lessonId: "yunan" }
-      ]
-    };
-  } else {
-    payload = {
-      eras: [{ id: "erken", label: "Erken dönem" }, { id: "modern", label: "Modern" }],
-      events: [
-        { id: "gilgamis-tablet", year: -2100, yearLabel: "MÖ 2100", title: "Gılgamış anlatısı", body: "Mezopotamya'da destan tabletlere yazılır.", era: "erken", figureId: "gilgamis" },
-        { id: "odysseia", year: -700, yearLabel: "MÖ 700", title: "Odysseia", body: "Dönüş yolculuğu yazıya geçirilir.", era: "modern", figureId: "odysseus" }
-      ]
-    };
-  }
-
-  const json = JSON.stringify(payload);
-  const sse = [
-    `event: message_start\ndata: ${JSON.stringify({ type: "message_start", message: { usage: { input_tokens: 900 } } })}\n\n`,
-    ...chunk(json, 400).map(t =>
-      `event: content_block_delta\ndata: ${JSON.stringify({ type: "content_block_delta", index: 0, delta: { type: "text_delta", text: t } })}\n\n`),
-    `event: message_delta\ndata: ${JSON.stringify({ type: "message_delta", delta: { stop_reason: "end_turn" }, usage: { output_tokens: 2600 } })}\n\n`
-  ].join("");
-
-  await route.fulfill({ status: 200, contentType: "text/event-stream", body: sse });
-});
-
-function chunk(s, n) {
-  const out = [];
-  for (let i = 0; i < s.length; i += n) out.push(s.slice(i, i + n));
-  return out;
-}
-
 await page.goto(BASE);
 await page.waitForTimeout(400);
 
@@ -159,6 +80,10 @@ await step("kütüphane yükleniyor", async () => {
     return { bw: c.borderTopWidth, pad: c.paddingTop, bg: c.backgroundColor };
   });
   if (cs.bw === "0px" || cs.pad === "0px") throw new Error("kurs kartı sıfırlanmış: " + JSON.stringify(cs));
+
+  // kurs isteme/üretme arayüzü kaldırıldı
+  if (await page.$("input.ask")) throw new Error("konu kutusu hâlâ duruyor");
+  if (/kurs oluş|konusunu iste/i.test(await page.textContent("body"))) throw new Error("kurs üretme vaadi hâlâ yazılı");
 
   // kütüphane kategorilere ayrılmış olmalı ve her kurs bir kümede görünmeli
   const cats = await page.evaluate(() => fetch("courses/index.json").then(r => r.json())
@@ -327,80 +252,24 @@ await step("finans kursunda tarih ve arama", async () => {
   await page.waitForSelector(".course-card");
 });
 
-await step("kütüphanede olmayan konu istek bağlantısı veriyor", async () => {
-  await page.fill("input.ask", "mitoloji");
-  const a = page.locator(".ask-action a.btn");
-  const label = await a.textContent();
-  if (!/konusunu iste/.test(label)) throw new Error("istek düğmesi yok: " + label);
-  const href = await a.getAttribute("href");
-  if (!href.startsWith("https://github.com/") || !href.includes("issues/new")) throw new Error("istek adresi yanlış: " + href);
-  if (!decodeURIComponent(href).includes("Kurs isteği: mitoloji")) throw new Error("istek başlığı konuyu taşımıyor");
-  await page.click(".block.card.row:has-text('Ayarlar')");
-  await page.waitForSelector("input[placeholder='sk-ant-...']");
-});
-
-await step("API anahtarı kaydediliyor", async () => {
-  await page.fill("input[placeholder='sk-ant-...']", "sk-ant-test-anahtar");
-  await page.click("text=Kaydet");
-  await page.waitForTimeout(150);
-  const stored = await page.evaluate(() => JSON.parse(localStorage.getItem("okul-v1")).apiKey);
-  if (stored !== "sk-ant-test-anahtar") throw new Error("anahtar kaydedilmedi");
-});
-
-await step("kurs üretimi uçtan uca", async () => {
-  await page.click(".btn.quiet:has-text('Kütüphaneye dön')");
-  await page.fill("input.ask", "mitoloji");
-  await page.click("text=Kendi anahtarımla şimdi üret");
-  await page.waitForSelector("text=Kursu aç", { timeout: 30000 });
-  const txt = await page.textContent("main");
-  if (!/Mitoloji/.test(txt)) throw new Error("üretilen kurs adı yok");
-  if (!/6 ders/.test(txt)) throw new Error("ders sayısı beklenmedik: " + txt.slice(0, 200));
-  if (!/\(6\/6\)/.test(txt)) throw new Error("ders sayacı yanlış: " + (txt.match(/Dersler yazılıyor [^\n]*/) || [])[0]);
-  if (!/Yaklaşık maliyet/.test(txt)) throw new Error("maliyet gösterilmiyor");
-});
-await shot("03-uretim");
-
-await step("üretilen kurs açılıyor ve çalışıyor", async () => {
-  await page.click("text=Kursu aç");
-  await page.waitForSelector("nav.tabs button");
-  const title = await page.textContent("#title");
-  if (title !== "Mitoloji") throw new Error("başlık: " + title);
-  const accent = await page.evaluate(() => getComputedStyle(document.documentElement).getPropertyValue("--accent-light").trim());
-  if (accent !== "#8a3d63") throw new Error("üretilen kursun rengi uygulanmadı: " + accent);
-  await page.click("nav.tabs li:nth-child(2) button");
-  const rows = await page.$$eval(".lesson-row", n => n.length);
-  if (rows !== 6) throw new Error("ders satırı: " + rows);
-  await page.locator(".lesson-title").first().click();
-  await page.waitForSelector(".q-prompt");
-  if ((await page.$$eval(".prose p", n => n.length)) < 2) throw new Error("ders metni boş");
-  if (await page.$(".chart")) throw new Error("üretilen kursta grafik olmamalı");
-});
-await shot("04-uretilen-ders");
-
-await step("üretilen kursta tarih sekmesi", async () => {
-  await page.click("nav.tabs li:nth-child(3) button");
-  await page.waitForSelector(".tl li");
-  const n = await page.$$eval(".tl li", x => x.length);
-  if (n !== 2) throw new Error("olay sayısı: " + n);
-  await page.click("text=Kahramanlar");
-  await page.waitForSelector(".thinker-name");
-});
-
-await step("yeniden yüklemede kurs ve ilerleme duruyor", async () => {
+await step("yeniden yüklemede ilerleme duruyor", async () => {
   await page.reload();
   await page.waitForSelector(".course-card");
-  const titles = await page.$$eval(".course-title", n => n.map(x => x.textContent));
-  if (!titles.includes("Mitoloji")) throw new Error("üretilen kurs kayboldu: " + titles);
-  if ((await page.$$eval(".badge", n => n.length)) !== 1) throw new Error("rozet yok");
+  const pct = await page.$$eval(".course-card .num.small:not(.muted)", n => n.map(x => x.textContent));
+  if (!pct.some(x => x !== "%0")) throw new Error("ilerleme yeniden yüklemede kayboldu: " + pct);
 });
 
 await step("yedekle ve geri yükle", async () => {
   await page.click(".block.card.row:has-text('Ayarlar')");
   await page.click("text=Yedeği çıkar");
-  const v = await page.inputValue("textarea.mono");
-  const b = JSON.parse(v);
-  if (!b.courses || !Object.keys(b.courses).length) throw new Error("yedek üretilen kursu içermiyor");
+  const b = JSON.parse(await page.inputValue("textarea.mono"));
+  if (b.okul !== 1 || !b.state || !b.state.courses) throw new Error("yedek beklenen biçimde değil");
+  if (Object.keys(b.state.courses).length === 0) throw new Error("yedekte ilerleme yok");
   if (b.state.apiKey) throw new Error("yedeğe API anahtarı sızmış");
+  if (b.state.generated) throw new Error("yedeğe üretilmiş kurs sızmış");
+  /* kaldırılan üretim ekranından iz kalmamalı */
+  const txt = await page.textContent("main");
+  if (/API anahtar|Üretim modeli|Oluşturduğun kurslar/.test(txt)) throw new Error("ayarlarda üretim izi kaldı");
 });
 
 await step("koyu tema", async () => {

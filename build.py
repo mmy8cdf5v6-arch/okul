@@ -3,7 +3,7 @@
 import os, re, sys, json
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-ORDER = ["core.js", "charts.js", "course.js", "study.js", "generate.js", "home.js", "boot.js"]
+ORDER = ["core.js", "charts.js", "course.js", "study.js", "home.js", "boot.js"]
 
 
 def src(name):

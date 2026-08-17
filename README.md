@@ -1,55 +1,39 @@
 # Okul
 
-Bir konu yaz, kurs oluşsun. Dersler, sınavlar, aralıklı tekrar kartları ve zaman
-çizelgesiyle Türkçe öğrenme uygulaması.
+Dersler, sınavlar, etkileşimli grafikler, aralıklı tekrar kartları ve zaman
+çizelgesiyle Türkçe öğrenme kütüphanesi.
 
-Sunucusu yok: statik bir site olarak çalışır, ilerleme tarayıcıda saklanır, kurs
-üretimi kullanıcının kendi Anthropic API anahtarıyla doğrudan tarayıcıdan yapılır.
+Sunucusu yok: statik bir site olarak çalışır ve ilerleme tarayıcıda saklanır.
+Kurslar elle yazılıp depoya işlenir; uygulamanın kendisi yalnızca onları okur.
 
 ## Nasıl çalışır
 
-**Kütüphane.** Ana ekranda bir kutu ve kurs kartları var. Kutuya bir konu
-yazdığında önce kütüphanende eşleşen kurs aranır. Yoksa iki yol açılır: o konuyu
-depoya bir istek olarak göndermek (kimseden anahtar istemez) ya da kendi API
-anahtarınla o an üretmek. Üretilen kurslar kütüphanede kalır ve tıklanarak
-yeniden açılır.
+**Kütüphane.** Ana ekranda kurs kartları var; her kart ilerlemeyi gösterir.
+Kütüphane kategorilere ayrılır (Bugünü anlamak / Klasikler); kategori, kursun
+künyesindeki `category` alanından gelir. Tek kategori kalırsa başlıklar gizlenir.
 
-Kütüphane kategorilere ayrılır (Bugünü anlamak / Klasikler / Senin
-oluşturdukların); kategori, kursun künyesindeki `category` alanından gelir.
-
-Hazır kurslar: **İktisat Defteri** (35 ders, 105 soru, 21 grafik) ve her biri
+Kurslar: **İktisat Defteri** (35 ders, 105 soru, 21 grafik) ve her biri
 12 ders / 36 soruluk **Finans**, **İstatistik okuryazarlığı**, **Sanat tarihi**,
 **Olasılık ve karar**, **Müzik teorisi**, **Yapay zekâ okuryazarlığı**,
 **Felsefe tarihi**, **İklim ve enerji**, **Astronomi**, **Medya
 okuryazarlığı**, **Mimarlık tarihi**, **Sağlık okuryazarlığı**,
-**Evrim biyolojisi**. Sıradaki kurslar
-`content/PLAN.md` içinde programlandı.
+**Evrim biyolojisi**. Program ve modül iskeletleri `content/PLAN.md` içinde.
 
-**Üretim.** Dört aşamada ilerler ve her aşama ekranda görünür:
+**Ders.** Her ders metin, liste, örnek, alıntı, formül ve grafik bölümlerinden
+kurulur, sonunda üç soruluk bir sınav vardır. Dersin ikide ikisi doğru
+yanıtlandığında tamamlanmış sayılır.
 
-1. **Plan** — konudan 3-4 modül ve 10-14 ders başlığı çıkarılır (1 istek).
-2. **Dersler** — her ders ayrı bir istekle yazılır, ikisi aynı anda çalışır
-   (ders sayısı kadar istek).
-3. **Sözlük ve kişiler** — kavramlar ve alanın önemli kişileri derslere bağlanır (1 istek).
-4. **Zaman çizelgesi** — dönemler ve olaylar (1 istek).
+**Çalışma.** Sözlük ve kişiler otomatik olarak karta dönüşür; kartlar beş kutulu
+aralıklı tekrar takvimiyle (0, 1, 3, 7, 21 gün) gelir. Ayrıca deneme sınavı,
+yanlışların istatistiği ve kurs içi arama var.
 
-Her istek [yapılandırılmış çıktı](https://platform.claude.com/docs/en/build-with-claude/structured-outputs)
-kullanır (`output_config.format`), böylece model her zaman şemaya uyan JSON döner
-ve ayrıştırma kırılgan olmaz. Yanıtlar akış hâlinde okunur; üretim iptal edilebilir.
-Bittiğinde gerçek token kullanımına dayalı kaba bir maliyet gösterilir.
+**Grafikler.** 73 etkileşimli SVG grafik elle yazılmış koddur. Hepsi gerçek bir
+hesap yapar, kaydırıcıya bağlıdır ve rastgelelik kullanmaz; renkler CSS
+değişkenlerinden gelir, böylece koyu temada da çalışır.
 
-**API anahtarı.** Ayarlar bölümünde saklanır — yalnızca `localStorage`'da, yalnızca
-o tarayıcıda. Siteye ait bir sunucu olmadığı için anahtar başka hiçbir yere gitmez;
-istekler doğrudan tarayıcıdan `api.anthropic.com` adresine yapılır
-(`anthropic-dangerous-direct-browser-access` başlığıyla).
-
-> Bunun anlamı: **paylaştığın linki açan başka biri kurs üretemez**, çünkü onun
-> anahtarı yoktur. Kendi anahtarını girerse üretebilir ve maliyeti ona yansır.
-> Ortak kullanılan bir bilgisayarda anahtar bırakma.
-
-**Grafikler.** 58 interaktif SVG grafik elle yazılmış koddur ve yalnızca hazır
-kurslarda görünür. Üretilen kurslarda metin, liste, örnek, alıntı, formül
-bölümleri, sınav, sözlük, kişiler ve zaman çizelgesi bulunur.
+**Depolama.** İlerleme, ayarlar ve kart takvimi `localStorage`'da tutulur.
+Sunucu, hesap ve çerez yoktur. Ayarlardan metin biçiminde yedek alınıp başka bir
+cihaza taşınabilir.
 
 ## Yapı
 
@@ -85,8 +69,7 @@ okul/
 │  ├─ charts.js            SVG grafik motoru + 73 grafik
 │  ├─ course.js            kurs özeti, dersler, ders, ders içi sınav, tarih
 │  ├─ study.js             kartlar, deneme sınavı, istatistik, arama
-│  ├─ generate.js          Anthropic API istemcisi + üretim hattı
-│  ├─ home.js              kütüphane, üretim kutusu, ayarlar
+│  ├─ home.js              kütüphane ve ayarlar
 │  ├─ boot.js              başlatma
 │  └─ styles.css
 ├─ build.py                src/ → assets/
@@ -119,11 +102,12 @@ Playwright ya da Chromium standart yerde değilse:
 PLAYWRIGHT_MODULE=/yol/playwright/index.mjs CHROMIUM=/yol/chrome node test/smoke.mjs
 ```
 
-Test kendi statik sunucusunu ayağa kaldırır ve **`api.anthropic.com` çağrılarını
-sahteleştirir**, böylece üretim hattı gerçek bir anahtar olmadan uçtan uca denenir:
-plan → dersler → sözlük → çizelge → kaydetme → üretilen kursu açma. Ayrıca kütüphane,
-kurs vurgu renginin uygulanması, grafik kaydırıcıları, ders tamamlama, kartlar,
-istatistikler, yedekleme, koyu tema ve 320/390/768 px'te yatay taşma denetlenir.
+Test kendi statik sunucusunu ayağa kaldırır. Kütüphane, kurs açma, vurgu renginin
+uygulanması, ders tamamlama, kartlar, deneme sınavı, istatistikler, tarih sekmesi,
+arama, yedekleme, koyu tema ve 320/390/768 px'te yatay taşma denetlenir. En uzun
+adım grafik süpürmesidir: **her kursun her grafiği** açılır, bütün kaydırıcılar
+en küçük ve en büyük değerlerine sürülür, bütün seçenek düğmelerine basılır ve
+hem okunan metinde hem SVG'de `NaN`/`Infinity` aranır.
 
 ## Yayın
 
@@ -181,7 +165,12 @@ sızmadığına bakar.
 
 ## Veri ve gizlilik
 
-Her şey tarayıcıda kalır: ilerleme ve ayarlar `okul-v1` anahtarında, üretilen her
-kurs `okul-course-<id>` anahtarında. Sunucuya hiçbir veri gitmez. **Ayarlar →
-Yedekle ve geri yükle** ile ilerlemeni ve kurslarını metin olarak dışa aktarıp başka
-bir cihaza taşıyabilirsin; API anahtarı yedeğe konmaz.
+Her şey tarayıcıda kalır: ilerleme ve ayarlar `okul-v1` anahtarında tutulur.
+Sunucu, hesap, çerez ve dış istek yoktur; site yalnızca kendi `courses/*.json`
+dosyalarını okur. **Ayarlar → Yedekle ve geri yükle** ile ilerlemeni metin olarak
+dışa aktarıp başka bir cihaza taşıyabilirsin.
+
+Daha önceki sürümde isteğe bağlı bir kurs üretme özelliği vardı ve kullanıcının
+Anthropic API anahtarını `localStorage`'da saklıyordu. Özellik kaldırıldı; o
+sürümü kullanmış tarayıcılarda kalan anahtar ve üretilmiş kurs verisi ilk açılışta
+depodan silinir.
