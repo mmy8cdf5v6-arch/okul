@@ -20,7 +20,8 @@ oluşturdukların); kategori, kursun künyesindeki `category` alanından gelir.
 Hazır kurslar: **İktisat Defteri** (35 ders, 105 soru, 21 grafik) ve her biri
 12 ders / 36 soruluk **Finans**, **İstatistik okuryazarlığı**, **Sanat tarihi**,
 **Olasılık ve karar**, **Müzik teorisi**, **Yapay zekâ okuryazarlığı**,
-**Felsefe tarihi**, **İklim ve enerji**, **Astronomi**. Sıradaki kurslar
+**Felsefe tarihi**, **İklim ve enerji**, **Astronomi**, **Medya
+okuryazarlığı**. Sıradaki kurslar
 `content/PLAN.md` içinde programlandı.
 
 **Üretim.** Dört aşamada ilerler ve her aşama ekranda görünür:
@@ -68,7 +69,8 @@ okul/
 │  ├─ yapay-zeka.json
 │  ├─ felsefe.json
 │  ├─ iklim.json
-│  └─ astronomi.json
+│  ├─ astronomi.json
+│  └─ medya.json
 ├─ content/                elle yazılan kaynak metin
 │  ├─ PLAN.md              kurs programı ve modül iskeletleri
 │  ├─ <kurs>-a.json        ders dizisi (b, c… diye devam eder)
@@ -76,7 +78,7 @@ okul/
 │  └─ build_course.py      content/ → courses/<kurs>.json + index girdisi
 ├─ src/
 │  ├─ core.js              durum, depolama, yönlendirme, kabuk
-│  ├─ charts.js            SVG grafik motoru + 58 grafik
+│  ├─ charts.js            SVG grafik motoru + 61 grafik
 │  ├─ course.js            kurs özeti, dersler, ders, ders içi sınav, tarih
 │  ├─ study.js             kartlar, deneme sınavı, istatistik, arama
 │  ├─ generate.js          Anthropic API istemcisi + üretim hattı

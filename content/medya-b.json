@@ -1,0 +1,478 @@
+[
+  {
+    "id": "retorik-ve-safsata",
+    "moduleId": "ikna",
+    "order": 3,
+    "title": "Retorik ve safsatalar",
+    "subtitle": "Bir argümanı ikna edici yapan şeyle geçerli yapan şey aynı değildir.",
+    "minutes": 8,
+    "keyTerms": ["safsata", "korkuluk adam", "yanlış ikilem", "kişiye saldırı", "kanıt yükü"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Safsata, biçimsel olarak ikna edici görünen ama mantıksal olarak geçersiz bir akıl yürütmedir. Tanımak, bir tartışmayı kazanmak için değil, kendi düşünceni denetlemek için işe yarar; en sık kendi savunduğumuz görüşün lehine olan safsatayı fark edemeyiz. Sonucun doğru olması argümanın geçerli olduğunu göstermez — ve tersi de doğrudur: kötü bir argümanla savunulan bir görüş yine de doğru olabilir."
+      },
+      {
+        "kind": "list",
+        "title": "En sık karşılaşılanlar",
+        "items": [
+          "Korkuluk adam: karşı tarafın savunmadığı zayıf bir görüşü ona atfedip onu çürütmek.",
+          "Yanlış ikilem: ikiden fazla seçenek varken tartışmayı iki seçeneğe indirmek.",
+          "Kişiye saldırı: iddiayı değil iddia sahibini hedef almak. Kaynağın güvenilirliği ayrı bir soru olabilir ama iddianın yerine geçmez.",
+          "Otoriteye başvurma: uzman görüşü kanıt sağlar ama uzmanın alanı dışındaysa ya da uzmanlar bölünmüşse tek başına yetmez.",
+          "Kayan zemin: bir adımın kaçınılmaz olarak en uç sonuca götüreceğini varsaymak.",
+          "Kanıt yükünü tersine çevirme: 'olmadığını kanıtla' demek. Kanıt yükü, iddiayı öne sürende kalır."
+        ]
+      },
+      {
+        "kind": "text",
+        "title": "En sağlam biçimde okumak",
+        "body": "Bir görüşü çürütmenin dürüst yolu, onu savunanın kurabileceği en güçlü hâliyle ele almaktır. Buna karşıt görüşü en sağlam biçimde okumak denir ve korkuluk adamın tam tersidir. Pratik testi şudur: karşı tarafın konumunu, o taraf 'evet, tam olarak bunu savunuyorum' diyecek kadar iyi anlatabiliyor musunuz? Anlatamıyorsanız, çürüttüğünüz şey onun görüşü değildir."
+      },
+      {
+        "kind": "text",
+        "title": "Duygu bir safsata değildir",
+        "body": "Duygusal bir anlatının kullanılması tek başına bir hata değildir; insanlar sayılarla değil hikâyelerle ikna olur ve bu, insan olmanın bir kusuru sayılmaz. Sorun, duygunun kanıtın yerine geçmesidir. İyi bir argüman ikisini birden taşır: bir hikâye neden önemsememiz gerektiğini, veri ise ne kadar yaygın olduğunu anlatır. Yalnızca biri varsa, eksik olan neyse o sorulmalıdır."
+      },
+      {
+        "kind": "example",
+        "title": "Örnek: kanıt yükü",
+        "body": "Olağandışı bir iddia ortaya atıldığında 'aksini kanıtlayın' demek yaygın bir tartışma taktiğidir. Ama kanıt yükü iddiayı öne sürende kalır; yokluğu kanıtlamak çoğu durumda mantıksal olarak imkânsızdır. Bu ilke bilimde ve hukukta aynı biçimde işler: masumiyet karinesi tam olarak kanıt yükünün nerede durduğuna dair bir kuraldır."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Korkuluk adam safsatası nedir?",
+        "options": [
+          "Kaynağı eleştirmek",
+          "Karşı tarafın savunmadığı zayıf bir görüşü ona atfedip onu çürütmek",
+          "İki seçeneğe indirgemek",
+          "Otoriteye başvurmak"
+        ],
+        "answerIndex": 1,
+        "explanation": "Çürütülen şey karşı tarafın gerçek konumu değildir. Panzehiri, görüşü savunanın kurabileceği en güçlü hâliyle ele almaktır."
+      },
+      {
+        "id": "q2",
+        "prompt": "Kanıt yükü kimdedir?",
+        "options": [
+          "İtiraz edende",
+          "İddiayı öne sürende",
+          "Her ikisinde eşit olarak",
+          "Hakemde"
+        ],
+        "answerIndex": 1,
+        "explanation": "Yokluğu kanıtlamak çoğu durumda imkânsızdır. 'Aksini kanıtla' demek, yükü haksız biçimde karşı tarafa devretmektir."
+      },
+      {
+        "id": "q3",
+        "prompt": "Kötü bir argümanla savunulan bir görüş hakkında ne söylenebilir?",
+        "options": [
+          "Kesinlikle yanlıştır",
+          "Yine de doğru olabilir; argümanın geçersizliği sonucun yanlışlığını göstermez",
+          "Tartışılamaz",
+          "Kanıtlanmış sayılır"
+        ],
+        "answerIndex": 1,
+        "explanation": "Geçerlilik ile doğruluk ayrı şeylerdir. Bir safsatayı yakalamak, karşı görüşün yanlış olduğunu göstermez."
+      }
+    ]
+  },
+
+  {
+    "id": "duygu-ve-kimlik",
+    "moduleId": "ikna",
+    "order": 4,
+    "title": "Duygu, kimlik ve aidiyet",
+    "subtitle": "İnsanlar çoğu zaman bilgiyi değerlendirmez; kimliklerini savunur.",
+    "minutes": 8,
+    "keyTerms": ["kimlik korumalı biliş", "öfke", "ahlaki öfke", "aidiyet", "geri tepme"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Bir konu kimliğin parçası hâline geldiğinde, o konudaki bilgi tarafsız bir girdi olmaktan çıkar. Kişi kanıtı değerlendirmez; ait olduğu grubun konumunu savunur. Şaşırtıcı olan şu: bu eğilim eğitim düzeyi ve sayısal beceri arttıkça zayıflamaz, güçlenir. Daha yetenekli olmak, kişinin kendi konumunu destekleyen yorumu bulmasını kolaylaştırır."
+      },
+      {
+        "kind": "text",
+        "title": "Öfke neden yayılır",
+        "body": "İçerik platformlarında en hızlı yayılan duygu öfkedir, özellikle de ahlaki öfke: bir kuralı çiğneyen birine duyulan tepki. Sebebi basit: öfke paylaşmaya iter ve paylaşan kişi aynı anda kendi grubuna aidiyetini de gösterir. Sevinç ve şaşkınlık da yayılır ama daha yavaş; hüzün ve kaygı en az yayılan duygulardır. Sıralama, dağıtım algoritmalarının bir tercihi değil, insan davranışının bir özelliğidir — algoritmalar yalnızca bunu ödüllendirir."
+      },
+      {
+        "kind": "list",
+        "title": "Kimlik devreye girdiğinde",
+        "items": [
+          "Kanıt aramak yerine kanıt seçilir; uyumsuz bulgular daha sert biçimde sınanır.",
+          "Karşı tarafın konumu, gerçekte olduğundan daha aşırı sanılır.",
+          "Fikir değiştirmek bilgi güncellemesi değil, sadakatsizlik gibi hissedilir.",
+          "Doğrudan çürütme bazen inancı güçlendirir; buna geri tepme etkisi denir ve her durumda görülmez ama riski gerçektir.",
+          "Aynı kişi, kimlik devreye girmeyen bir konuda kanıta çok daha açık davranır."
+        ]
+      },
+      {
+        "kind": "text",
+        "title": "Ne işe yarıyor",
+        "body": "Kimlik devredeyken tartışmayı verimli kılan birkaç yaklaşım var. Konuyu kimlikten ayırmak: kişinin grubunu değil, belirli bir iddiayı hedef almak. Ortak zemini önce kurmak. Karşı tarafın kendi konumunun mekanizmasını anlatmasını istemek — insanlar bir görüşü savunmakta çok, nasıl işlediğini açıklamakta zorlanır ve bu, kesinliği kendiliğinden yumuşatır. Ve en zoru: kendi tarafının hatalarını da aynı ölçüyle söylemek."
+      },
+      {
+        "kind": "example",
+        "title": "Örnek: sayısal beceri işe yaramadığında",
+        "body": "Bir deneyde katılımcılara aynı istatistik problemi iki farklı kılıkta verildi: biri cilt kremi etkinliği hakkında, diğeri siyasi olarak bölücü bir konu hakkında. Krem versiyonunda sayısal becerisi yüksek olanlar daha doğru cevap verdi. Siyasi versiyonda ise beceri, yalnızca kişinin kendi görüşünü destekleyen cevabı bulmasına yaradı — beceri arttıkça kutuplaşma da arttı. Sorun bilgi eksikliği değildi."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Kimlik korumalı biliş, sayısal becerisi yüksek kişilerde nasıl davranır?",
+        "options": [
+          "Zayıflar",
+          "Güçlenir: beceri, kişinin kendi konumunu destekleyen yorumu bulmasını kolaylaştırır",
+          "Değişmez",
+          "Ortadan kalkar"
+        ],
+        "answerIndex": 1,
+        "explanation": "Daha yetenekli olmak daha iyi gerekçe üretmeyi sağlar. Sorun bilgi eksikliği değil, bilginin ne için kullanıldığıdır."
+      },
+      {
+        "id": "q2",
+        "prompt": "İçerik platformlarında en hızlı yayılan duygu hangisidir?",
+        "options": ["Hüzün", "Kaygı", "Ahlaki öfke", "Şaşkınlık"],
+        "answerIndex": 2,
+        "explanation": "Öfke paylaşmaya iter ve paylaşan kişi aynı anda grubuna aidiyetini gösterir. Algoritmalar bu davranışı yaratmaz, ödüllendirir."
+      },
+      {
+        "id": "q3",
+        "prompt": "Kimlik devredeyken tartışmayı verimli kılan yaklaşımlardan biri nedir?",
+        "options": [
+          "Daha çok veri sunmak",
+          "Karşı taraftan kendi konumunun mekanizmasını açıklamasını istemek",
+          "Tartışmayı sertleştirmek",
+          "Konuyu değiştirmek"
+        ],
+        "answerIndex": 1,
+        "explanation": "İnsanlar bir görüşü savunmakta çok, nasıl işlediğini açıklamakta zorlanır. Bu, kesinliği kendiliğinden yumuşatır."
+      }
+    ]
+  },
+
+  {
+    "id": "dikkat-ekonomisi",
+    "moduleId": "akis",
+    "order": 1,
+    "title": "Dikkat ekonomisi",
+    "subtitle": "Ücretsiz bir hizmette ürün, satılan şeydir.",
+    "minutes": 8,
+    "keyTerms": ["dikkat ekonomisi", "etkileşim ölçütü", "sonsuz akış", "bildirim", "ölçüt körlüğü"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Bir hizmet ücretsizse geliri başka bir yerden gelir ve o yer neredeyse her zaman reklamdır. Reklam geliri, kullanıcının platformda geçirdiği süreyle ve gördüğü içerik sayısıyla orantılıdır. Buradan doğrudan bir sonuç çıkar: sistemin optimize ettiği şey sizin iyi vakit geçirmeniz değil, çok vakit geçirmenizdir. İkisi bazen örtüşür, çoğu zaman örtüşmez."
+      },
+      {
+        "kind": "list",
+        "title": "Dikkati tutan tasarım kalıpları",
+        "items": [
+          "Sonsuz akış: doğal bir bitiş noktası olmadığı için durma kararı sürekli yeniden verilmek zorunda kalır.",
+          "Değişken ödül: her yenilemede ne çıkacağının belirsizliği, sabit ödülden daha bağlayıcıdır.",
+          "Bildirim: dışarıdan gelen kesinti, geri dönüşü kullanıcının kararı olmaktan çıkarır.",
+          "Otomatik oynatma: bir sonraki içeriği başlatma kararı kullanıcıdan alınır.",
+          "Toplumsal onay göstergeleri: beğeni ve görüntülenme sayıları, geri dönmeyi ödüllendirir.",
+          "Kaçırma korkusu: seri, seriyi bozmama baskısı ve zaman sınırlı içerikler."
+        ]
+      },
+      {
+        "kind": "text",
+        "title": "Ölçüt körlüğü",
+        "body": "Bir sistem ölçebildiği şeyi iyileştirir. Etkileşim ölçülebilir; içeriğin doğruluğu, kullanıcının sonradan pişman olup olmadığı ya da kamusal tartışmanın kalitesi kolayca ölçülemez. Bu yüzden ölçülmeyen şeyler sistemin hedef fonksiyonunda görünmez ve zamanla feda edilir. Kötü niyet gerekmez: ölçütü optimize eden bir sistem, ölçülmeyen her şeyi bedelsiz sayar."
+      },
+      {
+        "kind": "text",
+        "title": "Kullanıcı tarafında ne işe yarıyor",
+        "body": "Bireysel çözümler sistemik sorunu ortadan kaldırmaz ama etkisi ölçülebilir. En işe yarayanlar sürtünme ekleyenlerdir: bildirimleri kapatmak, uygulamayı ana ekrandan çıkarmak, tarayıcıdan kullanmak, akışı kronolojik hâle getirebiliyorsa getirmek. İrade gücüne dayanan çözümler zayıftır; ortamı değiştirenler güçlüdür. Sonuçta karşınızda binlerce kişinin dikkatinizi tutmak için çalıştığı bir sistem var ve bu bir irade yarışı değil."
+      },
+      {
+        "kind": "example",
+        "title": "Örnek: otomatik oynatma",
+        "body": "Bir video platformu bir sonraki videoyu otomatik başlatmaya geçtiğinde izlenme süresi belirgin biçimde arttı. Kullanıcılar daha çok video izlemeyi seçmedi; bir sonraki videoyu izlememeyi seçmeleri gerekti ve varsayılan davranış değişti. Varsayılanların gücü, davranış tasarımının en iyi belgelenmiş bulgularından biridir — ve bu yüzden varsayılanların kim tarafından seçildiği önemlidir."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Reklam gelirine dayanan bir platform neyi optimize eder?",
+        "options": [
+          "Kullanıcının iyi vakit geçirmesini",
+          "Kullanıcının çok vakit geçirmesini",
+          "İçeriğin doğruluğunu",
+          "Kullanıcı sayısını"
+        ],
+        "answerIndex": 1,
+        "explanation": "Gelir süre ve gösterim sayısıyla orantılıdır. İyi vakit geçirmek ile çok vakit geçirmek bazen örtüşür, çoğu zaman örtüşmez."
+      },
+      {
+        "id": "q2",
+        "prompt": "Ölçüt körlüğü nedir?",
+        "options": [
+          "Ölçüm hatası",
+          "Sistemin ölçebildiğini iyileştirip ölçemediğini bedelsiz sayması",
+          "Verinin gizlenmesi",
+          "Kullanıcıların ölçütü bilmemesi"
+        ],
+        "answerIndex": 1,
+        "explanation": "Etkileşim ölçülebilir; doğruluk ve pişmanlık ölçülemez. Ölçülmeyen şey hedef fonksiyonunda görünmez ve zamanla feda edilir."
+      },
+      {
+        "id": "q3",
+        "prompt": "Kullanıcı tarafında en etkili yaklaşım hangisidir?",
+        "options": [
+          "Daha güçlü irade göstermek",
+          "Ortama sürtünme eklemek: bildirimleri kapatmak, uygulamayı ana ekrandan çıkarmak",
+          "Daha az uyumak",
+          "Daha çok içerik takip etmek"
+        ],
+        "answerIndex": 1,
+        "explanation": "Karşınızda dikkatinizi tutmak için çalışan bir sistem var; bu bir irade yarışı değildir. Ortamı değiştiren çözümler daha güçlüdür."
+      }
+    ]
+  },
+
+  {
+    "id": "oneri-sistemleri",
+    "moduleId": "akis",
+    "order": 2,
+    "title": "Öneri sistemleri ve yankı odası",
+    "subtitle": "Kimse fikrinizi değiştirmiyor; size yalnızca benzerini gösteriyor.",
+    "minutes": 9,
+    "keyTerms": ["öneri sistemi", "filtre balonu", "yankı odası", "kutuplaşma", "keşif ve sömürü"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Bir öneri sistemi, geçmiş davranışınıza bakarak bir sonraki içeriği seçer. Amacı sizi ikna etmek değil, sizi tutmaktır. Ama bu masum görünen hedef, toplam etkide kutuplaştırıcı olabilir: en çok etkileşim alan içerik çoğu zaman en dengeli olan değil, en keskin olandır. Sistem bir görüşü savunmaz; savunanı öne çıkarır."
+      },
+      {
+        "kind": "chart",
+        "chartId": "yanki-odasi"
+      },
+      {
+        "kind": "text",
+        "title": "Filtre balonu ile yankı odası farkı",
+        "body": "Filtre balonu, algoritmanın size farklı görüşleri hiç göstermemesidir. Yankı odası ise farklı görüşleri gösterse bile, kendi çevrenizin tepkileriyle birlikte gösterilmesi ve böylece pekiştirilmesidir. Araştırmalar, ikincisinin daha yaygın olduğunu gösteriyor: insanlar karşı görüşü görüyor ama düşmanca bir çerçeve içinde görüyor, bu da mesafeyi kapatmak yerine açıyor. Karşı görüşe maruz kalmak, tek başına kutuplaşmayı azaltmıyor."
+      },
+      {
+        "kind": "list",
+        "title": "Sistemin kaçınamadığı gerilimler",
+        "items": [
+          "Keşif ile sömürü: bilinen tercihi tekrarlamak güvenli, yeni bir şey denemek riskli. Sistem çoğu zaman güvenli olanı seçer.",
+          "Kısa vade ile uzun vade: hemen tıklanan içerikle sonradan memnun kalınan içerik aynı olmayabilir.",
+          "Bireysel ile toplumsal: her kullanıcı için en iyi akış, toplamda en kötü kamusal tartışmayı üretebilir.",
+          "Ölçülebilirlik: memnuniyet zor, tıklama kolay ölçülür.",
+          "Şeffaflık: sistemin nasıl çalıştığını açıklamak, onu manipüle etmeyi de kolaylaştırır."
+        ]
+      },
+      {
+        "kind": "text",
+        "title": "Sorumluluk nerede",
+        "body": "Tartışma çoğu zaman iki uçta sıkışıyor: 'algoritma her şeyi yapıyor' ya da 'insanlar zaten böyle'. İkisi de eksik. İnsan eğilimleri gerçek — benzerini aramak, öfkeye tepki vermek, gruba ait olmak. Algoritma bunları yaratmıyor ama ölçeklendiriyor ve hangisinin ödüllendirileceğini seçiyor. Bu seçim tasarımsal ve değiştirilebilir; bu yüzden 'insan doğası' açıklaması bir savunma değil."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Filtre balonu ile yankı odası arasındaki fark nedir?",
+        "options": [
+          "Aynı şeydir",
+          "Balonda farklı görüş hiç gösterilmez; yankı odasında gösterilir ama kendi çevrenizin düşmanca tepkileriyle birlikte pekiştirilir",
+          "Balon reklamlarla, oda haberlerle ilgilidir",
+          "Biri teknik, diğeri siyasi bir kavramdır"
+        ],
+        "answerIndex": 1,
+        "explanation": "Araştırmalar ikincisinin daha yaygın olduğunu gösteriyor. Karşı görüşe maruz kalmak tek başına kutuplaşmayı azaltmıyor."
+      },
+      {
+        "id": "q2",
+        "prompt": "'Keşif ile sömürü' gerilimi nedir?",
+        "options": [
+          "Veri toplama ile gizlilik arasındaki denge",
+          "Bilinen tercihi tekrarlamak ile yeni bir şey denemek arasındaki denge",
+          "Reklam ile içerik dengesi",
+          "Hız ile doğruluk dengesi"
+        ],
+        "answerIndex": 1,
+        "explanation": "Bilinen tercih güvenlidir, yenilik risklidir. Sistem çoğu zaman güvenli olanı seçer ve bu, akışı daraltır."
+      },
+      {
+        "id": "q3",
+        "prompt": "'İnsanlar zaten böyle' açıklaması neden yeterli bir savunma değildir?",
+        "options": [
+          "İnsan eğilimleri gerçek değil",
+          "Algoritma bu eğilimleri yaratmasa da ölçeklendiriyor ve hangisinin ödüllendirileceğini seçiyor; bu seçim tasarımsal",
+          "Algoritmalar insan davranışını değiştiremez",
+          "Kutuplaşma yeni bir olgu"
+        ],
+        "answerIndex": 1,
+        "explanation": "Eğilimin var olması, onun ölçeklendirilmesini zorunlu kılmaz. Hangi davranışın ödüllendirileceği bir tasarım kararıdır."
+      }
+    ]
+  },
+
+  {
+    "id": "dezenformasyon",
+    "moduleId": "akis",
+    "order": 3,
+    "title": "Dezenformasyon ve yayılma",
+    "subtitle": "Yalan hızlı yayılır, düzeltme yavaş — ve bu bir tesadüf değil.",
+    "minutes": 9,
+    "keyTerms": ["dezenformasyon", "yanlış bilgi", "düzeltme açığı", "aşılama", "koordineli davranış"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "İki kavramı ayırmak gerekir. Yanlış bilgi, doğru olmayan ama yayanın doğru sandığı içeriktir. Dezenformasyon ise yayanın yanlış olduğunu bilerek dolaştırdığıdır. Aynı içerik, kimin elinde olduğuna göre ikisi de olabilir. Mücadele biçimleri farklıdır: birincisi bir bilgi sorunu, ikincisi bir aktör sorunudur."
+      },
+      {
+        "kind": "chart",
+        "chartId": "yalan-ve-duzeltme"
+      },
+      {
+        "kind": "text",
+        "title": "Neden hızlı yayılıyor",
+        "body": "Yanlış haberler doğru haberlerden daha hızlı ve daha geniş yayılma eğiliminde. Sebebi bot hesaplar değil; büyük ölçekli çalışmalar yayılmanın büyük kısmının gerçek kullanıcılar tarafından yapıldığını gösterdi. Asıl sebep içeriğin kendisi: yanlış haberler daha yeni, daha şaşırtıcı ve daha duygusaldır. Doğrunun gerçeğe uyma zorunluluğu vardır; yalanın yoktur, bu yüzden en paylaşılabilir hâlinde tasarlanabilir."
+      },
+      {
+        "kind": "list",
+        "title": "İşe yaradığı gösterilen yaklaşımlar",
+        "items": [
+          "Aşılama: manipülasyon tekniğini içerikten önce tanıtmak. Tekniği tanıyan kişi karşılaştığında daha dirençli oluyor.",
+          "Doğruluk hatırlatması: paylaşmadan önce 'bu doğru mu' sorusunu görünür kılmak. Küçük ama ölçülebilir etki.",
+          "Sürtünme: paylaşmadan önce bağlantıyı açmayı istemek gibi küçük gecikmeler.",
+          "Kaynak etiketleri: içeriğin nereden geldiğini görünür kılmak.",
+          "Koordineli davranışın tespiti: içeriği değil, eşzamanlı ve örgütlü hesap davranışını hedeflemek.",
+          "Düzeltme yaparken yanlış iddiayı öne koymamak: doğru bilgiyi merkeze alan bir anlatı kurmak."
+        ]
+      },
+      {
+        "kind": "text",
+        "title": "Doğruluk kontrolünün sınırı",
+        "body": "Doğruluk kontrolü gereklidir ama tek başına yetmez. Düzeltme her zaman gecikir, her zaman daha az kişiye ulaşır ve inanç kimlikle bağlıysa etkisi zayıflar. Ayrıca bir iddiayı doğrulamak, iddiayı bir kez daha tekrarlamayı gerektirir. Bu yüzden alan giderek önleyici yaklaşımlara kayıyor: yanlışı düzeltmek yerine, insanları manipülasyon teknikleri karşısında önceden hazırlıklı hâle getirmek."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Yanlış bilgi ile dezenformasyon arasındaki fark nedir?",
+        "options": [
+          "Konu farkı",
+          "Yayanın yanlış olduğunu bilip bilmemesi",
+          "Yayılma hızı",
+          "Platform farkı"
+        ],
+        "answerIndex": 1,
+        "explanation": "Aynı içerik, kimin elinde olduğuna göre ikisi de olabilir. Biri bilgi sorunu, diğeri aktör sorunudur ve çözümleri farklıdır."
+      },
+      {
+        "id": "q2",
+        "prompt": "Yanlış haberlerin hızlı yayılmasının asıl sebebi nedir?",
+        "options": [
+          "Bot hesaplar",
+          "İçeriğin daha yeni, şaşırtıcı ve duygusal olması; gerçek kullanıcılar tarafından yayılması",
+          "Platform tercihleri",
+          "Doğrulama gecikmesi"
+        ],
+        "answerIndex": 1,
+        "explanation": "Büyük ölçekli çalışmalar yayılmanın çoğunun gerçek kullanıcılar tarafından yapıldığını gösterdi. Yalan, gerçeğe uyma zorunluluğu olmadığı için daha paylaşılabilir tasarlanabilir."
+      },
+      {
+        "id": "q3",
+        "prompt": "'Aşılama' yaklaşımı nedir?",
+        "options": [
+          "Yanlış içeriği silmek",
+          "Manipülasyon tekniğini, içerikle karşılaşmadan önce tanıtmak",
+          "Hesapları kapatmak",
+          "Doğruluk kontrolü yayımlamak"
+        ],
+        "answerIndex": 1,
+        "explanation": "Tekniği önceden tanıyan kişi, o teknikle kurulmuş içerik karşısında daha dirençli oluyor. Önleyici yaklaşım, düzeltmenin gecikme sorununu aşıyor."
+      }
+    ]
+  },
+
+  {
+    "id": "sentetik-icerik",
+    "moduleId": "akis",
+    "order": 4,
+    "title": "Sentetik içerik ve doğrulama",
+    "subtitle": "Görüntünün kanıt olduğu dönem kapanıyor.",
+    "minutes": 9,
+    "keyTerms": ["sentetik medya", "derin sahte", "yalancının kâr payı", "köken bilgisi", "içerik imzalama"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Fotoğrafın ve videonun kanıt sayılması, üretilmelerinin zor olmasına dayanıyordu. Bu artık geçerli değil. Gerçekçi görüntü, ses ve video üretmek erişilebilir bir işlem hâline geldi. Sonuç yalnızca sahte içeriğin çoğalması değil; gerçek içeriğin de reddedilebilir hâle gelmesi."
+      },
+      {
+        "kind": "text",
+        "title": "Yalancının kâr payı",
+        "body": "Asıl risk, herkesin sahte videolara inanması değil. Asıl risk, gerçek bir kaydın 'yapay zekâ ürünü' denerek reddedilebilmesi. Buna yalancının kâr payı deniyor: sentetik içeriğin varlığı, gerçek kanıtın gücünü de zayıflatıyor. Bir görüntünün sahte olduğunu kanıtlamak zor, sahte olabileceğini öne sürmek bedava. Sorumluluğun kanıtlanması gereken her alanda — hukuk, gazetecilik, insan hakları belgeleme — bu asimetri ciddi bir sorun."
+      },
+      {
+        "kind": "list",
+        "title": "Pratik doğrulama adımları",
+        "items": [
+          "Ters görsel arama: aynı görüntü daha önce, başka bir bağlamda yayımlanmış mı?",
+          "Kaynağa gitmek: içeriği ilk paylaşan hesap kim, ne zamandan beri var, başka ne paylaşıyor?",
+          "Bağlam sorgusu: olay gerçekten o tarihte ve o yerde mi oldu? Hava durumu, gölge yönü, tabelalar.",
+          "Bağımsız doğrulama: aynı olayı farklı açıdan gösteren başka bir kayıt var mı?",
+          "Aceleye direnmek: sahte içerik hızlı paylaşım üzerine tasarlanır; birkaç dakika beklemek çoğu zaman yeter.",
+          "Teknik ipuçlarına aşırı güvenmemek: eller, kulaklar ve yazılar hızla düzeliyor, bugünün ipuçları yarın geçersiz olabilir."
+        ]
+      },
+      {
+        "kind": "text",
+        "title": "Köken bilgisi yaklaşımı",
+        "body": "Sahteyi tespit etmeye çalışmak sürekli geriden gelen bir yarıştır. Alternatif yaklaşım tersidir: gerçeği kanıtlamak. Kameranın kaydı çekildiği anda kriptografik olarak imzalaması, sonraki her düzenlemenin bu imzaya işlenmesi ve okuyucunun zinciri doğrulayabilmesi. Bu yönde açık standartlar geliştiriliyor ve bazı cihazlarda uygulanmaya başlandı. Yaygınlaşması, doğrulama sorununu ortadan kaldırmaz ama yükü tespit etmekten kanıtlamaya kaydırır."
+      },
+      {
+        "kind": "example",
+        "title": "Örnek: ses en zayıf halka",
+        "body": "Video üretmek hâlâ ipucu bırakabilir ama ses klonlama çok daha kolay ve çok daha az iz veriyor. Birkaç saniyelik kayıt, tanıdık bir sesi taklit etmeye yetiyor. Bu yüzden telefonla gelen acil para talepleri, tanıdık bir sesle bile olsa doğrulanmadan karşılanmamalı. Aile içinde önceden kararlaştırılmış bir doğrulama sorusu, teknik hiçbir çözümün sağlayamadığı bir güvenceyi sağlıyor."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "'Yalancının kâr payı' nedir?",
+        "options": [
+          "Sahte içerik üretenlerin kazancı",
+          "Sentetik içeriğin varlığı sayesinde gerçek kayıtların da 'sahte' denerek reddedilebilmesi",
+          "Reklam geliri",
+          "Doğrulama maliyeti"
+        ],
+        "answerIndex": 1,
+        "explanation": "Asıl risk sahteye inanılması değil, gerçeğin reddedilebilir hâle gelmesidir. Sahte olduğunu kanıtlamak zor, öne sürmek bedavadır."
+      },
+      {
+        "id": "q2",
+        "prompt": "Köken bilgisi yaklaşımının mantığı nedir?",
+        "options": [
+          "Sahte içeriği tespit etmek",
+          "Gerçeği kanıtlamak: kaydı çekildiği anda imzalamak ve düzenleme zincirini doğrulanabilir kılmak",
+          "Sahte içeriği yasaklamak",
+          "Yayınları etiketlemek"
+        ],
+        "answerIndex": 1,
+        "explanation": "Tespit etmek sürekli geriden gelen bir yarıştır. Köken bilgisi, yükü tespit etmekten kanıtlamaya kaydırır."
+      },
+      {
+        "id": "q3",
+        "prompt": "Teknik ipuçlarına aşırı güvenmek neden risklidir?",
+        "options": [
+          "İpuçları yanlış olduğu için",
+          "Bugünün ipuçları hızla geçersizleşiyor; eller, kulaklar ve yazılar sürekli düzeliyor",
+          "İpuçlarını görmek zor olduğu için",
+          "Yalnızca uzmanlar kullanabildiği için"
+        ],
+        "answerIndex": 1,
+        "explanation": "Görsel kusurlara dayalı tespit kısa ömürlüdür. Kaynak, bağlam ve bağımsız doğrulama çok daha dayanıklı yöntemlerdir."
+      }
+    ]
+  }
+]

@@ -1,0 +1,446 @@
+{
+  "meta": {
+    "title": "Medya okuryazarlığı",
+    "eyebrow": "Medya",
+    "subtitle": "Haber, ikna, akış",
+    "description": "Kaynak doğrulamadan çerçevelemeye, propaganda tekniklerinden öneri sistemlerine: bir haberin nasıl kurulduğunu ve dikkatinizin nasıl fiyatlandığını öğren.",
+    "icon": "📰",
+    "accent": "#a32c4e",
+    "accentDark": "#f2a0b4",
+    "category": "gunumuz",
+    "figuresLabel": "İsimler",
+    "timelineLabel": "Zaman çizelgesi",
+    "timelineTitle": "Kamuoyunun tarihi",
+    "timelineIntro": "Matbaadan öneri algoritmasına: her yeni dağıtım teknolojisi önce bir özgürleşme, sonra bir manipülasyon aracı olarak göründü.",
+    "source": "builtin",
+    "hasCharts": true
+  },
+
+  "modules": [
+    {
+      "id": "haber",
+      "title": "Haber nasıl kurulur",
+      "description": "Kaynak, çerçeveleme, neyin haber olup neyin olmadığı ve haberdeki sayılar."
+    },
+    {
+      "id": "ikna",
+      "title": "İkna teknikleri",
+      "description": "Propaganda tarihi, halkla ilişkiler, safsatalar ve kimliğin akıl yürütmeye etkisi."
+    },
+    {
+      "id": "akis",
+      "title": "Algoritmik akış",
+      "description": "Dikkat ekonomisi, öneri sistemleri, dezenformasyonun yayılması ve sentetik içerik."
+    }
+  ],
+
+  "glossary": [
+    { "id": "birincil-kaynak", "term": "Birincil kaynak", "definition": "Olayın kendisine ya da orijinal belgeye doğrudan erişim. Haberlerin çoğu ikincil, hatta üçüncül aktarımdır.", "lessonId": "kaynak-ve-dogrulama" },
+    { "id": "tek-kaynak", "term": "Tek kaynak sorunu", "definition": "Farklı yayınların aynı ajanstan beslenmesi. Beş haber tek kaynaksa bağımsız doğrulama yoktur.", "lessonId": "kaynak-ve-dogrulama" },
+    { "id": "isimsiz-kaynak", "term": "İsimsiz kaynak", "definition": "Kimliği açıklanmayan bilgi kaynağı. Meşru olabilir ama isimsizliğin gerekçesi ve kaynağın erişimi okura açıklanmalıdır.", "lessonId": "kaynak-ve-dogrulama" },
+    { "id": "ters-arama", "term": "Ters görsel arama", "definition": "Bir görüntünün daha önce nerede yayımlandığını bulma yöntemi. Eski görüntülerin yeniden dolaşıma sokulmasını otuz saniyede ortaya çıkarır.", "lessonId": "kaynak-ve-dogrulama" },
+    { "id": "aktarim-bozulmasi", "term": "Aktarım bozulması", "definition": "Bilginin her aktarımda belirsizlik ifadelerini kaybederek sertleşmesi. Kimse yalan söylemeden iddia değişir.", "lessonId": "kaynak-ve-dogrulama" },
+    { "id": "cerceveleme-t", "term": "Çerçeveleme", "definition": "Bir olayın hangi yönünün öne çıkarılacağının seçilmesi. Yalan söylemeden değerlendirmeyi değiştirir.", "lessonId": "cerceveleme" },
+    { "id": "edilgen-cati", "term": "Edilgen çatı", "definition": "Eylemin öznesini gizleyen dilbilgisel biçim. Sorumluluk atfı sessizce ortadan kalkar.", "lessonId": "cerceveleme" },
+    { "id": "esdegerlik-cercevesi", "term": "Eşdeğerlik çerçevesi", "definition": "Mantıksal olarak aynı iki ifadenin farklı tercihler üretmesi. '%90 hayatta kalır' ile '%10 ölür' aynı bilgidir.", "lessonId": "cerceveleme" },
+    { "id": "yapay-denge", "term": "Yapay denge", "definition": "Kanıtın ezici çoğunlukla bir yönü desteklediği bir konuda taraflara eşit yer vermek. Var olmayan bir tartışma izlenimi üretir.", "lessonId": "cerceveleme" },
+    { "id": "gundem-kurma", "term": "Gündem kurma", "definition": "Ne düşünüleceğini değil, ne hakkında düşünüleceğini belirleme etkisi. Medyanın en güçlü etkisi budur.", "lessonId": "secme-ve-atlama" },
+    { "id": "esik-bekciligi", "term": "Eşik bekçiliği", "definition": "Hangi olayın haber olacağına karar verme işlevi. Yayınların seçimi, hangi olayın gerçekliğe girdiğini belirler.", "lessonId": "secme-ve-atlama" },
+    { "id": "haber-degeri", "term": "Haber değeri", "definition": "Bir olayı haber yapan ölçütler: yenilik, yakınlık, çatışma, kişileştirilebilirlik, görsel malzeme ve ani olma.", "lessonId": "secme-ve-atlama" },
+    { "id": "siklik-yanilsamasi", "term": "Sıklık yanılsaması", "definition": "Haberlerde çok yer alan olay türünün gerçekte olduğundan sık sanılması. Risk algısı akla gelme kolaylığıyla ölçeklenir.", "lessonId": "secme-ve-atlama" },
+    { "id": "gorunmeyen-olay", "term": "Görünmeyen olay", "definition": "Kamera, çatışma anlatısı ya da yakınlık olmadığı için hiç haber olmayan büyük olaylar. Kötü niyetin değil ölçütlerin sonucu.", "lessonId": "secme-ve-atlama" },
+    { "id": "secilmis-aralik-m", "term": "Seçilmiş aralık", "definition": "Bir zaman serisinde başlangıç ve bitiş tarihinin anlatıya göre seçilmesi. Hiçbir sayı çarpıtılmadan eğilim tersine çevrilebilir.", "lessonId": "sayilar-haberde" },
+    { "id": "goreli-mutlak", "term": "Göreli ve mutlak", "definition": "'İki katına çıktı' göreli, 'üçten altıya çıktı' mutlaktır. Göreli değişim taban olmadan yorumlanamaz.", "lessonId": "sayilar-haberde" },
+    { "id": "kesinlik-gosterisi", "term": "Kesinlik gösterisi", "definition": "Ölçümün gerçek hassaslığını aşan ondalık basamak kullanımı. Sahte bir kesinlik izlenimi verir.", "lessonId": "sayilar-haberde" },
+    { "id": "anket-okuma", "term": "Anket okuma", "definition": "Kaç kişiye, nasıl sorulduğu, hata payı ve cevap oranı bilinmeden bir anket sonucu yorumlanamaz.", "lessonId": "sayilar-haberde" },
+    { "id": "propaganda", "term": "Propaganda", "definition": "Örgütlü ikna faaliyeti. Terim Birinci Dünya Savaşı'ndaki kitlesel kampanyalarla bugünkü olumsuz anlamını kazandı.", "lessonId": "propaganda-tarihi" },
+    { "id": "tekrar", "term": "Tekrar etkisi", "definition": "Bir ifadenin tekrarlanmasının tanıdıklık, tanıdıklığın da doğruluk hissi üretmesi. Gerçeklik yanılsaması da denir.", "lessonId": "propaganda-tarihi" },
+    { "id": "gurultuye-bogma", "term": "Gürültüye boğma", "definition": "Bilgiyi engellemek yerine çelişen anlatılarla doldurmak. Amaç ikna değil, gerçeğin bilinebilirliğine güveni aşındırmak.", "lessonId": "propaganda-tarihi" },
+    { "id": "kendi-sansur", "term": "Kendi kendine sansür", "definition": "Yasak uygulanmadan, sorun çıkaracak haberin hiç yazılmaması. Uygulanması gerekmeyen kısıt en etkilisidir.", "lessonId": "propaganda-tarihi" },
+    { "id": "halkla-iliskiler", "term": "Halkla ilişkiler", "definition": "Mesajı reklam olarak değil haber, uzman görüşü ya da kullanıcı deneyimi kılığında dolaştırma pratiği.", "lessonId": "reklam-ve-halkla-iliskiler" },
+    { "id": "kusku-uretimi", "term": "Kuşku üretimi", "definition": "Bir bulguyu çürütmek yerine tartışmalı göstererek düzenlemeyi geciktirme stratejisi.", "lessonId": "reklam-ve-halkla-iliskiler" },
+    { "id": "sponsorlu-icerik", "term": "Sponsorlu içerik", "definition": "Ücret karşılığı yayımlanan, biçim olarak editoryal içeriğe benzeyen metin. Etiketlenmesi zorunlu ama etiket çoğu zaman görünmez.", "lessonId": "reklam-ve-halkla-iliskiler" },
+    { "id": "etkileyici-pazarlama", "term": "Etkileyici pazarlama", "definition": "Kişisel bağ kurmuş kişiler üzerinden ticari mesaj iletmek. Tanıdık birinin önerisi reklamdan çok daha etkilidir.", "lessonId": "reklam-ve-halkla-iliskiler" },
+    { "id": "safsata", "term": "Safsata", "definition": "İkna edici görünen ama mantıksal olarak geçersiz akıl yürütme. Tanımak, önce kendi düşünceni denetlemek için işe yarar.", "lessonId": "retorik-ve-safsata" },
+    { "id": "korkuluk-adam", "term": "Korkuluk adam", "definition": "Karşı tarafın savunmadığı zayıf bir görüşü ona atfedip onu çürütmek.", "lessonId": "retorik-ve-safsata" },
+    { "id": "yanlis-ikilem", "term": "Yanlış ikilem", "definition": "İkiden fazla seçenek varken tartışmayı iki seçeneğe indirgemek.", "lessonId": "retorik-ve-safsata" },
+    { "id": "kanit-yuku", "term": "Kanıt yükü", "definition": "İddiayı öne sürende kalan yükümlülük. 'Aksini kanıtla' demek yükü haksız biçimde devretmektir.", "lessonId": "retorik-ve-safsata" },
+    { "id": "en-saglam-okuma", "term": "En sağlam biçimde okuma", "definition": "Bir görüşü savunanın kurabileceği en güçlü hâliyle ele almak. Korkuluk adamın tam tersi.", "lessonId": "retorik-ve-safsata" },
+    { "id": "kimlik-bilis", "term": "Kimlik korumalı biliş", "definition": "Bir konu kimliğin parçası olduğunda kanıtın değerlendirilmesi yerine grup konumunun savunulması. Beceri arttıkça güçlenir.", "lessonId": "duygu-ve-kimlik" },
+    { "id": "ahlaki-ofke", "term": "Ahlaki öfke", "definition": "Bir kuralı çiğneyene duyulan tepki. Platformlarda en hızlı yayılan duygu; paylaşan aynı anda aidiyetini de gösterir.", "lessonId": "duygu-ve-kimlik" },
+    { "id": "geri-tepme", "term": "Geri tepme etkisi", "definition": "Doğrudan çürütmenin bazen inancı güçlendirmesi. Her durumda görülmez ama riski gerçektir.", "lessonId": "duygu-ve-kimlik" },
+    { "id": "dikkat-ekonomisi-t", "term": "Dikkat ekonomisi", "definition": "Kıt kaynağın dikkat olduğu ve platformların bunu reklamverene sattığı düzen. Optimize edilen şey iyi vakit değil çok vakittir.", "lessonId": "dikkat-ekonomisi" },
+    { "id": "sonsuz-akis", "term": "Sonsuz akış", "definition": "Doğal bitiş noktası olmayan içerik akışı. Durma kararı sürekli yeniden verilmek zorunda kalır.", "lessonId": "dikkat-ekonomisi" },
+    { "id": "degisken-odul", "term": "Değişken ödül", "definition": "Her yenilemede ne çıkacağının belirsiz olması. Sabit ödülden daha bağlayıcıdır.", "lessonId": "dikkat-ekonomisi" },
+    { "id": "olcut-korlugu", "term": "Ölçüt körlüğü", "definition": "Sistemin ölçebildiğini iyileştirip ölçemediğini bedelsiz sayması. Kötü niyet gerekmez.", "lessonId": "dikkat-ekonomisi" },
+    { "id": "varsayilanlarin-gucu", "term": "Varsayılanların gücü", "definition": "Bir davranışın varsayılan hâle getirilmesinin tercihi büyük ölçüde belirlemesi. Otomatik oynatma bunun en bilinen örneği.", "lessonId": "dikkat-ekonomisi" },
+    { "id": "oneri-sistemi", "term": "Öneri sistemi", "definition": "Geçmiş davranışa bakarak bir sonraki içeriği seçen sistem. Amacı ikna değil tutmaktır; toplam etkisi yine de kutuplaştırıcı olabilir.", "lessonId": "oneri-sistemleri" },
+    { "id": "filtre-balonu", "term": "Filtre balonu", "definition": "Algoritmanın farklı görüşleri hiç göstermemesi.", "lessonId": "oneri-sistemleri" },
+    { "id": "yanki-odasi-t", "term": "Yankı odası", "definition": "Farklı görüşlerin gösterilmesi ama kendi çevrenizin düşmanca tepkileriyle birlikte gösterilerek pekiştirilmesi. Balondan daha yaygın.", "lessonId": "oneri-sistemleri" },
+    { "id": "kesif-somuru", "term": "Keşif ve sömürü", "definition": "Bilinen tercihi tekrarlamak ile yeni bir şey denemek arasındaki denge. Sistem çoğu zaman güvenli olanı seçer.", "lessonId": "oneri-sistemleri" },
+    { "id": "dezenformasyon-t", "term": "Dezenformasyon", "definition": "Yayanın yanlış olduğunu bilerek dolaştırdığı içerik. Yanlış bilgiden farkı niyettir.", "lessonId": "dezenformasyon" },
+    { "id": "yanlis-bilgi", "term": "Yanlış bilgi", "definition": "Doğru olmayan ama yayanın doğru sandığı içerik. Bir bilgi sorunudur; dezenformasyon ise bir aktör sorunu.", "lessonId": "dezenformasyon" },
+    { "id": "duzeltme-acigi", "term": "Düzeltme açığı", "definition": "Düzeltmenin hem geç kalması hem daha az kişiye ulaşması. Yalnızca ilk anlatıyı görmüş bir kitle kalır.", "lessonId": "dezenformasyon" },
+    { "id": "asilama", "term": "Aşılama", "definition": "Manipülasyon tekniğini içerikle karşılaşmadan önce tanıtmak. Önleyici olduğu için düzeltmenin gecikme sorununu aşar.", "lessonId": "dezenformasyon" },
+    { "id": "koordineli-davranis", "term": "Koordineli davranış", "definition": "Eşzamanlı ve örgütlü hesap etkinliği. İçeriği değil davranış örüntüsünü hedeflemek daha etkili bir tespit yolu.", "lessonId": "dezenformasyon" },
+    { "id": "sentetik-medya", "term": "Sentetik medya", "definition": "Yapay olarak üretilmiş görüntü, ses ve video. Üretim zorluğuna dayanan kanıt değeri ortadan kalkıyor.", "lessonId": "sentetik-icerik" },
+    { "id": "yalancinin-kar-payi", "term": "Yalancının kâr payı", "definition": "Sentetik içeriğin varlığı sayesinde gerçek kayıtların da 'sahte' denerek reddedilebilmesi. Asıl risk budur.", "lessonId": "sentetik-icerik" },
+    { "id": "koken-bilgisi", "term": "Köken bilgisi", "definition": "Kaydın çekildiği anda imzalanması ve düzenleme zincirinin doğrulanabilir kılınması. Yükü tespitten kanıtlamaya kaydırır.", "lessonId": "sentetik-icerik" }
+  ],
+
+  "figures": [
+    {
+      "id": "gutenberg",
+      "name": "Johannes Gutenberg",
+      "lifespan": "1400-1468",
+      "oneLiner": "Metni çoğaltmayı ucuzlattı; ilk kitle iletişim devrimini başlattı.",
+      "contributions": [
+        "Hareketli harfle baskıyı Avrupa'da uygulanabilir hâle getirdi",
+        "Kitap fiyatlarının düşmesi okuryazarlığı ve tartışmayı yaygınlaştırdı",
+        "Aynı teknoloji, Reform broşürlerinin ve ilk propaganda dalgasının da aracı oldu"
+      ],
+      "lessonId": "propaganda-tarihi",
+      "tag": "Baskı"
+    },
+    {
+      "id": "bernays",
+      "name": "Edward Bernays",
+      "lifespan": "1891-1995",
+      "oneLiner": "Savaş propagandası tekniklerini barış zamanı pazarlamaya taşıdı.",
+      "contributions": [
+        "Halkla ilişkileri bir meslek olarak kurdu",
+        "Ürünü değil, ürünün içinde bulunduğu alışkanlığı satmayı yöntemleştirdi",
+        "Kitlelerin örgütlü biçimde yönlendirilmesini demokrasinin doğal parçası saydı"
+      ],
+      "quote": {
+        "text": "Kitlelerin örgütlü alışkanlıklarını bilinçli biçimde yönlendirmek, demokratik toplumun görünmeyen yönetimidir.",
+        "source": "Propaganda, 1928"
+      },
+      "lessonId": "reklam-ve-halkla-iliskiler",
+      "tag": "Halkla ilişkiler"
+    },
+    {
+      "id": "lippmann",
+      "name": "Walter Lippmann",
+      "lifespan": "1889-1974",
+      "oneLiner": "Kafamızdaki dünyanın gerçek dünya olmadığını yazdı.",
+      "contributions": [
+        "1922'de kamuoyunun büyük ölçüde medya tarafından kurulduğunu savundu",
+        "Zihnimizdeki 'sözde çevre' kavramını ortaya attı",
+        "Kalıp yargı kavramını bugünkü anlamıyla kullanan ilk kişilerden oldu"
+      ],
+      "lessonId": "secme-ve-atlama",
+      "tag": "Kamuoyu"
+    },
+    {
+      "id": "orwell",
+      "name": "George Orwell",
+      "lifespan": "1903-1950",
+      "oneLiner": "Siyasi dilin bulanıklığının bir kaza değil bir işlev olduğunu gösterdi.",
+      "contributions": [
+        "Belirsiz ve edilgen dilin sorumluluğu nasıl gizlediğini yazdı",
+        "Örtmece ve klişenin düşünmeyi nasıl zayıflattığını çözümledi",
+        "Dil ile iktidar arasındaki ilişkiyi kalıcı bir tartışma hâline getirdi"
+      ],
+      "quote": {
+        "text": "Siyasi dil, yalanların doğru, cinayetlerin saygın görünmesini sağlamak üzere tasarlanmıştır.",
+        "source": "Politics and the English Language, 1946"
+      },
+      "lessonId": "cerceveleme",
+      "tag": "Dil ve iktidar"
+    },
+    {
+      "id": "mccombs-shaw",
+      "name": "Maxwell McCombs ve Donald Shaw",
+      "lifespan": "1972",
+      "oneLiner": "Medyanın ne düşüneceğimizi değil ne hakkında düşüneceğimizi belirlediğini ölçtüler.",
+      "contributions": [
+        "1968 seçimi sırasında haber gündemi ile seçmen gündemini karşılaştırdılar",
+        "Gündem kurma kuramını ampirik olarak temellendirdiler",
+        "Etkinin doğrudan ikna değil, öncelik belirleme olduğunu gösterdiler"
+      ],
+      "lessonId": "secme-ve-atlama",
+      "tag": "Gündem kurma"
+    },
+    {
+      "id": "kahneman-tversky-m",
+      "name": "Daniel Kahneman ve Amos Tversky",
+      "lifespan": "1934-2024 / 1937-1996",
+      "oneLiner": "Aynı bilginin farklı sunumunun tercihi tersine çevirebildiğini gösterdiler.",
+      "contributions": [
+        "Çerçeveleme etkisini deneysel olarak ortaya koydular",
+        "Kayıp ve kazanç sunumlarının karar üzerindeki asimetrik etkisini ölçtüler",
+        "Risk algısının olasılıkla değil akla gelme kolaylığıyla ölçeklendiğini gösterdiler"
+      ],
+      "lessonId": "cerceveleme",
+      "tag": "Çerçeveleme"
+    },
+    {
+      "id": "chomsky-herman",
+      "name": "Noam Chomsky ve Edward Herman",
+      "lifespan": "1988",
+      "oneLiner": "Sansür olmadan da sistemli bir eğilimin nasıl oluştuğunu modellediler.",
+      "contributions": [
+        "Sahiplik yapısı, reklam bağımlılığı ve kaynak erişimini süzgeç olarak tarif ettiler",
+        "Baskı olmadan işleyen kendi kendine sansür mekanizmasını çözümlediler",
+        "Model geniş biçimde tartışıldı ve önemli eleştiriler de aldı"
+      ],
+      "lessonId": "propaganda-tarihi",
+      "tag": "Medya eleştirisi"
+    },
+    {
+      "id": "kahan",
+      "name": "Dan Kahan",
+      "lifespan": "1956-",
+      "oneLiner": "Sayısal becerinin kutuplaşmayı azaltmadığını, artırdığını ölçtü.",
+      "contributions": [
+        "Kimlik korumalı biliş kavramını geliştirdi",
+        "Aynı istatistik problemini nötr ve siyasi kılıkta vererek etkiyi gösterdi",
+        "Bilim iletişiminde 'bilgi açığı' varsayımını sarstı"
+      ],
+      "lessonId": "duygu-ve-kimlik",
+      "tag": "Kimlik ve biliş"
+    },
+    {
+      "id": "vosoughi",
+      "name": "Soroush Vosoughi ve ekibi",
+      "lifespan": "2018",
+      "oneLiner": "Yalan haberin gerçekten daha hızlı yayıldığını büyük veriyle gösterdiler.",
+      "contributions": [
+        "On yıllık bir veri kümesinde doğru ve yanlış haberlerin yayılmasını karşılaştırdılar",
+        "Yanlış haberlerin daha uzağa ve daha hızlı gittiğini ölçtüler",
+        "Yayılmanın büyük kısmının botlar değil gerçek kullanıcılar tarafından yapıldığını buldular"
+      ],
+      "lessonId": "dezenformasyon",
+      "tag": "Yayılma araştırması"
+    },
+    {
+      "id": "van-der-linden",
+      "name": "Sander van der Linden",
+      "lifespan": "1984-",
+      "oneLiner": "Manipülasyona karşı önleyici 'aşı' fikrini uygulanabilir hâle getirdi.",
+      "contributions": [
+        "Aşılama kuramını dezenformasyona uyarladı",
+        "Tekniği önceden tanıtmanın direnç kazandırdığını deneylerle gösterdi",
+        "Yöntem büyük ölçekli kamu kampanyalarında denendi"
+      ],
+      "lessonId": "dezenformasyon",
+      "tag": "Aşılama"
+    },
+    {
+      "id": "zuboff",
+      "name": "Shoshana Zuboff",
+      "lifespan": "1951-",
+      "oneLiner": "Dikkatin ve davranış verisinin bir piyasa hâline gelişini kavramlaştırdı.",
+      "contributions": [
+        "Davranış verisinin ürünleştirilmesini sistemli biçimde çözümledi",
+        "İş modelinin ürünü değil kullanıcıyı sattığı tezini geliştirdi",
+        "Tartışmayı gizlilikten güç dağılımına taşıdı"
+      ],
+      "lessonId": "dikkat-ekonomisi",
+      "tag": "Dikkat ekonomisi"
+    },
+    {
+      "id": "wardle",
+      "name": "Claire Wardle",
+      "lifespan": "1976-",
+      "oneLiner": "'Sahte haber' teriminin işe yaramadığını gösterip yerine bir sınıflandırma koydu.",
+      "contributions": [
+        "Yanlış bilgi, dezenformasyon ve kötü niyetli bilgi ayrımını yerleştirdi",
+        "Doğrulama pratiklerini haber odalarında standartlaştırmaya çalıştı",
+        "Görsel bağlam kaydırmanın en yaygın manipülasyon türü olduğunu gösterdi"
+      ],
+      "lessonId": "sentetik-icerik",
+      "tag": "Doğrulama"
+    }
+  ],
+
+  "eraLabels": {
+    "baski": "Baskı çağı",
+    "yayin": "Yayın çağı",
+    "kuram": "Kuramın kurulması",
+    "ag": "Ağ çağı"
+  },
+
+  "timeline": [
+    {
+      "id": "matbaa",
+      "year": 1450,
+      "yearLabel": "1450 dolayı",
+      "title": "Hareketli harfle baskı",
+      "body": "Metni çoğaltmak ucuzlar. Aynı teknoloji hem okuryazarlığı hem de ilk kitlesel ikna kampanyalarını mümkün kılar.",
+      "era": "baski",
+      "figureId": "gutenberg"
+    },
+    {
+      "id": "ucuz-gazete",
+      "year": 1833,
+      "yearLabel": "1833",
+      "title": "Kuruşluk gazete",
+      "body": "Fiyatı düşük, reklamla finanse edilen gazeteler yaygınlaşır. Okurun değil reklamverenin ödediği model burada doğar.",
+      "era": "baski"
+    },
+    {
+      "id": "sari-basin",
+      "year": 1898,
+      "yearLabel": "1898",
+      "title": "Sansasyon yarışı",
+      "body": "Tiraj savaşı, abartılı ve doğrulanmamış haberciliği yaygınlaştırır. Ticari rekabetin haber kalitesini nasıl etkilediği ilk kez geniş biçimde tartışılır.",
+      "era": "baski"
+    },
+    {
+      "id": "savas-propagandasi",
+      "year": 1917,
+      "yearLabel": "1917",
+      "title": "Örgütlü savaş propagandası",
+      "body": "Devletler ilk kez kitlesel ölçekte kurumsal ikna kampanyaları yürütür. Propaganda terimi bugünkü anlamını kazanır.",
+      "era": "yayin"
+    },
+    {
+      "id": "lippmann-1922",
+      "year": 1922,
+      "yearLabel": "1922",
+      "title": "Kamuoyu",
+      "body": "Lippmann, kafamızdaki dünyanın gerçek dünya değil medya tarafından kurulmuş bir 'sözde çevre' olduğunu yazar.",
+      "era": "yayin",
+      "figureId": "lippmann"
+    },
+    {
+      "id": "bernays-1928",
+      "year": 1928,
+      "yearLabel": "1928",
+      "title": "Propaganda kitabı",
+      "body": "Bernays, savaş dönemi tekniklerini ticari pazarlamaya taşır ve halkla ilişkileri bir meslek olarak kurar.",
+      "era": "yayin",
+      "figureId": "bernays"
+    },
+    {
+      "id": "radyo-1938",
+      "year": 1938,
+      "yearLabel": "1938",
+      "title": "Radyonun gücü",
+      "body": "Bir radyo oyununun yol açtığı panik, sonradan abartıldığı anlaşılsa da yeni bir aracın etkisi üzerine ilk büyük tartışmayı başlatır.",
+      "era": "yayin"
+    },
+    {
+      "id": "orwell-1946",
+      "year": 1946,
+      "yearLabel": "1946",
+      "title": "Siyaset ve dil",
+      "body": "Orwell, bulanık ve edilgen dilin sorumluluğu nasıl gizlediğini yazar. Dil ile iktidar arasındaki bağ kalıcı bir tartışma konusu olur.",
+      "era": "yayin",
+      "figureId": "orwell"
+    },
+    {
+      "id": "televizyon-1960",
+      "year": 1960,
+      "yearLabel": "1960",
+      "title": "Televizyonlu tartışma",
+      "body": "Bir başkanlık tartışmasını radyodan dinleyenlerle televizyondan izleyenler farklı kazananlar bildirir. Görüntü, içerikten bağımsız bir etken hâline gelir.",
+      "era": "yayin"
+    },
+    {
+      "id": "gundem-1972",
+      "year": 1972,
+      "yearLabel": "1972",
+      "title": "Gündem kurma kuramı",
+      "body": "McCombs ve Shaw, haber gündemi ile seçmen gündemini karşılaştırır. Etkinin ikna değil öncelik belirleme olduğu ölçülür.",
+      "era": "kuram",
+      "figureId": "mccombs-shaw"
+    },
+    {
+      "id": "tutun-belgeleri",
+      "year": 1979,
+      "yearLabel": "1979",
+      "title": "Kuşku üretimi belgeleniyor",
+      "body": "İç yazışmalar, sektörün bulguyu çürütmek yerine tartışmalı göstermeyi bir strateji olarak benimsediğini ortaya koyar.",
+      "era": "kuram"
+    },
+    {
+      "id": "cerceveleme-1981",
+      "year": 1981,
+      "yearLabel": "1981",
+      "title": "Çerçeveleme etkisi",
+      "body": "Kahneman ve Tversky, aynı bilginin kayıp ya da kazanç olarak sunulmasının tercihi tersine çevirdiğini gösterir.",
+      "era": "kuram",
+      "figureId": "kahneman-tversky-m"
+    },
+    {
+      "id": "rizanin-imalati",
+      "year": 1988,
+      "yearLabel": "1988",
+      "title": "Süzgeç modeli",
+      "body": "Chomsky ve Herman, sahiplik, reklam ve kaynak erişiminin sansür olmadan sistemli bir eğilim ürettiğini savunur.",
+      "era": "kuram",
+      "figureId": "chomsky-herman"
+    },
+    {
+      "id": "web-1993",
+      "year": 1993,
+      "yearLabel": "1993",
+      "title": "Web herkese açılıyor",
+      "body": "Yayın yapma maliyeti neredeyse sıfıra iner. Darboğaz üretimden dikkate kayar; kimin duyulacağını belirleyen mekanizma değişir.",
+      "era": "ag"
+    },
+    {
+      "id": "akis-2006",
+      "year": 2006,
+      "yearLabel": "2006",
+      "title": "Algoritmik akış",
+      "body": "Kronolojik sıralamanın yerini etkileşime göre sıralama alır. İçeriği kimin göreceğine artık bir model karar verir.",
+      "era": "ag"
+    },
+    {
+      "id": "sonsuz-akis-2012",
+      "year": 2012,
+      "yearLabel": "2012",
+      "title": "Sonsuz akış ve otomatik oynatma",
+      "body": "Doğal bitiş noktası olmayan arayüzler yaygınlaşır. Durma kararı kullanıcıya sürekli yeniden bırakılır.",
+      "era": "ag"
+    },
+    {
+      "id": "kimlik-2013",
+      "year": 2013,
+      "yearLabel": "2013",
+      "title": "Beceri kutuplaşmayı artırıyor",
+      "body": "Kahan, sayısal becerisi yüksek kişilerin siyasi konularda daha az değil daha çok yanlı sonuç ürettiğini ölçer.",
+      "era": "ag",
+      "figureId": "kahan"
+    },
+    {
+      "id": "yayilma-2018",
+      "year": 2018,
+      "yearLabel": "2018",
+      "title": "Yalan daha hızlı yayılıyor",
+      "body": "Büyük ölçekli bir çalışma, yanlış haberlerin daha uzağa ve daha hızlı gittiğini, yayılmanın çoğunun gerçek kullanıcılarca yapıldığını gösterir.",
+      "era": "ag",
+      "figureId": "vosoughi"
+    },
+    {
+      "id": "sentetik-2019",
+      "year": 2019,
+      "yearLabel": "2019",
+      "title": "Sentetik video ana akıma giriyor",
+      "body": "Gerçekçi yüz ve ses üretimi erişilebilir hâle gelir. Görüntünün kanıt sayılması varsayımı sorgulanmaya başlar.",
+      "era": "ag"
+    },
+    {
+      "id": "koken-2021",
+      "year": 2021,
+      "yearLabel": "2021",
+      "title": "Köken bilgisi standardı",
+      "body": "Kaydın çekildiği anda imzalanmasını ve düzenleme zincirinin doğrulanabilir kılınmasını amaçlayan açık standartlar yayımlanır.",
+      "era": "ag",
+      "figureId": "wardle"
+    },
+    {
+      "id": "asilama-2022",
+      "year": 2022,
+      "yearLabel": "2022",
+      "title": "Önleyici aşılama denemeleri",
+      "body": "Manipülasyon tekniklerini önceden tanıtan kısa videolar büyük ölçekte denenir ve ölçülebilir bir direnç artışı gösterir.",
+      "era": "ag",
+      "figureId": "van-der-linden"
+    }
+  ]
+}

@@ -1,0 +1,481 @@
+[
+  {
+    "id": "kaynak-ve-dogrulama",
+    "moduleId": "haber",
+    "order": 1,
+    "title": "Kaynak ve doğrulama",
+    "subtitle": "Bir haberin değerini belirleyen şey içeriği değil, nereden geldiği.",
+    "minutes": 8,
+    "keyTerms": ["birincil kaynak", "ikincil kaynak", "tek kaynak", "isimsiz kaynak", "ters görsel arama"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Bir iddianın doğruluğunu genellikle kendi başımıza sınayamayız; sınayabileceğimiz şey kaynağın zinciridir. Birincil kaynak, olayın kendisine ya da orijinal belgeye doğrudan erişimdir: mahkeme kararının metni, kurumun yayımladığı veri seti, olay yerindeki tanık. İkincil kaynak bunları aktarır. Haberlerin büyük kısmı ikincil, çoğu zaman üçüncül aktarımdır ve her aktarımda bilgi biraz daha budanır."
+      },
+      {
+        "kind": "list",
+        "title": "Bir haberi açtığınızda",
+        "items": [
+          "Kim söylüyor? Kurum mu, kişi mi, isimsiz bir kaynak mı?",
+          "Orijinal belge bağlantılı mı? Bağlantı yoksa haber aktarımın aktarımı olabilir.",
+          "Kaç bağımsız kaynak var? Aynı ajanstan beslenen beş haber tek kaynaktır.",
+          "Tarih ne? Eski bir olayın yeniden dolaşıma girmesi en yaygın yanıltma biçimlerinden biri.",
+          "Fotoğraf gerçekten bu olaya mı ait? Ters görsel arama, otuz saniyede cevap verir.",
+          "Alıntı tam mı, kesilmiş mi? Kesilmiş alıntı, uydurma alıntıdan daha etkilidir çünkü doğrulanabilir."
+        ]
+      },
+      {
+        "kind": "text",
+        "title": "İsimsiz kaynak neden var",
+        "body": "İsimsiz kaynak kullanımı kural olarak kötü değildir; bazı bilgiler ancak kaynağı korunursa ortaya çıkar. Ama ciddi gazetecilikte bunun bir bedeli vardır: kaynağın neden isimsiz kaldığı okura açıklanır, kaynağın konuya erişimi tarif edilir ve bilgi mümkünse ikinci bir kaynakla doğrulanır. 'Kaynaklara göre' diye başlayan ve bu üç şeyin hiçbirini yapmayan bir haber, gerçekte hiçbir şey iddia etmemektedir."
+      },
+      {
+        "kind": "text",
+        "title": "Aktarım zincirinde bozulma",
+        "body": "Bilimsel bir çalışma bulgusunu ölçülü bir dille yazar. Üniversitenin basın bülteni bunu biraz keskinleştirir. Haber ajansı bülteni özetler. Bir haber sitesi başlığı tıklanır hâle getirir. Sosyal medyada başlık tek bir cümleye iner. Zincirin sonundaki cümle ile çalışmanın sonucu çoğu zaman farklı iki iddiadır. Her adımda kimse yalan söylemez; yalnızca belirsizlik ifadeleri düşer."
+      },
+      {
+        "kind": "example",
+        "title": "Örnek: bağlantısız haber",
+        "body": "Bir haberde 'yapılan araştırmaya göre' deniyorsa ama araştırmanın adı, yazarı ve yayımlandığı yer verilmiyorsa, o cümle doğrulanamaz. Bunun kötü niyet olması gerekmez; çoğu zaman zaman baskısı ve alan kısıtıdır. Ama okuyucu açısından sonuç aynıdır: doğrulanamayan bir iddia, doğrulanmamış bir iddiadır. Kaynağa bağlantı vermeyi alışkanlık hâline getirmiş yayınlar bu yüzden ayrı bir güven kategorisindedir."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Aynı haber ajansından beslenen beş farklı gazetedeki haber kaç kaynak sayılır?",
+        "options": ["Beş", "İki", "Bir; kaynaklar bağımsız değildir", "Belirsiz"],
+        "answerIndex": 2,
+        "explanation": "Bağımsız doğrulama, ayrı kaynakların ayrı yollardan aynı sonuca varması demektir. Ortak kaynak bu bağımsızlığı ortadan kaldırır."
+      },
+      {
+        "id": "q2",
+        "prompt": "Aktarım zincirinde en sık kaybolan şey nedir?",
+        "options": [
+          "Sayılar",
+          "Belirsizlik ve koşul ifadeleri",
+          "Yazar adları",
+          "Tarih bilgisi"
+        ],
+        "answerIndex": 1,
+        "explanation": "Her adımda 'olabilir', 'sınırlı örneklemde', 'bu koşullarda' gibi ifadeler düşer. Kimse yalan söylemeden iddia sertleşir."
+      },
+      {
+        "id": "q3",
+        "prompt": "Sorumlu bir yayında isimsiz kaynak kullanımı neyi gerektirir?",
+        "options": [
+          "Hiçbir şey; kaynak korunur",
+          "İsimsizliğin gerekçesinin açıklanmasını, kaynağın erişiminin tarif edilmesini ve mümkünse ikinci bir doğrulamayı",
+          "Kaynağın adının sonradan açıklanmasını",
+          "Haberin kısa tutulmasını"
+        ],
+        "answerIndex": 1,
+        "explanation": "İsimsizlik meşru olabilir ama bedeli vardır. Bu üç şeyi yapmayan 'kaynaklara göre' cümlesi doğrulanabilir bir iddia taşımaz."
+      }
+    ]
+  },
+
+  {
+    "id": "cerceveleme",
+    "moduleId": "haber",
+    "order": 2,
+    "title": "Çerçeveleme",
+    "subtitle": "Aynı olguyu anlatmanın iki yolu, iki farklı gerçeklik üretir.",
+    "minutes": 8,
+    "keyTerms": ["çerçeveleme", "sözcük seçimi", "edilgen çatı", "eşdeğerlik çerçevesi", "sorumluluk atfı"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Çerçeveleme, bir olayın hangi yönünün öne çıkarılıp hangisinin arkada bırakılacağıdır. Yalan söylemeden yapılır ve tam da bu yüzden etkilidir. 'Vergi indirimi' ile 'kamu gelirinde kesinti' aynı politikayı tarif eder; 'göçmen dalgası' ile 'sığınma başvurusundaki artış' aynı olguyu. Sözcük seçimi, olguyu değiştirmeden değerlendirmeyi değiştirir."
+      },
+      {
+        "kind": "list",
+        "title": "Çerçevelemenin araçları",
+        "items": [
+          "Sözcük seçimi: 'zam' mı 'fiyat güncellemesi' mi; 'işten çıkarma' mı 'yeniden yapılanma' mı.",
+          "Edilgen çatı: 'polis göstericiyi vurdu' yerine 'gösterici vuruldu' — özne, dolayısıyla sorumlu kaybolur.",
+          "Ölçüt seçimi: aynı ekonomi 'enflasyon' üzerinden kötü, 'istihdam' üzerinden iyi anlatılabilir.",
+          "Karşılaştırma noktası: hangi yılla, hangi ülkeyle kıyaslandığı.",
+          "Kimin sesinin duyulduğu: haberde ilk konuşan ve son konuşan çerçeveyi kurar.",
+          "Görsel: aynı kalabalığın geniş açıdan ve dar açıdan fotoğrafı iki farklı büyüklük iddiasıdır."
+        ]
+      },
+      {
+        "kind": "text",
+        "title": "Eşdeğerlik çerçevesi",
+        "body": "Mantıksal olarak aynı olan iki ifadenin farklı tercihler üretmesine eşdeğerlik çerçevesi denir. Bir ameliyat için 'hastaların %90'ı hayatta kalıyor' denildiğinde kabul oranı, '%10'u ölüyor' denildiğinden belirgin biçimde yüksek çıkar — hekimlerde de. Bilgi tamamen aynıdır; değişen tek şey kayıp mı kazanç mı olarak sunulduğudur. Bu etkinin farkında olmak onu tümüyle ortadan kaldırmaz ama azaltır."
+      },
+      {
+        "kind": "text",
+        "title": "Nesnellik ve denge farkı",
+        "body": "Bir haberin 'dengeli' olması her görüşe eşit yer vermek demektir; 'doğru' olması ise kanıtın ağırlığını yansıtmak. İkisi çatıştığında yapay denge ortaya çıkar: kanıtın ezici çoğunlukla bir yönü desteklediği bir konuda iki tarafı eşit süreyle konuşturmak, izleyiciye gerçekte var olmayan bir tartışma izlenimi verir. İklim biliminde onlarca yıl boyunca yaşanan tam olarak buydu."
+      },
+      {
+        "kind": "example",
+        "title": "Örnek: aynı zam, iki manşet",
+        "body": "Bir ücret düzenlemesi açıklandığında bir yayın 'ücretlere %25 zam' der, diğeri 'ücretler enflasyonun 15 puan altında kaldı'. İkisi de doğrudur; biri nominal değişimi, diğeri reel değişimi anlatır. Hangisinin seçildiği, okuyucunun hangi soruyu sorması gerektiğini de belirler. Manşetleri karşılaştırmak, tek bir manşeti okumaktan her zaman daha bilgilendiricidir."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Edilgen çatı kullanımı bir haberde ne yapar?",
+        "options": [
+          "Metni kısaltır",
+          "Eylemin öznesini, dolayısıyla sorumluyu görünmez kılar",
+          "Haberi daha nesnel yapar",
+          "Zamanı belirsizleştirir"
+        ],
+        "answerIndex": 1,
+        "explanation": "'Vuruldu' cümlesi kimin vurduğunu söylemez. Sorumluluk atfı, dilbilgisel bir tercihle sessizce ortadan kalkar."
+      },
+      {
+        "id": "q2",
+        "prompt": "Eşdeğerlik çerçevesi nedir?",
+        "options": [
+          "İki farklı olayın karşılaştırılması",
+          "Mantıksal olarak aynı olan iki ifadenin farklı tercihler üretmesi",
+          "Her görüşe eşit yer verilmesi",
+          "İki kaynağın doğrulanması"
+        ],
+        "answerIndex": 1,
+        "explanation": "'%90 hayatta kalır' ile '%10 ölür' aynı bilgidir. Kayıp olarak sunulan seçenek sistematik olarak daha az tercih edilir."
+      },
+      {
+        "id": "q3",
+        "prompt": "Yapay denge sorunu nedir?",
+        "options": [
+          "Haberde çok fazla kaynak kullanılması",
+          "Kanıtın ezici çoğunlukla bir yönü desteklediği bir konuda taraflara eşit yer vererek var olmayan bir tartışma izlenimi yaratmak",
+          "Görsel kullanmamak",
+          "Kısa haber yazmak"
+        ],
+        "answerIndex": 1,
+        "explanation": "Dengeli olmak ile doğru olmak farklı ölçütlerdir. Eşit süre, kanıtın ağırlığını yanlış temsil edebilir."
+      }
+    ]
+  },
+
+  {
+    "id": "secme-ve-atlama",
+    "moduleId": "haber",
+    "order": 3,
+    "title": "Seçme, atlama ve gündem",
+    "subtitle": "En güçlü etki, yazılanlarda değil yazılmayanlarda.",
+    "minutes": 8,
+    "keyTerms": ["gündem kurma", "eşik bekçiliği", "haber değeri", "görünmeyen olay", "sıklık yanılsaması"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Medyanın en güçlü etkisi ne düşüneceğinizi söylemek değil, ne hakkında düşüneceğinizi belirlemektir. Buna gündem kurma denir. Bir konu haber olduğu sürece önemli görünür; haber olmayı bıraktığında sorun çözülmüş gibi hissedilir, oysa çoğu zaman yalnızca ilgi bitmiştir. Yayınların yaptığı seçim, hangi olayın gerçekliğe girip hangisinin girmediğini belirler."
+      },
+      {
+        "kind": "list",
+        "title": "Bir olayı haber yapan şeyler",
+        "items": [
+          "Yenilik ve olağandışılık: sıradan olan haber olmaz, bu yüzden istisna kural gibi görünür.",
+          "Yakınlık: coğrafi ve kültürel mesafe arttıkça aynı büyüklükteki olay daha az yer bulur.",
+          "Çatışma: taraflaşabilen konular her zaman daha çok yer alır.",
+          "Kişileştirilebilirlik: yüzü ve adı olan bir hikâye, istatistikten daha çok okunur.",
+          "Görsel malzeme: kamera görüntüsü olmayan olaylar sistematik olarak az haberleşir.",
+          "Ani olma: yavaş gelişen süreçler — iklim, borç birikimi, yoksullaşma — haber döngüsüne uymaz."
+        ]
+      },
+      {
+        "kind": "text",
+        "title": "Sıklık yanılsaması",
+        "body": "Haberlerde çok yer alan bir olay türü, gerçekte olduğundan sık sanılır. Uçak kazaları geniş yer bulur ve uçuş korkusunu besler; oysa kilometre başına en güvenli ulaşım biçimidir. Nadir ama görsel olan şiddet olayları, sık ama sessiz olan sağlık risklerinden daha çok korkutur. Risk algısı olasılıkla değil, akla gelme kolaylığıyla ölçeklenir — ve akla gelme kolaylığını büyük ölçüde medya belirler."
+      },
+      {
+        "kind": "text",
+        "title": "Görünmeyen olaylar",
+        "body": "Bazı büyük olaylar neredeyse hiç haber olmaz: kamera yoksa, çatışma anlatısı kurulamıyorsa, süreç yavaşsa ya da bölge uzaksa. Aynı ölçekteki iki insani krizden biri haftalarca ilk sayfada durur, diğeri hiç görünmez. Bu, bir yayının kötü niyeti değil, haber değeri ölçütlerinin doğrudan sonucudur. Bunu bilmek, bir okurun gündeme kendi bakışını da katmasının tek yoludur."
+      },
+      {
+        "kind": "example",
+        "title": "Örnek: haber olmayan iyileşmeler",
+        "body": "Uzun vadeli iyileşmeler — çocuk ölümlerinin düşmesi, aşılama oranlarının artması, aşırı yoksulluğun azalması — hiçbir gün 'olmaz'. Bunlar yıllar içinde gerçekleşen süreçlerdir ve haber döngüsünün ani olay biçimine uymaz. Sonuç, düzenli haber izleyen bir insanın dünyayı gerçekte olduğundan daha kötüye giden bir yer sanmasıdır. Bu bir yanlış bilgi değil, bir seçim yanlılığıdır."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Gündem kurma etkisi nedir?",
+        "options": [
+          "İnsanlara ne düşüneceklerini söylemek",
+          "Ne hakkında düşünüleceğini belirlemek",
+          "Haberleri sıralamak",
+          "Reklam vermek"
+        ],
+        "answerIndex": 1,
+        "explanation": "Etki görüşü doğrudan değiştirmekten çok, hangi konunun gündemde olduğunu belirlemektir. Haber olmayı bırakan sorun çözülmüş gibi hissedilir."
+      },
+      {
+        "id": "q2",
+        "prompt": "Uçak kazalarının haberlerde geniş yer bulması risk algısını nasıl etkiler?",
+        "options": [
+          "Doğru bir risk algısı üretir",
+          "Akla gelme kolaylığını artırdığı için riski olduğundan büyük gösterir",
+          "Riski küçültür",
+          "Hiçbir etkisi olmaz"
+        ],
+        "answerIndex": 1,
+        "explanation": "Risk algısı olasılıkla değil akla gelme kolaylığıyla ölçeklenir. Nadir ama görsel olaylar, sık ama sessiz risklerden daha çok korkutur."
+      },
+      {
+        "id": "q3",
+        "prompt": "Uzun vadeli iyileşmelerin haber olmamasının sebebi nedir?",
+        "options": [
+          "Önemsiz olmaları",
+          "Yavaş süreçlerin, ani olay biçimine dayanan haber değeri ölçütlerine uymaması",
+          "Ölçülememeleri",
+          "Yayınların sansürü"
+        ],
+        "answerIndex": 1,
+        "explanation": "Haber, olan bir şeye ihtiyaç duyar. Yıllara yayılan bir düşüş hiçbir gün 'olmaz'; bu yüzden sistematik olarak görünmez kalır."
+      }
+    ]
+  },
+
+  {
+    "id": "sayilar-haberde",
+    "moduleId": "haber",
+    "order": 4,
+    "title": "Haberde sayılar",
+    "subtitle": "Sayı, cümleye güvenilirlik katar — doğru olmasa bile.",
+    "minutes": 9,
+    "keyTerms": ["seçilmiş aralık", "göreli risk", "mutlak sayı", "anket okuma", "yuvarlama"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Bir cümleye sayı eklendiğinde inandırıcılığı artar; bu etki sayının doğruluğundan bağımsızdır. Haberlerdeki sayıların önemli bir kısmı yanlış değil, eksiktir: payda verilmez, karşılaştırma noktası seçilmiştir, göreli artış mutlak sayı olmadan sunulur. Okurun işi sayıyı hesaplamak değil, hangi bilginin eksik bırakıldığını fark etmektir."
+      },
+      {
+        "kind": "chart",
+        "chartId": "secme-penceresi"
+      },
+      {
+        "kind": "list",
+        "title": "Sayı gördüğünüzde sorulacaklar",
+        "items": [
+          "Kaç kişide, kaç olayda? Payda verilmemişse yüzde tek başına anlamsızdır.",
+          "Neye göre? Karşılaştırma dönemi ve karşılaştırılan ülke bir veri değil, bir seçimdir.",
+          "Göreli mi mutlak mı? 'Riski iki katına çıkarır' cümlesi riskin ne kadar olduğunu söylemez.",
+          "Anket ise: kaç kişiye, nasıl soruldu, hata payı ne, kaç kişi cevap verdi?",
+          "Kim ölçtü ve kim finanse etti? Bu, sonucu geçersiz kılmaz ama daha dikkatli okumayı gerektirir.",
+          "Grafik varsa: eksen sıfırdan mı başlıyor, aralık neden bu tarihte başlıyor?"
+        ]
+      },
+      {
+        "kind": "text",
+        "title": "Seçilmiş aralık",
+        "body": "Dalgalanan bir zaman serisinde, uygun bir başlangıç ve bitiş tarihi seçilerek neredeyse istenen her eğilim gösterilebilir. Bu, veriyi çarpıtmadan yapılır: gösterilen bütün sayılar doğrudur. Bu yüzden bir grafiğe bakarken ilk sorulacak şey verinin kendisi değil, aralığın kim tarafından ve neye göre seçildiğidir. Uzun seriyi görmek, çoğu zaman kısa pencerenin anlattığı hikâyeyi ortadan kaldırır."
+      },
+      {
+        "kind": "text",
+        "title": "Yuvarlama ve kesinlik gösterisi",
+        "body": "Ters yönde bir hile de vardır: gereğinden fazla ondalık basamak, ölçümde olmayan bir kesinlik izlenimi verir. Hata payı üç puan olan bir ankette bir adayın oyunu 'yüzde 34,7' diye vermek, virgülden sonrasının anlamsız olduğu bir sayıya sahte bir hassaslık katar. İyi bir habercilik, sayıyı ölçümün gerçek kesinliğine yuvarlar ve belirsizliği açıkça yazar."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Bir zaman serisinden istenen eğilimin çıkarılabilmesi neyle mümkün olur?",
+        "options": [
+          "Veriyi değiştirerek",
+          "Başlangıç ve bitiş tarihini uygun seçerek — hiçbir sayıyı çarpıtmadan",
+          "Ortalamayı kullanarak",
+          "Ölçeği büyüterek"
+        ],
+        "answerIndex": 1,
+        "explanation": "Dalgalanan bir seride pencere seçimi eğilimin yönünü ters çevirebilir. Gösterilen bütün sayılar doğru olduğu için fark edilmesi zordur."
+      },
+      {
+        "id": "q2",
+        "prompt": "Hata payı üç puan olan bir ankette 'yüzde 34,7' ifadesinin sorunu nedir?",
+        "options": [
+          "Sayı çok küçük",
+          "Ölçümde olmayan bir kesinlik izlenimi verir",
+          "Yuvarlama yanlış yapılmış",
+          "Yüzde işareti eksik"
+        ],
+        "answerIndex": 1,
+        "explanation": "Belirsizlik üç puanken virgülden sonrası anlamsızdır. Fazla ondalık basamak, sahte bir hassaslık gösterisidir."
+      },
+      {
+        "id": "q3",
+        "prompt": "'Vakalar iki katına çıktı' cümlesinde eksik olan nedir?",
+        "options": [
+          "Tarih",
+          "Mutlak sayılar: ikiden dörde mi, iki milyondan dört milyona mı",
+          "Kaynak",
+          "Coğrafi bilgi"
+        ],
+        "answerIndex": 1,
+        "explanation": "Göreli değişim, taban olmadan yorumlanamaz. Küçük sayılar yüzdesel olarak kolayca büyük hareket eder."
+      }
+    ]
+  },
+
+  {
+    "id": "propaganda-tarihi",
+    "moduleId": "ikna",
+    "order": 1,
+    "title": "Propaganda: bir tekniğin tarihi",
+    "subtitle": "Yöntem yüz yıldır aynı; değişen yalnızca dağıtım kanalı.",
+    "minutes": 9,
+    "keyTerms": ["propaganda", "tekrar", "düşman imgesi", "sansür", "kendi kendine sansür"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Propaganda sözcüğü başlangıçta yalnızca 'yaymak' anlamına geliyordu ve olumsuz bir yan taşımıyordu. Birinci Dünya Savaşı'nda devletler ilk kez kitlesel ölçekte örgütlü ikna kampanyaları yürüttü ve terim bugünkü anlamını kazandı. Savaş sonrasında bu tekniklerin barış zamanında da işe yaradığı görüldü; reklamcılık ve halkla ilişkiler mesleği doğrudan bu birikimden çıktı."
+      },
+      {
+        "kind": "list",
+        "title": "Tekrarlanan teknikler",
+        "items": [
+          "Tekrar: bir iddia yeterince tekrarlanırsa tanıdıklık, doğruluk hissi üretir.",
+          "Basitleştirme: karmaşık bir sorunu tek bir sebebe ve tek bir sorumluya indirgemek.",
+          "Düşman imgesi: 'biz' tanımının 'onlar' üzerinden kurulması.",
+          "Bandwagon: 'herkes böyle düşünüyor' izlenimi vererek aykırı kalmayı maliyetli hâle getirmek.",
+          "Tanıklık: itibarlı ya da tanınan bir kişiyi iddianın önüne koymak.",
+          "Sıradan insan: konuşanı halktan biri gibi sunarak eleştirel mesafeyi düşürmek."
+        ]
+      },
+      {
+        "kind": "text",
+        "title": "Sansür ve boğma",
+        "body": "Klasik sansür bilgiyi engeller ve bu yüzden görünürdür; engellendiği fark edilir. Modern yöntem çoğu zaman farklıdır: bilgi engellenmez, gürültüye boğulur. Aynı olay hakkında birbiriyle çelişen onlarca anlatı dolaşıma sokulduğunda okur bir süre sonra hiçbirine güvenmez hâle gelir. Amaç belirli bir yalana inandırmak değil, gerçeğin bilinebileceğine olan güveni aşındırmaktır. Kayıtsızlık, ikna kadar işe yarar."
+      },
+      {
+        "kind": "text",
+        "title": "Kendi kendine sansür",
+        "body": "En etkili kısıt, uygulanması gerekmeyen kısıttır. Bir gazetecinin hangi haberin sorun çıkaracağını önceden öğrenmesi ve o habere hiç başlamaması, herhangi bir yasaktan daha verimlidir; kimse bir şey yasaklamamıştır, haber de yazılmamıştır. Bu mekanizma medya sahipliği yapısı, reklam bağımlılığı ve hukuki risk üzerinden işler ve dışarıdan neredeyse görünmez."
+      },
+      {
+        "kind": "example",
+        "title": "Örnek: tekrarın gücü",
+        "body": "Deneyler, daha önce görülmüş bir ifadenin — yanlış olsa bile — ikinci karşılaşmada daha doğru değerlendirildiğini gösteriyor. Buna gerçeklik yanılsaması deniyor ve kişinin konu hakkında doğru bilgiye sahip olması bile etkiyi tümüyle ortadan kaldırmıyor. Bu, yanlış bilgiyi tekrarlayarak düzeltmenin neden riskli olduğunu da açıklıyor: düzeltme, tekrarın kendisini de taşır."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Bilgiyi gürültüye boğma yönteminin amacı nedir?",
+        "options": [
+          "Belirli bir yalana inandırmak",
+          "Gerçeğin bilinebileceğine olan güveni aşındırmak",
+          "Haberleri hızlandırmak",
+          "Kaynakları korumak"
+        ],
+        "answerIndex": 1,
+        "explanation": "Çelişen onlarca anlatı, okuru hiçbirine güvenmez hâle getirir. Kayıtsızlık, hedef açısından ikna kadar işe yarar."
+      },
+      {
+        "id": "q2",
+        "prompt": "Gerçeklik yanılsaması nedir?",
+        "options": [
+          "Yanlış hatırlama",
+          "Daha önce görülmüş bir ifadenin, yanlış olsa bile ikinci karşılaşmada daha doğru değerlendirilmesi",
+          "Görsel yanılsama",
+          "Kaynak karıştırma"
+        ],
+        "answerIndex": 1,
+        "explanation": "Tanıdıklık doğruluk hissi üretir. Bu yüzden yanlış bilgiyi tekrarlayarak düzeltmek riskli olabilir."
+      },
+      {
+        "id": "q3",
+        "prompt": "Kendi kendine sansür neden dışarıdan görünmez?",
+        "options": [
+          "Gizli yapıldığı için",
+          "Hiçbir yasak uygulanmaz; haber hiç yazılmadığı için ortada engellenmiş bir şey görünmez",
+          "Yasal olduğu için",
+          "Yalnızca küçük yayınlarda görüldüğü için"
+        ],
+        "answerIndex": 1,
+        "explanation": "Yazılmayan haberin eksikliği fark edilmez. Mekanizma sahiplik yapısı, reklam bağımlılığı ve hukuki risk üzerinden işler."
+      }
+    ]
+  },
+
+  {
+    "id": "reklam-ve-halkla-iliskiler",
+    "moduleId": "ikna",
+    "order": 2,
+    "title": "Reklam ve halkla ilişkiler",
+    "subtitle": "En iyi reklam, reklam gibi görünmeyendir.",
+    "minutes": 8,
+    "keyTerms": ["halkla ilişkiler", "yerleşik reklam", "etkileyici pazarlama", "kuşku üretimi", "sponsorlu içerik"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Reklam açıkça reklam olduğunu söyler ve okur ona göre bir savunma kurar. Halkla ilişkiler ise mesajı haber, uzman görüşü ya da sıradan bir kullanıcı deneyimi kılığında dolaştırır. İkincisi çok daha etkilidir, çünkü eleştirel mesafe kurulmadan geçer. Bir haberin arkasında bir basın bülteni olup olmadığını anlamak, bugün medya okuryazarlığının en pratik becerilerinden biridir."
+      },
+      {
+        "kind": "list",
+        "title": "Tanınabilir işaretler",
+        "items": [
+          "Haberde yalnızca tek bir şirketin ürünü övülüyor ve rakip karşılaştırması yok.",
+          "Alıntılar bir kurumun sözcüsünden geliyor ve bağımsız uzman görüşü bulunmuyor.",
+          "'Araştırmaya göre' deniyor ama araştırmayı finanse eden taraf yazılmıyor.",
+          "Görseller profesyonel ürün fotoğrafı; kaynağı belirtilmemiş.",
+          "Metin, bir basın bülteninin cümle yapısını neredeyse aynen taşıyor.",
+          "Sponsorlu içerik etiketi var ama küçük ve gri; yasal olarak yeterli, algısal olarak değil."
+        ]
+      },
+      {
+        "kind": "text",
+        "title": "Kuşku üretimi",
+        "body": "Bir bulguyu çürütmek zorsa, çürütmek gerekmez; tartışmalı göstermek yeter. Tütün sektörünün onlarca yıl uyguladığı ve sonradan belgelenen strateji buydu: sigara zararsızdır demek yerine, 'bilim henüz kesin değil' demek. Aynı yöntem kurşunlu benzin, asbest ve iklim tartışmalarında da kullanıldı. Hedef ikna değil erteleme; kuşku, düzenlemeyi geciktirdiği sürece işini görür."
+      },
+      {
+        "kind": "text",
+        "title": "Etkileyici pazarlama",
+        "body": "Bir ürünü tanıdığınız birinin önermesi, reklamdan çok daha etkilidir. Sosyal medyada bu ilişki ölçeklenebilir hâle geldi: takipçileriyle kişisel bir bağ kurmuş kişiler, ticari mesajı o bağın içinden iletiyor. Birçok ülkede bu içeriklerin açıkça etiketlenmesi zorunlu; uygulamada etiketler çoğu zaman görünürlüğü en düşük yere konuyor. Bir öneriyle karşılaştığınızda sorulacak soru basit: bu kişi bunu söylediği için ödeme alıyor mu?"
+      },
+      {
+        "kind": "example",
+        "title": "Örnek: kahvaltının icadı",
+        "body": "1920'lerde bir domuz eti üreticisi, halkla ilişkiler danışmanına satışları artırmasını söyledi. Danışman doğrudan reklam vermek yerine hekimlere 'doyurucu bir kahvaltı sağlıklı mıdır' diye sordu, olumlu cevapları topladı ve bunu haber olarak dağıttı. Sonuç, bir ürün reklamı değil, bir beslenme normu oldu. En etkili kampanyalar ürünü değil, ürünün içinde bulunduğu alışkanlığı satar."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Halkla ilişkiler mesajı reklamdan neden daha etkilidir?",
+        "options": [
+          "Daha pahalı olduğu için",
+          "Haber ya da uzman görüşü kılığında geldiği için eleştirel mesafe kurulmadan geçer",
+          "Daha kısa olduğu için",
+          "Yasal zorunluluk olduğu için"
+        ],
+        "answerIndex": 1,
+        "explanation": "Reklam olduğunu bildiğimiz mesaja karşı savunma kurarız. Kılık değiştirmiş mesaj bu savunmayı devreye sokmaz."
+      },
+      {
+        "id": "q2",
+        "prompt": "Kuşku üretimi stratejisinin hedefi nedir?",
+        "options": [
+          "Bulguyu çürütmek",
+          "Bulguyu tartışmalı göstererek düzenlemeyi geciktirmek",
+          "Yeni araştırma finanse etmek",
+          "Kamuoyunu bilgilendirmek"
+        ],
+        "answerIndex": 1,
+        "explanation": "Çürütmek zor, tartışmalı göstermek kolaydır. Kuşku, karar almayı geciktirdiği sürece amacına ulaşır."
+      },
+      {
+        "id": "q3",
+        "prompt": "Bir öneriyle karşılaştığınızda sorulacak en pratik soru nedir?",
+        "options": [
+          "Ürün kaliteli mi?",
+          "Bu kişi bunu söylediği için ödeme alıyor mu?",
+          "Kaç takipçisi var?",
+          "Ne zaman paylaşıldı?"
+        ],
+        "answerIndex": 1,
+        "explanation": "Ticari ilişkinin varlığı, öneriyi geçersiz kılmaz ama nasıl okunacağını belirler. Etiketler çoğu zaman görünürlüğü en düşük yere konur."
+      }
+    ]
+  }
+]

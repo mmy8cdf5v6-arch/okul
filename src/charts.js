@@ -2032,5 +2032,120 @@
             ? "Yıldıza bu kadar yakın bir gezegen büyük olasılıkla gelgit kilitlidir: bir yüzü daima gündüz, diğeri daima gece."
             : "Kuşak yıldızdan uzaklaştıkça gezegen bulmak zorlaşır; geçiş yöntemi yakın yörüngeleri çok daha kolay yakalar.") };
       }
+    },
+
+    "secme-penceresi": {
+      title: "Aynı veri, seçilmiş pencere",
+      note: "Veri tek bir seri; değişen yalnızca hangi aralığın gösterildiği. Bir zaman serisinde başlangıç ve bitiş tarihi bir veri değil, bir argümandır.",
+      controls: [
+        { key: "b", label: "Başlangıç yılı", min: 0, max: 24, step: 1, def: 14,
+          fmt: function (v) { return (1995 + v) + ""; } },
+        { key: "u", label: "Pencere uzunluğu", min: 5, max: 30, step: 1, def: 6,
+          fmt: function (v) { return v + " yıl"; } }
+      ],
+      draw: function (p) {
+        var N = 30, i;
+        var seri = function (i2) { return 50 + 1.6 * i2 + 9 * Math.sin(i2 * 0.9) + 5 * Math.sin(i2 * 2.1 + 1); };
+        var b = p.b, u = Math.min(p.u, N - b);
+        var lo = 20, hi = 120, Y = function (v) { return (v - lo) / (hi - lo); };
+        var pts = [];
+        for (i = 0; i < N; i++) pts.push([i / (N - 1), Y(seri(i))]);
+        /* Pencere içindeki en küçük kareler eğimi */
+        var n = u, sx = 0, sy = 0, sxy = 0, sxx = 0;
+        for (i = b; i < b + u; i++) { sx += i; sy += seri(i); sxy += i * seri(i); sxx += i * i; }
+        var egim = (n * sxy - sx * sy) / (n * sxx - sx * sx);
+        var kesme = (sy - egim * sx) / n;
+
+        var s = frame("Yıl", "Ölçülen değer");
+        s += gRect(b / (N - 1), 0, (b + u - 1) / (N - 1), 1, { c: "var(--accent)", o: 0.10, r: 0 });
+        s += gPoly(pts, { c: "var(--rule)", w: 1.8 });
+        s += gPoly(pts.slice(b, b + u), { c: "var(--accent)", w: 2.6 });
+        s += gLine(b / (N - 1), Y(egim * b + kesme), (b + u - 1) / (N - 1), Y(egim * (b + u - 1) + kesme),
+          { c: egim >= 0 ? "var(--ok)" : "var(--no)", w: 2.2, d: "5 3" });
+        [0, 10, 20].forEach(function (v) { s += gTxt(v / (N - 1), 0, (1995 + v) + "", { a: "middle", dy: 12, s: 9 }); });
+        var tum = (seri(N - 1) - seri(0)) / (N - 1);
+        return { svg: s, text: (1995 + b) + "-" + (1995 + b + u - 1) + " penceresinde eğilim yılda " +
+          (egim >= 0 ? "+" : "") + r1(egim) + ". Bütün seride ise yılda " + (tum >= 0 ? "+" : "") + r1(tum) + ". " +
+          (egim * tum < 0
+            ? "İki eğilim zıt yönde: aynı veriden birbirini çürüten iki manşet çıkarılabilir."
+            : "Bu pencerede yön genel eğilimle aynı — ama pencereyi kaydırınca ters çevirmek çoğu zaman mümkün.") };
+      }
+    },
+
+    "yalan-ve-duzeltme": {
+      title: "Düzeltme neden yetişemez",
+      note: "Şematik bir yayılma modeli; ölçülmüş veri değildir. Amaç, gecikmenin ve erişim farkının birlikte nasıl kalıcı bir açık bıraktığını göstermek.",
+      controls: [
+        { key: "g", label: "Düzeltmenin gecikmesi", min: 0, max: 20, step: 1, def: 6,
+          fmt: function (v) { return v + " gün"; } },
+        { key: "h", label: "Düzeltmenin erişim gücü", min: 10, max: 100, step: 10, def: 40,
+          fmt: function (v) { return "haberin %" + v + "'i"; } }
+      ],
+      draw: function (p) {
+        var T = 30, h = p.h / 100, i;
+        var yalan = function (t) { return 1 / (1 + Math.exp(-0.55 * (t - 8))); };
+        var duz = function (t) { return h / (1 + Math.exp(-0.55 * (t - 8 - p.g))); };
+        var A = [], B = [];
+        for (i = 0; i <= 60; i++) {
+          var t = (T * i) / 60;
+          A.push([i / 60, yalan(t)]);
+          B.push([i / 60, duz(t)]);
+        }
+        var s = frame("Gün", "Ulaşılan kitle");
+        s += gArea(A.concat(B.slice().reverse()), { c: "var(--no)", o: 0.16 });
+        s += gPoly(A, { c: "var(--no)", w: 2.4 });
+        s += gPoly(B, { c: "var(--ok)", w: 2.4 });
+        s += gTxt(0.99, yalan(T), "haber", { a: "end", dy: -5, c: "var(--no)", b: 1, s: 9 });
+        s += gTxt(0.99, duz(T), "düzeltme", { a: "end", dy: 12, c: "var(--ok)", b: 1, s: 9 });
+        [10, 20].forEach(function (v) { s += gTxt(v / T, 0, v + "", { a: "middle", dy: 12, s: 9 }); });
+        var son = duz(T) / yalan(T);
+        return { svg: s, text: "Otuz günün sonunda haberi görenlerin %" + r0(son * 100) +
+          "'i düzeltmeyi de görmüş. Kalan %" + r0((1 - son) * 100) + " için ilk anlatı hâlâ tek bilgi. " +
+          (p.g === 0
+            ? "Düzeltme aynı gün çıksa bile erişim farkı açığı kapatmıyor."
+            : "Gecikmeyi sıfırlamak açığı küçültür ama kapatmaz: asıl belirleyici olan erişim gücü.") +
+          " Kırmızı alan, yalnızca ilk anlatıyı görmüş kitleyi gösteriyor." };
+      }
+    },
+
+    "yanki-odasi": {
+      title: "Benzerini göstermek görüşü nasıl kutuplaştırır",
+      note: "Şematik bir model: her adımda kişi kendi konumuna yakın içerikle karşılaşırsa o yöne biraz daha kayıyor. Gerçek platformlar çok daha karmaşıktır ama mekanizma bu.",
+      controls: [{ key: "h", label: "Öneri sisteminin benzerlik tercihi", min: 0, max: 100, step: 10, def: 50, fmt: pctS }],
+      draw: function (p) {
+        var K = 41, ADIM = 40, hh = p.h / 100, i, t;
+        var x = [];
+        for (i = 0; i < K; i++) x.push(-1 + (2 * i) / (K - 1));
+        for (t = 0; t < ADIM; t++) {
+          for (i = 0; i < K; i++) {
+            var v = x[i] + 0.12 * hh * x[i] * (1 - x[i] * x[i]) * 4;
+            x[i] = Math.max(-1, Math.min(1, v));
+          }
+        }
+        var KOVA = 21, kova = [];
+        for (i = 0; i < KOVA; i++) kova.push(0);
+        for (i = 0; i < K; i++) {
+          var j = Math.min(KOVA - 1, Math.max(0, Math.round(((x[i] + 1) / 2) * (KOVA - 1))));
+          kova[j] += 1;
+        }
+        var en = Math.max.apply(null, kova);
+        var s = frame("", "Kişi sayısı");
+        for (i = 0; i < KOVA; i++) {
+          if (!kova[i]) continue;
+          var cx = i / (KOVA - 1);
+          s += gRect(cx - 0.019, 0, cx + 0.019, kova[i] / en, { c: "var(--accent)", o: 0.8 });
+        }
+        s += gLine(0.5, 0, 0.5, 1, { c: "var(--rule)", w: 1.2, d: "3 3" });
+        s += gTxt(0.02, 0, "◀ bir uç", { a: "start", dy: 13, s: 8.5 });
+        s += gTxt(0.5, 0, "görüş konumu", { a: "middle", dy: 13, s: 8.5 });
+        s += gTxt(0.98, 0, "öbür uç ▶", { a: "end", dy: 13, s: 8.5 });
+        var uc = kova[0] + kova[1] + kova[KOVA - 1] + kova[KOVA - 2];
+        var orta = kova[9] + kova[10] + kova[11];
+        return { svg: s, text: p.h === 0
+          ? "Benzerlik tercihi yokken dağılım başladığı gibi kalıyor: her görüş konumunda insan var, orta doldurulmuş durumda."
+          : "Bu ayarda kırk bir kişiden " + uc + " tanesi uçlarda, " + orta + " tanesi ortada. " +
+            "Kimsenin fikri zorla değiştirilmedi; herkese yalnızca kendine benzeyen içerik gösterildi. " +
+            "Kutuplaşmayı üreten şey içeriğin kendisi değil, dağıtım kuralı." };
+      }
     }
   };

@@ -138,5 +138,19 @@
     "questions": 36,
     "charts": 5,
     "file": "courses/astronomi.json"
+  },
+  {
+    "id": "medya",
+    "title": "Medya okuryazarlığı",
+    "subtitle": "Haber, ikna, akış",
+    "description": "Kaynak doğrulamadan çerçevelemeye, propaganda tekniklerinden öneri sistemlerine: bir haberin nasıl kurulduğunu ve dikkatinizin nasıl fiyatlandığını öğren.",
+    "icon": "📰",
+    "accent": "#a32c4e",
+    "accentDark": "#f2a0b4",
+    "category": "gunumuz",
+    "lessons": 12,
+    "questions": 36,
+    "charts": 3,
+    "file": "courses/medya.json"
   }
 ]
