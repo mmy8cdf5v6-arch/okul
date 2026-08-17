@@ -1,4 +1,13 @@
   /* ================= kütüphane ================= */
+
+  /* Kütüphanedeki gruplar ve gösterim sırası. Kurs künyesindeki `category`
+     buraya bakar; üretilen kurslar daima kendi grubuna düşer. */
+  var CATEGORIES = [
+    ["gunumuz", "Bugünü anlamak"],
+    ["klasik", "Klasikler"],
+    ["senin", "Senin oluşturdukların"]
+  ];
+
   function renderLibrary() {
     head("Okul", "Ne öğrenmek istiyorsun?",
       "Bir konu yaz, kurs oluşsun. Oluşturduğun her kurs kütüphanende kalır.");
@@ -78,9 +87,23 @@
       lib.appendChild(el("p", { class: "card center small muted",
         text: loadError ? "Kurs listesi yüklenemedi: " + loadError : "Kütüphane boş. Yukarıya bir konu yazarak başla." }));
     } else {
-      var grid = el("div", { class: "grid" });
-      entries.forEach(function (e) { grid.appendChild(courseCard(e)); });
-      lib.appendChild(grid);
+      /* Kurs sayısı arttıkça düz liste okunmuyor; kategorilere ayır.
+         Tek küme kalıyorsa başlığa gerek yok. */
+      var groups = CATEGORIES.map(function (pair) {
+        return [pair[1], entries.filter(function (e) {
+          return e.source === "generated" ? pair[0] === "senin" : (e.category || "gunumuz") === pair[0];
+        })];
+      }).filter(function (g) { return g[1].length; });
+
+      groups.forEach(function (g, i) {
+        if (groups.length > 1) {
+          lib.appendChild(el("p", { class: "label muted", style: "margin:" + (i ? "1.6rem" : "0") + " 0 .6rem",
+            text: g[0] + " · " + g[1].length }));
+        }
+        var grid = el("div", { class: "grid" });
+        g[1].forEach(function (e) { grid.appendChild(courseCard(e)); });
+        lib.appendChild(grid);
+      });
     }
     out.appendChild(lib);
 

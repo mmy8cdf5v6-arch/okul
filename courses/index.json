@@ -10,7 +10,8 @@
     "lessons": 35,
     "questions": 105,
     "charts": 21,
-    "file": "courses/iktisat.json"
+    "file": "courses/iktisat.json",
+    "category": "gunumuz"
   },
   {
     "id": "finans",
@@ -20,9 +21,24 @@
     "icon": "🏦",
     "accent": "#2b5d8c",
     "accentDark": "#7fb3e0",
+    "category": "gunumuz",
     "lessons": 12,
     "questions": 36,
     "charts": 6,
     "file": "courses/finans.json"
+  },
+  {
+    "id": "istatistik",
+    "title": "İstatistik okuryazarlığı",
+    "subtitle": "Sayılarla kandırılmamak",
+    "description": "Ortalamanın gizlediği, grafiğin abarttığı, anketin ölçemediği ve korelasyonun kanıtlamadığı şeyler — örneklerle ve oynanabilir grafiklerle.",
+    "icon": "📊",
+    "accent": "#6a3fa0",
+    "accentDark": "#c3a0ec",
+    "category": "gunumuz",
+    "lessons": 12,
+    "questions": 36,
+    "charts": 5,
+    "file": "courses/istatistik.json"
   }
 ]

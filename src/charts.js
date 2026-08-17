@@ -9,6 +9,17 @@
   function pctS(v) { return "%" + v; }
   function r0(v) { return Math.round(v); }
   function r1(v) { return (Math.round(v * 10) / 10).toFixed(1); }
+  function r2(v) { return (Math.round(v * 100) / 100).toFixed(2); }
+
+  /* Standart normal dağılımın birikimli olasılığı (Abramowitz & Stegun 26.2.17,
+     mutlak hatası 7.5e-8). Güven aralığı ve p-değeri grafikleri kullanıyor. */
+  function ncdf(z) {
+    var t = 1 / (1 + 0.2316419 * Math.abs(z));
+    var d = 0.3989422804014327 * Math.exp((-z * z) / 2);
+    var p = d * t * (0.319381530 + t * (-0.356563782 + t * (1.781477937 +
+      t * (-1.821255978 + t * 1.330274429))));
+    return z > 0 ? 1 - p : p;
+  }
 
   function gLine(x1, y1, x2, y2, o) {
     o = o || {};
@@ -832,6 +843,175 @@
           : "Yılda %7 brüt getiride birikim " + Y + " yılda " + r1(gEnd) + " katına çıkardı; %" +
             (p.f / 100).toFixed(2) + " ücretle " + r1(nEnd) + " katına çıkıyor. Ücret birikimin %" +
             r1(loss) + "'ini götürüyor: kırmızı alan onun payı." };
+      }
+    },
+
+    "eksen-hilesi": {
+      title: "Aynı veri, kesilmiş eksen",
+      note: "Sütun grafiğinde eksen sıfırdan başlamalıdır. Başlamıyorsa, ilk bakılacak yer verinin kendisi değil eksenin dibidir.",
+      controls: [{ key: "t", label: "Y ekseni nereden başlıyor", min: 0, max: 99, step: 3, def: 0,
+        fmt: function (v) { return v === 0 ? "sıfırdan" : v + "'den"; } }],
+      draw: function (p) {
+        var vals = [100, 101, 102, 103, 104, 106], lo = p.t, hi = 108, i;
+        var s = frame("Aylar", "Satış");
+        for (i = 0; i < vals.length; i++) {
+          var x = 0.09 + i * 0.164, h = (vals[i] - lo) / (hi - lo);
+          s += gRect(x - 0.055, 0, x + 0.055, h, { c: "var(--accent)", o: 0.85 });
+          s += gTxt(x, h, r0(vals[i]) + "", { a: "middle", dy: -5, s: 8.5, c: "var(--muted)" });
+        }
+        s += gTxt(0, 0, r0(lo) + "", { a: "end", dx: -5, dy: 3, s: 9 });
+        var real = vals[5] / vals[0], seen = (vals[5] - lo) / (vals[0] - lo);
+        return { svg: s, text: lo === 0
+          ? "Eksen sıfırdan başlıyor: son ay ilk ayın " + r2(real) + " katı ve grafik de bunu gösteriyor."
+          : "Gerçekte artış %" + r0((real - 1) * 100) + ". Ama eksen " + r0(lo) + "'den başladığı için son sütun " +
+            "ilkinin " + r1(seen) + " katı görünüyor: göze çarpan büyüklük gerçek farkın " +
+            r1(seen / real) + " katı." };
+      }
+    },
+
+    "ortalama-medyan": {
+      title: "Ortalama mı, medyan mı?",
+      note: "Çarpık dağılımlarda ortalama uçtaki birkaç değerin peşinden gider; medyan yerinde durur. Gelir haberlerinde hangisinin verildiğine bak.",
+      controls: [{ key: "z", label: "En yüksek gelir", min: 1, max: 30, step: 1, def: 1,
+        fmt: function (v) { return v === 1 ? "diğerleri gibi" : v + "× daha yüksek"; } }],
+      draw: function (p) {
+        var base = [22, 24, 25, 26, 28, 29, 30, 31, 32, 34, 35, 36, 38, 40, 42, 45, 48, 52, 58, 70];
+        var vals = base.slice(0, 19).concat([70 * p.z]), i;
+        var sum = 0;
+        for (i = 0; i < vals.length; i++) sum += vals[i];
+        var mean = sum / vals.length, med = (vals[9] + vals[10]) / 2;
+        var below = vals.filter(function (v) { return v < mean; }).length;
+        var ceil = 120;                       // tavan: uçtaki sütun kırpılır ve etiketlenir
+        var s = frame("20 hane, gelire göre sıralı", "Bin lira");
+        for (i = 0; i < vals.length; i++) {
+          var x = 0.03 + i * 0.0495, over = vals[i] > ceil;
+          var h = Math.min(1, vals[i] / ceil);
+          s += gRect(x - 0.019, 0, x + 0.019, h, { c: over ? "var(--no)" : "var(--accent)", o: over ? 0.75 : 0.55 });
+          if (over) s += gTxt(x, h, r0(vals[i]) + "↑", { a: "end", dy: -5, s: 8.5, b: 1, c: "var(--no)" });
+        }
+        s += gLine(0, mean / ceil, 1, mean / ceil, { c: "var(--no)", w: 1.6, d: "5 3" });
+        s += gTxt(0.01, mean / ceil, "ortalama " + r0(mean), { a: "start", dy: -5, c: "var(--no)", s: 9, b: 1 });
+        s += gLine(0, med / ceil, 1, med / ceil, { c: "var(--ok)", w: 1.6, d: "5 3" });
+        s += gTxt(0.99, med / ceil, "medyan " + r1(med), { a: "end", dy: 12, c: "var(--ok)", s: 9, b: 1 });
+        return { svg: s, text: p.z === 1
+          ? "Dağılım dengeliyken ortalama (" + r0(mean) + ") ile medyan (" + r1(med) + ") birbirine yakın; ikisi de aynı hikâyeyi anlatır."
+          : "Tek hane " + p.z + " kat kazanınca ortalama " + r0(mean) + " bin liraya çıkıyor, medyan " + r1(med) +
+            " bin lirada kalıyor. Hanelerin %" + r0((below / vals.length) * 100) + "'i ortalamanın altında." };
+      }
+    },
+
+    "guven-araligi": {
+      title: "Örneklem büyüdükçe belirsizlik daralır",
+      note: "Belirsizlik örneklemin kareköküyle azalır: hatayı yarıya indirmek için örneklemi dört katına çıkarmak gerekir.",
+      controls: [
+        { key: "n", label: "Kaç kişiye soruldu", min: 25, max: 2000, step: 25, def: 1000,
+          fmt: function (v) { return v + " kişi"; } },
+        { key: "p", label: "Ölçülen oran", min: 5, max: 50, step: 5, def: 50, fmt: pctS }
+      ],
+      draw: function (p) {
+        var pr = p.p / 100, N = 2000, i;
+        var half = function (n) { return 1.96 * Math.sqrt((pr * (1 - pr)) / n); };
+        var yc = 0.5, scale = 2.2;            // grafik ekseni: oranın ±%22'lik bandı
+        var up = [], dn = [];
+        for (i = 0; i <= 70; i++) {
+          var n = 25 + ((N - 25) * i) / 70;
+          up.push([(n - 25) / (N - 25), Math.min(1, yc + half(n) * scale)]);
+          dn.push([(n - 25) / (N - 25), Math.max(0, yc - half(n) * scale)]);
+        }
+        var s = frame("Örneklem büyüklüğü", "Ölçülen oran");
+        s += gArea(up.concat(dn.slice().reverse()), { c: "var(--accent)", o: 0.20 });
+        s += gLine(0, yc, 1, yc, { c: "var(--accent)", w: 2 });
+        var xn = (p.n - 25) / (N - 25), h = half(p.n);
+        s += gLine(xn, Math.max(0, yc - h * scale), xn, Math.min(1, yc + h * scale), { c: "var(--ink)", w: 2 });
+        s += gDot(xn, Math.min(1, yc + h * scale), { c: "var(--ink)", r: 3 });
+        s += gDot(xn, Math.max(0, yc - h * scale), { c: "var(--ink)", r: 3 });
+        s += gTxt(0.99, yc, "%" + p.p, { a: "end", dy: -5, c: "var(--accent)", b: 1, s: 9 });
+        [500, 1000].forEach(function (v) {
+          s += gTxt((v - 25) / (N - 25), 0, v + "", { a: "middle", dy: 12, s: 9 });
+        });
+        return { svg: s, text: p.n + " kişiye sorulduğunda %" + p.p + "'lik bir oran ±" + r1(h * 100) +
+          " puanlık belirsizlik taşır: gerçek değer %" + r1((pr - h) * 100) + " ile %" + r1((pr + h) * 100) +
+          " arasında bir yerde. Bu aralık, ölçümün kendi hatası; ankete katılmayanların farkı bunun dışında." };
+      }
+    },
+
+    "p-degeri": {
+      title: "p-değeri ne söyler, ne söylemez",
+      note: "p-değeri, gerçekte fark yokken bu kadar büyük bir fark görme olasılığıdır. Farkın gerçek olma olasılığı değildir.",
+      controls: [
+        { key: "d", label: "Ölçülen fark", min: 0, max: 20, step: 1, def: 5,
+          fmt: function (v) { return v + " puan"; } },
+        { key: "n", label: "Grup başına kişi", min: 50, max: 1500, step: 50, def: 500,
+          fmt: function (v) { return v + " kişi"; } }
+      ],
+      draw: function (p) {
+        var se = Math.sqrt(0.5 / p.n), z = (p.d / 100) / se;
+        var pv = 2 * (1 - ncdf(Math.abs(z)));
+        var X = 4, i;                         // yatay eksen: -4σ … +4σ
+        var toX = function (v) { return (v + X) / (2 * X); };
+        var dens = function (v) { return Math.exp((-v * v) / 2); };
+        var pts = [];
+        for (i = 0; i <= 90; i++) {
+          var v = -X + (2 * X * i) / 90;
+          pts.push([toX(v), dens(v) * 0.92]);
+        }
+        var s = frame("", "Fark yokken beklenen sonuçların dağılımı");
+        var zc = Math.min(z, X);
+        if (zc < X) {
+          var tail = pts.filter(function (q) { return q[0] >= toX(zc); });
+          var tail2 = pts.filter(function (q) { return q[0] <= toX(-zc); });
+          s += gArea(tail.concat([[1, 0], [toX(zc), 0]]), { c: "var(--no)", o: 0.35 });
+          s += gArea([[0, 0], [toX(-zc), 0]].concat(tail2.slice().reverse()), { c: "var(--no)", o: 0.35 });
+        }
+        s += gPoly(pts, { c: "var(--accent)", w: 2.2 });
+        s += gLine(toX(zc), 0, toX(zc), 0.98, { c: "var(--ink)", w: 1.8, d: "4 3" });
+        s += gTxt(toX(zc), 0.98, "ölçülen", { a: zc > 2.4 ? "end" : "start", dx: zc > 2.4 ? -4 : 4, dy: 2, c: "var(--ink)", b: 1, s: 9 });
+        s += gTxt(toX(-2), 0, "−2σ", { a: "middle", dy: 12, s: 9 });
+        s += gTxt(toX(0), 0, "fark yok", { a: "middle", dy: 12, s: 9 });
+        s += gTxt(toX(2), 0, "+2σ", { a: "middle", dy: 12, s: 9 });
+        return { svg: s, text: p.d === 0
+          ? "Fark sıfırken p = 1: bu sonuç, fark yokken görülmesi en beklenen sonuçtur."
+          : "Grup başına " + p.n + " kişiyle " + p.d + " puanlık fark, p = " + (pv < 0.001 ? "0.001'in altı" : r0(pv * 1000) / 1000) +
+            ". " + (pv < 0.05
+              ? "Kırmızı alan küçük: fark yokken böyle bir sonuç nadirdir. Ama bu, farkın önemli olduğunu değil, rastlantıyla kolay açıklanamadığını söyler."
+              : "Kırmızı alan geniş: fark yokken de bu sonuç rahatlıkla çıkabilirdi. Örneklemi büyütmek aynı farkı 'anlamlı' hâle getirir.") };
+      }
+    },
+
+    "simpson": {
+      title: "Simpson paradoksu",
+      note: "Böbrek taşı tedavilerinde gerçekten görülmüş bir örnek. Gruplar birleştirilirken hasta karmasının farkı gizlenir.",
+      controls: [{ key: "k", label: "Ağır vakaların A'ya yönlendirilme oranı", min: 0, max: 100, step: 10, def: 80, fmt: pctS }],
+      draw: function (p) {
+        var k = p.k / 100, T = 350;
+        var rate = { aKolay: 0.93, bKolay: 0.87, aAgir: 0.73, bAgir: 0.69 };
+        var aAgir = T * k, aKolay = T - aAgir, bAgir = T * (1 - k), bKolay = T - bAgir;
+        var aAll = (rate.aAgir * aAgir + rate.aKolay * aKolay) / T;
+        var bAll = (rate.bAgir * bAgir + rate.bKolay * bKolay) / T;
+        var groups = [
+          ["Kolay vaka", rate.aKolay, rate.bKolay],
+          ["Ağır vaka", rate.aAgir, rate.bAgir],
+          ["Toplam", aAll, bAll]
+        ];
+        var lo = 0.6;                          // başarı oranları %60-%100 aralığında
+        var h = function (v) { return (v - lo) / (1 - lo); };
+        var s = frame("", "Başarı oranı");
+        groups.forEach(function (g, i) {
+          var cx = 0.17 + i * 0.33;
+          s += gRect(cx - 0.115, 0, cx - 0.015, h(g[1]), { c: "var(--accent)", o: 0.85 });
+          s += gRect(cx + 0.015, 0, cx + 0.115, h(g[2]), { c: "var(--makro)", o: 0.85 });
+          s += gTxt(cx - 0.065, h(g[1]), "%" + r0(g[1] * 100), { a: "middle", dy: -5, s: 8.5, c: "var(--muted)" });
+          s += gTxt(cx + 0.065, h(g[2]), "%" + r0(g[2] * 100), { a: "middle", dy: -5, s: 8.5, c: "var(--muted)" });
+          s += gTxt(cx, 0, g[0], { a: "middle", dy: 12, s: 9, b: i === 2 ? 1 : 0 });
+        });
+        s += gTxt(0.02, 0.94, "A yöntemi", { a: "start", dy: 2, c: "var(--accent)", b: 1, s: 9 });
+        s += gTxt(0.98, 0.94, "B yöntemi", { a: "end", dy: 2, c: "var(--makro)", b: 1, s: 9 });
+        s += gTxt(0, 0, "%" + r0(lo * 100), { a: "end", dx: -5, dy: 3, s: 9 });
+        return { svg: s, text: "A yöntemi her iki grupta da B'den başarılı: kolay vakada %93'e %87, ağır vakada %73'e %69. " +
+          (aAll >= bAll
+            ? "Toplamda da öyle görünüyor (%" + r0(aAll * 100) + "'e %" + r0(bAll * 100) + "), çünkü ağır vakalar iki yönteme benzer dağılmış."
+            : "Ama toplamda B önde görünüyor: %" + r0(bAll * 100) + "'e %" + r0(aAll * 100) + ". Sebep A'nın kötü olması değil, ağır vakaların %" +
+              p.k + "'inin A'ya gitmesi.") };
       }
     }
   };

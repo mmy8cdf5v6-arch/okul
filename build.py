@@ -22,8 +22,26 @@ def main():
     with open(os.path.join(HERE, "assets", "styles.css"), "w", encoding="utf-8") as f:
         f.write(css)
 
+    charts = src("charts.js")
+
+    # Her kaydırıcının bir başlangıç değeri olmalı. Olmadığında denetim
+    # değeri undefined kalır ve grafik sessizce NaN çizer.
+    for start in [m.start() for m in re.finditer(r'\{ key: "[a-z]+"', charts)]:
+        depth, i = 0, start
+        while i < len(charts):                     # iç içe işlevler yüzünden süslü parantez say
+            if charts[i] == "{":
+                depth += 1
+            elif charts[i] == "}":
+                depth -= 1
+                if depth == 0:
+                    break
+            i += 1
+        control = charts[start:i + 1]
+        if "def:" not in control and 'type: "choice"' not in control:
+            sys.exit("başlangıç değeri (def) olmayan grafik denetimi:\n  " + " ".join(control.split()))
+
     # grafik kimlikleri gerçekten tanımlı mı?
-    defined = set(re.findall(r'^\s{4}"([a-z0-9-]+)": \{$', src("charts.js"), re.M))
+    defined = set(re.findall(r'^\s{4}"([a-z0-9-]+)": \{$', charts, re.M))
     used = set()
     cdir = os.path.join(HERE, "courses")
     for name in sorted(os.listdir(cdir)):

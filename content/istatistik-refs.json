@@ -1,0 +1,528 @@
+{
+  "meta": {
+    "title": "İstatistik okuryazarlığı",
+    "eyebrow": "İstatistik",
+    "subtitle": "Sayılarla kandırılmamak",
+    "description": "Ortalamanın gizlediği, grafiğin abarttığı, anketin ölçemediği ve korelasyonun kanıtlamadığı şeyler — örneklerle ve oynanabilir grafiklerle.",
+    "icon": "📊",
+    "accent": "#6a3fa0",
+    "accentDark": "#c3a0ec",
+    "category": "gunumuz",
+    "figuresLabel": "İsimler",
+    "timelineLabel": "Zaman çizelgesi",
+    "timelineTitle": "Sayının tarihi",
+    "timelineIntro": "Ölüm kayıtlarından tekrarlanabilirlik krizine: sayıyla düşünmeyi öğrenmenin dört yüz yılı.",
+    "source": "builtin",
+    "hasCharts": true
+  },
+
+  "modules": [
+    {
+      "id": "okuma",
+      "title": "Veriyi okumak",
+      "description": "Önünüze konan sayıyı, grafiği ve yüzdeyi doğru okumanın kuralları."
+    },
+    {
+      "id": "cikarim",
+      "title": "Örnekten çıkarıma",
+      "description": "Bir parçaya bakıp bütün hakkında konuşmak: ne zaman meşru, hangi payla."
+    },
+    {
+      "id": "neden",
+      "title": "Neden ve sonuç",
+      "description": "Birlikte hareket etmekten sebep olmaya geçmenin şartları ve tuzakları."
+    }
+  ],
+
+  "charts": {
+    "ortalama-medyan-mod": ["ortalama-medyan", 3]
+  },
+
+  "glossary": [
+    { "id": "ortalama", "term": "Ortalama", "definition": "Bütün değerlerin toplamının sayıya bölünmesi. Uç değerlere duyarlıdır; çarpık dağılımlarda tipik değeri temsil etmez.", "lessonId": "ortalama-medyan-mod" },
+    { "id": "medyan", "term": "Medyan", "definition": "Sıralanmış verinin tam ortasındaki değer. Uç değerlerden etkilenmediği için gelir ve fiyat gibi çarpık dağılımların doğru özetidir.", "lessonId": "ortalama-medyan-mod" },
+    { "id": "mod", "term": "Mod", "definition": "En sık tekrarlanan değer. Sayısal olmayan verilerde tek merkezî ölçüdür; dağılımın kaç tepesi olduğunu da gösterir.", "lessonId": "ortalama-medyan-mod" },
+    { "id": "carpik-dagilim", "term": "Çarpık dağılım", "definition": "Bir tarafa uzun kuyruk atan dağılım. Kuyruğun bulunduğu yöne göre ortalama medyandan uzaklaşır.", "lessonId": "ortalama-medyan-mod" },
+    { "id": "dagilim", "term": "Dağılım", "definition": "Bir değişkenin hangi değerleri ne sıklıkta aldığının tümü. Tek bir özet sayı değil, verinin asıl şekli.", "lessonId": "dagilim-ve-degiskenlik" },
+    { "id": "standart-sapma", "term": "Standart sapma", "definition": "Değerlerin ortalamadan tipik uzaklığı. Verinin kendi biriminde olduğu için doğrudan yorumlanabilir.", "lessonId": "dagilim-ve-degiskenlik" },
+    { "id": "varyans", "term": "Varyans", "definition": "Standart sapmanın karesi. Hesaplarda toplanabilir olduğu için kullanışlıdır, ama birimi karesel olduğundan sezgiye uzaktır.", "lessonId": "dagilim-ve-degiskenlik" },
+    { "id": "yuzdelik", "term": "Yüzdelik", "definition": "Verinin belirli bir oranının altında kaldığı değer. 25. ve 75. yüzdelikler arası, aykırı değerlerden etkilenmeyen bir yayılma ölçüsüdür.", "lessonId": "dagilim-ve-degiskenlik" },
+    { "id": "normal-dagilim", "term": "Normal dağılım", "definition": "Simetrik, tek tepeli çan eğrisi. Birçok ölçüme yaklaşır ama gelir, servet ve şehir nüfusu gibi verilerde geçerli değildir.", "lessonId": "dagilim-ve-degiskenlik" },
+    { "id": "aykiri-deger", "term": "Aykırı değer", "definition": "Dağılımın gövdesinden belirgin biçimde uzak gözlem. Ölçüm hatası da olabilir, bulgunun kendisi de.", "lessonId": "dagilim-ve-degiskenlik" },
+    { "id": "kesilmis-eksen", "term": "Kesilmiş eksen", "definition": "Sıfırdan başlamayan y ekseni. Sütun grafiğinde küçük farkları büyük gösteren en yaygın görsel abartma.", "lessonId": "grafik-yalanlari" },
+    { "id": "alan-yanilsamasi", "term": "Alan yanılsaması", "definition": "Değeri yarıçapla temsil etmek. Alan yarıçapın karesiyle büyüdüğü için okuyucu farkı olduğundan büyük algılar.", "lessonId": "grafik-yalanlari" },
+    { "id": "secilmis-aralik", "term": "Seçilmiş aralık", "definition": "Zaman serisinin başlangıç ve bitiş noktasının anlatıya göre belirlenmesi. Aynı veriden zıt iki trend çıkarabilir.", "lessonId": "grafik-yalanlari" },
+    { "id": "cift-eksen", "term": "Çift eksen", "definition": "İki farklı ölçeğin aynı grafiğe yerleştirilmesi. Ölçekler serbestçe seçilebildiği için istenen her ilişki görsel olarak üretilebilir.", "lessonId": "grafik-yalanlari" },
+    { "id": "taban-etkisi", "term": "Taban etkisi", "definition": "Küçük başlangıç değerlerinin yüzdesel olarak kolayca büyük görünmesi. Üç olaydan altıya çıkış %100 artıştır.", "lessonId": "oran-ve-yuzde" },
+    { "id": "yuzde-puan", "term": "Yüzde puan", "definition": "İki oran arasındaki mutlak fark. %20'den %25'e çıkış 5 puandır ve aynı zamanda %25'lik bir artıştır; ikisi karıştırılmamalıdır.", "lessonId": "oran-ve-yuzde" },
+    { "id": "goreli-artis", "term": "Göreli artış", "definition": "Değişimin başlangıç değerine oranı. Mutlak sayı verilmeden söylendiğinde yanıltıcıdır.", "lessonId": "oran-ve-yuzde" },
+    { "id": "payda", "term": "Payda", "definition": "Bir oranın altındaki sayı: kaç kişide, kaç olayda, hangi sürede. Haberlerde en sık atlanan bilgidir.", "lessonId": "oran-ve-yuzde" },
+    { "id": "evren", "term": "Evren", "definition": "Hakkında konuşmak istediğimiz bütün. Örneklem, evreni temsil ettiği ölçüde işe yarar.", "lessonId": "orneklem-ve-yanlilik" },
+    { "id": "orneklem", "term": "Örneklem", "definition": "Evrenden ölçüm için seçilen alt küme. Büyüklüğü rastlantısal hatayı azaltır, temsil gücü ise yanlılığı belirler.", "lessonId": "orneklem-ve-yanlilik" },
+    { "id": "rastgele-secim", "term": "Rastgele seçim", "definition": "Her birimin örnekleme girme şansının eşit olması. Araştırmacının aklına gelmeyen değişkenleri de dengeleyen tek yöntem.", "lessonId": "orneklem-ve-yanlilik" },
+    { "id": "secilim-yanliligi", "term": "Seçilim yanlılığı", "definition": "Örnekleme girme olasılığının, ölçülen özellikle bağlantılı olması. Örneklem büyüdükçe düzelmez, aksine güvenle yanlış sonuca götürür.", "lessonId": "orneklem-ve-yanlilik" },
+    { "id": "hayatta-kalan-yanliligi", "term": "Hayatta kalan yanlılığı", "definition": "Yalnızca süreçten sağ çıkanlara bakmak. Başarısızlıklar görünmediği için başarı reçeteleri yanlış çıkarılır.", "lessonId": "orneklem-ve-yanlilik" },
+    { "id": "gonullu-yanliligi", "term": "Gönüllü yanlılığı", "definition": "Ankete cevap vermeyi seçenlerin, seçmeyenlerden sistematik olarak farklı olması. Düşük cevap oranı bu sorunu büyütür.", "lessonId": "orneklem-ve-yanlilik" },
+    { "id": "guven-araligi", "term": "Güven aralığı", "definition": "Tahminin etrafında, yöntemin belirlenen sıklıkta gerçek değeri içerdiği aralık. Aralıksız verilen tahmin eksik bir tahmindir.", "lessonId": "belirsizlik-ve-guven-araligi" },
+    { "id": "hata-payi", "term": "Hata payı", "definition": "Güven aralığının yarı genişliği. Yalnızca rastlantısal örnekleme hatasını kapsar; cevapsızlık ve soru kalıbı gibi sistematik hataları kapsamaz.", "lessonId": "belirsizlik-ve-guven-araligi" },
+    { "id": "standart-hata", "term": "Standart hata", "definition": "Aynı yöntemle alınacak farklı örneklemlerden çıkacak tahminlerin dalgalanma ölçüsü. Örneklemin kareköküyle küçülür.", "lessonId": "belirsizlik-ve-guven-araligi" },
+    { "id": "ornekleme-dagilimi", "term": "Örnekleme dağılımı", "definition": "Aynı evrenden alınacak bütün örneklemlerin tahminlerinin dağılımı. Güven aralığı bu dağılım üzerine kurulur.", "lessonId": "belirsizlik-ve-guven-araligi" },
+    { "id": "p-degeri", "term": "p-değeri", "definition": "Gerçekte fark yokken, en az gözlenen kadar büyük bir fark görme olasılığı. Hipotezin doğru olma olasılığı değildir.", "lessonId": "anlamlilik-ve-p-degeri" },
+    { "id": "sifir-hipotezi", "term": "Sıfır hipotezi", "definition": "Aranan etkinin olmadığını varsayan başlangıç konumu. p-değeri bu varsayım altında hesaplanır.", "lessonId": "anlamlilik-ve-p-degeri" },
+    { "id": "anlamlilik", "term": "İstatistiksel anlamlılık", "definition": "p-değerinin önceden belirlenmiş bir eşiğin altında kalması. Etkinin büyük ya da önemli olduğu anlamına gelmez.", "lessonId": "anlamlilik-ve-p-degeri" },
+    { "id": "etki-buyuklugu", "term": "Etki büyüklüğü", "definition": "Farkın kendi biriminde ne kadar olduğu. Bir sonucun pratik değerini belirleyen sayı; p-değeriyle birlikte istenmelidir.", "lessonId": "anlamlilik-ve-p-degeri" },
+    { "id": "coklu-karsilastirma", "term": "Çoklu karşılaştırma", "definition": "Aynı veride çok sayıda hipotezin denenmesi. %5 eşiğinde yirmi testten birinin rastlantıyla anlamlı çıkması beklenir.", "lessonId": "anlamlilik-ve-p-degeri" },
+    { "id": "tekrarlanabilirlik", "term": "Tekrarlanabilirlik", "definition": "Aynı yöntemle yapılan bağımsız bir çalışmanın aynı sonucu vermesi. Bir bulgunun gerçek sınavı budur.", "lessonId": "tekrarlanabilirlik" },
+    { "id": "yayin-yanliligi", "term": "Yayın yanlılığı", "definition": "Anlamlı sonuç bulan çalışmaların yayımlanma şansının yüksek olması. Literatürü, gerçekliğin temsili olmayan bir koleksiyona çevirir.", "lessonId": "tekrarlanabilirlik" },
+    { "id": "p-avciligi", "term": "p-avcılığı", "definition": "Veriyi gördükten sonra analiz tercihlerini eşiği geçecek biçimde ayarlamak. Kötü niyet gerektirmez; makul görünen küçük kararlar yeterlidir.", "lessonId": "tekrarlanabilirlik" },
+    { "id": "on-kayit", "term": "Ön kayıt", "definition": "Hipotezin ve analiz planının veri toplanmadan önce açık bir kayda yazılması. Araştırmacının serbestlik derecelerini kapatır.", "lessonId": "tekrarlanabilirlik" },
+    { "id": "istatistiksel-guc", "term": "İstatistiksel güç", "definition": "Gerçek bir etki varsa onu yakalayabilme olasılığı. Düşük güç hem etkileri kaçırır hem de bulunanları abartır.", "lessonId": "tekrarlanabilirlik" },
+    { "id": "korelasyon", "term": "Korelasyon", "definition": "İki değişkenin birlikte hareket etme derecesi, −1 ile +1 arasında. Yalnızca doğrusal ilişkiyi ölçer ve nedensellik anlamına gelmez.", "lessonId": "korelasyon-ve-nedensellik" },
+    { "id": "nedensellik", "term": "Nedensellik", "definition": "Birini değiştirdiğimizde diğerinin değişmesi. Gözlem verisinden değil, müdahaleden ya da müdahaleye benzeyen bir yapıdan çıkarılır.", "lessonId": "korelasyon-ve-nedensellik" },
+    { "id": "ters-nedensellik", "term": "Ters nedensellik", "definition": "Sanılan sonucun aslında sebep olması. Gözlem verisinde iki yön aynı korelasyonu üretir.", "lessonId": "korelasyon-ve-nedensellik" },
+    { "id": "sahte-iliski", "term": "Sahte ilişki", "definition": "Aralarında nedensel bağ olmayan iki değişkenin, ortak bir üçüncü etken ya da rastlantı yüzünden birlikte hareket etmesi.", "lessonId": "korelasyon-ve-nedensellik" },
+    { "id": "karistirici", "term": "Karıştırıcı değişken", "definition": "Hem sebep sanılan değişkenle hem sonuçla bağlantılı üçüncü değişken. Olmayan bir ilişkiyi var, olan bir ilişkiyi ters gösterebilir.", "lessonId": "karistirici-degisken" },
+    { "id": "kontrol-etmek", "term": "Kontrol etmek", "definition": "Karşılaştırmayı bir değişken sabitken yapmak. Yalnızca ölçülmüş değişkenler için mümkündür.", "lessonId": "karistirici-degisken" },
+    { "id": "araci-degisken", "term": "Aracı değişken", "definition": "Sebep ile sonuç arasındaki yolun üzerindeki değişken. Kontrol edilirse gerçek etkinin bir kısmı silinir.", "lessonId": "karistirici-degisken" },
+    { "id": "rkd", "term": "Randomize kontrollü deney", "definition": "Katılımcıların müdahale ve kontrol gruplarına rastgele atandığı çalışma. Nedensellik için elimizdeki en güçlü tasarım.", "lessonId": "deney-ve-kontrol" },
+    { "id": "kontrol-grubu", "term": "Kontrol grubu", "definition": "Müdahale görmeyen karşılaştırma grubu. 'Hiçbir şey yapmasaydık ne olurdu' sorusunun gözlemlenebilir cevabı.", "lessonId": "deney-ve-kontrol" },
+    { "id": "korleme", "term": "Körleme", "definition": "Katılımcının, çift körlemede uygulayıcının da hangi grupta olunduğunu bilmemesi. Beklentinin ölçümü bozmasını engeller.", "lessonId": "deney-ve-kontrol" },
+    { "id": "plasebo", "term": "Plasebo", "definition": "Görünüşte aynı ama etkisiz uygulama. Beklentinin kendi etkisini gerçek etkiden ayırmayı sağlar.", "lessonId": "deney-ve-kontrol" },
+    { "id": "dogal-deney", "term": "Doğal deney", "definition": "Ayrımı araştırmacının değil dünyanın yaptığı, rastgeleliğe yakın karşılaştırma. Bir tarih sınırı, bir kura ya da coğrafi bir eşik.", "lessonId": "deney-ve-kontrol" },
+    { "id": "simpson-p", "term": "Simpson paradoksu", "definition": "Bir ilişkinin her alt grupta bir yöne, gruplar birleştirildiğinde ters yöne işaret etmesi. Kaynağı, alt grup ağırlıklarının taraflar arasında farklı olmasıdır.", "lessonId": "simpson-paradoksu" },
+    { "id": "toplulastirma", "term": "Toplulaştırma", "definition": "Alt grupları tek bir sayıda birleştirmek. Grup karması taraflar arasında farklıysa bu işlem yönü tersine çevirebilir.", "lessonId": "simpson-paradoksu" },
+    { "id": "tabakalama", "term": "Tabakalama", "definition": "Analizi alt gruplar içinde ayrı ayrı yapmak. Karıştırıcı grup değişkenlerini etkisiz hâle getirmenin en basit yolu.", "lessonId": "simpson-paradoksu" }
+  ],
+
+  "figures": [
+    {
+      "id": "graunt",
+      "name": "John Graunt",
+      "lifespan": "1620-1674",
+      "oneLiner": "Londra'nın ölüm kayıtlarına bakıp nüfus istatistiğini icat etti.",
+      "contributions": [
+        "1662'de ölüm bültenlerinden ilk yaşam tablosunu çıkardı",
+        "Düzensiz görünen tekil olayların toplamda düzenli örüntüler verdiğini gösterdi",
+        "Veriden nüfus tahmini yapmanın ilk örneğini verdi"
+      ],
+      "lessonId": "orneklem-ve-yanlilik",
+      "tag": "Nüfus istatistiği"
+    },
+    {
+      "id": "bayes",
+      "name": "Thomas Bayes",
+      "lifespan": "1701-1761",
+      "oneLiner": "Yeni kanıt geldiğinde inancın nasıl güncelleneceğini yazdı.",
+      "contributions": [
+        "Koşullu olasılığı ters çevirmenin kuralını buldu",
+        "Çalışması ölümünden sonra, 1763'te yayımlandı",
+        "Kanıt karşısında olasılık güncellemenin çerçevesini kurdu"
+      ],
+      "lessonId": "belirsizlik-ve-guven-araligi",
+      "tag": "Olasılık"
+    },
+    {
+      "id": "laplace",
+      "name": "Pierre-Simon Laplace",
+      "lifespan": "1749-1827",
+      "oneLiner": "Olasılığı gökbilimden nüfus sayımına kadar her yere uyguladı.",
+      "contributions": [
+        "Merkezî limit teoreminin ilk genel biçimini verdi",
+        "Fransa nüfusunu örneklemeyle tahmin etti",
+        "Ölçüm hatalarının dağılımını sistemleştirdi"
+      ],
+      "lessonId": "belirsizlik-ve-guven-araligi",
+      "tag": "Olasılık"
+    },
+    {
+      "id": "quetelet",
+      "name": "Adolphe Quetelet",
+      "lifespan": "1796-1874",
+      "oneLiner": "'Ortalama insan' fikrini ortaya attı; hem sosyal bilimi hem de bir yanılgıyı başlattı.",
+      "contributions": [
+        "İnsan ölçülerine normal dağılımı uyguladı",
+        "Beden kitle endeksinin öncüsü olan oranı tanımladı",
+        "Ortalamanın bir birey olarak var olmadığı eleştirisine kaynaklık etti"
+      ],
+      "lessonId": "ortalama-medyan-mod",
+      "tag": "Sosyal istatistik"
+    },
+    {
+      "id": "snow",
+      "name": "John Snow",
+      "lifespan": "1813-1858",
+      "oneLiner": "Kolerayı bir haritayla su pompasına bağladı; epidemiyolojiyi kurdu.",
+      "contributions": [
+        "1854'te Londra'da vakaları haritalayarak Broad Street pompasını işaret etti",
+        "Farklı su şirketlerinden içen haneleri karşılaştırarak doğal deney kurdu",
+        "Bulaşmanın havayla değil suyla olduğunu veriye dayandırdı"
+      ],
+      "lessonId": "deney-ve-kontrol",
+      "tag": "Epidemiyoloji"
+    },
+    {
+      "id": "nightingale",
+      "name": "Florence Nightingale",
+      "lifespan": "1820-1910",
+      "oneLiner": "Grafiği ikna aracı olarak kullanan ilk kişilerdendi.",
+      "contributions": [
+        "Kırım Savaşı'nda ölümlerin çoğunun yaradan değil hijyen koşullarından olduğunu gösterdi",
+        "Gül diyagramıyla veriyi siyasetçilere anlaşılır biçimde sundu",
+        "Kraliyet İstatistik Derneği'nin ilk kadın üyesi oldu"
+      ],
+      "lessonId": "grafik-yalanlari",
+      "tag": "Görselleştirme"
+    },
+    {
+      "id": "galton",
+      "name": "Francis Galton",
+      "lifespan": "1822-1911",
+      "oneLiner": "Regresyon ve korelasyon kavramlarını buldu; öjeni fikrini de o savundu.",
+      "contributions": [
+        "Ortalamaya dönüş olgusunu tanımladı ve 'regresyon' adını verdi",
+        "İki değişken arasındaki ilişkiyi ölçen katsayının temelini attı",
+        "Aynı istatistik araçlarını öjeni programını savunmak için kullandı; bu miras bugün ayrıca tartışılıyor"
+      ],
+      "lessonId": "korelasyon-ve-nedensellik",
+      "tag": "Korelasyon"
+    },
+    {
+      "id": "pearson",
+      "name": "Karl Pearson",
+      "lifespan": "1857-1936",
+      "oneLiner": "İstatistiği bir matematik disiplini hâline getirdi.",
+      "contributions": [
+        "Korelasyon katsayısını bugünkü biçimine kavuşturdu",
+        "1900'de ki-kare uyum testini geliştirdi",
+        "İlk istatistik bölümünü ve Biometrika dergisini kurdu"
+      ],
+      "lessonId": "korelasyon-ve-nedensellik",
+      "tag": "Matematiksel istatistik"
+    },
+    {
+      "id": "fisher",
+      "name": "Ronald Fisher",
+      "lifespan": "1890-1962",
+      "oneLiner": "Deney tasarımını ve anlamlılık testini bugünkü hâline getirdi.",
+      "contributions": [
+        "Rastgeleleştirmeyi deney tasarımının merkezine koydu",
+        "p < 0.05 eşiğini pratik bir öneri olarak yazdı; sonradan bir kurala dönüştü",
+        "Varyans analizini ve deneysel blok tasarımını geliştirdi"
+      ],
+      "quote": {
+        "text": "Deneyi bittikten sonra istatistikçiye danışmak, ona ölüm sonrası muayene istemekten öteye geçmez.",
+        "source": "Hindistan İstatistik Kongresi, 1938"
+      },
+      "lessonId": "anlamlilik-ve-p-degeri",
+      "tag": "Deney tasarımı"
+    },
+    {
+      "id": "wald",
+      "name": "Abraham Wald",
+      "lifespan": "1902-1950",
+      "oneLiner": "Uçaklardaki kurşun deliklerine bakıp görünmeyen veriyi düşünmeyi öğretti.",
+      "contributions": [
+        "Dönen uçakların hasar haritasının seçilmiş bir örneklem olduğunu gösterdi",
+        "Zırhın delik olmayan bölgelere konması gerektiğini söyledi",
+        "Sıralı analiz yöntemini geliştirdi"
+      ],
+      "lessonId": "orneklem-ve-yanlilik",
+      "tag": "Seçilim yanlılığı"
+    },
+    {
+      "id": "bradford-hill",
+      "name": "Austin Bradford Hill",
+      "lifespan": "1897-1991",
+      "oneLiner": "İlk modern klinik deneyi yürüttü ve nedensellik ölçütlerini yazdı.",
+      "contributions": [
+        "1948'de streptomisin için ilk randomize klinik deneyi tasarladı",
+        "Doll ile birlikte sigara ile akciğer kanseri ilişkisini gösterdi",
+        "1965'te nedensellik için dokuz değerlendirme ölçütü önerdi"
+      ],
+      "lessonId": "deney-ve-kontrol",
+      "tag": "Klinik deney"
+    },
+    {
+      "id": "tukey",
+      "name": "John Tukey",
+      "lifespan": "1915-2000",
+      "oneLiner": "Veriye modelden önce bakmayı bir yöntem hâline getirdi.",
+      "contributions": [
+        "Keşfedici veri analizini kurdu",
+        "Kutu grafiğini ve gövde-yaprak gösterimini geliştirdi",
+        "'Bit' ve 'yazılım' terimlerinin yaygınlaşmasına katkıda bulundu"
+      ],
+      "quote": {
+        "text": "Doğru soruya verilen yaklaşık bir cevap, yanlış soruya verilen kesin bir cevaptan çok daha değerlidir.",
+        "source": "Veri analizi üzerine, 1962"
+      },
+      "lessonId": "dagilim-ve-degiskenlik",
+      "tag": "Keşfedici analiz"
+    },
+    {
+      "id": "tufte",
+      "name": "Edward Tufte",
+      "lifespan": "1942-",
+      "oneLiner": "Grafiği bir estetik değil dürüstlük meselesi olarak ele aldı.",
+      "contributions": [
+        "1983'te veri görselleştirmenin ilkelerini derledi",
+        "Süslemenin veriye oranını ölçen kavramlar önerdi",
+        "Kötü grafiğin karar hatasına yol açtığını somut vakalarla gösterdi"
+      ],
+      "lessonId": "grafik-yalanlari",
+      "tag": "Görselleştirme"
+    },
+    {
+      "id": "pearl",
+      "name": "Judea Pearl",
+      "lifespan": "1936-",
+      "oneLiner": "Nedenselliği veriden değil, açıkça yazılmış varsayımlardan çıkarmayı sistemleştirdi.",
+      "contributions": [
+        "Nedensel diyagramları ve müdahale hesabını geliştirdi",
+        "Hangi değişkenin kontrol edileceğinin veriyle değil modelle belirlendiğini gösterdi",
+        "Korelasyon, müdahale ve karşıolgusal soruları birbirinden ayırdı"
+      ],
+      "lessonId": "karistirici-degisken",
+      "tag": "Nedensellik"
+    },
+    {
+      "id": "ioannidis",
+      "name": "John Ioannidis",
+      "lifespan": "1965-",
+      "oneLiner": "Yayımlanan bulguların çoğunun neden yanlış olabileceğini hesapladı.",
+      "contributions": [
+        "2005'te alanın en çok atıf alan metodoloji makalesini yazdı",
+        "Küçük örneklem, çok sayıda hipotez ve yayın yanlılığının birleşimini modelledi",
+        "Tekrarlanabilirlik tartışmasını akademinin gündemine taşıdı"
+      ],
+      "lessonId": "tekrarlanabilirlik",
+      "tag": "Meta-araştırma"
+    }
+  ],
+
+  "eraLabels": {
+    "sayim": "Sayımlar çağı",
+    "olcum": "Ölçüm bilimi",
+    "cikarim": "Çıkarım devrimi",
+    "veri": "Veri çağı"
+  },
+
+  "timeline": [
+    {
+      "id": "graunt-1662",
+      "year": 1662,
+      "yearLabel": "1662",
+      "title": "İlk yaşam tablosu",
+      "body": "John Graunt, Londra'nın haftalık ölüm bültenlerini işleyerek yaş gruplarına göre hayatta kalma oranlarını çıkarır. Tekil düzensizliğin toplamda düzene dönüştüğü fikri doğar.",
+      "era": "sayim",
+      "figureId": "graunt"
+    },
+    {
+      "id": "bernoulli-1713",
+      "year": 1713,
+      "yearLabel": "1713",
+      "title": "Büyük sayılar yasası",
+      "body": "Jacob Bernoulli, gözlem sayısı arttıkça gözlenen oranın gerçek olasılığa yaklaştığını kanıtlar. Örneklemden evrene geçmenin matematiksel temeli kurulur.",
+      "era": "sayim"
+    },
+    {
+      "id": "bayes-1763",
+      "year": 1763,
+      "yearLabel": "1763",
+      "title": "Bayes teoremi yayımlanır",
+      "body": "Thomas Bayes'in ölümünden iki yıl sonra yayımlanan çalışma, yeni kanıt karşısında olasılığın nasıl güncelleneceğini gösterir.",
+      "era": "sayim",
+      "figureId": "bayes"
+    },
+    {
+      "id": "gauss-1809",
+      "year": 1809,
+      "yearLabel": "1809",
+      "title": "Normal dağılım ve en küçük kareler",
+      "body": "Gauss, gökcisimlerinin yörüngesini hatalı ölçümlerden kestirmek için hata dağılımını modeller. Çan eğrisi, ölçüm biliminin merkezine yerleşir.",
+      "era": "olcum"
+    },
+    {
+      "id": "quetelet-1835",
+      "year": 1835,
+      "yearLabel": "1835",
+      "title": "Ortalama insan",
+      "body": "Quetelet, insan ölçülerine normal dağılımı uygular ve 'ortalama insan' kavramını ortaya atar. Fikir sosyal bilimi başlatır, ortalamanın kimseyi tarif etmediği eleştirisini de doğurur.",
+      "era": "olcum",
+      "figureId": "quetelet"
+    },
+    {
+      "id": "snow-1854",
+      "year": 1854,
+      "yearLabel": "1854",
+      "title": "Broad Street kolera haritası",
+      "body": "John Snow vakaları haritalayıp farklı su şirketlerinden içen haneleri karşılaştırır. Salgının kaynağını mikrop bilinmeden, yalnızca veriyle gösterir.",
+      "era": "olcum",
+      "figureId": "snow"
+    },
+    {
+      "id": "nightingale-1858",
+      "year": 1858,
+      "yearLabel": "1858",
+      "title": "Gül diyagramı",
+      "body": "Nightingale, Kırım'daki ölümlerin çoğunun önlenebilir koşullardan olduğunu tek bir renkli çizimle anlatır. Grafik, ilk kez bir politika aracı olur.",
+      "era": "olcum",
+      "figureId": "nightingale"
+    },
+    {
+      "id": "galton-1886",
+      "year": 1886,
+      "yearLabel": "1886",
+      "title": "Ortalamaya dönüş",
+      "body": "Galton, uzun babaların oğullarının ortalamaya doğru çekildiğini fark eder ve buna regresyon der. Korelasyon fikri buradan doğar.",
+      "era": "olcum",
+      "figureId": "galton"
+    },
+    {
+      "id": "pearson-1900",
+      "year": 1900,
+      "yearLabel": "1900",
+      "title": "Ki-kare testi",
+      "body": "Karl Pearson, gözlenen dağılımın beklenenden ne kadar saptığını ölçen testi yayımlar. Hipotez testinin ilk yaygın aracı ortaya çıkar.",
+      "era": "cikarim",
+      "figureId": "pearson"
+    },
+    {
+      "id": "gosset-1908",
+      "year": 1908,
+      "yearLabel": "1908",
+      "title": "Küçük örneklem ve t dağılımı",
+      "body": "Guinness bira fabrikasında çalışan William Gosset, az sayıda ölçümle çıkarım yapmanın yolunu bulur ve 'Student' takma adıyla yayımlar.",
+      "era": "cikarim"
+    },
+    {
+      "id": "fisher-1925",
+      "year": 1925,
+      "yearLabel": "1925",
+      "title": "p < 0.05 doğuyor",
+      "body": "Fisher, araştırmacılar için yazdığı el kitabında %5'i pratik bir eşik olarak önerir. Öneri zamanla, yayımlanmanın önkoşuluna dönüşür.",
+      "era": "cikarim",
+      "figureId": "fisher"
+    },
+    {
+      "id": "fisher-1935",
+      "year": 1935,
+      "yearLabel": "1935",
+      "title": "Deney tasarımı",
+      "body": "Fisher, rastgeleleştirmeyi deneyin merkezine koyar. Çay tadan hanım deneyi, hipotez testinin nasıl kurulacağını anlatan kalıcı bir örnek olur.",
+      "era": "cikarim",
+      "figureId": "fisher"
+    },
+    {
+      "id": "digest-1936",
+      "year": 1936,
+      "yearLabel": "1936",
+      "title": "İki milyon kişiye sorup yanılmak",
+      "body": "Literary Digest devasa ama yanlı örneklemiyle seçim tahminini kaçırır; Gallup birkaç bin kişilik dengeli örneklemle tutturur. Temsil, büyüklüğü yener.",
+      "era": "cikarim"
+    },
+    {
+      "id": "wald-1943",
+      "year": 1943,
+      "yearLabel": "1943",
+      "title": "Görünmeyen uçaklar",
+      "body": "Abraham Wald, hasar haritasının yalnızca dönebilen uçaklardan oluştuğunu söyler. Zırh, delik görülmeyen yerlere konur. Hayatta kalan yanlılığı adını alır.",
+      "era": "cikarim",
+      "figureId": "wald"
+    },
+    {
+      "id": "streptomisin-1948",
+      "year": 1948,
+      "yearLabel": "1948",
+      "title": "İlk randomize klinik deney",
+      "body": "Bradford Hill'in tasarladığı streptomisin denemesinde hastalar tedavi ve kontrol gruplarına rastgele atanır. Modern tıbbi kanıt bu tasarımla başlar.",
+      "era": "cikarim",
+      "figureId": "bradford-hill"
+    },
+    {
+      "id": "simpson-1951",
+      "year": 1951,
+      "yearLabel": "1951",
+      "title": "Simpson'ın makalesi",
+      "body": "E. H. Simpson, alt gruplarda görülen ilişkinin toplamda tersine dönebileceğini gösterir. Paradoks, toplulaştırmanın kalıcı uyarısı olur.",
+      "era": "cikarim"
+    },
+    {
+      "id": "huff-1954",
+      "year": 1954,
+      "yearLabel": "1954",
+      "title": "İstatistikle Nasıl Yalan Söylenir",
+      "body": "Darrell Huff'ın kitabı, grafik hilelerini ve seçilmiş sayıları geniş bir okur kitlesine anlatır. İstatistik okuryazarlığı bir halk meselesi hâline gelir.",
+      "era": "cikarim"
+    },
+    {
+      "id": "hill-1965",
+      "year": 1965,
+      "yearLabel": "1965",
+      "title": "Nedensellik ölçütleri",
+      "body": "Bradford Hill, gözlemsel bulgudan nedenselliğe geçerken sorulacak dokuz soruyu sıralar: ilişkinin gücü, tutarlılığı, doz-yanıt ilişkisi, zamansal sıra ve daha fazlası.",
+      "era": "cikarim",
+      "figureId": "bradford-hill"
+    },
+    {
+      "id": "tukey-1977",
+      "year": 1977,
+      "yearLabel": "1977",
+      "title": "Keşfedici veri analizi",
+      "body": "Tukey, modele geçmeden önce veriye bakmayı yöntemleştirir. Kutu grafiği ve özet istatistikler yaygınlaşır.",
+      "era": "veri",
+      "figureId": "tukey"
+    },
+    {
+      "id": "tufte-1983",
+      "year": 1983,
+      "yearLabel": "1983",
+      "title": "Görsel gösterimin ilkeleri",
+      "body": "Tufte, grafiği estetik değil dürüstlük meselesi olarak ele alır. Kesilmiş eksen ve süsleme, ilk kez sistemli biçimde eleştirilir.",
+      "era": "veri",
+      "figureId": "tufte"
+    },
+    {
+      "id": "pearl-2000",
+      "year": 2000,
+      "yearLabel": "2000",
+      "title": "Nedensellik hesabı",
+      "body": "Judea Pearl, nedensel diyagramlarla hangi değişkenin kontrol edilmesi gerektiğini belirlemenin kurallarını yayımlar. Karar, veriden değil modelden çıkar.",
+      "era": "veri",
+      "figureId": "pearl"
+    },
+    {
+      "id": "ioannidis-2005",
+      "year": 2005,
+      "yearLabel": "2005",
+      "title": "Çoğu bulgu neden yanlış",
+      "body": "Ioannidis, küçük örneklem, çok sayıda hipotez ve yayın yanlılığının birleştiğinde literatürü nasıl bozduğunu hesaplar.",
+      "era": "veri",
+      "figureId": "ioannidis"
+    },
+    {
+      "id": "rpp-2015",
+      "year": 2015,
+      "yearLabel": "2015",
+      "title": "Yüz deney yeniden yapılıyor",
+      "body": "Psikolojide yüz çalışmanın tekrarlandığı projede sonuçların yaklaşık üçte biri doğrulanır. Tekrarlanabilirlik krizi geniş biçimde tartışılmaya başlanır.",
+      "era": "veri"
+    },
+    {
+      "id": "asa-2016",
+      "year": 2016,
+      "yearLabel": "2016",
+      "title": "ASA'nın p-değeri bildirisi",
+      "body": "Amerikan İstatistik Derneği, tarihinde ilk kez tek bir istatistiksel uygulama hakkında bildiri yayımlar: p-değeri tek başına bir sonucu ne doğrular ne de önemli kılar.",
+      "era": "veri"
+    },
+    {
+      "id": "nobel-2021",
+      "year": 2021,
+      "yearLabel": "2021",
+      "title": "Doğal deneylere Nobel",
+      "body": "Card, Angrist ve Imbens, deneyin mümkün olmadığı sorularda nedensel çıkarım yapmanın yöntemleriyle iktisat Nobel'ini alır.",
+      "era": "veri"
+    }
+  ]
+}

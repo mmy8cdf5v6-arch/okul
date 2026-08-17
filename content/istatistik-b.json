@@ -1,0 +1,516 @@
+[
+  {
+    "id": "anlamlilik-ve-p-degeri",
+    "moduleId": "cikarim",
+    "order": 3,
+    "title": "Anlamlılık ve p-değeri",
+    "subtitle": "En çok yanlış anlaşılan sayı, en çok kullanılan sayıdır.",
+    "minutes": 9,
+    "keyTerms": ["p-değeri", "sıfır hipotezi", "istatistiksel anlamlılık", "etki büyüklüğü"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Bir deneyde iki grup arasında fark bulduğunuzda iki açıklama vardır: gerçekten bir fark vardır ya da hiçbir fark yokken rastlantı bu kadarını üretmiştir. p-değeri, ikinci açıklamanın ne kadar zorlandığını ölçer. Tanımı şudur: gerçekte hiçbir fark yokken, en az bu kadar büyük bir fark görme olasılığı. Bu tanımı ezberlemek, konunun yarısını halleder; çünkü yaygın hataların çoğu tanımın kaydırılmasından doğar."
+      },
+      {
+        "kind": "text",
+        "title": "p-değerinin söylemediği şeyler",
+        "body": "p-değeri, hipotezin doğru olma olasılığı değildir. Sonucun tekrarlanma olasılığı da değildir. Etkinin büyüklüğü hakkında hiçbir şey söylemez. p = 0.04 ile p = 0.06 arasında doğa açısından anlamlı bir sınır yoktur; 0.05 eşiği Ronald Fisher'ın pratik bir önerisiydi ve zamanla bir tür geçiş belgesine dönüştü. Bir sonucun 'anlamlı' olması, onun önemli olduğu anlamına gelmez."
+      },
+      {
+        "kind": "chart",
+        "chartId": "p-degeri"
+      },
+      {
+        "kind": "text",
+        "title": "Büyük örneklem her farkı anlamlı yapar",
+        "body": "Örneklem büyüdükçe standart hata küçülür, küçülen standart hata en ufak farkı bile eşiğin altına iter. Yüz bin kişilik bir denemede bir ilacın kan basıncını ortalama 0.4 mmHg düşürdüğü p < 0.001 ile gösterilebilir. Bu sonuç istatistiksel olarak sağlamdır ve klinik olarak değersizdir. Bu yüzden p-değeriyle birlikte daima etki büyüklüğü ve güven aralığı istenmelidir: kaç birim fark, hangi aralıkta?"
+      },
+      {
+        "kind": "list",
+        "title": "Bir 'anlamlı sonuç' duyduğunuzda",
+        "items": [
+          "Etki ne kadar büyük? Yönü değil, büyüklüğü söylensin.",
+          "Güven aralığı nedir? Alt sınırı bile önemli mi?",
+          "Kaç hipotez test edildi? Yirmi test edilirse biri rastlantıyla anlamlı çıkar.",
+          "Analiz planı veri toplanmadan önce mi yazıldı?",
+          "Sonuç bağımsız bir ekip tarafından tekrarlandı mı?"
+        ]
+      },
+      {
+        "kind": "example",
+        "title": "Örnek: yeşil jelibon",
+        "body": "Bir karikatürde bilim insanları jelibonların sivilceye yol açıp açmadığını araştırır; sonuç çıkmaz. Sonra tek tek renkleri denerler. Yirmi renk denendikten sonra yeşilde p < 0.05 çıkar ve gazete manşeti atılır: 'Yeşil jelibon sivilce yapıyor.' Yirmi bağımsız testte, hiçbir gerçek etki yokken bile birinin eşiği geçmesi beklenen sonuçtur. Buna çoklu karşılaştırma sorunu denir."
+      },
+      {
+        "kind": "quote",
+        "text": "İstatistiksel anlamlılık ile bilimsel önem aynı şey değildir. Karıştırıldıklarında literatür, doğru hesaplanmış önemsiz sonuçlarla dolar.",
+        "source": "Amerikan İstatistik Derneği'nin 2016 bildirisinden"
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "p = 0.03 bulunan bir sonuç için doğru yorum hangisidir?",
+        "options": [
+          "Hipotezin doğru olma olasılığı %97'dir",
+          "Gerçekte fark yokken bu kadar büyük bir fark görme olasılığı %3'tür",
+          "Sonucun tekrarlanma olasılığı %97'dir",
+          "Etki büyüklüğü %3'tür"
+        ],
+        "answerIndex": 1,
+        "explanation": "p-değeri, sıfır hipotezi doğruyken gözlenen kadar aşırı bir sonuç görme olasılığıdır. Hipotezin doğruluğu, tekrarlanabilirlik ya da etki büyüklüğü hakkında bilgi vermez."
+      },
+      {
+        "id": "q2",
+        "prompt": "Çok büyük bir örneklemde neredeyse her fark neden anlamlı çıkar?",
+        "options": [
+          "Büyük örneklemlerde hata olmaz",
+          "Standart hata küçüldüğü için küçük farklar bile eşiği geçer",
+          "p-değeri örneklem büyüklüğünden etkilenmez",
+          "Büyük örneklemler daha çok gerçek etki içerir"
+        ],
+        "answerIndex": 1,
+        "explanation": "Standart hata √n ile küçülür. Yeterince büyük n'de klinik olarak önemsiz farklar bile istatistiksel eşiği geçer; bu yüzden etki büyüklüğü ayrıca sorulmalıdır."
+      },
+      {
+        "id": "q3",
+        "prompt": "Bir araştırmada yirmi farklı alt grup ayrı ayrı test edilip biri anlamlı çıkmıştır. Bu neden şüphelidir?",
+        "options": [
+          "Alt grup analizleri hiç yapılmamalıdır",
+          "%5 eşiğinde yirmi testten birinin rastlantıyla anlamlı çıkması beklenir",
+          "Alt gruplarda örneklem büyür",
+          "Yirmi test p-değerini yükseltir"
+        ],
+        "answerIndex": 1,
+        "explanation": "Çoklu karşılaştırma sorunu: her test kendi başına %5 yanlış pozitif riski taşır. Yirmi bağımsız testte en az bir yanlış pozitif görme olasılığı %64'e çıkar."
+      }
+    ]
+  },
+
+  {
+    "id": "tekrarlanabilirlik",
+    "moduleId": "cikarim",
+    "order": 4,
+    "title": "Tekrarlanabilirlik krizi",
+    "subtitle": "Yayımlanan sonuçların önemli bir kısmı, ikinci kez denendiğinde çıkmıyor.",
+    "minutes": 8,
+    "keyTerms": ["tekrarlanabilirlik", "yayın yanlılığı", "p-avcılığı", "ön kayıt", "istatistiksel güç"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "2010'lardan itibaren psikoloji, tıp ve iktisatta büyük ölçekli tekrarlama çalışmaları yapıldı. Sonuç rahatsız ediciydi: yayımlanmış bulguların önemli bir bölümü, aynı yöntemle tekrarlandığında ortaya çıkmadı. 2015'te yüz psikoloji deneyinin tekrarlandığı çalışmada özgün sonuçların yaklaşık üçte biri doğrulanabildi. Bu, bilimin çöktüğü anlamına gelmiyor; bilimin kendi hatasını ölçebildiği anlamına geliyor."
+      },
+      {
+        "kind": "text",
+        "title": "Yayın yanlılığı",
+        "body": "Dergiler 'fark bulduk' diyen çalışmaları, 'fark bulamadık' diyenlere göre çok daha kolay yayımlar. Araştırmacılar da sonuçsuz çalışmaları çekmeceye kaldırır. Böylece literatür, gerçekliğin rastgele bir örneklemi olmaktan çıkıp anlamlı sonuçların seçilmiş bir koleksiyonuna dönüşür. Aynı konuda on çalışma yapılmış, dokuzu bir şey bulamamışsa ve yalnızca biri yayımlanmışsa, o alanın literatürü yanlış bir tabloyu tutarlı biçimde gösterir."
+      },
+      {
+        "kind": "text",
+        "title": "p-avcılığı ve serbestlik dereceleri",
+        "body": "Araştırmacı, veriyi topladıktan sonra hangi değişkenleri kullanacağına, hangi gözlemleri eleyeceğine, hangi alt gruba bakacağına karar verebiliyorsa, farkında olmadan p < 0.05 çıkan yolu bulur. Buna araştırmacının serbestlik dereceleri denir. Kötü niyet gerekmez; her adımda makul görünen küçük tercihler yeterlidir. Çözüm de bu yüzden basittir: kararları veriyi görmeden vermek."
+      },
+      {
+        "kind": "list",
+        "title": "Krizin panzehirleri",
+        "items": [
+          "Ön kayıt: hipotez ve analiz planı veri toplanmadan önce açık bir kayda yazılır.",
+          "Kayıtlı rapor: dergi çalışmayı sonucuna değil tasarımına bakarak kabul eder.",
+          "Güç analizi: örneklem, aranan etkiyi yakalayacak büyüklükte seçilir.",
+          "Veri ve kod paylaşımı: başkalarının aynı analizi yeniden çalıştırabilmesi.",
+          "Tekrarlama çalışmalarının yayımlanabilir ve saygın sayılması.",
+          "Etki büyüklüğü ve güven aralığının, p-değerinin önüne geçmesi."
+        ]
+      },
+      {
+        "kind": "text",
+        "title": "Düşük güç neden iki kere zarar verir",
+        "body": "İstatistiksel güç, gerçek bir etki varsa onu yakalayabilme olasılığıdır. Küçük örneklemli çalışmalarda güç düşüktür. Bunun bilinen sonucu, gerçek etkilerin kaçırılmasıdır. Daha az bilinen sonucu ise şudur: düşük güçlü bir çalışmada anlamlı çıkan sonuçlar, gerçek etkiyi sistematik olarak abartır. Çünkü eşiği geçebilmek için farkın olağandışı büyük ölçülmüş olması gerekir. Bu yüzden küçük çalışmaların çarpıcı sonuçları, büyük çalışmalarda tekrar edildiğinde küçülür."
+      },
+      {
+        "kind": "example",
+        "title": "Örnek: güç duruşu",
+        "body": "2010'da yayımlanan bir çalışma, iki dakika boyunca 'güçlü' bir beden duruşu almanın hormon düzeylerini ve risk alma davranışını değiştirdiğini bildirdi. Bulgu geniş yankı buldu. Sonraki yıllarda çok daha büyük örneklemli tekrarlamalar hormon etkisini bulamadı. Çalışmanın yazarlarından biri sonradan bulgunun gücüne artık güvenmediğini açıkça yazdı — bu, bilimsel sürecin çalıştığının işaretidir."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Yayın yanlılığı literatürü nasıl bozar?",
+        "options": [
+          "Yanlış hesaplanmış sonuçlar yayımlanır",
+          "Anlamlı sonuç bulan çalışmalar yayımlanıp bulamayanlar görünmez kaldığı için literatür etkileri abartır",
+          "Dergiler veriyi değiştirir",
+          "Örneklemler küçülür"
+        ],
+        "answerIndex": 1,
+        "explanation": "Seçici yayımlama, literatürü gerçekliğin temsili bir örneklemi olmaktan çıkarır. Görünmeyen sonuçsuz çalışmalar, yayımlananların ortalamasını olduğundan güçlü gösterir."
+      },
+      {
+        "id": "q2",
+        "prompt": "Ön kayıt hangi soruna karşı geliştirilmiştir?",
+        "options": [
+          "Veri toplama maliyetine",
+          "Araştırmacının veriyi gördükten sonra analiz tercihlerini sonuca göre ayarlamasına",
+          "Örneklem büyüklüğünün yetersizliğine",
+          "Dergilerin yavaş çalışmasına"
+        ],
+        "answerIndex": 1,
+        "explanation": "Ön kayıt, hipotezi ve analiz planını veriyi görmeden sabitler; böylece analiz sırasındaki serbestlik derecelerinin sonucu şekillendirmesini engeller."
+      },
+      {
+        "id": "q3",
+        "prompt": "Düşük güçlü bir çalışmada anlamlı çıkan etkiler neden abartılı olur?",
+        "options": [
+          "Küçük örneklemlerde ölçüm daha hassastır",
+          "Eşiği geçebilmek için etkinin olağandışı büyük ölçülmüş olması gerekir",
+          "Düşük güç p-değerini küçültür",
+          "Küçük örneklemler daha çok gerçek etki içerir"
+        ],
+        "answerIndex": 1,
+        "explanation": "Düşük güçte yalnızca büyük ölçülen farklar eşiği geçer. Bu seçilim, yayımlanan etki büyüklüklerini sistematik olarak yukarı kaydırır."
+      }
+    ]
+  },
+
+  {
+    "id": "korelasyon-ve-nedensellik",
+    "moduleId": "neden",
+    "order": 1,
+    "title": "Korelasyon ve nedensellik",
+    "subtitle": "Birlikte hareket eden iki şey, birbirini hareket ettirmiyor olabilir.",
+    "minutes": 8,
+    "keyTerms": ["korelasyon", "nedensellik", "ters nedensellik", "sahte ilişki"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Korelasyon, iki değişkenin birlikte hareket etme derecesini ölçer; −1 ile +1 arasında bir sayıdır. Sıfıra yakınsa doğrusal bir ilişki yok demektir, uçlara yaklaştıkça ilişki güçlenir. Korelasyon bir gözlemdir, bir açıklama değildir. X ile Y birlikte hareket ediyorsa dört ihtimal vardır ve nedensellik bunlardan yalnızca biridir."
+      },
+      {
+        "kind": "list",
+        "title": "X ile Y birlikte hareket ediyorsa",
+        "items": [
+          "X, Y'ye sebep oluyordur.",
+          "Y, X'e sebep oluyordur — yön ters olabilir.",
+          "Üçüncü bir Z değişkeni ikisine birden sebep oluyordur.",
+          "Rastlantıdır; yeterince çok değişken karşılaştırılırsa bazıları tesadüfen uyar.",
+          "Ya da veri, ilişkiyi yaratan bir biçimde seçilmiştir."
+        ]
+      },
+      {
+        "kind": "text",
+        "title": "Yön sorunu",
+        "body": "Kitap okuyan çocukların notları daha yüksektir. Okumak notu mu yükseltiyor, yoksa okuma kolaylığı olan çocuklar hem daha çok okuyup hem de daha yüksek not mu alıyor? Egzersiz yapanlar daha sağlıklıdır: egzersiz mi sağlık getiriyor, yoksa sağlıklı olanlar mı daha kolay egzersiz yapıyor? Bu iki soru gözlem verisiyle ayrılamaz; ayırmak için ya deney ya da nedenselliği tanımlayan başka bir yapı gerekir."
+      },
+      {
+        "kind": "text",
+        "title": "Doğrusal olmayan ilişkiyi korelasyon göremez",
+        "body": "Korelasyon katsayısı yalnızca doğrusal ilişkiyi ölçer. Bir ilişki güçlü ama eğri olabilir ve korelasyon sıfır çıkabilir. Kahve tüketimi ile uyanıklık arasında ters U biçiminde bir ilişki vardır: az kahve uyandırır, çok kahve dağıtır. Bu ilişkiyi tek bir katsayı yakalayamaz. Bu yüzden korelasyon hesaplamadan önce dağılım grafiğine bakmak temel bir alışkanlıktır."
+      },
+      {
+        "kind": "example",
+        "title": "Örnek: dondurma ve boğulma",
+        "body": "Dondurma satışları ile boğulma vakaları güçlü biçimde birlikte hareket eder. Dondurma yüzme becerisini bozmuyor; ikisini birden sıcak hava tetikliyor. Bu, sahte ilişkinin ders kitabı örneğidir ve komik olduğu için akılda kalır. Gerçek hayatta sahte ilişkiler nadiren bu kadar bariz olur; genellikle akla yatkın bir hikâye ile birlikte gelirler."
+      },
+      {
+        "kind": "text",
+        "title": "Nedensellik ne zaman söylenebilir",
+        "body": "Gözlem verisinden nedenselliğe geçmek imkânsız değildir ama pahalıdır. Bunun için ya rastgeleleştirilmiş bir deney gerekir, ya doğal bir deney — politikanın rastgele sayılabilecek bir sınırla uygulanması gibi — ya da nedensel ilişkilerin açıkça yazıldığı bir model. Bradford Hill'in ölçütleri de yardımcı olur: ilişkinin gücü, tutarlılığı, doz-yanıt ilişkisi, zamansal sıra ve makul bir mekanizmanın varlığı."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Sabah kahvaltı yapan çocukların okul başarısı daha yüksek. Bu bulgudan hangisi çıkarılamaz?",
+        "options": [
+          "İki değişken arasında ilişki vardır",
+          "Kahvaltı okul başarısını yükseltir",
+          "Kahvaltı yapabilen ailelerin başka avantajları da olabilir",
+          "İlişkinin yönü bu veriyle belirlenemez"
+        ],
+        "answerIndex": 1,
+        "explanation": "Gözlemsel bir ilişkiden nedensellik çıkarılamaz. Aile geliri, düzen ve ebeveyn ilgisi gibi etkenler hem kahvaltıyı hem başarıyı birlikte açıklayabilir."
+      },
+      {
+        "id": "q2",
+        "prompt": "Korelasyon katsayısı sıfıra yakın çıktı. Hangisi kesinlikle söylenemez?",
+        "options": [
+          "Doğrusal bir ilişki zayıftır",
+          "İki değişken arasında hiçbir ilişki yoktur",
+          "İlişki eğrisel olabilir",
+          "Dağılım grafiğine bakmak gerekir"
+        ],
+        "answerIndex": 1,
+        "explanation": "Korelasyon yalnızca doğrusal ilişkiyi ölçer. Ters U gibi güçlü ama doğrusal olmayan ilişkilerde katsayı sıfıra yakın çıkabilir."
+      },
+      {
+        "id": "q3",
+        "prompt": "Ters nedensellik hangi durumda söz konusudur?",
+        "options": [
+          "İki değişken de üçüncü bir değişkenden etkileniyorsa",
+          "Sanılan sonuç aslında sebepse",
+          "Korelasyon negatifse",
+          "Örneklem küçükse"
+        ],
+        "answerIndex": 1,
+        "explanation": "Ters nedensellik, okun yönünün varsayılanın tersi olmasıdır: sağlıklı insanların spor yapması, sporun sağlık getirmesiyle aynı veriyi üretir."
+      }
+    ]
+  },
+
+  {
+    "id": "karistirici-degisken",
+    "moduleId": "neden",
+    "order": 2,
+    "title": "Karıştırıcı değişken",
+    "subtitle": "Görünmeyen üçüncü değişken, çoğu yanlış sonucun sebebidir.",
+    "minutes": 7,
+    "keyTerms": ["karıştırıcı değişken", "kontrol etmek", "eşleştirme", "aracı değişken"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Karıştırıcı değişken, hem sebep sandığımız şeyle hem de sonuçla bağlantılı olan üçüncü bir değişkendir. Varlığı, aralarında hiçbir nedensel bağ olmayan iki şeyi birbirine bağlı gösterir. Nedensel çıkarımın büyük kısmı, karıştırıcıları bulup etkisiz hâle getirme çabasıdır. Zor olan kısmı da budur: bilmediğiniz bir karıştırıcıyı kontrol edemezsiniz."
+      },
+      {
+        "kind": "text",
+        "title": "Kontrol etmek ne demek",
+        "body": "Bir değişkeni kontrol etmek, karşılaştırmayı o değişken sabitken yapmaktır. Yaşı kontrol etmek, aynı yaştaki insanları kendi aralarında karşılaştırmaktır. Bu, eşleştirmeyle, tabakalamayla ya da çoklu regresyonla yapılabilir. Ama kontrol yalnızca ölçülmüş değişkenler için mümkündür; ölçülmemiş ya da akla gelmemiş bir karıştırıcı, en özenli modelde bile sonucu bozmaya devam eder."
+      },
+      {
+        "kind": "example",
+        "title": "Örnek: hormon tedavisi",
+        "body": "1990'larda gözlemsel çalışmalar, menopoz sonrası hormon tedavisi alan kadınlarda kalp hastalığının daha az görüldüğünü gösterdi. Yıllarca tedavi bu gerekçeyle önerildi. 2002'de yayımlanan büyük randomize deney tersini buldu. Aradaki fark bir karıştırıcıydı: tedaviyi alan kadınlar sistematik olarak daha varlıklı, daha düzenli sağlık kontrolü yaptıran ve daha sağlıklı yaşayan kadınlardı. Kalbi koruyan tedavi değil, tedaviyi alabilen hayattı."
+      },
+      {
+        "kind": "text",
+        "title": "Her şeyi kontrol etmek de hata olabilir",
+        "body": "Aracı değişken, sebep ile sonuç arasındaki yolun üzerindedir. Sigaranın akciğer kanserine etkisini incelerken 'akciğerdeki hasar' değişkenini kontrol ederseniz, sigaranın etkisini de silmiş olursunuz — çünkü etki tam olarak o yoldan geçiyordu. Modele değişken eklemek her zaman iyileştirme değildir; hangi değişkenin karıştırıcı, hangisinin aracı olduğunu belirleyen şey veri değil, nedensel yapı hakkındaki varsayımdır."
+      },
+      {
+        "kind": "list",
+        "title": "Bir gözlemsel bulguyu değerlendirirken",
+        "items": [
+          "İki grubu birbirinden ayıran başka ne var? Gelir, eğitim, yaş, şehir, sağlık davranışı?",
+          "Bu farkları kontrol etmişler mi? Nasıl?",
+          "Kontrol edilemeyen ama akla gelen bir karıştırıcı var mı?",
+          "Karıştırıcının etkisi ne yönde olurdu — bulguyu güçlendirir mi zayıflatır mı?",
+          "Aynı soruya randomize bir deneyle bakılmış mı?"
+        ]
+      },
+      {
+        "kind": "quote",
+        "text": "Veri, hangi değişkenin karıştırıcı olduğunu söyleyemez. Bunu söyleyen, dünyanın nasıl işlediğine dair kurduğunuz modeldir.",
+        "source": "Judea Pearl, nedensellik üzerine"
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Bir karıştırıcı değişkenin tanımı nedir?",
+        "options": [
+          "Ölçülmesi zor olan değişken",
+          "Hem sebep sanılan değişkenle hem de sonuçla bağlantılı üçüncü değişken",
+          "Sebep ile sonuç arasındaki yolun üzerindeki değişken",
+          "Korelasyonu sıfır olan değişken"
+        ],
+        "answerIndex": 1,
+        "explanation": "Karıştırıcı, ikisine birden bağlı olduğu için aralarında olmayan bir ilişki yaratır. Yolun üzerindeki değişken ise aracı değişkendir ve kontrol edilmemelidir."
+      },
+      {
+        "id": "q2",
+        "prompt": "Sigaranın kansere etkisi incelenirken 'akciğer hasarı' değişkenini kontrol etmek neden yanlıştır?",
+        "options": [
+          "Ölçmek zordur",
+          "Aracı değişkendir; etkinin geçtiği yolu kapatarak gerçek etkiyi siler",
+          "Karıştırıcı değişkendir",
+          "Örneklemi küçültür"
+        ],
+        "answerIndex": 1,
+        "explanation": "Aracı değişkeni kontrol etmek, sebebin sonuca ulaştığı yolu kapatır. Bu, gerçek nedensel etkiyi olduğundan küçük gösterir."
+      },
+      {
+        "id": "q3",
+        "prompt": "Gözlemsel çalışmalarda karıştırıcı sorununun en güçlü çözümü nedir?",
+        "options": [
+          "Örneklemi büyütmek",
+          "Modele mümkün olan tüm değişkenleri eklemek",
+          "Rastgeleleştirilmiş deney yapmak",
+          "Daha hassas ölçüm aleti kullanmak"
+        ],
+        "answerIndex": 2,
+        "explanation": "Rastgeleleştirme, ölçülmemiş ve akla gelmemiş karıştırıcıları da ortalamada dengeler. Modele değişken eklemek yalnızca bilinen ve ölçülen karıştırıcılara çare olur."
+      }
+    ]
+  },
+
+  {
+    "id": "deney-ve-kontrol",
+    "moduleId": "neden",
+    "order": 3,
+    "title": "Deney ve kontrol grubu",
+    "subtitle": "Nedenselliği ölçmenin en temiz yolu, müdahaleyi rastgele dağıtmaktır.",
+    "minutes": 8,
+    "keyTerms": ["randomize kontrollü deney", "kontrol grubu", "körleme", "plasebo", "doğal deney"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Rastgeleleştirilmiş kontrollü deneyin fikri basittir: katılımcıları müdahale ve kontrol gruplarına yazı tura ile ayırırsanız, iki grup ortalamada her açıdan birbirine benzer. Bilinen ve bilinmeyen bütün farklar dengelenir. Sonra tek bir şeyi değiştirirsiniz. Ortaya çıkan fark, o değişikliğin eseridir. Bu, nedensellik hakkında elimizdeki en güçlü araçtır."
+      },
+      {
+        "kind": "text",
+        "title": "Kontrol grubu neden gerekli",
+        "body": "Müdahale sonrası iyileşme görmek yeterli değildir, çünkü karşılaştırma noktası yoktur. Çoğu hastalık kendiliğinden geçer, çoğu ölçüm ortalamaya geri döner, çoğu insan gözlendiğini bildiğinde davranışını değiştirir. Kontrol grubu, 'hiçbir şey yapmasaydık ne olurdu' sorusunun gözlemlenebilir cevabıdır. Onsuz, zamanın etkisi ile müdahalenin etkisi birbirinden ayrılamaz."
+      },
+      {
+        "kind": "list",
+        "title": "İyi bir deneyin unsurları",
+        "items": [
+          "Rastgele atama: kimin hangi gruba düşeceği yazı tura ile belirlenir.",
+          "Kontrol grubu: müdahale görmeyen ya da mevcut standardı gören karşılaştırma grubu.",
+          "Körleme: katılımcı hangi grupta olduğunu bilmez; çift körlemede uygulayıcı da bilmez.",
+          "Plasebo: beklentinin kendi etkisini ayırmak için görünüşte aynı ama etkisiz uygulama.",
+          "Önceden belirlenmiş birincil sonuç ölçütü.",
+          "Tedaviyi bırakanların da analize dahil edilmesi."
+        ]
+      },
+      {
+        "kind": "text",
+        "title": "Körleme neden bu kadar önemli",
+        "body": "Hangi grupta olduğunu bilen katılımcı, semptomlarını farklı bildirir. Hangi grubu tedavi ettiğini bilen hekim, ölçümü ve takibi farklı yapar. Bu etkiler kötü niyet gerektirmez, kaçınılmazdırlar. Çift körleme ikisini birden kapatır. Cerrahi ve eğitim gibi körlenmesi zor alanlarda, en azından sonucu değerlendiren kişinin kör olması aranır."
+      },
+      {
+        "kind": "text",
+        "title": "Deney yapılamadığında",
+        "body": "Bazı sorularda deney etik ya da pratik olarak imkânsızdır: kimseyi rastgele sigaraya başlatamazsınız. Bu durumda doğal deneylerden yararlanılır. Bir politikanın belirli bir doğum tarihinden itibaren uygulanması, bir yardımın kura ile dağıtılması, coğrafi bir sınırın iki tarafındaki benzer nüfuslar — hepsi rastgeleliğe yakın karşılaştırmalar üretir. Bu yöntemler 2021 Nobel İktisat Ödülü'ne konu oldu."
+      },
+      {
+        "kind": "example",
+        "title": "Örnek: A/B testi",
+        "body": "Bir uygulamada yeni tasarımın eskisinden iyi olup olmadığını anlamak için kullanıcıların yarısına yeni, yarısına eski sürüm rastgele gösterilir. Bu bir randomize deneydir ve nedensel sonuç verir. Ama aynı tuzaklar geçerlidir: yeterli süre beklenmezse yenilik etkisi ölçülür, çok sayıda ölçüt aynı anda izlenirse biri rastlantıyla anlamlı çıkar, testi erken durdurmak sonucu kaydırır."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Rastgele atamanın temel işlevi nedir?",
+        "options": [
+          "Örneklemi büyütmek",
+          "Bilinen ve bilinmeyen bütün karıştırıcıları ortalamada iki grup arasında dengelemek",
+          "Ölçüm hatasını azaltmak",
+          "Katılımcı bulmayı kolaylaştırmak"
+        ],
+        "answerIndex": 1,
+        "explanation": "Rastgeleleştirmenin gücü, araştırmacının aklına gelmeyen değişkenleri de dengelemesidir. Bu yüzden gözlemsel yöntemlerin ulaşamadığı bir güvence sağlar."
+      },
+      {
+        "id": "q2",
+        "prompt": "Kontrol grubu olmadan yapılan bir 'öncesi-sonrası' karşılaştırmasının sorunu nedir?",
+        "options": [
+          "Örneklem küçük olur",
+          "Kendiliğinden iyileşme, ortalamaya dönüş ve gözlenme etkisi müdahaleye atfedilir",
+          "p-değeri hesaplanamaz",
+          "Rastgeleleştirme gereksiz olur"
+        ],
+        "answerIndex": 1,
+        "explanation": "Karşılaştırma noktası olmadan zamanın ve beklentinin etkisi müdahalenin etkisinden ayrılamaz. Kontrol grubu bu ayrımı mümkün kılar."
+      },
+      {
+        "id": "q3",
+        "prompt": "Doğal deney nedir?",
+        "options": [
+          "Laboratuvar yerine doğada yapılan deney",
+          "Araştırmacının müdahalesi olmadan gerçekleşen, rastgeleliğe yakın bir ayrımdan yararlanan çalışma",
+          "Kontrol grubu olmayan çalışma",
+          "Hayvanlar üzerinde yapılan deney"
+        ],
+        "answerIndex": 1,
+        "explanation": "Doğal deneyde ayrımı araştırmacı değil dünya yapar: bir tarih sınırı, bir kura, bir coğrafi eşik. Bu, deneyin etik ya da pratik olarak yapılamadığı sorulara nedensel yaklaşım sağlar."
+      }
+    ]
+  },
+
+  {
+    "id": "simpson-paradoksu",
+    "moduleId": "neden",
+    "order": 4,
+    "title": "Simpson paradoksu",
+    "subtitle": "Veriyi topladığınızda yön değişebilir — hangi tablo doğrudur?",
+    "minutes": 8,
+    "keyTerms": ["Simpson paradoksu", "toplulaştırma", "grup karması", "tabakalama"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Simpson paradoksu, bir ilişkinin her alt grupta bir yöne, gruplar birleştirildiğinde ters yöne işaret etmesidir. Matematiksel olarak paradoks değildir; oranların ağırlıklı toplanmasının doğal bir sonucudur. Ama sezgiye o kadar aykırıdır ki, gerçek kararlarda tekrar tekrar hata üretir. Anlamak için tek soru yeter: gruplar hangi karmayla birleştiriliyor?"
+      },
+      {
+        "kind": "chart",
+        "chartId": "simpson"
+      },
+      {
+        "kind": "text",
+        "title": "Böbrek taşı örneği",
+        "body": "1986'da yayımlanan gerçek bir veri kümesinde iki tedavi karşılaştırıldı. Açık ameliyat, hem küçük taşlarda hem büyük taşlarda kapalı yöntemden daha başarılıydı. Ama toplamda kapalı yöntem daha başarılı görünüyordu. Sebep şuydu: hekimler ağır vakaları ağırlıklı olarak açık ameliyata gönderiyordu. Açık ameliyat, zor işlerin çoğunu üstlendiği için toplam ortalaması düşüyordu."
+      },
+      {
+        "kind": "text",
+        "title": "Hangi tabloya bakmalı",
+        "body": "Paradoksun asıl sorusu istatistiksel değil nedenseldir. Alt gruplara mı yoksa toplama mı bakılacağını belirleyen şey, grubun sebepten önce mi sonra mı geldiğidir. Taşın boyutu tedaviden önce vardır ve tedavi seçimini etkiler: bu bir karıştırıcıdır, dolayısıyla alt gruplara bakmak doğrudur. Buna karşılık grup, müdahalenin sonucuysa — örneğin ilacın yol açtığı bir yan etkiye göre bölünüyorsa — alt gruplara ayırmak yanıltır."
+      },
+      {
+        "kind": "example",
+        "title": "Örnek: üniversite kabul verileri",
+        "body": "1973'te Berkeley'e başvuran kadınların genel kabul oranı erkeklerinkinden düşüktü ve ayrımcılık iddiası gündeme geldi. Bölüm bölüm bakıldığında tablo değişti: çoğu bölümde kadınların kabul oranı erkeklerinkine eşit ya da daha yüksekti. Fark, kadınların kabul oranı düşük ve rekabetin yüksek olduğu bölümlere daha çok başvurmasından geliyordu. Bu, ayrımcılık olmadığını kanıtlamaz — başvuru tercihlerinin kendisi başka bir sorunun konusudur — ama sorunun kabul aşamasında olmadığını gösterir."
+      },
+      {
+        "kind": "list",
+        "title": "Toplulaştırılmış bir sayı gördüğünüzde",
+        "items": [
+          "Bu toplam hangi alt gruplardan oluşuyor?",
+          "Alt grupların büyüklükleri karşılaştırılan taraflarda aynı mı?",
+          "Alt grup, karşılaştırdığımız müdahaleden önce mi belirleniyor?",
+          "Alt gruplarda yön aynı mı? Değilse hangisine bakılacağı nedensel bir karardır.",
+          "Ortalamaların ortalaması, ağırlıklar farklıysa toplamın ortalaması değildir."
+        ]
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Simpson paradoksunun kaynağı nedir?",
+        "options": [
+          "Hesaplama hatası",
+          "Alt grupların karşılaştırılan taraflarda farklı ağırlıklarla bulunması",
+          "Küçük örneklem",
+          "Ölçüm hatası"
+        ],
+        "answerIndex": 1,
+        "explanation": "Oranlar birleştirilirken grup büyüklükleri ağırlık görevi görür. Ağırlıklar iki tarafta farklıysa toplam, alt grupların ortak yönünü tersine çevirebilir."
+      },
+      {
+        "id": "q2",
+        "prompt": "Bir tedavi her iki hasta grubunda da diğerinden başarılı ama toplamda başarısız görünüyor. En olası açıklama nedir?",
+        "options": [
+          "Veri yanlıştır",
+          "Bu tedaviye ağır vakalar ağırlıklı olarak yönlendirilmiştir",
+          "Örneklem küçüktür",
+          "Tedavi aslında etkisizdir"
+        ],
+        "answerIndex": 1,
+        "explanation": "Zor vakaların bir tedaviye yığılması, o tedavinin toplam başarı oranını düşürür. Alt grup karşılaştırması ise adil olanıdır."
+      },
+      {
+        "id": "q3",
+        "prompt": "Alt gruplara mı toplama mı bakılacağını ne belirler?",
+        "options": [
+          "Hangisinin örneklemi büyükse o",
+          "Alt grubun müdahaleden önce mi sonra mı belirlendiği",
+          "Hangisinin p-değeri küçükse o",
+          "Her zaman toplam kullanılır"
+        ],
+        "answerIndex": 1,
+        "explanation": "Grup müdahaleden önce belirleniyorsa karıştırıcıdır ve alt gruplara bakmak doğrudur. Grup müdahalenin sonucuysa, alt gruplara ayırmak sonucun kendisini kontrol etmek olur ve yanıltır."
+      }
+    ]
+  }
+]

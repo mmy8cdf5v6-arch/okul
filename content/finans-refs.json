@@ -13,9 +13,9 @@
     "timelineTitle": "Piyasaların hafızası",
     "timelineIntro": "Amsterdam'daki ilk borsadan bugüne: yeni araçlar, tekrar eden balonlar ve her seferinde geç öğrenilen dersler.",
     "source": "builtin",
-    "hasCharts": true
+    "hasCharts": true,
+    "category": "gunumuz"
   },
-
   "modules": [
     {
       "id": "zaman",
@@ -33,65 +33,310 @@
       "description": "Portföy kurmak, maliyeti kısmak, kendi kafanla baş etmek ve krizleri tanımak."
     }
   ],
-
   "charts": {
-    "faiz-ve-bilesik-buyume": ["bilesik", 4],
-    "bugunku-deger": ["iskonto", 3],
-    "enflasyon-ve-reel-getiri": ["reel-getiri", 3],
-    "cesitlendirme-ve-portfoy": ["cesitlendirme", 3],
-    "maliyetler-ve-vergi": ["ucret-yuku", 2],
-    "balonlar-ve-krizler": ["balon", 3]
+    "faiz-ve-bilesik-buyume": [
+      "bilesik",
+      4
+    ],
+    "bugunku-deger": [
+      "iskonto",
+      3
+    ],
+    "enflasyon-ve-reel-getiri": [
+      "reel-getiri",
+      3
+    ],
+    "cesitlendirme-ve-portfoy": [
+      "cesitlendirme",
+      3
+    ],
+    "maliyetler-ve-vergi": [
+      "ucret-yuku",
+      2
+    ],
+    "balonlar-ve-krizler": [
+      "balon",
+      3
+    ]
   },
-
   "glossary": [
-    { "id": "faiz", "term": "Faiz", "definition": "Parayı bir süre elden çıkarmanın fiyatı. Borç verenin beklemesinin, borç alanın bugün harcayabilmesinin karşılığıdır.", "lessonId": "faiz-ve-bilesik-buyume" },
-    { "id": "basit-faiz", "term": "Basit faiz", "definition": "Yalnızca anaparaya işleyen faiz. Kazanılan faiz tekrar yatırılmadığı için büyüme doğrusaldır.", "lessonId": "faiz-ve-bilesik-buyume" },
-    { "id": "bilesik-faiz", "term": "Bileşik faiz", "definition": "Faizin de faiz kazanması. Büyümeyi doğrusal olmaktan çıkarıp üstel hâle getiren tek mekanizmadır.", "lessonId": "faiz-ve-bilesik-buyume" },
-    { "id": "yetmis-kurali", "term": "70 kuralı", "definition": "Bir birikimin ikiye katlanma süresi yaklaşık 70 bölü yıllık yüzde getiridir. Bileşik büyümeyi kafadan hesaplamanın kısayolu.", "lessonId": "faiz-ve-bilesik-buyume" },
-    { "id": "bugunku-deger-t", "term": "Bugünkü değer", "definition": "Gelecekteki bir nakit akışının bugünkü karşılığı. Gelecek tutarın iskonto oranıyla geriye doğru bölünmesiyle bulunur.", "lessonId": "bugunku-deger" },
-    { "id": "iskonto-orani", "term": "İskonto oranı", "definition": "Geleceği bugüne çevirirken kullanılan oran. Aynı riskteki alternatif yatırımdan beklenen getiriye eşittir.", "lessonId": "bugunku-deger" },
-    { "id": "nakit-akisi", "term": "Nakit akışı", "definition": "Bir varlığın sahibine hangi tarihte ne kadar para ödeyeceğinin listesi. Değerleme her zaman bu listeden başlar.", "lessonId": "bugunku-deger" },
-    { "id": "net-bugunku-deger", "term": "Net bugünkü değer", "definition": "Bir projenin bütün nakit akışlarının bugünkü değerinden başlangıç harcamasının çıkarılmış hâli. Pozitifse proje değer yaratır.", "lessonId": "bugunku-deger" },
-    { "id": "nominal-getiri", "term": "Nominal getiri", "definition": "Paranın rakamsal olarak ne kadar arttığı. Fiyatların ne yaptığını hesaba katmaz.", "lessonId": "enflasyon-ve-reel-getiri" },
-    { "id": "reel-getiri", "term": "Reel getiri", "definition": "Enflasyondan arındırılmış getiri. Yaklaşık olarak nominal eksi enflasyon, tam olarak (1+nominal)/(1+enflasyon)−1.", "lessonId": "enflasyon-ve-reel-getiri" },
-    { "id": "alim-gucu", "term": "Alım gücü", "definition": "Elinizdeki parayla gerçekte alabildiğiniz mal ve hizmet miktarı. Finansta ölçülmesi gereken tek sonuç budur.", "lessonId": "enflasyon-ve-reel-getiri" },
-    { "id": "para-yanilsamasi", "term": "Para yanılsaması", "definition": "Nominal rakamdaki artışı zenginleşme sanma eğilimi. Yüksek enflasyonda en pahalıya mal olan hata.", "lessonId": "enflasyon-ve-reel-getiri" },
-    { "id": "risk-primi", "term": "Risk primi", "definition": "Bir varlıktan risksiz faizin üzerinde beklenen ek getiri. Belirsizliğe katlanmanın fiyatıdır.", "lessonId": "risk-ve-getiri" },
-    { "id": "oynaklik", "term": "Oynaklık", "definition": "Getirilerin ortalama etrafında ne kadar savrulduğunun ölçüsü. Riskin en yaygın, ama tek olmayan göstergesi.", "lessonId": "risk-ve-getiri" },
-    { "id": "risksiz-faiz", "term": "Risksiz faiz", "definition": "Geri ödenmeme riski neredeyse sıfır sayılan kısa vadeli devlet borçlanma faizi. Bütün getirilerin ölçüldüğü sıfır noktası.", "lessonId": "risk-ve-getiri" },
-    { "id": "beklenen-getiri", "term": "Beklenen getiri", "definition": "Olası sonuçların olasılıklarıyla ağırlıklandırılmış ortalaması. Gerçekleşecek getiri değil, üzerine bahse girilen ortalamadır.", "lessonId": "risk-ve-getiri" },
-    { "id": "ozsermaye", "term": "Özsermaye", "definition": "Şirketin varlıklarından borçları düştükten sonra ortaklara kalan pay. Hisse senedi bu payın bölünmüş hâlidir.", "lessonId": "hisse-senedi" },
-    { "id": "temettu", "term": "Temettü", "definition": "Şirketin kârından ortaklara nakit olarak dağıttığı kısım. Dağıtılmayan kâr şirkette kalır ve büyümeyi finanse eder.", "lessonId": "hisse-senedi" },
-    { "id": "fk-orani", "term": "F/K oranı", "definition": "Hisse fiyatının hisse başına kâra bölümü. Piyasanın bir liralık kâr için kaç lira ödemeye razı olduğunu gösterir.", "lessonId": "hisse-senedi" },
-    { "id": "piyasa-degeri", "term": "Piyasa değeri", "definition": "Hisse sayısı çarpı hisse fiyatı: şirketin tamamı için piyasanın biçtiği fiyat.", "lessonId": "hisse-senedi" },
-    { "id": "kupon", "term": "Kupon", "definition": "Tahvilin sahibine düzenli olarak ödediği sabit faiz tutarı. İhraç anında belirlenir ve değişmez.", "lessonId": "tahvil" },
-    { "id": "tahvil-getirisi", "term": "Getiri (yield)", "definition": "Tahvili bugünkü fiyatından alıp vadeye kadar tutarsanız elde edeceğiniz yıllık getiri. Fiyat düşerse yükselir.", "lessonId": "tahvil" },
-    { "id": "durasyon", "term": "Durasyon", "definition": "Tahvil fiyatının faiz değişimine duyarlılığı. Vade uzadıkça artar; uzun vadeli tahvil faiz artışında daha çok kaybeder.", "lessonId": "tahvil" },
-    { "id": "kredi-notu", "term": "Kredi notu", "definition": "Borçlunun ödememe olasılığına dair derecelendirme kuruluşu değerlendirmesi. Not düştükçe istenen faiz yükselir.", "lessonId": "tahvil" },
-    { "id": "endeks-fonu", "term": "Endeks fonu", "definition": "Bir piyasa endeksini olduğu gibi kopyalayan, hisse seçmeye çalışmayan fon. Düşük maliyeti tek iddiasıdır.", "lessonId": "fonlar-ve-endeksler" },
-    { "id": "etf", "term": "ETF", "definition": "Borsada hisse gibi alınıp satılan yatırım fonu. Gün içinde işlem görmesi ve genelde düşük gideriyle ayrışır.", "lessonId": "fonlar-ve-endeksler" },
-    { "id": "gider-orani", "term": "Gider oranı", "definition": "Fonun yıllık olarak varlıklardan kestiği yönetim ve işletme ücretinin yüzdesi. Getiriden her yıl mutlaka düşer.", "lessonId": "fonlar-ve-endeksler" },
-    { "id": "aktif-yonetim", "term": "Aktif yönetim", "definition": "Piyasa ortalamasını yenmek için varlık seçen yönetim biçimi. Uzun dönemde çoğu aktif fon, maliyeti nedeniyle endeksin gerisinde kalır.", "lessonId": "fonlar-ve-endeksler" },
-    { "id": "kaldirac", "term": "Kaldıraç", "definition": "Borçla pozisyonu büyütmek. Kazancı da kaybı da aynı oranda çarpar; kaybın anaparayı aşmasını mümkün kılar.", "lessonId": "kaldirac-ve-turevler" },
-    { "id": "opsiyon", "term": "Opsiyon", "definition": "Belirli bir fiyattan alma ya da satma hakkı veren, ama zorunluluk getirmeyen sözleşme. Hak bir prim karşılığında satın alınır.", "lessonId": "kaldirac-ve-turevler" },
-    { "id": "vadeli-islem", "term": "Vadeli işlem", "definition": "İleri bir tarihte belirlenmiş fiyattan alım satım yükümlülüğü doğuran sözleşme. Hem korunma hem spekülasyon için kullanılır.", "lessonId": "kaldirac-ve-turevler" },
-    { "id": "marj", "term": "Marj (teminat)", "definition": "Kaldıraçlı pozisyonu açık tutmak için yatırılan güvence. Pozisyon aleyhe döndüğünde tamamlanması istenir; tamamlanmazsa pozisyon kapatılır.", "lessonId": "kaldirac-ve-turevler" },
-    { "id": "cesitlendirme", "term": "Çeşitlendirme", "definition": "Riski birbirine tam bağlı olmayan varlıklara dağıtmak. Finansın bedava öğle yemeğine en yakın şeyi.", "lessonId": "cesitlendirme-ve-portfoy" },
-    { "id": "korelasyon", "term": "Korelasyon", "definition": "İki varlığın birlikte hareket etme derecesi. Çeşitlendirmenin ne kadar işe yarayacağını belirleyen sayıdır.", "lessonId": "cesitlendirme-ve-portfoy" },
-    { "id": "varlik-dagilimi", "term": "Varlık dağılımı", "definition": "Portföyün hisse, tahvil, nakit ve diğer sınıflar arasındaki paylaşımı. Uzun dönem sonucun büyük kısmını bu karar belirler.", "lessonId": "cesitlendirme-ve-portfoy" },
-    { "id": "yeniden-dengeleme", "term": "Yeniden dengeleme", "definition": "Ağırlıkları hedefe geri çekmek için pahalılaşandan satıp ucuzlayandan almak. Disiplini kurala bağlayan işlem.", "lessonId": "cesitlendirme-ve-portfoy" },
-    { "id": "alim-satim-farki", "term": "Alım satım farkı", "definition": "Aynı anda geçerli alış ve satış fiyatı arasındaki fark. Her işlemde görünmeden ödenen maliyettir.", "lessonId": "maliyetler-ve-vergi" },
-    { "id": "vergi-ertelemesi", "term": "Vergi ertelemesi", "definition": "Kazancı satmadan tutarak vergiyi ileri bir tarihe bırakmak. Ertelenen vergi o süre boyunca sizin adınıza çalışmaya devam eder.", "lessonId": "maliyetler-ve-vergi" },
-    { "id": "kayiptan-kacinma", "term": "Kayıptan kaçınma", "definition": "Aynı büyüklükteki kaybın, kazançtan yaklaşık iki kat daha ağır hissedilmesi. Zararı kesememenin başlıca sebebi.", "lessonId": "davranissal-tuzaklar" },
-    { "id": "asiri-guven", "term": "Aşırı güven", "definition": "Kendi tahmin gücünü olduğundan yüksek sanma eğilimi. Gereğinden çok işlem yapmaya ve gereğinden az çeşitlendirmeye yol açar.", "lessonId": "davranissal-tuzaklar" },
-    { "id": "cipalama", "term": "Çıpalama", "definition": "Kararı, alakasız da olsa akılda kalan bir sayıya bağlama eğilimi. Alış fiyatı en sık kullanılan yanlış çıpadır.", "lessonId": "davranissal-tuzaklar" },
-    { "id": "davranis-acigi", "term": "Davranış açığı", "definition": "Bir fonun getirisi ile o fondaki ortalama yatırımcının getirisi arasındaki fark. Yanlış zamanda girip çıkmanın faturası.", "lessonId": "davranissal-tuzaklar" },
-    { "id": "varlik-balonu", "term": "Varlık balonu", "definition": "Fiyatın dayandığı nakit akışlarından kopup yalnızca daha yüksek fiyat beklentisiyle yükselmesi.", "lessonId": "balonlar-ve-krizler" },
-    { "id": "banka-hucumu", "term": "Banka hücumu", "definition": "Mevduat sahiplerinin aynı anda paralarını çekmeye çalışması. Sağlam bir bankayı bile batırabilen kendi kendini gerçekleştiren bir kehanet.", "lessonId": "balonlar-ve-krizler" },
-    { "id": "sistemik-risk", "term": "Sistemik risk", "definition": "Tek bir kurumun çöküşünün bağlantılar üzerinden bütün sistemi tehdit etmesi. Tek tek sağlam olmak yetmez.", "lessonId": "balonlar-ve-krizler" },
-    { "id": "son-kredi-mercii", "term": "Son kredi mercii", "definition": "Panik anında sağlam teminat karşılığı sınırsız borç veren merkez bankası işlevi. Bagehot'un 1873'te formüle ettiği kural.", "lessonId": "balonlar-ve-krizler" }
+    {
+      "id": "faiz",
+      "term": "Faiz",
+      "definition": "Parayı bir süre elden çıkarmanın fiyatı. Borç verenin beklemesinin, borç alanın bugün harcayabilmesinin karşılığıdır.",
+      "lessonId": "faiz-ve-bilesik-buyume"
+    },
+    {
+      "id": "basit-faiz",
+      "term": "Basit faiz",
+      "definition": "Yalnızca anaparaya işleyen faiz. Kazanılan faiz tekrar yatırılmadığı için büyüme doğrusaldır.",
+      "lessonId": "faiz-ve-bilesik-buyume"
+    },
+    {
+      "id": "bilesik-faiz",
+      "term": "Bileşik faiz",
+      "definition": "Faizin de faiz kazanması. Büyümeyi doğrusal olmaktan çıkarıp üstel hâle getiren tek mekanizmadır.",
+      "lessonId": "faiz-ve-bilesik-buyume"
+    },
+    {
+      "id": "yetmis-kurali",
+      "term": "70 kuralı",
+      "definition": "Bir birikimin ikiye katlanma süresi yaklaşık 70 bölü yıllık yüzde getiridir. Bileşik büyümeyi kafadan hesaplamanın kısayolu.",
+      "lessonId": "faiz-ve-bilesik-buyume"
+    },
+    {
+      "id": "bugunku-deger-t",
+      "term": "Bugünkü değer",
+      "definition": "Gelecekteki bir nakit akışının bugünkü karşılığı. Gelecek tutarın iskonto oranıyla geriye doğru bölünmesiyle bulunur.",
+      "lessonId": "bugunku-deger"
+    },
+    {
+      "id": "iskonto-orani",
+      "term": "İskonto oranı",
+      "definition": "Geleceği bugüne çevirirken kullanılan oran. Aynı riskteki alternatif yatırımdan beklenen getiriye eşittir.",
+      "lessonId": "bugunku-deger"
+    },
+    {
+      "id": "nakit-akisi",
+      "term": "Nakit akışı",
+      "definition": "Bir varlığın sahibine hangi tarihte ne kadar para ödeyeceğinin listesi. Değerleme her zaman bu listeden başlar.",
+      "lessonId": "bugunku-deger"
+    },
+    {
+      "id": "net-bugunku-deger",
+      "term": "Net bugünkü değer",
+      "definition": "Bir projenin bütün nakit akışlarının bugünkü değerinden başlangıç harcamasının çıkarılmış hâli. Pozitifse proje değer yaratır.",
+      "lessonId": "bugunku-deger"
+    },
+    {
+      "id": "nominal-getiri",
+      "term": "Nominal getiri",
+      "definition": "Paranın rakamsal olarak ne kadar arttığı. Fiyatların ne yaptığını hesaba katmaz.",
+      "lessonId": "enflasyon-ve-reel-getiri"
+    },
+    {
+      "id": "reel-getiri",
+      "term": "Reel getiri",
+      "definition": "Enflasyondan arındırılmış getiri. Yaklaşık olarak nominal eksi enflasyon, tam olarak (1+nominal)/(1+enflasyon)−1.",
+      "lessonId": "enflasyon-ve-reel-getiri"
+    },
+    {
+      "id": "alim-gucu",
+      "term": "Alım gücü",
+      "definition": "Elinizdeki parayla gerçekte alabildiğiniz mal ve hizmet miktarı. Finansta ölçülmesi gereken tek sonuç budur.",
+      "lessonId": "enflasyon-ve-reel-getiri"
+    },
+    {
+      "id": "para-yanilsamasi",
+      "term": "Para yanılsaması",
+      "definition": "Nominal rakamdaki artışı zenginleşme sanma eğilimi. Yüksek enflasyonda en pahalıya mal olan hata.",
+      "lessonId": "enflasyon-ve-reel-getiri"
+    },
+    {
+      "id": "risk-primi",
+      "term": "Risk primi",
+      "definition": "Bir varlıktan risksiz faizin üzerinde beklenen ek getiri. Belirsizliğe katlanmanın fiyatıdır.",
+      "lessonId": "risk-ve-getiri"
+    },
+    {
+      "id": "oynaklik",
+      "term": "Oynaklık",
+      "definition": "Getirilerin ortalama etrafında ne kadar savrulduğunun ölçüsü. Riskin en yaygın, ama tek olmayan göstergesi.",
+      "lessonId": "risk-ve-getiri"
+    },
+    {
+      "id": "risksiz-faiz",
+      "term": "Risksiz faiz",
+      "definition": "Geri ödenmeme riski neredeyse sıfır sayılan kısa vadeli devlet borçlanma faizi. Bütün getirilerin ölçüldüğü sıfır noktası.",
+      "lessonId": "risk-ve-getiri"
+    },
+    {
+      "id": "beklenen-getiri",
+      "term": "Beklenen getiri",
+      "definition": "Olası sonuçların olasılıklarıyla ağırlıklandırılmış ortalaması. Gerçekleşecek getiri değil, üzerine bahse girilen ortalamadır.",
+      "lessonId": "risk-ve-getiri"
+    },
+    {
+      "id": "ozsermaye",
+      "term": "Özsermaye",
+      "definition": "Şirketin varlıklarından borçları düştükten sonra ortaklara kalan pay. Hisse senedi bu payın bölünmüş hâlidir.",
+      "lessonId": "hisse-senedi"
+    },
+    {
+      "id": "temettu",
+      "term": "Temettü",
+      "definition": "Şirketin kârından ortaklara nakit olarak dağıttığı kısım. Dağıtılmayan kâr şirkette kalır ve büyümeyi finanse eder.",
+      "lessonId": "hisse-senedi"
+    },
+    {
+      "id": "fk-orani",
+      "term": "F/K oranı",
+      "definition": "Hisse fiyatının hisse başına kâra bölümü. Piyasanın bir liralık kâr için kaç lira ödemeye razı olduğunu gösterir.",
+      "lessonId": "hisse-senedi"
+    },
+    {
+      "id": "piyasa-degeri",
+      "term": "Piyasa değeri",
+      "definition": "Hisse sayısı çarpı hisse fiyatı: şirketin tamamı için piyasanın biçtiği fiyat.",
+      "lessonId": "hisse-senedi"
+    },
+    {
+      "id": "kupon",
+      "term": "Kupon",
+      "definition": "Tahvilin sahibine düzenli olarak ödediği sabit faiz tutarı. İhraç anında belirlenir ve değişmez.",
+      "lessonId": "tahvil"
+    },
+    {
+      "id": "tahvil-getirisi",
+      "term": "Getiri (yield)",
+      "definition": "Tahvili bugünkü fiyatından alıp vadeye kadar tutarsanız elde edeceğiniz yıllık getiri. Fiyat düşerse yükselir.",
+      "lessonId": "tahvil"
+    },
+    {
+      "id": "durasyon",
+      "term": "Durasyon",
+      "definition": "Tahvil fiyatının faiz değişimine duyarlılığı. Vade uzadıkça artar; uzun vadeli tahvil faiz artışında daha çok kaybeder.",
+      "lessonId": "tahvil"
+    },
+    {
+      "id": "kredi-notu",
+      "term": "Kredi notu",
+      "definition": "Borçlunun ödememe olasılığına dair derecelendirme kuruluşu değerlendirmesi. Not düştükçe istenen faiz yükselir.",
+      "lessonId": "tahvil"
+    },
+    {
+      "id": "endeks-fonu",
+      "term": "Endeks fonu",
+      "definition": "Bir piyasa endeksini olduğu gibi kopyalayan, hisse seçmeye çalışmayan fon. Düşük maliyeti tek iddiasıdır.",
+      "lessonId": "fonlar-ve-endeksler"
+    },
+    {
+      "id": "etf",
+      "term": "ETF",
+      "definition": "Borsada hisse gibi alınıp satılan yatırım fonu. Gün içinde işlem görmesi ve genelde düşük gideriyle ayrışır.",
+      "lessonId": "fonlar-ve-endeksler"
+    },
+    {
+      "id": "gider-orani",
+      "term": "Gider oranı",
+      "definition": "Fonun yıllık olarak varlıklardan kestiği yönetim ve işletme ücretinin yüzdesi. Getiriden her yıl mutlaka düşer.",
+      "lessonId": "fonlar-ve-endeksler"
+    },
+    {
+      "id": "aktif-yonetim",
+      "term": "Aktif yönetim",
+      "definition": "Piyasa ortalamasını yenmek için varlık seçen yönetim biçimi. Uzun dönemde çoğu aktif fon, maliyeti nedeniyle endeksin gerisinde kalır.",
+      "lessonId": "fonlar-ve-endeksler"
+    },
+    {
+      "id": "kaldirac",
+      "term": "Kaldıraç",
+      "definition": "Borçla pozisyonu büyütmek. Kazancı da kaybı da aynı oranda çarpar; kaybın anaparayı aşmasını mümkün kılar.",
+      "lessonId": "kaldirac-ve-turevler"
+    },
+    {
+      "id": "opsiyon",
+      "term": "Opsiyon",
+      "definition": "Belirli bir fiyattan alma ya da satma hakkı veren, ama zorunluluk getirmeyen sözleşme. Hak bir prim karşılığında satın alınır.",
+      "lessonId": "kaldirac-ve-turevler"
+    },
+    {
+      "id": "vadeli-islem",
+      "term": "Vadeli işlem",
+      "definition": "İleri bir tarihte belirlenmiş fiyattan alım satım yükümlülüğü doğuran sözleşme. Hem korunma hem spekülasyon için kullanılır.",
+      "lessonId": "kaldirac-ve-turevler"
+    },
+    {
+      "id": "marj",
+      "term": "Marj (teminat)",
+      "definition": "Kaldıraçlı pozisyonu açık tutmak için yatırılan güvence. Pozisyon aleyhe döndüğünde tamamlanması istenir; tamamlanmazsa pozisyon kapatılır.",
+      "lessonId": "kaldirac-ve-turevler"
+    },
+    {
+      "id": "cesitlendirme",
+      "term": "Çeşitlendirme",
+      "definition": "Riski birbirine tam bağlı olmayan varlıklara dağıtmak. Finansın bedava öğle yemeğine en yakın şeyi.",
+      "lessonId": "cesitlendirme-ve-portfoy"
+    },
+    {
+      "id": "korelasyon",
+      "term": "Korelasyon",
+      "definition": "İki varlığın birlikte hareket etme derecesi. Çeşitlendirmenin ne kadar işe yarayacağını belirleyen sayıdır.",
+      "lessonId": "cesitlendirme-ve-portfoy"
+    },
+    {
+      "id": "varlik-dagilimi",
+      "term": "Varlık dağılımı",
+      "definition": "Portföyün hisse, tahvil, nakit ve diğer sınıflar arasındaki paylaşımı. Uzun dönem sonucun büyük kısmını bu karar belirler.",
+      "lessonId": "cesitlendirme-ve-portfoy"
+    },
+    {
+      "id": "yeniden-dengeleme",
+      "term": "Yeniden dengeleme",
+      "definition": "Ağırlıkları hedefe geri çekmek için pahalılaşandan satıp ucuzlayandan almak. Disiplini kurala bağlayan işlem.",
+      "lessonId": "cesitlendirme-ve-portfoy"
+    },
+    {
+      "id": "alim-satim-farki",
+      "term": "Alım satım farkı",
+      "definition": "Aynı anda geçerli alış ve satış fiyatı arasındaki fark. Her işlemde görünmeden ödenen maliyettir.",
+      "lessonId": "maliyetler-ve-vergi"
+    },
+    {
+      "id": "vergi-ertelemesi",
+      "term": "Vergi ertelemesi",
+      "definition": "Kazancı satmadan tutarak vergiyi ileri bir tarihe bırakmak. Ertelenen vergi o süre boyunca sizin adınıza çalışmaya devam eder.",
+      "lessonId": "maliyetler-ve-vergi"
+    },
+    {
+      "id": "kayiptan-kacinma",
+      "term": "Kayıptan kaçınma",
+      "definition": "Aynı büyüklükteki kaybın, kazançtan yaklaşık iki kat daha ağır hissedilmesi. Zararı kesememenin başlıca sebebi.",
+      "lessonId": "davranissal-tuzaklar"
+    },
+    {
+      "id": "asiri-guven",
+      "term": "Aşırı güven",
+      "definition": "Kendi tahmin gücünü olduğundan yüksek sanma eğilimi. Gereğinden çok işlem yapmaya ve gereğinden az çeşitlendirmeye yol açar.",
+      "lessonId": "davranissal-tuzaklar"
+    },
+    {
+      "id": "cipalama",
+      "term": "Çıpalama",
+      "definition": "Kararı, alakasız da olsa akılda kalan bir sayıya bağlama eğilimi. Alış fiyatı en sık kullanılan yanlış çıpadır.",
+      "lessonId": "davranissal-tuzaklar"
+    },
+    {
+      "id": "davranis-acigi",
+      "term": "Davranış açığı",
+      "definition": "Bir fonun getirisi ile o fondaki ortalama yatırımcının getirisi arasındaki fark. Yanlış zamanda girip çıkmanın faturası.",
+      "lessonId": "davranissal-tuzaklar"
+    },
+    {
+      "id": "varlik-balonu",
+      "term": "Varlık balonu",
+      "definition": "Fiyatın dayandığı nakit akışlarından kopup yalnızca daha yüksek fiyat beklentisiyle yükselmesi.",
+      "lessonId": "balonlar-ve-krizler"
+    },
+    {
+      "id": "banka-hucumu",
+      "term": "Banka hücumu",
+      "definition": "Mevduat sahiplerinin aynı anda paralarını çekmeye çalışması. Sağlam bir bankayı bile batırabilen kendi kendini gerçekleştiren bir kehanet.",
+      "lessonId": "balonlar-ve-krizler"
+    },
+    {
+      "id": "sistemik-risk",
+      "term": "Sistemik risk",
+      "definition": "Tek bir kurumun çöküşünün bağlantılar üzerinden bütün sistemi tehdit etmesi. Tek tek sağlam olmak yetmez.",
+      "lessonId": "balonlar-ve-krizler"
+    },
+    {
+      "id": "son-kredi-mercii",
+      "term": "Son kredi mercii",
+      "definition": "Panik anında sağlam teminat karşılığı sınırsız borç veren merkez bankası işlevi. Bagehot'un 1873'te formüle ettiği kural.",
+      "lessonId": "balonlar-ve-krizler"
+    }
   ],
-
   "figures": [
     {
       "id": "fibonacci",
@@ -266,14 +511,12 @@
       "tag": "Bankacılık kuramı"
     }
   ],
-
   "eraLabels": {
     "erken": "Erken piyasalar",
     "kurumlar": "Kurumlar çağı",
     "modern": "Modern finans",
     "cagdas": "Çağdaş dönem"
   },
-
   "timeline": [
     {
       "id": "liber-abaci",

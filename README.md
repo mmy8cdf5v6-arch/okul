@@ -14,8 +14,12 @@ depoya bir istek olarak göndermek (kimseden anahtar istemez) ya da kendi API
 anahtarınla o an üretmek. Üretilen kurslar kütüphanede kalır ve tıklanarak
 yeniden açılır.
 
-Hazır kurslar: **İktisat Defteri** (35 ders, 105 soru, 21 grafik) ve
-**Finans** (12 ders, 36 soru, 6 grafik).
+Kütüphane kategorilere ayrılır (Bugünü anlamak / Klasikler / Senin
+oluşturdukların); kategori, kursun künyesindeki `category` alanından gelir.
+
+Hazır kurslar: **İktisat Defteri** (35 ders, 105 soru, 21 grafik), **Finans**
+(12 ders, 36 soru, 6 grafik) ve **İstatistik okuryazarlığı** (12 ders, 36 soru,
+5 grafik). Sıradaki kurslar `content/PLAN.md` içinde programlandı.
 
 **Üretim.** Dört aşamada ilerler ve her aşama ekranda görünür:
 
@@ -39,10 +43,9 @@ istekler doğrudan tarayıcıdan `api.anthropic.com` adresine yapılır
 > anahtarı yoktur. Kendi anahtarını girerse üretebilir ve maliyeti ona yansır.
 > Ortak kullanılan bir bilgisayarda anahtar bırakma.
 
-**Grafikler.** 25 interaktif SVG grafik elle yazılmış koddur; yalnızca hazır
-kurslarda görünür (21'i İktisat Defteri'nde, 6'sı Finans'ta — ikisi ortak).
-Üretilen kurslarda metin, liste, örnek, alıntı, formül bölümleri, sınav, sözlük,
-kişiler ve zaman çizelgesi bulunur.
+**Grafikler.** 30 interaktif SVG grafik elle yazılmış koddur ve yalnızca hazır
+kurslarda görünür. Üretilen kurslarda metin, liste, örnek, alıntı, formül
+bölümleri, sınav, sözlük, kişiler ve zaman çizelgesi bulunur.
 
 ## Yapı
 
@@ -55,15 +58,16 @@ okul/
 ├─ courses/                sunulan kurs verisi (küçültülmüş JSON)
 │  ├─ index.json           kütüphane listesi
 │  ├─ iktisat.json
-│  └─ finans.json
-├─ content/                elle yazılan kaynak metin (Finans)
-│  ├─ finans-a.json        1-6. dersler
-│  ├─ finans-b.json        7-12. dersler
-│  ├─ finans-refs.json     künye, modüller, sözlük, isimler, çizelge, grafik yerleşimi
-│  └─ build_finans.py      content/ → courses/finans.json + index girdisi
+│  ├─ finans.json
+│  └─ istatistik.json
+├─ content/                elle yazılan kaynak metin
+│  ├─ PLAN.md              kurs programı ve modül iskeletleri
+│  ├─ <kurs>-a.json        ders dizisi (b, c… diye devam eder)
+│  ├─ <kurs>-refs.json     künye, modüller, sözlük, isimler, çizelge, grafik yerleşimi
+│  └─ build_course.py      content/ → courses/<kurs>.json + index girdisi
 ├─ src/
 │  ├─ core.js              durum, depolama, yönlendirme, kabuk
-│  ├─ charts.js            SVG grafik motoru + 25 grafik
+│  ├─ charts.js            SVG grafik motoru + 30 grafik
 │  ├─ course.js            kurs özeti, dersler, ders, ders içi sınav, tarih
 │  ├─ study.js             kartlar, deneme sınavı, istatistik, arama
 │  ├─ generate.js          Anthropic API istemcisi + üretim hattı
@@ -115,17 +119,21 @@ ama `src/` değiştirdiğinde `python3 build.py` çalıştırıp çıktıyı da 
 ## Hazır kurs eklemek
 
 `courses/` altına bir JSON koy ve `courses/index.json` listesine bir satır ekle.
-Tek dosya elle bakılamayacak kadar büyürse Finans'taki gibi `content/` altında
-parçalara ayır ve küçük bir betikle birleştir:
+Tek dosya elle bakılamayacak kadar büyürse `content/` altında parçalara ayır ve
+derleyiciyle birleştir:
 
 ```bash
-python3 content/build_finans.py   # parçaları birleştirir, tutarlılığı denetler,
-                                  # courses/finans.json ve index girdisini yazar
+python3 content/build_course.py istatistik   # tek kurs
+python3 content/build_course.py --all        # content/ altındaki bütün kurslar
 ```
 
-Betik ders kimliklerinin tekilliğini, her dersin tanımlı bir modüle bağlı
-olduğunu, sözlük ve isim girdilerinin var olan derslere işaret ettiğini,
-çizelge olaylarının tanımlı dönem ve isimleri kullandığını denetler.
+Beklenen dosyalar `content/<kimlik>-refs.json` (künye, modüller, sözlük,
+isimler, çizelge) ve `content/<kimlik>-a.json` (ders dizisi; b, c… diye devam
+edebilir). Betik ders kimliklerinin tekilliğini, her dersin tanımlı bir modüle
+bağlı olduğunu, bölüm türlerinin zorunlu alanlarını, sınav cevaplarının seçenek
+aralığında olduğunu, sözlük ve isim girdilerinin var olan derslere işaret
+ettiğini, çizelge olaylarının tanımlı dönem ve isimleri kullandığını denetler;
+sonra `courses/<kimlik>.json` ile `courses/index.json` girdisini yazar.
 
 Kurs nesnesi:
 
@@ -148,9 +156,12 @@ Ders bölümü türleri: `text` (`title?`, `body`), `list` (`title`, `items[]`),
 (`title`, `expression`, `note`), `chart` (`chartId` — yalnızca elle yazılmış grafikler).
 
 Yeni grafik eklemek için `src/charts.js` içindeki `CHARTS` sözlüğüne, girintisi dört
-boşluk olan `"kimlik": {` satırıyla başlayan bir kayıt ekle; `build.py` derste geçen
-her `chartId`'nin tanımlı olduğunu doğrular. Koordinatlar 0–1 birim uzayındadır ve
-renkler daima CSS değişkenlerinden alınır, böylece grafikler koyu temada da çalışır.
+boşluk olan `"kimlik": {` satırıyla başlayan bir kayıt ekle. Koordinatlar 0–1 birim
+uzayındadır ve renkler daima CSS değişkenlerinden alınır, böylece grafikler koyu
+temada da çalışır. Her kaydırıcı denetimi bir `def` değeri taşımalıdır; `build.py`
+hem bunu hem de derste geçen her `chartId`'nin tanımlı olduğunu doğrular. Duman
+testi ayrıca her hazır kursun her grafiğini başlangıç, en düşük ve en yüksek
+denetim değerinde çizip NaN sızıp sızmadığına bakar.
 
 ## Veri ve gizlilik
 

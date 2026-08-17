@@ -1,0 +1,523 @@
+[
+  {
+    "id": "ortalama-medyan-mod",
+    "moduleId": "okuma",
+    "order": 1,
+    "title": "Ortalama, medyan, mod",
+    "subtitle": "Tek bir sayı bir topluluğu ne kadar temsil edebilir?",
+    "minutes": 7,
+    "keyTerms": ["ortalama", "medyan", "mod", "çarpık dağılım"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Bir topluluk hakkında tek bir sayı söylemek istediğimizde merkezî eğilim ölçülerine başvururuz. Üç tanesi yaygındır. Ortalama, bütün değerleri toplayıp sayıya bölmektir. Medyan, değerleri sıraya dizdiğinizde tam ortada kalan değerdir. Mod ise en sık tekrar eden değerdir. Dengeli dağılımlarda üçü birbirine yakın çıkar ve hangisini kullandığınız fark etmez. Fark yaratan durum, dağılımın çarpık olmasıdır."
+      },
+      {
+        "kind": "text",
+        "title": "Ortalama uçlara duyarlıdır",
+        "body": "Ortalama, her değerin ağırlığını eşit alır ama uçtaki bir değer diğerlerinden çok uzaksa onu tek başına yukarı çeker. On kişinin bulunduğu bir odaya dünyanın en zengin insanı girdiğinde odadaki ortalama servet milyarlarca liraya çıkar; ama odadaki on bir kişiden onunun durumu hiç değişmemiştir. Medyan bu durumda yalnızca bir basamak kayar. İşte bu yüzden gelir, servet, kira, ev fiyatı gibi çarpık dağılan büyüklüklerde medyan neredeyse her zaman daha dürüst bir özettir."
+      },
+      {
+        "kind": "example",
+        "title": "Örnek: maaş görüşmesi",
+        "body": "Bir şirket 'çalışanlarımızın ortalama maaşı 95 bin lira' diyor. On kişilik şirkette dokuz kişi 40 bin, kurucu ise 590 bin alıyorsa ortalama gerçekten 95 bindir. Ama medyan 40 bindir ve işe girecek kişinin bilmesi gereken sayı budur. Şirket yalan söylemedi; sadece iki doğru sayıdan kendine yarayanı seçti."
+      },
+      {
+        "kind": "text",
+        "title": "Mod ne zaman işe yarar",
+        "body": "Mod, sayısal olmayan verilerde tek seçenektir: en çok tercih edilen renk, en sık görülen kan grubu, en yaygın meslek. Sayısal verilerde ise dağılımın birden fazla tepesi olduğunu fark etmemizi sağlar. İki tepeli bir dağılımda ortalama, iki grubun arasındaki boşluğa düşer ve kimseyi temsil etmez. Bir sınıfta notlar 30 ve 80 civarında toplanmışsa, 55 ortalaması sınıfta neredeyse hiç kimsenin almadığı bir nottur."
+      },
+      {
+        "kind": "list",
+        "title": "Hangi sayıyı sormalı",
+        "items": [
+          "Gelir, servet, fiyat, süre gibi çarpık dağılan şeylerde medyanı sor.",
+          "Ortalama verilmişse dağılımın şeklini de sor: tek tepeli mi, uçta ne var?",
+          "Ortalama ile medyan arasındaki fark büyükse, bu farkın kendisi bir haberdir.",
+          "'Ortalama bir vatandaş' ifadesi çoğu zaman istatistiksel değil retorik bir kurgudur.",
+          "Bir sayı yerine dağılımın kendisi gösterilebiliyorsa, o daima daha iyidir."
+        ]
+      },
+      {
+        "kind": "quote",
+        "text": "Bir istatistikçi, ayakları buz kalıbında başı fırında olan bir insanın ortalamada rahat olduğunu söyleyen kişidir.",
+        "source": "İstatistik folkloru"
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Bir mahallede ev fiyatlarının ortalaması 8 milyon, medyanı 3 milyon lira. Bu ne anlama gelir?",
+        "options": [
+          "Hesaplamada hata vardır, ikisi eşit olmalıdır",
+          "Birkaç çok pahalı ev ortalamayı yukarı çekiyor; tipik ev 3 milyon civarında",
+          "Evlerin yarısı 8 milyondan pahalıdır",
+          "Mahallede ev sayısı azdır"
+        ],
+        "answerIndex": 1,
+        "explanation": "Ortalamanın medyandan belirgin biçimde yüksek olması sağa çarpık bir dağılımın işaretidir: uçtaki birkaç yüksek değer ortalamayı çeker, medyan tipik evi gösterir."
+      },
+      {
+        "id": "q2",
+        "prompt": "Hangi durumda ortalama, medyandan daha bilgilendiricidir?",
+        "options": [
+          "Gelir dağılımını özetlerken",
+          "Bir sınıfın iki kümede toplandığı notları özetlerken",
+          "Toplam bütçeyi kişi sayısına bölerek kişi başına düşen payı hesaplarken",
+          "Kira fiyatlarını özetlerken"
+        ],
+        "answerIndex": 2,
+        "explanation": "Toplamın kendisi anlamlı olduğunda ortalama doğru araçtır: kişi başına düşen pay, toplamı nüfusa bölmekle bulunur. Çarpık dağılımların tipik değerini anlatmak için ise medyan uygundur."
+      },
+      {
+        "id": "q3",
+        "prompt": "İki tepeli bir dağılımda ortalamanın sorunu nedir?",
+        "options": [
+          "Hesaplanamaz",
+          "Her zaman medyandan büyüktür",
+          "İki kümenin arasındaki boşluğa düşerek kimseyi temsil etmeyebilir",
+          "Uç değerlerden etkilenmez"
+        ],
+        "answerIndex": 2,
+        "explanation": "İki ayrı kümede toplanan verilerde ortalama, aradaki seyrek bölgeye düşer. Tek bir merkezî değer aramak yerine iki kümenin ayrı ayrı tarif edilmesi gerekir."
+      }
+    ]
+  },
+
+  {
+    "id": "dagilim-ve-degiskenlik",
+    "moduleId": "okuma",
+    "order": 2,
+    "title": "Dağılım ve değişkenlik",
+    "subtitle": "Merkez kadar, merkezin etrafındaki saçılma da bilgidir.",
+    "minutes": 8,
+    "keyTerms": ["dağılım", "standart sapma", "yüzdelik", "normal dağılım", "aykırı değer"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Merkezî eğilim bir dağılımın nerede durduğunu söyler; değişkenlik ise ne kadar yayıldığını. İki sınıfın not ortalaması da 60 olabilir: birinde herkes 58 ile 62 arasındadır, diğerinde notlar 20 ile 95 arasına dağılmıştır. Aynı ortalama, tamamen farklı iki durumu anlatır. Öğretmen için ikinci sınıf çok daha zor bir sorundur ve bunu yalnızca ortalamaya bakarak göremez."
+      },
+      {
+        "kind": "text",
+        "title": "Standart sapma neyi ölçer",
+        "body": "Standart sapma, değerlerin ortalamadan ne kadar uzakta durduğunun tipik ölçüsüdür. Küçükse veriler ortalamanın etrafında sıkışmıştır, büyükse yayılmıştır. Standart sapmanın önemli bir özelliği verinin kendi biriminde olmasıdır: not için puan, boy için santimetre. Bu yüzden doğrudan yorumlanabilir. Varyans ise standart sapmanın karesidir; hesaplarda kullanışlıdır ama birimi karesel olduğu için sezgiye uygun değildir."
+      },
+      {
+        "kind": "formula",
+        "title": "Standart sapma",
+        "expression": "s = √( Σ(xᵢ − x̄)² / (n − 1) )",
+        "note": "Her değerin ortalamadan farkı alınır, kareleri toplanır, ortalaması alınır ve karekökü çıkarılır. Kare almanın sebebi, eksi ve artı sapmaların birbirini götürmesini engellemektir."
+      },
+      {
+        "kind": "text",
+        "title": "Yüzdelikler daha okunaklıdır",
+        "body": "Standart sapma yalnızca dağılım simetrikse kolay yorumlanır. Çarpık verilerde yüzdelikler daha faydalıdır. 25. yüzdelik, verilerin dörtte birinin altında kaldığı değerdir; 75. yüzdelik ise dörtte üçünün. Aradaki fark, çeyrekler açıklığıdır ve aykırı değerlerden etkilenmez. Maaş, kira, bekleme süresi gibi verilerde 'medyan 40, çeyrekler 32 ile 55' demek, 'ortalama 47, sapma 18' demekten çok daha anlaşılırdır."
+      },
+      {
+        "kind": "list",
+        "title": "Normal dağılımın pratik kuralı",
+        "items": [
+          "Değerlerin yaklaşık %68'i ortalamadan bir standart sapma uzaklıkta kalır.",
+          "Yaklaşık %95'i iki standart sapma içinde kalır.",
+          "Yaklaşık %99.7'si üç standart sapma içinde kalır.",
+          "Bu kural yalnızca dağılım normale yakınsa geçerlidir; gelir ve şehir nüfusu gibi veriler normal dağılmaz.",
+          "Finansal getiriler normalden daha kalın kuyrukludur: 'beş sigmalık' olaylar hesaplanandan çok daha sık görülür."
+        ]
+      },
+      {
+        "kind": "example",
+        "title": "Örnek: iki hastane",
+        "body": "İki hastanede ameliyat sonrası ortalama iyileşme süresi altı gün. Birincisinde neredeyse herkes beş ile yedi gün arasında taburcu oluyor. İkincisinde hastaların yarısı üç günde çıkıyor, diğer yarısı dokuz günde. Ortalamalar aynı, ama ikinci hastanede belirgin biçimde farklı iki hasta grubu var ve bunu anlamak, ortalamayı bilmekten daha önemli."
+      },
+      {
+        "kind": "text",
+        "title": "Aykırı değeri silmeden önce",
+        "body": "Ortalamayı bozan uç değerlere aykırı değer denir. Bunları veriden çıkarmak yaygın bir refleks ama tehlikeli bir alışkanlıktır. Aykırı değer bazen bir ölçüm hatasıdır ve çıkarılmalıdır; bazen de asıl keşfin kendisidir. Ozon tabakasındaki delik, uydu verilerini işleyen yazılım çok düşük değerleri hata sayıp attığı için yıllarca fark edilmedi. Bir değeri atmadan önce sorulacak soru şudur: bu ölçüm yanlış mı, yoksa sadece beklentimize uymuyor mu?"
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "İki ürünün müşteri memnuniyeti ortalaması da 4.0. Birinde sapma 0.2, diğerinde 1.8. Ne söylenebilir?",
+        "options": [
+          "İkisi de aynı deneyimi sunuyor",
+          "Sapması yüksek olan üründe deneyim tutarsız: bazı müşteriler çok memnun, bazıları hiç değil",
+          "Sapması yüksek olan ürün daha kalitelidir",
+          "Sapma memnuniyetle ilgisizdir"
+        ],
+        "answerIndex": 1,
+        "explanation": "Aynı ortalama farklı dağılımlardan çıkabilir. Yüksek sapma, deneyimin müşteriden müşteriye değiştiğini gösterir; bu çoğu zaman ortalamanın kendisinden önemli bir bulgudur."
+      },
+      {
+        "id": "q2",
+        "prompt": "Çarpık bir gelir dağılımını anlatmak için hangisi en uygundur?",
+        "options": [
+          "Ortalama ve standart sapma",
+          "Yalnızca ortalama",
+          "Medyan ve çeyreklik değerler",
+          "Yalnızca en yüksek gelir"
+        ],
+        "answerIndex": 2,
+        "explanation": "Çarpık dağılımlarda standart sapma yorumlanması zor bir sayıdır. Medyan ve çeyreklikler dağılımın şeklini uç değerlerden etkilenmeden anlatır."
+      },
+      {
+        "id": "q3",
+        "prompt": "Bir veri setindeki uç değer hakkında doğru olan hangisidir?",
+        "options": [
+          "Ortalamayı bozduğu için mutlaka silinmelidir",
+          "Silmeden önce ölçüm hatası mı yoksa gerçek bir gözlem mi olduğu araştırılmalıdır",
+          "Yalnızca normal dağılımlarda görülür",
+          "Medyanı ortalamadan daha çok etkiler"
+        ],
+        "answerIndex": 1,
+        "explanation": "Uç değer bazen hatadır, bazen de bulgunun kendisidir. Analizden çıkarma kararı, sayının büyüklüğüne değil ölçümün geçerliliğine dayanmalıdır."
+      }
+    ]
+  },
+
+  {
+    "id": "grafik-yalanlari",
+    "moduleId": "okuma",
+    "order": 3,
+    "title": "Grafiğin söylemedikleri",
+    "subtitle": "Veri doğru olabilir, çizim yine de yanıltabilir.",
+    "minutes": 7,
+    "keyTerms": ["kesilmiş eksen", "alan yanılsaması", "seçilmiş aralık", "çift eksen"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Grafik, veriyi göze çeviren bir dildir ve her dil gibi yalan söylemeye elverişlidir. En yaygın hilelerin ortak özelliği, tek bir sayıyı bile değiştirmeden izlenimi değiştirmeleridir. Bu yüzden bir grafiğe bakarken önce veriye değil, çizimin kurallarına bakmak gerekir: eksen nereden başlıyor, hangi aralık seçilmiş, neyin büyüklüğü neyle temsil ediliyor?"
+      },
+      {
+        "kind": "text",
+        "title": "Kesilmiş eksen",
+        "body": "Sütun grafiğinde sütunun yüksekliği değeri temsil eder; bu yüzden eksen sıfırdan başlamalıdır. Eksen 98'den başlarsa 100 ile 106 arasındaki fark, sütun boyunda dört katlık bir farka dönüşür. Bu, en sık kullanılan görsel abartma tekniğidir. Çizgi grafikte kural biraz daha esnektir, çünkü orada anlatılan yükseklik değil eğimdir; ama orada da eksenin nereden başladığı belirtilmelidir."
+      },
+      {
+        "kind": "chart",
+        "chartId": "eksen-hilesi"
+      },
+      {
+        "kind": "text",
+        "title": "Alan ve hacim yanılsaması",
+        "body": "İki katına çıkan bir değeri iki kat büyük bir daireyle göstermek isteyen tasarımcı çoğu zaman yarıçapı ikiye katlar. Ama daire alanı yarıçapın karesiyle büyüdüğü için okuyucu dört kat büyüme görür. Üç boyutlu çizimlerde durum daha kötüdür: hacim küple büyür, iki kat yarıçap sekiz kat hacim demektir. Bir grafik ne kadar süslüyse, göz aldanmasına o kadar açıktır."
+      },
+      {
+        "kind": "list",
+        "title": "Bakılacak yerler",
+        "items": [
+          "Y ekseni sıfırdan mı başlıyor? Başlamıyorsa bu belirtilmiş mi?",
+          "X ekseninin aralığı neden bu tarihte başlıyor, neden bu tarihte bitiyor?",
+          "İki farklı ölçek aynı grafiğe yerleştirilip 'birlikte hareket ediyor' izlenimi yaratılmış mı?",
+          "Alanlar ve hacimler değerle orantılı mı, yoksa yarıçapla mı?",
+          "Eksik veri düz çizgiyle mi geçilmiş, yoksa boşluk olarak mı bırakılmış?",
+          "Yüzdeler toplamı 100'ü aşıyor mu? Aşıyorsa kategoriler örtüşüyor demektir."
+        ]
+      },
+      {
+        "kind": "example",
+        "title": "Örnek: seçilmiş başlangıç",
+        "body": "Bir grafiği 2021'den başlatırsanız keskin bir düşüş, 2015'ten başlatırsanız uzun bir yükselişin içinde küçük bir dalgalanma görürsünüz. İkisi de aynı veridir. Bir zaman serisinde başlangıç tarihi bir veri değil, bir argümandır; kimin seçtiğini ve neden seçtiğini sormak gerekir."
+      },
+      {
+        "kind": "quote",
+        "text": "Grafiğin görevi düşünmeyi kolaylaştırmaktır. Süsleme, verinin önüne geçtiği anda yalan söylemeye başlar.",
+        "source": "Edward Tufte'nin görsel gösterim ilkelerinden"
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Bir sütun grafiğinde y ekseni 90'dan başlıyor. Bu neden sorun?",
+        "options": [
+          "Veriler yanlış olur",
+          "Sütun yükseklikleri arasındaki oran, gerçek değerler arasındaki oranı temsil etmez",
+          "Grafik okunamaz hale gelir",
+          "Ortalama hesaplanamaz"
+        ],
+        "answerIndex": 1,
+        "explanation": "Sütun grafiğinde yükseklik değerin kendisini temsil eder. Eksen sıfırdan başlamazsa yükseklikler arasındaki oran bozulur ve küçük farklar büyük görünür."
+      },
+      {
+        "id": "q2",
+        "prompt": "Bir değerin iki katına çıktığını göstermek için dairenin yarıçapı ikiye katlanırsa ne olur?",
+        "options": [
+          "Doğru bir gösterim olur",
+          "Okuyucu dört kat büyüme algılar, çünkü alan yarıçapın karesiyle büyür",
+          "Okuyucu yarım kat büyüme algılar",
+          "Hiçbir fark oluşmaz"
+        ],
+        "answerIndex": 1,
+        "explanation": "Daire alanı πr² ile büyür. Yarıçapı ikiye katlamak alanı dörde katlar; doğru gösterim için alan değerle orantılı olmalıdır."
+      },
+      {
+        "id": "q3",
+        "prompt": "Bir zaman serisi grafiğinde başlangıç tarihi neden önemlidir?",
+        "options": [
+          "Eski veriler daha güvenilirdir",
+          "Başlangıç noktası seçimi trendin yönünü ve büyüklüğünü tamamen değiştirebilir",
+          "Grafik yazılımları eski tarihleri desteklemez",
+          "Uzun serilerde ortalama bozulur"
+        ],
+        "answerIndex": 1,
+        "explanation": "Seçilen aralık bir veri değil bir argümandır. Aynı seriden başlangıç noktası değiştirilerek birbiriyle çelişen iki hikâye çıkarılabilir."
+      }
+    ]
+  },
+
+  {
+    "id": "oran-ve-yuzde",
+    "moduleId": "okuma",
+    "order": 4,
+    "title": "Oran, yüzde ve taban",
+    "subtitle": "Her yüzdenin arkasında, sorulması gereken bir payda vardır.",
+    "minutes": 7,
+    "keyTerms": ["taban etkisi", "yüzde puan", "göreli artış", "payda"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Yüzde, bir sayıyı başka bir sayıya göre ifade etmenin yoludur. Bu yüzden bir yüzdeyi anlamak için iki şeyi birden bilmek gerekir: pay ve payda. Haberlerde çoğu zaman yalnızca pay verilir. 'Vakalar iki katına çıktı' cümlesi, iki vakadan dört vakaya çıkışı da iki milyondan dört milyona çıkışı da anlatabilir. İkisi arasındaki fark, cümlenin kendisinde görünmez."
+      },
+      {
+        "kind": "text",
+        "title": "Taban etkisi",
+        "body": "Küçük sayılar yüzdesel olarak kolayca büyük hareket eder. Bir ilçede geçen yıl 3, bu yıl 6 hırsızlık olduysa artış %100'dür ama bu, güvenlik politikası hakkında neredeyse hiçbir şey söylemez. Aynı biçimde, çok düşük bir tabandan başlayan bir teknolojinin 'on kat büyüdüğü' haberi, hâlâ küçük bir pazarı tarif ediyor olabilir. Yüzdesel değişimi duyduğunuzda ilk sorulacak soru, mutlak sayıların ne olduğudur."
+      },
+      {
+        "kind": "text",
+        "title": "Yüzde ile yüzde puan farklı şeylerdir",
+        "body": "Bir oran %4'ten %5'e çıktığında iki doğru cümle kurulabilir: '1 puan arttı' ve '%25 arttı'. İkisi de doğrudur ama farklı izlenim bırakır. Aynı şekilde bir vergi oranı %20'den %25'e çıktığında artış 5 puandır, %25'tir. Habercilikte hangisinin seçildiği çoğu zaman anlatılmak istenen hikâyeye göre belirlenir. Bu ikisini birbirinden ayırmak, istatistik okuryazarlığının en pratik alışkanlığıdır."
+      },
+      {
+        "kind": "example",
+        "title": "Örnek: yüzde artışı geri almaz",
+        "body": "Bir hisse %50 düşerse, eski değerine dönmek için %50 değil %100 yükselmesi gerekir. 100 lira %50 düşünce 50 lira olur; 50 liranın 100 liraya çıkması iki katına çıkmaktır. Aynı asimetri maaşlar, nüfus ve enflasyon hesaplarında da geçerlidir: art arda gelen yüzdeler toplanmaz, çarpılır."
+      },
+      {
+        "kind": "list",
+        "title": "Bir yüzde duyduğunuzda",
+        "items": [
+          "Payda nedir? Kaç kişide, kaç olayda, kaç günde?",
+          "Mutlak sayı kaç? Yüzde büyük ama sayı küçük olabilir.",
+          "Yüzde mi, yüzde puan mı söyleniyor?",
+          "Karşılaştırma dönemi neden seçilmiş? Salgın yılıyla karşılaştırma her şeyi iyi gösterir.",
+          "Göreli risk mi mutlak risk mi? 'Riski iki katına çıkarır' cümlesi, riskin ne kadar olduğunu söylemez."
+        ]
+      },
+      {
+        "kind": "formula",
+        "title": "Ardışık yüzde değişimleri",
+        "expression": "toplam = (1 + a) × (1 + b) − 1",
+        "note": "%10 artıp sonra %10 düşen bir değer başladığı yere dönmez: 1.10 × 0.90 = 0.99, yani %1 aşağıda kalır."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Bir ilacın yan etki riskini 'iki katına çıkardığı' söyleniyor. Eksik olan bilgi nedir?",
+        "options": [
+          "İlacın fiyatı",
+          "Başlangıçtaki mutlak risk — on binde birden on binde ikiye çıkmakla %10'dan %20'ye çıkmak çok farklıdır",
+          "Kaç kişinin ilacı kullandığı",
+          "İlacın kim tarafından üretildiği"
+        ],
+        "answerIndex": 1,
+        "explanation": "Göreli risk tek başına anlamsızdır. İki katına çıkan riskin büyüklüğü, taban riskin ne olduğuna bağlıdır."
+      },
+      {
+        "id": "q2",
+        "prompt": "İşsizlik oranı %10'dan %12'ye çıktı. Hangisi doğrudur?",
+        "options": [
+          "2 yüzde puan arttı, göreli olarak %20 arttı",
+          "%2 arttı",
+          "20 yüzde puan arttı",
+          "%12 arttı"
+        ],
+        "answerIndex": 0,
+        "explanation": "Puan farkı 12 − 10 = 2'dir. Göreli artış ise 2/10 = %20'dir. İkisi farklı büyüklüklerdir ve karıştırılmamalıdır."
+      },
+      {
+        "id": "q3",
+        "prompt": "Bir yatırım önce %40 kaybediyor, sonra %40 kazanıyor. Sonuç nedir?",
+        "options": [
+          "Başladığı yere döner",
+          "%16 zararda kalır",
+          "%80 kazançtadır",
+          "%40 zarardadır"
+        ],
+        "answerIndex": 1,
+        "explanation": "0.60 × 1.40 = 0.84. Ardışık yüzde değişimleri toplanmaz çarpılır; bu yüzden kayıp ve kazanç simetrik değildir."
+      }
+    ]
+  },
+
+  {
+    "id": "orneklem-ve-yanlilik",
+    "moduleId": "cikarim",
+    "order": 1,
+    "title": "Örneklem ve yanlılık",
+    "subtitle": "Kime sorduğunuz, kaç kişiye sorduğunuzdan önemlidir.",
+    "minutes": 8,
+    "keyTerms": ["örneklem", "evren", "rastgele seçim", "seçilim yanlılığı", "hayatta kalan yanlılığı"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "İstatistiğin çoğu, bir bütünü tek tek saymadan onun hakkında konuşma girişimidir. Bütüne evren, ölçtüğümüz parçaya örneklem denir. Örneklemden evrene geçebilmemizin tek meşru gerekçesi, örneklemin evreni temsil etmesidir. Temsil bozulduğunda örneklemin büyüklüğü işe yaramaz; yanlış kitleye çok soru sormak, doğru kitleye az soru sormaktan daha kötüdür, çünkü hatayı güvenle söylemenizi sağlar."
+      },
+      {
+        "kind": "text",
+        "title": "Rastgelelik neden şart",
+        "body": "Rastgele seçimin sihri, seçim kuralının araştırmacının bilmediği özelliklerle de bağlantısız olmasıdır. Yaş, gelir, siyasi görüş, sağlık durumu, aklınıza gelmeyen yüzlerce değişken: rastgele seçim hepsini aynı anda dengeler. Bunun yerine 'temsili görünen' bir örneklem elle kurulursa, yalnızca düşünülmüş değişkenler dengelenir; düşünülmemiş olanlar sistematik biçimde kayar."
+      },
+      {
+        "kind": "example",
+        "title": "Örnek: 1936 seçim anketi",
+        "body": "Literary Digest dergisi 1936 ABD seçimi için iki milyondan fazla kişiye anket yaptı ve Landon'ın kazanacağını duyurdu. Roosevelt açık farkla kazandı. Sorun örneklem büyüklüğü değildi: adresler telefon rehberlerinden ve otomobil ruhsatlarından derlenmişti. Buhran yıllarında telefonu ve arabası olanlar sistematik olarak daha varlıklıydı. Aynı yıl George Gallup, birkaç bin kişilik ama dengeli bir örneklemle doğru sonucu buldu."
+      },
+      {
+        "kind": "list",
+        "title": "Yaygın yanlılık türleri",
+        "items": [
+          "Seçilim yanlılığı: örnekleme girme olasılığı, ölçülen özellikle bağlantılıdır.",
+          "Gönüllü yanlılığı: ankete cevap vermeyi seçenler, vermeyenlerden sistematik olarak farklıdır.",
+          "Hayatta kalan yanlılığı: yalnızca ayakta kalanlara bakmak, başarısızlıkları görünmez kılar.",
+          "Kapsam yanlılığı: örneklem çerçevesi evrenin bir kısmını hiç içermez.",
+          "Ölçüm yanlılığı: sorunun sorulma biçimi cevabı yönlendirir."
+        ]
+      },
+      {
+        "kind": "text",
+        "title": "Hayatta kalan yanlılığı",
+        "body": "İkinci Dünya Savaşı'nda dönen uçakların hasar haritası çıkarıldı ve en çok delik alan bölgelerin zırhlanması önerildi. Abraham Wald tersini söyledi: zırh, delik olmayan yerlere konmalıydı. Çünkü haritadaki uçaklar geri dönebilenlerdi; motor ve kokpitten vurulanlar zaten dönmemişti. Aynı hata bugün de yapılıyor: yalnızca başarılı şirketlerin ortak özelliklerine bakıp başarı reçetesi çıkarmak, aynı özelliklere sahip olup batmış binlerce şirketi hesaba katmamaktır."
+      },
+      {
+        "kind": "text",
+        "title": "Örneklem çerçevesini sorun",
+        "body": "Bir araştırmanın güvenilirliğini değerlendirmenin en hızlı yolu, kimlerin listeye girme şansı olmadığını sormaktır. Telefonla yapılan ankette telefonu olmayanlar, internet anketinde internete erişemeyenler, sokak röportajında o saatte çalışanlar dışarıda kalır. Cevap verme oranı düştükçe bu sorun büyür: %5 cevap oranıyla yapılan bir anket, aslında 'ankete cevap vermeyi seven insanlar' hakkında bir araştırmadır."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "İki milyon kişiye yapılan bir anket neden yanlış sonuç verebilir?",
+        "options": [
+          "İki milyon kişi çok fazladır, hata artar",
+          "Örneklem büyük olsa da sistematik olarak belirli bir kesimden seçilmişse evreni temsil etmez",
+          "Büyük örneklemlerde ortalama hesaplanamaz",
+          "Anket şirketleri büyük örneklemleri işleyemez"
+        ],
+        "answerIndex": 1,
+        "explanation": "Örneklem büyüklüğü rastlantısal hatayı azaltır ama sistematik yanlılığı azaltmaz. Yanlı bir örneklem büyüdükçe yanlış cevaba daha büyük güvenle varılır."
+      },
+      {
+        "id": "q2",
+        "prompt": "Bir mobil uygulamanın kullanıcı memnuniyeti, uygulama içi ankete cevap verenler üzerinden ölçülüyor. Temel sorun nedir?",
+        "options": [
+          "Cevap verenler çok azdır",
+          "Uygulamayı silmiş olan memnuniyetsiz kullanıcılar ankete hiç ulaşamaz",
+          "Anket çok uzundur",
+          "Sonuçlar yüzde olarak verilemez"
+        ],
+        "answerIndex": 1,
+        "explanation": "Klasik hayatta kalan yanlılığı: ölçüm yalnızca hâlâ orada olanlara ulaşır, ayrılanlar görünmez. Bu, memnuniyeti sistematik olarak yüksek gösterir."
+      },
+      {
+        "id": "q3",
+        "prompt": "Rastgele seçimin temel avantajı nedir?",
+        "options": [
+          "Daha ucuzdur",
+          "Araştırmacının düşünmediği değişkenleri de ortalamada dengeler",
+          "Örneklem büyüklüğünü azaltır",
+          "Cevap verme oranını yükseltir"
+        ],
+        "answerIndex": 1,
+        "explanation": "Elle kurulan 'temsili' örneklem yalnızca akla gelen değişkenleri dengeler. Rastgelelik, bilinmeyen değişkenleri de dengeleyen tek yöntemdir."
+      }
+    ]
+  },
+
+  {
+    "id": "belirsizlik-ve-guven-araligi",
+    "moduleId": "cikarim",
+    "order": 2,
+    "title": "Belirsizlik ve güven aralığı",
+    "subtitle": "Tek bir sayı vermek, bilinmeyeni bildiğini iddia etmektir.",
+    "minutes": 8,
+    "keyTerms": ["güven aralığı", "hata payı", "standart hata", "örnekleme dağılımı"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Bir örneklemden çıkan sayı, evrenin gerçek değerine yakın bir tahmindir; tam olarak o değer değildir. Aynı yöntemle ikinci bir örneklem alsaydınız biraz farklı bir sayı bulurdunuz. Bu doğal dalgalanmanın büyüklüğünü ölçen şeye standart hata, bu hatanın etrafında çizilen tahmin bandına güven aralığı denir. Aralıksız verilen bir anket sonucu, eksik bir sonuçtur."
+      },
+      {
+        "kind": "text",
+        "title": "%95 güven aralığı ne demek",
+        "body": "Sık yapılan hata, '%95 olasılıkla gerçek değer bu aralıktadır' demektir. Klasik yorumda gerçek değer sabittir, rastgele olan bizim örneklemimizdir. Doğru ifade şudur: aynı yöntemle yüz ayrı araştırma yapılsaydı, bu aralıklardan yaklaşık doksan beşi gerçek değeri içerirdi. Pratikte bu ayrım çoğu zaman önemsizdir, ama aralığın bir olasılık dağılımı değil bir yöntem güvencesi olduğunu hatırlatır."
+      },
+      {
+        "kind": "chart",
+        "chartId": "guven-araligi"
+      },
+      {
+        "kind": "formula",
+        "title": "Bir oran için hata payı",
+        "expression": "hata payı ≈ 1.96 × √( p(1−p) / n )",
+        "note": "p ölçülen oran, n örneklem büyüklüğüdür. p = 0.5 en geniş aralığı verir; bu yüzden anket şirketleri hata payını çoğunlukla bu en kötü durumdan hesaplar."
+      },
+      {
+        "kind": "text",
+        "title": "Kareköke bağlı azalma pahalıdır",
+        "body": "Belirsizlik örneklemin kareköküyle azalır. Bu, araştırmanın ekonomisini belirleyen tek cümledir. Hata payını yarıya indirmek için örneklemi dört katına, dörtte birine indirmek için on altı katına çıkarmak gerekir. Bin kişilik bir ankette hata payı yaklaşık üç puandır; bunu 1.5 puana indirmek dört bin kişi ister. Bu yüzden ulusal anketler neredeyse hep bin ile iki bin kişi arasında yapılır: ondan sonrası çok pahalıdır."
+      },
+      {
+        "kind": "example",
+        "title": "Örnek: iki aday arasındaki fark",
+        "body": "Bin kişilik ankette A adayı %47, B adayı %45 çıktı. Hata payı ±3 puan. Gazete 'A önde' diye yazdı. Oysa iki oranın farkının belirsizliği, tek bir oranınkinden daha büyüktür; 2 puanlık fark bu belirsizliğin çok içindedir. Doğru cümle 'iki aday istatistiksel olarak başa baş' olurdu."
+      },
+      {
+        "kind": "list",
+        "title": "Hata payının kapsamadıkları",
+        "items": [
+          "Cevap vermeyenlerin cevap verenlerden farklı olması.",
+          "Soru kalıbının yönlendirmesi ve seçenek sırası etkisi.",
+          "Kararsızların nasıl dağıtıldığına dair varsayımlar.",
+          "Ağırlıklandırma modelinin yanlış olması.",
+          "Kısaca: hata payı yalnızca rastlantısal hatayı ölçer, sistematik hatayı ölçmez."
+        ]
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Hata payını yarıya indirmek için örneklem kaç katına çıkmalıdır?",
+        "options": ["İki", "Dört", "Sekiz", "On"],
+        "answerIndex": 1,
+        "explanation": "Hata payı √n ile ters orantılıdır. Yarıya indirmek için karekökün iki katına, yani örneklemin dört katına çıkması gerekir."
+      },
+      {
+        "id": "q2",
+        "prompt": "Hata payı ±3 puan olan bir ankette A %47, B %45 çıkmıştır. En doğru yorum hangisidir?",
+        "options": [
+          "A kesin öndedir",
+          "Fark belirsizliğin içinde kalıyor; iki aday başa baş sayılmalıdır",
+          "B öndedir",
+          "Anket geçersizdir"
+        ],
+        "answerIndex": 1,
+        "explanation": "İki puanlık fark, hata payının çok içindedir. Üstelik iki oran arasındaki farkın belirsizliği tek bir orana göre daha büyüktür."
+      },
+      {
+        "id": "q3",
+        "prompt": "Hata payı hangisini ölçmez?",
+        "options": [
+          "Örneklemden örnekleme doğal dalgalanmayı",
+          "Rastgele seçimden kaynaklanan belirsizliği",
+          "Ankete cevap vermeyenlerin sistematik farkını",
+          "Örneklem büyüklüğünün etkisini"
+        ],
+        "answerIndex": 2,
+        "explanation": "Hata payı yalnızca rastlantısal hatayı ölçer. Cevapsızlık, soru kalıbı ve ağırlıklandırma gibi sistematik hatalar bu sayının tamamen dışındadır."
+      }
+    ]
+  }
+]

@@ -159,6 +159,19 @@ await step("kütüphane yükleniyor", async () => {
     return { bw: c.borderTopWidth, pad: c.paddingTop, bg: c.backgroundColor };
   });
   if (cs.bw === "0px" || cs.pad === "0px") throw new Error("kurs kartı sıfırlanmış: " + JSON.stringify(cs));
+
+  // kütüphane kategorilere ayrılmış olmalı ve her kurs bir kümede görünmeli
+  const cats = await page.evaluate(() => fetch("courses/index.json").then(r => r.json())
+    .then(l => new Set(l.map(e => e.category || "gunumuz")).size));
+  const heads = await page.$$eval("section p.label.muted", n => n.map(x => x.textContent));
+  if (cats > 1) {
+    const counted = heads.reduce((a, h) => a + Number(h.split("·").pop().trim()), 0);
+    if (counted !== titles.length) {
+      throw new Error("kategori sayıları toplamı kurs sayısını tutmuyor: " + counted + " / " + titles.length);
+    }
+  } else if (heads.length) {
+    throw new Error("tek kategori varken başlık gösterilmemeli: " + heads);
+  }
 });
 await shot("01-kutuphane");
 
@@ -212,46 +225,78 @@ await step("kütüphaneye dönüş ilerlemeyi gösteriyor", async () => {
   if (pct === "%0") throw new Error("kart ilerlemesi güncellenmedi");
 });
 
-await step("finans kursu: dersler ve altı grafik", async () => {
-  await page.locator(".course-card", { hasText: "Finans" }).click();
-  await page.waitForSelector("nav.tabs button");
-  const accent = await page.evaluate(() =>
-    getComputedStyle(document.documentElement).getPropertyValue("--accent-light").trim());
-  if (accent !== "#2b5d8c") throw new Error("finans vurgu rengi: " + accent);
-
-  const course = await page.evaluate(() => fetch("courses/finans.json").then(r => r.json()));
-  if (course.lessons.length !== 12) throw new Error("ders sayısı: " + course.lessons.length);
-
-  const withChart = course.lessons
-    .filter(l => l.sections.some(s => s.kind === "chart"))
-    .map(l => ({ title: l.title, chart: l.sections.find(s => s.kind === "chart").chartId }));
-  if (withChart.length !== 6) throw new Error("grafikli ders sayısı: " + withChart.length);
-
-  for (const l of withChart) {
-    await page.click("nav.tabs li:nth-child(2) button");
-    await page.locator(".lesson-title", { hasText: l.title }).first().click();
-    await page.waitForSelector(".chart svg path");
-
-    const texts = [await page.textContent(".chart-read")];
-    const slider = await page.$(".chart input[type=range]");
-    if (!slider) throw new Error(l.chart + ": denetim yok");
-    for (const bound of ["min", "max"]) {
-      await slider.evaluate((el, b) => {
-        el.value = el.getAttribute(b);
-        el.dispatchEvent(new Event("input", { bubbles: true }));
-      }, bound);
-      await page.waitForTimeout(40);
-      texts.push(await page.textContent(".chart-read"));
-      const svg = await page.$eval(".chart svg", n => n.innerHTML);
-      if (/NaN|Infinity/.test(svg)) throw new Error(l.chart + " (" + bound + "): çizimde NaN");
+/* Her hazır kursun her grafiği: başlangıç, en düşük ve en yüksek denetim
+   değerinde çiziliyor mu, okuma metni üretiyor mu, NaN sızdırıyor mu.
+   Kaydırıcının `def` değeri unutulduğunda grafik sessizce NaN çiziyordu;
+   bu süpürme o sınıftan hataları yakalar. */
+await step("bütün hazır kursların grafikleri çiziliyor", async () => {
+  const plan = await page.evaluate(async () => {
+    const index = await (await fetch("courses/index.json")).json();
+    const out = [];
+    for (const e of index) {
+      const c = await (await fetch(e.file)).json();
+      const charts = [];
+      for (const l of c.lessons) {
+        l.sections.filter(s => s.kind === "chart")
+          .forEach((s, i) => charts.push({ lesson: l.title, chart: s.chartId, nth: i }));
+      }
+      out.push({ title: e.title, accent: e.accent, charts, lessons: c.lessons.length });
     }
-    if (new Set(texts).size === 1) throw new Error(l.chart + ": kaydırıcı ölü");
-    for (const t of texts) {
-      if (!t.trim()) throw new Error(l.chart + ": okuma metni boş");
-      if (/NaN|Infinity|undefined/.test(t)) throw new Error(l.chart + ": okuma metninde " + t);
+    return out;
+  });
+
+  const seen = new Set();
+  for (const course of plan) {
+    await page.locator(".course-card", { hasText: course.title }).first().click();
+    await page.waitForSelector("nav.tabs button");
+    const accent = await page.evaluate(() =>
+      getComputedStyle(document.documentElement).getPropertyValue("--accent-light").trim());
+    if (accent !== course.accent) throw new Error(course.title + " vurgu rengi: " + accent);
+
+    for (const l of course.charts) {
+      await page.click("nav.tabs li:nth-child(2) button");
+      await page.locator(".lesson-title", { hasText: l.lesson }).first().click();
+      await page.waitForFunction(n => {
+        const s = document.querySelectorAll(".chart svg")[n];
+        return s && s.children.length > 3;
+      }, l.nth);
+      seen.add(l.chart);
+
+      const fig = page.locator(".chart").nth(l.nth);
+      const texts = [await fig.locator(".chart-read").textContent()];
+      const sliders = await fig.locator("input[type=range]").all();
+      const segs = await fig.locator(".seg-btn").all();
+      if (!sliders.length && !segs.length) throw new Error(l.chart + ": denetim yok");
+      for (const bound of ["min", "max"]) {
+        for (const s of sliders) {
+          await s.evaluate((el, b) => {
+            el.value = el.getAttribute(b);
+            el.dispatchEvent(new Event("input", { bubbles: true }));
+          }, bound);
+        }
+        await page.waitForTimeout(30);
+        texts.push(await fig.locator(".chart-read").textContent());
+        const svg = await fig.locator("svg").innerHTML();
+        if (/NaN|Infinity/.test(svg)) throw new Error(l.chart + " (" + bound + "): çizimde NaN");
+      }
+      if (sliders.length && new Set(texts).size === 1) throw new Error(l.chart + ": kaydırıcı ölü");
+      for (const t of texts) {
+        if (!t.trim()) throw new Error(l.chart + ": okuma metni boş");
+        if (/NaN|Infinity|undefined/.test(t)) throw new Error(l.chart + ": okuma metninde " + t);
+      }
+      await page.click("#back");
     }
     await page.click("#back");
+    await page.waitForSelector(".course-card");
   }
+  console.log("   " + seen.size + " grafik denendi");
+});
+
+await step("finans kursu açılıyor", async () => {
+  await page.locator(".course-card", { hasText: "Finans" }).click();
+  await page.waitForSelector("nav.tabs button");
+  const course = await page.evaluate(() => fetch("courses/finans.json").then(r => r.json()));
+  if (course.lessons.length !== 12) throw new Error("ders sayısı: " + course.lessons.length);
 });
 
 await step("finans kursunda tarih ve arama", async () => {
