@@ -2233,7 +2233,10 @@
     if (status === 401) return "API anahtarı geçersiz. Ayarlar bölümünden kontrol et.";
     if (status === 403) return "Bu anahtarın bu modele erişimi yok. Farklı bir model dene ya da anahtarın iznini kontrol et.";
     if (status === 429) return "Hız sınırına takıldık. Bir dakika bekleyip yeniden dene.";
-    if (status === 400 && /credit|balance/i.test(msg)) return "Anthropic hesabında kredi kalmamış görünüyor.";
+    if (status === 400 && /credit|balance/i.test(msg)) {
+      return "Anthropic hesabında API kredisi yok. console.anthropic.com → Settings → Billing bölümünden kredi yükleyip “Yeniden dene” de. " +
+        "Not: Claude.ai aboneliği (Pro/Max) API kredisi içermez, ikisi ayrı hesaplanır.";
+    }
     if (status === 529 || status === 500) return "Anthropic tarafında geçici bir sorun var. Birazdan yeniden dene.";
     return "API hatası (" + status + ")" + (msg ? ": " + msg : "");
   }
@@ -2263,7 +2266,11 @@
         return res.text().then(function (t) {
           var parsed = null;
           try { parsed = JSON.parse(t); } catch (e) {}
-          throw new Error(apiError(res.status, parsed));
+          var err = new Error(apiError(res.status, parsed));
+          /* API'nin kendi metnini gizleme — teşhis için gerekiyor */
+          err.detail = (parsed && parsed.error && parsed.error.message) || t.slice(0, 300);
+          err.status = res.status;
+          throw err;
         });
       }
       return readStream(res, onProgress);
@@ -2470,7 +2477,7 @@
       })
       .catch(function (e) {
         if (ctrl.signal.aborted) { job.cancelled = true; job.error = "Üretim iptal edildi."; }
-        else job.error = e.message || String(e);
+        else { job.error = e.message || String(e); job.detail = e.detail || ""; }
         render();
       });
   }
@@ -2664,6 +2671,7 @@
       out.appendChild(el("section", { class: "card stack" }, [
         el("p", { class: "label", style: "color:var(--no)", text: job.cancelled ? "İptal edildi" : "Üretim durdu" }),
         el("p", { style: "margin:0", text: job.error }),
+        job.detail ? el("p", { class: "small muted", style: "margin:0", text: "API yanıtı: " + job.detail }) : null,
         el("div", { class: "grid2" }, [
           el("button", { class: "btn ghost", text: "Kütüphaneye dön", onclick: function () { job = null; go("kutuphane"); } }),
           el("button", { class: "btn", text: "Yeniden dene", onclick: function () { var t = job.topic; job = null; startGeneration(t); go("uret"); } })
