@@ -250,5 +250,19 @@
     "questions": 36,
     "charts": 5,
     "file": "courses/kuantum.json"
+  },
+  {
+    "id": "matematik",
+    "title": "Matematik",
+    "subtitle": "Sayı, değişim, yöntem",
+    "description": "Sayıların yapısından kalkülüse, sonsuzluktan kaosa: matematiğin ne olduğu, nasıl kanıtlandığı ve neden bu kadar işe yaradığı.",
+    "icon": "∑",
+    "accent": "#2f6f8f",
+    "accentDark": "#79c2e0",
+    "category": "klasik",
+    "lessons": 12,
+    "questions": 36,
+    "charts": 5,
+    "file": "courses/matematik.json"
   }
 ]

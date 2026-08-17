@@ -3347,5 +3347,229 @@
             : "Bu ayarda kuantum öngörüsü klasik sınırın altında kalıyor; ayrım görünmez. Deneyin ayrımı gösterebilmesi için açının doğru seçilmesi gerekir.") +
           " En büyük ihlal 45°'de, 2√2 ≈ 2,83 değerinde. Deneyler 1970'lerden beri bu ihlali ölçüyor; 2015'te açıkları kapatılmış düzeneklerle sonuç kesinleşti ve 2022 Nobel Fizik Ödülü bu deneylere verildi." };
       }
+    },
+
+    /* ---- matematik ---- */
+
+    "turev": {
+      title: "Türev: kirişten teğete",
+      note: "Kesen doğrunun eğimi (f(x+h) − f(x)) / h. Türev, bu oranın h sıfıra giderken vardığı değerdir — h'yi sıfır yapmak değil, sıfıra yaklaştırmak. Bu ayrım, kalkülüsün iki yüzyıl süren temellendirme tartışmasının konusuydu.",
+      controls: [
+        { key: "x", label: "Nokta", min: -20, max: 20, step: 1, def: -8,
+          fmt: function (v) { return "x = " + (v / 10).toFixed(1); } },
+        { key: "h", label: "Aralık genişliği", min: 0, max: 40, step: 1, def: 8,
+          fmt: function (v) { return "h = " + (2 * Math.pow(10, -v / 20)).toFixed(3); } }
+      ],
+      draw: function (p) {
+        var A = -2.6, B = 2.6, i;
+        var f = function (t) { return 0.16 * t * t * t - 0.7 * t + 1.4; };
+        var df = function (t) { return 0.48 * t * t - 0.7; };
+        var LO = -1.2, HI = 4;
+        var X = function (t) { return (t - A) / (B - A); };
+        var Y = function (v) { return (v - LO) / (HI - LO); };
+        var pts = [];
+        for (i = 0; i <= 90; i++) { var t = A + ((B - A) * i) / 90; pts.push([X(t), Y(f(t))]); }
+        var x0 = p.x / 10, hh = 2 * Math.pow(10, -p.h / 20), x1 = x0 + hh;
+        var kesen = (f(x1) - f(x0)) / hh, teget = df(x0);
+        var kirp = function (m) {
+          var pts2 = [], j;
+          for (j = 0; j <= 80; j++) {
+            var t = A + ((B - A) * j) / 80, y = Y(f(x0) + m * (t - x0));
+            if (y >= 0 && y <= 1) pts2.push([X(t), y]);
+          }
+          return pts2;
+        };
+        var s = frame("x", "f(x)");
+        s += gPoly(kirp(teget), { c: "var(--muted)", w: 1.4, d: "4 3" });
+        s += gPoly(kirp(kesen), { c: "var(--no)", w: 2 });
+        s += gPoly(pts, { c: "var(--accent)", w: 2.6 });
+        s += gDot(X(x0), Y(f(x0)), { c: "var(--ink)" });
+        if (X(x1) <= 1 && Y(f(x1)) <= 1) s += gDot(X(x1), Y(f(x1)), { c: "var(--no)", r: 3.5 });
+        s += gTxt(0.02, 0.94, "kesikli: gerçek teğet", { a: "start", c: "var(--muted)", s: 8.5 });
+        s += gTxt(0.02, 0.85, "kırmızı: kesen doğru", { a: "start", c: "var(--no)", b: 1, s: 8.5 });
+        [-2, 0, 2].forEach(function (v) { s += gTxt(X(v), 0, String(v), { a: "middle", dy: 12, s: 9 }); });
+        return { svg: s, text: "x = " + x0.toFixed(1) + " noktasında, " + hh.toFixed(3) +
+          " genişliğindeki aralığın kesen eğimi " + r2(kesen) + "; gerçek türev ise " + r2(teget) +
+          ". Aradaki fark " + r2(Math.abs(kesen - teget)) + ". " +
+          (hh < 0.05
+            ? "Aralık daraldıkça iki doğru üst üste biniyor. Türevin tanımı tam olarak bu yaklaşmadır: h sıfır olmaz, sıfıra gider."
+            : "Aralığı daraltarak kesen doğrunun teğete nasıl yaklaştığını izleyin. Bu geçiş, kalkülüsün bütün fikridir.") };
+      }
+    },
+
+    "integral": {
+      title: "İntegral: dikdörtgenlerle alan",
+      note: "Riemann toplamı: eğrinin altındaki alan dikdörtgenlerle doldurulur ve dikdörtgen sayısı artırılır. Sol ve sağ uçtan alınan toplamlar alanı iki taraftan kaçırır; orta noktadan alınan çok daha hızlı yakınsar.",
+      controls: [
+        { key: "k", type: "choice", label: "Yükseklik nereden", def: "sol", options: [
+          ["sol", "Sol uç"], ["orta", "Orta"], ["sag", "Sağ uç"]] },
+        { key: "n", label: "Dikdörtgen sayısı", min: 1, max: 40, step: 1, def: 6,
+          fmt: function (v) { return v + " parça"; } }
+      ],
+      draw: function (p) {
+        var A = 0, B = Math.PI, i;
+        var f = function (t) { return 1 + Math.sin(t); };
+        var HI = 2.3;
+        var X = function (t) { return (t - A) / (B - A); };
+        var Y = function (v) { return v / HI; };
+        var w = (B - A) / p.n, top = 0;
+        /* Eksen adı sağ alta yaslanıyor ve "π" işaretiyle çakışıyordu; adı bırakıp
+           iki ucu doğrudan yazıyoruz. */
+        var s = frame("", "f(x)");
+        for (i = 0; i < p.n; i++) {
+          var xa = A + i * w, xb = xa + w;
+          var xh = p.k === "sol" ? xa : p.k === "sag" ? xb : (xa + xb) / 2;
+          var yh = f(xh);
+          top += yh * w;
+          s += gRect(X(xa), 0, X(xb), Y(yh), { c: "var(--accent)", o: 0.22, s: "var(--accent)", sw: 1, r: 0 });
+        }
+        var pts = [];
+        for (i = 0; i <= 90; i++) { var t = A + ((B - A) * i) / 90; pts.push([X(t), Y(f(t))]); }
+        s += gPoly(pts, { c: "var(--accent)", w: 2.6 });
+        s += gTxt(0, 0, "x = 0", { a: "start", dy: 12, s: 9 });
+        s += gTxt(1, 0, "x = π", { a: "end", dy: 12, s: 9 });
+        var kesin = Math.PI + 2, hata = Math.abs(top - kesin);
+        return { svg: s, text: p.n + " dikdörtgenle bulunan alan " + r2(top) + "; gerçek değer π + 2 = " +
+          r2(kesin) + ". Hata " + (hata < 0.005 ? "binde beşten küçük" : r2(hata)) + ". " +
+          (p.k === "orta"
+            ? "Orta noktadan alınan yükseklik, bir taraftaki fazlalıkla öbür taraftaki eksikliği büyük ölçüde götürür; bu yüzden aynı parça sayısıyla çok daha isabetlidir."
+            : "Uçtan alınan yükseklik alanı hep aynı yönde kaçırır. Sol ve sağ toplamlar gerçek değeri iki taraftan sıkıştırır.") +
+          " Parça sayısını artırdıkça yaklaşım iyileşiyor; integral, bu artırmanın limitidir." };
+      }
+    },
+
+    "asal-sayilar": {
+      title: "Asallar seyrekleşiyor ama bir kurala göre",
+      note: "Asal sayı teoremi: π(x), x / ln x oranına yaklaşır. Logaritmik integral Li(x) çok daha iyi bir yaklaşımdır. Teorem 1896'da kanıtlandı; bu yaklaşımın hatasının ne kadar küçük olduğu ise Riemann hipotezinin konusudur ve hâlâ açıktır.",
+      controls: [{ key: "n", label: "Üst sınır", min: 10, max: 66, step: 1, def: 40,
+        fmt: function (v) { return r0(100 * Math.pow(10, v / 20)) + "'e kadar"; } }],
+      draw: function (p) {
+        var N = 200000, i, j;
+        var elek = new Uint8Array(N + 1);
+        for (i = 2; i * i <= N; i++) if (!elek[i]) for (j = i * i; j <= N; j += i) elek[j] = 1;
+        var sayac = new Int32Array(N + 1), k = 0;
+        for (i = 2; i <= N; i++) { if (!elek[i]) k++; sayac[i] = k; }
+        var pi = function (x) { return sayac[Math.min(N, Math.max(2, Math.round(x)))]; };
+        var li = function (x) {
+          if (x <= 2) return 0;
+          var a = 2, adim = (x - a) / 300, top = 0, t;
+          for (t = 0; t < 300; t++) top += adim / Math.log(a + adim * (t + 0.5));
+          return top;
+        };
+        var X0 = 100, X1 = N;
+        var X = function (x) { return Math.log(x / X0) / Math.log(X1 / X0); };
+        var LO = 0.85, HI = 1.35, Y = function (v) { return Math.max(0, Math.min(1, (v - LO) / (HI - LO))); };
+        var kaba = [], ince = [];
+        for (i = 0; i <= 60; i++) {
+          var x = X0 * Math.pow(X1 / X0, i / 60);
+          kaba.push([i / 60, Y(pi(x) / (x / Math.log(x)))]);
+          ince.push([i / 60, Y(pi(x) / li(x))]);
+        }
+        var s = frame("Üst sınır", "Gerçek / tahmin");
+        s += gLine(0, Y(1), 1, Y(1), { c: "var(--rule)", w: 1.4, d: "3 3" });
+        s += gTxt(0.01, Y(1), "1: tam isabet", { a: "start", dy: -4, s: 8.5 });
+        s += gPoly(kaba, { c: "var(--accent)", w: 2.4 });
+        s += gPoly(ince, { c: "var(--ok)", w: 2 });
+        s += gTxt(0.99, Y(pi(X1) / (X1 / Math.log(X1))), "x / ln x", { a: "end", dy: -6, c: "var(--accent)", b: 1, s: 9 });
+        s += gTxt(0.99, Y(pi(X1) / li(X1)), "Li(x)", { a: "end", dy: 13, c: "var(--ok)", b: 1, s: 9 });
+        var n0 = 100 * Math.pow(10, p.n / 20), pn = pi(n0), t1 = n0 / Math.log(n0), t2 = li(n0);
+        s += gDot(X(n0), Y(pn / t1), { c: "var(--ink)" });
+        [1000, 20000].forEach(function (v) { s += gTxt(X(v), 0, v, { a: "middle", dy: 12, s: 9 }); });
+        return { svg: s, text: r0(n0) + " sayısına kadar " + pn + " asal var. " +
+          "x / ln x tahmini " + r0(t1) + " (hata %" + r1((Math.abs(pn - t1) / pn) * 100) + "), " +
+          "Li(x) tahmini " + r0(t2) + " (hata %" + r1((Math.abs(pn - t2) / pn) * 100) + "). " +
+          "Asallar seyrekleşiyor: bir sayının asal olma olasılığı kabaca 1 / ln x. " +
+          "Ama seyrekleşme kuralsız değil — iki eğri de yavaşça 1'e yaklaşıyor. " +
+          "Bu düzenin ne kadar sıkı olduğu, matematiğin en ünlü çözülmemiş sorusudur." };
+      }
+    },
+
+    "fourier": {
+      title: "Her dalga, sinüslerin toplamı",
+      note: "Fourier'in savı şuydu: yeterince düzgün her periyodik işlev, sinüs ve kosinüslerin toplamı olarak yazılabilir. Çağdaşları buna inanmadı. Bugün ses sıkıştırmadan görüntü kodlamaya, MR'dan deprem kaydı çözümlemesine kadar her yerde kullanılıyor.",
+      controls: [
+        { key: "d", type: "choice", label: "Hedef dalga", def: "kare", options: [
+          ["kare", "Kare"], ["testere", "Testere"], ["ucgen", "Üçgen"]] },
+        { key: "n", label: "Harmonik sayısı", min: 1, max: 24, step: 1, def: 4,
+          fmt: function (v) { return v + " terim"; } }
+      ],
+      draw: function (p) {
+        var i, k;
+        var hedef = function (t) {
+          if (p.d === "kare") return t < Math.PI ? 1 : -1;
+          if (p.d === "testere") return 1 - t / Math.PI;
+          return t < Math.PI ? -1 + (2 * t) / Math.PI : 3 - (2 * t) / Math.PI;
+        };
+        var toplam = function (t) {
+          var v = 0;
+          for (k = 1; k <= p.n; k++) {
+            if (p.d === "kare") { var m = 2 * k - 1; v += Math.sin(m * t) / m; }
+            else if (p.d === "testere") v += Math.sin(k * t) / k;
+            else { var q = 2 * k - 1; v += (Math.pow(-1, k - 1) * Math.sin(q * t)) / (q * q); }
+          }
+          if (p.d === "kare") return (4 / Math.PI) * v;
+          if (p.d === "testere") return (2 / Math.PI) * v;
+          return (8 / (Math.PI * Math.PI)) * v;
+        };
+        var Y = function (v) { return (v + 1.45) / 2.9; };
+        var hd = [], tp = [], enb = 0;
+        for (i = 0; i <= 240; i++) {
+          var t = (2 * Math.PI * i) / 240, u = toplam(t);
+          hd.push([i / 240, Y(hedef(t))]);
+          tp.push([i / 240, Math.max(0, Math.min(1, Y(u)))]);
+          if (Math.abs(u) > enb) enb = Math.abs(u);
+        }
+        var s = frame("", "Genlik");
+        s += gLine(0, Y(0), 1, Y(0), { c: "var(--rule)", w: 1, d: "2 4" });
+        s += gPoly(hd, { c: "var(--muted)", w: 1.4, d: "4 3" });
+        s += gPoly(tp, { c: "var(--accent)", w: 2.4 });
+        s += gTxt(0.02, 0.06, "kesikli: hedef dalga", { a: "start", c: "var(--muted)", s: 8.5 });
+        var asma = (enb - 1) * 100;
+        return { svg: s, text: p.n + " terimle " +
+          (p.d === "kare" ? "kare" : p.d === "testere" ? "testere" : "üçgen") + " dalgaya yaklaşıyoruz. " +
+          (p.d === "ucgen"
+            ? "Üçgen dalganın terimleri 1/k² hızıyla küçüldüğü için yakınsama çok hızlı: birkaç terimde göz farkı ayırt edemiyor."
+            : "Köşelerde bir taşma kalıyor: en yüksek nokta hedefin %" + r1(asma) +
+              " üstünde. Terim sayısını artırmak taşmayı daraltıyor ama boyunu düşürmüyor — Gibbs olayı denen bu davranış süreksizliğin sonucudur ve asla kaybolmaz.") +
+          " Aynı ayrıştırma, bir sesi notalarına ayırmanın da müzik dosyasını sıkıştırmanın da temelidir." };
+      }
+    },
+
+    "kaos": {
+      title: "Belirlenimli ama öngörülemez",
+      note: "Lojistik denklem: x → r·x·(1−x). Tek satırlık, rastgeleliği olmayan bir kural. Yine de belirli bir r değerinden sonra uzun vadeli davranışı öngörmek imkânsız hâle gelir; iki eğri neredeyse aynı yerden başlıyor.",
+      controls: [{ key: "r", label: "Büyüme katsayısı (r)", min: 250, max: 400, step: 1, def: 390,
+        fmt: function (v) { return (v / 100).toFixed(2); } }],
+      draw: function (p) {
+        var r = p.r / 100, N = 60, i, j;
+        var a = 0.4, b = 0.401, A = [[0, a]], B = [[0, b]], ayrilma = -1;
+        for (i = 1; i <= N; i++) {
+          a = r * a * (1 - a); b = r * b * (1 - b);
+          A.push([i / N, a]); B.push([i / N, b]);
+          if (ayrilma < 0 && Math.abs(a - b) > 0.1) ayrilma = i;
+        }
+        var z = 0.3, kuyruk = [], kume = [];
+        for (j = 0; j < 800; j++) z = r * z * (1 - z);
+        for (j = 0; j < 64; j++) { z = r * z * (1 - z); kuyruk.push(z); }
+        kuyruk.forEach(function (v) {
+          for (var q = 0; q < kume.length; q++) if (Math.abs(kume[q] - v) < 0.004) return;
+          kume.push(v);
+        });
+        var devir = kume.length;
+        var s = frame("Adım", "Değer");
+        s += gPoly(B, { c: "var(--no)", w: 1.6 });
+        s += gPoly(A, { c: "var(--accent)", w: 1.8 });
+        s += gTxt(0.02, 0.06, "iki eğri 0,400 ve 0,401 ile başlıyor", { a: "start", c: "var(--muted)", s: 8.5 });
+        [20, 40].forEach(function (v) { s += gTxt(v / N, 0, String(v), { a: "middle", dy: 12, s: 9 }); });
+        return { svg: s, text: "r = " + r.toFixed(2) + " için sistem " +
+          (devir === 1 ? "tek bir değere yerleşiyor."
+            : devir <= 16 ? devir + " değer arasında düzenli olarak dönüyor."
+              : "hiçbir çevrime yerleşmiyor: davranış kaotik.") +
+          (ayrilma > 0
+            ? " Binde birlik bir başlangıç farkı " + ayrilma + " adımda görünür hâle geliyor ve sonrasında iki eğrinin ortak yanı kalmıyor."
+            : " Binde birlik başlangıç farkı hiç büyümüyor; sistem öngörülebilir.") +
+          " Burada rastgelelik yok: aynı sayıdan başlarsanız aynı diziyi alırsınız. Öngörülemezliğin kaynağı formül değil, " +
+          "başlangıç değerini sonsuz hassasiyetle bilememek. Hava tahmininin bir haftadan öteye geçememesinin sebebi de budur." };
+      }
     }
   };

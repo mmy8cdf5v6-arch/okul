@@ -1,0 +1,482 @@
+[
+  {
+    "id": "integral-ders",
+    "moduleId": "degisim",
+    "order": 3,
+    "title": "İntegral ve temel teorem",
+    "subtitle": "İki ayrı problemin aynı madalyonun iki yüzü olduğunun keşfi.",
+    "minutes": 9,
+    "keyTerms": ["integral", "Riemann toplamı", "kalkülüsün temel teoremi", "diferansiyel denklem"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Eğri altındaki alanı hesaplama problemi, türevden çok daha eskidir; Arşimet'in tüketme yöntemi iki bin yıl önce parabolün altındaki alanı doğru buluyordu. Yöntem her eğri için ayrı bir dâhice hile gerektiriyordu ve genel bir yordamı yoktu. Kalkülüsün asıl devrimi, bu problemin türevle nasıl bağlantılı olduğunun görülmesiydi."
+      },
+      { "kind": "chart", "chartId": "integral" },
+      {
+        "kind": "text",
+        "body": "Fikir sadedir: alanı ince dikdörtgenlerle doldurun ve dikdörtgen sayısını artırın. Yükseklikleri soldan alırsanız alanı bir yönde, sağdan alırsanız öbür yönde kaçırırsınız; gerçek değer ikisinin arasında sıkışır. Ortadan almak, bir taraftaki fazlalıkla öbür taraftaki eksikliği büyük ölçüde götürdüğü için aynı parça sayısıyla çok daha isabetli sonuç verir. İntegral, bu toplamın parça sayısı sonsuza giderken vardığı değerdir."
+      },
+      {
+        "kind": "text",
+        "title": "Temel teorem",
+        "body": "Kalkülüsün temel teoremi, matematiğin en verimli sonuçlarından biridir: türev ile integral birbirinin tersidir. Bunun pratik anlamı devrimseldir. Alanı hesaplamak için artık sonsuz sayıda dikdörtgen toplamanız gerekmez; türevi bize verilen fonksiyonu veren bir fonksiyon bulmanız yeterlidir. Yüzyıllarca ayrı ayrı uğraşılan iki problem — teğet çizmek ve alan bulmak — tek bir işlemin iki yönü olarak birleşti. Newton ve Leibniz'in büyüklüğü, kalkülüsü icat etmelerinden çok bu bağlantıyı görmelerindedir."
+      },
+      {
+        "kind": "formula",
+        "title": "Temel teorem",
+        "expression": "∫ₐᵇ f′(x) dx = f(b) − f(a)"
+      },
+      {
+        "kind": "list",
+        "title": "İntegral yalnızca alan değildir",
+        "items": [
+          "Hızdan yola: hız-zaman eğrisinin altındaki alan alınan yoldur.",
+          "Kuvvetten enerjiye: kuvvet-yol eğrisinin altındaki alan yapılan iştir.",
+          "Olasılıktan beklenen değere: yoğunluk eğrisinin altındaki ağırlıklı alan ortalamayı verir.",
+          "Gelirden birikime: aylık akıştan toplam birikime geçiş.",
+          "Ortak yapı şudur: sonsuz küçük katkıları toplamak. Alan, bu fikrin en görünür örneğidir."
+        ]
+      },
+      {
+        "kind": "example",
+        "title": "Diferansiyel denklemler",
+        "body": "Doğa yasalarının çoğu bir büyüklüğü doğrudan vermez; onun değişim hızını verir. Newton'ın ikinci yasası ivmeyi, radyoaktif bozunma yasası bozunma hızını, salgın modelleri yeni vaka hızını söyler. Bu denklemlere diferansiyel denklem denir ve fizik, kimya, biyoloji, iktisat ile mühendisliğin ortak dilidir. Çözmek, değişim kuralından gidip büyüklüğün kendisini bulmaktır — yani integral almaktır. Çoğu diferansiyel denklemin kapalı biçimde çözümü yoktur ve sayısal yöntemlerle hesaplanır; hava tahmini, uçak tasarımı ve iklim modelleri bu hesapların üzerinde durur."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Kalkülüsün temel teoremi ne der?",
+        "options": [
+          "İntegral her zaman hesaplanabilir",
+          "Türev ile integral birbirinin tersidir",
+          "Alan her zaman pozitiftir",
+          "Her fonksiyonun türevi vardır"
+        ],
+        "answerIndex": 1,
+        "explanation": "Bu bağlantı sayesinde alan hesabı, sonsuz toplam yerine bir ters türev bulma işine indirgenir. İki ayrı problem tek işlemin iki yönü olur."
+      },
+      {
+        "id": "q2",
+        "prompt": "Orta noktadan alınan Riemann toplamı neden daha isabetlidir?",
+        "options": [
+          "Daha çok dikdörtgen kullandığı için",
+          "Bir taraftaki fazlalıkla öbür taraftaki eksikliği büyük ölçüde götürdüğü için",
+          "Hesabı kolay olduğu için",
+          "Eğriyi kestiği için"
+        ],
+        "answerIndex": 1,
+        "explanation": "Uçtan alınan yükseklik hatayı hep aynı yönde biriktirir. Ortadan almak hataları karşılıklı olarak dengeler."
+      },
+      {
+        "id": "q3",
+        "prompt": "Diferansiyel denklem nedir?",
+        "options": [
+          "Çok bilinmeyenli denklem",
+          "Bir büyüklüğü değil, onun değişim hızını veren denklem",
+          "İntegrali olmayan denklem",
+          "Sayısal denklem"
+        ],
+        "answerIndex": 1,
+        "explanation": "Doğa yasalarının çoğu bu biçimdedir. Çözmek, değişim kuralından büyüklüğün kendisine gitmektir."
+      }
+    ]
+  },
+  {
+    "id": "seriler",
+    "moduleId": "degisim",
+    "order": 4,
+    "title": "Seriler ve Fourier",
+    "subtitle": "Sonsuz sayıda şeyi toplamak bazen sonlu bir cevap verir.",
+    "minutes": 9,
+    "keyTerms": ["seri", "yakınsama", "harmonik seri", "Taylor serisi", "Fourier serisi", "Gibbs olayı"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Sonsuz sayıda pozitif sayıyı topladığınızda sonuç sonsuz olmak zorunda değildir. 1/2 + 1/4 + 1/8 + ... toplamı tam olarak 1 eder ve bu, Zenon'un paradoksunun matematiksel cevabıdır. Ama bu her zaman böyle olmaz ve hangi durumda hangi sonucun çıkacağı hiç de apaçık değildir."
+      },
+      {
+        "kind": "text",
+        "title": "Terimlerin sıfıra gitmesi yetmez",
+        "body": "1 + 1/2 + 1/3 + 1/4 + ... harmonik serisinde terimler sıfıra gider. Yine de toplam sonsuza gider — üstelik öyle yavaş gider ki milyon terimden sonra bile ancak on dört civarındadır. Kanıt zarif bir gruplamayla yapılır: 1/3 + 1/4 toplamı 1/2'den büyüktür, sonraki dört terim de 1/2'den büyüktür, sonraki sekiz terim de. Sonsuz sayıda 'yarımdan büyük' parça topladığınız için toplam sınırsız büyür. Bu örnek, sezginin seriler konusunda ne kadar güvenilmez olduğunu gösteren standart uyarıdır."
+      },
+      {
+        "kind": "list",
+        "title": "İşe yarayan seriler",
+        "items": [
+          "Geometrik seri: her terim bir öncekinin sabit katı. Bileşik faiz, ilaç dozunun birikmesi ve para çarpanı bu seriyle hesaplanır.",
+          "Taylor serisi: bir fonksiyonu polinomlarla yaklaşık ifade etmek. Hesap makinesi sinüsü ve logaritmayı böyle hesaplar.",
+          "Fourier serisi: periyodik bir işlevi sinüslerin toplamı olarak yazmak.",
+          "Yakınsama sınavları: bir serinin toplanıp toplanmadığını anlamak başlı başına bir alt alandır.",
+          "Iraksak serilerle dikkatsizce oynamak çelişki üretir; terimlerin sırasını değiştirmek bazı serilerde toplamı değiştirebilir."
+        ]
+      },
+      { "kind": "chart", "chartId": "fourier" },
+      {
+        "kind": "text",
+        "body": "Fourier'in savı çağdaşlarını rahatsız etti: köşeli, süreksiz bir dalga, pürüzsüz sinüslerin toplamıyla nasıl elde edilebilir? Grafikte olan tam olarak budur. Terim sayısını artırdıkça yaklaşım iyileşir, ama kare ve testere dalgada köşelerde bir taşma kalır ve bu taşma asla kaybolmaz — yalnızca daralır. Gibbs olayı denen bu davranış, süreksizliğin kaçınılmaz bedelidir ve sayısal ses işlemede duyulabilir bir artefakt olarak karşımıza çıkar."
+      },
+      {
+        "kind": "example",
+        "title": "Fourier her yerde",
+        "body": "Bir sesi notalarına ayırmak, bir müzik dosyasını sıkıştırmak, bir fotoğrafı JPEG olarak kaydetmek, MR görüntüsünü oluşturmak, deprem kaydından zemin davranışını çıkarmak, telefon sinyalini gürültüden ayırmak — hepsi aynı ayrıştırmayı kullanır. Sıkıştırmanın mantığı özellikle zariftir: sinyali frekanslarına ayırırsanız, insan kulağının ya da gözünün fark edemeyeceği bileşenleri atabilirsiniz. Dosya küçülür, siz farkı duymazsınız. İki yüz yıl önce ısı yayılımını incelerken geliştirilen bir yöntem, bugün her telefon görüşmesinin içindedir."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Harmonik seri hakkında hangisi doğrudur?",
+        "options": [
+          "Terimleri sıfıra gitmez",
+          "Terimleri sıfıra gider ama toplam sonsuza gider",
+          "Toplamı 2'dir",
+          "Yakınsar"
+        ],
+        "answerIndex": 1,
+        "explanation": "Terimlerin sıfıra gitmesi yakınsama için yeterli değildir. Gruplayarak sonsuz sayıda 'yarımdan büyük' parça elde edilir."
+      },
+      {
+        "id": "q2",
+        "prompt": "Gibbs olayı nedir?",
+        "options": [
+          "Serinin ıraksaması",
+          "Süreksiz bir dalgaya yaklaşırken köşelerde kalan, terim sayısı arttıkça daralan ama boyu düşmeyen taşma",
+          "Hesaplama hatası",
+          "Frekans kayması"
+        ],
+        "answerIndex": 1,
+        "explanation": "Süreksizliğin kaçınılmaz bedelidir. Sayısal ses işlemede duyulabilir bir artefakt olarak ortaya çıkar."
+      },
+      {
+        "id": "q3",
+        "prompt": "Fourier ayrıştırması ses ve görüntü sıkıştırmasında nasıl kullanılır?",
+        "options": [
+          "Dosyayı ikiye böler",
+          "Sinyal frekanslarına ayrılır ve insanın fark edemeyeceği bileşenler atılır",
+          "Gürültü eklenir",
+          "Örnekleme hızı düşürülür"
+        ],
+        "answerIndex": 1,
+        "explanation": "Dosya küçülür, fark duyulmaz. İki yüz yıl önce ısı yayılımı için geliştirilen yöntem bugün her telefon görüşmesinin içindedir."
+      }
+    ]
+  },
+  {
+    "id": "dogrusal-cebir",
+    "moduleId": "yontem",
+    "order": 1,
+    "title": "Doğrusal cebir",
+    "subtitle": "Modern hesaplamanın en çok kullanılan dili.",
+    "minutes": 8,
+    "keyTerms": ["vektör", "matris", "özdeğer", "boyut indirgeme"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Doğrusal cebir, okulda çoğu zaman sayı tablolarıyla yapılan mekanik işlemler olarak öğretilir ve bu, konunun ne olduğunu tümüyle gizler. Aslında konu şudur: uzayı germe, döndürme, yansıtma ve sıkıştırma işlemlerinin ortak dili. Matris bir sayı tablosu değil, bir dönüşümün yazılı hâlidir."
+      },
+      {
+        "kind": "list",
+        "title": "Temel kavramlar",
+        "items": [
+          "Vektör: toplanabilen ve bir sayıyla ölçeklenebilen her nesne. Bir ok, bir ses örneği, bir görüntü, bir kelime — hepsi vektör olabilir.",
+          "Doğrusal dönüşüm: doğruları doğru, orijini orijin bırakan dönüşüm. Döndürme, germe, yansıtma, izdüşüm.",
+          "Matris: bu dönüşümün sayılarla ifadesi. Matris çarpımı, dönüşümleri arka arkaya uygulamaktır.",
+          "Determinant: dönüşümün alanı ya da hacmi kaç katına çıkardığı. Sıfırsa dönüşüm boyut kaybettirmiştir ve geri alınamaz.",
+          "Özdeğer ve özvektör: dönüşümün yönünü değiştirmediği doğrultular ve oradaki ölçekleme çarpanı."
+        ]
+      },
+      {
+        "kind": "text",
+        "title": "Özdeğerler neden bu kadar sık karşımıza çıkıyor",
+        "body": "Bir sistemin özdeğerlerini bulmak, o sistemin 'doğal davranışlarını' bulmak demektir. Bir binanın titreşim kipleri, bir molekülün enerji düzeyleri, bir salgın modelinin büyüme hızı, bir arama motorunun sayfa sıralaması ve bir veri kümesinin en bilgilendirici eksenleri — hepsi özdeğer problemidir. Bu kadar farklı alanın aynı hesaba indirgenmesi tesadüf değildir: doğrusal yaklaşım, karmaşık sistemleri anlamanın ilk ve en verimli adımıdır."
+      },
+      {
+        "kind": "example",
+        "title": "Boyut indirgeme",
+        "body": "Elinizde her kişi için yüz farklı ölçüm bulunan bir veri kümesi olsun. Bu yüz boyutu gözle görmek imkânsızdır. Doğrusal cebir, verinin en çok değiştiği doğrultuları bularak onu iki üç eksene indirmenizi sağlar ve bilginin büyük kısmı korunur. Aynı yöntem, yüz tanımadan tavsiye sistemlerine, genetik veri çözümlemesinden görüntü sıkıştırmaya kadar her yerde kullanılır. Yapay sinir ağlarının içinde olan biten şey de, temelde, arka arkaya uygulanan doğrusal dönüşümler ile aralarına serpiştirilmiş doğrusal olmayan adımlardır."
+      },
+      {
+        "kind": "text",
+        "title": "Neden 'doğrusal'",
+        "body": "Gerçek dünyanın çok azı doğrusaldır. Doğrusal cebirin bu kadar merkezde olmasının sebebi, doğrusal olmayan bir sistemi anlamanın ilk adımının onu yeterince küçük bir bölgede doğrusallaştırmak olmasıdır. Türev tam olarak budur: bir eğriyi bir noktada en iyi yaklaşan doğru. Karmaşık sistemleri incelerken izlenen yol neredeyse her zaman aynıdır — küçük bir bölgede doğrusallaştır, çöz, sonra bunun ne kadar uzağa taşınabildiğini sor."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Matris nedir?",
+        "options": [
+          "Bir sayı tablosu",
+          "Bir doğrusal dönüşümün sayılarla ifadesi",
+          "Bir denklem sistemi",
+          "Bir veri yapısı"
+        ],
+        "answerIndex": 1,
+        "explanation": "Tablo yalnızca yazım biçimidir. Matris çarpımının anlamı, dönüşümleri arka arkaya uygulamaktır."
+      },
+      {
+        "id": "q2",
+        "prompt": "Özdeğer problemi hangi alanlarda ortaya çıkar?",
+        "options": [
+          "Yalnızca fizikte",
+          "Bina titreşiminden arama motoru sıralamasına, molekül enerjilerinden veri çözümlemesine kadar çok geniş bir alanda",
+          "Yalnızca istatistikte",
+          "Yalnızca mühendislikte"
+        ],
+        "answerIndex": 1,
+        "explanation": "Özdeğerler, sistemin doğal davranışlarını verir. Bu kadar farklı alanın aynı hesaba indirgenmesi, doğrusal yaklaşımın gücündendir."
+      },
+      {
+        "id": "q3",
+        "prompt": "Gerçek dünya çoğunlukla doğrusal olmadığı hâlde doğrusal cebir neden bu kadar merkezdedir?",
+        "options": [
+          "Hesaplaması kolay olduğu için",
+          "Doğrusal olmayan bir sistemi anlamanın ilk adımı, onu küçük bir bölgede doğrusallaştırmaktır",
+          "Başka yöntem olmadığı için",
+          "Gelenek gereği"
+        ],
+        "answerIndex": 1,
+        "explanation": "Türev tam olarak bunu yapar: eğriyi bir noktada en iyi yaklaşan doğruyu bulur. Yöntem her yerde aynıdır."
+      }
+    ]
+  },
+  {
+    "id": "kaos-ders",
+    "moduleId": "yontem",
+    "order": 2,
+    "title": "Kaos",
+    "subtitle": "Belirlenimli olmak, öngörülebilir olmak değildir.",
+    "minutes": 9,
+    "keyTerms": ["doğrusal olmayan sistem", "kaos", "başlangıca duyarlılık", "çekici", "çatallanma"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Newton'dan sonra iki yüzyıl boyunca yaygın kanı şuydu: yasalar bilinirse ve başlangıç koşulları ölçülürse, gelecek hesaplanabilir. Bu, evrenin bir saat gibi işlediği görüşüydü. Yirminci yüzyılda anlaşıldı ki bu tablonun bir açığı var ve açık, yasalarda değil ölçümdedir: bazı sistemler başlangıç koşullarına o kadar duyarlıdır ki, ne kadar hassas ölçerseniz ölçün, uzun vadeli tahmin imkânsız kalır."
+      },
+      { "kind": "chart", "chartId": "kaos" },
+      {
+        "kind": "text",
+        "body": "Grafikteki kural tek satırlıktır ve içinde hiçbir rastgelelik yoktur: x yerine r·x·(1−x) koyun, tekrarlayın. Düşük r değerlerinde sistem tek bir değere yerleşir. r büyüdükçe önce iki değer arasında salınmaya başlar, sonra dört, sonra sekiz — buna çatallanma denir ve giderek hızlanır. Belirli bir eşiğin ötesinde ise hiçbir çevrime yerleşmez. Binde birlik bir başlangıç farkı, birkaç düzine adımda iki eğriyi tamamen ayırır."
+      },
+      {
+        "kind": "list",
+        "title": "Kaos hakkında sık yapılan hatalar",
+        "items": [
+          "Kaos rastgelelik değildir. Aynı başlangıçtan aynı dizi çıkar; sistem tümüyle belirlenimlidir.",
+          "Kaos düzensizlik değildir. Çatallanma diyagramında ince ve tekrarlanan bir yapı vardır.",
+          "Kaotik sistemler tahmin edilemez değildir; uzun vadede tahmin edilemezdir. Hava üç gün için iyi, üç hafta için hiç tahmin edilemez.",
+          "İstatistiksel öngörü hâlâ mümkündür: yarının havasını bilemezsiniz ama temmuz ortalamasını bilirsiniz. İklim ile hava arasındaki fark tam olarak budur.",
+          "'Kelebek etkisi' bir kelebeğin kasırga yarattığı anlamına gelmez; küçük farkların büyüdüğü, dolayısıyla tam başlangıç koşulunu bilmenin imkânsız olduğu anlamına gelir."
+        ]
+      },
+      {
+        "kind": "example",
+        "title": "Yuvarlanmış bir sayı",
+        "body": "Lorenz 1961'de bir hava modelini yeniden çalıştırmak istedi ve zamandan kazanmak için çıktıdan aldığı ara değerlerle başlattı. Sonuç, ilk çalıştırmadan tümüyle farklı çıktı. Önce bir donanım arızası sandı. Sonra fark etti: bilgisayar altı basamak tutuyordu, çıktı ise üç basamak yazdırıyordu. Binde birlik bir yuvarlama, birkaç simüle gün sonra havayı bambaşka bir yere götürmüştü. Kaos kuramı, bir yazıcı ayarının ortaya çıkardığı bir kazadan doğdu."
+      },
+      {
+        "kind": "text",
+        "title": "Ne değişti",
+        "body": "Kaosun keşfi, belirlenimciliği çürütmedi; belirlenimcilik ile öngörülebilirliğin aynı şey olmadığını gösterdi. Bunun pratik sonuçları büyük oldu. Hava tahmininde tek bir hesap yerine, biraz farklı başlangıçlarla yapılan onlarca hesap yürütülür ve sonuç bir olasılık dağılımı olarak verilir — 'yüzde altmış yağmur' ifadesinin arkasında bu vardır. Aynı yaklaşım iklim, salgın ve finans modellerinde de kullanılır. Belirsizliği yok etmek yerine ölçmek, modern modellemenin temel tavrı hâline geldi."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Kaotik bir sistem rastgele midir?",
+        "options": [
+          "Evet",
+          "Hayır; tümüyle belirlenimlidir, aynı başlangıçtan aynı dizi çıkar",
+          "Kısmen",
+          "Ölçüme bağlıdır"
+        ],
+        "answerIndex": 1,
+        "explanation": "Öngörülemezliğin kaynağı formülde değil, başlangıç değerini sonsuz hassasiyetle bilememektedir."
+      },
+      {
+        "id": "q2",
+        "prompt": "Hava ile iklim tahmini arasındaki fark nedir?",
+        "options": [
+          "İklim daha kolaydır",
+          "Hava tek bir gidişatın öngörüsüdür ve kısa ufukludur; iklim istatistiksel bir öngörüdür ve uzun vadede anlamlıdır",
+          "İkisi aynıdır",
+          "İklim modelleri kaotik değildir"
+        ],
+        "answerIndex": 1,
+        "explanation": "Yarının havasını bilemezsiniz ama temmuz ortalamasını bilirsiniz. Kaos, istatistiksel öngörüyü ortadan kaldırmaz."
+      },
+      {
+        "id": "q3",
+        "prompt": "Kaosun keşfi neyi değiştirdi?",
+        "options": [
+          "Belirlenimciliği çürüttü",
+          "Belirlenimcilik ile öngörülebilirliğin aynı şey olmadığını gösterdi",
+          "Yasaların yanlış olduğunu gösterdi",
+          "Ölçümü gereksiz kıldı"
+        ],
+        "answerIndex": 1,
+        "explanation": "Sonuç olarak modeller tek bir hesap yerine, farklı başlangıçlarla yürütülen topluluklar hâlinde çalıştırılıp olasılık olarak raporlanmaya başladı."
+      }
+    ]
+  },
+  {
+    "id": "sinirlar",
+    "moduleId": "yontem",
+    "order": 3,
+    "title": "Matematiğin sınırları",
+    "subtitle": "Kanıtlanamayan doğrular ve çözülemeyen problemler.",
+    "minutes": 9,
+    "keyTerms": ["eksiklik teoremleri", "karar verilemezlik", "hesaplama karmaşıklığı", "bilgisayarlı kanıt"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Yirminci yüzyılın başında büyük bir program vardı: bütün matematiği az sayıda aksiyomdan, mekanik olarak denetlenebilir kurallarla türetmek. Amaç, hiçbir çelişki içermeyen ve her doğru önermeyi kanıtlayabilen bir sistem kurmaktı. Program iddialıydı, umut vericiydi ve 1931'de kesin biçimde imkânsız olduğu kanıtlandı."
+      },
+      {
+        "kind": "text",
+        "title": "Eksiklik teoremleri",
+        "body": "Gödel iki şey gösterdi. Birincisi: aritmetiği içeren ve çelişkisiz olan her biçimsel sistemde, o sistemde ne kanıtlanabilen ne çürütülebilen doğru önermeler vardır. İkincisi daha da sarsıcıdır: böyle bir sistem, kendi çelişkisizliğini kendi içinde kanıtlayamaz. Yöntem, köşegen argümanının bir çeşitlemesidir: 'bu önerme bu sistemde kanıtlanamaz' diyen bir ifade kurulur. Eğer kanıtlanabilseydi yanlış olurdu; kanıtlanamıyorsa doğrudur ama kanıtlanamaz. Sistem eksik kalır."
+      },
+      {
+        "kind": "list",
+        "title": "Yakın sınırlar",
+        "items": [
+          "Durma problemi: bir programın durup durmayacağına karar veren genel bir algoritma var olamaz. Turing bunu bilgisayarlar daha yokken kanıtladı.",
+          "Karar verilemezlik: benzer sonuçlar, döşeme problemlerinden denklem çözülebilirliğine kadar birçok yerde çıkar.",
+          "Karmaşıklık: bazı problemler kuramsal olarak çözülebilir ama pratikte çözülemeyecek kadar çok kaynak ister.",
+          "P ile NP'nin eşit olup olmadığı, bilgisayar biliminin en önemli açık sorusudur ve çözümü şifrelemeden ilaç tasarımına kadar her şeyi etkiler.",
+          "Bazı sonuçlar seçilen aksiyomlara bağlıdır: süreklilik hipotezinin standart küme kuramında ne kanıtlanabildiği ne çürütülebildiği gösterilmiştir."
+        ]
+      },
+      {
+        "kind": "example",
+        "title": "Bilgisayar kanıtladı, biz anladık mı",
+        "body": "Dört renk teoremi — herhangi bir haritanın komşu bölgeleri farklı renkte olacak biçimde dört renkle boyanabileceği — 1976'da kanıtlandı. Kanıt, problemi binlerce özel duruma indirgeyip her birini bilgisayarla denetliyordu. Hiçbir insan bütün durumları tek tek okuyamaz. Bu, matematikte uzun bir tartışma başlattı: kimsenin baştan sona takip edemediği bir argüman kanıt sayılır mı? Bugün biçimsel kanıt dilleriyle makine tarafından denetlenmiş kanıtlar yaygınlaşıyor ve aynı soru, yapay zekâ araçlarıyla birlikte yeniden gündemde."
+      },
+      {
+        "kind": "text",
+        "title": "Bu ne demek değildir",
+        "body": "Eksiklik teoremleri sık sık matematiğin ya da aklın iflası olarak sunulur. Bu okuma yanlıştır. Teoremler matematiğin güvenilmez olduğunu söylemez; belirli bir hırsın — her doğruyu tek bir mekanik sistemden türetme hırsının — imkânsız olduğunu söyler. Matematik bu sonuçtan sonra da aynı hızla ilerledi. Ayrıca teoremler, insan zihninin bilgisayarlardan üstün olduğunu ya da bilincin gizemli olduğunu da göstermez; bu tür çıkarımlar teoremlerin söylediğinin çok ötesine geçer."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Gödel'in birinci eksiklik teoremi ne der?",
+        "options": [
+          "Matematik çelişkilidir",
+          "Aritmetiği içeren her çelişkisiz sistemde, o sistemde kanıtlanamayan doğru önermeler vardır",
+          "Bütün önermeler kanıtlanabilir",
+          "Aksiyomlar gereksizdir"
+        ],
+        "answerIndex": 1,
+        "explanation": "Kanıt, köşegen argümanının bir çeşitlemesidir: 'bu önerme kanıtlanamaz' diyen bir ifade kurulur ve sistem eksik kalır."
+      },
+      {
+        "id": "q2",
+        "prompt": "Durma problemi neyi gösterir?",
+        "options": [
+          "Programların yavaş olduğunu",
+          "Bir programın durup durmayacağına karar veren genel bir algoritmanın var olamayacağını",
+          "Bilgisayarların hatalı olduğunu",
+          "Bellek sınırlarını"
+        ],
+        "answerIndex": 1,
+        "explanation": "Turing bunu bilgisayarlar daha yokken kanıtladı. Hesaplama kendi sınırını, henüz uygulanmadan öğrendi."
+      },
+      {
+        "id": "q3",
+        "prompt": "Eksiklik teoremleri hakkında hangisi yanlıştır?",
+        "options": [
+          "Belirli bir programın imkânsızlığını gösterirler",
+          "Matematiğin güvenilmez olduğunu ve insan zihninin makinelerden üstün olduğunu kanıtlarlar",
+          "Köşegen argümanına dayanırlar",
+          "Matematiğin ilerlemesini durdurmadılar"
+        ],
+        "answerIndex": 1,
+        "explanation": "Teoremler bir hırsın imkânsızlığını gösterir, matematiğin geçersizliğini değil. Bilinç ve zihinle ilgili çıkarımlar, teoremlerin söylediğinin çok ötesine geçer."
+      }
+    ]
+  },
+  {
+    "id": "matematik-ve-dunya",
+    "moduleId": "yontem",
+    "order": 4,
+    "title": "Matematik ve gerçek dünya",
+    "subtitle": "Neden bu kadar iyi çalışıyor?",
+    "minutes": 8,
+    "keyTerms": ["beklenmedik etkinlik", "aksiyom", "kanıt"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Matematik, kendi iç kurallarına göre ve çoğu zaman hiçbir uygulama düşünülmeden geliştirilir. Yine de doğa bilimlerinde şaşırtıcı bir isabetle işe yarar. Bu duruma 'matematiğin beklenmedik etkinliği' denir ve tatmin edici bir açıklaması yoktur. Öne sürülen cevaplar arasında seçim yanlılığı (işe yaramayanları hatırlamıyoruz), matematiğin zaten dünyadan soyutlanarak üretilmesi ve evrenin gerçekten matematiksel bir yapıya sahip olması sayılabilir; hiçbiri tartışmayı kapatmıyor."
+      },
+      {
+        "kind": "list",
+        "title": "Beklenmedik buluşmalar",
+        "items": [
+          "Öklid dışı geometri: yüz yıl boyunca meraktan ibaret sayıldı, genel görelilik için tam olarak gerekli araç çıktı.",
+          "Karmaşık sayılar: 'hayalî' diye küçümsendi, kuantum kuramının dili oldu.",
+          "Sayı kuramı: uygulamasızlığıyla övünülürdü, internet güvenliğinin temeli oldu.",
+          "Grup kuramı: denklem çözülebilirliği için geliştirildi, parçacık fiziğinin sınıflandırma dili oldu.",
+          "Matris hesabı: soyut bir gösterim kolaylığıydı, yapay sinir ağlarının bütün hesabı bunun üstünde yürüyor.",
+          "Ters yönde de olur: fizik problemleri düğüm kuramı ve simetri çalışmalarında yeni matematik doğurdu."
+        ]
+      },
+      {
+        "kind": "text",
+        "title": "Model gerçeklik değildir",
+        "body": "Matematiğin işe yaraması, modellerin doğru olduğu anlamına gelmez. Her model bir basitleştirmedir ve hangi ayrıntının atıldığı, modelin nerede işe yarayıp nerede yanıltacağını belirler. Newton mekaniği yanlış değildir; belirli bir hız ve ölçek aralığında olağanüstü isabetlidir. Bir modeli değerlendirirken sorulacak soru 'doğru mu' değil, 'hangi aralıkta ve hangi soru için yeterli' olmalıdır. Finans krizlerinde, salgın tahminlerinde ve mühendislik hatalarında tekrarlanan hata, modelin geçerlilik aralığının dışına taşınmasıdır."
+      },
+      {
+        "kind": "example",
+        "title": "Kullanılmayan matematik yoktur demek",
+        "body": "Yirminci yüzyılın başında bir matematikçi, çalıştığı alanın hiçbir askerî ya da ticari uygulaması olmamasıyla açıkça övünmüştü. Alanı sayı kuramıydı. Bugün sayı kuramı, her banka işleminin ve her şifreli mesajın altında duruyor. Aynı hikâye Öklid dışı geometride, karmaşık sayılarda ve grup kuramında tekrarlandı. Bundan çıkan ders, temel araştırmanın ne zaman ve nerede karşılığını vereceğinin önceden bilinemeyeceğidir — ve bu, araştırmanın finansmanı hakkında doğrudan bir sonuçtur."
+      },
+      {
+        "kind": "quote",
+        "text": "Bütün modeller yanlıştır; bazıları işe yarar.",
+        "source": "George Box, istatistikçi"
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "'Matematiğin beklenmedik etkinliği' ne demektir?",
+        "options": [
+          "Matematiğin çok hızlı gelişmesi",
+          "Uygulama düşünülmeden geliştirilen matematiğin, doğa bilimlerinde şaşırtıcı isabetle işe yaraması",
+          "Hesapların hatasız olması",
+          "Bilgisayarların matematiği hızlandırması"
+        ],
+        "answerIndex": 1,
+        "explanation": "Öklid dışı geometri, karmaşık sayılar ve sayı kuramı bunun klasik örnekleridir. Tatmin edici bir açıklaması yoktur."
+      },
+      {
+        "id": "q2",
+        "prompt": "Bir modeli değerlendirirken sorulacak doğru soru nedir?",
+        "options": [
+          "Doğru mu?",
+          "Hangi aralıkta ve hangi soru için yeterli?",
+          "Kaç değişkeni var?",
+          "Kim geliştirdi?"
+        ],
+        "answerIndex": 1,
+        "explanation": "Her model bir basitleştirmedir. Tekrarlanan hata, modelin geçerlilik aralığının dışına taşınmasıdır."
+      },
+      {
+        "id": "q3",
+        "prompt": "Sayı kuramı örneğinden çıkarılacak ders nedir?",
+        "options": [
+          "Saf matematik gereksizdir",
+          "Temel araştırmanın ne zaman ve nerede karşılığını vereceği önceden bilinemez",
+          "Uygulamalı matematik daha değerlidir",
+          "Matematikçiler kötü tahmin yapar"
+        ],
+        "answerIndex": 1,
+        "explanation": "Uygulamasızlığıyla övünülen alan, bugün her banka işleminin altında duruyor. Bu, araştırma finansmanı hakkında doğrudan bir sonuçtur."
+      }
+    ]
+  }
+]

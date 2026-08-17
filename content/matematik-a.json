@@ -1,0 +1,479 @@
+[
+  {
+    "id": "sayilar",
+    "moduleId": "sayi",
+    "order": 1,
+    "title": "Sayı sistemleri",
+    "subtitle": "Her genişleme önce 'saçma' bulundu.",
+    "minutes": 8,
+    "keyTerms": ["doğal sayılar", "rasyonel sayı", "irrasyonel sayı", "sıfır", "negatif sayı", "karmaşık sayı"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Matematiğin tarihi, sayı kavramının tekrar tekrar genişletilmesi olarak okunabilir. Her genişleme aynı kalıbı izledi: önce bir problem çözülemedi, sonra çözmek için yeni bir sayı türü uyduruldu, o sayı türü uzun süre sahte ve saçma bulundu, en sonunda o kadar işe yaradı ki kimse tartışmayı hatırlamaz oldu."
+      },
+      {
+        "kind": "list",
+        "title": "Genişlemeler",
+        "items": [
+          "Doğal sayılar: saymak için. En eski ve en sezgisel olanlar.",
+          "Sıfır: 'hiç' bir sayı olabilir mi? Yer tutucu olarak erken, sayı olarak çok geç kabul edildi.",
+          "Negatifler: 'borç' olarak ticarette kullanıldılar ama matematikçiler yüzyıllarca onlara 'saçma sayılar' dedi.",
+          "Rasyoneller: bölme işlemini kapatır. İki tam sayının oranı.",
+          "İrrasyoneller: kökiki bir kesir değildir ve bu, her şeyin oranlarla ifade edilebileceği inancını yıktı.",
+          "Karmaşık sayılar: karesi negatif olan bir birim. Adı 'hayalî' kaldı ama elektrikten kuantum kuramına kadar her yerde zorunludur."
+        ]
+      },
+      {
+        "kind": "text",
+        "title": "Kökikinin yarattığı kriz",
+        "body": "Bir karenin köşegeni ile kenarı arasındaki oranın hiçbir kesirle yazılamadığının gösterilmesi, antik matematiğin en sarsıcı anıdır. Kanıt kısadır ve bugün de aynen kullanılır: kökiki bir kesir olsaydı, sadeleştirilmiş hâlinde hem payın hem paydanın çift olması gerekirdi — ki bu sadeleştirilmiş olmasıyla çelişir. Sonuç, ölçülemez uzunlukların var olduğudur. Sayı doğrusu, kesirlerin her yerde bulunmasına rağmen onlarla dolmaz."
+      },
+      {
+        "kind": "example",
+        "title": "'Hayalî' sayılar en gerçek işlerde",
+        "body": "Karesi eksi bir olan bir sayı uydurmak keyfî görünür. Ama bu genişleme yapıldığında beklenmedik bir şey olur: her polinom denklem çözülebilir hâle gelir ve dönme işlemleri çarpma kadar kolaylaşır. Bugün alternatif akım devrelerinin hesabı, sinyal işleme, akışkanlar mekaniği ve kuantum kuramının dalga fonksiyonu karmaşık sayılar olmadan yazılamaz. 'Hayalî' adı, sayının kendisi hakkında değil, onu ilk gören matematikçilerin rahatsızlığı hakkında bilgi verir."
+      },
+      {
+        "kind": "text",
+        "title": "Konum değerli yazım",
+        "body": "Sayıları yazma biçimimiz, matematiğin en az takdir edilen buluşlarından biridir. Roma rakamlarıyla iki üç basamaklı sayıyı çarpmayı deneyin: işlem, uzman bir işe dönüşür. Hint kökenli konum değerli sistemde ise aynı çarpma, on yaşındaki bir çocuğun mekanik olarak yapabileceği bir adımlar dizisine iner. Aracın kendisi düşünmenin ne kadarını üstlenebildiğini gösteren en açık örnektir; sıfır olmadan bu sistem çalışmaz."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Kökikinin irrasyonel olduğunun kanıtı hangi yöntemi kullanır?",
+        "options": [
+          "Tümevarım",
+          "Olmayana ergi: kesir olduğu varsayılıp çelişkiye ulaşılır",
+          "Sayısal hesap",
+          "Geometrik çizim"
+        ],
+        "answerIndex": 1,
+        "explanation": "Kesir olsaydı, sadeleştirilmiş hâlinde hem pay hem payda çift olurdu — ki bu sadeleştirilmiş olmasıyla çelişir."
+      },
+      {
+        "id": "q2",
+        "prompt": "Sayı sistemi genişlemelerinin ortak kalıbı nedir?",
+        "options": [
+          "Hemen kabul edilirler",
+          "Önce bir problemi çözmek için uydurulur, uzun süre saçma bulunur, sonunda vazgeçilmez olurlar",
+          "Yalnızca uygulamalı ihtiyaçtan doğarlar",
+          "Kanıtla başlarlar"
+        ],
+        "answerIndex": 1,
+        "explanation": "Negatifler 'saçma sayılar' diye anıldı, karmaşık sayılara 'hayalî' dendi. İsimler bile bu direnci taşır."
+      },
+      {
+        "id": "q3",
+        "prompt": "Konum değerli yazım sisteminin önemi nedir?",
+        "options": [
+          "Daha az yer kaplaması",
+          "Çarpma gibi işlemleri, uzmanlık isteyen bir işten mekanik bir adımlar dizisine indirmesi",
+          "Daha büyük sayıları göstermesi",
+          "Sıfırı gereksiz kılması"
+        ],
+        "answerIndex": 1,
+        "explanation": "Roma rakamlarıyla çarpma uzman işidir. Aynı işlem konum değerli sistemde çocuğun yapabileceği bir yordama iner; sıfır olmadan sistem çalışmaz."
+      }
+    ]
+  },
+  {
+    "id": "asallar",
+    "moduleId": "sayi",
+    "order": 2,
+    "title": "Asal sayılar",
+    "subtitle": "Sayıların yapı taşları ve en inatçı bilmecesi.",
+    "minutes": 9,
+    "keyTerms": ["asal sayı", "aritmetiğin temel teoremi", "Öklid'in kanıtı", "asal sayı teoremi", "Riemann hipotezi", "açık anahtarlı şifreleme"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Asal sayılar, yalnızca 1'e ve kendilerine bölünen sayılardır. Önemleri şuradan gelir: her tam sayı, asalların çarpımı olarak ve yalnızca tek bir biçimde yazılabilir. Yani asallar, sayıların atomlarıdır. Bu ifadeye aritmetiğin temel teoremi denir ve sanıldığı kadar apaçık değildir — 1'in asal sayılmamasının sebebi tam olarak bu tekliği korumaktır."
+      },
+      {
+        "kind": "text",
+        "title": "Sonsuz olduklarının kanıtı",
+        "body": "Öklid'in yaklaşık iki bin üç yüz yıllık kanıtı hâlâ en zarif matematiksel argümanlardan biri sayılıyor ve birkaç satırda anlatılabilir. Diyelim ki asallar sonlu olsun ve hepsini listeleyelim. Bu listedeki bütün asalları çarpıp sonuca 1 ekleyin. Elde ettiğiniz sayı, listedeki hiçbir asala tam bölünmez — hepsinde 1 kalanı verir. O hâlde ya bu sayının kendisi asaldır ya da listede olmayan bir asal böleni vardır. Her iki durumda da liste eksiktir. Demek ki asallar sonsuzdur."
+      },
+      { "kind": "chart", "chartId": "asal-sayilar" },
+      {
+        "kind": "text",
+        "body": "Asallar sonsuz olsa da seyrekleşir. Grafikteki oran, bu seyrekleşmenin kuralını gösteriyor: x'e kadar olan asal sayısı, kabaca x bölü doğal logaritma x'tir. Başka bir deyişle, bir sayının asal olma olasılığı yaklaşık 1/ln x. Gauss bu tahmini on beş yaşındayken yaptı; kanıtlanması yüz yıl aldı. Logaritmik integral Li(x) çok daha isabetli bir yaklaşımdır ve grafikte 1'e belirgin biçimde daha hızlı yaklaşır."
+      },
+      {
+        "kind": "list",
+        "title": "Açık sorular ve kalıplar",
+        "items": [
+          "Riemann hipotezi: asalların dağılımındaki hatanın ne kadar küçük olduğuna dair yüz altmış yıllık sav. Matematiğin en ünlü çözülmemiş sorusudur.",
+          "İkiz asallar: aralarında 2 fark olan asal çiftleri sonsuz mu? Bilinmiyor; ama 2013'te sonlu bir aralık için sonsuzluk kanıtlandı ve o aralık hızla daraltıldı.",
+          "Goldbach savı: her çift sayı iki asalın toplamı mı? Muazzam sayılara kadar sınandı, kanıtlanamadı.",
+          "Asal boşluklar keyfî büyüklükte olabilir: istediğiniz kadar uzun, hiç asal içermeyen aralıklar vardır ve bu kolayca gösterilir.",
+          "Bilinen en büyük asal, milyonlarca basamaklıdır ve gönüllülerin bilgisayarlarıyla yürütülen bir arama sonucu bulunur."
+        ]
+      },
+      {
+        "kind": "example",
+        "title": "İşe yaramaz matematiğin işe yaraması",
+        "body": "Sayı kuramı yüzyıllar boyunca matematiğin en 'saf' dalı sayıldı; hiçbir uygulaması olmamasıyla neredeyse övünülürdü. 1977'de açık anahtarlı şifreleme yayımlandı ve bütün internet güvenliği, büyük sayıları çarpanlarına ayırmanın zorluğuna dayandırıldı. Bankacılıktan mesajlaşmaya kadar bugün yaptığınız her güvenli işlem, asalların çarpımını hesaplamanın kolay, o çarpımı geri sökmenin zor olmasına yaslanır. Merakla üretilen bilginin nerede işe yarayacağını önceden kestirmek, tarihsel olarak imkânsız görünüyor."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "1 neden asal sayılmaz?",
+        "options": [
+          "Çok küçük olduğu için",
+          "Asal çarpanlara ayırmanın tekliğini bozacağı için",
+          "Bölenleri olmadığı için",
+          "Gelenek gereği"
+        ],
+        "answerIndex": 1,
+        "explanation": "1 asal sayılsaydı, 6 = 2·3 = 1·2·3 = 1·1·2·3 olurdu ve teklik kaybolurdu. Tanım, teoremi korumak için seçilmiştir."
+      },
+      {
+        "id": "q2",
+        "prompt": "Asal sayı teoremi ne der?",
+        "options": [
+          "Asallar sonsuzdur",
+          "x'e kadar olan asal sayısı kabaca x / ln x'tir",
+          "Her çift sayı iki asalın toplamıdır",
+          "İkiz asallar sonsuzdur"
+        ],
+        "answerIndex": 1,
+        "explanation": "Seyrekleşmenin kuralını verir: bir sayının asal olma olasılığı yaklaşık 1/ln x. Gauss tahmin etti, kanıtı yüz yıl sonra geldi."
+      },
+      {
+        "id": "q3",
+        "prompt": "Açık anahtarlı şifreleme hangi zorluğa dayanır?",
+        "options": [
+          "Asal sayı bulmanın zorluğuna",
+          "Büyük bir sayıyı asal çarpanlarına ayırmanın zorluğuna",
+          "Logaritma hesaplamanın zorluğuna",
+          "Rastgele sayı üretmenin zorluğuna"
+        ],
+        "answerIndex": 1,
+        "explanation": "Çarpmak kolay, geri sökmek zordur. Yüzyıllarca 'işe yaramaz' sayılan sayı kuramı, internet güvenliğinin altyapısı oldu."
+      }
+    ]
+  },
+  {
+    "id": "kanit-nedir",
+    "moduleId": "sayi",
+    "order": 3,
+    "title": "Kanıt nedir",
+    "subtitle": "Matematiği bütün diğer alanlardan ayıran şey.",
+    "minutes": 8,
+    "keyTerms": ["kanıt", "aksiyom", "olmayana ergi", "tümevarım", "karşı örnek"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Bilimlerin çoğunda kanıt, birikimli bir ikna sürecidir: yeterince gözlem, yeterince deney, yeterince tekrar. Matematikte kanıt bambaşka bir şeydir. Kabul edilen öncüllerden başlayarak, her adımı tek tek denetlenebilir bir çıkarımla sonuca gitmektir. Bir teorem bir kez kanıtlandığında, sonraki hiçbir gözlem onu değiştiremez. Bu, matematiği hem çok güçlü hem çok dar kılar."
+      },
+      {
+        "kind": "list",
+        "title": "Kanıt yöntemleri",
+        "items": [
+          "Doğrudan: öncüllerden adım adım sonuca gitmek.",
+          "Olmayana ergi: tersini varsayıp çelişkiye ulaşmak. Kökikinin irrasyonelliği böyle gösterilir.",
+          "Tümevarım: ilk durumda göster, her durumdan bir sonrakine geçişi kanıtla. Sonsuz durumu sonlu bir argümanla kapatır.",
+          "Karşı örnek: bir genellemeyi çürütmek için tek bir örnek yeter. Doğrulamak için ise hiçbir sayıda örnek yetmez.",
+          "Varlık kanıtı: bir şeyin var olduğunu, onu bulmadan göstermek. Bazı matematikçiler bunu rahatsız edici bulur.",
+          "Bilgisayarlı kanıt: insanın tek tek doğrulayamayacağı kadar çok durumu makineyle taramak."
+        ]
+      },
+      {
+        "kind": "text",
+        "title": "Aksiyomlar doğru değildir",
+        "body": "Aksiyomlar, kanıtlanmadan kabul edilen başlangıç önermeleridir. Uzun süre bunların 'apaçık doğrular' olduğu düşünüldü. Öklid'in paralel aksiyomu — bir doğruya dışındaki bir noktadan yalnızca bir paralel çizilebileceği — yüzyıllarca diğerlerinden türetilmeye çalışıldı ve başarılamadı. On dokuzuncu yüzyılda anlaşıldı ki bu aksiyomu değiştirerek de tutarlı geometriler kurulabilir. Yani aksiyomlar doğru ya da yanlış değildir; seçimdir. İlginç olan şu: bu 'yanlış' geometrilerden biri, yetmiş yıl sonra evrenin gerçek geometrisi olduğu anlaşılan genel görelilik için tam olarak gerekli araç çıktı."
+      },
+      {
+        "kind": "example",
+        "title": "Bir karşı örneğin gücü",
+        "body": "n² + n + 41 formülü, n = 0'dan 39'a kadar her seferinde asal sayı verir. Kırk ardışık doğrulama, hemen her alanda ikna edici sayılırdı. Matematikte sayılmaz — ve haklı olarak: n = 40 için sonuç 41² olur, yani asal değildir. Bin doğrulayıcı örnek bir teorem yapmaz; tek bir karşı örnek ise bir savı bitirir. Bu asimetri, matematiksel düşüncenin en karakteristik yanıdır."
+      },
+      {
+        "kind": "quote",
+        "text": "Matematikte hiçbir şey, doğru olduğu için değil, kanıtlandığı için doğrudur.",
+        "source": "Alanın çalışma ilkesi"
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Matematiksel kanıtın diğer bilimlerdeki kanıttan farkı nedir?",
+        "options": [
+          "Daha çok veri kullanması",
+          "Birikimli ikna değil, her adımı denetlenebilir bir çıkarım zinciri olması; bir kez kanıtlanan değişmez",
+          "Daha hızlı olması",
+          "Deney gerektirmemesi"
+        ],
+        "answerIndex": 1,
+        "explanation": "Sonraki hiçbir gözlem kanıtlanmış bir teoremi değiştiremez. Bu, matematiği hem çok güçlü hem çok dar kılar."
+      },
+      {
+        "id": "q2",
+        "prompt": "Aksiyomlar hakkında hangisi doğrudur?",
+        "options": [
+          "Apaçık doğrulardır",
+          "Doğru ya da yanlış değil, seçimdir; farklı seçimler farklı tutarlı yapılar üretir",
+          "Kanıtlanmışlardır",
+          "Değiştirilemezler"
+        ],
+        "answerIndex": 1,
+        "explanation": "Paralel aksiyomu değiştirilerek kurulan geometrilerden biri, yetmiş yıl sonra genel görelilik için tam olarak gerekli araç çıktı."
+      },
+      {
+        "id": "q3",
+        "prompt": "n² + n + 41 örneği neyi gösterir?",
+        "options": [
+          "Formülün asal ürettiğini",
+          "Kırk doğrulayıcı örneğin bile kanıt olmadığını; n = 40'ta formülün bozulduğunu",
+          "Asalların rastgele olduğunu",
+          "Formüllerin güvenilmez olduğunu"
+        ],
+        "answerIndex": 1,
+        "explanation": "Bin doğrulayıcı örnek bir teorem yapmaz; tek bir karşı örnek bir savı bitirir. Bu asimetri matematiksel düşüncenin karakteristiğidir."
+      }
+    ]
+  },
+  {
+    "id": "sonsuzluk",
+    "moduleId": "sayi",
+    "order": 4,
+    "title": "Sonsuzluğun türleri",
+    "subtitle": "Bazı sonsuzlar diğerlerinden büyük.",
+    "minutes": 8,
+    "keyTerms": ["sayılabilir sonsuz", "sayılamaz sonsuz", "köşegen argümanı"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "İki kümenin aynı büyüklükte olduğunu nasıl anlarsınız? Saymadan, eşleyerek: her sandalyeye bir kişi düşüyorsa, kişi sayısı sandalye sayısına eşittir. Bu ölçüt sonlu kümelerde sıradan görünür. Sonsuz kümelere uygulandığında ise sezgiye aykırı sonuçlar verir ve tam da bu yüzden değerlidir."
+      },
+      {
+        "kind": "list",
+        "title": "Sezgiyi bozan eşlemeler",
+        "items": [
+          "Çift sayılar, doğal sayılarla birebir eşlenir: 1↔2, 2↔4, 3↔6… Yani 'yarısı kadar' olan küme aynı büyüklüktedir.",
+          "Tam sayılar da doğal sayılarla eşlenir; negatifleri araya serpiştirmek yeter.",
+          "Rasyonel sayılar da eşlenir. Sayı doğrusunda her yerde bulunmalarına rağmen, doğal sayılardan fazla değildirler.",
+          "Bu büyüklüğe sayılabilir sonsuz denir: bir listeye dizilebilen her sonsuz küme bu büyüklüktedir.",
+          "Gerçel sayılar ise eşlenemez. Bu, farklı bir sonsuzluk büyüklüğüdür."
+        ]
+      },
+      {
+        "kind": "text",
+        "title": "Köşegen argümanı",
+        "body": "Cantor'un kanıtı hem kısa hem yıkıcıdır. Diyelim ki sıfır ile bir arasındaki bütün gerçel sayıları bir listeye dizdiniz. Şimdi yeni bir sayı kurun: birinci basamağı, listedeki birinci sayının birinci basamağından farklı olsun; ikinci basamağı, ikinci sayının ikincisinden farklı; ve böyle devam edin. Kurduğunuz sayı listedeki hiçbir sayıya eşit olamaz, çünkü her biriyle en az bir basamakta ayrılır. Demek ki liste eksiktir. Hangi listeyi kurarsanız kurun eksik olacaktır. Gerçel sayılar sayılamaz."
+      },
+      {
+        "kind": "example",
+        "title": "Aynı fikrin uzak yankıları",
+        "body": "Köşegen argümanı sonsuzluk tartışmasında kaldı sanılabilir. Oysa aynı hile, matematiğin ve bilgisayar biliminin en derin iki sonucunda tekrar karşımıza çıkar. Gödel, eksiklik teoremini kurarken 'bu önerme kanıtlanamaz' diyen bir ifadeyi köşegenleştirerek kurdu. Turing, durma probleminin çözülemez olduğunu, kendi kendine uygulanan bir programla aynı yöntemi kullanarak gösterdi. Sonsuzluğu anlamak için bulunan bir teknik, hesaplamanın sınırını çizdi."
+      },
+      {
+        "kind": "text",
+        "title": "Direnç",
+        "body": "Cantor'un sonuçları dönemin önde gelen matematikçilerinden sert tepki gördü; bazıları bunu matematiğe bulaşmış bir hastalık olarak nitelendirdi. Bugün küme kuramı, matematiğin standart temeli olarak öğretiliyor. Bu, alanın tarihinde tekrar eden bir kalıptır: kabul edilemez görünen genişleme, bir kuşak sonra ders kitabının ilk bölümü olur."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Rasyonel sayılar hangi büyüklükte sonsuzdur?",
+        "options": [
+          "Gerçel sayılarla aynı",
+          "Doğal sayılarla aynı: sayılabilir sonsuz",
+          "Doğal sayılardan küçük",
+          "Sonsuz değildir"
+        ],
+        "answerIndex": 1,
+        "explanation": "Sayı doğrusunda her yerde bulunmalarına rağmen bir listeye dizilebilirler. Şaşırtıcı olan tam da budur."
+      },
+      {
+        "id": "q2",
+        "prompt": "Köşegen argümanı neyi gösterir?",
+        "options": [
+          "Gerçel sayıların sonsuz olduğunu",
+          "Hangi liste kurulursa kurulsun eksik olacağını; gerçel sayıların sayılamaz olduğunu",
+          "Rasyonellerin sayılamaz olduğunu",
+          "Sonsuzun tek olduğunu"
+        ],
+        "answerIndex": 1,
+        "explanation": "Listedeki her sayıdan en az bir basamakta ayrılan yeni bir sayı kurulur. Bu, listenin tamlığını imkânsız kılar."
+      },
+      {
+        "id": "q3",
+        "prompt": "Köşegen argümanı başka nerelerde kullanıldı?",
+        "options": [
+          "Yalnızca küme kuramında",
+          "Gödel'in eksiklik teoreminde ve Turing'in durma probleminde",
+          "Geometride",
+          "Olasılıkta"
+        ],
+        "answerIndex": 1,
+        "explanation": "Sonsuzluğu anlamak için bulunan bir teknik, matematiğin ve hesaplamanın sınırlarını çizen iki büyük sonucun ortak aracı oldu."
+      }
+    ]
+  },
+  {
+    "id": "fonksiyon",
+    "moduleId": "degisim",
+    "order": 1,
+    "title": "Fonksiyon ve büyüme",
+    "subtitle": "Sezginin en çok yanıldığı yer üstel büyümedir.",
+    "minutes": 8,
+    "keyTerms": ["fonksiyon", "grafik", "üstel büyüme", "logaritma"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Fonksiyon, her girdiye tam olarak bir çıktı eşleyen kuraldır. Bu kadar basit bir tanımın matematiğin en verimli kavramı olması şaşırtıcıdır. Gücü, ilişkileri nesne hâline getirmesinden gelir: bir fonksiyonu toplayabilir, çarpabilir, tersini alabilir, başka bir fonksiyonun içine koyabilir ve hepsinden önemlisi grafiğini çizerek cebiri geometriye çevirebilirsiniz."
+      },
+      {
+        "kind": "list",
+        "title": "Sık karşılaşılan büyüme biçimleri",
+        "items": [
+          "Doğrusal: sabit miktarda artış. Her adımda aynı ekleme.",
+          "Karesel: hız artarak artış. Fren mesafesi hızın karesiyle büyür.",
+          "Üstel: mevcut büyüklükle orantılı artış. Bileşik faiz, salgın, nüfus.",
+          "Logaritmik: giderek yavaşlayan artış. Aynı miktarda kazanç için katlanarak artan çaba.",
+          "Kuvvet yasası: iki büyüklüğün log-log grafikte doğru vermesi. Kleiber yasasından şehir ölçeklerine kadar her yerde.",
+          "Sınırlı (lojistik): üstel başlayıp bir tavana yaklaşan büyüme. Gerçek dünyadaki büyümelerin çoğu bu biçimdedir."
+        ]
+      },
+      {
+        "kind": "text",
+        "title": "Üstel sezgi neden çöker",
+        "body": "İnsan zihni doğrusal düşünmeye ayarlıdır: 'her gün biraz daha' hesabını iyi yaparız. Üstel büyümede ise artış miktarının kendisi büyür ve sonuçlar sezgiden hızla kopar. Bir kâğıdı kırk iki kez katlayabilseydiniz kalınlığı Ay'a ulaşırdı. Bir satranç tahtasının karelerine katlanarak konan buğday, dünya üretiminden fazla eder. Salgınların erken evresinde 'sayılar hâlâ küçük' değerlendirmesinin bu kadar tehlikeli olmasının sebebi de budur: üstel bir eğride küçük sayılar, yalnızca henüz erken olduğunuz anlamına gelir."
+      },
+      {
+        "kind": "example",
+        "title": "Yetmiş kuralı",
+        "body": "Üstel büyümeyi kafadan hesaplamanın pratik bir yolu vardır: bir büyüklük yılda yüzde r artıyorsa, ikiye katlanma süresi kabaca 70 bölü r yıldır. Yüzde 7 büyüme on yılda ikiye katlar; yüzde 2 enflasyon otuz beş yılda parayı yarıya indirir; yüzde 10 faiz yedi yılda anaparayı ikiye katlar. Bu kural, logaritmanın gündelik hayata çevrilmiş hâlidir ve tek bir bölme işlemiyle çoğu tartışmayı yerine oturtur."
+      },
+      {
+        "kind": "text",
+        "title": "Logaritma neden bu kadar önemliydi",
+        "body": "Logaritma çarpmayı toplamaya çevirir. Hesap makinesinden önceki dünyada bu, gökbilimden denizciliğe kadar her alanda muazzam bir kazançtı; logaritma cetvelleri ve hesap cetveli yüzyıllarca mühendisliğin standart aracı oldu. Bugün de logaritmik ölçek, çok geniş aralıklı büyüklükleri tek bir grafikte göstermenin tek pratik yoludur — deprem şiddeti, ses düzeyi, asitlik ve yıldız parlaklığı hep logaritmik ölçeklerle ifade edilir."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Üstel büyümeyi tanımlayan özellik nedir?",
+        "options": [
+          "Çok hızlı olması",
+          "Artışın, mevcut büyüklükle orantılı olması",
+          "Sınırsız olması",
+          "Grafiğinin dik olması"
+        ],
+        "answerIndex": 1,
+        "explanation": "Doğrusal büyümede her adımda aynı miktar eklenir; üstel büyümede eklenen miktarın kendisi büyür."
+      },
+      {
+        "id": "q2",
+        "prompt": "Yetmiş kuralı ne verir?",
+        "options": [
+          "Toplam büyümeyi",
+          "İkiye katlanma süresini: 70 bölü yıllık yüzde artış",
+          "Enflasyon oranını",
+          "Faiz oranını"
+        ],
+        "answerIndex": 1,
+        "explanation": "Yüzde 7 büyüme on yılda ikiye katlar. Logaritmanın gündelik hayata çevrilmiş hâlidir ve tek bir bölmeyle çalışır."
+      },
+      {
+        "id": "q3",
+        "prompt": "Logaritmik ölçek neden kullanılır?",
+        "options": [
+          "Sayıları küçültmek için",
+          "Çok geniş aralıklı büyüklükleri tek bir grafikte gösterebilmek için",
+          "Hesabı zorlaştırmak için",
+          "Gelenek gereği"
+        ],
+        "answerIndex": 1,
+        "explanation": "Deprem şiddeti, ses düzeyi, asitlik ve yıldız parlaklığı hep logaritmik ölçeklerle ifade edilir; aksi hâlde aynı eksene sığmazlar."
+      }
+    ]
+  },
+  {
+    "id": "turev-ders",
+    "moduleId": "degisim",
+    "order": 2,
+    "title": "Türev",
+    "subtitle": "Anlık değişimi ölçmenin yolu.",
+    "minutes": 9,
+    "keyTerms": ["türev", "limit", "teğet", "sonsuz küçük"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Ortalama hız kolaydır: yolu zamana bölersiniz. Peki bir aracın tam şu anki hızı nedir? 'Şu an' sıfır süre demektir ve sıfır yolu sıfır zamana bölmek anlamsızdır. Bu paradoks, iki bin yıl boyunca çözülemedi. Çözüm, sıfıra bölmeyi başarmak değil, sıfıra yaklaşmanın ne demek olduğunu kesin biçimde tanımlamak oldu."
+      },
+      { "kind": "chart", "chartId": "turev" },
+      {
+        "kind": "text",
+        "body": "Grafikteki kırmızı doğru, eğriyi iki noktadan kesiyor ve eğimi ortalama değişim hızını veriyor. Aralık daraldıkça bu doğru dönüyor ve eğriye tek noktadan dokunan teğete yaklaşıyor. Türev, kesen doğrunun eğiminin bu yaklaşma sırasında vardığı değerdir. Dikkat edilmesi gereken incelik şudur: aralık hiçbir zaman sıfır olmaz, sıfıra gider. Bu ayrım kelime oyunu değil, kalkülüsün bütün sağlamlığının dayandığı yerdir."
+      },
+      {
+        "kind": "formula",
+        "title": "Türevin tanımı",
+        "expression": "f′(x) = lim (h→0) [ f(x+h) − f(x) ] / h"
+      },
+      {
+        "kind": "list",
+        "title": "Türev neyi söyler",
+        "items": [
+          "İşaret: pozitifse artıyor, negatifse azalıyor.",
+          "Sıfır olduğu noktalar: tepe, çukur ya da düzleşme. Eniyileme problemlerinin tamamı bu gözlem üzerine kuruludur.",
+          "Büyüklük: değişimin ne kadar hızlı olduğu.",
+          "İkinci türev: değişim hızının kendisinin nasıl değiştiği. Hızlanma, eğrilik ve 'artış yavaşlıyor' cümlesinin matematiksel karşılığı.",
+          "Salgın tartışmalarındaki 'vaka sayısı hâlâ artıyor ama artış hızı düşüyor' ifadesi tam olarak ikinci türevden söz eder."
+        ]
+      },
+      {
+        "kind": "example",
+        "title": "İki yüz yıllık bir açık",
+        "body": "Newton ve Leibniz kalkülüsü 'sonsuz küçük' büyüklüklerle kurdu: sıfırdan büyük ama her pozitif sayıdan küçük olduğu varsayılan nesneler. Yöntem muazzam işe yaradı ama temeli sağlam değildi. Piskopos Berkeley, bu büyüklükleri 'ölmüş niceliklerin hayaletleri' diye alaya aldı ve eleştirisi haklıydı. Açık, ancak on dokuzuncu yüzyılda limit kavramının kesin tanımıyla kapatıldı. Yani matematik tarihinin en verimli aracı, yüz elli yıl boyunca sağlam bir temeli olmadan kullanıldı — sonuçları doğru olduğu için."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Türevin tanımındaki kritik incelik nedir?",
+        "options": [
+          "h sıfır yapılır",
+          "h sıfır olmaz, sıfıra gider; limit alınır",
+          "h negatif olamaz",
+          "h sabit tutulur"
+        ],
+        "answerIndex": 1,
+        "explanation": "Sıfıra bölmek anlamsızdır. Kalkülüsün sağlamlığı, 'yaklaşmak' kavramının kesin olarak tanımlanmasına dayanır."
+      },
+      {
+        "id": "q2",
+        "prompt": "'Vaka sayısı artıyor ama artış hızı düşüyor' cümlesi neyi anlatır?",
+        "options": [
+          "Türevin negatif olduğunu",
+          "Birinci türevin pozitif, ikinci türevin negatif olduğunu",
+          "Fonksiyonun azaldığını",
+          "Sabit kaldığını"
+        ],
+        "answerIndex": 1,
+        "explanation": "Birinci türev artışı, ikinci türev artışın kendisinin nasıl değiştiğini verir. Cümle tam olarak ikinci türevden söz eder."
+      },
+      {
+        "id": "q3",
+        "prompt": "Kalkülüsün temellendirilmesi hakkında hangisi doğrudur?",
+        "options": [
+          "Baştan sağlam kuruldu",
+          "Yaklaşık yüz elli yıl temeli tartışmalı biçimde kullanıldı; limit kavramıyla sonradan sağlamlaştırıldı",
+          "Hâlâ temelsizdir",
+          "Newton tarafından temellendirildi"
+        ],
+        "answerIndex": 1,
+        "explanation": "'Sonsuz küçükler' dönemin eleştirmenlerince haklı olarak sorgulandı. Sonuçlar doğru olduğu için araç kullanılmayı sürdürdü."
+      }
+    ]
+  }
+]
