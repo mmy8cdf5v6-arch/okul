@@ -1,0 +1,495 @@
+[
+  {
+    "id": "kanitin-gucu",
+    "moduleId": "guncelleme",
+    "order": 3,
+    "title": "Kanıtın gücü",
+    "subtitle": "Bir gözlem inancı ne kadar oynatmalı? Cevap bir orandır.",
+    "minutes": 8,
+    "keyTerms": ["olabilirlik oranı", "bahis oranı", "ayırt edicilik", "onaylama yanlılığı"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Bir kanıtın gücü mutlak değil görecelidir. Ölçüsü şudur: bu gözlemi, hipotez doğruyken görme olasılığının, yanlışken görme olasılığına oranı. Buna olabilirlik oranı denir. Oran 1'e yakınsa kanıt zayıftır; ne kadar çarpıcı görünürse görünsün inancı oynatmaz."
+      },
+      {
+        "kind": "formula",
+        "title": "Bahis oranı biçimi",
+        "expression": "sonsal bahis = önsel bahis × olabilirlik oranı",
+        "note": "Bahis oranı, olasılığın p/(1−p) biçimidir. Bu haliyle Bayes kuralı tek bir çarpmaya iner ve zihinden yapılabilir hâle gelir."
+      },
+      {
+        "kind": "text",
+        "title": "Ayırt edici olmayan kanıt",
+        "body": "Bir falcı 'yakın zamanda bir kayıp yaşadınız' derse ve bu çoğu insan için doğruysa, ifade doğru olsa da hiçbir şey kanıtlamaz. Falcı gerçekten görüyorsa da görmüyorsa da bu cümleyi söylerdi. Ayırt edici kanıt, hipotez yanlışsa görülmesi zor olan kanıttır. İyi bir tahminin ölçüsü tutmuş olması değil, tutmama riskini göze almış olmasıdır."
+      },
+      {
+        "kind": "example",
+        "title": "Örnek: iki kavanoz",
+        "body": "İki kavanoz var. A'da 70 beyaz 30 siyah top, B'de 30 beyaz 70 siyah. Rastgele bir kavanoz seçildi, ondan çekilen top beyaz çıktı. Kavanozun A olma olasılığı nedir? Önsel bahis 1'e 1. Olabilirlik oranı 0.70/0.30 ≈ 2.33. Sonsal bahis 2.33'e 1, yani olasılık %70. Üst üste iki beyaz çekilirse oran 2.33 × 2.33 ≈ 5.4'e çıkar ve olasılık %84 olur."
+      },
+      {
+        "kind": "list",
+        "title": "Kanıtı değerlendirirken",
+        "items": [
+          "Bu gözlem, hipotez yanlış olsaydı da görülür müydü? Görülürse zayıf kanıttır.",
+          "Kanıtı arayan kişi, aksini gösterecek gözlemleri de arıyor mu?",
+          "Kaç kanıt elendi, kaçı kaldı? Sadece kalanlar anlatılıyorsa seçim yapılmış demektir.",
+          "Kanıtlar bağımsız mı? Aynı kaynaktan gelen üç haber tek bir kanıttır.",
+          "Olağandışı bir iddia, olabilirlik oranı yüksek bir kanıt gerektirir — çünkü önseli düşüktür."
+        ]
+      },
+      {
+        "kind": "text",
+        "title": "Onaylama yanlılığı",
+        "body": "İnsanlar bir hipotezi sınarken onu doğrulayacak gözlemleri arama eğilimindedir. Wason'ın 1966'daki kart deneyi bunu açıkça gösterdi: katılımcıların büyük çoğunluğu kuralı çürütebilecek kartı çevirmeyi akıl etmedi. Bayesçi bakışla söylenirse, insanlar olabilirlik oranı yüksek olan kanıtı değil, hipoteziyle uyumlu olanı topluyor. İkisi çoğu zaman aynı şey değildir."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Olabilirlik oranı 1'e çok yakın olan bir kanıt ne anlama gelir?",
+        "options": [
+          "Hipotezi kesin doğrular",
+          "Hipotezi kesin çürütür",
+          "Ayırt edici değildir; inancı neredeyse hiç oynatmaz",
+          "Örneklem küçüktür"
+        ],
+        "answerIndex": 2,
+        "explanation": "Kanıtın gücü, hipotez doğruyken ve yanlışken görülme olasılıklarının oranıdır. Oran 1 ise gözlem iki hipotezi ayırt etmiyor demektir."
+      },
+      {
+        "id": "q2",
+        "prompt": "İyi bir tahminin ölçüsü nedir?",
+        "options": [
+          "Tutmuş olması",
+          "Yanlış çıkma riskini göze almış, yani ayırt edici olması",
+          "Popüler olması",
+          "Belirsiz ifade edilmiş olması"
+        ],
+        "answerIndex": 1,
+        "explanation": "Her durumda doğru çıkacak bir ifade bilgi taşımaz. Bir tahminin değeri, yanlışlanabilir olmasından gelir."
+      },
+      {
+        "id": "q3",
+        "prompt": "Aynı kaynaktan gelen üç ayrı haber kaç kanıt sayılır?",
+        "options": ["Üç", "İki", "Bir; kanıtlar bağımsız değilse çarpılamaz", "Sıfır"],
+        "answerIndex": 2,
+        "explanation": "Bayesçi güncellemede olabilirlik oranlarının çarpılabilmesi için kanıtların bağımsız olması gerekir. Ortak kaynak bağımsızlığı ortadan kaldırır."
+      }
+    ]
+  },
+
+  {
+    "id": "nadir-olaylar",
+    "moduleId": "guncelleme",
+    "order": 4,
+    "title": "Nadir olaylar ve tesadüf",
+    "subtitle": "Yeterince çok deneme varsa, olması imkânsız görünen şey kaçınılmazdır.",
+    "minutes": 8,
+    "keyTerms": ["büyük sayılar kanunu", "doğum günü paradoksu", "çoklu karşılaştırma", "seçilmiş anlatı"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Bir olayın tek bir denemede gerçekleşme olasılığı milyonda bir olabilir. Ama deneme sayısı milyonları buluyorsa, o olayın hiç gerçekleşmemesi asıl şaşırtıcı olurdu. Buna bazen 'yeterince büyük sayılar kanunu' denir: yeterince çok fırsat verildiğinde her tuhaflık bir yerde ortaya çıkar."
+      },
+      {
+        "kind": "chart",
+        "chartId": "dogum-gunu"
+      },
+      {
+        "kind": "text",
+        "title": "Neden sezgimiz şaşırıyor",
+        "body": "Doğum günü probleminde sezgiyi bozan şey, sorunun yanlış anlaşılmasıdır. Zihin 'birinin doğum günü benimkiyle aynı mı' diye hesaplar; oysa soru 'herhangi iki kişininki çakışıyor mu'dur. 23 kişilik bir grupta 253 ayrı kişi çifti vardır. Karşılaştırma sayısı kişi sayısıyla değil karesiyle arttığı için olasılık beklenenden çok daha hızlı yükselir."
+      },
+      {
+        "kind": "example",
+        "title": "Örnek: iki kez piyango kazanmak",
+        "body": "Aynı kişinin büyük ikramiyeyi iki kez kazanması gazetede 'imkânsız' diye yer alır. Belirli bir kişi için gerçekten çok küçük bir olasılıktır. Ama soru şu değildir. Milyonlarca kişi yıllarca bilet alıyorsa, 'birinin iki kez kazanması' olasılığı hiç de küçük değildir. Belirli bir kişinin olasılığı ile herhangi birinin olasılığı arasındaki fark, tesadüf haberlerinin neredeyse tamamını açıklar."
+      },
+      {
+        "kind": "list",
+        "title": "Tesadüf haberi okurken",
+        "items": [
+          "Kaç deneme yapıldı? Payda çoğu zaman haberde yoktur.",
+          "Olay önceden mi belirlendi, sonradan mı seçildi? Sonradan seçilen örüntü hep vardır.",
+          "Aynı tuhaflığın kaç farklı biçimi 'kayda değer' sayılırdı?",
+          "Benzer ama gerçekleşmemiş durumlar haber olmaz; yalnızca gerçekleşenleri görürsünüz.",
+          "Rastgelelik düzgün dağılmaz, kümelenir. Kümelenme tek başına bir sebep göstermez."
+        ]
+      },
+      {
+        "kind": "text",
+        "title": "Kanser kümeleri",
+        "body": "Bir mahallede beklenenden fazla kanser vakası görüldüğünde bir sebep aranması doğaldır. Ama binlerce mahalle ve onlarca kanser türü varsa, salt rastlantıyla bazı mahallelerde yığılma görülmesi beklenir. Epidemiyologlar bu yüzden kümenin kendisini kanıt saymaz; kümeyi önceden belirlenmiş bir hipotezle, bağımsız verilerle sınamak gerekir. Bu, çoklu karşılaştırma sorununun coğrafyaya taşınmış hâlidir."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "23 kişilik bir grupta iki kişinin doğum gününün çakışma olasılığının %50'yi geçmesinin sebebi nedir?",
+        "options": [
+          "365 sayısının küçük olması",
+          "Karşılaştırılan kişi çifti sayısının kişi sayısının karesiyle artması",
+          "Doğum günlerinin eşit dağılmaması",
+          "Artık yılların etkisi"
+        ],
+        "answerIndex": 1,
+        "explanation": "23 kişide 253 farklı çift vardır. Sezgi kişi sayısını sayar, oysa hesaba giren şey çift sayısıdır."
+      },
+      {
+        "id": "q2",
+        "prompt": "Bir kişinin piyangoyu iki kez kazanması neden şaşırtıcı sayılmamalı?",
+        "options": [
+          "Piyango hilelidir",
+          "Belirli bir kişi için değil ama milyonlarca oyuncu arasında 'birinin' kazanması olasıdır",
+          "Olasılık hesabı burada geçerli değildir",
+          "İki çekiliş bağımlıdır"
+        ],
+        "answerIndex": 1,
+        "explanation": "Belirli bir kişinin olasılığı ile herhangi bir kişinin olasılığı çok farklıdır. Haber ikincisini birincisi gibi sunar."
+      },
+      {
+        "id": "q3",
+        "prompt": "Bir hastalık kümesi tek başına neden kanıt sayılmaz?",
+        "options": [
+          "Veriler güvenilmezdir",
+          "Binlerce bölge ve onlarca hastalık türü varken bazı yığılmalar rastlantıyla beklenir",
+          "Kümeler her zaman ölçüm hatasıdır",
+          "Örneklem büyüklüğü yeterlidir"
+        ],
+        "answerIndex": 1,
+        "explanation": "Bu, çoklu karşılaştırma sorununun coğrafi hâlidir. Küme, önceden belirlenmiş bir hipotezle ve bağımsız veriyle sınanmadıkça bir sebep göstermez."
+      }
+    ]
+  },
+
+  {
+    "id": "beklenen-deger",
+    "moduleId": "karar",
+    "order": 1,
+    "title": "Beklenen değer",
+    "subtitle": "Belirsiz seçenekleri tek bir sayıyla karşılaştırmanın yolu.",
+    "minutes": 8,
+    "keyTerms": ["beklenen değer", "başa baş noktası", "varyans", "tek atış"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Beklenen değer, olası sonuçların olasılıklarıyla ağırlıklandırılmış ortalamasıdır. Belirsiz iki seçeneği karşılaştırmanın en temel aracıdır ve hesabı basittir: her sonucu olasılığıyla çarpın, toplayın. Zor olan şey hesap değil, bu sayının neyi söylediğini ve neyi söylemediğini bilmektir."
+      },
+      {
+        "kind": "chart",
+        "chartId": "beklenen-deger"
+      },
+      {
+        "kind": "text",
+        "title": "Tek atışta beklenen değer gerçekleşmez",
+        "body": "Beklenen değer, uzun vadede oyun başına ortalamanın nereye oturacağını söyler. Tek bir denemede çoğu zaman hiç gerçekleşmeyen bir sayıdır: bir zarın beklenen değeri 3.5'tir ama zarda 3.5 yoktur. Bu yüzden beklenen değer, tekrarlanabilir kararlarda güçlü bir ölçüttür; hayatta bir kez verilecek kararlarda tek başına yetmez."
+      },
+      {
+        "kind": "list",
+        "title": "Beklenen değerin gizlediği şeyler",
+        "items": [
+          "Yayılma: aynı beklenen değere sahip iki seçenekten biri sizi iflasa götürebilir.",
+          "Sıfırlanma: bir adımda her şeyi kaybediyorsanız uzun vade hiç gelmez.",
+          "Ölçek: küçük paralar için doğrusal olan tercih, büyük paralarda doğrusal değildir.",
+          "Geri dönülemezlik: tekrarlanamayan kararlarda ortalama bir yol gösterici değildir.",
+          "Belirsiz olasılıklar: sayının kendisi tahminse, beklenen değer o tahmin kadar sağlamdır."
+        ]
+      },
+      {
+        "kind": "example",
+        "title": "Örnek: ev avantajı",
+        "body": "Avrupa ruletinde 37 sayı vardır ama tek bir sayıya oynayıp tutturduğunuzda 36 katı ödenir. Beklenen değer, oynanan her 100 lira için yaklaşık eksi 2.70 liradır. Bu, oyunun süresi uzadıkça kaçınılmaz hâle gelen küçük ve sabit bir yontmadır. Kumarhane tek tek elleri kazanmaya çalışmaz; sadece yeterince çok el oynanmasını bekler."
+      },
+      {
+        "kind": "text",
+        "title": "Karar analizinde kullanımı",
+        "body": "Beklenen değer, işletmelerde ve kamu politikasında kararları karşılaştırmanın standart aracıdır. Bir projenin başarı olasılığı ve getirisi, başarısızlık olasılığı ve maliyeti çarpılıp toplanır. Bu hesabın en kırılgan yeri olasılık tahminleridir; çoğu zaman kaç ondalık basamak yazıldığı değil, tahminin hangi aralıkta değişebileceği önemlidir. İyi bir analiz, sonucu değil sonucun hangi varsayımlara duyarlı olduğunu gösterir."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Bir zarın beklenen değeri 3.5'tir. Bu ne anlama gelir?",
+        "options": [
+          "Zarda en sık 3.5 gelir",
+          "Çok sayıda atışta ortalamanın 3.5'e yaklaşacağı anlamına gelir",
+          "Zar hilelidir",
+          "3 ve 4 eşit olasılıktadır"
+        ],
+        "answerIndex": 1,
+        "explanation": "Beklenen değer tek bir atışın sonucu değil, uzun vadedeki ortalamadır. Tek atışta hiç gerçekleşmeyen bir sayı olabilir."
+      },
+      {
+        "id": "q2",
+        "prompt": "Aynı beklenen değere sahip iki seçenek arasında neden fark olabilir?",
+        "options": [
+          "Beklenen değer yanlış hesaplanmıştır",
+          "Sonuçların yayılması ve iflas riski farklı olabilir",
+          "Olasılıklar toplanamaz",
+          "Fark olmaz, ikisi eşdeğerdir"
+        ],
+        "answerIndex": 1,
+        "explanation": "Beklenen değer yayılmayı gizler. Sizi sıfıra götürebilecek bir seçenek, aynı ortalamaya sahip olsa bile kabul edilemez olabilir."
+      },
+      {
+        "id": "q3",
+        "prompt": "Kumarhanenin kârı neye dayanır?",
+        "options": [
+          "Tek tek elleri kazanmaya",
+          "Her oyunda küçük ve sabit bir negatif beklenen değere ve çok sayıda tekrara",
+          "Oyuncuların hata yapmasına",
+          "Şansın kumarhaneden yana olmasına"
+        ],
+        "answerIndex": 1,
+        "explanation": "Ev avantajı küçüktür ama sabittir. Oyun sayısı arttıkça sonuç, büyük sayılar yasası gereği beklenen değere yakınsar."
+      }
+    ]
+  },
+
+  {
+    "id": "fayda-ve-risk",
+    "moduleId": "karar",
+    "order": 2,
+    "title": "Fayda ve risk iştahı",
+    "subtitle": "İnsanlar parayı değil, paranın işe yararlığını hesaba katar.",
+    "minutes": 9,
+    "keyTerms": ["fayda", "riskten kaçınma", "kesinlik eşdeğeri", "risk primi", "St. Petersburg paradoksu"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Beklenen değer tek başına insan davranışını açıklamaz. Adil bir bahsi çoğu insan reddeder; oysa beklenen değeri sıfırdır. Sebep, bir liranın taşıdığı değerin serveti arttıkça azalmasıdır. Yüz lirası olan için yüz lira her şeydir; yüz milyonu olan için hiçbir şey. Bu azalan katkıyı ifade eden şeye fayda denir."
+      },
+      {
+        "kind": "chart",
+        "chartId": "fayda-egrisi"
+      },
+      {
+        "kind": "text",
+        "title": "St. Petersburg paradoksu",
+        "body": "Bir oyun düşünün: yazı gelene kadar para atılır, n. atışta yazı gelirse 2ⁿ lira ödenir. Beklenen değeri sonsuzdur. Yine de bu oyuna kimse büyük bir para ödemez. Bernoulli 1738'de çözümü önerdi: insanlar parayı değil faydayı değerlendirir ve fayda logaritmik büyüyorsa oyunun beklenen faydası sonlu çıkar. Modern karar kuramının başlangıcı bu paradokstur."
+      },
+      {
+        "kind": "formula",
+        "title": "Kesinlik eşdeğeri",
+        "expression": "u(KE) = E[u(sonuçlar)]",
+        "note": "Kesinlik eşdeğeri, kumarla aynı faydayı veren garantili tutardır. Beklenen parasal değer ile kesinlik eşdeğeri arasındaki fark risk primidir: riski almamak için ödemeye razı olduğunuz miktar."
+      },
+      {
+        "kind": "text",
+        "title": "Sigorta ve piyango aynı kişide",
+        "body": "Aynı insan hem sigorta yaptırıp hem piyango bileti alır. İkisi de beklenen değeri negatif işlemlerdir. Sigorta, büyük ve yıkıcı bir kaybı küçük ve kesin bir maliyete çevirdiği için mantıklıdır — riskten kaçınmanın doğrudan uygulaması. Piyango ise küçük ve önemsiz bir maliyeti, hayatı değiştirecek küçük bir ihtimale çevirir. Beklenti kuramı bunu, küçük olasılıkların olduğundan büyük tartılmasıyla açıklar."
+      },
+      {
+        "kind": "list",
+        "title": "Beklenti kuramının getirdiği düzeltmeler",
+        "items": [
+          "Kararlar mutlak servet düzeyine değil, bir referans noktasına göre verilir.",
+          "Kayıplar, aynı büyüklükteki kazançlardan yaklaşık iki kat ağır hissedilir.",
+          "Küçük olasılıklar abartılır, orta ve yüksek olasılıklar hafife alınır.",
+          "Kayıp bölgesinde insanlar riskten kaçmak yerine risk arar: zararı kapatmak için kumar oynar.",
+          "Aynı seçeneğin kazanç ya da kayıp olarak sunulması tercihi tersine çevirebilir."
+        ]
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Kesinlik eşdeğeri nedir?",
+        "options": [
+          "Kumarın beklenen parasal değeri",
+          "Kumarla aynı faydayı veren garantili tutar",
+          "En kötü olası sonuç",
+          "En iyi olası sonuç"
+        ],
+        "answerIndex": 1,
+        "explanation": "Kesinlik eşdeğeri, riskli seçenekle kayıtsız kaldığınız kesin tutardır. Beklenen değerle arasındaki fark risk primidir."
+      },
+      {
+        "id": "q2",
+        "prompt": "St. Petersburg paradoksunun Bernoulli tarafından önerilen çözümü nedir?",
+        "options": [
+          "Oyunun olasılıkları yanlış hesaplanmıştır",
+          "İnsanlar parayı değil, azalan katkı gösteren faydayı değerlendirir",
+          "Beklenen değer sonludur",
+          "Oyun oynanamaz"
+        ],
+        "answerIndex": 1,
+        "explanation": "Fayda logaritmik büyüyorsa beklenen fayda sonlu çıkar. Bu fikir modern karar kuramının başlangıcıdır."
+      },
+      {
+        "id": "q3",
+        "prompt": "Beklenti kuramına göre kayıp bölgesindeki insanlar nasıl davranır?",
+        "options": [
+          "Riskten daha çok kaçınır",
+          "Zararı kapatmak için risk arar",
+          "Kararsız kalır",
+          "Beklenen değere göre karar verir"
+        ],
+        "answerIndex": 1,
+        "explanation": "Kazanç bölgesinde riskten kaçınan insanlar, kayıp bölgesinde risk arar hâle gelir. Zararı kesememenin ve pozisyon büyütmenin arkasında bu asimetri vardır."
+      }
+    ]
+  },
+
+  {
+    "id": "karar-agaci",
+    "moduleId": "karar",
+    "order": 3,
+    "title": "Karar ağacı ve bilginin değeri",
+    "subtitle": "Bir bilgiyi öğrenmek için ne kadar ödemeye değer?",
+    "minutes": 8,
+    "keyTerms": ["karar ağacı", "geriye doğru çözüm", "bilginin değeri", "seçenek değeri"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Karar ağacı, bir kararı zaman sırasına göre çizmenin yoludur. Kare düğümler sizin seçimlerinizi, daire düğümler doğanın seçimlerini — yani belirsizliği — gösterir. Uçlarda sonuçlar durur. Ağaç, sondan başa doğru çözülür: her belirsizlik düğümünde beklenen değer alınır, her karar düğümünde en iyi dal seçilir."
+      },
+      {
+        "kind": "text",
+        "title": "Neden sondan başa",
+        "body": "Bugünkü kararın değerini bilmek için, o karardan sonra ne yapacağınızı bilmeniz gerekir. Bu yüzden çözüm sondan başlar. Bu yöntem yalnızca bir hesap tekniği değil, bir düşünme disiplinidir: her dalın sonunda gerçekten ne yapacağınızı yazmak, bugünkü seçeneği dürüstçe değerlendirmenin tek yoludur."
+      },
+      {
+        "kind": "text",
+        "title": "Bilginin değeri",
+        "body": "Bir bilgi ancak kararınızı değiştirebiliyorsa değerlidir. Öğrendikten sonra yine aynı şeyi yapacaksanız, o bilginin karar açısından değeri sıfırdır — ne kadar ilginç olursa olsun. Kusursuz bilginin değeri, bilgiyle verilen kararların beklenen değeri ile bilgisiz verilen kararın beklenen değeri arasındaki farktır. Bu fark, bir araştırmaya, bir teste ya da bir pilot uygulamaya ödemeye değecek üst sınırı verir."
+      },
+      {
+        "kind": "example",
+        "title": "Örnek: sondaj kararı",
+        "body": "Bir şirket kuyu açacak. Petrol bulma olasılığı %30, bulursa 200 birim kazanç, bulamazsa 60 birim zarar. Beklenen değer 0.3×200 − 0.7×60 = 18 birim, yani kuyuyu açmak mantıklı. Şimdi kusursuz bir sismik test düşünün: petrol varsa açarsınız (200), yoksa açmazsınız (0). Bilgiyle beklenen değer 0.3×200 = 60 birim. Aradaki 42 birim, o teste ödenebilecek en yüksek fiyattır."
+      },
+      {
+        "kind": "list",
+        "title": "Ağacı kurarken",
+        "items": [
+          "Kararı ve belirsizliği aynı düğümde birleştirmeyin; sırayı doğru koyun.",
+          "Her dalın sonunda somut bir eylem yazın, 'duruma bakarız' yazmayın.",
+          "Olasılıkları ve sonuçları ayrı ayrı sorgulayın; birini değiştirmek diğerini değiştirmemeli.",
+          "Duyarlılık analizi yapın: hangi varsayım değişirse karar değişir?",
+          "Ertelemenin kendisi bir seçenektir ve çoğu zaman değeri vardır."
+        ]
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Karar ağacı neden sondan başa doğru çözülür?",
+        "options": [
+          "Hesaplama kolaylığı için",
+          "Bugünkü kararın değeri, sonrasında ne yapılacağına bağlı olduğu için",
+          "Olasılıklar sondan başlar",
+          "Ağaç başka türlü çizilemez"
+        ],
+        "answerIndex": 1,
+        "explanation": "Bir seçeneğin değeri, o seçenek alındıktan sonra izlenecek en iyi yolla belirlenir. Bu yüzden çözüm uçlardan köke doğru ilerler."
+      },
+      {
+        "id": "q2",
+        "prompt": "Bir bilginin karar açısından değeri ne zaman sıfırdır?",
+        "options": [
+          "Bilgi yanlış olduğunda",
+          "Bilgi öğrenildikten sonra yine aynı karar verilecekse",
+          "Bilgi pahalı olduğunda",
+          "Olasılıklar bilinmediğinde"
+        ],
+        "answerIndex": 1,
+        "explanation": "Bilgi ancak eylemi değiştirebiliyorsa değer taşır. Kararı değiştirmeyen bilgi ilginç olabilir ama karar analizinde değeri yoktur."
+      },
+      {
+        "id": "q3",
+        "prompt": "Kusursuz bilginin değeri nasıl hesaplanır?",
+        "options": [
+          "Bilginin maliyetiyle",
+          "Bilgiyle verilen kararların beklenen değeri eksi bilgisiz kararın beklenen değeri",
+          "Olasılıkların toplamıyla",
+          "En iyi sonucun değeriyle"
+        ],
+        "answerIndex": 1,
+        "explanation": "Bu fark, bilgi elde etmek için ödenebilecek üst sınırdır. Gerçek testler kusursuz olmadığı için değerleri bu sınırın altında kalır."
+      }
+    ]
+  },
+
+  {
+    "id": "kumar-ve-sigorta",
+    "moduleId": "karar",
+    "order": 4,
+    "title": "Kumar, sigorta ve iflas riski",
+    "subtitle": "Aynı matematik, biri seni bitirir diğeri korur.",
+    "minutes": 9,
+    "keyTerms": ["ev avantajı", "iflas riski", "sigorta", "ergodiklik", "pozisyon büyüklüğü"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Kumar ile sigorta, aynı olasılık hesabının iki ucudur. Kumarhane, negatif beklenen değerli bir bahsi size satar. Sigorta şirketi de öyle: ödediğiniz prim, beklenen tazminattan yüksektir. Aradaki fark, riskin yönündedir. Kumar, yönetilebilir bir durumu belirsiz hâle getirir; sigorta, yıkıcı bir belirsizliği yönetilebilir bir maliyete çevirir."
+      },
+      {
+        "kind": "text",
+        "title": "Ev avantajı neden kaçınılmaz",
+        "body": "Ev avantajı, oyun başına küçük ve sabit bir yontmadır: Avrupa ruletinde yaklaşık %2.70. Kısa vadede oyuncu kazanabilir, çünkü yayılma büyüktür. Ama oyun sayısı arttıkça büyük sayılar yasası devreye girer ve sonuç beklenen değere yakınsar. Kumarhanenin tek stratejisi, sizin oynamaya devam etmenizdir. Bu yüzden kumarhaneler pencere ve saat koymaz."
+      },
+      {
+        "kind": "text",
+        "title": "Zaman ortalaması ile topluluk ortalaması",
+        "body": "Beklenen değer, aynı anda çok sayıda kişinin ortalamasını verir. Ama tek bir kişinin zaman içindeki yolculuğu bu ortalamayı izlemeyebilir. Servetinizin her turda %50 artma ya da %40 azalma ihtimali olan bir oyunu düşünün: beklenen değer pozitiftir, ama tek bir oyuncunun serveti uzun vadede sıfıra gider, çünkü çarpımsal kayıplar kazançları yener. Bu ayrıma ergodiklik sorunu denir ve pratikte pozisyon büyüklüğü kararının temelidir."
+      },
+      {
+        "kind": "list",
+        "title": "İflas riskini yöneten kurallar",
+        "items": [
+          "Tek bir olayda sermayenin tamamını riske atmayın; sıfırdan geri dönüş yoktur.",
+          "Avantajınız varsa bile pozisyonu avantajla orantılı tutun, tamamını yatırmayın.",
+          "Çarpımsal süreçlerde ortalama değil, ortanca yolculuk önemlidir.",
+          "Yıkıcı ama seyrek riskleri sigortalayın; küçük ve sık riskleri üstlenin.",
+          "Kayıptan sonra pozisyon büyüterek telafi etmek, iflas olasılığını en hızlı artıran davranıştır."
+        ]
+      },
+      {
+        "kind": "example",
+        "title": "Örnek: sigorta neden mantıklı",
+        "body": "Evinizin yanma olasılığı yılda binde bir, zararı 3 milyon lira olsun. Beklenen kayıp 3.000 lira. Sigorta 4.500 lira istiyor: beklenen değer olarak zararlı bir işlem. Yine de mantıklıdır, çünkü 3 milyonluk kayıp sizin için geri dönüşü olmayan bir sonuçtur, 1.500 liralık fazla ödeme ise değildir. Sigorta şirketi binlerce evi bir arada tuttuğu için aynı riski ortalamaya çevirebilir; siz çeviremezsiniz."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Sigorta beklenen değeri negatif olduğu hâlde neden mantıklıdır?",
+        "options": [
+          "Sigorta şirketleri zarar eder",
+          "Yıkıcı ve geri dönülemez bir kaybı, küçük ve kesin bir maliyete çevirir",
+          "Beklenen değer hesabı burada geçersizdir",
+          "Prim her zaman tazminattan düşüktür"
+        ],
+        "answerIndex": 1,
+        "explanation": "Riskten kaçınmanın doğrudan uygulamasıdır. Şirket binlerce poliçeyi bir arada tutup riski ortalamaya çevirebilir; tek bir hane çeviremez."
+      },
+      {
+        "id": "q2",
+        "prompt": "Ergodiklik sorunu neyi anlatır?",
+        "options": [
+          "Olasılıkların toplanamamasını",
+          "Topluluk ortalamasının, tek bir kişinin zaman içindeki yolculuğunu temsil etmeyebileceğini",
+          "Örneklem yanlılığını",
+          "Ev avantajının değişmesini"
+        ],
+        "answerIndex": 1,
+        "explanation": "Çarpımsal süreçlerde beklenen değer pozitif olsa bile tipik yolculuk sıfıra gidebilir. Pozisyon büyüklüğü kararı bu ayrıma dayanır."
+      },
+      {
+        "id": "q3",
+        "prompt": "Kayıptan sonra pozisyonu büyüterek telafi etmeye çalışmak neden tehlikelidir?",
+        "options": [
+          "Beklenen değeri düşürür",
+          "İflas olasılığını hızla artırır; sıfırdan geri dönüş yoktur",
+          "Ev avantajını yükseltir",
+          "Olasılıkları değiştirir"
+        ],
+        "answerIndex": 1,
+        "explanation": "Kayıp bölgesinde risk arama eğilimi, pozisyon büyüklüğünü sermayeye göre orantısız hâle getirir ve tek bir kötü sonucun sermayeyi silmesine yol açar."
+      }
+    ]
+  }
+]

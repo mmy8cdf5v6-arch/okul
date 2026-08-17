@@ -1,0 +1,465 @@
+{
+  "meta": {
+    "title": "Olasılık ve karar",
+    "eyebrow": "Olasılık",
+    "subtitle": "Belirsizlikle hesaplaşmak",
+    "description": "Koşullu olasılıktan Bayes'e, taban oranı yanılgısından risk primine: belirsizlik altında düşünmenin araçları ve sezginin en pahalı hataları.",
+    "icon": "🎲",
+    "accent": "#1f6f70",
+    "accentDark": "#5fc9ca",
+    "category": "gunumuz",
+    "figuresLabel": "İsimler",
+    "timelineLabel": "Zaman çizelgesi",
+    "timelineTitle": "Belirsizliğin tarihi",
+    "timelineIntro": "Kumar masasında sorulan bir sorudan davranışsal karar kuramına: şansı hesaplamayı öğrenmenin dört yüz yılı.",
+    "source": "builtin",
+    "hasCharts": true
+  },
+
+  "modules": [
+    {
+      "id": "dil",
+      "title": "Olasılığın dili",
+      "description": "Örnek uzay, bağımsızlık, koşullama ve büyük sayılar: hesabın kurallarını doğru kurmak."
+    },
+    {
+      "id": "guncelleme",
+      "title": "Bilgiyi güncellemek",
+      "description": "Yeni kanıt geldiğinde inancı ne kadar oynatmalı — ve sezgi bunu neden bu kadar kötü yapıyor."
+    },
+    {
+      "id": "karar",
+      "title": "Karar",
+      "description": "Beklenen değerden faydaya, karar ağacından iflas riskine: hesabı eyleme çevirmek."
+    }
+  ],
+
+  "glossary": [
+    { "id": "ornek-uzay", "term": "Örnek uzay", "definition": "Olabilecek bütün sonuçların kümesi. Olasılık hatalarının önemli bir kısmı hesapta değil, bu kümenin yanlış kurulmasında olur.", "lessonId": "olasilik-nedir" },
+    { "id": "olay", "term": "Olay", "definition": "Örnek uzayın bir alt kümesi. Olasılık, olaya karşılık gelen sonuçların ağırlığıdır.", "lessonId": "olasilik-nedir" },
+    { "id": "klasik-olasilik", "term": "Klasik olasılık", "definition": "Eşit olası sonuçları sayarak hesaplanan olasılık. Eşit olasılık varsayımı geçerli değilse kullanılamaz.", "lessonId": "olasilik-nedir" },
+    { "id": "siklikci", "term": "Sıklıkçı yorum", "definition": "Olasılığı, çok sayıda tekrar içinde gözlenen uzun vadeli oran olarak tanımlayan görüş.", "lessonId": "olasilik-nedir" },
+    { "id": "oznel-olasilik", "term": "Öznel olasılık", "definition": "Olasılığı bir inanç derecesi olarak gören yorum. Tekrarlanmayan tek seferlik olaylar için tek uygulanabilir okumadır.", "lessonId": "olasilik-nedir" },
+    { "id": "bagimsizlik", "term": "Bağımsızlık", "definition": "Birinin gerçekleşmesinin diğerinin olasılığını değiştirmemesi. Çarpma kuralının ön koşuludur.", "lessonId": "bagimsizlik-ve-birlesim" },
+    { "id": "kesisim", "term": "Kesişim", "definition": "İki olayın birlikte gerçekleşmesi. P(A ve B) = P(A)·P(B|A).", "lessonId": "bagimsizlik-ve-birlesim" },
+    { "id": "birlesim", "term": "Birleşim", "definition": "İki olaydan en az birinin gerçekleşmesi. Kesişim iki kez sayıldığı için toplamdan çıkarılır.", "lessonId": "bagimsizlik-ve-birlesim" },
+    { "id": "tumleyen", "term": "Tümleyen", "definition": "Bir olayın gerçekleşmemesi. 'En az bir' hesapları en kolay tümleyen üzerinden yapılır.", "lessonId": "bagimsizlik-ve-birlesim" },
+    { "id": "birlesim-yanilgisi", "term": "Birleşim yanılgısı", "definition": "İki koşulu birlikte sağlamayı, tek koşulu sağlamaktan daha olası sanmak. Ayrıntı inandırıcılığı artırırken olasılığı düşürür.", "lessonId": "bagimsizlik-ve-birlesim" },
+    { "id": "kosullu", "term": "Koşullu olasılık", "definition": "Bir olayın, başka bir olayın gerçekleştiği bilindiğinde taşıdığı olasılık. Örnek uzayı daraltmak demektir.", "lessonId": "kosullu-olasilik" },
+    { "id": "ters-cevirme", "term": "Ters çevirme hatası", "definition": "P(A|B) ile P(B|A) olasılıklarını birbirinin yerine kullanmak. İkisi genellikle çok farklıdır.", "lessonId": "kosullu-olasilik" },
+    { "id": "savci-yanilgisi", "term": "Savcı yanılgısı", "definition": "Delilin masum bir kişide görülme olasılığını, sanığın masum olma olasılığı gibi sunmak. Gerçek hükümlere yol açmış bir akıl yürütme hatası.", "lessonId": "kosullu-olasilik" },
+    { "id": "toplam-olasilik", "term": "Toplam olasılık kuralı", "definition": "Bir olayın olasılığının, birbirini dışlayan bütün durumlarda hesaplanıp ağırlıklarıyla toplanması. Bayes kuralının paydası budur.", "lessonId": "kosullu-olasilik" },
+    { "id": "monty-hall", "term": "Monty Hall problemi", "definition": "Sunucunun bilerek açtığı kapının bilgi taşıdığı, bu yüzden kapı değiştirmenin kazanma olasılığını 1/3'ten 2/3'e çıkardığı problem.", "lessonId": "kosullu-olasilik" },
+    { "id": "buyuk-sayilar-y", "term": "Büyük sayılar yasası", "definition": "Deneme sayısı arttıkça gözlenen oranın gerçek olasılığa yaklaşması. Mutlak farkın kapanacağını söylemez.", "lessonId": "buyuk-sayilar" },
+    { "id": "kumarbaz-yanilgisi", "term": "Kumarbaz yanılgısı", "definition": "Bağımsız denemelerde geçmiş sonuçların gelecek olasılığı değiştireceğine inanmak. 'Artık tura gelmeli' sezgisi.", "lessonId": "buyuk-sayilar" },
+    { "id": "ortalamaya-donus", "term": "Ortalamaya dönüş", "definition": "Uç bir ölçümün ardından gelen ölçümün ortalamaya daha yakın olması. Telafi değil, şans payının tekrarlanmamasıdır.", "lessonId": "buyuk-sayilar" },
+    { "id": "sicak-el", "term": "Sıcak el inancı", "definition": "Art arda gelen başarıların devam edeceği beklentisi. Kumarbaz yanılgısının ters yönlü hâli.", "lessonId": "buyuk-sayilar" },
+    { "id": "onsel", "term": "Önsel olasılık", "definition": "Kanıt görülmeden önceki inanç derecesi. Bayes güncellemesinin başlangıç noktası.", "lessonId": "bayes" },
+    { "id": "sonsal", "term": "Sonsal olasılık", "definition": "Kanıtla güncellenmiş inanç. Bir güncellemenin sonsalı, bir sonrakinin önseli olur.", "lessonId": "bayes" },
+    { "id": "olabilirlik", "term": "Olabilirlik", "definition": "Hipotez doğruysa eldeki kanıtı görme olasılığı. Kanıtın hipotezle uyumunu ölçer.", "lessonId": "bayes" },
+    { "id": "dogal-sayilar", "term": "Doğal sayılarla sunum", "definition": "Olasılıkların yüzde yerine kişi sayısıyla ifade edilmesi. Aynı problemi belirgin biçimde anlaşılır kılar.", "lessonId": "bayes" },
+    { "id": "taban-orani-t", "term": "Taban oranı", "definition": "Bir özelliğin toplumdaki yaygınlığı. Yeni bir kanıt karşısında en sık göz ardı edilen bilgi.", "lessonId": "taban-orani" },
+    { "id": "duyarlilik", "term": "Duyarlılık", "definition": "Hasta olanlarda testin pozitif çıkma oranı. Testin özelliğidir, yaygınlığa bağlı değildir.", "lessonId": "taban-orani" },
+    { "id": "ozgulluk", "term": "Özgüllük", "definition": "Sağlıklı olanlarda testin negatif çıkma oranı. Yanlış alarm oranı bunun tümleyenidir.", "lessonId": "taban-orani" },
+    { "id": "ppv", "term": "Pozitif kestirim değeri", "definition": "Testi pozitif çıkanların gerçekten hasta olma oranı. Duyarlılık ve özgüllüğün yanında taban oranına da bağlıdır.", "lessonId": "taban-orani" },
+    { "id": "yanlis-alarm", "term": "Yanlış alarm", "definition": "Sağlıklı bir kişide testin pozitif çıkması. Hastalık seyrekse sayıca gerçek vakaları geçebilir.", "lessonId": "taban-orani" },
+    { "id": "olabilirlik-orani", "term": "Olabilirlik oranı", "definition": "Kanıtın, hipotez doğruyken ve yanlışken görülme olasılıklarının oranı. Kanıtın gücünü tek sayıda özetler.", "lessonId": "kanitin-gucu" },
+    { "id": "bahis-orani", "term": "Bahis oranı", "definition": "Olasılığın p/(1−p) biçimi. Bu gösterimde Bayes güncellemesi tek bir çarpmaya iner.", "lessonId": "kanitin-gucu" },
+    { "id": "ayirt-edicilik", "term": "Ayırt edicilik", "definition": "Bir gözlemin, hipotez yanlışsa görülmesinin zor olması. Ayırt edici olmayan kanıt doğru olsa bile bilgi taşımaz.", "lessonId": "kanitin-gucu" },
+    { "id": "onaylama-yanliligi", "term": "Onaylama yanlılığı", "definition": "Hipotezi doğrulayacak gözlemleri arama, çürütecekleri aramama eğilimi. Wason'ın kart deneyiyle gösterildi.", "lessonId": "kanitin-gucu" },
+    { "id": "dogum-gunu-p", "term": "Doğum günü paradoksu", "definition": "23 kişilik bir grupta çakışma olasılığının %50'yi geçmesi. Karşılaştırma sayısı kişi sayısının karesiyle artar.", "lessonId": "nadir-olaylar" },
+    { "id": "yeterince-buyuk", "term": "Yeterince büyük sayılar kanunu", "definition": "Yeterince çok fırsat verildiğinde olasılığı çok küçük olayların bir yerde ortaya çıkmasının kaçınılmaz olması.", "lessonId": "nadir-olaylar" },
+    { "id": "secilmis-anlati", "term": "Seçilmiş anlatı", "definition": "Bir örüntünün önceden belirlenmek yerine sonradan verinin içinden seçilmesi. Böyle seçilen tesadüf her zaman bulunur.", "lessonId": "nadir-olaylar" },
+    { "id": "kumelenme", "term": "Kümelenme", "definition": "Rastgele dağılımın düzgün değil, öbekli görünmesi. Kümenin kendisi bir sebep göstermez.", "lessonId": "nadir-olaylar" },
+    { "id": "beklenen-deger-t", "term": "Beklenen değer", "definition": "Olası sonuçların olasılıklarıyla ağırlıklandırılmış ortalaması. Tek bir denemenin sonucunu değil, uzun vadeli ortalamayı verir.", "lessonId": "beklenen-deger" },
+    { "id": "basa-bas", "term": "Başa baş noktası", "definition": "Beklenen değeri sıfır yapan olasılık. Bir bahsin lehe mi aleyhe mi olduğunu belirleyen eşik.", "lessonId": "beklenen-deger" },
+    { "id": "ev-avantaji", "term": "Ev avantajı", "definition": "Kumarhanenin her oyunda aldığı küçük ve sabit negatif beklenen değer. Oyun sayısı arttıkça kaçınılmaz hâle gelir.", "lessonId": "kumar-ve-sigorta" },
+    { "id": "fayda", "term": "Fayda", "definition": "Paranın kendisi değil, taşıdığı işe yararlık. Servet arttıkça bir liranın kattığı fayda azalır.", "lessonId": "fayda-ve-risk" },
+    { "id": "riskten-kacinma", "term": "Riskten kaçınma", "definition": "Aynı beklenen değere sahip riskli seçenek yerine kesin olanı tercih etmek. İçbükey fayda eğrisinin doğrudan sonucu.", "lessonId": "fayda-ve-risk" },
+    { "id": "kesinlik-esdegeri", "term": "Kesinlik eşdeğeri", "definition": "Riskli seçenekle aynı faydayı veren garantili tutar. Beklenen değerle arasındaki fark risk primidir.", "lessonId": "fayda-ve-risk" },
+    { "id": "st-petersburg", "term": "St. Petersburg paradoksu", "definition": "Beklenen değeri sonsuz olan ama kimsenin büyük para ödemeyeceği oyun. Fayda kavramının doğuşuna yol açtı.", "lessonId": "fayda-ve-risk" },
+    { "id": "beklenti-kurami", "term": "Beklenti kuramı", "definition": "Kararların referans noktasına göre verildiğini, kayıpların daha ağır tartıldığını ve küçük olasılıkların abartıldığını gösteren model.", "lessonId": "fayda-ve-risk" },
+    { "id": "karar-agaci-t", "term": "Karar ağacı", "definition": "Kararların ve belirsizliklerin zaman sırasına göre çizilmesi. Sondan başa doğru çözülür.", "lessonId": "karar-agaci" },
+    { "id": "geriye-cozum", "term": "Geriye doğru çözüm", "definition": "Uçlardan köke doğru ilerleyerek her belirsizlikte beklenen değer alıp her kararda en iyi dalı seçmek.", "lessonId": "karar-agaci" },
+    { "id": "bilginin-degeri", "term": "Bilginin değeri", "definition": "Bir bilginin karar açısından değeri, ancak kararı değiştirebiliyorsa sıfırdan büyüktür.", "lessonId": "karar-agaci" },
+    { "id": "duyarlilik-analizi", "term": "Duyarlılık analizi", "definition": "Hangi varsayım değişirse kararın değişeceğini araştırmak. İyi bir analiz sonucu değil, sonucun kırılganlığını gösterir.", "lessonId": "karar-agaci" },
+    { "id": "iflas-riski", "term": "İflas riski", "definition": "Sermayenin sıfıra inme olasılığı. Sıfırdan geri dönüş olmadığı için beklenen değer bu riski gizler.", "lessonId": "kumar-ve-sigorta" },
+    { "id": "ergodiklik", "term": "Ergodiklik sorunu", "definition": "Topluluk ortalamasının, tek bir kişinin zaman içindeki yolculuğunu temsil etmemesi. Çarpımsal süreçlerde belirleyicidir.", "lessonId": "kumar-ve-sigorta" },
+    { "id": "pozisyon-buyuklugu", "term": "Pozisyon büyüklüğü", "definition": "Tek bir bahse sermayenin ne kadarının ayrılacağı kararı. Avantaj varken bile tamamını yatırmak iflasa götürür.", "lessonId": "kumar-ve-sigorta" }
+  ],
+
+  "figures": [
+    {
+      "id": "cardano",
+      "name": "Gerolamo Cardano",
+      "lifespan": "1501-1576",
+      "oneLiner": "Kumar üzerine ilk sistemli olasılık metnini yazdı — ve kendisi de kumarbazdı.",
+      "contributions": [
+        "Liber de Ludo Aleae'de eşit olası sonuçları sayma fikrini kullandı",
+        "Adil bahis oranı kavramını ilk kez açıkça tartıştı",
+        "Metin ölümünden sonra, 1663'te yayımlandı"
+      ],
+      "lessonId": "olasilik-nedir",
+      "tag": "Erken dönem"
+    },
+    {
+      "id": "pascal-fermat",
+      "name": "Blaise Pascal ve Pierre de Fermat",
+      "lifespan": "1654",
+      "oneLiner": "Yarıda kesilen bir kumarın parasını nasıl bölmek gerektiğini tartışarak olasılığı kurdular.",
+      "contributions": [
+        "Puan problemi üzerine mektuplaştılar ve beklenen değer fikrini geliştirdiler",
+        "Gelecekteki olasılıkların bugünkü payı belirlediğini gösterdiler",
+        "Modern olasılık teorisinin başlangıcı bu yazışma sayılır"
+      ],
+      "lessonId": "beklenen-deger",
+      "tag": "Kuruluş"
+    },
+    {
+      "id": "huygens",
+      "name": "Christiaan Huygens",
+      "lifespan": "1629-1695",
+      "oneLiner": "Beklenen değeri ilk kez basılı bir kitapta tanımladı.",
+      "contributions": [
+        "1657'de şans oyunları üzerine ilk basılı olasılık kitabını yazdı",
+        "Beklenen değeri, adil bir bahsin fiyatı olarak tanımladı",
+        "Pascal ve Fermat'nın yazışmasını sistemli bir metne çevirdi"
+      ],
+      "lessonId": "beklenen-deger",
+      "tag": "Kuruluş"
+    },
+    {
+      "id": "jacob-bernoulli",
+      "name": "Jacob Bernoulli",
+      "lifespan": "1655-1705",
+      "oneLiner": "Gözlenen oranın gerçek olasılığa yaklaştığını kanıtladı.",
+      "contributions": [
+        "Büyük sayılar yasasının ilk kanıtını verdi",
+        "Ars Conjectandi ölümünden sonra 1713'te yayımlandı",
+        "Olasılığı kumardan çıkarıp genel bir çıkarım aracına dönüştürdü"
+      ],
+      "lessonId": "buyuk-sayilar",
+      "tag": "Büyük sayılar"
+    },
+    {
+      "id": "daniel-bernoulli",
+      "name": "Daniel Bernoulli",
+      "lifespan": "1700-1782",
+      "oneLiner": "İnsanların parayı değil, paranın faydasını değerlendirdiğini öne sürdü.",
+      "contributions": [
+        "1738'de St. Petersburg paradoksuna fayda kavramıyla çözüm önerdi",
+        "Azalan marjinal faydayı ilk kez açıkça formüle etti",
+        "Riskten kaçınmanın matematiksel temelini kurdu"
+      ],
+      "lessonId": "fayda-ve-risk",
+      "tag": "Fayda kuramı"
+    },
+    {
+      "id": "bayes-t",
+      "name": "Thomas Bayes",
+      "lifespan": "1701-1761",
+      "oneLiner": "Kanıt karşısında inancın nasıl güncelleneceğini yazdı.",
+      "contributions": [
+        "Koşullu olasılığı ters çevirmenin kuralını buldu",
+        "Çalışması ölümünden sonra, 1763'te Richard Price tarafından yayımlandı",
+        "Adını taşıyan kural iki yüzyıl sonra istatistiğin merkezine yerleşti"
+      ],
+      "lessonId": "bayes",
+      "tag": "Güncelleme"
+    },
+    {
+      "id": "laplace-o",
+      "name": "Pierre-Simon Laplace",
+      "lifespan": "1749-1827",
+      "oneLiner": "Olasılığı gökbilimden mahkeme kararlarına kadar her alana taşıdı.",
+      "contributions": [
+        "Bayes kuralını bağımsız olarak yeniden buldu ve genelleştirdi",
+        "Merkezî limit teoreminin ilk genel biçimini verdi",
+        "Olasılığın felsefi denemesini yazarak alanı popülerleştirdi"
+      ],
+      "quote": {
+        "text": "Olasılık, temelinde sağduyunun hesaba dökülmüş hâlinden başka bir şey değildir.",
+        "source": "Olasılıklar Üzerine Felsefi Deneme, 1814"
+      },
+      "lessonId": "bayes",
+      "tag": "Klasik dönem"
+    },
+    {
+      "id": "kolmogorov",
+      "name": "Andrey Kolmogorov",
+      "lifespan": "1903-1987",
+      "oneLiner": "Olasılığı üç aksiyoma dayandırıp matematiksel bir kurama çevirdi.",
+      "contributions": [
+        "1933'te olasılığı ölçü kuramı üzerine kurdu",
+        "Yorum tartışmasından bağımsız, ortak bir matematiksel temel sağladı",
+        "Stokastik süreçler ve algoritmik karmaşıklık alanlarını kurdu"
+      ],
+      "lessonId": "olasilik-nedir",
+      "tag": "Aksiyomatik temel"
+    },
+    {
+      "id": "von-neumann",
+      "name": "John von Neumann ve Oskar Morgenstern",
+      "lifespan": "1944",
+      "oneLiner": "Rasyonel tercihin fayda ile temsil edilebileceğini aksiyomlarla gösterdiler.",
+      "contributions": [
+        "Oyun Teorisi ve İktisadi Davranış'ı yazdılar",
+        "Tutarlı tercihlerin bir fayda fonksiyonuyla temsil edilebileceğini kanıtladılar",
+        "Beklenen fayda kuramını iktisadın standart karar modeli hâline getirdiler"
+      ],
+      "lessonId": "fayda-ve-risk",
+      "tag": "Karar kuramı"
+    },
+    {
+      "id": "savage",
+      "name": "Leonard Savage",
+      "lifespan": "1917-1971",
+      "oneLiner": "Öznel olasılığı ve kararı tek bir çerçevede birleştirdi.",
+      "contributions": [
+        "1954'te istatistiğin temellerini öznel olasılık üzerine kurdu",
+        "İnanç ve tercihin birlikte türetilebileceğini gösterdi",
+        "Bayesçi karar kuramının modern biçimini verdi"
+      ],
+      "lessonId": "kanitin-gucu",
+      "tag": "Bayesçi karar"
+    },
+    {
+      "id": "wason",
+      "name": "Peter Wason",
+      "lifespan": "1924-2003",
+      "oneLiner": "İnsanların hipotezlerini çürütmeye değil doğrulamaya çalıştığını deneyle gösterdi.",
+      "contributions": [
+        "1966'da kart seçme görevini tasarladı",
+        "Onaylama yanlılığını deneysel bir olgu hâline getirdi",
+        "Akıl yürütme psikolojisinin kurucu deneylerinden birini verdi"
+      ],
+      "lessonId": "kanitin-gucu",
+      "tag": "Akıl yürütme"
+    },
+    {
+      "id": "kahneman-tversky-o",
+      "name": "Daniel Kahneman ve Amos Tversky",
+      "lifespan": "1934-2024 / 1937-1996",
+      "oneLiner": "Kararın rasyonel modelden nerede ve hangi yönde saptığını ölçtüler.",
+      "contributions": [
+        "Beklenti kuramıyla kayıptan kaçınmayı ve referans noktasını gösterdiler",
+        "Taban oranı yanılgısını ve birleşim yanılgısını deneylerle ortaya koydular",
+        "Çerçeveleme etkisiyle aynı seçeneğin sunumunun tercihi tersine çevirebildiğini kanıtladılar"
+      ],
+      "lessonId": "taban-orani",
+      "tag": "Davranışsal karar"
+    },
+    {
+      "id": "gigerenzer",
+      "name": "Gerd Gigerenzer",
+      "lifespan": "1947-",
+      "oneLiner": "Sorunun matematik bilgisi değil sunum biçimi olduğunu gösterdi.",
+      "contributions": [
+        "Olasılıkların doğal sayılarla sunulmasının doğru cevap oranını yükselttiğini gösterdi",
+        "Hekimlerin risk iletişimi üzerine kapsamlı çalışmalar yürüttü",
+        "Basit sezgisel kuralların belirsizlik altında iyi çalışabildiğini savundu"
+      ],
+      "lessonId": "taban-orani",
+      "tag": "Risk okuryazarlığı"
+    },
+    {
+      "id": "ellsberg",
+      "name": "Daniel Ellsberg",
+      "lifespan": "1931-2023",
+      "oneLiner": "Bilinen riskle bilinmeyen belirsizliğin farklı şeyler olduğunu deneyle gösterdi.",
+      "contributions": [
+        "1961'de belirsizlikten kaçınma olgusunu ortaya koydu",
+        "İnsanların olasılığı bilinen kumarı, bilinmeyene tercih ettiğini gösterdi",
+        "Bu tercih, beklenen fayda aksiyomlarıyla bağdaşmaz"
+      ],
+      "lessonId": "karar-agaci",
+      "tag": "Belirsizlik"
+    }
+  ],
+
+  "eraLabels": {
+    "kumar": "Kumar masası",
+    "kurulus": "Kuruluş",
+    "kuram": "Kuramın olgunlaşması",
+    "davranis": "Davranışsal dönüş"
+  },
+
+  "timeline": [
+    {
+      "id": "cardano-kitap",
+      "year": 1564,
+      "yearLabel": "1564 dolayı",
+      "title": "Kumar üzerine ilk metin",
+      "body": "Cardano, şans oyunlarında eşit olası sonuçları sayma fikrini yazıya döker. Metin ancak 1663'te basılacaktır.",
+      "era": "kumar",
+      "figureId": "cardano"
+    },
+    {
+      "id": "pascal-fermat-mektup",
+      "year": 1654,
+      "yearLabel": "1654",
+      "title": "Puan problemi",
+      "body": "Yarıda kesilen bir kumarın parasının nasıl bölüneceği sorusu, Pascal ile Fermat arasında bir yazışma başlatır. Modern olasılık burada doğar.",
+      "era": "kumar",
+      "figureId": "pascal-fermat"
+    },
+    {
+      "id": "huygens-kitap",
+      "year": 1657,
+      "yearLabel": "1657",
+      "title": "İlk olasılık kitabı",
+      "body": "Huygens, beklenen değeri adil bir bahsin fiyatı olarak tanımlar ve yazışmayı sistemli bir metne çevirir.",
+      "era": "kumar",
+      "figureId": "huygens"
+    },
+    {
+      "id": "bernoulli-1713",
+      "year": 1713,
+      "yearLabel": "1713",
+      "title": "Büyük sayılar yasası",
+      "body": "Jacob Bernoulli, gözlem sayısı arttıkça oranın gerçek olasılığa yaklaştığını kanıtlar. Olasılık kumardan çıkıp genel bir çıkarım aracı olur.",
+      "era": "kurulus",
+      "figureId": "jacob-bernoulli"
+    },
+    {
+      "id": "st-petersburg-1738",
+      "year": 1738,
+      "yearLabel": "1738",
+      "title": "St. Petersburg paradoksu",
+      "body": "Daniel Bernoulli, beklenen değeri sonsuz olan bir oyuna kimsenin büyük para ödemediğini gösterir ve fayda kavramını önerir.",
+      "era": "kurulus",
+      "figureId": "daniel-bernoulli"
+    },
+    {
+      "id": "bayes-1763",
+      "year": 1763,
+      "yearLabel": "1763",
+      "title": "Bayes teoremi yayımlanır",
+      "body": "Bayes'in ölümünden sonra basılan çalışma, kanıt karşısında olasılığın nasıl güncelleneceğini gösterir.",
+      "era": "kurulus",
+      "figureId": "bayes-t"
+    },
+    {
+      "id": "laplace-1814",
+      "year": 1814,
+      "yearLabel": "1814",
+      "title": "Olasılıklar üzerine felsefi deneme",
+      "body": "Laplace, olasılığı gökbilimden mahkeme kararlarına kadar taşır ve alanı geniş bir okur kitlesine tanıtır.",
+      "era": "kurulus",
+      "figureId": "laplace-o"
+    },
+    {
+      "id": "monte-carlo-1913",
+      "year": 1913,
+      "yearLabel": "1913",
+      "title": "Monte Carlo'da yirmi altı siyah",
+      "body": "Rulet topu art arda yirmi altı kez siyaha gelir. Kumarbazlar kırmızıya milyonlar yatırır; her dönüşte olasılık değişmeden kalır.",
+      "era": "kuram"
+    },
+    {
+      "id": "kolmogorov-1933",
+      "year": 1933,
+      "yearLabel": "1933",
+      "title": "Üç aksiyom",
+      "body": "Kolmogorov olasılığı ölçü kuramı üzerine kurar. Yorum tartışması sürer ama matematiksel temel artık ortaktır.",
+      "era": "kuram",
+      "figureId": "kolmogorov"
+    },
+    {
+      "id": "vnm-1944",
+      "year": 1944,
+      "yearLabel": "1944",
+      "title": "Beklenen fayda kuramı",
+      "body": "Von Neumann ve Morgenstern, tutarlı tercihlerin bir fayda fonksiyonuyla temsil edilebileceğini kanıtlar. Karar kuramı aksiyomatikleşir.",
+      "era": "kuram",
+      "figureId": "von-neumann"
+    },
+    {
+      "id": "savage-1954",
+      "year": 1954,
+      "yearLabel": "1954",
+      "title": "Öznel olasılık ve karar",
+      "body": "Savage, inanç ile tercihi tek bir çerçevede birleştirir. Bayesçi karar kuramı modern biçimini alır.",
+      "era": "kuram",
+      "figureId": "savage"
+    },
+    {
+      "id": "ellsberg-1961",
+      "year": 1961,
+      "yearLabel": "1961",
+      "title": "Ellsberg paradoksu",
+      "body": "İnsanlar olasılığı bilinen kumarı, bilinmeyene tercih eder. Bilinen risk ile bilinmeyen belirsizlik ayrı şeylerdir.",
+      "era": "davranis",
+      "figureId": "ellsberg"
+    },
+    {
+      "id": "wason-1966",
+      "year": 1966,
+      "yearLabel": "1966",
+      "title": "Wason kart deneyi",
+      "body": "Katılımcıların büyük çoğunluğu kuralı çürütecek kartı çevirmeyi akıl etmez. Onaylama yanlılığı deneysel bir olgu hâline gelir.",
+      "era": "davranis",
+      "figureId": "wason"
+    },
+    {
+      "id": "taban-orani-1973",
+      "year": 1973,
+      "yearLabel": "1973",
+      "title": "Taban oranı yanılgısı",
+      "body": "Kahneman ve Tversky, insanların kişisel bir tarif gördüklerinde toplumdaki yaygınlık bilgisini göz ardı ettiğini gösterir.",
+      "era": "davranis",
+      "figureId": "kahneman-tversky-o"
+    },
+    {
+      "id": "beklenti-1979",
+      "year": 1979,
+      "yearLabel": "1979",
+      "title": "Beklenti kuramı",
+      "body": "Kayıpların kazançlardan yaklaşık iki kat ağır tartıldığı ve kararların referans noktasına göre verildiği gösterilir.",
+      "era": "davranis",
+      "figureId": "kahneman-tversky-o"
+    },
+    {
+      "id": "monty-1990",
+      "year": 1990,
+      "yearLabel": "1990",
+      "title": "Monty Hall tartışması",
+      "body": "Bir dergi köşesinde verilen doğru cevap büyük tepki çeker; matematikçiler dâhil binlerce kişi itiraz mektubu yazar. Cevap doğrudur.",
+      "era": "davranis"
+    },
+    {
+      "id": "gigerenzer-1995",
+      "year": 1995,
+      "yearLabel": "1995",
+      "title": "Doğal sayılarla düşünmek",
+      "body": "Gigerenzer, aynı olasılık probleminin yüzde yerine kişi sayısıyla sunulduğunda doğru cevaplanma oranını belirgin biçimde yükselttiğini gösterir.",
+      "era": "davranis",
+      "figureId": "gigerenzer"
+    },
+    {
+      "id": "sally-clark",
+      "year": 2003,
+      "yearLabel": "2003",
+      "title": "Bir mahkûmiyet bozuluyor",
+      "body": "İki bebeğinin ölümünden hüküm giyen Sally Clark'ın mahkûmiyeti, bağımsızlık varsayımına ve ters çevirme hatasına dayandığı gösterilerek bozulur.",
+      "era": "davranis"
+    },
+    {
+      "id": "nobel-2002",
+      "year": 2002,
+      "yearLabel": "2002",
+      "title": "Davranışsal iktisada Nobel",
+      "body": "Kahneman, belirsizlik altındaki karar üzerine çalışmalarıyla iktisat Nobel'ini alır. Psikoloji ile iktisat arasındaki duvar resmen iner.",
+      "era": "davranis",
+      "figureId": "kahneman-tversky-o"
+    },
+    {
+      "id": "tahmin-turnuvalari",
+      "year": 2015,
+      "yearLabel": "2015",
+      "title": "Tahmin turnuvaları",
+      "body": "Büyük ölçekli tahmin çalışmaları, olasılıksal düşünmeyi ve düzenli güncellemeyi öğrenen sıradan kişilerin uzmanları geçebildiğini gösterir.",
+      "era": "davranis"
+    }
+  ]
+}

@@ -1087,5 +1087,214 @@
               ? "Bağlantı şeridi ikisini birleştirince yanılsama çöküyor: göz artık tek bir yüzey görüyor."
               : "Bağlantı şeridini açıp ikisini birleştirin; yanılsama anında dağılır. Göz mutlak parlaklığı değil, komşusuyla farkı ölçer.") };
       }
+    },
+
+    "tarama-testi": {
+      title: "Testin pozitif çıkması ne demek?",
+      note: "Hastalık seyrekse, testin yanlış alarmları gerçek vakaları sayıca geçebilir. Bu, testin kötü olduğunu değil, taban oranının belirleyici olduğunu gösterir.",
+      controls: [
+        { key: "y", label: "Yaygınlık (1000 kişide)", min: 1, max: 100, step: 1, def: 10,
+          fmt: function (v) { return v + " kişi"; } },
+        { key: "d", label: "Duyarlılık", min: 70, max: 100, step: 1, def: 99, fmt: pctS },
+        { key: "o", label: "Özgüllük", min: 70, max: 100, step: 1, def: 95, fmt: pctS }
+      ],
+      draw: function (p) {
+        var N = 1000, hasta = p.y, saglam = N - hasta;
+        var dp = hasta * (p.d / 100), yn = hasta - dp;          // doğru pozitif, yanlış negatif
+        var yp = saglam * (1 - p.o / 100), dn = saglam - yp;    // yanlış pozitif, doğru negatif
+        var poz = dp + yp, ppv = poz > 0 ? dp / poz : 0;
+        var s = "", x = 0;
+        var seg = function (w, c, o) {
+          if (w <= 0) return;
+          s += gRect(x, 0.62, x + w / N, 0.92, { c: c, o: o, r: 0 });
+          x += w / N;
+        };
+        seg(dp, "var(--accent)", 0.9);
+        seg(yn, "var(--accent)", 0.28);
+        seg(yp, "var(--no)", 0.85);
+        seg(dn, "var(--rule)", 0.7);
+        s += gTxt(0, 0.92, "1000 kişi", { a: "start", dy: -5, s: 9, b: 1 });
+
+        // Alt şerit yalnızca testi pozitif çıkanları gösterir; genişliği doğrudan
+        // pozitif kestirim değerini okutur.
+        var w1 = poz > 0 ? dp / poz : 0;
+        s += gRect(0, 0.12, w1, 0.42, { c: "var(--accent)", o: 0.9, r: 0 });
+        s += gRect(w1, 0.12, 1, 0.42, { c: "var(--no)", o: 0.85, r: 0 });
+        s += gTxt(0, 0.42, "test pozitif çıkanlar (" + r0(poz) + " kişi)", { a: "start", dy: -5, s: 9, b: 1 });
+        s += gLine(0, 0.6, 0, 0.44, { c: "var(--rule)", w: 1, d: "2 3" });
+        s += gLine(poz / N, 0.6, 1, 0.44, { c: "var(--rule)", w: 1, d: "2 3" });
+        if (w1 > 0.14) s += gTxt(w1 / 2, 0.27, "gerçek", { a: "middle", dy: 3, c: "var(--surface)", b: 1, s: 9 });
+        if (1 - w1 > 0.18) s += gTxt((1 + w1) / 2, 0.27, "yanlış alarm", { a: "middle", dy: 3, c: "var(--surface)", b: 1, s: 9 });
+        return { svg: s, text: "1000 kişide " + hasta + " hasta var. Test " + r0(poz) + " kişiyi pozitif buluyor; " +
+          "bunların " + r0(dp) + " tanesi gerçekten hasta, " + r0(yp) + " tanesi değil. " +
+          "Pozitif çıkan birinin gerçekten hasta olma olasılığı %" + r1(ppv * 100) + "." };
+      }
+    },
+
+    "buyuk-sayilar": {
+      title: "Büyük sayılar yasası ne söyler, ne söylemez",
+      note: "Yasa oranın dengeleneceğini söyler, farkın kapanacağını değil. 'Artık tura gelmeli' sezgisi tam bu ayrımı kaçırır.",
+      controls: [
+        { key: "n", label: "Atış sayısı", min: 10, max: 1000, step: 10, def: 200,
+          fmt: function (v) { return v + " atış"; } },
+        { key: "g", type: "choice", label: "Bakılan büyüklük", def: "oran",
+          options: [["oran", "Yazı oranı"], ["fark", "Yazı fazlası"]] }
+      ],
+      draw: function (p) {
+        /* Sabit tohumlu doğrusal eşleme: her çizimde aynı dizi üretilir,
+           böylece kaydırıcıyı oynatmak geçmişi değiştirmez. */
+        var seed = 20250817, i, run = 0, cum = [0];
+        for (i = 1; i <= 1000; i++) {
+          seed = (seed * 1664525 + 1013904223) % 4294967296;
+          run += seed / 4294967296 < 0.5 ? 1 : 0;
+          cum.push(run);
+        }
+        var N = p.n, pts = [], step = Math.max(1, Math.floor(N / 110));
+        var s;
+        if (p.g === "oran") {
+          var up = [], dn = [];
+          for (i = 5; i <= 1000; i += Math.max(1, Math.floor(1000 / 110))) {
+            var e = Math.min(0.5, 1 / Math.sqrt(i));
+            up.push([i / 1000, 0.5 + e]);
+            dn.push([i / 1000, 0.5 - e]);
+          }
+          s = frame("Atış sayısı", "Yazı oranı");
+          s += gArea(up.concat(dn.slice().reverse()), { c: "var(--rule)", o: 0.5 });
+          s += gLine(0, 0.5, 1, 0.5, { c: "var(--rule)", w: 1.4, d: "4 3" });
+          for (i = 5; i <= N; i += step) pts.push([i / 1000, cum[i] / i]);
+          pts.push([N / 1000, cum[N] / N]);
+          s += gPoly(pts, { c: "var(--accent)", w: 2 });
+          s += gDot(N / 1000, cum[N] / N, { c: "var(--ink)", r: 3.5 });
+          s += gTxt(0.99, 0.5, "%50", { a: "end", dy: -5, s: 9 });
+        } else {
+          var top = 40;                                  // ±40 yazı fazlası
+          var y = function (v) { return 0.5 + v / (2 * top); };
+          var eu = [], ed = [];
+          for (i = 5; i <= 1000; i += Math.max(1, Math.floor(1000 / 110))) {
+            var sd = Math.sqrt(i) / 2;
+            eu.push([i / 1000, Math.min(1, y(2 * sd))]);
+            ed.push([i / 1000, Math.max(0, y(-2 * sd))]);
+          }
+          s = frame("Atış sayısı", "Yazı − beklenen");
+          s += gArea(eu.concat(ed.slice().reverse()), { c: "var(--rule)", o: 0.5 });
+          s += gLine(0, 0.5, 1, 0.5, { c: "var(--rule)", w: 1.4, d: "4 3" });
+          for (i = 5; i <= N; i += step) pts.push([i / 1000, Math.max(0, Math.min(1, y(cum[i] - i / 2)))]);
+          pts.push([N / 1000, Math.max(0, Math.min(1, y(cum[N] - N / 2)))]);
+          s += gPoly(pts, { c: "var(--makro)", w: 2 });
+          s += gDot(N / 1000, Math.max(0, Math.min(1, y(cum[N] - N / 2))), { c: "var(--ink)", r: 3.5 });
+          s += gTxt(0.99, 0.5, "0", { a: "end", dy: -5, s: 9 });
+        }
+        [250, 500].forEach(function (v) { s += gTxt(v / 1000, 0, v + "", { a: "middle", dy: 12, s: 9 }); });
+        var oran = cum[N] / N, fark = cum[N] - N / 2;
+        return { svg: s, text: p.g === "oran"
+          ? N + " atıştan sonra yazı oranı %" + r1(oran * 100) + ". Atış sayısı arttıkça oran %50'ye yaklaşıyor: " +
+            "gri bant, beklenen sapmanın 1/√n ile daralışını gösteriyor."
+          : N + " atıştan sonra yazı sayısı beklenenden " + (fark >= 0 ? "+" : "") + r0(fark) + " farklı. " +
+            "Oran dengelenirken bu fark küçülmüyor, ortalamada √n hızıyla büyüyor. Yazı tura geçmişi hatırlamaz." };
+      }
+    },
+
+    "beklenen-deger": {
+      title: "Beklenen değer",
+      note: "Beklenen değer tek bir oyunun sonucunu söylemez; aynı bahis çok kez oynanırsa oyun başına ortalamanın nereye oturacağını söyler.",
+      controls: [
+        { key: "p", label: "Kazanma olasılığı", min: 5, max: 95, step: 5, def: 40, fmt: pctS },
+        { key: "k", label: "Kazanırsan", min: 50, max: 500, step: 25, def: 200,
+          fmt: function (v) { return "+" + v + " TL"; } }
+      ],
+      draw: function (p) {
+        var pr = p.p / 100, K = p.k, L = 100;            // kaybedersen −100 TL
+        var ev = pr * K - (1 - pr) * L;
+        var top = Math.max(K, L, Math.abs(ev)) * 1.15;
+        var y0 = 0.42, y = function (v) { return y0 + (v / top) * (v >= 0 ? (1 - y0) : y0); };
+        var bars = [["Kazanırsan", K, "var(--ok)"], ["Kaybedersen", -L, "var(--no)"],
+                    ["Beklenen değer", ev, ev >= 0 ? "var(--accent)" : "var(--no)"]];
+        var s = frame("", "Lira");
+        s += gLine(0, y0, 1, y0, { c: "var(--rule)", w: 1.4 });
+        bars.forEach(function (b, i) {
+          var cx = 0.17 + i * 0.33;
+          s += gRect(cx - 0.1, y0, cx + 0.1, y(b[1]), { c: b[2], o: i === 2 ? 0.95 : 0.6 });
+          s += gTxt(cx, y(b[1]), (b[1] > 0 ? "+" : "") + r0(b[1]), {
+            a: "middle", dy: b[1] >= 0 ? -5 : 12, s: 9.5, b: i === 2 ? 1 : 0,
+            c: i === 2 ? "var(--ink)" : "var(--muted)" });
+          s += gTxt(cx, y0, b[0], { a: "middle", dy: b[1] >= 0 ? 12 : -5, s: 9, b: i === 2 ? 1 : 0 });
+        });
+        var basabas = (L / (K + L)) * 100;
+        return { svg: s, text: "Beklenen değer " + (ev >= 0 ? "+" : "") + r1(ev) + " lira. " +
+          (Math.abs(ev) < 0.5
+            ? "Oyun tam adil: uzun vadede ne kazanır ne kaybedersiniz."
+            : ev > 0
+              ? "Bu bahis uzun vadede oyun başına " + r1(ev) + " lira kazandırır."
+              : "Bu bahis uzun vadede oyun başına " + r1(-ev) + " lira kaybettirir.") +
+          " Başa baş noktası %" + r1(basabas) + ": kazanma olasılığı bunun altındaysa oyun aleyhinizedir." };
+      }
+    },
+
+    "fayda-egrisi": {
+      title: "Neden adil bahsi reddederiz?",
+      note: "Fayda eğrisi içbükeydir: kazanılan liranın kattığı mutluluk, kaybedilen liranın götürdüğünden azdır. Sigortanın da, çeşitlendirmenin de temeli budur.",
+      controls: [
+        { key: "s", label: "Servet", min: 20, max: 500, step: 20, def: 100,
+          fmt: function (v) { return v + " bin" ; } },
+        { key: "b", label: "Bahis büyüklüğü", min: 10, max: 90, step: 10, def: 50,
+          fmt: function (v) { return "servetin %" + v + "'i"; } }
+      ],
+      draw: function (p) {
+        var W = p.s, B = (W * p.b) / 100, lo = W - B, hi = W + B;
+        var u = function (w) { return Math.log(w); };
+        var eu = 0.5 * u(lo) + 0.5 * u(hi), ce = Math.exp(eu), prim = W - ce;
+        var xmax = W * 2.1, xmin = xmax * 0.02;
+        var umin = u(xmin), umax = u(xmax);
+        var X = function (w) { return (w - xmin) / (xmax - xmin); };
+        var Y = function (v) { return (v - umin) / (umax - umin); };
+        var pts = [], i;
+        for (i = 0; i <= 70; i++) {
+          var w = xmin + ((xmax - xmin) * i) / 70;
+          pts.push([X(w), Y(u(w))]);
+        }
+        var s = frame("Servet", "Fayda");
+        s += gPoly(pts, { c: "var(--accent)", w: 2.4 });
+        s += gLine(X(lo), Y(u(lo)), X(hi), Y(u(hi)), { c: "var(--no)", w: 1.6, d: "4 3" });
+        s += gDot(X(lo), Y(u(lo)), { c: "var(--muted)", r: 3 });
+        s += gDot(X(hi), Y(u(hi)), { c: "var(--muted)", r: 3 });
+        s += gDot(X(W), Y(eu), { c: "var(--no)", r: 3.5 });
+        s += gDot(X(W), Y(u(W)), { c: "var(--ok)", r: 3.5 });
+        s += gTxt(X(W), Y(u(W)), "bahse girmemek", { a: "end", dx: -6, dy: -6, c: "var(--ok)", b: 1, s: 9 });
+        s += gTxt(X(W), Y(eu), "bahsin faydası", { a: "start", dx: 5, dy: 12, c: "var(--no)", b: 1, s: 9 });
+        s += gLine(X(ce), 0, X(ce), Y(eu), { c: "var(--rule)", w: 1.2, d: "2 3" });
+        s += gTxt(X(ce), 0, r0(ce) + "", { a: "middle", dy: 12, s: 9, b: 1 });
+        return { svg: s, text: "Yazı tura ile servetinizin %" + p.b + "'ini kazanma ya da kaybetme bahsi, parasal olarak " +
+          "tam adil: beklenen serveti " + W + " binde bırakır. Ama faydası " + r0(ce) + " bin liralık garantili bir servete " +
+          "denk. Aradaki " + r1(prim) + " binlik fark, bu bahsi almamak için ödemeye razı olduğunuz risk primidir." };
+      }
+    },
+
+    "dogum-gunu": {
+      title: "Doğum günü paradoksu",
+      note: "Soru 'birinin doğum günü seninkiyle aynı mı' değil, 'herhangi iki kişininki çakışıyor mu'. Karşılaştırma sayısı kişi sayısıyla değil, karesiyle artar.",
+      controls: [{ key: "n", label: "Grup büyüklüğü", min: 2, max: 70, step: 1, def: 23,
+        fmt: function (v) { return v + " kişi"; } }],
+      draw: function (p) {
+        var pr = function (n) {
+          var q = 1, i;
+          for (i = 0; i < n; i++) q *= (365 - i) / 365;
+          return 1 - q;
+        };
+        var pts = [], i;
+        for (i = 2; i <= 70; i++) pts.push([(i - 2) / 68, pr(i)]);
+        var here = pr(p.n), cift = (p.n * (p.n - 1)) / 2;
+        var s = frame("Kişi sayısı", "Çakışma olasılığı");
+        s += gArea(pts.concat([[1, 0], [0, 0]]), { c: "var(--accent)", o: 0.10 });
+        s += gPoly(pts, { c: "var(--accent)", w: 2.4 });
+        s += gLine(0, 0.5, 1, 0.5, { c: "var(--rule)", w: 1.3, d: "4 3" });
+        s += gTxt(0.02, 0.5, "%50", { a: "start", dy: -5, s: 9 });
+        s += gDot((p.n - 2) / 68, here, { c: "var(--ink)" });
+        s += gTxt((p.n - 2) / 68, here, "%" + r0(here * 100), {
+          a: p.n > 45 ? "end" : "start", dx: p.n > 45 ? -6 : 6, dy: 4, c: "var(--ink)", b: 1, s: 10 });
+        [10, 30, 50].forEach(function (v) { s += gTxt((v - 2) / 68, 0, v + "", { a: "middle", dy: 12, s: 9 }); });
+        return { svg: s, text: p.n + " kişilik bir grupta en az iki kişinin doğum gününün aynı olma olasılığı %" +
+          r1(here * 100) + ". Sezgiyi şaşırtan şey şu: grupta " + r0(cift) + " ayrı kişi çifti var ve her biri " +
+          "ayrı bir çakışma şansı taşıyor." };
+      }
     }
   };

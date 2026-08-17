@@ -54,5 +54,19 @@
     "questions": 36,
     "charts": 2,
     "file": "courses/sanat-tarihi.json"
+  },
+  {
+    "id": "olasilik",
+    "title": "Olasılık ve karar",
+    "subtitle": "Belirsizlikle hesaplaşmak",
+    "description": "Koşullu olasılıktan Bayes'e, taban oranı yanılgısından risk primine: belirsizlik altında düşünmenin araçları ve sezginin en pahalı hataları.",
+    "icon": "🎲",
+    "accent": "#1f6f70",
+    "accentDark": "#5fc9ca",
+    "category": "gunumuz",
+    "lessons": 12,
+    "questions": 36,
+    "charts": 5,
+    "file": "courses/olasilik.json"
   }
 ]

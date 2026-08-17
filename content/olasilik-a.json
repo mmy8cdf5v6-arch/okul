@@ -1,0 +1,507 @@
+[
+  {
+    "id": "olasilik-nedir",
+    "moduleId": "dil",
+    "order": 1,
+    "title": "Olasılık nedir",
+    "subtitle": "Belirsizliği sayıya çevirmenin üç ayrı yolu var ve hepsi aynı şeyi kastetmiyor.",
+    "minutes": 8,
+    "keyTerms": ["örnek uzay", "olay", "klasik olasılık", "sıklıkçı yorum", "öznel olasılık"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Bir olayın olasılığı, 0 ile 1 arasında bir sayıdır. Kolay kısmı budur. Zor kısmı, bu sayının neyi ölçtüğüdür. Üç yaygın cevap vardır ve günlük konuşmada üçü birbirine karışır. Ayırt etmek, olasılık hakkındaki tartışmaların çoğunu çözer."
+      },
+      {
+        "kind": "list",
+        "title": "Üç yorum",
+        "items": [
+          "Klasik: eşit olası sonuçları say. Zarda 6 gelme olasılığı 1/6, çünkü altı eşit yüz var.",
+          "Sıklıkçı: uzun vadede gözlenen oran. Bir madeni paranın yazı olasılığı, sonsuz atışta yazıların oranıdır.",
+          "Öznel: inanç derecesi. 'Yarın yağmur yağma olasılığı %70' cümlesi bir bahis oranıdır; yarın bir kez yaşanacak, tekrarlanmayacak.",
+          "Üçü de aynı matematiği kullanır. Ayrıldıkları yer, sayının neye karşılık geldiğidir."
+        ]
+      },
+      {
+        "kind": "text",
+        "title": "Örnek uzay: her şey buradan başlar",
+        "body": "Örnek uzay, olabilecek bütün sonuçların kümesidir. Bir olay, bu kümenin bir alt kümesidir. Olasılık hesaplarındaki hataların şaşırtıcı bir kısmı, hesabın kendisinde değil örnek uzayın yanlış kurulmasında olur. İki zar atıldığında toplamın 7 gelme olasılığını hesaplarken örnek uzay 11 farklı toplam değil, 36 farklı zar çiftidir. Toplamlar eşit olası değildir; zar çiftleri eşit olasıdır."
+      },
+      {
+        "kind": "formula",
+        "title": "Klasik olasılık",
+        "expression": "P(olay) = elverişli sonuç sayısı / bütün sonuç sayısı",
+        "note": "Bu formülün geçerli olması için bütün sonuçların eşit olası olması şarttır. 'Ya olur ya olmaz, demek ki %50' akıl yürütmesi tam bu koşulu atlar."
+      },
+      {
+        "kind": "example",
+        "title": "Örnek: iki çocuk sorusu",
+        "body": "Bir ailenin iki çocuğu var ve en az biri kız. İkisinin de kız olma olasılığı nedir? Örnek uzayı doğru kurmak gerekir: kız-kız, kız-erkek, erkek-kız, erkek-erkek. 'En az biri kız' bilgisi son ihtimali eler, geriye üç eşit olası durum kalır ve yalnızca birinde ikisi de kızdır. Cevap 1/3'tür, 1/2 değil. Soru değişirse cevap da değişir: 'büyük çocuk kız' denseydi cevap 1/2 olurdu."
+      },
+      {
+        "kind": "text",
+        "title": "Kolmogorov'un üç kuralı",
+        "body": "Olasılık, 1933'te Kolmogorov tarafından üç aksiyoma dayandırıldı. Her olayın olasılığı sıfır ya da daha büyüktür. Bütün örnek uzayın olasılığı birdir. Birbirini dışlayan olayların birleşiminin olasılığı, olasılıkların toplamıdır. Bütün olasılık teorisi bu üç kuraldan türer; hangi yorumu benimsediğinizden bağımsız olarak matematik aynıdır."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "'Ya olur ya olmaz, o hâlde olasılık %50' akıl yürütmesindeki hata nedir?",
+        "options": [
+          "Toplama kuralını yanlış uygular",
+          "İki sonucun eşit olası olduğunu gerekçesiz varsayar",
+          "Örnek uzayı çok büyük tutar",
+          "Öznel yorumu kullanır"
+        ],
+        "answerIndex": 1,
+        "explanation": "Sonuçları saymak ancak eşit olasılık varsayımı geçerliyse işe yarar. Bir depremin olması ya da olmaması iki sonuçtur ama eşit olası değildir."
+      },
+      {
+        "id": "q2",
+        "prompt": "İki zar atıldığında toplamın 7 gelme olasılığı neden 11'de 1 değildir?",
+        "options": [
+          "Zarlar hileli olabilir",
+          "Eşit olası olan şey toplamlar değil, 36 farklı zar çiftidir",
+          "Toplam 7 iki kez sayılır",
+          "Olasılık toplanamaz"
+        ],
+        "answerIndex": 1,
+        "explanation": "Toplamlar eşit olası değildir: 7 altı farklı çiftten çıkar, 2 yalnızca birinden. Doğru örnek uzay 36 çifttir, olasılık 6/36'dır."
+      },
+      {
+        "id": "q3",
+        "prompt": "'Yarın yağmur olasılığı %70' cümlesi hangi yoruma daha yakındır?",
+        "options": [
+          "Klasik yorum",
+          "Sıklıkçı yorum",
+          "Öznel yorum: kanıta dayalı bir inanç derecesi",
+          "Hiçbiri"
+        ],
+        "answerIndex": 2,
+        "explanation": "Yarın bir kez yaşanacak ve tekrarlanmayacaktır. Sayı, mevcut kanıt altında bir inanç derecesini ya da bir bahis oranını ifade eder."
+      }
+    ]
+  },
+
+  {
+    "id": "bagimsizlik-ve-birlesim",
+    "moduleId": "dil",
+    "order": 2,
+    "title": "Bağımsızlık, 've' ile 'veya'",
+    "subtitle": "Olasılıkları çarpmak kolaydır; ne zaman çarpılacağını bilmek zordur.",
+    "minutes": 8,
+    "keyTerms": ["bağımsızlık", "kesişim", "birleşim", "tümleyen", "birleşim yanılgısı"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "İki olayın birlikte olma olasılığını hesaplarken çarpma kuralını kullanırız. Ama bu kural, olaylar bağımsızsa geçerlidir. Bağımsızlık, birinin gerçekleşmesinin diğerinin olasılığını değiştirmemesi demektir. İki ayrı madeni para bağımsızdır. Aynı bölgedeki iki evin sel görmesi değildir; ikisini de aynı yağış vurur."
+      },
+      {
+        "kind": "formula",
+        "title": "İki temel kural",
+        "expression": "P(A ve B) = P(A) × P(B|A)          P(A veya B) = P(A) + P(B) − P(A ve B)",
+        "note": "A ile B bağımsızsa P(B|A) = P(B) olur ve çarpma sadeleşir. Birleşimde çıkarma yapılmasının sebebi, kesişimin iki kez sayılmasıdır."
+      },
+      {
+        "kind": "text",
+        "title": "'En az bir' hesabı tümleyenden yapılır",
+        "body": "'En az bir kez olma' olasılığını doğrudan hesaplamak zordur, çünkü birçok durumu kapsar. Kolay yol tersini hesaplamaktır: hiç olmama olasılığını bulun ve birden çıkarın. Bir zarı dört kez atıp en az bir 6 görme olasılığı, 1 − (5/6)⁴ = %51.8'dir. Bu, 17. yüzyılda kumarhanelerde gerçekten para kazandıran bir hesaptı."
+      },
+      {
+        "kind": "text",
+        "title": "Bağımsızlık varsayımı pahalıya patlar",
+        "body": "Bağımsız olmayan olayları bağımsız saymak, birleşik riski sistematik olarak küçük gösterir. 2008 krizinde konut kredilerinin ödenmeme olasılıkları bağımsız kabul edilmişti; oysa hepsi aynı ekonomiye bağlıydı. Aynı hata mühendislikte 'yedekli sistem' hesaplarında da görülür: iki bağımsız yedek, ikisini birden söndüren bir yangın karşısında tek bir sistemdir."
+      },
+      {
+        "kind": "example",
+        "title": "Örnek: birleşim yanılgısı",
+        "body": "Kahneman ve Tversky'nin klasik deneyinde katılımcılara Linda tarif edilir: felsefe okumuş, ayrımcılık karşıtı gösterilere katılmış biri. Sonra sorulur: Linda'nın (a) banka görevlisi olması mı, yoksa (b) banka görevlisi ve feminist olması mı daha olası? Çoğunluk (b) der. Oysa (b), (a)'nın alt kümesidir; bir kümenin alt kümesi asıl kümeden daha olası olamaz. Ayrıntı, hikâyeyi inandırıcı yaparken olasılığı düşürür."
+      },
+      {
+        "kind": "list",
+        "title": "Pratik kontroller",
+        "items": [
+          "Çarpmadan önce sor: biri olursa diğerinin olasılığı değişir mi?",
+          "Ortak bir sebep varsa bağımsızlık yoktur; ortak sebebi ara.",
+          "'En az bir' sorularında tümleyeni hesapla.",
+          "Ayrıntı eklendikçe olasılık düşer, artmaz — inandırıcılık artsa bile.",
+          "Küçük olasılıklar çok tekrarlandığında kaçınılmaz hâle gelir; bu bir çelişki değil, aynı hesabın diğer yüzüdür."
+        ]
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Bir zarı dört kez atıp en az bir 6 görme olasılığı nasıl hesaplanır?",
+        "options": [
+          "4 × 1/6",
+          "1 − (5/6)⁴",
+          "(1/6)⁴",
+          "4/6"
+        ],
+        "answerIndex": 1,
+        "explanation": "'En az bir' hesapları tümleyenden yapılır: hiç 6 gelmeme olasılığı (5/6)⁴'tür, sonuç bunun birden farkıdır — yaklaşık %51.8."
+      },
+      {
+        "id": "q2",
+        "prompt": "Linda örneğindeki 'birleşim yanılgısı' nedir?",
+        "options": [
+          "Olasılıkların toplanması",
+          "İki koşulu birlikte sağlamanın, tek koşulu sağlamaktan daha olası sanılması",
+          "Örnek uzayın yanlış kurulması",
+          "Bağımsızlığın varsayılması"
+        ],
+        "answerIndex": 1,
+        "explanation": "'A ve B', A'nın alt kümesidir ve ondan daha olası olamaz. Ayrıntı hikâyeyi inandırıcı kılar ama olasılığı düşürür."
+      },
+      {
+        "id": "q3",
+        "prompt": "Aynı bölgedeki iki evin sel görme olasılıkları neden bağımsız değildir?",
+        "options": [
+          "Evler aynı kişiye ait olabilir",
+          "İkisini de aynı yağış olayı etkiler; ortak bir sebep vardır",
+          "Sigorta şirketleri aynıdır",
+          "Olasılıklar toplanamaz"
+        ],
+        "answerIndex": 1,
+        "explanation": "Ortak sebep bağımsızlığı bozar. Bağımsızlık varsayımıyla hesaplanan birleşik risk, gerçek riskin çok altında kalır."
+      }
+    ]
+  },
+
+  {
+    "id": "kosullu-olasilik",
+    "moduleId": "dil",
+    "order": 3,
+    "title": "Koşullu olasılık",
+    "subtitle": "Ok yönünü çevirdiğinizde sayı değişir — çoğu hata buradan çıkar.",
+    "minutes": 8,
+    "keyTerms": ["koşullu olasılık", "ters çevirme hatası", "toplam olasılık", "Monty Hall"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "P(A|B), 'B gerçekleştiği bilindiğinde A'nın olasılığı' demektir. Koşullamak, örnek uzayı daraltmaktır: artık bütün dünyaya değil, B'nin gerçekleştiği dünyaya bakıyoruz. Bu basit fikir, olasılığın en güçlü ve en çok yanlış kullanılan aracıdır."
+      },
+      {
+        "kind": "text",
+        "title": "Ters çevirme hatası",
+        "body": "P(A|B) ile P(B|A) genellikle birbirinden çok farklıdır ve karıştırılmaları neredeyse bir refleks hâline gelmiştir. Bir sporcunun doping yaptığında testin pozitif çıkma olasılığı %99 olabilir; ama testi pozitif çıkan bir sporcunun doping yapmış olma olasılığı, doping ne kadar seyrekse o kadar düşüktür. İki cümle aynı sözcüklerden kurulur, aynı şeyi söylemez."
+      },
+      {
+        "kind": "example",
+        "title": "Örnek: savcı yanılgısı",
+        "body": "Mahkemede uzman, olay yerindeki DNA'nın rastgele bir kişiyle eşleşme olasılığının milyonda bir olduğunu söyler. Savcı bunu 'sanığın suçsuz olma olasılığı milyonda bir' diye sunar. Bu, ok yönünün çevrilmesidir. On milyon kişilik bir havuzda beklenen eşleşme sayısı ondur; DNA tek başına sanığı diğer dokuzdan ayırmaz. Bu akıl yürütme birçok ülkede gerçek hükümlere yol açtı ve bazıları sonradan bozuldu."
+      },
+      {
+        "kind": "formula",
+        "title": "Toplam olasılık kuralı",
+        "expression": "P(B) = P(B|A)·P(A) + P(B|A')·P(A')",
+        "note": "Bir olayın toplam olasılığı, birbirini dışlayan bütün durumlarda ayrı ayrı hesaplanıp ağırlıklarıyla toplanır. Bayes kuralının paydası tam olarak budur."
+      },
+      {
+        "kind": "text",
+        "title": "Monty Hall",
+        "body": "Üç kapıdan birinin arkasında araba var. Bir kapı seçersiniz. Sunucu, hangi kapıda araba olduğunu bilerek, seçmediğiniz kapılardan boş olan birini açar. Kapıyı değiştirmeli misiniz? Evet: değiştirirseniz kazanma olasılığınız 2/3, kalırsanız 1/3'tür. Sezgiyi bozan nokta şudur — sunucunun hangi kapıyı açtığı rastlantı değildir, bilgi taşır. Sunucu kapıyı bilmeden açsaydı ve şans eseri boş çıksaydı, olasılıklar gerçekten eşitlenirdi."
+      },
+      {
+        "kind": "list",
+        "title": "Koşullu olasılık okurken",
+        "items": [
+          "Verilen sayı hangi yönde? 'Hasta olanda test pozitif' mi, 'testi pozitif olanda hastalık' mı?",
+          "Koşul cümlesinin arkasında hangi örnek uzay kaldı?",
+          "Bilgi nasıl geldi? Rastgele mi, yoksa bilen biri tarafından mı seçildi?",
+          "Taban oranı nedir? Koşullu olasılık onsuz yorumlanamaz.",
+          "Aynı veriyi doğal sayılarla ifade edin: 'binde bir' yerine '1000 kişide 1'."
+        ]
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Savcı yanılgısı nedir?",
+        "options": [
+          "Delilin sahte olması",
+          "P(delil | suçsuzluk) ile P(suçsuzluk | delil) olasılıklarının birbirine karıştırılması",
+          "Örneklem büyüklüğünün küçük olması",
+          "Tanıkların yanılması"
+        ],
+        "answerIndex": 1,
+        "explanation": "İki koşullu olasılık ters yönlerdedir ve taban oranı hesaba katılmadan biri diğerinin yerine kullanılamaz."
+      },
+      {
+        "id": "q2",
+        "prompt": "Monty Hall probleminde kapı değiştirmek neden avantajlıdır?",
+        "options": [
+          "Rastlantı ikinci turda değişir",
+          "Sunucu kapıyı bilerek açar; açtığı kapı bilgi taşır ve olasılığı diğer kapıya yığar",
+          "Üç kapıda olasılıklar eşit değildir",
+          "Değiştirmek fark etmez"
+        ],
+        "answerIndex": 1,
+        "explanation": "Sunucunun bilgisi kritik. İlk seçiminizin doğru olma olasılığı 1/3'te kalır; kalan 2/3, açılmayan tek kapıya toplanır."
+      },
+      {
+        "id": "q3",
+        "prompt": "Bir testin duyarlılığı %99 ise aşağıdakilerden hangisi doğrudur?",
+        "options": [
+          "Testi pozitif çıkanların %99'u hastadır",
+          "Hastaların %99'unda test pozitif çıkar",
+          "Testin %99'u doğrudur",
+          "Sağlıklıların %99'unda test negatif çıkar"
+        ],
+        "answerIndex": 1,
+        "explanation": "Duyarlılık, hasta olanlarda testin pozitif çıkma oranıdır. Pozitif çıkanların ne kadarının hasta olduğu ayrı bir sorudur ve yaygınlığa bağlıdır."
+      }
+    ]
+  },
+
+  {
+    "id": "buyuk-sayilar",
+    "moduleId": "dil",
+    "order": 4,
+    "title": "Büyük sayılar ve kumarbaz yanılgısı",
+    "subtitle": "Oran dengelenir, fark kapanmaz. İkisi aynı şey değildir.",
+    "minutes": 8,
+    "keyTerms": ["büyük sayılar yasası", "kumarbaz yanılgısı", "ortalamaya dönüş", "sıcak el"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Büyük sayılar yasası, deneme sayısı arttıkça gözlenen oranın gerçek olasılığa yaklaşacağını söyler. Bu doğrudur ve olasılığın sıklıkçı yorumunun temelidir. Ama yasanın söylemediği bir şey var: geçmişteki sapmanın telafi edileceğini söylemez. Oran dengelenir çünkü eski atışların ağırlığı azalır, yeni atışlar eskisini düzelttiği için değil."
+      },
+      {
+        "kind": "chart",
+        "chartId": "buyuk-sayilar"
+      },
+      {
+        "kind": "text",
+        "title": "Kumarbaz yanılgısı",
+        "body": "Rulette art arda beş kez kırmızı geldiğinde siyah oynamak, bu yanılgının klasik hâlidir. Çark hafızasızdır: her dönüşte olasılıklar aynıdır. 1913'te Monte Carlo'da top yirmi altı kez üst üste siyaha geldi ve kumarbazlar kırmızıya milyonlar yatırdı; her dönüşte kırmızının olasılığı değişmeden kaldı. Aynı yanılgının tersi de vardır: 'sıcak el' inancı, art arda gelen başarıların devam edeceğini varsayar."
+      },
+      {
+        "kind": "text",
+        "title": "Ortalamaya dönüş yanılgıyla karıştırılır",
+        "body": "Ortalamaya dönüş gerçektir: olağandışı yüksek bir ölçümün ardından gelen ölçüm büyük ihtimalle ortalamaya daha yakın olur. Ama sebebi telafi değildir; olağandışı sonucun içinde şansın payı vardır ve o pay tekrarlanmaz. Bunu telafi sanmak yönetimde somut hatalara yol açar: kötü performansı azarlayan yönetici düzelme görür, iyi performansı öven yönetici gerileme görür ve azarlamanın işe yaradığı sonucuna varır."
+      },
+      {
+        "kind": "example",
+        "title": "Örnek: uçuş eğitmenleri",
+        "body": "İsrail hava kuvvetlerinde eğitmenler, iyi manevra yapan pilotu övdüklerinde sonraki uçuşun daha kötü, kötü yapanı azarladıklarında sonrakinin daha iyi olduğunu gözlemlemişti. Sonuç: azarlamak işe yarıyor, övmek zarar veriyor. Kahneman bunun ortalamaya dönüşün ta kendisi olduğunu gösterdi. Eğitmenler gerçek bir örüntü görüyorlardı; sebebi yanlış yere bağlamışlardı."
+      },
+      {
+        "kind": "list",
+        "title": "Akılda tutulacaklar",
+        "items": [
+          "Bağımsız denemelerde geçmiş, geleceğin olasılığını değiştirmez.",
+          "Oranın dengelenmesi seyreltmeyle olur, telafiyle değil.",
+          "Mutlak fark ortalamada karekök hızıyla büyümeye devam eder.",
+          "Uç bir sonucun ardından ortalamaya yaklaşma beklenir; bu bir müdahalenin başarısı değildir.",
+          "Kısa dizilerde örüntü görmek beklenen bir şeydir; rastgelelik düzensiz görünmez, kümelenir."
+        ]
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Yazı tura art arda altı kez tura geldi. Yedinci atışta yazı gelme olasılığı nedir?",
+        "options": ["%50'den yüksek", "%50", "%50'den düşük", "Hesaplanamaz"],
+        "answerIndex": 1,
+        "explanation": "Atışlar bağımsızdır; para geçmişi hatırlamaz. Olasılık her atışta aynı kalır."
+      },
+      {
+        "id": "q2",
+        "prompt": "Büyük sayılar yasası hangisini söyler?",
+        "options": [
+          "Geçmişteki sapma sonraki denemelerle telafi edilir",
+          "Deneme sayısı arttıkça gözlenen oran gerçek olasılığa yaklaşır",
+          "Mutlak fark sıfıra gider",
+          "Her dizi eninde sonunda dengelenir"
+        ],
+        "answerIndex": 1,
+        "explanation": "Yasa oran hakkındadır. Mutlak fark kapanmaz, ortalamada karekök hızıyla büyümeye devam eder."
+      },
+      {
+        "id": "q3",
+        "prompt": "Kötü performansı azarlayan yöneticinin düzelme görmesi neyle açıklanır?",
+        "options": [
+          "Azarlamanın etkisiyle",
+          "Ortalamaya dönüşle: uç bir ölçümün ardından gelen ölçüm ortalamaya daha yakın olur",
+          "Kumarbaz yanılgısıyla",
+          "Sıcak el etkisiyle"
+        ],
+        "answerIndex": 1,
+        "explanation": "Uç sonuçların içinde şans payı vardır ve o pay tekrarlanmaz. Müdahale olmasa da düzelme görülürdü."
+      }
+    ]
+  },
+
+  {
+    "id": "bayes",
+    "moduleId": "guncelleme",
+    "order": 1,
+    "title": "Bayes kuralı",
+    "subtitle": "Yeni kanıt geldiğinde inancı ne kadar oynatmalı?",
+    "minutes": 9,
+    "keyTerms": ["önsel olasılık", "sonsal olasılık", "olabilirlik", "güncelleme"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Bayes kuralı, bir soruyu cevaplar: elimde bir inanç varken yeni bir kanıt görürsem, inancım ne olmalı? Üç parçası vardır. Önsel olasılık, kanıttan önceki inançtır. Olabilirlik, hipotez doğruysa bu kanıtı görme olasılığıdır. Sonsal olasılık, güncellenmiş inançtır. Kural, bu üçünü birbirine bağlar."
+      },
+      {
+        "kind": "formula",
+        "title": "Bayes kuralı",
+        "expression": "P(H|K) = P(K|H) × P(H) / P(K)",
+        "note": "H hipotez, K kanıttır. Payda, kanıtın bütün hipotezler üzerinden toplam olasılığıdır: P(K) = P(K|H)·P(H) + P(K|H')·P(H')."
+      },
+      {
+        "kind": "text",
+        "title": "Doğal sayılarla düşünmek",
+        "body": "Formül soyut görünür ama doğal sayılarla anlatıldığında sezgisel hâle gelir. Yüzdeler yerine bir kitle hayal edin. '10.000 kişi düşünün. Bunların 100'ü hasta. Hastaların 99'unda test pozitif çıkar. Sağlıklı 9.900 kişinin 495'inde de pozitif çıkar. Toplam 594 pozitif var, bunların 99'u gerçekten hasta.' Gerd Gigerenzer'in araştırmaları, aynı problemin yüzdeler yerine doğal sayılarla sunulduğunda doğru cevaplanma oranının birkaç katına çıktığını gösterdi."
+      },
+      {
+        "kind": "example",
+        "title": "Örnek: kaybolan anahtar",
+        "body": "Anahtarınızı üç yerden birinde bırakmış olabilirsiniz: ceket cebi, çanta, masa. Başlangıçta üçü de eşit olası. Cebe bakıyorsunuz, yok. Kalan iki yerin olasılığı 1/3'ten 1/2'ye yükseldi. Bu bir güncellemedir ve Bayes kuralının en sade hâlidir: elenen ihtimalin ağırlığı kalanlar arasında paylaştırılır."
+      },
+      {
+        "kind": "list",
+        "title": "Kuralın söyledikleri",
+        "items": [
+          "Önsel olasılık düşükse, güçlü bir kanıt bile sonsalı çok yükseltmeyebilir.",
+          "Kanıtın gücü, hipotez doğruyken ve yanlışken görülme olasılıklarının oranıdır.",
+          "Her iki hipotez altında da eşit olası olan bir gözlem hiçbir bilgi taşımaz.",
+          "Güncelleme birikimlidir: bir kanıtın sonsalı, bir sonrakinin önseli olur.",
+          "Önsel sıfırsa hiçbir kanıt onu yukarı çekemez; kesinlik, öğrenmeyi imkânsız kılar."
+        ]
+      },
+      {
+        "kind": "quote",
+        "text": "Kanıt karşısında fikrini değiştirmek bir tutarsızlık değil, tam olarak akılcılığın tarifidir.",
+        "source": "Bayesçi güncellemenin özeti"
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Bayes kuralında 'önsel olasılık' nedir?",
+        "options": [
+          "Kanıt görüldükten sonraki inanç",
+          "Kanıttan önceki inanç derecesi",
+          "Testin duyarlılığı",
+          "Örneklem büyüklüğü"
+        ],
+        "answerIndex": 1,
+        "explanation": "Önsel, kanıtı görmeden önceki olasılıktır. Sonsal, kanıtla güncellenmiş hâlidir."
+      },
+      {
+        "id": "q2",
+        "prompt": "Her iki hipotez altında da aynı olasılıkla görülen bir gözlem ne yapar?",
+        "options": [
+          "İnancı güçlendirir",
+          "İnancı zayıflatır",
+          "İnancı değiştirmez; bilgi taşımaz",
+          "Önseli sıfırlar"
+        ],
+        "answerIndex": 2,
+        "explanation": "Kanıtın gücü, iki hipotez altındaki olabilirliklerin oranıdır. Oran 1 ise güncelleme olmaz."
+      },
+      {
+        "id": "q3",
+        "prompt": "Önsel olasılığı sıfır olan bir hipotez için ne söylenebilir?",
+        "options": [
+          "Güçlü kanıtla yükselebilir",
+          "Hiçbir kanıt onu sıfırdan çıkaramaz",
+          "Sonsalı her zaman 1 olur",
+          "Bayes kuralı uygulanamaz"
+        ],
+        "answerIndex": 1,
+        "explanation": "Sıfırla çarpım sıfırdır. Bir ihtimali baştan tamamen dışlamak, sonradan hiçbir kanıtla öğrenememek anlamına gelir."
+      }
+    ]
+  },
+
+  {
+    "id": "taban-orani",
+    "moduleId": "guncelleme",
+    "order": 2,
+    "title": "Taban oranı yanılgısı",
+    "subtitle": "Testin doğruluğu yüksek olabilir; sonucun anlamı yine de düşük olabilir.",
+    "minutes": 9,
+    "keyTerms": ["taban oranı", "duyarlılık", "özgüllük", "pozitif kestirim değeri", "yanlış alarm"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Taban oranı, bir özelliğin toplumdaki yaygınlığıdır. İnsanlar yeni bir kanıt gördüğünde taban oranını sistematik olarak göz ardı eder. Bu, olasılık sezgisinin en pahalı hatasıdır ve sonuçları tıptan güvenliğe, kredi değerlendirmesinden işe alıma kadar her yerde görülür."
+      },
+      {
+        "kind": "chart",
+        "chartId": "tarama-testi"
+      },
+      {
+        "kind": "text",
+        "title": "Üç ayrı sayı",
+        "body": "Bir testin performansı tek bir 'doğruluk' sayısıyla anlatılamaz. Duyarlılık, hastaların ne kadarını yakaladığıdır. Özgüllük, sağlıklıların ne kadarını doğru şekilde temiz bulduğudur. Pozitif kestirim değeri ise sizin asıl sorduğunuz şeydir: testim pozitif çıktı, gerçekten hasta mıyım? İlk ikisi testin özelliğidir ve sabittir; üçüncüsü yaygınlığa bağlıdır ve toplumdan topluma değişir."
+      },
+      {
+        "kind": "example",
+        "title": "Örnek: seyrek hastalık",
+        "body": "Bir hastalık 1000 kişide 1 görülüyor. Test duyarlılığı %99, özgüllüğü %95. 100.000 kişi tarandığında 100 hasta bulunur ve bunların 99'u pozitif çıkar. Ama 99.900 sağlıklıdan 4.995'i de pozitif çıkar. Toplam 5.094 pozitif sonucun yalnızca 99'u gerçek — yani %2. Test kötü değildir; hastalık seyrek olduğu için yanlış alarmlar gerçek vakaları elli katı geçmiştir."
+      },
+      {
+        "kind": "list",
+        "title": "Bunun pratik sonuçları",
+        "items": [
+          "Belirtisi olmayan kişilerde seyrek hastalık taraması, çok sayıda gereksiz kaygıya ve ileri tetkike yol açar.",
+          "Belirti varsa taban oranı yükselir ve aynı testin pozitif kestirim değeri ciddi biçimde artar.",
+          "Bu yüzden tarama programları herkese değil, riskli gruplara uygulanır.",
+          "Güvenlikte de aynı hesap geçerlidir: seyrek bir tehdidi arayan bir sistem, ezici çoğunlukla masum kişileri işaretler.",
+          "İki bağımsız testin arka arkaya pozitif çıkması ise olasılığı gerçekten yukarı çeker."
+        ]
+      },
+      {
+        "kind": "text",
+        "title": "Hekimler de yanılıyor",
+        "body": "Gigerenzer'in ve başkalarının yaptığı çalışmalarda, aynı problem yüzdelerle sorulduğunda hekimlerin önemli bir bölümü pozitif kestirim değerini büyük ölçüde abartmıştır. Aynı problem doğal sayılarla — '1000 kadından 10'u' biçiminde — sorulduğunda doğru cevap oranı belirgin biçimde yükselmiştir. Sorun matematik bilgisi değil, bilginin sunulma biçimidir."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Pozitif kestirim değeri neye bağlıdır?",
+        "options": [
+          "Yalnızca testin duyarlılığına",
+          "Yalnızca testin özgüllüğüne",
+          "Duyarlılık, özgüllük ve hastalığın yaygınlığına birlikte",
+          "Örneklem büyüklüğüne"
+        ],
+        "answerIndex": 2,
+        "explanation": "Duyarlılık ve özgüllük testin özellikleridir; pozitif kestirim değeri bunlarla birlikte taban oranına bağlıdır ve toplumdan topluma değişir."
+      },
+      {
+        "id": "q2",
+        "prompt": "Seyrek bir hastalık için yapılan taramada yanlış alarmlar neden gerçek vakaları geçer?",
+        "options": [
+          "Test bozuktur",
+          "Sağlıklı kişi sayısı çok büyük olduğu için küçük bir yanlış pozitif oranı bile büyük bir sayı üretir",
+          "Duyarlılık düşüktür",
+          "Örneklem yanlıdır"
+        ],
+        "answerIndex": 1,
+        "explanation": "%5 yanlış pozitif oranı, 99.900 sağlıklı kişide yaklaşık 5.000 yanlış alarm demektir; 100 hastadan çıkan 99 gerçek pozitifin yanında bu ezici bir çoğunluktur."
+      },
+      {
+        "id": "q3",
+        "prompt": "Aynı problemin yüzdeler yerine doğal sayılarla sunulması neyi değiştirir?",
+        "options": [
+          "Matematiksel sonucu",
+          "Hiçbir şeyi",
+          "Doğru cevaplanma oranını belirgin biçimde yükseltir",
+          "Testin duyarlılığını"
+        ],
+        "answerIndex": 2,
+        "explanation": "Sonuç aynıdır ama sunum biçimi anlaşılabilirliği değiştirir. '1000 kişide 10' ifadesi, '%1' ifadesinden çok daha iyi işlenir."
+      }
+    ]
+  }
+]
