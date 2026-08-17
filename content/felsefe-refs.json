@@ -1,0 +1,600 @@
+{
+  "meta": {
+    "title": "Felsefe tarihi",
+    "eyebrow": "Felsefe",
+    "subtitle": "Soruların tarihi",
+    "description": "Milet'ten çağdaş etiğe: hangi soruların sorulduğu, verilen cevapların neyi çözüp neyi açtığı ve bugüne ne kaldığı.",
+    "icon": "🏛",
+    "accent": "#4c4a7a",
+    "accentDark": "#a9a5e0",
+    "category": "klasik",
+    "figuresLabel": "Düşünürler",
+    "timelineLabel": "Zaman çizelgesi",
+    "timelineTitle": "Düşüncenin tarihi",
+    "timelineIntro": "Arkhe sorusundan yapay zekâ etiğine: yirmi altı yüzyılda birkaç kez baştan kurulmuş bir tartışma.",
+    "source": "builtin",
+    "hasCharts": true
+  },
+
+  "modules": [
+    {
+      "id": "antik",
+      "title": "Antik ve Ortaçağ",
+      "description": "Miletli doğa filozoflarından skolastiğe: ilk sorular ve ilk büyük sistemler."
+    },
+    {
+      "id": "modern",
+      "title": "Modern felsefe",
+      "description": "Descartes'tan Nietzsche'ye: kesinlik arayışı, deneyciliğin sınırları ve aklın tarihselleşmesi."
+    },
+    {
+      "id": "cagdas",
+      "title": "Çağdaş felsefe",
+      "description": "Varoluşçuluk, dil çözümlemesi, bilim felsefesi ve bugünün etik tartışmaları."
+    }
+  ],
+
+  "glossary": [
+    { "id": "arkhe", "term": "Arkhe", "definition": "Her şeyin kendisinden çıktığı düşünülen temel ilke. Doğayı doğaüstüne başvurmadan açıklama girişiminin ilk kavramı.", "lessonId": "sokrates-oncesi" },
+    { "id": "logos", "term": "Logos", "definition": "Söz, oran, akıl ve düzen anlamlarını birlikte taşıyan kavram. Evrenin akılla kavranabilir bir düzeni olduğu fikrinin taşıyıcısı.", "lessonId": "sokrates-oncesi" },
+    { "id": "atomculuk", "term": "Atomculuk", "definition": "Her şeyin bölünemez parçacıklardan ve boşluktan oluştuğu görüşü. Yirmi beş yüzyıl sonra sınanabilir hâle geldi.", "lessonId": "sokrates-oncesi" },
+    { "id": "sofist", "term": "Sofistler", "definition": "Retorik ve ikna öğreten gezgin öğretmenler. Yasa ve ahlakın doğal mı insan yapımı mı olduğu sorusunu felsefeye soktular.", "lessonId": "sokrates-oncesi" },
+    { "id": "sokratik-yontem", "term": "Sokratik yöntem", "definition": "Bir tanımı karşı örneklerle sınayarak sahte bilgiyi temizleme yöntemi. Amaç cevap üretmek değil, bilmediğini fark ettirmektir.", "lessonId": "sokrates-platon" },
+    { "id": "idea", "term": "İdea", "definition": "Platon'da, duyusal nesnelerin eksik kopyası olduğu değişmez kavram. Adaletin kendisi, tek tek adil eylemlerden ayrı ve gerçektir.", "lessonId": "sokrates-platon" },
+    { "id": "magara", "term": "Mağara alegorisi", "definition": "Zincirli insanların duvardaki gölgeleri gerçeklik sanması. Eğitim, dönüp ışığa bakmaktır.", "lessonId": "sokrates-platon" },
+    { "id": "animsama", "term": "Anımsama", "definition": "Öğrenmenin yeni bilgi edinmek değil, ruhun önceden bildiğini hatırlaması olduğu görüşü.", "lessonId": "sokrates-platon" },
+    { "id": "madde-form", "term": "Madde ve form", "definition": "Aristoteles'te her şeyin ayrılmaz iki yönü. Form ayrı bir dünyada değil, şeyin içindedir.", "lessonId": "aristoteles" },
+    { "id": "dort-neden", "term": "Dört neden", "definition": "Maddi, formel, fail ve ereksel neden. Modern bilim ilk üçünü tuttu, ereksel nedeni doğa açıklamalarından çıkardı.", "lessonId": "aristoteles" },
+    { "id": "kiyas", "term": "Kıyas", "definition": "İki öncülden bir sonucun zorunlu olarak çıkması. Geçerliliğin içerikten bağımsız, biçimsel olarak incelenebilmesi buluşun özüdür.", "lessonId": "aristoteles" },
+    { "id": "altin-orta", "term": "Altın orta", "definition": "Erdemin iki aşırılığın ortasındaki huy olması. Orta nokta herkes için aynı değildir; bulmak pratik bilgelik gerektirir.", "lessonId": "aristoteles" },
+    { "id": "eudaimonia", "term": "Eudaimonia", "definition": "İnsana özgü yetilerin tam gerçekleşmesi anlamında iyi yaşam. Haz değil, gelişme ve etkinlik.", "lessonId": "aristoteles" },
+    { "id": "stoacilik", "term": "Stoacılık", "definition": "Kontrol edebildiklerinle edemediklerini ayırmaya dayalı öğreti. Yalnızca yargı ve tercihler bize bağlıdır.", "lessonId": "helenistik-ve-ortacag" },
+    { "id": "epikurculuk", "term": "Epikürcülük", "definition": "Hazzı arzuları azaltarak arayan öğreti. Sade yaşam, dostluk ve korkulardan kurtulma.", "lessonId": "helenistik-ve-ortacag" },
+    { "id": "supheci", "term": "Şüphecilik", "definition": "Hiçbir iddianın karşıtından daha güçlü kanıtlanamadığı durumlarda yargıyı askıya alma tutumu.", "lessonId": "helenistik-ve-ortacag" },
+    { "id": "tumeller", "term": "Tümeller sorunu", "definition": "'İnsan' gibi genel kavramların gerçekten var olup olmadığı tartışması. Gerçekçiler var der, adcılar yalnızca tek tek şeyler vardır der.", "lessonId": "helenistik-ve-ortacag" },
+    { "id": "ockham", "term": "Ockham'ın usturası", "definition": "Gereksiz yere varlık çoğaltmama ilkesi. Aynı şeyi açıklayan iki kuramdan sade olanı yeğlenir.", "lessonId": "helenistik-ve-ortacag" },
+    { "id": "metodik-suphe", "term": "Metodik şüphe", "definition": "En ufak şüphe duyulabilecek her şeyi geçici olarak yanlış sayma yöntemi. Amaç yıkmak değil, sarsılmaz bir temel bulmaktır.", "lessonId": "descartes-ve-suphe" },
+    { "id": "cogito", "term": "Cogito", "definition": "'Düşünüyorum, öyleyse varım.' Şüphenin kendisini yok edemediği tek nokta.", "lessonId": "descartes-ve-suphe" },
+    { "id": "dualizm", "term": "Düalizm", "definition": "Zihin ile bedenin iki ayrı töz olduğu görüşü. Kesinliği kurtarır ama etkileşim sorununu doğurur.", "lessonId": "descartes-ve-suphe" },
+    { "id": "deneycilik-t", "term": "Deneycilik", "definition": "Bütün bilginin kaynağının deneyim olduğu görüşü. Locke'ta zihin doğuştan boş bir levhadır.", "lessonId": "deneycilik" },
+    { "id": "tumevarim-sorunu", "term": "Tümevarım sorunu", "definition": "Geleceğin geçmişe benzeyeceği varsayımının ancak yine geçmiş deneyimle savunulabilmesi. Hume'un gösterdiği kısır döngü.", "lessonId": "deneycilik" },
+    { "id": "nedensellik-h", "term": "Nedensellik (Hume)", "definition": "Ardışıklığı gözleriz, zorunlu bağı görmeyiz. Neden, dünyada bulunan değil zihnin alışkanlıkla eklediği bir kategoridir.", "lessonId": "deneycilik" },
+    { "id": "olan-olmasi-gereken", "term": "Olan / olması gereken", "definition": "Olgusal bir tarifden mantıksal olarak bir ahlaki sonuç türetilemeyeceği ilkesi.", "lessonId": "deneycilik" },
+    { "id": "kopernik-devrimi", "term": "Kopernik devrimi (Kant)", "definition": "Bilginin nesneye değil, nesnenin bilginin koşullarına uyduğu tezi. Merkez dünyadan bilen özneye kayar.", "lessonId": "kant" },
+    { "id": "kategoriler", "term": "Kategoriler", "definition": "Deneyimin mümkün olmasını sağlayan, deneyimden öğrenilmeyen zihinsel biçimler. Mekân, zaman ve nedensellik bunlardandır.", "lessonId": "kant" },
+    { "id": "kendinde-sey", "term": "Kendinde şey", "definition": "Zihnin biçimlendirmesinden geçmemiş gerçeklik. Düşünülebilir ama bilinemez.", "lessonId": "kant" },
+    { "id": "kategorik-buyruk", "term": "Kategorik buyruk", "definition": "Yalnızca herkesin uyguladığını isteyebileceğin bir ilkeye göre davranma kuralı. Sınav evrenselleştirilebilirliktir.", "lessonId": "kant" },
+    { "id": "ozerklik", "term": "Özerklik", "definition": "Ahlaklı olmanın, dış buyruğa değil aklın kendi koyduğu yasaya uymak olması.", "lessonId": "kant" },
+    { "id": "diyalektik", "term": "Diyalektik", "definition": "Bir düşüncenin kendi karşıtını doğurup ikisinin daha üst bir aşamada aşılması. Hem düşüncenin hem tarihin hareketi.", "lessonId": "hegel-marx-nietzsche" },
+    { "id": "yabancilasma", "term": "Yabancılaşma", "definition": "Emeğin kendi ürününe, emek sürecine ve nihayet kendine yabancı hâle gelmesi.", "lessonId": "hegel-marx-nietzsche" },
+    { "id": "ideoloji", "term": "İdeoloji", "definition": "Taraflı bir toplumsal düzeni doğal ve tarafsızmış gibi gösteren düşünce yapısı.", "lessonId": "hegel-marx-nietzsche" },
+    { "id": "soykutuk", "term": "Soykütük", "definition": "Bir değerin doğruluğunu değil, tarihsel kökenini ve kimin işine yaradığını araştıran yöntem.", "lessonId": "hegel-marx-nietzsche" },
+    { "id": "fenomenoloji", "term": "Fenomenoloji", "definition": "Bir şeyin gerçekten var olup olmadığı sorusunu askıya alıp bilince nasıl göründüğünü betimleyen yöntem.", "lessonId": "varoluşçuluk" },
+    { "id": "yonelmislik", "term": "Yönelmişlik", "definition": "Bilincin daima bir şeyin bilinci olması. Boş bir kap değil, hep bir şeye yönelmiş bir etkinliktir.", "lessonId": "varoluşçuluk" },
+    { "id": "varolus-oz", "term": "Varoluş özden önce gelir", "definition": "İnsanın önceden verilmiş bir özü olmaması; önce var olup sonra kendini kurması.", "lessonId": "varoluşçuluk" },
+    { "id": "kotu-niyet", "term": "Kötü niyet", "definition": "Kendi özgürlüğünü kendinden gizleyerek seçim sorumluluğundan kaçma. 'Başka türlü davranamazdım' demenin adı.", "lessonId": "varoluşçuluk" },
+    { "id": "sacma", "term": "Saçma", "definition": "Anlam arayan insanla sessiz bir dünya arasındaki karşılaşma. Dünyanın anlamsızlığı değil, bu gerilimin kendisi.", "lessonId": "varoluşçuluk" },
+    { "id": "mantiksal-cozumleme", "term": "Mantıksal çözümleme", "definition": "Felsefi sorunların bir kısmının, dilin mantıksal yapısının gizlenmesinden doğduğu tezine dayanan yöntem.", "lessonId": "analitik" },
+    { "id": "dogrulanabilirlik-o", "term": "Doğrulanabilirlik ölçütü", "definition": "Bir cümlenin ancak deneyle sınanabiliyorsa ya da tanım gereği doğruysa anlamlı sayılması. Kendi sınavından geçemedi.", "lessonId": "analitik" },
+    { "id": "dil-oyunu", "term": "Dil oyunu", "definition": "Dilin tek bir hesap sistemi değil, sayısız farklı etkinlikten oluşan bir pratikler bütünü olması.", "lessonId": "analitik" },
+    { "id": "aile-benzerligi", "term": "Aile benzerliği", "definition": "Bir kavramın bütün kullanımlarını kapsayan tek bir ortak özellik bulunmaması; örtüşen benzerlikler zinciri.", "lessonId": "analitik" },
+    { "id": "gettier", "term": "Gettier problemi", "definition": "Gerekçelendirilmiş doğru inancın, tesadüfen doğru çıktığı için bilgi sayılamayacağı örnekler. Klasik bilgi tanımını çürüttü.", "lessonId": "analitik" },
+    { "id": "sinir-sorunu", "term": "Sınır sorunu", "definition": "Bilim ile bilim olmayanı neyin ayırdığı sorusu. Tek bir ölçütle çözülemediği bugün geniş kabul görüyor.", "lessonId": "bilim-felsefesi" },
+    { "id": "yanlislanabilirlik", "term": "Yanlışlanabilirlik", "definition": "Popper'ın ölçütü: bir kuramı bilimsel yapan, kendisini çürütecek gözlemi baştan belirtmesidir.", "lessonId": "bilim-felsefesi" },
+    { "id": "paradigma", "term": "Paradigma", "definition": "Bilimcilerin içinde çalıştığı ortak çerçeve. Olağan bilim onu sınamaz, içinde bulmaca çözer.", "lessonId": "bilim-felsefesi" },
+    { "id": "kuram-yukluluk", "term": "Kuram yüklülük", "definition": "Neye bakılacağını ve neyin veri sayılacağını mevcut kuramın belirlemesi. Saf gözlem yoktur.", "lessonId": "bilim-felsefesi" },
+    { "id": "yigin-paradoksu", "term": "Yığın paradoksu", "definition": "Sınırı belirsiz kavramların ürettiği çelişki. Her adımda tek bir tane eklenerek yığın olmayandan yığına geçilir.", "lessonId": "bilim-felsefesi" },
+    { "id": "faydacilik", "term": "Faydacılık", "definition": "Doğru eylemin, toplam iyiliği en çoğa çıkaran eylem olduğu görüşü. Sonuçlara bakar.", "lessonId": "etik-ve-siyaset" },
+    { "id": "odev-etigi", "term": "Ödev etiği", "definition": "Kimi eylemlerin sonuçları ne olursa olsun yanlış olduğu görüşü. İlkeye bakar.", "lessonId": "etik-ve-siyaset" },
+    { "id": "erdem-etigi", "term": "Erdem etiği", "definition": "Sorunun 'hangi eylem doğru' değil 'nasıl bir insan olmalıyım' olduğu yaklaşım. Karaktere bakar.", "lessonId": "etik-ve-siyaset" },
+    { "id": "cehalet-pecesi", "term": "Cehalet peçesi", "definition": "Toplumun kurallarını, kendi konumunu bilmeden seçme düşünce deneyi. Tarafsızlığı bir kurguyla üretir.", "lessonId": "etik-ve-siyaset" },
+    { "id": "fark-ilkesi", "term": "Fark ilkesi", "definition": "Rawls'ta eşitsizliklerin ancak en dezavantajlıların durumunu iyileştirdiği ölçüde kabul edilebilir olması.", "lessonId": "etik-ve-siyaset" }
+  ],
+
+  "figures": [
+    {
+      "id": "herakleitos",
+      "name": "Herakleitos",
+      "lifespan": "MÖ 535-475",
+      "oneLiner": "Kalıcı olan tek şeyin değişim olduğunu savundu.",
+      "contributions": [
+        "Gerçekliği bir süreç olarak düşünen ilk sistemli görüşü ortaya koydu",
+        "Karşıtların birliği fikrini geliştirdi",
+        "Logos kavramıyla evrenin akılla kavranabilir bir düzeni olduğunu öne sürdü"
+      ],
+      "lessonId": "sokrates-oncesi",
+      "tag": "Doğa filozofları"
+    },
+    {
+      "id": "parmenides",
+      "name": "Parmenides",
+      "lifespan": "MÖ 515-450",
+      "oneLiner": "Değişimin mantıksal olarak imkânsız olduğunu savundu.",
+      "contributions": [
+        "Varlığın değişmez ve bölünmez olduğunu akıl yürütmeyle savundu",
+        "Duyular ile akıl arasındaki güven çatışmasını felsefeye soktu",
+        "Öğrencisi Zenon'un paradoksları bu görüşü savunmak için kuruldu"
+      ],
+      "lessonId": "sokrates-oncesi",
+      "tag": "Doğa filozofları"
+    },
+    {
+      "id": "sokrates",
+      "name": "Sokrates",
+      "lifespan": "MÖ 470-399",
+      "oneLiner": "Hiçbir şey yazmadı, felsefenin yöntemini değiştirdi.",
+      "contributions": [
+        "Kavram tanımlarını karşı örneklerle sınama yöntemini kurdu",
+        "Bilgisizliğini bilmeyi bir üstünlük olarak tanımladı",
+        "Gençliği yoldan çıkarmak suçlamasıyla ölüme mahkûm edildi"
+      ],
+      "quote": {
+        "text": "Sorgulanmamış bir hayat yaşamaya değmez.",
+        "source": "Platon, Sokrates'in Savunması"
+      },
+      "lessonId": "sokrates-platon",
+      "tag": "Klasik dönem"
+    },
+    {
+      "id": "platon",
+      "name": "Platon",
+      "lifespan": "MÖ 428-348",
+      "oneLiner": "Kavramları duyusal dünyadan daha gerçek saydı.",
+      "contributions": [
+        "İdea kuramıyla değişmez kavramlar dünyasını kurdu",
+        "Akademia'yı kurarak sürekli bir felsefe kurumu yarattı",
+        "Diyalog biçimini felsefi anlatımın kalıcı aracı hâline getirdi"
+      ],
+      "lessonId": "sokrates-platon",
+      "tag": "Klasik dönem"
+    },
+    {
+      "id": "aristoteles-f",
+      "name": "Aristoteles",
+      "lifespan": "MÖ 384-322",
+      "oneLiner": "Formu şeylerin içine indirdi ve gözlemi meşrulaştırdı.",
+      "contributions": [
+        "Mantığı biçimsel bir disiplin olarak kurdu",
+        "Biyoloji, siyaset, retorik ve poetikada kurucu metinler yazdı",
+        "Erdem etiğini karakter ve alışkanlık üzerine temellendirdi"
+      ],
+      "lessonId": "aristoteles",
+      "tag": "Klasik dönem"
+    },
+    {
+      "id": "epiktetos",
+      "name": "Epiktetos",
+      "lifespan": "50-135",
+      "oneLiner": "Azat edilmiş bir köle olarak stoacılığın en sade biçimini öğretti.",
+      "contributions": [
+        "Bize bağlı olan ile olmayan arasındaki ayrımı öğretinin merkezine koydu",
+        "Felsefeyi kuram değil günlük bir uygulama olarak sundu",
+        "Öğretisi modern bilişsel terapi tekniklerine kaynaklık etti"
+      ],
+      "lessonId": "helenistik-ve-ortacag",
+      "tag": "Stoacılık"
+    },
+    {
+      "id": "ibn-sina",
+      "name": "İbn Sina",
+      "lifespan": "980-1037",
+      "oneLiner": "Varlık ile öz arasındaki ayrımı kurarak metafiziği yeniden düzenledi.",
+      "contributions": [
+        "Zorunlu varlık ile mümkün varlık ayrımını geliştirdi",
+        "Uçan adam düşünce deneyiyle özbilinci beden algısından bağımsız ele aldı",
+        "Latinceye çevrilen yapıtları Avrupa skolastiğini doğrudan biçimlendirdi"
+      ],
+      "lessonId": "helenistik-ve-ortacag",
+      "tag": "İslam felsefesi"
+    },
+    {
+      "id": "ibn-rusd",
+      "name": "İbn Rüşd",
+      "lifespan": "1126-1198",
+      "oneLiner": "Felsefe ile dinin çatışmadığını, farklı düzeylerde konuştuğunu savundu.",
+      "contributions": [
+        "Gazzali'nin felsefe eleştirisine ayrıntılı bir cevap yazdı",
+        "Aristoteles şerhleriyle Avrupa'da 'Yorumcu' adıyla anıldı",
+        "Aklın kendi alanında bağımsız olduğunu savundu"
+      ],
+      "lessonId": "helenistik-ve-ortacag",
+      "tag": "İslam felsefesi"
+    },
+    {
+      "id": "descartes",
+      "name": "René Descartes",
+      "lifespan": "1596-1650",
+      "oneLiner": "Her şeyi yıkıp sarsılmaz tek bir noktadan yeniden kurmayı denedi.",
+      "contributions": [
+        "Metodik şüpheyi bir yöntem hâline getirdi",
+        "Bilginin başlangıcını dünyadan düşünen özneye kaydırdı",
+        "Analitik geometriyi geliştirerek cebir ile geometriyi birleştirdi"
+      ],
+      "lessonId": "descartes-ve-suphe",
+      "tag": "Akılcılık"
+    },
+    {
+      "id": "hume",
+      "name": "David Hume",
+      "lifespan": "1711-1776",
+      "oneLiner": "Deneyciliği sonuna kadar götürdü ve rahatsız edici sonuçları kabul etti.",
+      "contributions": [
+        "Tümevarım sorununu ortaya koydu",
+        "Nedenselliğin gözlemlenmediğini, zihnin eklediğini gösterdi",
+        "Olan ile olması gereken arasındaki ayrımı formüle etti"
+      ],
+      "lessonId": "deneycilik",
+      "tag": "Deneycilik"
+    },
+    {
+      "id": "kant-f",
+      "name": "Immanuel Kant",
+      "lifespan": "1724-1804",
+      "oneLiner": "Akılcılık ile deneyciliği, ikisini de haklı çıkararak birleştirdi.",
+      "contributions": [
+        "Deneyimin biçimini zihnin yapısına bağladı",
+        "Bilginin sınırını kendinde şeyle çizdi",
+        "Ahlakı sonuçlardan bağımsız, evrenselleştirilebilir bir ilkeye dayandırdı"
+      ],
+      "quote": {
+        "text": "Üzerimdeki yıldızlı gök ve içimdeki ahlak yasası.",
+        "source": "Pratik Aklın Eleştirisi, 1788"
+      },
+      "lessonId": "kant",
+      "tag": "Aydınlanma"
+    },
+    {
+      "id": "nietzsche",
+      "name": "Friedrich Nietzsche",
+      "lifespan": "1844-1900",
+      "oneLiner": "Değerlerin doğruluğunu değil, nereden geldiğini sordu.",
+      "contributions": [
+        "Ahlakın soykütüğünü çıkararak değerleri tarihselleştirdi",
+        "'Tanrı öldü' teşhisiyle değer zemininin çöküşünü adlandırdı",
+        "Yapıtları ölümünden sonra kız kardeşi tarafından çarpıtılarak yayımlandı"
+      ],
+      "lessonId": "hegel-marx-nietzsche",
+      "tag": "Eleştiri"
+    },
+    {
+      "id": "sartre",
+      "name": "Jean-Paul Sartre",
+      "lifespan": "1905-1980",
+      "oneLiner": "Özgürlüğü bir imkân değil, kaçınılmaz bir yük olarak tanımladı.",
+      "contributions": [
+        "'Varoluş özden önce gelir' formülünü ortaya koydu",
+        "Kötü niyet kavramıyla sorumluluktan kaçmanın biçimlerini çözümledi",
+        "Nobel Edebiyat Ödülü'nü reddetti"
+      ],
+      "lessonId": "varoluşçuluk",
+      "tag": "Varoluşçuluk"
+    },
+    {
+      "id": "beauvoir",
+      "name": "Simone de Beauvoir",
+      "lifespan": "1908-1986",
+      "oneLiner": "Varoluşçu çerçeveyi toplumsal cinsiyete uyguladı.",
+      "contributions": [
+        "İkinci Cinsiyet ile kadınlığın verili bir öz değil kurulmuş bir konum olduğunu gösterdi",
+        "Özgürlüğün somut koşullara bağımlılığını vurguladı",
+        "Feminist kuramın kurucu metinlerinden birini yazdı"
+      ],
+      "quote": {
+        "text": "Kadın doğulmaz, kadın olunur.",
+        "source": "İkinci Cinsiyet, 1949"
+      },
+      "lessonId": "varoluşçuluk",
+      "tag": "Varoluşçuluk"
+    },
+    {
+      "id": "wittgenstein",
+      "name": "Ludwig Wittgenstein",
+      "lifespan": "1889-1951",
+      "oneLiner": "Kendi erken görüşünü en sert eleştiren kişi kendisi oldu.",
+      "contributions": [
+        "Erken döneminde dilin mantıksal yapısını çözümledi",
+        "Geç döneminde anlamın kullanımda olduğunu savundu",
+        "Dil oyunu ve aile benzerliği kavramlarını geliştirdi"
+      ],
+      "lessonId": "analitik",
+      "tag": "Analitik gelenek"
+    },
+    {
+      "id": "popper",
+      "name": "Karl Popper",
+      "lifespan": "1902-1994",
+      "oneLiner": "Bilimin ölçütünü doğrulamadan çürütmeye çevirdi.",
+      "contributions": [
+        "Yanlışlanabilirliği sınır ölçütü olarak önerdi",
+        "Tümevarım sorununa çürütme temelli bir yanıt kurdu",
+        "Açık toplum savunusuyla siyaset felsefesine katkı verdi"
+      ],
+      "lessonId": "bilim-felsefesi",
+      "tag": "Bilim felsefesi"
+    },
+    {
+      "id": "kuhn",
+      "name": "Thomas Kuhn",
+      "lifespan": "1922-1996",
+      "oneLiner": "Bilimin nasıl işlediğini tarihe bakarak yeniden tarif etti.",
+      "contributions": [
+        "Olağan bilim ile bilimsel devrim ayrımını yaptı",
+        "Paradigma kavramını yaygınlaştırdı",
+        "Bilim tarihini bilim felsefesinin merkezine taşıdı"
+      ],
+      "lessonId": "bilim-felsefesi",
+      "tag": "Bilim felsefesi"
+    },
+    {
+      "id": "rawls",
+      "name": "John Rawls",
+      "lifespan": "1921-2002",
+      "oneLiner": "Adaleti bir düşünce deneyiyle yeniden kurdu.",
+      "contributions": [
+        "Cehalet peçesi altında ilke seçimi yöntemini geliştirdi",
+        "Eşit temel özgürlükler ve fark ilkesini formüle etti",
+        "Siyaset felsefesini yirminci yüzyılın ortasında yeniden canlandırdı"
+      ],
+      "lessonId": "etik-ve-siyaset",
+      "tag": "Siyaset felsefesi"
+    }
+  ],
+
+  "eraLabels": {
+    "antikcag": "Antikçağ",
+    "ortacag": "Ortaçağ",
+    "moderncag": "Modern çağ",
+    "yirminci": "Yirminci yüzyıl ve sonrası"
+  },
+
+  "timeline": [
+    {
+      "id": "milet",
+      "year": -585,
+      "yearLabel": "MÖ 585",
+      "title": "Milet okulu",
+      "body": "Thales ve ardılları, doğayı doğaüstüne başvurmadan açıklamayı dener. Felsefenin başlangıcı olarak bu kayma gösterilir.",
+      "era": "antikcag"
+    },
+    {
+      "id": "herakleitos-parmenides",
+      "year": -490,
+      "yearLabel": "MÖ 490 dolayı",
+      "title": "Değişim mi, kalıcılık mı",
+      "body": "Herakleitos akışı, Parmenides değişmezliği savunur. Sonraki bütün Yunan felsefesi bu iki uç arasında bir yol arayacaktır.",
+      "era": "antikcag",
+      "figureId": "parmenides"
+    },
+    {
+      "id": "sokrates-yargilanma",
+      "year": -399,
+      "yearLabel": "MÖ 399",
+      "title": "Sokrates'in ölümü",
+      "body": "Atina, sorgulamayı tehlikeli bulur. Sokrates baldıran zehri içerek ölür; olay felsefenin kurucu anlatısı hâline gelir.",
+      "era": "antikcag",
+      "figureId": "sokrates"
+    },
+    {
+      "id": "akademia",
+      "year": -387,
+      "yearLabel": "MÖ 387",
+      "title": "Akademia kuruluyor",
+      "body": "Platon'un okulu, felsefeyi sürekli bir kurum hâline getirir. Dokuz yüzyıl boyunca varlığını sürdürecektir.",
+      "era": "antikcag",
+      "figureId": "platon"
+    },
+    {
+      "id": "lykeion",
+      "year": -335,
+      "yearLabel": "MÖ 335",
+      "title": "Aristoteles'in okulu",
+      "body": "Gözlem, sınıflandırma ve derleme merkezli bir araştırma programı kurulur. Doğa incelemesi felsefenin parçası hâline gelir.",
+      "era": "antikcag",
+      "figureId": "aristoteles-f"
+    },
+    {
+      "id": "helenistik-okullar",
+      "year": -300,
+      "yearLabel": "MÖ 300 dolayı",
+      "title": "Stoa ve Bahçe",
+      "body": "Kent devletinin çözülmesiyle soru değişir: evrenin yapısı yerine, bu dünyada nasıl huzurlu yaşanacağı sorulur.",
+      "era": "antikcag"
+    },
+    {
+      "id": "epiktetos-donem",
+      "year": 108,
+      "yearLabel": "108 dolayı",
+      "title": "Bize bağlı olan ve olmayan",
+      "body": "Epiktetos'un öğretisi öğrencisi tarafından kayda geçirilir. Stoacılık en sade ve en aktarılabilir hâlini alır.",
+      "era": "antikcag",
+      "figureId": "epiktetos"
+    },
+    {
+      "id": "cevirmeler",
+      "year": 830,
+      "yearLabel": "830 dolayı",
+      "title": "Yunancadan Arapçaya",
+      "body": "Bağdat'ta yürütülen çeviri hareketi Yunan felsefe ve bilim metinlerini aktarır. Özgün bir felsefe geleneği doğar.",
+      "era": "ortacag"
+    },
+    {
+      "id": "ibn-sina-sifa",
+      "year": 1020,
+      "yearLabel": "1020 dolayı",
+      "title": "Varlık ve öz ayrımı",
+      "body": "İbn Sina, zorunlu ile mümkün varlık ayrımını kurar. Ayrım, Latin skolastiğinin de temel aracı olacaktır.",
+      "era": "ortacag",
+      "figureId": "ibn-sina"
+    },
+    {
+      "id": "gazzali-ibn-rusd",
+      "year": 1180,
+      "yearLabel": "1180 dolayı",
+      "title": "Felsefe tartışması",
+      "body": "Gazzali'nin filozoflara yönelttiği eleştiriye İbn Rüşd ayrıntılı bir cevap yazar. Tartışma Latinceye çevrilerek Avrupa'ya taşınır.",
+      "era": "ortacag",
+      "figureId": "ibn-rusd"
+    },
+    {
+      "id": "aquinas",
+      "year": 1274,
+      "yearLabel": "1274",
+      "title": "Skolastik sentez",
+      "body": "Aquinas, Aristoteles ile Hristiyan teolojisini birleştiren devasa bir sistem bırakır. Akıl ile inanç aynı çerçevede konumlandırılır.",
+      "era": "ortacag"
+    },
+    {
+      "id": "ockham-ustura",
+      "year": 1320,
+      "yearLabel": "1320 dolayı",
+      "title": "Gereksiz varlık çoğaltma",
+      "body": "Ockham, sadelik ilkesini bir yöntem kuralı hâline getirir. Adcılık güçlenir; tümeller tartışması yeni bir aşamaya girer.",
+      "era": "ortacag"
+    },
+    {
+      "id": "descartes-1637",
+      "year": 1637,
+      "yearLabel": "1637",
+      "title": "Yöntem Üzerine Konuşma",
+      "body": "Descartes, otoriteye dayanmadan sıfırdan başlayan bir bilgi programı ilan eder. Modern felsefenin başlangıcı sayılır.",
+      "era": "moderncag",
+      "figureId": "descartes"
+    },
+    {
+      "id": "locke-1690",
+      "year": 1690,
+      "yearLabel": "1690",
+      "title": "Boş levha",
+      "body": "Locke, zihinde doğuştan fikir bulunmadığını savunur. Bilgi kuramındaki tez, siyasette de ayrıcalık iddialarını zayıflatır.",
+      "era": "moderncag"
+    },
+    {
+      "id": "hume-1748",
+      "year": 1748,
+      "yearLabel": "1748",
+      "title": "Tümevarım ve nedensellik",
+      "body": "Hume, geleceğin geçmişe benzeyeceği varsayımının temellendirilemeyeceğini ve nedenselliğin gözlemlenmediğini gösterir.",
+      "era": "moderncag",
+      "figureId": "hume"
+    },
+    {
+      "id": "kant-1781",
+      "year": 1781,
+      "yearLabel": "1781",
+      "title": "Saf Aklın Eleştirisi",
+      "body": "Kant, deneyimin biçimini zihnin yapısına bağlar ve bilginin sınırını çizer. Akılcılık ile deneycilik tartışması yeniden kurulur.",
+      "era": "moderncag",
+      "figureId": "kant-f"
+    },
+    {
+      "id": "hegel-1807",
+      "year": 1807,
+      "yearLabel": "1807",
+      "title": "Tinin Görüngübilimi",
+      "body": "Hegel, düşüncenin tarih içinde geliştiğini savunur. Akıl artık zamansız değildir; bir gelişme sürecidir.",
+      "era": "moderncag"
+    },
+    {
+      "id": "marx-1867",
+      "year": 1867,
+      "yearLabel": "1867",
+      "title": "Kapital",
+      "body": "Marx, düşünce dünyasının üretim ilişkileri üzerinde yükseldiğini savunur. İdeoloji eleştirisi kalıcı bir araç hâline gelir.",
+      "era": "moderncag"
+    },
+    {
+      "id": "nietzsche-1887",
+      "year": 1887,
+      "yearLabel": "1887",
+      "title": "Ahlakın Soykütüğü",
+      "body": "Nietzsche, değerlerin doğruluğunu değil kökenini ve işlevini sorar. Değerlendirmenin ölçütü değişir.",
+      "era": "moderncag",
+      "figureId": "nietzsche"
+    },
+    {
+      "id": "frege-russell",
+      "year": 1903,
+      "yearLabel": "1903",
+      "title": "Yeni mantık",
+      "body": "Frege'nin açtığı yolda Russell, mantığı matematiğin yapısını çözümleyecek güce taşır. Felsefe yeni bir araç kazanır.",
+      "era": "yirminci"
+    },
+    {
+      "id": "viyana-cevresi",
+      "year": 1929,
+      "yearLabel": "1929",
+      "title": "Viyana Çevresi bildirisi",
+      "body": "Anlamlılık, deneyle sınanabilirliğe bağlanır. Program çöker ama açıklık ve argüman disiplini talebi kalır.",
+      "era": "yirminci"
+    },
+    {
+      "id": "heidegger-sartre",
+      "year": 1943,
+      "yearLabel": "1943",
+      "title": "Varlık ve Hiçlik",
+      "body": "Sartre, insanın önceden verilmiş bir özü olmadığını ve bu yüzden seçimden kaçamayacağını savunur.",
+      "era": "yirminci",
+      "figureId": "sartre"
+    },
+    {
+      "id": "ikinci-cinsiyet",
+      "year": 1949,
+      "yearLabel": "1949",
+      "title": "İkinci Cinsiyet",
+      "body": "Beauvoir, kadınlığın verili bir öz değil kurulmuş bir konum olduğunu gösterir. Feminist kuramın kurucu metinlerinden.",
+      "era": "yirminci",
+      "figureId": "beauvoir"
+    },
+    {
+      "id": "wittgenstein-1953",
+      "year": 1953,
+      "yearLabel": "1953",
+      "title": "Felsefi Soruşturmalar",
+      "body": "Anlam, gösterilen nesnede değil kullanımda aranır. Wittgenstein kendi erken görüşünü en sert biçimde eleştirir.",
+      "era": "yirminci",
+      "figureId": "wittgenstein"
+    },
+    {
+      "id": "kuhn-1962",
+      "year": 1962,
+      "yearLabel": "1962",
+      "title": "Bilimsel Devrimlerin Yapısı",
+      "body": "Kuhn, bilimin çoğu zaman kuram sınamadığını, ortak bir çerçeve içinde bulmaca çözdüğünü gösterir.",
+      "era": "yirminci",
+      "figureId": "kuhn"
+    },
+    {
+      "id": "gettier-1963",
+      "year": 1963,
+      "yearLabel": "1963",
+      "title": "Üç sayfalık çürütme",
+      "body": "Gettier, yüzyıllardır kullanılan bilgi tanımını iki karşı örnekle çürütür. Tanım altmış yıldır onarılmaya çalışılıyor.",
+      "era": "yirminci"
+    },
+    {
+      "id": "rawls-1971",
+      "year": 1971,
+      "yearLabel": "1971",
+      "title": "Bir Adalet Kuramı",
+      "body": "Rawls, cehalet peçesi düşünce deneyiyle siyaset felsefesini canlandırır. Fark ilkesi, faydacı toplamdan açıkça ayrılır.",
+      "era": "yirminci",
+      "figureId": "rawls"
+    },
+    {
+      "id": "uygulamali-etik",
+      "year": 1975,
+      "yearLabel": "1975",
+      "title": "Uygulamalı etik yükseliyor",
+      "body": "Hayvan hakları, tıp etiği ve çevre etiği ayrı alanlar hâline gelir. Felsefe somut politika tartışmalarına doğrudan girer.",
+      "era": "yirminci"
+    },
+    {
+      "id": "yz-etigi",
+      "year": 2015,
+      "yearLabel": "2015",
+      "title": "Otomatik kararların etiği",
+      "body": "Sorumluluğun kime ait olduğu, hangi adalet ölçütünün seçileceği ve gelecek kuşaklara karşı yükümlülük, klasik çerçeveleri yeniden tartışmaya açar.",
+      "era": "yirminci"
+    }
+  ]
+}

@@ -2030,6 +2030,60 @@
             ? "İki grup birbirine bu kadar karışmışken hiçbir eşik iyi değildir; sorun eşikte değil, modelin ayırt etme gücünde."
             : "Eşiği yükseltmek birinci hatayı azaltır ve ikincisini büyütür. Hangisinin daha pahalı olduğu teknik değil, kurumsal bir karardır.") };
       }
+    },
+
+    "yigin": {
+      title: "Kaç tane kum bir yığın eder?",
+      note: "İki öncül de tek tek makul: bir tane yığın değildir, bir tane eklemek yığın olmayanı yığın yapmaz. Yine de sonuç kabul edilemez. Sorun mantıkta değil, sınırı belirsiz kavramlarda.",
+      controls: [{ key: "n", label: "Kum tanesi", min: 1, max: 210, step: 1, def: 5,
+        fmt: function (v) { return v + " tane"; } }],
+      draw: function (p) {
+        var n = p.n, R = Math.ceil((Math.sqrt(8 * n + 1) - 1) / 2), i, r, kalan = n;
+        var s = gLine(0.02, 0.03, 0.98, 0.03, { c: "var(--rule)", w: 1.2 });
+        for (r = 0; r < R && kalan > 0; r++) {
+          var kap = R - r, bu = Math.min(kap, kalan);
+          for (i = 0; i < bu; i++) {
+            var x = 0.5 + (i - (bu - 1) / 2) * (0.9 / R);
+            s += gDot(x, 0.06 + r * (0.82 / R), { c: "var(--accent)", r: Math.max(1.6, 46 / R), o: 1 });
+          }
+          kalan -= bu;
+        }
+        return { svg: s, text: n === 1
+          ? "Bir tane kum yığın değil. Bunda kimse itiraz etmiyor."
+          : n < 12
+            ? n + " tane kum. Hâlâ yığın demiyoruz — ama tam olarak neden demediğimizi söylemek şimdiden zor."
+            : n < 60
+              ? n + " tane. Kimi yığın der, kimi demez. Belirsizlik bölgesi burası; kavramın kendisinde keskin bir sınır yok."
+              : n + " tane kum: buna herkes yığın der. Oysa yolun her adımında yalnızca bir tane eklendi ve hiçbir adımda 'işte şimdi yığın oldu' denebilecek bir an geçmedi." };
+      }
+    },
+
+    "fayda-ve-adalet": {
+      title: "Toplamı mı büyütmeli, en kötüyü mü korumalı?",
+      note: "Aynı politikayı iki ölçüt zıt yönde değerlendiriyor. Bu bir hesap hatası değil; hangi şeyin maksimize edileceğine dair ahlaki bir tercih.",
+      controls: [{ key: "e", label: "İzin verilen eşitsizlik", min: 0, max: 100, step: 10, def: 40, fmt: pctS }],
+      draw: function (p) {
+        var e = p.e, i;
+        var toplam = 100 + 0.5 * e, enDusuk = 20 - 0.12 * e;
+        var ust = toplam - 4 * enDusuk;
+        var pay = [enDusuk, enDusuk, enDusuk, enDusuk, ust];
+        var tavan = 130;
+        var s = frame("Beş kişilik toplum", "Refah");
+        for (i = 0; i < 5; i++) {
+          var cx = (i + 0.5) / 5, h = Math.min(0.92, pay[i] / tavan);
+          s += gRect(cx - 0.07, 0, cx + 0.07, h, { c: "var(--accent)", o: i === 4 ? 0.9 : 0.45 });
+          s += gTxt(cx, h, r0(pay[i]) + "", { a: "middle", dy: -5, s: 9, c: "var(--muted)" });
+        }
+        s += gLine(0, enDusuk / tavan, 1, enDusuk / tavan, { c: "var(--no)", w: 1.6, d: "5 3" });
+        s += gTxt(0.01, 1, "toplam refah " + r0(toplam), { a: "start", dy: 2, s: 10, b: 1, c: "var(--ink)" });
+        s += gTxt(0.01, 0.9, "en kötü durumdaki " + r0(enDusuk), { a: "start", dy: 2, s: 10, b: 1, c: "var(--no)" });
+        return { svg: s, text: "Bu düzeyde toplam refah " + r0(toplam) + ", en kötü durumdakinin payı " + r0(enDusuk) + ". " +
+          (e === 0
+            ? "Tam eşitlikte toplam en düşük seviyede ama kimse geride kalmıyor: Rawlsçı ölçütün seçtiği nokta burası."
+            : e === 100
+              ? "Toplam en yüksek noktasında — faydacı ölçüt burayı seçer. Ama en kötü durumdaki kişi başlangıçtakinin çok altında."
+              : "Kaydırıcıyı sağa itmek toplamı büyütüyor ve en alttakini aşağı çekiyor. İki ölçüt aynı veriden iki farklı 'doğru' çıkarır; hangisinin geçerli olduğu veriyle çözülemez.") };
+      }
     }
   };
 

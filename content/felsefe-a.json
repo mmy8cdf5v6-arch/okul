@@ -1,0 +1,486 @@
+[
+  {
+    "id": "sokrates-oncesi",
+    "moduleId": "antik",
+    "order": 1,
+    "title": "Sokrates öncesi",
+    "subtitle": "Mitolojiden akla geçiş: her şeyin neyden yapıldığını sormak.",
+    "minutes": 8,
+    "keyTerms": ["arkhe", "doğa filozofları", "değişim", "atomculuk", "logos"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Felsefenin başlangıcı olarak MÖ 6. yüzyıl Anadolu'su, özellikle Milet gösterilir. Buradaki kırılma bir soru değişimidir. Mit, dünyayı tanrıların iradesiyle açıklıyordu. Miletli düşünürler ise doğayı yine doğa içinden açıklamayı denediler: her şeyin kendisinden çıktığı temel ilke nedir? Bu ilkeye arkhe dediler."
+      },
+      {
+        "kind": "list",
+        "title": "İlk cevaplar",
+        "items": [
+          "Thales: su. Cevabın kendisinden çok, doğaüstüne başvurmadan cevap arama fikri devrimciydi.",
+          "Anaksimandros: apeiron — sınırsız, belirsiz olan. Duyularla algılanan hiçbir şeyle özdeşleştirilmeyen ilk soyut ilke.",
+          "Herakleitos: değişimin kendisi. 'Aynı ırmağa iki kez girilmez.' Kalıcı olan tek şey dönüşüm yasasıdır.",
+          "Parmenides: değişim bir yanılsamadır. Var olan vardır, yok olan yoktur; oluş mantıksal olarak imkânsızdır.",
+          "Demokritos: bölünemez atomlar ve boşluk. Yirmi beş yüzyıl sonra sınanabilir hâle gelen bir tahmin."
+        ]
+      },
+      {
+        "kind": "text",
+        "title": "Herakleitos ile Parmenides gerilimi",
+        "body": "Bu iki isim, felsefenin ilk büyük çatallanmasını temsil eder. Herakleitos'a göre gerçeklik akıştır; kalıcılık yüzeysel bir izlenimdir. Parmenides'e göre akıl, değişimi düşünemez: bir şeyin var olmayan hâlden var olan hâle geçtiğini söylemek, yokluğa varlık atfetmektir. Sonraki bütün Yunan felsefesi bu iki uç arasında bir yol aramakla geçti; Platon'un idea kuramı da Aristoteles'in madde-form ayrımı da bu gerilime verilmiş cevaplardır."
+      },
+      {
+        "kind": "text",
+        "title": "Sofistler ve ölçü sorusu",
+        "body": "MÖ 5. yüzyılda Atina'da sofistler, doğadan insana döndüler. Retorik ve ikna öğrettiler, ücret aldılar ve bu yüzden aristokrat çevrelerce küçümsendiler. Ama getirdikleri soru ciddiydi: yasalar ve ahlak doğal mı, yoksa insan yapımı mı? Protagoras'ın 'insan her şeyin ölçüsüdür' sözü, hakikatin bakan kişiye göre değişebileceği fikrini felsefeye soktu. Sokrates'in bütün çabası buna bir cevap arayışıdır."
+      },
+      {
+        "kind": "example",
+        "title": "Örnek: Zenon'un okları",
+        "body": "Parmenides'in öğrencisi Zenon, hareketin imkânsız olduğunu göstermek için paradokslar kurdu. Uçan ok her an belirli bir yerdedir; belirli bir yerde olan şey hareketsizdir; öyleyse ok hiçbir an hareket etmiyordur. Paradoks yanlış değildi, eksikti: sonsuz bölünebilirlik ve limit kavramları olmadan çözülemezdi. Matematiğin bu kavramları geliştirmesi iki bin yıl aldı."
+      },
+      {
+        "kind": "quote",
+        "text": "Aynı ırmaklara girenlerin üstünden hep başka başka sular akar.",
+        "source": "Herakleitos, fragman"
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Miletli düşünürlerin getirdiği asıl yenilik nedir?",
+        "options": [
+          "Tanrıların sayısını azaltmaları",
+          "Doğayı doğaüstüne başvurmadan, yine doğa içinden açıklamayı denemeleri",
+          "Matematiği icat etmeleri",
+          "Yazıyı kullanmaları"
+        ],
+        "answerIndex": 1,
+        "explanation": "Verdikleri cevaplardan çok, soruyu sorma biçimleri devrimciydi: açıklama artık iradeye değil, doğal bir ilkeye dayanacaktı."
+      },
+      {
+        "id": "q2",
+        "prompt": "Parmenides'in değişime itirazı neye dayanır?",
+        "options": [
+          "Gözlemlerine",
+          "Değişimi düşünmenin, yokluğa varlık atfetmeyi gerektirdiği savına",
+          "Dinsel inancına",
+          "Matematiksel hesaplara"
+        ],
+        "answerIndex": 1,
+        "explanation": "Bir şeyin var olmayan hâlden var olan hâle geçtiğini söylemek, Parmenides'e göre mantıksal bir çelişkidir. İtiraz gözleme değil akla dayanır."
+      },
+      {
+        "id": "q3",
+        "prompt": "Protagoras'ın 'insan her şeyin ölçüsüdür' sözü neyi öne sürer?",
+        "options": [
+          "İnsanın doğaya hükmettiğini",
+          "Hakikatin bakan kişiye ve topluluğa göre değişebileceğini",
+          "İnsanın en akıllı varlık olduğunu",
+          "Ölçmenin bilimin temeli olduğunu"
+        ],
+        "answerIndex": 1,
+        "explanation": "Sofistlerin getirdiği görelilik iddiası budur. Sokrates ve Platon'un felsefesi büyük ölçüde bu iddiaya verilmiş bir cevaptır."
+      }
+    ]
+  },
+
+  {
+    "id": "sokrates-platon",
+    "moduleId": "antik",
+    "order": 2,
+    "title": "Sokrates ve Platon",
+    "subtitle": "Sorgulamayı yöntem, kavramı gerçeklik yapmak.",
+    "minutes": 9,
+    "keyTerms": ["Sokratik yöntem", "idea", "mağara alegorisi", "anımsama", "erdem bilgidir"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Sokrates hiçbir şey yazmadı. Bildiğimiz her şey öğrencilerinin, özellikle Platon'un anlatımından geliyor. Yaptığı iş, Atina sokaklarında insanlara kullandıkları kavramları sormaktı: adalet nedir, cesaret nedir, dindarlık nedir? Muhatabı bir tanım verir, Sokrates o tanımı çürüten bir örnek bulur, muhatap tanımı düzeltir. Süreç çoğunlukla bir sonuca varmadan biter — ama muhatap artık bildiğini sandığı şeyi bilmediğini bilir."
+      },
+      {
+        "kind": "text",
+        "title": "Sokratik yöntemin amacı",
+        "body": "Bu yöntemin hedefi karşısındakini alt etmek değil, sahte bilgiyi temizlemektir. Sokrates kendi bilgisizliğini bilmesini tek üstünlüğü sayıyordu. Yöntemin bugünkü karşılıkları hukuk eğitiminden mühendislik incelemelerine kadar uzanır: bir iddiayı sınamanın yolu, onu destekleyen örnekleri saymak değil, çürütecek örneği aramaktır. Atina bu ısrarı tehlikeli buldu ve Sokrates MÖ 399'da ölüme mahkûm edildi."
+      },
+      {
+        "kind": "text",
+        "title": "Platon'un ideaları",
+        "body": "Platon, hocasının aradığı tanımların bir yerde gerçekten var olduğunu düşündü. Tek tek adil eylemler değişir, kusurludur, tartışmalıdır; ama 'adalet' kavramı bunların hepsinin ölçüsüdür. Platon bu kavramları duyusal dünyanın dışında, kendi başına var olan idealar olarak kurdu. Gördüğümüz dünya, bu ideaların eksik kopyalarından ibarettir. Böylece Herakleitos ile Parmenides uzlaştırılır: duyular dünyası akıştadır, idealar dünyası değişmezdir."
+      },
+      {
+        "kind": "list",
+        "title": "Platon'un kalıcı fikirleri",
+        "items": [
+          "Mağara alegorisi: zincirli insanlar duvardaki gölgeleri gerçeklik sanır; eğitim, dönüp ışığa bakmaktır.",
+          "Anımsama: öğrenmek yeni bilgi edinmek değil, ruhun önceden bildiğini hatırlamasıdır.",
+          "Ruhun üç parçası: akıl, irade ve iştah. İyi hayat, aklın diğerlerini yönetmesidir.",
+          "Filozof kral: bilgiye sahip olanın yönetmesi gerektiği savı — hem etkili hem tehlikeli bir fikir.",
+          "Yazı eleştirisi: Platon, yazının belleği zayıflatacağını ve soru sorulamayacağını yazdı."
+        ]
+      },
+      {
+        "kind": "example",
+        "title": "Örnek: Euthyphron sorusu",
+        "body": "Sokrates sorar: dindarca olan şeyler tanrılar sevdiği için mi dindarcadır, yoksa dindarca oldukları için mi tanrılar sever? İlk şıkta ahlak keyfîdir; tanrılar başka türlü isteseydi işkence erdem olurdu. İkinci şıkta ahlakın ölçüsü tanrıların dışındadır ve onlara ihtiyaç kalmaz. Soru iki bin dört yüz yıldır tazeliğini koruyor, çünkü ahlakın temelinin otorite mi akıl mı olduğunu sorar."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Sokratik yöntemin asıl amacı nedir?",
+        "options": [
+          "Tartışmayı kazanmak",
+          "Bilinmeyeni öğretmek",
+          "Sahte bilgiyi çürüterek bilmediğini fark ettirmek",
+          "Yeni tanımlar üretmek"
+        ],
+        "answerIndex": 2,
+        "explanation": "Diyaloglar çoğunlukla tanıma varmadan biter. Kazanılan şey bir cevap değil, cevabın elde olmadığının farkına varılmasıdır."
+      },
+      {
+        "id": "q2",
+        "prompt": "Platon'un idea kuramı Herakleitos-Parmenides gerilimini nasıl çözer?",
+        "options": [
+          "İkisini de reddederek",
+          "Duyular dünyasını akışa, idealar dünyasını değişmezliğe vererek",
+          "Değişimi tümüyle kabul ederek",
+          "Matematiği devre dışı bırakarak"
+        ],
+        "answerIndex": 1,
+        "explanation": "Platon iki dünya ayırır: gördüğümüz dünya değişir, kavramların bulunduğu dünya değişmez. Böylece iki görüş de kısmen doğrulanır."
+      },
+      {
+        "id": "q3",
+        "prompt": "Euthyphron sorusu neyi sorgular?",
+        "options": [
+          "Tanrıların varlığını",
+          "Ahlakın temelinin otorite mi yoksa otoriteden bağımsız bir ölçü mü olduğunu",
+          "Dinin toplumsal işlevini",
+          "Bilginin kaynağını"
+        ],
+        "answerIndex": 1,
+        "explanation": "Her iki şık da bir bedel taşır: ya ahlak keyfî olur ya da otoriteden bağımsız bir ölçü kabul edilir. Soru bugün de aynı biçimde durur."
+      }
+    ]
+  },
+
+  {
+    "id": "aristoteles",
+    "moduleId": "antik",
+    "order": 3,
+    "title": "Aristoteles",
+    "subtitle": "Gökyüzünden yeryüzüne: sınıflandırmak, gözlemlemek, ölçmek.",
+    "minutes": 9,
+    "keyTerms": ["madde ve form", "dört neden", "kıyas", "altın orta", "eudaimonia"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Platon'un öğrencisi Aristoteles, hocasının iki dünyasını reddetti. İdealar ayrı bir yerde durmaz; her şeyin içindedir. Bir heykelde madde bronzdur, form heykelin biçimidir ve ikisi ayrılamaz. Bu tek hamle felsefeyi gökten yere indirir: bilgi edinmenin yolu artık soyut düşünce kadar gözlemdir. Aristoteles deniz canlılarını inceledi, siyasal anayasaları topladı, tiyatro metinlerini çözümledi."
+      },
+      {
+        "kind": "list",
+        "title": "Dört neden",
+        "items": [
+          "Maddi neden: neyden yapılmış? Bir masa için ahşap.",
+          "Formel neden: hangi biçimde? Masanın tasarımı.",
+          "Fail neden: kim ya da ne yaptı? Marangoz.",
+          "Ereksel neden: ne için? Üstünde yemek yemek için.",
+          "Modern bilim ilk üçünü tuttu, dördüncüyü doğa açıklamalarından çıkardı — ama biyolojide işlev sorusu biçim değiştirerek geri döndü."
+        ]
+      },
+      {
+        "kind": "text",
+        "title": "Mantığı kurmak",
+        "body": "Aristoteles, geçerli çıkarımın biçimini inceleyen ilk sistematik çalışmayı yaptı. Kıyas, iki öncülden bir sonucun zorunlu olarak çıkmasıdır: bütün insanlar ölümlüdür, Sokrates insandır, öyleyse Sokrates ölümlüdür. Kritik olan, çıkarımın geçerliliğinin içerikten bağımsız oluşudur; aynı biçim başka kavramlarla da işler. Bu buluş iki bin yıl boyunca mantığın tamamı sayıldı; 19. yüzyılda ancak genişletilerek aşıldı."
+      },
+      {
+        "kind": "text",
+        "title": "Etik: karakterin ortası",
+        "body": "Aristoteles'in etiği kural değil karakter merkezlidir. Sorusu 'hangi eylem doğrudur' değil, 'nasıl bir insan olmalıyım'dır. Erdem, iki aşırılığın ortasındaki huydur: cesaret, korkaklık ile pervasızlık arasında; cömertlik, cimrilik ile savurganlık arasında. Orta nokta herkes için aynı değildir, duruma ve kişiye göre belirlenir; bunu bulmak da pratik bilgelik gerektirir. Amaç eudaimonia'dır — haz değil, insana özgü yetilerin tam gerçekleşmesi anlamında iyi yaşam."
+      },
+      {
+        "kind": "example",
+        "title": "Örnek: iki bin yıllık otorite",
+        "body": "Aristoteles'in doğa yazıları Ortaçağ Avrupa'sında ve İslam dünyasında neredeyse tartışılmaz bir otorite hâline geldi. Ağır cisimlerin daha hızlı düştüğü görüşü, kimse denemediği için yüzyıllarca doğru sayıldı. Bilimsel devrimin ilk işi bu otoriteyi kırmak oldu. Buradaki ders Aristoteles'in yanlışlığı değil, bir otoriteye dayanan bilginin sınanmadıkça çürümesidir."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Aristoteles'in Platon'dan ayrıldığı temel nokta nedir?",
+        "options": [
+          "Mantığı reddetmesi",
+          "Formun ayrı bir dünyada değil, şeylerin içinde olduğunu savunması",
+          "Etikle ilgilenmemesi",
+          "Gözlemi reddetmesi"
+        ],
+        "answerIndex": 1,
+        "explanation": "Madde ile form ayrılamaz. Bu hamle bilgiyi soyut düşüncenin yanına gözlemi de koyar ve doğa araştırmasını meşrulaştırır."
+      },
+      {
+        "id": "q2",
+        "prompt": "Kıyasın önemi nereden gelir?",
+        "options": [
+          "Doğru sonuçlar vermesinden",
+          "Çıkarımın geçerliliğinin içerikten bağımsız, biçimsel olarak incelenebilmesinden",
+          "Kısa olmasından",
+          "Gözleme dayanmasından"
+        ],
+        "answerIndex": 1,
+        "explanation": "Aynı biçim farklı kavramlarla da geçerlidir. Mantığın biçimsel bir disiplin olarak kurulması bu ayrımla mümkün oldu."
+      },
+      {
+        "id": "q3",
+        "prompt": "Aristoteles'in etiği hangi soruyu merkeze alır?",
+        "options": [
+          "Hangi eylem kural olarak doğrudur?",
+          "Nasıl bir insan olmalıyım?",
+          "En çok kişiye en çok fayda hangisidir?",
+          "Tanrı ne emrediyor?"
+        ],
+        "answerIndex": 1,
+        "explanation": "Erdem etiği eylemi değil karakteri merkeze alır. Doğru eylem, erdemli bir kişinin o durumda yapacağı eylemdir."
+      }
+    ]
+  },
+
+  {
+    "id": "helenistik-ve-ortacag",
+    "moduleId": "antik",
+    "order": 4,
+    "title": "Helenistik okullar ve Ortaçağ",
+    "subtitle": "Felsefe bir yaşama sanatına, sonra bir teoloji aracına dönüşüyor.",
+    "minutes": 9,
+    "keyTerms": ["stoacılık", "epikürcülük", "şüphecilik", "İslam felsefesi", "skolastik"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "İskender sonrası dünyada kent devleti çözüldü, siyasal katılım anlamını yitirdi. Felsefenin sorusu da değişti: evrenin yapısı yerine, bu dünyada nasıl huzurlu yaşanacağı sorulmaya başlandı. Helenistik okullar bir kuram kadar bir yaşama rejimi öneriyorlardı."
+      },
+      {
+        "kind": "list",
+        "title": "Üç büyük okul",
+        "items": [
+          "Stoacılık: kontrol edebildiklerinle edemediklerini ayır. Yalnızca kendi yargılarına ve tercihlerine hükmedebilirsin; gerisi senin işin değildir.",
+          "Epikürcülük: haz iyidir ama haz, arzuların azaltılmasıyla elde edilir. Sade yaşam, dostluk, korkulardan kurtulmak.",
+          "Şüphecilik: yargıyı askıya al. Hiçbir iddianın karşıtından daha güçlü olduğu kanıtlanamıyorsa, huzur karar vermemekten gelir.",
+          "Üçü de ortak bir hedefi paylaşır: sarsılmazlık. Felsefe burada bilgi kadar terapiye yakındır.",
+          "Stoacılığın Roma'daki temsilcileri bir imparator, bir devlet adamı ve azat edilmiş bir köleydi; öğreti sınıf tanımıyordu."
+        ]
+      },
+      {
+        "kind": "text",
+        "title": "İslam dünyasında felsefe",
+        "body": "8. ve 12. yüzyıllar arasında Yunan metinleri Arapçaya çevrildi ve özgün bir felsefe geleneği doğdu. Kindî felsefeyi İslam düşüncesine soktu, Farabi siyaset felsefesini ve mantığı geliştirdi, İbn Sina varlık ile öz arasındaki ayrımı kurarak sonraki bütün metafiziği etkiledi. Gazzali, felsefecilerin kesin bilgi iddiasını sarsan güçlü bir eleştiri yazdı; İbn Rüşd buna ayrıntılı bir cevap verdi. Bu tartışma Latinceye çevrildiğinde Avrupa üniversitelerinin gündemi hâline geldi."
+      },
+      {
+        "kind": "text",
+        "title": "Skolastik ve tümeller sorunu",
+        "body": "Ortaçağ Avrupa'sında felsefe, teolojinin araçlarını sağlıyordu ama kendi sorularını da üretti. En kalıcı olanı tümeller tartışmasıdır: 'insan' diye bir şey gerçekten var mıdır, yoksa yalnızca tek tek insanlar mı vardır ve 'insan' bir addan mı ibarettir? Gerçekçiler birinciyi, adcılar ikinciyi savundu. Aquinas, Aristoteles ile Hristiyan teolojisini uzlaştıran devasa bir sistem kurdu. Ockham ise gereksiz varlık çoğaltmamayı bir yöntem ilkesi hâline getirdi."
+      },
+      {
+        "kind": "example",
+        "title": "Örnek: Epiktetos'un ayrımı",
+        "body": "Azat edilmiş bir köle olan Epiktetos'un öğretisi tek bir ayrımla başlar: bazı şeyler bize bağlıdır, bazıları değildir. Bedenimiz, itibarımız, malımız ve başkalarının bizim hakkımızda düşündükleri bize bağlı değildir. Yargılarımız, isteklerimiz ve tepkilerimiz bize bağlıdır. Mutsuzluğun kaynağı, ikinci kümeye ait bir çabayı birinci kümeye harcamaktır. Modern bilişsel terapi tekniklerinin bir kısmı doğrudan bu ayrımdan türetilmiştir."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Helenistik okulların ortak hedefi neydi?",
+        "options": [
+          "Evrenin yapısını açıklamak",
+          "Sarsılmazlık: dış koşullardan bağımsız bir iç huzur",
+          "Siyasal iktidarı ele geçirmek",
+          "Matematiği geliştirmek"
+        ],
+        "answerIndex": 1,
+        "explanation": "Kent devletinin çözülmesiyle soru değişti. Felsefe, kuram kadar bir yaşama rejimi ve neredeyse bir terapi hâline geldi."
+      },
+      {
+        "id": "q2",
+        "prompt": "Tümeller tartışması neyi sorar?",
+        "options": [
+          "Evrenin sonsuz olup olmadığını",
+          "'İnsan' gibi genel kavramların gerçekten var olup olmadığını, yoksa yalnızca bir ad mı olduğunu",
+          "Tanrı'nın varlığını",
+          "Ruhun ölümsüzlüğünü"
+        ],
+        "answerIndex": 1,
+        "explanation": "Gerçekçiler tümellerin gerçek varlıklar olduğunu, adcılar yalnızca tek tek şeylerin var olduğunu savundu. Tartışma bugün de dil felsefesinde sürüyor."
+      },
+      {
+        "id": "q3",
+        "prompt": "Epiktetos'un temel ayrımı hangisidir?",
+        "options": [
+          "İyi ile kötü",
+          "Bize bağlı olanlar ile bize bağlı olmayanlar",
+          "Beden ile ruh",
+          "Bilgi ile inanç"
+        ],
+        "answerIndex": 1,
+        "explanation": "Yargılarımız bize bağlıdır; bedenimiz, itibarımız ve başkalarının düşünceleri değildir. Mutsuzluk, bu ikisinin karıştırılmasından doğar."
+      }
+    ]
+  },
+
+  {
+    "id": "descartes-ve-suphe",
+    "moduleId": "modern",
+    "order": 1,
+    "title": "Descartes ve şüphe",
+    "subtitle": "Her şeyi yıkıp sağlam tek bir taş aramak.",
+    "minutes": 8,
+    "keyTerms": ["metodik şüphe", "cogito", "düalizm", "kesinlik", "özne"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "17. yüzyılda otoritenin bilgi kaynağı olma gücü zayıflamıştı. Descartes buna radikal bir cevap verdi: hiçbir otoriteye dayanmadan, sıfırdan başlayarak sarsılmaz bir temel aramak. Yöntemi, en ufak şüphe duyulabilecek her şeyi yanlış saymaktı. Duyular yanıltır — bir daldırılmış çubuk kırık görünür. Uyanık olduğuma bile emin olamam, çünkü rüyada da uyanık olduğumu sanırım."
+      },
+      {
+        "kind": "text",
+        "title": "Kalan tek şey",
+        "body": "Şüphe ne kadar ilerlerse ilerlesin, şüphe eden bir şeyin var olması gerekir. Aldatılıyor olsam bile, aldatılmak için var olmalıyım. 'Düşünüyorum, öyleyse varım' bir çıkarımdan çok, şüphenin kendisini yok edemediği tek noktadır. Descartes bunu, üzerine bilgiyi yeniden kuracağı zemin olarak aldı."
+      },
+      {
+        "kind": "text",
+        "title": "Bedelini ödediği ayrım",
+        "body": "Bu kesinliğin bir bedeli oldu. Descartes düşünen şeyi, uzamlı yani fiziksel şeyden ayırdı: zihin ile beden iki farklı töz. Ayrım kesinliği kurtardı ama bir soru bıraktı — birbirinden bu kadar farklı iki töz nasıl etkileşiyor? Descartes'ın verdiği cevaplar kendi çağında bile ikna edici bulunmadı ve zihin-beden sorunu felsefenin en inatçı problemlerinden biri olarak kaldı."
+      },
+      {
+        "kind": "list",
+        "title": "Descartes'ın açtığı yol",
+        "items": [
+          "Bilginin başlangıç noktası artık dünya değil, düşünen özne.",
+          "Kesinlik, felsefenin merkezî ölçütü hâline geldi.",
+          "Zihin-beden ikiliği hem bilim hem felsefe için kalıcı bir problem doğurdu.",
+          "Yöntem fikri: bilgi, izlenecek bir usulle üretilebilir bir şeydir.",
+          "İçe dönük başlangıç, sonraki üç yüzyıl boyunca 'dış dünyayı nasıl biliyoruz' sorusunu yakıcı kıldı."
+        ]
+      },
+      {
+        "kind": "example",
+        "title": "Örnek: kötücül cin",
+        "body": "Descartes, duyularını sistematik olarak yanıltan güçlü bir aldatıcı hayal eder. Bugünkü karşılığı beyin-fanusta senaryosudur ve daha yenisi benzetim tartışmasıdır. Argümanın gücü senaryonun inandırıcılığından gelmez; dış dünya hakkındaki inançlarımızın deneyimin kendisinden çıkarılamadığını göstermesinden gelir. Aynı deneyim, çok farklı gerçekliklerle uyumludur."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Descartes'ın metodik şüphesinin amacı nedir?",
+        "options": [
+          "Hiçbir şeyin bilinemeyeceğini göstermek",
+          "Şüphe edilemeyen bir temel bularak bilgiyi yeniden kurmak",
+          "Duyulara güvenmeyi öğretmek",
+          "Otoriteyi güçlendirmek"
+        ],
+        "answerIndex": 1,
+        "explanation": "Şüphe amaç değil araçtır. Descartes, yıkımın ardından sarsılmaz bir zemin üzerinde yeniden inşa etmeyi hedefler."
+      },
+      {
+        "id": "q2",
+        "prompt": "'Düşünüyorum, öyleyse varım' neden özel bir konumdadır?",
+        "options": [
+          "Gözlemle doğrulandığı için",
+          "Şüphe etmenin kendisi, şüphe eden birinin varlığını gerektirdiği için",
+          "Herkes kabul ettiği için",
+          "Matematiksel olduğu için"
+        ],
+        "answerIndex": 1,
+        "explanation": "Aldatılıyor olmak bile var olmayı gerektirir. Bu, şüphenin kendisini yok edemediği tek noktadır."
+      },
+      {
+        "id": "q3",
+        "prompt": "Descartes'ın düalizminin bıraktığı temel problem nedir?",
+        "options": [
+          "Tanrı'nın varlığı",
+          "Birbirinden tümüyle farklı iki tözün nasıl etkileştiği",
+          "Matematiğin temelleri",
+          "Ahlakın kaynağı"
+        ],
+        "answerIndex": 1,
+        "explanation": "Zihin ile beden ayrı tözlerse aralarındaki nedensel ilişki açıklanamaz hâle gelir. Zihin-beden sorunu bu ayrımdan doğar."
+      }
+    ]
+  },
+
+  {
+    "id": "deneycilik",
+    "moduleId": "modern",
+    "order": 2,
+    "title": "Deneycilik",
+    "subtitle": "Zihinde deneyimden gelmeyen hiçbir şey yoktur — ya varsa?",
+    "minutes": 9,
+    "keyTerms": ["deneycilik", "boş levha", "tümevarım sorunu", "nedensellik", "ben"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Kıta Avrupası akılcılığı bilginin kaynağını akılda ararken, İngiliz deneyciliği deneyimde aradı. Locke, zihnin doğuştan boş bir levha olduğunu savundu: bütün fikirler duyulardan gelir ve bileşerek karmaşık fikirleri üretir. Bu, hem bilgi kuramında hem siyasette sonuçlar doğurdu — doğuştan gelen fikir yoksa, doğuştan gelen ayrıcalık iddiası da zayıflar."
+      },
+      {
+        "kind": "text",
+        "title": "Hume'un iki bombası",
+        "body": "Deneyciliği sonuna kadar götüren Hume oldu ve vardığı yer rahatsız ediciydi. Birincisi tümevarım sorunudur: güneşin her sabah doğmuş olması, yarın doğacağını mantıksal olarak kanıtlamaz. Geleceğin geçmişe benzeyeceği varsayımı ancak yine geçmiş deneyimle savunulabilir ve bu bir kısır döngüdür. İkincisi nedenselliktir: iki olayın birbirini izlediğini gözlemleriz, aralarındaki zorunlu bağı hiç görmeyiz. Neden, dünyada bulduğumuz bir şey değil, zihnin alışkanlıkla eklediği bir şeydir."
+      },
+      {
+        "kind": "list",
+        "title": "Hume'un diğer sonuçları",
+        "items": [
+          "Ben: içe baktığımızda yalnızca izlenimler buluruz, onları taşıyan bir 'ben' bulamayız. Kişi, izlenimlerin bir demetidir.",
+          "Olan ile olması gereken: bir olgu tarifinden bir ahlaki sonuç mantıksal olarak çıkmaz.",
+          "Mucize: olağandışı bir iddianın kabul edilmesi için, tanıklığın yanlış olmasının daha büyük bir mucize olması gerekir.",
+          "Bu sonuçlar bilimi çürütmez ama onu mantıksal zorunluluk değil, temellendirilmiş bir alışkanlık olarak yeniden konumlandırır.",
+          "Kant, kendisini 'dogmatik uykusundan' uyandıranın Hume olduğunu yazacaktı."
+        ]
+      },
+      {
+        "kind": "text",
+        "title": "Berkeley'in ara durağı",
+        "body": "Berkeley, deneyciliği farklı bir yönden sürdürdü: madde diye bir şey varsayacaksak ve ona hiçbir zaman doğrudan erişemiyorsak, o varsayım gereksizdir. Var olmak algılanmaktır. Bu, sezgiye aykırı ama tutarlı bir konumdur ve deneyciliğin başlangıç varsayımlarının nereye gidebileceğini gösterir. Argümanın çürütülmesi, çürütülemeyeceğini kabul etmekten daha zordur."
+      },
+      {
+        "kind": "example",
+        "title": "Örnek: kara kuğu",
+        "body": "Bir milyon beyaz kuğu görmek, bütün kuğuların beyaz olduğunu kanıtlamaz. Tek bir kara kuğu ise savı kesin olarak çürütür. Doğrulama ile çürütme arasındaki bu asimetri, Hume'un tümevarım sorununun somut hâlidir ve iki yüzyıl sonra Popper'ın bilim anlayışının çıkış noktası olacaktır."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Hume'un tümevarım sorunu nedir?",
+        "options": [
+          "Gözlemlerin yanlış olabilmesi",
+          "Geleceğin geçmişe benzeyeceği varsayımının, ancak yine geçmiş deneyimle savunulabilmesi — yani kısır döngü",
+          "Örneklem büyüklüğünün yetersizliği",
+          "Matematiğin deneyime dayanmaması"
+        ],
+        "answerIndex": 1,
+        "explanation": "Tümevarımı temellendirmek için tümevarıma başvurmak gerekir. Hume bu döngüden çıkış olmadığını gösterdi."
+      },
+      {
+        "id": "q2",
+        "prompt": "Hume'a göre nedensellik nedir?",
+        "options": [
+          "Doğada gözlemlenen zorunlu bir bağ",
+          "Ardışıklığı tekrar tekrar gözlemleyen zihnin alışkanlıkla eklediği bir şey",
+          "Matematiksel bir ilişki",
+          "Tanrısal bir düzen"
+        ],
+        "answerIndex": 1,
+        "explanation": "Ardışıklığı gözleriz, zorunlu bağı görmeyiz. Neden, dünyada bulduğumuz değil zihnin eklediği bir kategoridir."
+      },
+      {
+        "id": "q3",
+        "prompt": "'Olan'dan 'olması gereken' çıkarılamaz ilkesi neyi söyler?",
+        "options": [
+          "Ahlakın önemsiz olduğunu",
+          "Olgusal bir tarifden mantıksal olarak bir ahlaki sonuç türetilemeyeceğini",
+          "Bilimin ahlaka üstün olduğunu",
+          "Ahlakın deneyimden geldiğini"
+        ],
+        "answerIndex": 1,
+        "explanation": "Bir şeyin doğada böyle olması, öyle olması gerektiğini göstermez. Bu ayrım bugün de biyoloji ve etik tartışmalarında merkezîdir."
+      }
+    ]
+  }
+]

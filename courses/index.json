@@ -96,5 +96,19 @@
     "questions": 36,
     "charts": 4,
     "file": "courses/yapay-zeka.json"
+  },
+  {
+    "id": "felsefe",
+    "title": "Felsefe tarihi",
+    "subtitle": "Soruların tarihi",
+    "description": "Milet'ten çağdaş etiğe: hangi soruların sorulduğu, verilen cevapların neyi çözüp neyi açtığı ve bugüne ne kaldığı.",
+    "icon": "🏛",
+    "accent": "#4c4a7a",
+    "accentDark": "#a9a5e0",
+    "category": "klasik",
+    "lessons": 12,
+    "questions": 36,
+    "charts": 2,
+    "file": "courses/felsefe.json"
   }
 ]

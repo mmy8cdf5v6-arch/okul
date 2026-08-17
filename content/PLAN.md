@@ -20,7 +20,7 @@ grafik yazılır, süs olacaksa yazılmaz.
 | 3 | Olasılık ve karar verme | `olasilik` | Bugünü anlamak | 5 | ✅ |
 | 4 | Müzik teorisi | `muzik` | Klasikler | 5 | ✅ |
 | 5 | Yapay zekâ okuryazarlığı | `yapay-zeka` | Bugünü anlamak | 4 | ✅ |
-| 6 | Felsefe tarihi | `felsefe` | Klasikler | 1 | |
+| 6 | Felsefe tarihi | `felsefe` | Klasikler | 2 | ✅ |
 | 7 | İklim ve enerji | `iklim` | Bugünü anlamak | 5 | |
 | 8 | Astronomi ve evrenin tarihi | `astronomi` | Klasikler | 5 | |
 | 9 | Medya ve propaganda okuryazarlığı | `medya` | Bugünü anlamak | 3 | |

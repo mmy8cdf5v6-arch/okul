@@ -1,0 +1,489 @@
+[
+  {
+    "id": "kant",
+    "moduleId": "modern",
+    "order": 3,
+    "title": "Kant'ın sentezi",
+    "subtitle": "Zihin dünyayı yansıtmaz; dünyanın görünüşünü kurar.",
+    "minutes": 9,
+    "keyTerms": ["Kopernik devrimi", "kategoriler", "kendinde şey", "sentetik a priori", "kategorik buyruk"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Kant, akılcılık ile deneyciliğin çatışmasını iki tarafı da haklı çıkararak çözmeyi denedi. Deneyciler haklıydı: içerik deneyimden gelir. Akılcılar da haklıydı: deneyimin kendisi zaten belirli bir biçimde düzenlenmiş olarak gelir. Kant bu düzenlemenin dünyada değil, zihnin yapısında olduğunu savundu. Buna kendi Kopernik devrimi adını verdi: bilgi nesneye uymaz, nesne bilginin koşullarına uyar."
+      },
+      {
+        "kind": "text",
+        "title": "Gözlük benzetmesi",
+        "body": "Zihin, deneyimi zorunlu olarak mekân ve zaman içinde, nedensellik gibi kategoriler aracılığıyla alır. Bunlar deneyimden öğrenilmez; deneyimin mümkün olmasının koşuludur. Çıkarılamayan bir gözlükle bakıyoruz. Bu, Hume'un nedensellik itirazına bir cevaptır: nedensellik dünyada bulunmaz ama keyfî bir alışkanlık da değildir, deneyimin zorunlu biçimidir."
+      },
+      {
+        "kind": "text",
+        "title": "Kendinde şey",
+        "body": "Bunun bedeli ağırdır. Gözlüğü çıkaramıyorsak, dünyanın bize göründüğü hâlini biliriz, kendinde olduğu hâlini bilemeyiz. Kant bu ikinci alana kendinde şey der ve bilginin ona ulaşamayacağını söyler. Bu sınır, sonraki iki yüzyılın büyük bölümünü meşgul etti: kimileri sınırı kabul edip içeride çalıştı, kimileri sınırın kendisinin tutarsız olduğunu savundu."
+      },
+      {
+        "kind": "list",
+        "title": "Kant'ın etiği",
+        "items": [
+          "Ahlaki değer, eylemin sonucunda değil, yapıldığı ilkede bulunur.",
+          "Kategorik buyruk: yalnızca herkesin uyguladığını isteyebileceğin bir ilkeye göre davran.",
+          "İkinci formülasyon: insanı daima amaç olarak gör, yalnızca araç olarak değil.",
+          "Özerklik: ahlaklı olmak, dışarıdan gelen buyruğa değil, aklın kendi koyduğu yasaya uymaktır.",
+          "Bu çerçeve, sonuçların hesabına dayanan faydacılıkla doğrudan karşıtlık içindedir."
+        ]
+      },
+      {
+        "kind": "example",
+        "title": "Örnek: yalan söylemek",
+        "body": "Kant'ın ölçütü şudur: 'işime geldiğinde yalan söylerim' ilkesini herkesin uyguladığı bir dünyayı isteyebilir misin? İsteyemezsin, çünkü böyle bir dünyada kimse kimseye inanmaz ve yalan söylemek anlamsızlaşır; ilke kendini yok eder. Aynı ölçüt, katilin kapıya dayandığı ünlü örnekte rahatsız edici bir sonuç verir: Kant orada bile yalanı savunmaz. Kuramın gücü de zayıflığı da bu tavizsizliktedir."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Kant'ın 'Kopernik devrimi' ne anlama gelir?",
+        "options": [
+          "Dünyanın güneş etrafında döndüğünü kanıtlaması",
+          "Bilginin nesneye değil, nesnenin bilginin koşullarına uyduğunu savunması",
+          "Deneyciliği tümüyle reddetmesi",
+          "Matematiği felsefeye sokması"
+        ],
+        "answerIndex": 1,
+        "explanation": "Merkez, dünyadan bilen özneye kayar. Deneyimin biçimini dünya değil, zihnin yapısı belirler."
+      },
+      {
+        "id": "q2",
+        "prompt": "Kendinde şey nedir?",
+        "options": [
+          "Duyularla algılanan nesne",
+          "Bize göründüğü hâlinden bağımsız olarak var olan, bilgiye kapalı gerçeklik",
+          "Zihnin bir kategorisi",
+          "Ahlaki bir ilke"
+        ],
+        "answerIndex": 1,
+        "explanation": "Zihnin biçimlendirmesinden geçmemiş gerçekliktir. Kant'a göre bu alan düşünülebilir ama bilinemez."
+      },
+      {
+        "id": "q3",
+        "prompt": "Kategorik buyruğun ölçütü nedir?",
+        "options": [
+          "Eylemin en çok kişiye fayda sağlaması",
+          "İlkenin, herkes tarafından uygulandığında kendini yok etmeden geçerli kalabilmesi",
+          "Toplumun onaylaması",
+          "Sonucun iyi olması"
+        ],
+        "answerIndex": 1,
+        "explanation": "Sınav evrenselleştirilebilirliktir. 'Herkes böyle yapsa ne olurdu' sorusunun mantıksal bir sınamaya çevrilmiş hâli."
+      }
+    ]
+  },
+
+  {
+    "id": "hegel-marx-nietzsche",
+    "moduleId": "modern",
+    "order": 4,
+    "title": "Hegel, Marx, Nietzsche",
+    "subtitle": "Aklın da tarihi var — ve belki bir çıkarı.",
+    "minutes": 9,
+    "keyTerms": ["diyalektik", "tarihsellik", "yabancılaşma", "ideoloji", "değerlerin soykütüğü"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "19. yüzyılda felsefe, Kant'ın bıraktığı yerden bir adım daha atarak aklın kendisini tarihselleştirdi. Hegel'e göre düşünce zamansız kategorilerden ibaret değildir; tarih içinde gelişir. Bir düşünce kendi karşıtını doğurur, çatışma ikisini de aşan yeni bir aşamada çözülür ve süreç yeniden başlar. Diyalektik denen bu hareket, hem düşüncenin hem tarihin mantığıdır."
+      },
+      {
+        "kind": "text",
+        "title": "Marx: ayakları üstüne oturtmak",
+        "body": "Marx, diyalektiği aldı ve yönünü çevirdi. Tarihi belirleyen fikirler değil, maddi üretim koşullarıdır. Toplumun düşünce dünyası — hukuk, ahlak, din — üretim ilişkilerinin üstünde yükselir ve çoğu zaman o ilişkileri doğal göstermeye yarar. İdeoloji budur: taraflı bir düzeni tarafsızmış gibi sunan düşünce yapısı. Yabancılaşma ise emeğin kendi ürününe, emek sürecine ve nihayet kendine yabancı hâle gelmesidir."
+      },
+      {
+        "kind": "text",
+        "title": "Nietzsche: değerlerin soykütüğü",
+        "body": "Nietzsche daha da radikal bir soru sordu: ahlaki değerler nereden geldi ve kimin işine yaradı? 'İyi' kavramının tarihte iki farklı kökeni olduğunu savundu — biri güçlünün kendini onaylaması, diğeri güçsüzün güçlüye duyduğu husumetin ters çevrilmiş hâli. Değerleri doğru ya da yanlış olarak değil, hangi yaşam biçimini beslediklerine bakarak değerlendirmeyi önerdi. 'Tanrı öldü' sözü bir zafer ilanı değil, bir teşhistir: değerlerin dayandığı zemin çöktü, yerine ne konacağı belirsiz."
+      },
+      {
+        "kind": "list",
+        "title": "Üçünün ortak mirası",
+        "items": [
+          "Düşünce zamansız değildir; içinden çıktığı tarihsel koşullar taşır.",
+          "Bir iddiayı değerlendirmenin bir yolu da, kime yaradığını sormaktır.",
+          "'Doğal' ve 'evrensel' sayılan şeylerin çoğu, belirli bir dönemin ürünüdür.",
+          "Bu şüphe güçlüdür ama sınırsız kullanıldığında kendi kendini de çürütür: aynı soru bu üç düşünüre de sorulabilir.",
+          "Yirminci yüzyılın eleştirel gelenekleri büyük ölçüde bu üç damarın birleşiminden doğdu."
+        ]
+      },
+      {
+        "kind": "quote",
+        "text": "Filozoflar dünyayı yalnızca çeşitli biçimlerde yorumladılar; mesele onu değiştirmektir.",
+        "source": "Marx, Feuerbach Üzerine Tezler, 1845"
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Hegel'in diyalektiği neyi anlatır?",
+        "options": [
+          "Tartışma tekniğini",
+          "Bir düşüncenin kendi karşıtını doğurup ikisinin daha üst bir aşamada aşılmasını",
+          "Mantıksal çıkarımı",
+          "Deney yöntemini"
+        ],
+        "answerIndex": 1,
+        "explanation": "Diyalektik hem düşüncenin hem tarihin hareketidir: gerilim, çatışma ve aşma. Sabit kategoriler yerine süreç konur."
+      },
+      {
+        "id": "q2",
+        "prompt": "Marx'ta ideoloji ne anlama gelir?",
+        "options": [
+          "Siyasi görüş",
+          "Taraflı bir toplumsal düzeni doğal ve tarafsızmış gibi gösteren düşünce yapısı",
+          "Bilimsel kuram",
+          "Bireysel inanç"
+        ],
+        "answerIndex": 1,
+        "explanation": "İdeoloji yalan söylemek değildir; belirli bir düzeni tarihsel değil doğal göstermektir. Bu yüzden fark edilmesi zordur."
+      },
+      {
+        "id": "q3",
+        "prompt": "Nietzsche'nin soykütük yöntemi ne yapar?",
+        "options": [
+          "Değerlerin doğruluğunu kanıtlar",
+          "Değerlerin tarihsel kökenini ve kimin işine yaradığını araştırır",
+          "Yeni bir ahlak kurar",
+          "Mantıksal tutarlılığı sınar"
+        ],
+        "answerIndex": 1,
+        "explanation": "Soru 'bu değer doğru mu' değil, 'nereden geldi ve hangi yaşam biçimini besliyor'dur. Değerlendirme ölçütü doğruluk değil işlevdir."
+      }
+    ]
+  },
+
+  {
+    "id": "varoluşçuluk",
+    "moduleId": "cagdas",
+    "order": 1,
+    "title": "Fenomenoloji ve varoluşçuluk",
+    "subtitle": "Önce özün geldiği bir dünya yoksa, kim olacağına sen karar veriyorsun.",
+    "minutes": 9,
+    "keyTerms": ["fenomenoloji", "yönelmişlik", "varoluş özden önce gelir", "kötü niyet", "saçma"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "20. yüzyılın başında Husserl, felsefeyi kuramlardan önce deneyimin kendisine döndürmek istedi. Fenomenolojinin yöntemi, bir şeyin gerçekten var olup olmadığı sorusunu askıya alıp bilincin ona nasıl göründüğünü betimlemektir. Bilincin temel özelliği yönelmişliktir: bilinç daima bir şeyin bilincidir, boş bir kap değildir."
+      },
+      {
+        "kind": "text",
+        "title": "Heidegger'in kaydırması",
+        "body": "Heidegger, sorunun bilinç değil varlık olduğunu savundu. İnsan dünyaya seyirci olarak değil, zaten içinde ve meşgul hâlde bulunur. Bir çekici incelerken değil, çakarken tanırız; alet ancak bozulduğunda bir nesne olarak görünür. Ve insan varlığının belirleyici özelliği sonluluktur: ölüme doğru olmak, hayatı bir seçim meselesi hâline getirir. Heidegger'in Nazi Partisi'ne üyeliği, yapıtının nasıl okunacağını hâlâ tartışmalı kılan bir gerçektir."
+      },
+      {
+        "kind": "text",
+        "title": "Sartre ve özgürlüğün yükü",
+        "body": "Sartre bunu keskin bir formüle indirdi: varoluş özden önce gelir. Bir bıçağın özü — kesmek — yapılmadan önce bellidir. İnsanın böyle önceden verilmiş bir özü yoktur; önce var olur, sonra kendini yapar. Bu, sınırsız bir özgürlük değil, kaçınılmaz bir sorumluluktur. Sartre'a göre 'başka türlü davranamazdım' demek kötü niyettir: kendi özgürlüğünü kendinden gizlemektir. Beauvoir aynı çerçeveyi toplumsal cinsiyete uyguladı ve kadınlığın verili bir öz değil, kurulmuş bir konum olduğunu gösterdi."
+      },
+      {
+        "kind": "list",
+        "title": "Camus ve saçma",
+        "items": [
+          "Saçma, dünyanın anlamsızlığı değil; anlam arayan insanla sessiz bir dünya arasındaki karşılaşmadır.",
+          "Camus üç çıkış görür: intihar, inanç sıçraması ve saçmayla yaşamayı sürdürmek.",
+          "Üçüncüsünü savunur: anlamı olmayan bir işi bilerek sürdürmek, bir teslimiyet değil bir başkaldırıdır.",
+          "Sisifos'u 'mutlu tahayyül etmek gerekir' cümlesi, umutsuzluğa değil kabullenmeye çağrıdır.",
+          "Camus ile Sartre siyasal şiddet konusunda ayrıldı ve dostlukları kalıcı olarak bozuldu."
+        ]
+      },
+      {
+        "kind": "example",
+        "title": "Örnek: garson",
+        "body": "Sartre, hareketleri fazlaca kusursuz bir kafe garsonunu betimler: fazla hızlı, fazla eğik, fazla dikkatli. Adam garson olmayı oynamaktadır, çünkü tam olarak garson olamaz — bir masa masa olduğu gibi kimse bir role sahip olamaz. Rolün arkasına saklanmak, seçim yükünden kurtulmanın yaygın yoludur. 'Bu benim işim, elimden bir şey gelmez' cümlesi de aynı kaçışın gündelik hâlidir."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Fenomenolojinin yöntemi nedir?",
+        "options": [
+          "Deney yapmak",
+          "Bir şeyin gerçekten var olup olmadığı sorusunu askıya alıp bilince nasıl göründüğünü betimlemek",
+          "Mantıksal çıkarım",
+          "Tarihsel araştırma"
+        ],
+        "answerIndex": 1,
+        "explanation": "Varlık sorusu paranteze alınır ve deneyimin yapısı betimlenir. Amaç açıklamak değil, önce doğru görmektir."
+      },
+      {
+        "id": "q2",
+        "prompt": "'Varoluş özden önce gelir' ne demektir?",
+        "options": [
+          "İnsanın doğuştan bir amacı vardır",
+          "İnsan önce var olur, ne olacağını sonra kendi seçimleriyle kurar",
+          "Varlık düşünceden önemlidir",
+          "Beden ruhtan önce gelir"
+        ],
+        "answerIndex": 1,
+        "explanation": "Yapılmış nesnelerin özü önceden bellidir; insanın değildir. Bu, sınırsız özgürlükten çok kaçınılmaz bir sorumluluk anlamına gelir."
+      },
+      {
+        "id": "q3",
+        "prompt": "Sartre'da 'kötü niyet' nedir?",
+        "options": [
+          "Başkasına zarar verme isteği",
+          "Kendi özgürlüğünü kendinden gizleyerek seçim sorumluluğundan kaçmak",
+          "Yalan söylemek",
+          "Bilerek yanlış davranmak"
+        ],
+        "answerIndex": 1,
+        "explanation": "'Başka türlü davranamazdım' demek, seçimi bir zorunluluk gibi sunmaktır. Rolün arkasına saklanmak bunun en yaygın biçimidir."
+      }
+    ]
+  },
+
+  {
+    "id": "analitik",
+    "moduleId": "cagdas",
+    "order": 2,
+    "title": "Analitik gelenek: dil ve mantık",
+    "subtitle": "Felsefi sorunların bir kısmı, dilin yanlış kullanımından doğuyor olabilir.",
+    "minutes": 9,
+    "keyTerms": ["mantıksal çözümleme", "doğrulanabilirlik", "dil oyunu", "kullanım", "anlam"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "19. yüzyılın sonunda Frege, Aristoteles mantığını iki bin yıl sonra ilk kez esaslı biçimde genişletti. Yeni mantık, matematiğin yapısını çözümleyecek kadar güçlüydü ve felsefeye yeni bir araç verdi. Russell ve genç Wittgenstein bu araçla şu iddiayı geliştirdi: birçok felsefi sorun gerçek sorun değil, dilin mantıksal yapısının gizlenmesinden doğan bir karışıklıktır."
+      },
+      {
+        "kind": "text",
+        "title": "Doğrulanabilirlik ve sınırları",
+        "body": "1920'lerde Viyana Çevresi bunu bir ölçüte dönüştürdü: bir cümle ancak deneyle sınanabiliyorsa ya da tanım gereği doğruysa anlamlıdır; ikisi de değilse anlamsızdır. Metafizik, etik ve estetik bu ölçütle anlam dışına düşüyordu. Ölçüt cesurdu ama kendi kendini de eleyecek kadar keskin çıktı: 'anlamlılık ölçütü şudur' cümlesi ne deneyle sınanabilir ne de tanım gereği doğrudur. Program çöktü, ama açıklık talebi kaldı."
+      },
+      {
+        "kind": "text",
+        "title": "Wittgenstein'ın dönüşü",
+        "body": "Kendi erken görüşünü en sert eleştiren kişi Wittgenstein oldu. İkinci döneminde anlamın, sözcüğün gösterdiği şeyde değil kullanımında olduğunu savundu. Dil bir hesap sistemi değil, sayısız farklı etkinlikten oluşan bir pratikler bütünüdür — buna dil oyunları dedi. 'Oyun' sözcüğünün bütün kullanımlarını kapsayan tek bir ortak özellik yoktur; aile benzerliği vardır. Felsefenin işi kuram kurmak değil, dilin bizi tuzağa düşürdüğü yeri göstermektir."
+      },
+      {
+        "kind": "list",
+        "title": "Analitik geleneğin kalıcı katkıları",
+        "items": [
+          "Argümanı biçimsel olarak açık yazma alışkanlığı: öncüller, çıkarım, sonuç.",
+          "Ayrım yapma disiplini: anlam ile gönderim, zorunlu ile olumsal, analitik ile sentetik.",
+          "Düşünce deneyi kullanımı: bir kavramın sınırlarını uç örneklerle sınamak.",
+          "Zihin felsefesi, dil felsefesi ve bilim felsefesinin ayrı disiplinler hâline gelmesi.",
+          "Bilgisayar bilimi ve dilbilimle doğrudan alışveriş: biçimsel diller, anlambilim, hesaplanabilirlik."
+        ]
+      },
+      {
+        "kind": "example",
+        "title": "Örnek: Gettier problemi",
+        "body": "Bilgi, yüzyıllarca 'gerekçelendirilmiş doğru inanç' olarak tanımlandı. 1963'te Gettier üç sayfalık bir yazıyla bunu çürüttü: gerekçesi olan, doğru olan ama tesadüfen doğru olduğu için bilgi sayılamayacak inanç örnekleri kurdu. Saati durmuş bir kişi doğru saate bakıp doğru zamanı 'bilir' — ama şans eseri. Analitik felsefenin çalışma biçimi budur: bir tanım, onu çürüten bir örnek, tanımın onarılması ve yeni bir karşı örnek."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Viyana Çevresi'nin doğrulanabilirlik ölçütü neden çöktü?",
+        "options": [
+          "Bilim onu reddettiği için",
+          "Ölçütün kendisi ne deneyle sınanabilir ne tanım gereği doğru olduğu için kendi kendini eliyordu",
+          "Çok karmaşık olduğu için",
+          "Matematiği dışladığı için"
+        ],
+        "answerIndex": 1,
+        "explanation": "Ölçüt kendi sınavından geçemiyordu. Program çöktü ama açıklık ve argüman disiplini talebi analitik gelenekte kaldı."
+      },
+      {
+        "id": "q2",
+        "prompt": "Geç dönem Wittgenstein'a göre bir sözcüğün anlamı nedir?",
+        "options": [
+          "Gösterdiği nesne",
+          "Dildeki kullanımı",
+          "Zihindeki imge",
+          "Sözlükteki tanımı"
+        ],
+        "answerIndex": 1,
+        "explanation": "Anlam, gönderimde değil pratikte aranır. Bir sözcüğü anlamak, onu hangi bağlamlarda nasıl kullanacağını bilmektir."
+      },
+      {
+        "id": "q3",
+        "prompt": "Gettier problemi neyi gösterdi?",
+        "options": [
+          "Bilginin imkânsız olduğunu",
+          "'Gerekçelendirilmiş doğru inanç' tanımının, tesadüfen doğru çıkan inançları da kapsadığı için yetersiz olduğunu",
+          "Doğrunun göreli olduğunu",
+          "Gerekçenin gereksiz olduğunu"
+        ],
+        "answerIndex": 1,
+        "explanation": "Üç koşulu da sağlayan ama bilgi sayılamayacak örnekler kurulabiliyordu. Tanım, altmış yıldır onarılmaya çalışılıyor."
+      }
+    ]
+  },
+
+  {
+    "id": "bilim-felsefesi",
+    "moduleId": "cagdas",
+    "order": 3,
+    "title": "Bilim felsefesi",
+    "subtitle": "Bilimi bilim yapan nedir — yöntem mi, topluluk mu?",
+    "minutes": 9,
+    "keyTerms": ["yanlışlanabilirlik", "paradigma", "sınır sorunu", "kuram yüklülük", "araştırma programı"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Bilim felsefesinin çıkış sorusu sınır sorunudur: bilim ile bilim olmayanı ne ayırır? Klasik cevap yöntemdi: bilim gözlemden genellemeye gider. Ama Hume'un tümevarım sorunu bu cevabı zayıflatmıştı. Popper başka bir ölçüt önerdi: bir kuramı bilimsel yapan şey doğrulanabilir olması değil, yanlışlanabilir olmasıdır."
+      },
+      {
+        "kind": "chart",
+        "chartId": "yigin"
+      },
+      {
+        "kind": "text",
+        "title": "Popper'ın ölçütü",
+        "body": "Bir milyon beyaz kuğu savı kanıtlamaz, bir kara kuğu çürütür. Bu asimetriden yola çıkarak Popper, iyi bir kuramın kendisini tehlikeye atan öngörülerde bulunması gerektiğini savundu. Her sonucu açıklayabilen bir kuram, hiçbir şey söylemiyordur. Ölçüt keskin ve kullanışlıdır, ama tek başına yetmez: gerçek bilimsel pratikte bir gözlem kuramla çeliştiğinde kuram hemen terk edilmez, yardımcı varsayımlar düzeltilir."
+      },
+      {
+        "kind": "text",
+        "title": "Kuhn ve paradigmalar",
+        "body": "Kuhn, bilim tarihine bakıp farklı bir tablo çizdi. Bilimciler çoğu zaman kuramları sınamaz; ortak bir çerçeve — paradigma — içinde bulmaca çözer. Buna olağan bilim der. Biriken açıklanamaz sonuçlar bir kriz yaratır ve nadiren de olsa çerçevenin kendisi değişir; buna bilimsel devrim der. Devrim sonrası, aynı sözcükler farklı anlamlara gelir ve iki paradigmanın taraftarları kısmen birbirini anlamaz hâle gelir. Kuhn'un tezi bilimi göreli kılmakla suçlandı; kendisi bu okumayı reddetti."
+      },
+      {
+        "kind": "list",
+        "title": "Tartışmanın bugünkü hâli",
+        "items": [
+          "Gözlemler kuram yüklüdür: neye bakılacağını ve neyin veri sayılacağını kuram belirler.",
+          "Lakatos, tek tek kuramlar yerine araştırma programlarını değerlendirmeyi önerdi: ilerleyen mi, gerileyen mi?",
+          "Feyerabend, tek bir yönteme bağlılığın bilim tarihine uymadığını savundu.",
+          "Bugün ağırlıklı görüş, bilimi tek bir ölçüt yerine bir pratikler ve kurumlar bütünü olarak görmek yönünde.",
+          "Tekrarlanabilirlik krizi, sorunun soyut değil kurumsal olduğunu gösterdi: teşvikler neyi ödüllendiriyorsa o üretiliyor."
+        ]
+      },
+      {
+        "kind": "example",
+        "title": "Örnek: keskin olmayan sınırlar",
+        "body": "Bilim ile bilim olmayan arasında keskin bir çizgi çekmenin zorluğu, felsefedeki daha genel bir sorunun örneğidir. Kaç kum tanesi yığın eder, kaç saç teli kelliği bozar, hangi noktada bir kuram bilim sayılır? Kavramların sınırlarının belirsiz olması, onların işe yaramaz olduğunu göstermez. Gündüz ile gece arasındaki sınırın belirsizliği, ikisi arasındaki farkın gerçek olmadığı anlamına gelmez."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Popper'a göre bir kuramı bilimsel yapan nedir?",
+        "options": [
+          "Doğrulanmış olması",
+          "Yanlışlanabilir olması, yani kendisini çürütecek gözlemi baştan belirtmesi",
+          "Matematiksel olması",
+          "Çok sayıda gözlemle desteklenmesi"
+        ],
+        "answerIndex": 1,
+        "explanation": "Her sonucu açıklayabilen kuram hiçbir şey söylemiyordur. Ölçüt, kuramın kendisini tehlikeye atma cesaretidir."
+      },
+      {
+        "id": "q2",
+        "prompt": "Kuhn'un 'olağan bilim' dediği şey nedir?",
+        "options": [
+          "Kuramların sürekli sınandığı dönem",
+          "Ortak bir çerçeve içinde bulmaca çözülen, çerçevenin kendisinin sorgulanmadığı dönem",
+          "Devrim dönemi",
+          "Deney yapılmayan dönem"
+        ],
+        "answerIndex": 1,
+        "explanation": "Bilimcilerin çoğu zamanı paradigmayı sınamakla değil, onun içinde çalışmakla geçer. Çerçeve ancak kriz büyüdüğünde sorgulanır."
+      },
+      {
+        "id": "q3",
+        "prompt": "'Gözlemler kuram yüklüdür' ifadesi neyi söyler?",
+        "options": [
+          "Gözlemler her zaman yanlıştır",
+          "Neye bakılacağını ve neyin veri sayılacağını mevcut kuram belirler",
+          "Gözlem gereksizdir",
+          "Kuramlar gözlemden çıkarılır"
+        ],
+        "answerIndex": 1,
+        "explanation": "Saf, kuramdan bağımsız gözlem yoktur. Bu, gözlemi değersizleştirmez ama 'veriler kendi kendine konuşur' fikrini zayıflatır."
+      }
+    ]
+  },
+
+  {
+    "id": "etik-ve-siyaset",
+    "moduleId": "cagdas",
+    "order": 4,
+    "title": "Çağdaş etik ve siyaset",
+    "subtitle": "Aynı durumdan farklı 'doğru'lar çıkaran üç ayrı çerçeve.",
+    "minutes": 9,
+    "keyTerms": ["faydacılık", "ödev etiği", "erdem etiği", "adalet", "cehalet peçesi"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Çağdaş etik tartışması büyük ölçüde üç çerçeve arasında yürür. Faydacılık sonuçlara bakar: doğru eylem, toplam iyiliği en çoğa çıkarandır. Ödev etiği ilkeye bakar: kimi eylemler sonuçları ne olursa olsun yanlıştır. Erdem etiği karaktere bakar: soru hangi eylemin doğru olduğu değil, nasıl bir insan olunacağıdır. Üçü aynı olayda farklı sonuçlara varabilir ve bu bir hesap hatası değildir."
+      },
+      {
+        "kind": "chart",
+        "chartId": "fayda-ve-adalet"
+      },
+      {
+        "kind": "text",
+        "title": "Rawls ve cehalet peçesi",
+        "body": "Rawls, adil bir toplumun ilkelerini nasıl seçeceğimizi sordu ve bir düşünce deneyi önerdi. Toplumun kurallarını, kendinizin o toplumda kim olacağını bilmeden seçin: cinsiyetinizi, gelirinizi, sağlığınızı, yeteneklerinizi bilmiyorsunuz. Rawls'a göre bu koşullarda rasyonel bir kişi iki ilke seçer: herkes için eşit temel özgürlükler ve eşitsizliklerin ancak en dezavantajlıların durumunu iyileştirdiği ölçüde kabul edilebilirliği. İkinci ilke, faydacı toplamdan açıkça ayrılır."
+      },
+      {
+        "kind": "list",
+        "title": "Çerçevelerin karşılaştığı zorluklar",
+        "items": [
+          "Faydacılık: toplamı büyütürken azınlığı feda etmeyi ilke olarak yasaklayamaz.",
+          "Ödev etiği: iki ödev çatıştığında hangisinin öncelikli olduğunu söylemekte zorlanır.",
+          "Erdem etiği: somut bir karar anında ne yapılacağını doğrudan söylemez.",
+          "Rawls'a itiraz: cehalet peçesi altındaki kişinin gerçekten riskten kaçınacağı varsayımı tartışmalıdır.",
+          "Pratikte çoğu insan tek bir çerçeve kullanmaz; farklı durumlarda farklı sezgilere başvurur."
+        ]
+      },
+      {
+        "kind": "text",
+        "title": "Bugünün soruları",
+        "body": "Çağdaş tartışmanın ağırlık merkezi genişledi. Gelecek kuşaklara karşı yükümlülüğümüz nedir — bugün doğmamış insanların çıkarı hesaba nasıl girer? Hayvanların ahlaki konumu nedir; acı çekebilme yeterli bir ölçüt müdür? Otomatik sistemlerin verdiği kararlardan kim sorumludur? Bu soruların ortak yanı, klasik çerçevelerin tasarlandığı durumların dışında kalmalarıdır; her biri çerçeveleri yeniden tartışmaya açıyor."
+      },
+      {
+        "kind": "example",
+        "title": "Örnek: tramvay problemi ve sınırları",
+        "body": "Kontrolden çıkmış bir tramvay beş kişiye doğru gidiyor; bir kolu çekerseniz yön değiştirip bir kişiyi öldürür. Çoğu insan kolu çeker. İkinci versiyonda aynı sonucu bir kişiyi köprüden iterek elde edersiniz; çoğu insan bunu reddeder. Sonuç aynı, sezgi farklı. Deney sezginin tutarsızlığını gösterir ama hangi sezginin düzeltileceğini söylemez — asıl mesele de budur. Gerçek kararların çoğu, iki net seçenek arasında değil, belirsizlik altında verilir."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Faydacılık ile ödev etiği arasındaki temel fark nedir?",
+        "options": [
+          "Biri dinsel diğeri seküler",
+          "Biri eylemin sonuçlarına, diğeri eylemin dayandığı ilkeye bakar",
+          "Biri bireysel diğeri toplumsal",
+          "Biri modern diğeri antik"
+        ],
+        "answerIndex": 1,
+        "explanation": "Faydacılık sonucu değerlendirir; ödev etiği kimi eylemleri sonuçtan bağımsız olarak yanlış sayar."
+      },
+      {
+        "id": "q2",
+        "prompt": "Rawls'ın cehalet peçesi ne işe yarar?",
+        "options": [
+          "Bilgiyi artırmaya",
+          "Kişinin kendi konumunu bilmeden kural seçmesini sağlayarak tarafsız bir bakış kurmaya",
+          "Oy vermeyi kolaylaştırmaya",
+          "Eşitliği zorunlu kılmaya"
+        ],
+        "answerIndex": 1,
+        "explanation": "Kendi çıkarını bilemeyen kişi, herkes için savunulabilir kurallar seçmek zorunda kalır. Peçe, tarafsızlığı bir düşünce deneyiyle üretir."
+      },
+      {
+        "id": "q3",
+        "prompt": "Tramvay probleminin iki versiyonunda farklı cevaplar verilmesi neyi gösterir?",
+        "options": [
+          "İnsanların matematik bilmediğini",
+          "Ahlaki sezgilerin tutarsız olabildiğini — ama hangisinin düzeltileceğini deneyin kendisi söylemez",
+          "Faydacılığın doğru olduğunu",
+          "Ödev etiğinin doğru olduğunu"
+        ],
+        "answerIndex": 1,
+        "explanation": "Sonuç aynı, sezgi farklı. Deney bir çelişkiyi görünür kılar; hangi sezginin terk edileceği ayrı ve asıl tartışmadır."
+      }
+    ]
+  }
+]
