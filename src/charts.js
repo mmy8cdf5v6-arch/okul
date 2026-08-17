@@ -2973,5 +2973,170 @@
           "İnsanda ölçülen değer 0,12 civarındadır: çeşitliliğin yaklaşık yüzde seksen sekizi grupların içindedir. " +
           "Rastgele iki insan arasındaki genetik farkın büyük kısmı, hangi kıtadan geldiklerinden bağımsızdır." };
       }
+    },
+
+    /* ---- biyoloji ---- */
+
+    "difuzyon-ve-boyut": {
+      title: "Difüzyon neden hücreleri küçük tutar",
+      note: "Difüzyon süresi t ≈ r² / (6D) ile hesaplandı; D suda küçük moleküller için yaklaşık 10⁻⁹ m²/s. Mesafe iki katına çıkınca süre dört katına çıkar; taşımanın pompasız yapılabileceği ölçeği bu bağıntı belirler.",
+      controls: [{ key: "r", label: "Yarıçap", min: 0, max: 50, step: 1, def: 20,
+        fmt: function (v) {
+          var r = 1e-6 * Math.pow(10, v / 10);
+          return r < 1e-3 ? r0(r * 1e6) + " µm" : r < 1 ? r1(r * 1000) + " mm" : r1(r * 100) + " cm";
+        } }],
+      draw: function (p) {
+        var R0 = 1e-6, R1 = 1e-1, D = 1e-9, i;
+        var X = function (r) { return Math.log(r / R0) / Math.log(R1 / R0); };
+        var T = function (r) { return (r * r) / (6 * D); };
+        var T0 = 1e-4, T1 = 1e7;
+        var Y = function (t) { return Math.max(0, Math.min(1, Math.log(t / T0) / Math.log(T1 / T0))); };
+        var pts = [];
+        for (i = 0; i <= 70; i++) {
+          var r = R0 * Math.pow(R1 / R0, i / 70);
+          pts.push([X(r), Y(T(r))]);
+        }
+        var s = frame("Yarıçap", "Difüzyon süresi");
+        [[1, "1 saniye"], [3600, "1 saat"]].forEach(function (v) {
+          s += gLine(0, Y(v[0]), 1, Y(v[0]), { c: "var(--rule)", w: 1, d: "2 4" });
+          s += gTxt(0.01, Y(v[0]), v[1], { a: "start", dy: -4, s: 8.5 });
+        });
+        s += gPoly(pts, { c: "var(--accent)", w: 2.6 });
+        [[2e-5, "hücre"], [1e-3, "kalın doku"]].forEach(function (v) {
+          s += gLine(X(v[0]), 0, X(v[0]), 1, { c: "var(--rule)", w: 1, d: "3 3" });
+          s += gTxt(X(v[0]), 1, v[1], { a: "start", dx: 3, dy: 2, s: 8.5 });
+        });
+        var rr = 1e-6 * Math.pow(10, p.r / 10), tt = T(rr);
+        s += gDot(X(rr), Y(tt), { c: "var(--ink)" });
+        var etiket = tt < 60 ? r2(tt) + " sn" : tt < 86400 ? r1(tt / 3600) + " saat" : r1(tt / 86400) + " gün";
+        s += gTxt(X(rr), Y(tt), etiket, {
+          a: X(rr) > 0.6 ? "end" : "start", dx: X(rr) > 0.6 ? -7 : 7, dy: Y(tt) > 0.9 ? 13 : -6,
+          c: "var(--ink)", b: 1, s: 10 });
+        [[1e-5, "10 µm"], [1e-3, "1 mm"]].forEach(function (v) {
+          s += gTxt(X(v[0]), 0, v[1], { a: "middle", dy: 12, s: 8.5 });
+        });
+        return { svg: s, text: "Bu yarıçapta bir molekülün merkeze difüzyonla ulaşması " + etiket + " sürüyor. " +
+          "Yüzey alanının hacme oranı da 3/r ile düşüyor: büyüdükçe beslenecek hacim artıyor, besleyen yüzey göreli olarak azalıyor. " +
+          (rr <= 1.5e-4
+            ? "Bu ölçekte difüzyon hâlâ iş görür; en büyük hücrelerin bile yüz mikrometre dolayında kalmasının sebebi tam olarak budur."
+            : "Bu ölçekte difüzyon işe yaramaz. Akciğerin katlanmış yüzeyi, bağırsağın kıvrımları, solungaç ve kılcal damar ağı — hepsi aynı iki sorunun çözümüdür: yüzeyi büyütmek ve mesafeyi kısaltmak.") };
+      }
+    },
+
+    "enzim-kinetigi": {
+      title: "Enzim doyuma ulaşınca ne olur",
+      note: "Michaelis-Menten bağıntısı: v = Vmax · S / (Km + S). Km, hızın yarı değerine ulaşıldığı derişimdir ve enzimin substrata ilgisini ölçer — küçük Km, yüksek ilgi demektir.",
+      controls: [
+        { key: "s", label: "Substrat derişimi", min: 1, max: 100, step: 1, def: 20,
+          fmt: function (v) { return v + " birim"; } },
+        { key: "k", label: "Km (yarı doyum derişimi)", min: 2, max: 60, step: 2, def: 20,
+          fmt: function (v) { return v + " birim"; } }
+      ],
+      draw: function (p) {
+        var Km = p.k, SMAX = 100, i;
+        var V = function (x) { return x / (Km + x); };
+        var pts = [];
+        for (i = 0; i <= 80; i++) { var x = (SMAX * i) / 80; pts.push([i / 80, V(x)]); }
+        var s = frame("Substrat derişimi", "Tepkime hızı");
+        s += gLine(0, 1, 1, 1, { c: "var(--rule)", w: 1.2, d: "3 3" });
+        s += gTxt(0.99, 1, "Vmax", { a: "end", dy: 12, s: 8.5 });
+        s += gLine(0, 0.5, Km / SMAX, 0.5, { c: "var(--ok)", w: 1.2, d: "4 3" });
+        s += gLine(Km / SMAX, 0, Km / SMAX, 0.5, { c: "var(--ok)", w: 1.2, d: "4 3" });
+        s += gTxt(Km / SMAX, 0, "Km", { a: "start", dx: 4, dy: -5, c: "var(--ok)", b: 1, s: 9 });
+        s += gPoly(pts, { c: "var(--accent)", w: 2.6 });
+        var v0 = V(p.s);
+        s += gDot(p.s / SMAX, v0, { c: "var(--ink)" });
+        s += gTxt(p.s / SMAX, v0, "%" + r0(v0 * 100), {
+          a: p.s > 60 ? "end" : "start", dx: p.s > 60 ? -7 : 7, dy: -6, c: "var(--ink)", b: 1, s: 10 });
+        [25, 50].forEach(function (v) { s += gTxt(v / SMAX, 0, v, { a: "middle", dy: 12, s: 9 }); });
+        var iki = V(2 * p.s);
+        return { svg: s, text: "Bu derişimde enzim en yüksek hızının %" + r0(v0 * 100) + "'inde çalışıyor. " +
+          "Substratı iki katına çıkarmak hızı %" + r0(iki * 100) + "'e taşır — yani " +
+          (v0 > 0.7
+            ? "neredeyse hiçbir şey değişmez: enzim doymuştur ve fazla substrat sıraya girer."
+            : "kayda değer bir kazanç sağlar; henüz doyum bölgesinde değiliz.") +
+          " Doyum, canlı sistemlerin en yaygın davranışıdır: bir noktadan sonra girdiyi artırmak çıktıyı artırmaz, " +
+          "çünkü sınırlayan şey girdi değil, işi yapan makine sayısıdır." };
+      }
+    },
+
+    "besin-agi-enerjisi": {
+      title: "Etin enerji faturası",
+      note: "Her basamakta enerjinin büyük kısmı solunumla ısıya gider; geriye kalanı bir üst basamağa taşınabilir. Aktarım verimi doğada tipik olarak %10 civarındadır, iyi yönetilen hayvancılıkta bir miktar yüksektir.",
+      controls: [
+        { key: "e", label: "Basamak aktarım verimi", min: 5, max: 25, step: 1, def: 10, fmt: pctS },
+        { key: "n", label: "Basamak sayısı", min: 1, max: 5, step: 1, def: 3,
+          fmt: function (v) { return v + " basamak"; } }
+      ],
+      draw: function (p) {
+        var e = p.e / 100, i;
+        var AD = ["bitki", "otçul", "etçil", "üst etçil", "en üst", "zirve"];
+        var Y = function (v) { return Math.max(0, Math.min(1, ((Math.log10(v) + 6) / 6) * 0.92)); };
+        var s = frame("", "Kalan enerji");
+        [1, 0.01, 0.0001].forEach(function (v) {
+          s += gLine(0, Y(v), 1, Y(v), { c: "var(--rule)", w: 1, d: "2 4" });
+          s += gTxt(0.99, Y(v), v === 1 ? "%100" : "%" + (v * 100).toFixed(v === 0.01 ? 0 : 2), { a: "end", dy: -4, s: 8.5 });
+        });
+        var K = p.n + 1, w = 0.72 / K;
+        for (i = 0; i <= p.n; i++) {
+          var kalan = Math.pow(e, i), x0 = 0.06 + i * (0.88 / K);
+          s += gRect(x0, 0, x0 + w, Y(kalan), { c: i === 0 ? "var(--ok)" : "var(--accent)", o: 0.85 });
+          s += gTxt(x0 + w / 2, 0, AD[i], { a: "middle", dy: 12, s: 8.5 });
+          s += gTxt(x0 + w / 2, Y(kalan), kalan >= 0.01 ? "%" + r0(kalan * 100) : "‰" + r2(kalan * 1000),
+            { a: "middle", dy: -5, c: "var(--ink)", b: 1, s: 8.5 });
+        }
+        var son = Math.pow(e, p.n), kat = 1 / son;
+        return { svg: s, text: "Bitkideki enerjinin " + p.n + " basamak sonra geriye kalan payı %" +
+          (son >= 0.01 ? r0(son * 100) : (son * 100).toFixed(2)) + ". " +
+          "Yani en üstteki canlının bir kilogramı için tabanda yaklaşık " + r0(kat) +
+          " kilogram bitki gerekiyor. " +
+          "Bu tek bağıntı, neden büyük yırtıcıların her zaman az sayıda olduğunu, " +
+          "neden bir hektardan bitki yiyerek çok daha fazla insan beslendiğini ve " +
+          "kırmızı etin arazi ile su ayak izinin neden bu kadar yüksek olduğunu aynı anda açıklar." };
+      }
+    },
+
+    "olcek-ve-metabolizma": {
+      title: "Büyüdükçe yavaşlamak",
+      note: "Kleiber yasası: metabolizma kütlenin 3/4 kuvvetiyle büyür, dolayısıyla kilogram başına metabolizma kütlenin −1/4 kuvvetiyle düşer. Kalp hızı ve ömür tahminleri memeliler için tipik değerlerdir; kuşlar bu eğrilerin belirgin biçimde üstünde yaşar.",
+      controls: [{ key: "m", label: "Vücut kütlesi", min: 0, max: 80, step: 1, def: 40,
+        fmt: function (v) {
+          var m = 0.002 * Math.pow(10, v / 10);
+          return m < 1 ? r0(m * 1000) + " g" : m < 1000 ? r1(m) + " kg" : r1(m / 1000) + " ton";
+        } }],
+      draw: function (p) {
+        var M0 = 0.002, M1 = 200000, i;
+        var X = function (m) { return Math.log(m / M0) / Math.log(M1 / M0); };
+        var ozgul = function (m) { return 3.4 * Math.pow(m, -0.25); };     // W/kg
+        var nabiz = function (m) { return 241 * Math.pow(m, -0.25); };     // atım/dakika
+        var omur = function (m) { return 11.8 * Math.pow(m, 0.2); };       // yıl
+        var LO = 0.05, HI = 40;
+        var Y = function (v) { return Math.max(0, Math.min(1, Math.log(v / LO) / Math.log(HI / LO))); };
+        var pts = [];
+        for (i = 0; i <= 70; i++) {
+          var m = M0 * Math.pow(M1 / M0, i / 70);
+          pts.push([X(m), Y(ozgul(m))]);
+        }
+        var s = frame("Vücut kütlesi", "Kilogram başına metabolizma");
+        [[0.02, "fare"], [70, "insan"], [4000, "fil"]].forEach(function (v) {
+          s += gLine(X(v[0]), 0, X(v[0]), 1, { c: "var(--rule)", w: 1, d: "3 3" });
+          s += gTxt(X(v[0]), 1, v[1], { a: "start", dx: 3, dy: 2, s: 8.5 });
+        });
+        s += gPoly(pts, { c: "var(--accent)", w: 2.6 });
+        var m0 = 0.002 * Math.pow(10, p.m / 10), o0 = ozgul(m0);
+        s += gDot(X(m0), Y(o0), { c: "var(--ink)" });
+        s += gTxt(X(m0), Y(o0), r1(o0) + " W/kg", {
+          a: X(m0) > 0.6 ? "end" : "start", dx: X(m0) > 0.6 ? -7 : 7, dy: -6, c: "var(--ink)", b: 1, s: 10 });
+        [[0.1, "100 g"], [100, "100 kg"]].forEach(function (v) {
+          s += gTxt(X(v[0]), 0, v[1], { a: "middle", dy: 12, s: 8.5 });
+        });
+        var n = nabiz(m0), o = omur(m0), top = (n * 60 * 24 * 365 * o) / 1e9;
+        return { svg: s, text: "Bu kütlede kilogram başına metabolizma " + r1(o0) +
+          " watt; beklenen kalp hızı dakikada " + r0(n) + ", beklenen ömür " + r1(o) + " yıl. " +
+          "İkisini çarpınca ömür boyu atım sayısı yaklaşık " + r1(top) + " milyar çıkıyor — ve bu sayı, " +
+          "fareden file kadar bütün memelilerde şaşırtıcı biçimde birbirine yakındır. " +
+          "Küçük hayvanlar hızlı yaşayıp erken ölür, büyükler yavaş yaşayıp geç; ama kalpleri kabaca aynı sayıda atar. " +
+          "İnsan bu kuralın dışındadır: tıbbın ve güvenli çevrenin sağladığı ömür, kütlemizin öngördüğünün çok üstünde." };
+      }
     }
   };

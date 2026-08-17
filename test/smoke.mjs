@@ -184,7 +184,11 @@ await step("bütün hazır kursların grafikleri çiziliyor", async () => {
 
   const seen = new Set();
   for (const course of plan) {
-    await page.locator(".course-card", { hasText: course.title }).first().click();
+    /* hasText alt dize ve büyük-küçük harf duyarsız eşleşir; "Biyoloji" araması
+       "Evrim biyolojisi" kartını da yakalıyordu. Başlığın tamamıyla eşleştir. */
+    await page.locator(".course-card").filter({
+      has: page.locator(".course-title", { hasText: new RegExp("^" + course.title.replace(/[.*+?^${}()|[\]\\]/g, "\\$&") + "$") })
+    }).first().click();
     await page.waitForSelector("nav.tabs button");
     const accent = await page.evaluate(() =>
       getComputedStyle(document.documentElement).getPropertyValue("--accent-light").trim());
@@ -237,7 +241,9 @@ await step("bütün hazır kursların grafikleri çiziliyor", async () => {
 });
 
 await step("finans kursu açılıyor", async () => {
-  await page.locator(".course-card", { hasText: "Finans" }).click();
+  await page.locator(".course-card").filter({
+    has: page.locator(".course-title", { hasText: /^Finans$/ })
+  }).click();
   await page.waitForSelector("nav.tabs button");
   const course = await page.evaluate(() => fetch("courses/finans.json").then(r => r.json()));
   if (course.lessons.length !== 12) throw new Error("ders sayısı: " + course.lessons.length);

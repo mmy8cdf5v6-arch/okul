@@ -222,5 +222,19 @@
     "questions": 36,
     "charts": 3,
     "file": "courses/antropoloji.json"
+  },
+  {
+    "id": "biyoloji",
+    "title": "Biyoloji",
+    "subtitle": "Hücre, sistem, ölçek",
+    "description": "Hücreden ekosisteme: canlıyı ayakta tutan kimya, bilgiyi taşıyan moleküller ve büyüklüğün yaşamın kurallarını nasıl belirlediği.",
+    "icon": "🧫",
+    "accent": "#1f6d52",
+    "accentDark": "#63c9a3",
+    "category": "klasik",
+    "lessons": 12,
+    "questions": 36,
+    "charts": 4,
+    "file": "courses/biyoloji.json"
   }
 ]

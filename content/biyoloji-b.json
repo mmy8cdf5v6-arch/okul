@@ -1,0 +1,475 @@
+[
+  {
+    "id": "dolasim-solunum",
+    "moduleId": "sistemler",
+    "order": 3,
+    "title": "Dolaşım ve solunum",
+    "subtitle": "Difüzyonun yetmediği yerde boru döşenir.",
+    "minutes": 8,
+    "keyTerms": ["hemoglobin", "kılcal damar", "alveol", "yüzey-hacim oranı"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Bir insanın hacmi, difüzyonun besleyebileceği ölçeğin milyonlarca katıdır. Çözüm, her hücreyi bir boruya yakın tutmaktır. Dolaşım sistemi tam olarak bunu yapar: hiçbir hücre bir kılcal damardan birkaç hücre boyundan uzakta değildir. Bir insandaki kılcal damarların toplam uzunluğu binlerce kilometreyi bulur; ama tek tek her biri o kadar incedir ki alyuvarlar içinden sıkışarak geçer."
+      },
+      {
+        "kind": "list",
+        "title": "Sistemin parçaları",
+        "items": [
+          "Kalp: iki ayrı pompa gibi çalışır; biri kanı akciğere, diğeri vücuda gönderir. Bu ayrım, oksijenli ve oksijensiz kanın karışmasını önler.",
+          "Atardamar: kalınlıkları basınca dayanmak içindir. Kan basıncı burada ölçülür.",
+          "Kılcal damar: alışverişin gerçekleştiği tek yer. Diğer bütün damarlar sadece taşır.",
+          "Toplardamar: düşük basınçlı dönüş yolu. Kapakçıklar ve kas hareketi olmadan kan yukarı çıkamaz — uzun süre hareketsiz durmanın riski buradan gelir.",
+          "Akciğer: alveollerle yüzeyi bir tenis kortu büyüklüğüne çıkarır, kan ile hava arasındaki mesafeyi mikrometrelere indirir."
+        ]
+      },
+      {
+        "kind": "text",
+        "title": "Hemoglobinin akıllı kısmı",
+        "body": "Oksijen taşımak yeterli değildir; onu doğru yerde bırakmak gerekir. Hemoglobin bunu ortamdaki ipuçlarını okuyarak yapar: karbondioksit derişimi yüksek, asitlik artmış ve sıcaklık yükselmiş bir dokuda oksijeni daha kolay salar. Bunların üçü de 'burada çok çalışılıyor' anlamına gelir. Yani hemoglobin, oksijene en çok ihtiyaç duyan dokuya daha fazla bırakır ve bunu hiçbir merkezî komuta gerek kalmadan, sadece kimyasal ortamla yapar."
+      },
+      {
+        "kind": "example",
+        "title": "Yükseklikte ne olur",
+        "body": "İki bin metrenin üstünde havadaki oksijen kısmi basıncı düşer ve hemoglobin akciğerde daha az oksijen bağlar. Vücut buna kademeli olarak uyum sağlar: önce solunum hızlanır, ardından böbrekten salınan bir hormonla alyuvar üretimi artar. Bu uyum haftalar alır ve sporcuların yükseklik kampı yapmasının sebebidir. Aynı uyumu kalıcı olarak taşıyan topluluklar da vardır — Tibet ve And yaylalarında yaşayanlar, birbirinden farklı genetik çözümlerle bu soruna uyum sağlamıştır."
+      },
+      {
+        "kind": "text",
+        "title": "Neden bazı hayvanlarda kalp yok",
+        "body": "Böceklerde kapalı bir kan dolaşımı ve akciğer bulunmaz; hava, vücudu delip geçen ince borularla doğrudan dokulara ulaşır. Bu sistem küçük ölçekte çok verimlidir ama borular difüzyona dayandığı için bir sınırı vardır. Böceklerin bugünkü boyutlarının üstüne çıkamamasının başlıca sebeplerinden biri budur. Karbonifer döneminde atmosferdeki oksijen oranı daha yüksekken kanat açıklığı yetmiş santimetreyi bulan yusufçukların yaşamış olması, bu açıklamayı destekler."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Dolaşım sisteminde alışveriş nerede gerçekleşir?",
+        "options": [
+          "Atardamarlarda",
+          "Kılcal damarlarda",
+          "Toplardamarlarda",
+          "Kalpte"
+        ],
+        "answerIndex": 1,
+        "explanation": "Diğer bütün damarlar yalnızca taşır. Kılcal damarların inceliği, difüzyon mesafesini hücre boyutlarına indirir."
+      },
+      {
+        "id": "q2",
+        "prompt": "Hemoglobin oksijeni çok çalışan dokuda nasıl daha kolay bırakır?",
+        "options": [
+          "Sinir sisteminden komut alarak",
+          "Ortamdaki karbondioksit, asitlik ve sıcaklık artışını okuyarak",
+          "Kan basıncı arttığı için",
+          "Alyuvar sayısı arttığı için"
+        ],
+        "answerIndex": 1,
+        "explanation": "Üç ipucu da 'burada çok çalışılıyor' anlamına gelir. Merkezî bir komuta gerek kalmadan, tamamen kimyasal ortamla çalışır."
+      },
+      {
+        "id": "q3",
+        "prompt": "Böceklerin boyutunun sınırlı kalmasının başlıca sebebi nedir?",
+        "options": [
+          "Kabuklarının ağırlığı",
+          "Hava borularının difüzyona dayanması ve difüzyonun mesafeyle hızla yavaşlaması",
+          "Yeterli besin bulamamaları",
+          "Kalplerinin küçük olması"
+        ],
+        "answerIndex": 1,
+        "explanation": "Karbonifer'de oksijen oranı yüksekken çok daha büyük böceklerin yaşamış olması bu açıklamayı destekler."
+      }
+    ]
+  },
+  {
+    "id": "bagisiklik",
+    "moduleId": "sistemler",
+    "order": 4,
+    "title": "Bağışıklık",
+    "subtitle": "Hiç karşılaşmadığı düşmanı tanıyabilen bir sistem.",
+    "minutes": 9,
+    "keyTerms": ["doğuştan bağışıklık", "kazanılmış bağışıklık", "antikor", "bağışık bellek", "otoimmün"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Bağışıklık sisteminin çözmesi gereken problem tuhaftır: daha önce hiç karşılaşmadığı, hatta doğada henüz var olmayan bir tehdidi tanıyabilmesi gerekir. Bunu, önceden hazırlanmış bir liste tutarak yapamaz. Bunun yerine, rastgele birleştirmeyle milyarlarca farklı tanıyıcı üretir ve bunların arasından işe yarayanı seçer. Yani bağışıklık, vücudun içinde işleyen küçük bir evrimsel süreçtir."
+      },
+      {
+        "kind": "list",
+        "title": "İki hat",
+        "items": [
+          "Doğuştan bağışıklık: hızlı ama seçici değil. Deri ve mukoza bariyerleri, iltihap, yutucu hücreler. Dakikalar içinde devreye girer.",
+          "Kazanılmış bağışıklık: yavaş ama hedefe özel. Günler alır, karşılığında tehdidi tam olarak tanır ve hatırlar.",
+          "Antikorlar hedefe kilitlenip onu etkisizleştirir ya da diğer hücrelere işaretler.",
+          "Öldürücü hücreler, virüs bulaşmış kendi hücrelerimizi tanıyıp yok eder.",
+          "Bağışık bellek: ikinci karşılaşmada tepki çok daha hızlı ve güçlüdür. Aşının çalışma zemini tam olarak burasıdır.",
+          "İltihap bir arıza değil, savunmanın kendisidir; sorun sürekli hâle geldiğinde başlar."
+        ]
+      },
+      {
+        "kind": "text",
+        "title": "Kendini tanımak",
+        "body": "Rastgele üretilen milyarlarca tanıyıcının bir kısmı kaçınılmaz olarak vücudun kendi dokularına da uyar. Bu yüzden gelişim sırasında ciddi bir eleme yapılır: kendi dokusuna tepki veren hücreler yok edilir ya da susturulur. Bu eleme kusursuz değildir. Otoimmün hastalıklar — tip 1 diyabet, romatoid artrit, multipl skleroz — bu ayrımın ne kadar hassas bir denge olduğunu gösterir. Aynı denge alerjilerde de görülür: zararsız bir polene karşı kurulan aşırı tepki."
+      },
+      {
+        "kind": "example",
+        "title": "Aşı nasıl çalışır",
+        "body": "Aşı, hastalığın kendisini yaşatmadan bağışık belleği kurar. Bunu farklı yollarla yapabilir: zayıflatılmış ya da öldürülmüş mikrop, mikrobun yalnızca bir parçası ya da o parçayı vücudun kendisine ürettiren bir talimat. mRNA aşıları sonuncusudur: hücreye kısa ömürlü bir talimat verir, hücre proteini üretir, bağışıklık onu tanır ve talimat birkaç gün içinde parçalanır. Bu teknolojinin arkasında yıllarca fon bulamamış, akademik kadrosu düşürülmüş bir araştırmacının ısrarı vardır — temel araştırmanın değerinin ne kadar geç anlaşılabildiğinin somut bir örneği."
+      },
+      {
+        "kind": "text",
+        "title": "Bağışıklığı 'güçlendirmek'",
+        "body": "Piyasadaki ürünlerin büyük kısmı 'bağışıklığı güçlendirdiğini' iddia eder. Bu ifade biyolojik olarak anlamsıza yakındır: bağışıklık bir ses düzeyi değildir ve daha yüksek olması daha iyi değildir — otoimmün hastalıklar ve alerjiler tam da aşırı tepkinin sonucudur. Ölçülebilir etkisi olan şeyler daha sıkıcıdır: yeterli uyku, aşılar, dengeli beslenme, sigarayı bırakmak ve belgelenmiş bir eksiklik varsa onu gidermek. Eksikliği olmayan birinde vitamin takviyesinin bağışıklığa katkısı gösterilememiştir."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Bağışıklık sistemi hiç karşılaşmadığı bir tehdidi nasıl tanıyabilir?",
+        "options": [
+          "Önceden hazırlanmış bir liste tutarak",
+          "Rastgele birleştirmeyle milyarlarca tanıyıcı üretip işe yarayanı seçerek",
+          "Beyinden bilgi alarak",
+          "Genlerinde kayıtlı olduğu için"
+        ],
+        "answerIndex": 1,
+        "explanation": "Vücudun içinde işleyen küçük bir evrimsel süreçtir: çeşitlilik üretilir, işe yarayan seçilir ve çoğaltılır."
+      },
+      {
+        "id": "q2",
+        "prompt": "Otoimmün hastalıklar neyi gösterir?",
+        "options": [
+          "Bağışıklığın zayıf olduğunu",
+          "Kendi dokusunu tanıyan hücreleri eleme sürecinin kusursuz olmadığını",
+          "Mikropların güçlendiğini",
+          "Aşıların etkisiz olduğunu"
+        ],
+        "answerIndex": 1,
+        "explanation": "Rastgele üretilen tanıyıcıların bir kısmı kaçınılmaz olarak kendi dokuya uyar. Eleme hassas bir dengedir ve her zaman tam çalışmaz."
+      },
+      {
+        "id": "q3",
+        "prompt": "'Bağışıklığı güçlendirmek' ifadesi neden sorunludur?",
+        "options": [
+          "Çok pahalı olduğu için",
+          "Bağışıklık bir ses düzeyi değildir; daha yüksek tepki daha iyi değil, alerji ve otoimmünite demektir",
+          "Bilimsel olarak imkânsız olduğu için",
+          "Yalnızca hastalarda mümkün olduğu için"
+        ],
+        "answerIndex": 1,
+        "explanation": "Ölçülebilir etkisi olan şeyler daha sıkıcıdır: uyku, aşı, dengeli beslenme, sigarayı bırakmak ve belgelenmiş bir eksikliği gidermek."
+      }
+    ]
+  },
+  {
+    "id": "sinir-ve-hormon",
+    "moduleId": "sistemler",
+    "order": 5,
+    "title": "Sinir sistemi ve hormonlar",
+    "subtitle": "İki farklı hızda çalışan iki haberleşme ağı.",
+    "minutes": 8,
+    "keyTerms": ["nöron", "sinaps", "hormon", "negatif geri besleme", "iç denge"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Vücut iki ayrı haberleşme sistemiyle çalışır ve ikisi bilinçli olarak farklı hızlarda tasarlanmış gibidir. Sinir sistemi hızlıdır, hedefi kesindir ve etkisi kısa sürer: milisaniyeler içinde belirli bir kasa belirli bir komut gider. Hormonal sistem yavaştır, yaygındır ve etkisi uzun sürer: kana salınan bir molekül vücudun her yerine ulaşır ve saatlerce, bazen yıllarca etkili olur."
+      },
+      {
+        "kind": "text",
+        "title": "Nöron nasıl çalışır",
+        "body": "Bir sinir hücresi, zarının iki yanındaki iyon farkını sürekli pompalarla korur; bu, kurulu bir yay gibidir. Uyarı geldiğinde kapılar açılır, iyonlar akar ve bu değişim bir dalga hâlinde hücre boyunca ilerler. Sinyal her zaman aynı büyüklüktedir — şiddet, sinyalin gücüyle değil sıklığıyla kodlanır. Uçtaki bağlantı noktasında elektriksel sinyal kimyasal bir habercinin salınmasına dönüşür ve karşı hücrede yeniden elektrikselleşir."
+      },
+      {
+        "kind": "list",
+        "title": "Sinapsın önemi",
+        "items": [
+          "Öğrenme, büyük ölçüde sinapsların güçlenip zayıflamasıdır: birlikte ateşlenen hücreler birbirine bağlanır.",
+          "Neredeyse bütün psikiyatrik ilaçlar, uyuşturucular ve birçok zehir sinapsta etki eder.",
+          "Bir nöron binlerce sinaps kurar; hesaplama gücü hücre sayısında değil bağlantı sayısındadır.",
+          "Kimyasal iletim yavaştır ama esnektir; ayarlanabilir olması, sabit kablolamadan çok daha değerlidir.",
+          "'Şu madde şu duyguyu üretir' anlatısı fazla basittir; aynı molekül farklı devrelerde farklı işler yapar."
+        ]
+      },
+      {
+        "kind": "text",
+        "title": "İç denge ve geri besleme",
+        "body": "Vücut sıcaklığı, kan şekeri, tuz derişimi ve asitlik dar aralıklarda tutulur. Bunu sağlayan kalıp neredeyse her zaman aynıdır: negatif geri besleme. Bir değer yükselince, onu düşüren süreç devreye girer; düşünce tersi olur. Kan şekeri yükselince insülin salınır ve şeker hücrelere alınır; düşünce başka bir hormon devreye girip depoları açar. Sağlığın büyük kısmı, bu geri besleme döngülerinin çalışır durumda olmasıdır; birçok hastalık da tam olarak bir döngünün bozulmasıdır."
+      },
+      {
+        "kind": "example",
+        "title": "Aynı molekül, farklı iş",
+        "body": "Adrenalin kalp hızını artırır, bronşları genişletir, karaciğerden şeker salınmasını sağlar ve sindirimi yavaşlatır. Bunların hepsi tek bir molekülün işidir ve farklılığı yaratan şey molekül değil, o dokudaki alıcının tipidir. Bu, ilaç geliştirmenin de temel mantığıdır: bir molekülün etkisini değiştirmek için onu değil, bağlandığı alıcıyı hedeflemek çoğu zaman daha isabetlidir. Aynı sebeple, 'dopamin mutluluk hormonudur' türü cümleler yanlıştır; dopamin farklı devrelerde hareket, öğrenme ve beklenti ile ilgili bambaşka işler yapar."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Sinir sistemi ile hormonal sistemin temel farkı nedir?",
+        "options": [
+          "Biri elektrik, diğeri kimyasal kullanır",
+          "Sinir sistemi hızlı, hedefi kesin ve kısa etkilidir; hormonal sistem yavaş, yaygın ve uzun etkilidir",
+          "Biri beyinde, diğeri vücuttadır",
+          "Hormonal sistem yalnızca gelişimde çalışır"
+        ],
+        "answerIndex": 1,
+        "explanation": "Sinir sistemi de sinapsta kimyasal kullanır. Ayrım hız, hedef kesinliği ve etki süresidir."
+      },
+      {
+        "id": "q2",
+        "prompt": "Sinir sinyalinde şiddet nasıl kodlanır?",
+        "options": [
+          "Sinyalin büyüklüğüyle",
+          "Sinyalin sıklığıyla; her sinyal aynı büyüklüktedir",
+          "Sinyalin hızıyla",
+          "Kullanılan iyon tipiyle"
+        ],
+        "answerIndex": 1,
+        "explanation": "Sinyal ya vardır ya yoktur ve hep aynı büyüklüktedir. Bilgi, ne sıklıkta ateşlendiğinde taşınır."
+      },
+      {
+        "id": "q3",
+        "prompt": "Adrenalinin farklı dokularda farklı etki yapmasının sebebi nedir?",
+        "options": [
+          "Molekülün biçim değiştirmesi",
+          "O dokudaki alıcı tipinin farklı olması",
+          "Kan basıncı farkı",
+          "Konsantrasyon farkı"
+        ],
+        "answerIndex": 1,
+        "explanation": "Etkiyi belirleyen molekül değil, bağlandığı alıcıdır. 'Şu molekül şu duyguyu üretir' anlatısı da bu yüzden fazla basittir."
+      }
+    ]
+  },
+  {
+    "id": "mikrobiyom",
+    "moduleId": "olcek",
+    "order": 1,
+    "title": "Mikroplar ve mikrobiyom",
+    "subtitle": "Dünyanın çoğunluğu görünmez ve biz de onların yaşam alanıyız.",
+    "minutes": 8,
+    "keyTerms": ["mikrobiyom", "ortakyaşam", "antibiyotik direnci"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Biyokütle olarak bakıldığında bitkiler açık ara öndedir; ama sayı ve çeşitlilik söz konusu olduğunda dünya mikropların dünyasıdır. Bir çay kaşığı toprakta milyarlarca bakteri, okyanusun her mililitresinde milyonlarca hücre bulunur. Bu canlıların büyük kısmı laboratuvarda üretilemediği için, uzun süre yalnızca hastalık yapanları biliniyordu. Doğrudan dizileme yöntemleri bu tabloyu tersine çevirdi."
+      },
+      {
+        "kind": "text",
+        "title": "İnsan bir ekosistemdir",
+        "body": "Vücudunuzda kabaca kendi hücre sayınız kadar bakteri yaşar. Bunların çoğu bağırsakta bulunur ve sindirilemeyen lifleri parçalar, bazı vitaminleri üretir, bağışıklık sisteminin eğitilmesine katkıda bulunur ve zararlı türlerin yerleşmesini zorlaştırır. Bu, kelimenin tam anlamıyla bir ortakyaşamdır. Buradaki dikkat noktası şudur: alanın son yirmi yıldaki popülerliği, kanıtın ilerisine geçen iddialar üretti. Bağırsak bakterileriyle depresyon, obezite ya da kişilik arasındaki ilişkilerin çoğu ilişkidir; nedensellik yönü çoğu durumda gösterilmemiştir."
+      },
+      {
+        "kind": "list",
+        "title": "Bilinenler ve bilinmeyenler",
+        "items": [
+          "İyi gösterilmiş: antibiyotik kullanımı bağırsak topluluğunu belirgin biçimde değiştirir ve toparlanma haftalar-aylar alır.",
+          "İyi gösterilmiş: belirli bir bağırsak enfeksiyonunda, sağlıklı bir vericiden yapılan dışkı mikrobiyota nakli çarpıcı ölçüde etkilidir.",
+          "Belirsiz: mikrobiyom ile ruh hâli, kilo ve bağışıklık hastalıkları arasındaki ilişkilerin nedensellik yönü.",
+          "Zayıf: piyasadaki çoğu probiyotik ürünün sağlıklı kişilerde ölçülebilir bir fayda sağladığı iddiası.",
+          "Önemli: erken çocukluktaki mikropla karşılaşmanın bağışıklık gelişimindeki rolü; aşırı hijyen tartışmasının kaynağı burasıdır.",
+          "Kesin: antibiyotikler virüslere etki etmez; gribe antibiyotik kullanmak yalnızca direnç üretir."
+        ]
+      },
+      {
+        "kind": "example",
+        "title": "Direncin faturası",
+        "body": "Antibiyotik direnci, evrimin doğrudan gözlenen ve en pahalı örneğidir. Bir hastanede yoğun antibiyotik kullanımı, dirençli hatlar için muazzam bir seçilim baskısı yaratır ve kuşak süresi dakikalarla ölçülen bakterilerde sonuç hızla görülür. Direnç genleri üstelik türler arasında doğrudan aktarılabilir. Hayvancılıkta büyütme amaçlı antibiyotik kullanımı bu sorunun önemli kaynaklarından biridir ve birçok ülkede yasaklanmıştır. Dünya Sağlık Örgütü direnci en büyük küresel sağlık tehditleri arasında sayıyor."
+      },
+      {
+        "kind": "text",
+        "title": "Mikroplar olmadan olmaz",
+        "body": "Toprakta azot bağlayan bakteriler olmasa tarım çökerdi. Okyanustaki fotosentetik mikroplar, atmosferdeki oksijenin önemli bir bölümünü üretir. Geviş getiren hayvanlar otu kendileri sindiremez; işi mide bakterileri yapar. Peynir, yoğurt, ekmek, turşu, sirke ve şarabın hepsi mikrobiyal iştir. Mikropları yalnızca hastalık kaynağı olarak düşünmek, dünyanın işleyişinin büyük kısmını gözden kaçırmak demektir."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "İnsan mikrobiyomu hakkında hangisi iyi gösterilmiştir?",
+        "options": [
+          "Depresyonun bağırsak bakterilerinden kaynaklandığı",
+          "Antibiyotik kullanımının bağırsak topluluğunu belirgin biçimde değiştirdiği ve toparlanmanın haftalar-aylar aldığı",
+          "Probiyotiklerin sağlıklı kişilerde kilo verdirdiği",
+          "Kişiliğin mikrobiyomla belirlendiği"
+        ],
+        "answerIndex": 1,
+        "explanation": "Alandaki en sağlam bulgular bunlar gibi somut olanlardır. Ruh hâli ve kilo ile ilişkilerde nedensellik yönü çoğunlukla gösterilmemiştir."
+      },
+      {
+        "id": "q2",
+        "prompt": "Antibiyotik direnci neden bu kadar hızlı yayılır?",
+        "options": [
+          "Bakteriler öğrendiği için",
+          "Güçlü seçilim baskısı, çok kısa kuşak süresi ve direnç genlerinin türler arasında aktarılabilmesi",
+          "İlaçlar bozulduğu için",
+          "Mutasyon hızı arttığı için"
+        ],
+        "answerIndex": 1,
+        "explanation": "Üç etken birlikte çalışır. Hayvancılıkta büyütme amaçlı kullanım da bu baskıyı besleyen önemli bir kaynaktır."
+      },
+      {
+        "id": "q3",
+        "prompt": "Gribe antibiyotik kullanmak ne yapar?",
+        "options": [
+          "İyileşmeyi hızlandırır",
+          "Hiçbir fayda sağlamaz; grip virüsten kaynaklanır ve kullanım yalnızca direnç üretir",
+          "Bağışıklığı güçlendirir",
+          "Bulaşmayı önler"
+        ],
+        "answerIndex": 1,
+        "explanation": "Antibiyotikler bakterilere etki eder, virüslere etmez. Gereksiz kullanım, yalnızca dirençli hatları seçer."
+      }
+    ]
+  },
+  {
+    "id": "ekosistem",
+    "moduleId": "olcek",
+    "order": 2,
+    "title": "Ekosistem ve enerji akışı",
+    "subtitle": "Her basamakta enerjinin onda dokuzu kayboluyor.",
+    "minutes": 9,
+    "keyTerms": ["besin ağı", "birincil üretim", "aktarım verimi", "anahtar tür"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Bir ekosistemin bütün bütçesi tek bir kalemle başlar: fotosentezle üretilen enerji. Buna birincil üretim denir ve o bölgede kaç canlının yaşayabileceğini belirleyen üst sınırdır. Enerji, bu girişten sonra basamak basamak yukarı taşınır — ama her basamakta büyük bir kısmı kaybolur."
+      },
+      { "kind": "chart", "chartId": "besin-agi-enerjisi" },
+      {
+        "kind": "text",
+        "body": "Kaybın sebebi sır değildir: her canlı aldığı enerjinin büyük kısmını yaşamak için harcar — hareket eder, ısınır, molekül üretir — ve bu enerji ısı olarak dağılır. Geriye kalan, yani vücuduna eklediği kısım bir üst basamağa taşınabilir. Bu oran doğada tipik olarak yüzde on civarındadır. Sonuçları geniştir: büyük yırtıcılar her zaman az sayıdadır, besin zincirleri nadiren dört beş basamaktan uzun olur ve bir hektardan bitki yiyerek çok daha fazla insan beslenebilir."
+      },
+      {
+        "kind": "list",
+        "title": "Ekosistemi anlamanın kuralları",
+        "items": [
+          "Ağ, zincirden daha doğru bir betimlemedir: çoğu tür birden fazla basamakta beslenir ve bu, ağı dış etkilere karşı dayanıklı kılar.",
+          "Anahtar tür: sayısına göre beklenenden çok daha büyük etkisi olan tür. Kaybı bütün ağı yeniden dizer.",
+          "Yukarıdan aşağı etki: bir yırtıcının yok olması, otçulların artmasına ve bitki örtüsünün çökmesine yol açabilir.",
+          "Ayrıştırıcılar sıkıcı ama vazgeçilmezdir: ölü maddeyi geri döndürmeseler döngü birkaç yılda durur.",
+          "Besleyici madde döngüleri enerji akışından farklıdır: enerji tek yönde akıp ısı olarak gider, azot ve fosfor ise döner.",
+          "Çeşitlilik, ekosistemin şoklara karşı tamponudur; tek ürüne dayalı bir tarlanın kırılganlığı bunun tersidir."
+        ]
+      },
+      {
+        "kind": "example",
+        "title": "Bir yırtıcının dönüşü",
+        "body": "Yellowstone'da kurtların yeniden yerleştirilmesinden sonra geyik davranışı değişti; hayvanlar açık vadi tabanlarında uzun süre kalmaz oldu. Söğüt ve kavak filizleri toparlandı, kunduzlar geri geldi, dere yatakları değişti. Bu anlatı çok popüler oldu ve zaman zaman abartıldı — aynı dönemde kuraklık, ayı ve bizon sayıları da değişiyordu, ilişkilerin ayrıştırılması zordur. Ama temel ders sağlam kalır: bir ekosistemde tek bir türü çıkarmak ya da geri koymak, hiçbir zaman tek bir şeyi değiştirmez."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Besin ağında her basamakta enerjinin büyük kısmı neden kaybolur?",
+        "options": [
+          "Sindirilemediği için",
+          "Her canlı aldığı enerjinin çoğunu yaşamak için harcar ve bu enerji ısı olarak dağılır",
+          "Avlanma verimsiz olduğu için",
+          "Ayrıştırıcılar aldığı için"
+        ],
+        "answerIndex": 1,
+        "explanation": "Bir üst basamağa yalnızca vücuda eklenen kısım taşınabilir. Bu oran doğada tipik olarak %10 civarındadır."
+      },
+      {
+        "id": "q2",
+        "prompt": "Besin zincirlerinin nadiren dört beş basamaktan uzun olmasının sebebi nedir?",
+        "options": [
+          "Yeterli tür çeşitliliği olmaması",
+          "Her basamakta enerjinin onda dokuzunun kaybolması; üst basamaklara neredeyse hiçbir şey kalmaması",
+          "Yırtıcıların birbirini yememesi",
+          "İklim kısıtları"
+        ],
+        "answerIndex": 1,
+        "explanation": "Beşinci basamakta başlangıç enerjisinin on binde biri kalır. Bu, o basamağı besleyemeyecek kadar azdır."
+      },
+      {
+        "id": "q3",
+        "prompt": "Yellowstone kurt anlatısından çıkarılacak en dengeli ders nedir?",
+        "options": [
+          "Kurtlar dere yataklarını değiştirdi, bu kesin olarak kanıtlandı",
+          "Bir türü çıkarmak ya da geri koymak hiçbir zaman tek bir şeyi değiştirmez; ama etkileri ayrıştırmak zordur",
+          "Yırtıcıların hiçbir etkisi yoktur",
+          "Ekosistemler değişmez"
+        ],
+        "answerIndex": 1,
+        "explanation": "Anlatı popülerleşirken abartıldı; aynı dönemde kuraklık ve diğer tür sayıları da değişiyordu. Temel ders yine de sağlam kalır."
+      }
+    ]
+  },
+  {
+    "id": "olcek-yasalari",
+    "moduleId": "olcek",
+    "order": 3,
+    "title": "Ölçek yasaları",
+    "subtitle": "Büyüklük, bir canlının hakkında bilebileceğiniz en bilgilendirici tek sayıdır.",
+    "minutes": 9,
+    "keyTerms": ["Kleiber yasası", "allometri", "kare-küp kuralı", "yüzey-hacim oranı"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Biyolojide sayısız istisna vardır; ama birkaç bağıntı, on binlerce türde ve on iki büyüklük mertebesi boyunca şaşırtıcı bir düzenlilikle geçerlidir. Bunların en ünlüsü, metabolizmanın kütleyle nasıl ölçeklendiğidir. Beklenen ilişki doğrusal olurdu — iki kat kütle, iki kat enerji. Ölçüm başka bir şey söyler."
+      },
+      { "kind": "chart", "chartId": "olcek-ve-metabolizma" },
+      {
+        "kind": "text",
+        "body": "Metabolizma kütlenin 3/4 kuvvetiyle büyür. Yani kütle iki katına çıktığında toplam enerji tüketimi yalnızca yaklaşık yüzde altmış yedi artar. Kilogram başına bakıldığında ise düşer: bir fare, bir filin gramı başına yaklaşık yirmi kat daha fazla enerji harcar. Bunun sonuçları hayatın her yanına yayılır — küçük hayvanlar sürekli yemek zorundadır, kalpleri çok daha hızlı atar, hızlı ürer ve erken ölürler. Üssün neden tam olarak 3/4 olduğu hâlâ tartışılıyor; taşıma ağlarının geometrisine dayanan açıklamalar öne çıksa da tam bir uzlaşma yok."
+      },
+      {
+        "kind": "list",
+        "title": "Diğer ölçek kuralları",
+        "items": [
+          "Ömür kütleyle artar, kalp hızı azalır; ikisinin çarpımı — ömür boyu atım sayısı — memelilerde şaşırtıcı biçimde sabittir.",
+          "Kare-küp kuralı: boy iki katına çıkınca alan dört, hacim sekiz katına çıkar. Kemik kesiti alanla, ağırlık hacimle büyür; bu yüzden büyük hayvanların bacakları orantısız kalındır.",
+          "Isı: küçük hayvanlar yüzey-hacim oranı yüksek olduğu için ısıyı hızla kaybeder. En küçük memelilerin neredeyse durmadan yemek zorunda olmasının sebebi budur.",
+          "Kuşlar kuralın üstündedir: aynı kütledeki memeliden belirgin biçimde uzun yaşarlar ve bu, yaşlanma araştırmalarının ilgi odaklarından biridir.",
+          "İnsan da kuralın dışındadır: kütlemizin öngördüğü ömrün çok üstünde yaşıyoruz — ama bunun sebebi biyolojimiz değil, tıbbımız ve çevremiz.",
+          "Şehirler de ölçekleniyor: altyapı ölçek ekonomisi gösterirken yaratıcılık ve suç, nüfustan daha hızlı büyüyor."
+        ]
+      },
+      {
+        "kind": "example",
+        "title": "Devler neden yok",
+        "body": "Bir insanı on kat büyütseniz, kemiklerinin kesit alanı yüz kat artar ama ağırlığı bin kat artar. Kemiğe binen basınç on katına çıkar ve kemik kırılır. Bu yüzden filin bacakları bir ceylanınkine oranla çok daha kalındır ve bu yüzden dev örümcekler ya da devasa insanlar mümkün değildir. Aynı kural tersine de işler: karınca kendi ağırlığının katlarını taşırken kas gücü kesit alanıyla, ağırlık ise hacimle orantılı olduğu için avantajlıdır. Küçük olmak, güç-ağırlık oranında kazanmaktır."
+      },
+      {
+        "kind": "quote",
+        "text": "Bir canlının boyutunu bilmek, onun hakkında bildiğiniz tek şey olsa bile, şaşırtıcı sayıda özelliğini tahmin etmenizi sağlar.",
+        "source": "Ölçek biyolojisinin temel savı"
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Kleiber yasası ne der?",
+        "options": [
+          "Metabolizma kütleyle doğru orantılıdır",
+          "Metabolizma kütlenin 3/4 kuvvetiyle büyür; kilogram başına metabolizma büyüdükçe düşer",
+          "Metabolizma yüzey alanıyla orantılıdır",
+          "Metabolizma ömürle orantılıdır"
+        ],
+        "answerIndex": 1,
+        "explanation": "Bir fare, filin gramı başına yaklaşık yirmi kat fazla enerji harcar. Üssün neden 3/4 olduğu hâlâ tartışılıyor."
+      },
+      {
+        "id": "q2",
+        "prompt": "Büyük hayvanların bacaklarının orantısız kalın olmasının sebebi nedir?",
+        "options": [
+          "Daha hızlı koşmak için",
+          "Kemik kesiti alanla, ağırlık hacimle büyüdüğü için; boy artınca kemiğe binen basınç artar",
+          "Isı yalıtımı için",
+          "Kas bağlantısı için"
+        ],
+        "answerIndex": 1,
+        "explanation": "Kare-küp kuralının doğrudan sonucudur. Aynı kural dev canlıların neden mümkün olmadığını da açıklar."
+      },
+      {
+        "id": "q3",
+        "prompt": "İnsanın ölçek kurallarının dışında kalmasının sebebi nedir?",
+        "options": [
+          "Özel bir biyolojiye sahip olması",
+          "Tıp ve güvenli çevre; ömrümüz kütlemizin öngördüğünün çok üstünde",
+          "Beyin büyüklüğü",
+          "Beslenme biçimi"
+        ],
+        "answerIndex": 1,
+        "explanation": "Kuralın dışına çıkaran şey biyolojimiz değil, koşullarımızdır. Kuşlar ise biyolojik olarak kuralın üstündedir ve bu ayrı bir araştırma konusudur."
+      }
+    ]
+  }
+]

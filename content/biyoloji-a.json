@@ -1,0 +1,478 @@
+[
+  {
+    "id": "hucre",
+    "moduleId": "hucre",
+    "order": 1,
+    "title": "Hücre: yaşamın birimi",
+    "subtitle": "Her hücre, başka bir hücreden gelir.",
+    "minutes": 8,
+    "keyTerms": ["hücre", "prokaryot", "ökaryot", "organel"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Biyolojinin en geniş kapsamlı genellemesi üç maddedir: bütün canlılar hücrelerden oluşur, hücre yaşamın en küçük bağımsız birimidir ve her hücre başka bir hücreden gelir. Üçüncü madde en zor kabul edileni oldu; çünkü çürüyen etten kurtçuk, bozulan çorbadan mikrop çıktığı yüzyıllarca gözlenmiş bir 'gerçek' sayıldı. Bu inancı yıkan şey bir kuram değil, iyi tasarlanmış bir deney oldu."
+      },
+      {
+        "kind": "list",
+        "title": "İki temel hücre tipi",
+        "items": [
+          "Prokaryot: çekirdeği ve zarlı organelleri yok. Bakteriler ve arkeler. Küçük, hızlı bölünen, kimyasal olarak inanılmaz çeşitli.",
+          "Ökaryot: çekirdekli ve organelli. Hayvan, bitki, mantar ve tek hücreli birçok canlı. Genellikle bin kat daha büyük hacimlidir.",
+          "Sayıca dünya prokaryotlarındır: bir çay kaşığı toprakta milyarlarca bakteri bulunur.",
+          "Ökaryot hücrenin ortaya çıkışı, bir hücrenin başka bir hücreyi yutup onu öldürmemesiyle olmuştur: mitokondri eskiden serbest yaşayan bir bakteridir.",
+          "Virüsler bu tablonun dışındadır: hücre değildirler, kendi başlarına çoğalamazlar ve 'canlı mı' sorusu tanım meselesidir."
+        ]
+      },
+      {
+        "kind": "text",
+        "title": "Neden bu kadar küçük",
+        "body": "Hücre boyutu şaşırtıcı ölçüde dar bir aralıkta kalır: bir bakteri de, bir fil hücresi de kabaca aynı büyüklüktedir. Fil daha büyük hücrelere sahip değildir; daha çok hücreye sahiptir. Bunun sebebi bir sonraki derste ayrıntılandırılacak basit bir fizik kısıtıdır — büyüdükçe içeriyi besleyen yüzey, beslenecek hacme göre yetersiz kalır ve difüzyon yavaşlar."
+      },
+      {
+        "kind": "example",
+        "title": "Aynı kitap, farklı okumalar",
+        "body": "Vücudunuzdaki her hücre, bazı istisnalar dışında aynı DNA'yı taşır. Bir sinir hücresiyle bir karaciğer hücresi arasındaki devasa fark, farklı genlere sahip olmalarından değil, aynı genlerin farklı kısımlarını okumalarından gelir. Bu, biyolojiyi anlamanın anahtarlarından biridir: bilgi her yerde aynıdır, ne kadarının okunduğu değişir. Kök hücre çalışmalarının ve hücreleri yeniden programlamanın mümkün olmasının sebebi de budur."
+      },
+      {
+        "kind": "quote",
+        "text": "Her hücre bir hücreden.",
+        "source": "Rudolf Virchow, 1855 — hücre kuramına eklenen ve en çok direnç gören madde"
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Prokaryot ve ökaryot hücrelerin temel farkı nedir?",
+        "options": [
+          "Boyut",
+          "Çekirdek ve zarlı organellerin varlığı",
+          "DNA taşıyıp taşımaması",
+          "Hareket edebilmesi"
+        ],
+        "answerIndex": 1,
+        "explanation": "Prokaryotların çekirdeği ve zarlı organelleri yoktur. Boyut farkı da vardır ama tanımlayıcı olan yapıdır."
+      },
+      {
+        "id": "q2",
+        "prompt": "Bir fil, bir farenin hücrelerinden nasıl farklıdır?",
+        "options": [
+          "Hücreleri çok daha büyüktür",
+          "Hücreleri kabaca aynı büyüklüktedir; sadece çok daha fazla hücresi vardır",
+          "Farklı tipte hücreleri vardır",
+          "Hücreleri daha hızlı bölünür"
+        ],
+        "answerIndex": 1,
+        "explanation": "Hücre boyutu, difüzyon ve yüzey-hacim kısıtları yüzünden dar bir aralıkta kalır. Büyümek, hücre sayısını artırmakla olur."
+      },
+      {
+        "id": "q3",
+        "prompt": "Sinir hücresi ile karaciğer hücresi arasındaki fark nereden gelir?",
+        "options": [
+          "Farklı genlere sahip olmalarından",
+          "Aynı genlerin farklı kısımlarını okumalarından",
+          "Farklı sayıda kromozom taşımalarından",
+          "Farklı zar yapılarından"
+        ],
+        "answerIndex": 1,
+        "explanation": "Bilgi her hücrede aynıdır; değişen, ne kadarının ve hangi kısmının okunduğudur. Hücreleri yeniden programlamak bu yüzden mümkündür."
+      }
+    ]
+  },
+  {
+    "id": "zar-ve-tasima",
+    "moduleId": "hucre",
+    "order": 2,
+    "title": "Zar, difüzyon ve boyutun sınırı",
+    "subtitle": "Fizik, biyolojiye bir tavan koyuyor.",
+    "minutes": 9,
+    "keyTerms": ["hücre zarı", "difüzyon", "osmoz", "aktif taşıma", "yüzey-hacim oranı"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Hücre zarı iki katlı bir yağ tabakasıdır ve tek başına neredeyse hiçbir şeyi geçirmez. Bu bir kusur değil, tasarımın özüdür: içeriyi dışarıdan ayırabilmek, yaşamın ön koşuludur. Neyin girip çıkacağını, zarın içine yerleşmiş protein kapılar belirler. Yani hücre zarı bir duvar değil, seçici bir sınır kapısıdır."
+      },
+      {
+        "kind": "list",
+        "title": "Madde nasıl geçer",
+        "items": [
+          "Basit difüzyon: küçük ve yağda çözünen moleküller doğrudan geçer. Oksijen ve karbondioksit böyledir.",
+          "Kolaylaştırılmış difüzyon: bir protein kanal açılır, madde yine kendi akış yönünde geçer. Enerji harcanmaz.",
+          "Osmoz: su, çözünen madde derişimi düşük taraftan yüksek tarafa geçer. Bitkiyi dik tutan basınç buradan gelir.",
+          "Aktif taşıma: madde doğal akışına karşı, ATP harcanarak pompalanır. Sinir hücrelerinin çalışması buna dayanır ve dinlenme hâlindeki insan enerjisinin ciddi bir bölümü bu pompalara gider.",
+          "Kesecikle taşıma: büyük moleküller ve hücreler, zarın içeri çökmesiyle yutulur."
+        ]
+      },
+      { "kind": "chart", "chartId": "difuzyon-ve-boyut" },
+      {
+        "kind": "text",
+        "body": "Grafiğin gösterdiği kısıt, biyolojinin belki de en belirleyici fiziksel sınırıdır. Difüzyon mesafenin karesiyle yavaşlar: bir hücrenin içinde saniyeler süren yolculuk, bir santimetre için saatlere çıkar. Bu yüzden hiçbir canlı bir milimetreden büyük tek bir hücre olamaz ve bu yüzden büyük canlılar difüzyona güvenemez. Çözüm her seferinde aynıdır: yüzeyi büyütmek ve mesafeyi kısaltmak."
+      },
+      {
+        "kind": "example",
+        "title": "Aynı sorunun dört çözümü",
+        "body": "Akciğerde alveoller, toplam yüzeyi bir tenis kortu büyüklüğüne çıkarır. Bağırsakta kıvrımlar, villuslar ve mikrovilluslar üç kademeli bir katlanma üretir; emilim yüzeyi yüzlerce metrekareye ulaşır. Kılcal damar ağı, hiçbir hücrenin bir damara birkaç hücre boyundan uzak kalmamasını sağlar. Bitkilerde yaprak yüzeyi ve kök tüyleri aynı işi yapar. Dört farklı organizmada, dört farklı doku — ama tek bir geometrik sorun."
+      },
+      {
+        "kind": "text",
+        "title": "Kare-küp kuralı",
+        "body": "Bir canlının boyutu iki katına çıkarsa yüzeyi dört, hacmi sekiz katına çıkar. Bu sadece besin taşımayı değil, ısı dengesini, iskelet kalınlığını ve solunumu da belirler. Küçük hayvanlar ısıyı hızla kaybeder — bu yüzden sürekli yemek zorundadırlar. Büyük hayvanların ısı atma sorunu vardır; filin kulakları bunun için o kadar geniştir. Aynı kural, dev böceklerin ve devasa hayvanların neden mümkün olmadığını da açıklar."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Difüzyon süresi mesafeyle nasıl değişir?",
+        "options": [
+          "Doğru orantılı",
+          "Mesafenin karesiyle: mesafe iki katına çıkınca süre dört katına çıkar",
+          "Değişmez",
+          "Ters orantılı"
+        ],
+        "answerIndex": 1,
+        "explanation": "Bu bağıntı hücre boyutuna kesin bir tavan koyar ve büyük canlılarda dolaşım sisteminin neden zorunlu olduğunu açıklar."
+      },
+      {
+        "id": "q2",
+        "prompt": "Alveol, villus ve kılcal damar ağı hangi ortak soruna çözümdür?",
+        "options": [
+          "Isı kaybı",
+          "Yüzeyi büyütmek ve difüzyon mesafesini kısaltmak",
+          "Enerji tasarrufu",
+          "Mekanik dayanım"
+        ],
+        "answerIndex": 1,
+        "explanation": "Farklı organlarda, farklı canlılarda tekrarlanan aynı geometrik çözümdür: katlanarak yüzey kazanmak."
+      },
+      {
+        "id": "q3",
+        "prompt": "Aktif taşımayı diğerlerinden ayıran nedir?",
+        "options": [
+          "Daha hızlı olması",
+          "Maddenin doğal akış yönüne karşı, enerji harcanarak taşınması",
+          "Zar gerektirmemesi",
+          "Sadece suyu taşıması"
+        ],
+        "answerIndex": 1,
+        "explanation": "ATP harcanır. Sinir hücrelerinin iyon pompaları bu yolla çalışır ve dinlenme hâlindeki enerji tüketiminin ciddi bir kısmını oluşturur."
+      }
+    ]
+  },
+  {
+    "id": "enzimler",
+    "moduleId": "hucre",
+    "order": 3,
+    "title": "Enzimler: hızın kontrolü",
+    "subtitle": "Hücre neyin olacağına değil, neyin ne kadar hızlı olacağına karar verir.",
+    "minutes": 8,
+    "keyTerms": ["enzim", "substrat", "Km", "doyum", "inhibitör"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Hücrede olan tepkimelerin çoğu, kendi hâline bırakılsa da gerçekleşir — ama yıllar sürebilir. Enzimler bu tepkimeleri milyonlarca kat hızlandırır ve kendileri tükenmez. Bunun anlamı önemlidir: hücre bir tepkimeyi yasaklamaz, sadece hızını belirler. Yaşam, termodinamiğe karşı bir mucize değil, kinetiğin ustaca yönetilmesidir."
+      },
+      {
+        "kind": "text",
+        "title": "Biçim işlevi belirler",
+        "body": "Bir enzim, üzerinde çalıştığı moleküle biçim olarak uyar; anahtar-kilit benzetmesi kabaca doğrudur ama fazla katıdır. Gerçekte enzim, substrat bağlandığında biçim değiştirir ve onu tepkimeye zorlayan bir konuma sokar. Bu yüzden bir enzimin şekli bozulduğunda — sıcaklık, asitlik ya da bir kimyasal yüzünden — işlevi tümüyle kaybolur. Yumurtanın pişince geri dönmemesi, protein katlanmasının bozulmasıdır."
+      },
+      { "kind": "chart", "chartId": "enzim-kinetigi" },
+      {
+        "kind": "text",
+        "body": "Grafikteki doyum eğrisi, canlı sistemlerin en yaygın davranışıdır ve biyoloji dışında da her yerde karşınıza çıkar. Az substrat varken hızı belirleyen şey substrat miktarıdır; belirli bir noktadan sonra bütün enzimler meşguldür ve daha fazla substrat sadece sıraya girer. Bu yüzden 'daha çok vitamin daha çok fayda' beklentisi çoğu durumda karşılıksızdır: enzim doymuşsa fazlası atılır. Aynı mantık, bir fabrikada makine sayısı sabitken hammadde artırmanın üretimi artırmamasıyla birebir aynıdır."
+      },
+      {
+        "kind": "list",
+        "title": "Hücre enzimleri nasıl denetler",
+        "items": [
+          "Miktar: gen ifadesini artırıp azaltarak enzim sayısını değiştirir. Yavaş ama kalıcı bir denetim.",
+          "İnhibitör: bir molekül enzime bağlanıp işini engeller. Birçok ilaç ve neredeyse bütün zehirler böyle çalışır.",
+          "Geri besleme: yolun sonunda üretilen madde, yolun başındaki enzimi durdurur. Aşırı üretim kendi kendini keser.",
+          "Ortam: sıcaklık ve asitlik, enzimin biçimini doğrudan etkiler. Midede çalışan enzimle bağırsakta çalışan enzim aynı ortamda çalışamaz.",
+          "Bölme: enzimler farklı organellerde tutularak, aynı hücrede birbirini bozacak tepkimeler ayrı odalara konur."
+        ]
+      },
+      {
+        "kind": "example",
+        "title": "Zehir ile ilaç arasındaki fark dozdur",
+        "body": "Siyanür, hücresel solunumun son basamağındaki bir enzimi bloke eder; hücre oksijeni kullanamaz hâle gelir ve enerji üretimi durur. Aspirin, iltihap sinyali üreten bir enzimi kalıcı olarak devre dışı bırakır. Statinler, kolesterol üretim yolunun hız belirleyici enzimini yavaşlatır. Üçü de aynı mekanizmayı kullanır: bir enzimi durdurmak. Farkı yaratan şey hangi enzimin, ne kadar ve ne kadar seçici biçimde durdurulduğudur."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Enzimler tepkimelere ne yapar?",
+        "options": [
+          "Mümkün olmayan tepkimeleri mümkün kılar",
+          "Zaten mümkün olan tepkimeleri milyonlarca kat hızlandırır ve kendileri tükenmez",
+          "Tepkimeleri yasaklar",
+          "Enerji üretir"
+        ],
+        "answerIndex": 1,
+        "explanation": "Hücre bir tepkimeyi yasaklamaz, hızını belirler. Yaşam, termodinamiğe karşı değil kinetiğin yönetilmesiyle işler."
+      },
+      {
+        "id": "q2",
+        "prompt": "Doyuma ulaşmış bir enzim sisteminde substratı iki katına çıkarmak ne yapar?",
+        "options": [
+          "Hızı iki katına çıkarır",
+          "Neredeyse hiçbir şey değiştirmez; sınırlayan şey substrat değil enzim sayısıdır",
+          "Hızı düşürür",
+          "Enzimi bozar"
+        ],
+        "answerIndex": 1,
+        "explanation": "Bütün enzimler meşgulse fazla substrat sıraya girer. 'Daha çok girdi daha çok çıktı' beklentisi bu bölgede karşılıksızdır."
+      },
+      {
+        "id": "q3",
+        "prompt": "Geri besleme denetimi nasıl çalışır?",
+        "options": [
+          "Enzim miktarını artırır",
+          "Yolun sonunda üretilen madde, yolun başındaki enzimi durdurur",
+          "Sıcaklığı düşürür",
+          "Substratı tüketir"
+        ],
+        "answerIndex": 1,
+        "explanation": "Aşırı üretim kendi kendini keser. Bu, canlı sistemlerdeki denetimin en yaygın kalıbıdır."
+      }
+    ]
+  },
+  {
+    "id": "enerji",
+    "moduleId": "hucre",
+    "order": 4,
+    "title": "Enerji: ATP, solunum, fotosentez",
+    "subtitle": "Neredeyse bütün yaşam, aynı bataryayı doldurup boşaltıyor.",
+    "minutes": 9,
+    "keyTerms": ["ATP", "hücresel solunum", "fotosentez", "kemiozmoz", "mitokondri"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Hücrenin bütün işleri — kas kasılması, madde pompalama, molekül üretimi, sinyal iletimi — aynı para birimiyle ödenir: ATP. Bu molekül depolanmaz; sürekli üretilir ve saniyeler içinde harcanır. Dinlenme hâlindeki bir insan, gün boyunca kendi vücut ağırlığına yakın miktarda ATP üretip tüketir. Elinizde her an bulunan miktar ise yalnızca birkaç dakikalık ihtiyacı karşılar."
+      },
+      {
+        "kind": "text",
+        "title": "Zar bir baraj gibi çalışır",
+        "body": "Enerjinin nasıl ATP'ye çevrildiği uzun süre bilinmiyordu ve doğru cevap beklenmedik çıktı. Besinden koparılan elektronlar bir dizi taşıyıcıdan geçerken, açığa çıkan enerji protonları zarın bir yanına pompalamak için kullanılır. Böylece zarın iki yanında bir yoğunluk farkı — bir tür baraj — oluşur. Protonlar geri akarken bir türbinden geçer ve o türbin ATP üretir. Bu mekanizma bakteride de, bitkide de, sizde de aynıdır; yaşamın en derin ortak noktalarından biridir."
+      },
+      {
+        "kind": "list",
+        "title": "Enerji akışının hatları",
+        "items": [
+          "Fotosentez: ışık enerjisiyle karbondioksit ve sudan şeker üretilir. Yeryüzündeki neredeyse bütün enerjinin giriş kapısıdır.",
+          "Hücresel solunum: şekerdeki enerji, oksijen kullanılarak ATP'ye çevrilir. Artıklar karbondioksit ve sudur.",
+          "İkisi birbirinin tersi gibi görünür ama aynı değildir; farklı yollar, farklı enzimler ve farklı yerlerde işler.",
+          "Oksijensiz yollar (fermantasyon) çok daha az ATP üretir ama hızlıdır; kas ağrısının ve ekmek mayasının arkasındaki süreçtir.",
+          "Bazı canlılar enerjiyi ışıktan değil kimyasal maddelerden alır: okyanus tabanındaki sıcak bacalarda kurulu ekosistemler güneşe hiç bağlı değildir.",
+          "Mitokondri, bu işi yapan organeldir ve kendi DNA'sını taşır — eskiden serbest yaşayan bir bakteri olduğunun kalıntısı."
+        ]
+      },
+      {
+        "kind": "formula",
+        "title": "İki tepkimenin özeti",
+        "expression": "6CO₂ + 6H₂O + ışık → C₆H₁₂O₆ + 6O₂     ·     tersine: solunum"
+      },
+      {
+        "kind": "example",
+        "title": "Havadaki oksijen bir atıktır",
+        "body": "Atmosferdeki oksijenin tamamı biyolojik kökenlidir. İki buçuk milyar yıl kadar önce fotosentez yapan bakteriler, kendileri için işe yaramaz bir atık olan oksijeni salmaya başladı. Oksijen o dönemin canlılarının çoğu için zehirdi ve bilinen en büyük kirlilik olaylarından birine yol açtı. Bugün soluduğumuz hava, bir kitlesel zehirlenmenin kalıntısıdır — ve daha sonra evrilen canlılar bu zehri kullanarak çok daha verimli enerji üretmeyi öğrendi."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "ATP hakkında hangisi doğrudur?",
+        "options": [
+          "Uzun süre depolanır",
+          "Depolanmaz; sürekli üretilip harcanır ve elde bulunan miktar birkaç dakikalık ihtiyacı karşılar",
+          "Sadece kaslarda bulunur",
+          "Bitkilerde bulunmaz"
+        ],
+        "answerIndex": 1,
+        "explanation": "Bir insan gün boyunca kendi ağırlığına yakın miktarda ATP çevirir. Depo değil, sürekli akan bir para birimidir."
+      },
+      {
+        "id": "q2",
+        "prompt": "Kemiozmoz nasıl çalışır?",
+        "options": [
+          "Şeker doğrudan ATP'ye dönüşür",
+          "Zarın iki yanında kurulan proton farkı, geri akarken bir türbini döndürerek ATP üretir",
+          "Isı doğrudan enerjiye çevrilir",
+          "Oksijen ATP'ye bağlanır"
+        ],
+        "answerIndex": 1,
+        "explanation": "Baraj benzetmesi tam oturur. Bu mekanizma bakteride, bitkide ve insanda aynıdır."
+      },
+      {
+        "id": "q3",
+        "prompt": "Atmosferdeki oksijenin kökeni nedir?",
+        "options": [
+          "Volkanik gazlar",
+          "Fotosentez yapan canlıların saldığı atık",
+          "Suyun doğal ayrışması",
+          "Uzaydan gelen madde"
+        ],
+        "answerIndex": 1,
+        "explanation": "Oksijen o dönemin canlılarının çoğu için zehirdi. Bugünkü hava, bir kitlesel zehirlenmenin kalıntısıdır."
+      }
+    ]
+  },
+  {
+    "id": "dna-dan-proteine",
+    "moduleId": "sistemler",
+    "order": 1,
+    "title": "DNA'dan proteine",
+    "subtitle": "Bilgi bir yerde durur, işi başkası yapar.",
+    "minutes": 9,
+    "keyTerms": ["DNA", "RNA", "protein", "genetik kod", "gen ifadesi", "epigenetik"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "DNA bilgi taşır ama hiçbir iş yapmaz. İşi proteinler yapar: enzimler, taşıyıcılar, alıcılar, kaslar, saç, bağışıklık molekülleri. Aradaki köprü RNA'dır. DNA'daki bir bölüm RNA'ya kopyalanır, RNA sitoplazmaya taşınır ve orada amino asitler doğru sırayla dizilerek protein üretilir. Bu akış biyolojinin en temel şemasıdır."
+      },
+      {
+        "kind": "text",
+        "title": "Dört harflik alfabe",
+        "body": "DNA dört harfle yazılır ve her üç harf bir amino asite karşılık gelir. Bu tablo — genetik kod — bakteriden insana neredeyse bütün canlılarda aynıdır. Kimyasal olarak başka bir tablo da pekâlâ mümkündü; aynı olması, hepimizin tek bir ortak atadan geldiğinin en güçlü kanıtlarından biridir. Aynı sebeple, insan geni bir bakteriye takıldığında bakteri onu doğru okur — insülin bu şekilde üretilir."
+      },
+      {
+        "kind": "list",
+        "title": "Şemayı karmaşıklaştıran gerçekler",
+        "items": [
+          "İnsan genomunda yaklaşık yirmi bin gen var; beklenen sayı yüz binin üstündeydi. Karmaşıklık gen sayısında değil.",
+          "Bir genden birden fazla protein üretilebilir: kopyalanan RNA farklı biçimlerde kesilip birleştirilebilir.",
+          "Genomun protein kodlayan kısmı yüzde ikiden azdır. Geri kalanın önemli bir bölümü, hangi genin ne zaman okunacağını düzenler.",
+          "Bazı RNA'lar hiç proteine çevrilmez; kendileri işlev görür.",
+          "Bilgi akışı tek yönlü değildir: bazı virüsler RNA'dan DNA yazar.",
+          "Epigenetik işaretler diziyi değiştirmeden okunmayı değiştirir; bazıları bölünmeyle aktarılır, kuşaklar arası aktarım ise sınırlı ve tartışmalıdır."
+        ]
+      },
+      {
+        "kind": "example",
+        "title": "Aynı bilgi, bambaşka sonuç",
+        "body": "Bir kelebeğin tırtıl hâli ile kanatlı hâli aynı genomu taşır. Bir kraliçe arı ile bir işçi arı da öyle; aradaki muazzam fark, larva döneminde ne yedikleriyle belirlenir. İkiz kardeşler aynı diziyle başlar ama yıllar içinde farklı genleri farklı düzeylerde okumaya başlar. Bütün bunlar aynı şeyi söyler: genom bir kader değil, bir imkânlar listesidir ve hangi maddelerin okunacağı çevreyle birlikte belirlenir."
+      },
+      {
+        "kind": "text",
+        "title": "Bilgiyi okumak ve yazmak",
+        "body": "Yirminci yüzyılın ikinci yarısı bu bilgiyi okumayı öğrenmekle geçti: önce bir proteinin dizisi, sonra bir genin, sonunda bütün genom. Yirmi birinci yüzyıl yazmayı öğreniyor. CRISPR, bakterilerin virüslere karşı savunma sistemini programlanabilir bir kesiciye çevirerek genom düzenlemeyi ucuzlattı. Bugün tek gen hastalıklarında ilk tedaviler onaylandı. Aynı araç insan embriyosunda kullanıldığında ise bilim dünyası bunu açıkça kınadı — teknik imkân ile etik meşruiyet arasındaki fark, bu alanda her zamankinden görünür durumda."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Genetik kodun bütün canlılarda aynı olması neyi gösterir?",
+        "options": [
+          "Kimyasal olarak zorunlu olduğunu",
+          "Hepimizin tek bir ortak atadan geldiğini",
+          "Rastlantıyı",
+          "Kodun basit olduğunu"
+        ],
+        "answerIndex": 1,
+        "explanation": "Başka bir tablo da kimyasal olarak mümkündü. Aynı olması ortak kökenin en güçlü kanıtlarındandır; insülinin bakteride üretilebilmesi de bunun pratik sonucudur."
+      },
+      {
+        "id": "q2",
+        "prompt": "İnsan genomunda beklenenden çok daha az gen çıkması ne anlama geldi?",
+        "options": [
+          "Ölçüm hatası olduğunu",
+          "Karmaşıklığın gen sayısında değil, genlerin nasıl düzenlendiği ve birleştirildiğinde olduğunu",
+          "İnsanın basit olduğunu",
+          "Genlerin bir kısmının kaybolduğunu"
+        ],
+        "answerIndex": 1,
+        "explanation": "Bir genden birden fazla protein üretilebilir ve genomun büyük kısmı hangi genin ne zaman okunacağını düzenler."
+      },
+      {
+        "id": "q3",
+        "prompt": "Kraliçe arı ile işçi arı arasındaki farkın kaynağı nedir?",
+        "options": [
+          "Farklı genler",
+          "Aynı genomun, larva dönemindeki beslenmeye göre farklı okunması",
+          "Farklı babalar",
+          "Yaş farkı"
+        ],
+        "answerIndex": 1,
+        "explanation": "Genom bir kader değil, bir imkânlar listesidir. Hangi maddelerin okunacağı çevreyle birlikte belirlenir."
+      }
+    ]
+  },
+  {
+    "id": "cogalma",
+    "moduleId": "sistemler",
+    "order": 2,
+    "title": "Bölünme, onarım ve kanser",
+    "subtitle": "Çoğalmayı durdurmak, çoğalmaktan daha zor bir iş.",
+    "minutes": 9,
+    "keyTerms": ["mitoz", "mayoz", "DNA onarımı", "kanser", "kök hücre", "programlı hücre ölümü"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Vücudunuzda her saniye milyonlarca hücre bölünüyor ve aynı sayıda hücre ölüyor. Bu denge, dokunun büyüklüğünü sabit tutar. Bölünme sırasında üç milyar harflik dizinin kopyalanması gerekir ve kopyalama kusursuz değildir. Yaşamın sürmesi, hataların düzeltilmesine bağlıdır."
+      },
+      {
+        "kind": "list",
+        "title": "İki tür bölünme",
+        "items": [
+          "Mitoz: bir hücre, aynı kromozom takımını taşıyan iki hücreye bölünür. Büyüme, yenilenme ve onarım böyle olur.",
+          "Mayoz: kromozom sayısı yarıya iner ve kromozomlar arasında parça değişimi yapılır. Üreme hücreleri böyle oluşur.",
+          "Mayozdaki parça değişimi, kardeşlerin neden birbirine benzemediğini açıklar: her yumurta ve sperm benzersiz bir karışımdır.",
+          "Kopyalama hataları kaçınılmazdır; onarım sistemleri bunların ezici çoğunluğunu düzeltir.",
+          "Programlı hücre ölümü, onarılamayan hücrenin kendini denetimli biçimde yok etmesidir. Parmak aralarının açılması da bu süreçle olur."
+        ]
+      },
+      {
+        "kind": "text",
+        "title": "Onarımın önemi",
+        "body": "DNA her gün binlerce kez hasar görür: ultraviyole ışık, kimyasallar, hücrenin kendi metabolizması. Buna karşı birden çok onarım sistemi çalışır; her biri farklı türde hasarı tanır, keser ve yeniden yazar. Bu sistemlerin moleküler ayrıntısı, kısmen Türkiye'den çıkan çalışmalarla aydınlatılmış ve 2015'te Nobel ödülüne konu olmuştur. Onarım bozulduğunda mutasyonlar birikir; bazı kalıtsal kanser yatkınlıkları doğrudan bu sistemlerdeki kusurlardan kaynaklanır."
+      },
+      {
+        "kind": "text",
+        "title": "Kanser: birikimli bir arıza",
+        "body": "Kanser tek bir hastalık değildir; ortak bir mekanizmayı paylaşan yüzlerce hastalıktır. Ortak nokta, bir hücrenin bölünme denetimini kaybetmesidir. Bu, tek bir mutasyonla olmaz: genellikle birkaç farklı denetimin — bölünme freni, onarım, programlı ölüm — arka arkaya bozulması gerekir. Bu yüzden kanser büyük ölçüde bir yaşlanma hastalığıdır; hasar birikmesi için zaman gerekir. Aynı sebeple, bir tümörün içindeki hücreler birbirinden farklıdır, değişir ve ilaç baskısı altında seçilir: kanser tedavisindeki direncin kendisi evrimsel bir süreçtir."
+      },
+      {
+        "kind": "example",
+        "title": "Kök hücre ve yeniden programlama",
+        "body": "Kök hücreler hem kendilerini yenileyebilir hem başka hücre tiplerine dönüşebilir. Uzun süre bu yolun tek yönlü olduğu, farklılaşmış bir hücrenin geri dönemeyeceği düşünüldü. 2006'da yalnızca dört genin eklenmesiyle erişkin bir deri hücresinin kök hücre benzeri bir duruma geri çevrilebildiği gösterildi. Bu, hem hücre biyolojisinin en şaşırtıcı bulgularından biriydi hem de embriyo kullanmadan hasta kaynaklı hücre üretmenin önünü açtı. Bugün laboratuvarda hastanın kendi hücrelerinden üretilen minik doku modelleri, ilaç denemelerinde kullanılıyor."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Mayozun mitozdan farkı nedir?",
+        "options": [
+          "Daha hızlı olması",
+          "Kromozom sayısını yarıya indirmesi ve parça değişimiyle çeşitlilik üretmesi",
+          "Sadece bitkilerde olması",
+          "DNA kopyalanmaması"
+        ],
+        "answerIndex": 1,
+        "explanation": "Parça değişimi, her yumurta ve spermi benzersiz kılar. Kardeşlerin birbirine benzememesinin kaynağı budur."
+      },
+      {
+        "id": "q2",
+        "prompt": "Kanserin genellikle ileri yaşta ortaya çıkmasının sebebi nedir?",
+        "options": [
+          "Bağışıklığın zayıflaması",
+          "Birden çok denetim mekanizmasının arka arkaya bozulması için zaman gerekmesi",
+          "Hormonların değişmesi",
+          "Hücrelerin yaşlanması"
+        ],
+        "answerIndex": 1,
+        "explanation": "Tek bir mutasyon yetmez. Bölünme freni, onarım ve programlı ölüm gibi denetimlerin birikimli olarak bozulması gerekir."
+      },
+      {
+        "id": "q3",
+        "prompt": "Erişkin deri hücresinin kök hücre benzeri duruma çevrilebilmesi neyi gösterdi?",
+        "options": [
+          "Farklılaşmanın tek yönlü olmadığını",
+          "Kök hücrelerin gereksiz olduğunu",
+          "Deri hücrelerinin özel olduğunu",
+          "Genomun değiştiğini"
+        ],
+        "answerIndex": 0,
+        "explanation": "Yalnızca dört genin eklenmesiyle hücre geri programlanabildi. Bu, embriyo kullanmadan hasta kaynaklı hücre üretmenin önünü açtı."
+      }
+    ]
+  }
+]
