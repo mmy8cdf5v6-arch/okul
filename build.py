@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Okul — kaynak parçalarını assets/ altına derler."""
-import os, re, sys, json
+import os, re, sys, json, hashlib
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ORDER = ["core.js", "charts.js", "course.js", "study.js", "home.js", "boot.js"]
@@ -9,6 +9,22 @@ ORDER = ["core.js", "charts.js", "course.js", "study.js", "home.js", "boot.js"]
 def src(name):
     with open(os.path.join(HERE, "src", name), encoding="utf-8") as f:
         return f.read()
+
+
+def damga(metin):
+    return hashlib.sha1(metin.encode("utf-8")).hexdigest()[:8]
+
+
+def surumle(html, dosya, d):
+    """index.html'deki varlık adresine içerik damgası basar.
+
+    Adres değişmediği sürece tarayıcı eski kopyayı yeniden indirmez; yeni
+    sürüm yayımlandığı hâlde eski uygulamayı görmenin sebebi budur."""
+    kalip = r"(assets/" + re.escape(dosya) + r")(\?v=[0-9a-f]+)?"
+    yeni, n = re.subn(kalip, r"\1?v=" + d, html)
+    if not n:
+        sys.exit("index.html içinde assets/%s bulunamadı" % dosya)
+    return yeni
 
 
 def main():
@@ -21,6 +37,14 @@ def main():
     css = src("styles.css")
     with open(os.path.join(HERE, "assets", "styles.css"), "w", encoding="utf-8") as f:
         f.write(css)
+
+    ip = os.path.join(HERE, "index.html")
+    with open(ip, encoding="utf-8") as f:
+        html = f.read()
+    yeni = surumle(surumle(html, "app.js", damga(app)), "styles.css", damga(css))
+    if yeni != html:
+        with open(ip, "w", encoding="utf-8") as f:
+            f.write(yeni)
 
     charts = src("charts.js")
 
@@ -56,8 +80,8 @@ def main():
     if missing:
         sys.exit("tanımsız grafik: " + ", ".join(sorted(missing)))
 
-    print("assets/app.js   %.1f KB" % (len(app.encode()) / 1024))
-    print("assets/styles.css %.1f KB" % (len(css.encode()) / 1024))
+    print("assets/app.js   %.1f KB  ?v=%s" % (len(app.encode()) / 1024, damga(app)))
+    print("assets/styles.css %.1f KB  ?v=%s" % (len(css.encode()) / 1024, damga(css)))
     print("grafik: %d tanımlı, %d kullanılıyor" % (len(defined), len(used)))
 
 

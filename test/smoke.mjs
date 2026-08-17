@@ -8,6 +8,7 @@
 import fs from "fs";
 import path from "path";
 import http from "http";
+import crypto from "crypto";
 import { fileURLToPath } from "url";
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
@@ -67,6 +68,17 @@ async function step(name, fn, skipSettle) {
 
 await page.goto(BASE);
 await page.waitForTimeout(400);
+
+await step("varlık adresleri sürüm damgası taşıyor", async () => {
+  const html = fs.readFileSync(path.join(ROOT, "index.html"), "utf8");
+  for (const [ad, dosya] of [["app.js", "assets/app.js"], ["styles.css", "assets/styles.css"]]) {
+    const m = html.match(new RegExp("assets/" + ad.replace(".", "\\.") + "\\?v=([0-9a-f]{8})"));
+    if (!m) throw new Error(ad + " adresinde ?v= damgası yok — tarayıcı eski kopyayı sunar");
+    const beklenen = crypto.createHash("sha1")
+      .update(fs.readFileSync(path.join(ROOT, dosya), "utf8"), "utf8").digest("hex").slice(0, 8);
+    if (m[1] !== beklenen) throw new Error(ad + " damgası bayat: " + m[1] + " ≠ " + beklenen + " (python3 build.py çalıştır)");
+  }
+}, true);
 
 await step("kütüphane yükleniyor", async () => {
   await page.waitForSelector(".course-card");

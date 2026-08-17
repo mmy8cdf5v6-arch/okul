@@ -115,6 +115,11 @@ GitHub Pages: **Settings → Pages → Source: Deploy from a branch → `main` /
 `assets/` derlenmiş hâliyle depoda durduğu için ayrıca bir derleme adımı gerekmez —
 ama `src/` değiştirdiğinde `python3 build.py` çalıştırıp çıktıyı da işlemen gerekir.
 
+`build.py`, `index.html` içindeki varlık adreslerine içerik damgası basar
+(`assets/app.js?v=64ab7299`). Adres değişmediği sürece tarayıcı eski kopyayı
+yeniden indirmez; damga olmadan yeni sürüm yayımlansa bile kullanıcı eski
+uygulamayı görmeye devam eder. Duman testi damganın güncel olduğunu doğrular.
+
 ## Hazır kurs eklemek
 
 `courses/` altına bir JSON koy ve `courses/index.json` listesine bir satır ekle.
