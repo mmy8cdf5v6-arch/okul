@@ -214,8 +214,12 @@ await step("kütüphaneye dönüş ilerlemeyi gösteriyor", async () => {
 
 await step("anahtarsız üretim ayarlara yönlendiriyor", async () => {
   await page.fill("input.ask", "sanat tarihi");
-  await page.click("text=için kurs oluştur");
+  // anahtar yokken düğme kurs oluşturmayı vaat etmemeli
+  const label = await page.textContent(".ask-action .btn");
+  if (!/API anahtarı ekle/.test(label)) throw new Error("yanıltıcı düğme etiketi: " + label);
+  await page.click(".ask-action .btn");
   await page.waitForSelector("input[placeholder='sk-ant-...']");
+  if (!(await page.textContent("main")).includes("Sıradaki adım")) throw new Error("ayarlarda bağlam yok");
 });
 
 await step("API anahtarı kaydediliyor", async () => {
@@ -224,6 +228,8 @@ await step("API anahtarı kaydediliyor", async () => {
   await page.waitForTimeout(150);
   const stored = await page.evaluate(() => JSON.parse(localStorage.getItem("okul-v1")).apiKey);
   if (stored !== "sk-ant-test-anahtar") throw new Error("anahtar kaydedilmedi");
+  // anahtar kaydedilince üretim buradan doğrudan başlatılabilmeli
+  if (!(await page.textContent("main")).includes("için kurs oluştur")) throw new Error("ayarlarda başlatma düğmesi yok");
 });
 
 await step("kurs üretimi uçtan uca", async () => {

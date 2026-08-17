@@ -2732,13 +2732,17 @@
         hits.forEach(function (e) { matches.appendChild(courseCard(e)); });
       }
 
+      /* Anahtar yoksa düğme kurs oluşturmaz, Ayarlar'a götürür — etiketi bunu söylesin. */
       action.appendChild(el("button", {
-        class: "btn wide", text: "“" + route.query.trim() + "” için kurs oluştur",
+        class: "btn wide",
+        text: state.apiKey
+          ? "“" + route.query.trim() + "” için kurs oluştur"
+          : "Kurs oluşturmak için API anahtarı ekle →",
         onclick: function () { requestGeneration(route.query.trim()); }
       }));
       if (!state.apiKey) {
         action.appendChild(el("p", { class: "small muted", style: "margin:.6rem 0 0",
-          text: "Bunun için önce Ayarlar'dan kendi API anahtarını eklemelisin." }));
+          text: "Üretim, senin Anthropic hesabından doğrudan bu tarayıcıdan yapılır — bu sitenin sunucusu yok. Anahtarı bir kez ekle, sonra istediğin konuyu yaz." }));
       }
     }
 
@@ -2839,6 +2843,16 @@
     });
     var keyMsg = el("p", { class: "small muted", style: "margin:.5rem 0 0" });
     var shown = false;
+    var pending = (route.query || "").trim();
+
+    /* Üretim denemesinden buraya yönlendirildiyse, döngüyü burada kapat. */
+    if (pending && !state.apiKey) {
+      out.appendChild(el("section", { class: "card" }, [
+        el("p", { class: "label", style: "color:var(--accent)", text: "Sıradaki adım" }),
+        el("p", { style: "margin:.35rem 0 0",
+          text: "“" + pending + "” için kurs oluşturmak üzeresin. Aşağıya kendi Anthropic API anahtarını ekle; kaydedince buradan doğrudan başlatabilirsin." })
+      ]));
+    }
 
     out.appendChild(el("section", { class: "card stack" }, [
       el("p", { class: "label", text: "Anthropic API anahtarı" }),
@@ -2857,6 +2871,10 @@
         } })
       ]),
       keyMsg,
+      pending && state.apiKey
+        ? el("button", { class: "btn wide", text: "“" + pending + "” için kurs oluştur",
+            onclick: function () { requestGeneration(pending); } })
+        : null,
       el("p", { class: "small muted", style: "margin:0" }, [
         el("span", { text: "Anahtarı " }),
         el("a", { href: "https://console.anthropic.com/settings/keys", target: "_blank", rel: "noopener noreferrer",
