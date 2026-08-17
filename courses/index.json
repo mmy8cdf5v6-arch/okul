@@ -11,5 +11,18 @@
     "questions": 105,
     "charts": 21,
     "file": "courses/iktisat.json"
+  },
+  {
+    "id": "finans",
+    "title": "Finans",
+    "subtitle": "Paranın zamanı, riskin fiyatı",
+    "description": "Faizden portföye: paranın nasıl büyüdüğünü, riskin neden fiyatlandığını ve piyasaların neyi tekrar tekrar unuttuğunu öğren.",
+    "icon": "🏦",
+    "accent": "#2b5d8c",
+    "accentDark": "#7fb3e0",
+    "lessons": 12,
+    "questions": 36,
+    "charts": 6,
+    "file": "courses/finans.json"
   }
 ]

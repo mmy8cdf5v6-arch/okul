@@ -1,0 +1,175 @@
+[
+{
+  "id": "faiz-ve-bilesik-buyume",
+  "moduleId": "zaman",
+  "order": 1,
+  "title": "Faiz ve bileşik büyüme",
+  "subtitle": "Finansın tek cümlelik özeti: bugünkü para, yarınkinden değerlidir.",
+  "minutes": 8,
+  "keyTerms": ["faiz", "basit faiz", "bileşik faiz", "70 kuralı"],
+  "sections": [
+    { "kind": "text", "body": "Faiz, paranın kirasıdır. Birine bugün 100 lira verip bir yıl sonra 110 lira almayı bekliyorsanız, o 10 lira üç şeyin karşılığıdır: paranızı bir yıl kullanamamanın bedeli, bu sürede paranın alım gücünü yitirme ihtimali ve karşı tarafın ödememe riski. Finansın neredeyse tamamı bu üç kalemin nasıl fiyatlandığı üzerine kuruludur." },
+    { "kind": "text", "title": "Basit faiz ile bileşik faiz arasındaki fark", "body": "Basit faizde kazanç hep anaparadan hesaplanır: yılda %10'dan 100 lira, on yılda 200 lira olur. Bileşik faizde kazanılan faiz de anaparaya eklenir ve o da faiz kazanır. Aynı oranla on yılda 259 liraya çıkar. Fark ilk yıllarda önemsiz görünür, sonra hızla açılır; çünkü büyüme doğrusal değil üsseldir." },
+    { "kind": "formula", "title": "Bileşik büyüme", "expression": "S = A × (1 + r)ⁿ", "note": "A anapara, r dönemlik getiri oranı, n dönem sayısı. Formüldeki asıl güç n'in üstte durmasıdır: süreyi uzatmak, oranı artırmaktan çoğu zaman daha etkilidir." },
+    { "kind": "text", "title": "Zaman, oranı yener", "body": "Yılda %6 ile 40 yıl yatırım yapan biri, yılda %8 ile 25 yıl yatırım yapan birinin önüne geçer. Bu, finansın en pratik sonucudur: erken başlamak, daha yüksek getiri kovalamaktan güvenilirdir. Yüksek getiri belirsizdir ve peşine düşerken risk alırsınız; zaman ise elinizdeki tek kesin değişkendir, yeter ki harcamayın." },
+    { "kind": "example", "title": "Örnek: iki kardeş", "body": "Biri 25 yaşında başlayıp on yıl boyunca ayda para ayırıyor, sonra hiç eklemiyor. Diğeri 35 yaşında başlayıp emekliliğe kadar otuz yıl boyunca aynı tutarı ayırıyor. Aynı getiri oranıyla, çoğu senaryoda erken başlayıp bırakan kardeş öne geçer — üç kat daha az para yatırmış olmasına rağmen. Farkı yaratan yatırılan tutar değil, paranın kaç yıl bileşiklendiğidir." },
+    { "kind": "list", "title": "Bileşik etkinin iki yönü de keser", "items": [
+      "Yatırımda lehinize çalışır: kazanç üstüne kazanç birikir.",
+      "Borçta aleyhinize çalışır: kredi kartı bakiyesi aynı formülle büyür, üstelik oranı çok daha yüksektir.",
+      "Ücretlerde sessizce aleyhinize çalışır: yıllık %1'lik bir kesinti, otuz yılda birikimin dörtte birine yaklaşan bir tutara mal olabilir.",
+      "Enflasyonda alım gücünüz aleyhine çalışır: fiyatlar da bileşik büyür."
+    ]},
+    { "kind": "formula", "title": "70 kuralı", "expression": "İkiye katlanma süresi ≈ 70 / yıllık yüzde getiri", "note": "Yılda %7 getiren bir yatırım kabaca 10 yılda ikiye katlanır. Aynı kural enflasyon için de çalışır: %35 enflasyonda paranın alım gücü yaklaşık iki yılda yarıya iner." },
+    { "kind": "quote", "text": "Bileşik faiz dünyanın sekizinci harikasıdır. Anlayan kazanır, anlamayan öder.", "source": "Yaygın olarak Einstein'a atfedilir; kaynağı doğrulanmamıştır" }
+  ],
+  "quiz": [
+    { "id": "q1", "prompt": "Bileşik faizi basit faizden ayıran nedir?", "options": ["Oranın daha yüksek olması", "Kazanılan faizin de faiz kazanması", "Vergiden muaf olması", "Yalnızca bankalarda uygulanması"], "answerIndex": 1, "explanation": "Bileşik faizde kazanç anaparaya eklenir ve sonraki dönemde o da getiri üretir; büyüme bu yüzden üsseldir." },
+    { "id": "q2", "prompt": "Yılda %10 getiren bir yatırım kabaca kaç yılda ikiye katlanır?", "options": ["Yaklaşık 3 yıl", "Yaklaşık 7 yıl", "Yaklaşık 10 yıl", "Yaklaşık 20 yıl"], "answerIndex": 1, "explanation": "70 kuralına göre 70/10 = 7 yıl. Kural bir yaklaşıklıktır ama küçük oranlarda oldukça isabetlidir." },
+    { "id": "q3", "prompt": "Aşağıdakilerden hangisi bileşik etkinin aleyhe çalıştığı bir durumdur?", "options": ["Uzun vadeli hisse yatırımı", "Ödenmeyen kredi kartı bakiyesi", "Erken başlanan birikim", "Temettülerin yeniden yatırılması"], "answerIndex": 1, "explanation": "Borç da aynı formülle büyür. Yüksek faizli tüketici borcu, bileşik etkinin en pahalı biçimidir." }
+  ]
+},
+{
+  "id": "bugunku-deger",
+  "moduleId": "zaman",
+  "order": 2,
+  "title": "Bugünkü değer: geleceği bugüne çevirmek",
+  "subtitle": "Her finansal varlık, gelecekteki nakit akışlarının bugünkü fiyatıdır.",
+  "minutes": 9,
+  "keyTerms": ["bugünkü değer", "iskonto oranı", "nakit akışı", "fırsat maliyeti"],
+  "sections": [
+    { "kind": "text", "body": "Bir yıl sonraki 100 lira bugün kaç lira eder? Cevap, o bir yılda paranızla ne yapabileceğinize bağlıdır. Alternatifiniz %10 getiriyorsa, bugünkü 90,9 lira bir yılda 100 liraya çıkar; dolayısıyla bir yıl sonraki 100 liranın bugünkü değeri 90,9 liradır. Bu işleme iskonto etmek, kullanılan orana iskonto oranı denir." },
+    { "kind": "formula", "title": "Bugünkü değer", "expression": "BD = Σ Nₜ / (1 + r)ᵗ", "note": "Nₜ, t döneminde beklenen nakit akışı; r iskonto oranıdır. Bir varlığın değeri, ondan beklenen tüm nakit akışlarının bugüne indirgenmiş toplamıdır. Hisse, tahvil, gayrimenkul, hepsi." },
+    { "kind": "text", "title": "İskonto oranı nereden gelir?", "body": "İskonto oranı keyfi bir sayı değildir; aynı riski taşıyan bir yatırımdan bekleyeceğiniz getiridir. Yani bir fırsat maliyetidir. Devlet tahvili gibi görece güvenli bir nakit akışını düşük oranla, belirsiz bir girişimin nakit akışını yüksek oranla iskonto edersiniz. Risk arttıkça oran yükselir, oran yükseldikçe bugünkü değer düşer. 'Riskli varlık ucuz olmalı' cümlesinin matematiği budur." },
+    { "kind": "text", "title": "Vade uzadıkça faiz duyarlılığı artar", "body": "İskonto çarpanı üsseldir, dolayısıyla aynı faiz artışı uzak nakit akışlarını çok daha sert vurur. Kârının büyük kısmını on yıl sonra üretmesi beklenen bir teknoloji şirketinin hissesi, bu yıl temettü dağıtan bir bankanınkinden faiz artışına daha duyarlıdır. Faiz haberlerinde bazı sektörlerin neden diğerlerinden çok düştüğünü açıklayan mekanizma budur." },
+    { "kind": "example", "title": "Örnek: piyango ikramiyesi", "body": "Bir piyango 20 yıl boyunca her yıl 100 bin lira ödemeyi ya da bugün tek seferde 1,4 milyon lira vermeyi teklif ediyor. Toplamda 2 milyon lira daha çok görünse de, %8 iskonto oranıyla yıllık ödemelerin bugünkü değeri yaklaşık 980 bin liradır. Peşin teklif daha iyidir. 'Toplam ne kadar' sorusu yanıltıcıdır; doğru soru 'bugün ne kadar' sorusudur." },
+    { "kind": "list", "title": "Bugünkü değer düşüncesinin günlük karşılıkları", "items": [
+      "Peşin indirimi ile taksit arasında seçim yaparken, taksitleri iskonto edip karşılaştırmak gerekir.",
+      "Erken emeklilik ya da toplu ödeme tekliflerinde karar, toplam tutara değil bugünkü değere bakılarak verilir.",
+      "Bir eğitimin ya da mesleki sertifikanın 'değeri', gelecekte getireceği ek gelirin bugüne indirgenmiş hâlidir.",
+      "Kira ile satın alma karşılaştırması, iki nakit akışı serisinin bugünkü değerinin karşılaştırılmasıdır."
+    ]},
+    { "kind": "text", "title": "Modelin zayıf noktası", "body": "Formül sağlamdır ama girdiler tahmindir. Gelecekteki nakit akışlarını ve doğru iskonto oranını bilmiyorsanız, sonuç kesin görünen bir sayıyla süslenmiş bir tahminden ibarettir. Deneyimli analistlerin yaptığı, tek bir değer üretmek yerine oranı ve büyüme varsayımını oynatıp sonucun ne kadar değiştiğine bakmaktır. Sonuç varsayımlara aşırı duyarlıysa, o değerlemeye güvenmemek gerekir." }
+  ],
+  "quiz": [
+    { "id": "q1", "prompt": "İskonto oranı yükseldiğinde bir varlığın bugünkü değeri ne olur?", "options": ["Yükselir", "Düşer", "Değişmez", "Nakit akışlarına bağlı olarak artar"], "answerIndex": 1, "explanation": "İskonto oranı paydadadır; yükselmesi gelecekteki nakit akışlarının bugünkü karşılığını küçültür." },
+    { "id": "q2", "prompt": "Uzak vadeli nakit akışı vaat eden varlıklar faiz artışından neden daha çok etkilenir?", "options": ["Daha riskli oldukları için", "İskonto çarpanı üsseldir, vade uzadıkça etkisi büyür", "Vergi oranları farklı olduğu için", "Likiditeleri düşük olduğu için"], "answerIndex": 1, "explanation": "(1+r)ᵗ ifadesinde t üsttedir; aynı r artışı büyük t değerlerinde bugünkü değeri çok daha fazla küçültür." },
+    { "id": "q3", "prompt": "İskonto oranı temelde neyi temsil eder?", "options": ["Enflasyon oranını", "Bankanın kâr marjını", "Aynı riskteki alternatif yatırımdan beklenen getiriyi", "Devletin belirlediği tavan faizi"], "answerIndex": 2, "explanation": "İskonto oranı bir fırsat maliyetidir: parayı benzer riskte başka bir yerde değerlendirseydiniz ne kazanırdınız." }
+  ]
+},
+{
+  "id": "enflasyon-ve-reel-getiri",
+  "moduleId": "zaman",
+  "order": 3,
+  "title": "Enflasyon ve reel getiri",
+  "subtitle": "Kazandığınız yüzde değil, alabildiğiniz mal önemlidir.",
+  "minutes": 8,
+  "keyTerms": ["nominal getiri", "reel getiri", "alım gücü", "enflasyon koruması"],
+  "sections": [
+    { "kind": "text", "body": "Mevduatınız yılda %40 kazandırdı diyelim. Aynı yıl fiyatlar %50 arttıysa, cebinizdeki para artmış ama alabildiğiniz mal azalmıştır. Nominal getiri paranın miktarındaki değişimi, reel getiri alım gücündeki değişimi ölçer. Finansal kararlarda anlamlı olan daima ikincisidir." },
+    { "kind": "formula", "title": "Reel getiri", "expression": "(1 + r_reel) = (1 + r_nominal) / (1 + π)", "note": "π enflasyon oranıdır. Kabaca 'nominal eksi enflasyon' demek düşük oranlarda yeterlidir; ama enflasyon yüksekken bu kestirme ciddi biçimde yanıltır ve gerçek kaybı olduğundan küçük gösterir." },
+    { "kind": "example", "title": "Örnek: kestirmenin yanılttığı yer", "body": "Nominal getiri %40, enflasyon %50 olsun. Kestirme hesap '%10 kaybettim' der. Doğru hesap ise 1,40/1,50 = 0,933, yani yaklaşık %6,7 kayıp verir. Yönü doğru bulur ama büyüklüğü şaşırır. Düşük enflasyonlu ortamlarda fark ihmal edilebilir; yüksek enflasyonda kestirme kullanmak sistematik hata üretir." },
+    { "kind": "text", "title": "Enflasyon kimden kime servet aktarır", "body": "Beklenmeyen enflasyon sabit faizli borçluyu zenginleştirir, alacaklıyı fakirleştirir: borcun reel değeri erir. Aynı mantıkla nominal geliri geç ayarlanan ücretli ve emekli kaybeder, fiyatını hızlı güncelleyebilen üretici korunur. Enflasyon bu yüzden yalnızca bir fiyat olayı değil, sessiz bir yeniden dağıtım mekanizmasıdır." },
+    { "kind": "list", "title": "Enflasyona karşı ne işe yarar", "items": [
+      "Enflasyona endeksli tahviller: anapara fiyat endeksine bağlı ayarlanır, doğrudan koruma sağlar.",
+      "Hisse senedi: uzun vadede fiyatlarını yükseltebilen şirketler enflasyonu bir ölçüde geçirir, ama kısa vadede hiç güvenilir değildir.",
+      "Gayrimenkul: kira geliri zamanla güncellenir; buna karşılık likit değildir ve yüksek işlem maliyeti taşır.",
+      "Altın: uzun tarihsel dönemlerde alım gücünü korur, ama yıllar süren gerçek getirisiz dönemleri vardır.",
+      "Nakit ve vadesiz mevduat: enflasyona karşı en savunmasız kalem; güvenli görünür, sessizce erir."
+    ]},
+    { "kind": "text", "title": "Güvenli varlık, risksiz varlık değildir", "body": "Yastık altındaki para nominal olarak hiç kaybetmez; bu yüzden 'risksiz' hissettirir. Oysa yüksek enflasyonda garantili bir reel kayıptır. Finansta risk, değerin dalgalanması kadar alım gücünün aşınmasıdır da. Kısa vadede paraya ihtiyacınız varsa nakit doğru araçtır; on yıllık bir birikimi nakitte tutmak ise en emin kayıp yollarından biridir." },
+    { "kind": "quote", "text": "Enflasyon, yasama olmadan konabilen tek vergidir.", "source": "Milton Friedman'a atfedilir" }
+  ],
+  "quiz": [
+    { "id": "q1", "prompt": "Nominal getiri %25, enflasyon %30 ise reel getiri nasıldır?", "options": ["Pozitif, yaklaşık %5", "Negatif, yaklaşık %4", "Sıfır", "Pozitif, yaklaşık %55"], "answerIndex": 1, "explanation": "1,25/1,30 ≈ 0,962, yani yaklaşık %3,8 reel kayıp. Alım gücü azalmıştır." },
+    { "id": "q2", "prompt": "Beklenmeyen yüksek enflasyondan kim kazanır?", "options": ["Sabit faizle uzun vadeli borçlananlar", "Sabit getirili tahvil sahipleri", "Nakit tutan tasarruf sahipleri", "Maaşı yılda bir kez artan çalışanlar"], "answerIndex": 0, "explanation": "Borcun reel değeri eridiği için borçlu kazanır; alacaklı ve nominal geliri geç ayarlananlar kaybeder." },
+    { "id": "q3", "prompt": "Yüksek enflasyon ortamında 'nominal eksi enflasyon' kestirmesi neden sakıncalıdır?", "options": ["Yönü yanlış bulur", "Gerçek kaybın büyüklüğünü şaşırır", "Vergi etkisini yok sayar", "Yalnızca tahvillerde geçerlidir"], "answerIndex": 1, "explanation": "Doğru hesap bölme işlemidir. Çıkarma kestirmesi düşük oranlarda yeterli, yüksek oranlarda sistematik olarak hatalıdır." }
+  ]
+},
+{
+  "id": "risk-ve-getiri",
+  "moduleId": "zaman",
+  "order": 4,
+  "title": "Risk ve getiri: ayrılmaz ikili",
+  "subtitle": "Yüksek getiri bir ödül değil, üstlenilen belirsizliğin fiyatıdır.",
+  "minutes": 9,
+  "keyTerms": ["risk primi", "oynaklık", "risksiz faiz", "beklenen getiri"],
+  "sections": [
+    { "kind": "text", "body": "Finansta risk, kaybetme ihtimalinden ibaret değildir; sonucun önceden bilinememesidir. Bir devlet tahvilinin vade sonundaki nominal ödemesi bellidir, bir hisse senedinin beş yıl sonraki fiyatı belli değildir. Bu belirsizliği üstlenen yatırımcı karşılığında ek getiri bekler; risksiz faizin üzerindeki bu beklenen fazlaya risk primi denir." },
+    { "kind": "formula", "title": "Beklenen getiri", "expression": "E(r) = r_f + risk primi", "note": "r_f risksiz faiz oranıdır — pratikte kısa vadeli devlet borçlanma faizi kullanılır. Bir varlığın beklenen getirisi, bu tabanın üzerine taşıdığı riskin fiyatının eklenmesiyle oluşur." },
+    { "kind": "text", "title": "Oynaklık riskin ölçüsüdür, tanımı değil", "body": "Piyasada risk çoğunlukla oynaklıkla, yani getirilerin ortalamadan ne kadar saptığıyla ölçülür. Ölçülebilir olduğu için kullanışlıdır, ama eksiktir: yukarı yönlü dalgalanmayı da risk sayar ve nadir felaketleri hafife alır. Gerçek risk, paraya ihtiyacınız olduğu anda değerin düşük olmasıdır. Bu yüzden aynı varlık, yirmi yıllık bir emeklilik birikimi için makul, iki yıl sonraki ev peşinatı için fazla riskli olabilir." },
+    { "kind": "list", "title": "Riskin farklı yüzleri", "items": [
+      "Piyasa riski: tüm piyasayı birlikte etkileyen dalgalanma; çeşitlendirmeyle yok edilemez.",
+      "Kredi riski: karşı tarafın ödeyememesi. Tahvil ve mevduatta belirleyicidir.",
+      "Likidite riski: varlığı istediğiniz anda makul fiyata satamamak. Gayrimenkulde ve küçük şirket hisselerinde belirgindir.",
+      "Kur riski: yabancı para cinsinden varlıklarda kurun aleyhinize dönmesi.",
+      "Enflasyon riski: nominal olarak kazanıp reel olarak kaybetmek.",
+      "Davranış riski: en büyüğü ve en az konuşulanı — düşüşte panikle satmak, tepe noktada hevesle almak."
+    ]},
+    { "kind": "example", "title": "Örnek: aynı getiri, farklı yol", "body": "İki yatırım da on yılda toplam %100 kazandırsın. Biri her yıl istikrarlı biçimde yükselsin, diğeri arada %50 düşüp sonra toparlansın. Matematiksel sonuç aynı, insani sonuç değil: ikinci yolda çoğu yatırımcı dip noktada satar ve o getiriye hiç ulaşamaz. Bu yüzden bir portföyün doğru risk düzeyi, sizin katlanabileceğiniz düşüş kadardır — teoride optimal olan kadar değil." },
+    { "kind": "text", "title": "Yüksek getiri vaadi bir uyarıdır", "body": "Risksiz yüksek getiri diye bir şey yoktur. Birisi size piyasa faizinin belirgin biçimde üstünde, üstelik garantili bir getiri öneriyorsa, üç ihtimal vardır: riski size anlatmıyordur, riski kendisi de görmüyordur ya da ortada gerçek bir yatırım yoktur. Ponzi düzenlerinin ortak özelliği yüksek getiri değil, yüksek getirinin nereden geldiğinin açıklanamamasıdır." }
+  ],
+  "quiz": [
+    { "id": "q1", "prompt": "Risk primi nedir?", "options": ["Aracı kurumun aldığı komisyon", "Risksiz faizin üzerinde beklenen ek getiri", "Sigorta şirketine ödenen tutar", "Enflasyon farkı"], "answerIndex": 1, "explanation": "Belirsizliği üstlenmenin karşılığıdır; risksiz getiri tabanının üzerine eklenir." },
+    { "id": "q2", "prompt": "Oynaklığın risk ölçüsü olarak temel eksikliği nedir?", "options": ["Hesaplanması zordur", "Yukarı yönlü hareketi de risk sayar ve nadir felaketleri hafife alır", "Yalnızca tahvillerde kullanılır", "Enflasyonu içerir"], "answerIndex": 1, "explanation": "Ölçülebilir olduğu için pratiktir ama gerçek riski — paraya ihtiyaç anında değerin düşük olmasını — tam yakalayamaz." },
+    { "id": "q3", "prompt": "Aynı toplam getiriye sahip iki yatırımdan biri neden pratikte daha kötü sonuç verebilir?", "options": ["Vergisi yüksektir", "Sert düşüşlerde yatırımcı satıp getiriyi kaçırır", "Komisyonu farklıdır", "Enflasyondan farklı etkilenir"], "answerIndex": 1, "explanation": "Katlanılamayan bir düşüş, kâğıt üzerindeki getirinin gerçekleşmesini engeller. Doğru risk düzeyi kişiye göredir." }
+  ]
+},
+{
+  "id": "hisse-senedi",
+  "moduleId": "piyasalar",
+  "order": 1,
+  "title": "Hisse senedi: bir şirkete ortak olmak",
+  "subtitle": "Ekranda bir fiyat değil, bir işletmenin küçük bir parçasını alıyorsunuz.",
+  "minutes": 9,
+  "keyTerms": ["özsermaye", "temettü", "F/K oranı", "piyasa değeri"],
+  "sections": [
+    { "kind": "text", "body": "Hisse senedi bir şirketin özsermayesinin bölünmüş parçasıdır. Sahibi olarak kârdan pay alma, tasfiye durumunda borçlar ödendikten sonra kalan varlıklar üzerinde hak sahibi olma ve genel kurulda oy kullanma hakkınız vardır. Sıralama önemlidir: alacaklılar önce ödenir, hissedar en sonda kalır. Yüksek getiri potansiyelinin karşılığı bu son sıradır." },
+    { "kind": "text", "title": "Getiri iki kaynaktan gelir", "body": "Birincisi temettü: şirketin kârından dağıttığı nakit. İkincisi sermaye kazancı: hissenin fiyatının yükselmesi. Uzun vadeli hisse getirisinin önemli bir kısmının temettülerin yeniden yatırılmasından geldiği, geniş tarihsel çalışmaların ortak bulgusudur — fiyat grafiğine bakan yatırımcının çoğunlukla gözden kaçırdığı bir kalemdir." },
+    { "kind": "formula", "title": "Fiyat/Kazanç oranı", "expression": "F/K = Hisse fiyatı / Hisse başına kâr", "note": "Şirketin bir liralık yıllık kârı için kaç lira ödendiğini gösterir. Tek başına 'ucuz' ya da 'pahalı' demez: hızlı büyüyen bir şirketin yüksek F/K'sı makul, küçülen bir şirketin düşük F/K'sı tuzak olabilir." },
+    { "kind": "text", "title": "Fiyat ile değer aynı şey değildir", "body": "Fiyat, piyasanın bugün ödemeye razı olduğu tutardır. Değer, şirketin gelecekte üreteceği nakdin bugünkü karşılığıdır. İkisi çoğu zaman birbirine yakın seyreder, ama coşku ve panik dönemlerinde uzun süre ayrışabilir. Değer yatırımcılığının tüm iddiası bu ayrışmanın er geç kapanacağıdır; eleştirisi ise 'er geç'in ne kadar sürebileceğinin bilinmemesidir." },
+    { "kind": "example", "title": "Örnek: piyasa değeri yanılsaması", "body": "Hisse fiyatı 5 lira olan bir şirket, fiyatı 500 lira olandan ucuz değildir. Önemli olan fiyat çarpı hisse adedi, yani piyasa değeridir. 5 liradan 10 milyar adet hissesi olan şirket 50 milyar lira ediyorsa, 500 liradan 10 milyon adet hissesi olan 5 milyar liralık şirketten on kat büyüktür. Yeni yatırımcıların en sık yaptığı hata düşük fiyatı ucuzlukla karıştırmaktır." },
+    { "kind": "list", "title": "Bir şirkete bakarken sorulacaklar", "items": [
+      "Şirket gerçekten nakit üretiyor mu, yoksa yalnızca muhasebe kârı mı yazıyor?",
+      "Borcu ne kadar ve faiz yükünü karşılayabiliyor mu?",
+      "Rekabet avantajı kalıcı mı, yoksa fiyat kırarak mı ayakta duruyor?",
+      "Büyüme yeni yatırımdan mı geliyor, o yatırım getirisini karşılıyor mu?",
+      "Yönetim, kârı hissedar lehine mi kullanıyor?"
+    ]},
+    { "kind": "text", "title": "Tek hisseye yatırım yapmanın sorunu", "body": "Bir şirketin batma ihtimali her zaman vardır ve tarih boyunca sayısız 'sarsılmaz' şirket batmıştır. Piyasa endeksinin uzun vadeli yükselişi, tek tek şirketlerin başarısından değil, kazananların kaybedenlerin yerini almasından gelir. Tek hisseye yoğunlaşan yatırımcı, piyasanın bu yenilenme mekanizmasından yararlanamaz ve şirkete özgü riski gereksiz yere üstlenir." }
+  ],
+  "quiz": [
+    { "id": "q1", "prompt": "Şirket tasfiye edilirse hissedar ne zaman ödeme alır?", "options": ["İlk sırada", "Alacaklılardan sonra, kalan varlıklardan", "Devletle eşit sırada", "Her durumda anapara garantisiyle"], "answerIndex": 1, "explanation": "Hissedar artık haktır: borçlar ödendikten sonra kalan neyse onu alır. Yüksek getiri potansiyelinin karşılığı bu son sıradır." },
+    { "id": "q2", "prompt": "Hisse fiyatı 5 lira olan bir şirket, 500 lira olandan neden mutlaka daha ucuz değildir?", "options": ["Temettü ödemediği için", "Ucuzluğu belirleyen piyasa değeri ve kârdır, birim fiyat değil", "Borsada işlem görmediği için", "Vergi oranı farklı olduğu için"], "answerIndex": 1, "explanation": "Birim fiyat, hisse adedine bölünmüş bir büyüklüktür. Karşılaştırma piyasa değeri ve kazanç üzerinden yapılır." },
+    { "id": "q3", "prompt": "Yüksek F/K oranı ne anlama gelir?", "options": ["Şirket kesinlikle pahalıdır", "Bir liralık kâr için daha çok ödenmektedir; büyüme beklentisi yüksek olabilir", "Şirket zarar etmektedir", "Temettü verimi yüksektir"], "answerIndex": 1, "explanation": "F/K bir beklenti göstergesidir. Yüksek olması pahalılık da, haklı büyüme beklentisi de olabilir; tek başına karar vermez." }
+  ]
+},
+{
+  "id": "tahvil",
+  "moduleId": "piyasalar",
+  "order": 2,
+  "title": "Tahvil: borç vermenin matematiği",
+  "subtitle": "Faiz çıkarsa fiyat düşer — kulağa ters gelen ama zorunlu bir ilişki.",
+  "minutes": 9,
+  "keyTerms": ["kupon", "vade", "getiri", "kredi notu", "durasyon"],
+  "sections": [
+    { "kind": "text", "body": "Tahvil bir borç senedidir. Alıcı borç verir, ihraççı belirli dönemlerde kupon öder ve vade sonunda anaparayı geri verir. Hissedarın aksine tahvil sahibi şirketin kârına ortak değildir; sözleşmede yazan ödemeleri alır, fazlasını değil. Buna karşılık ödeme sırasında hissedarın önündedir." },
+    { "kind": "text", "title": "Fiyat ile getiri neden ters yönde hareket eder", "body": "Elinizde yılda 100 lira kupon ödeyen, 1.000 liraya aldığınız bir tahvil olsun; getirisi %10. Piyasa faizi %20'ye çıkarsa, yeni ihraçlar 1.000 liraya 200 lira ödüyor demektir. Kimse sizin tahvilinize 1.000 lira vermez; fiyatı, kuponu piyasa getirisine denk gelecek düzeye kadar düşer. Yani faiz yükseldiğinde mevcut tahvillerin fiyatı düşer. Bu bir piyasa kaprisi değil, aritmetik zorunluluktur." },
+    { "kind": "formula", "title": "Tahvilin fiyatı", "expression": "P = Σ Kupon / (1 + y)ᵗ + Anapara / (1 + y)ⁿ", "note": "y piyasanın talep ettiği getiridir. Formül bugünkü değer formülünün ta kendisidir: tahvil, nakit akışları sözleşmeyle belirlenmiş bir varlıktır." },
+    { "kind": "text", "title": "Vade uzadıkça duyarlılık artar", "body": "Uzun vadeli bir tahvilin nakit akışları daha uzağa yayıldığı için faiz değişimine daha sert tepki verir. Bu duyarlılığın ölçüsüne durasyon denir. Kabaca: durasyonu 7 olan bir tahvilde faizler 1 puan artarsa fiyat yaklaşık %7 düşer. 'Tahvil güvenlidir' cümlesi bu yüzden eksiktir — vadesine kadar tutarsanız nominal ödemeniz bellidir, ama arada satmak zorunda kalırsanız ciddi zarar edebilirsiniz." },
+    { "kind": "list", "title": "Tahvil riskleri", "items": [
+      "Faiz riski: piyasa faizi yükselirse fiyat düşer; vade uzadıkça etkisi büyür.",
+      "Kredi riski: ihraççının ödeyememesi. Devlet tahvillerinde düşük, şirket tahvillerinde ihraççıya göre değişir.",
+      "Enflasyon riski: sabit kuponun alım gücü erir; yüksek enflasyonda en sinsi risk budur.",
+      "Likidite riski: küçük ihraçlarda alıcı bulmak zor olabilir.",
+      "Erken çağrı riski: bazı tahviller ihraççıya vadeden önce geri ödeme hakkı verir; faizler düşünce bunu kullanır ve siz iyi getirinizi kaybedersiniz."
+    ]},
+    { "kind": "example", "title": "Örnek: 2022 tahvil yılı", "body": "Uzun süre çok düşük seyreden faizler 2022'de birçok ülkede hızla yükseldi. Uzun vadeli devlet tahvilleri, geleneksel olarak 'güvenli liman' sayılmalarına rağmen o yıl tarihsel ölçekte sert değer kaybetti. Ders şu: tahvil, kredi riski düşük olduğunda bile faiz riskinden muaf değildir; ve hisse ile tahvilin aynı anda düşebileceği dönemler vardır." },
+    { "kind": "text", "title": "Tahvil portföyde ne işe yarar", "body": "Tahvilin klasik rolü getiriyi en çoklamak değil, portföyün dalgalanmasını azaltmak ve öngörülebilir nakit akışı sağlamaktır. Hisselerin sert düştüğü birçok dönemde tahviller değer kazanarak dengeleyici işlev görmüştür; ancak bu ilişki sabit bir yasa değildir ve enflasyon şoklarında tersine dönebilir. Portföyde tahvil bulundurmanın gerekçesi, geleceği bilmediğiniz için tek bir senaryoya bağlanmamaktır." }
+  ],
+  "quiz": [
+    { "id": "q1", "prompt": "Piyasa faizleri yükseldiğinde mevcut tahvillerin fiyatına ne olur?", "options": ["Yükselir", "Düşer", "Değişmez", "Kupon oranına bağlı olarak yükselir"], "answerIndex": 1, "explanation": "Yeni ihraçlar daha yüksek kupon ödediği için eski tahvilin fiyatı, getirisi piyasaya denk gelene kadar düşer." },
+    { "id": "q2", "prompt": "Durasyon neyi ölçer?", "options": ["Tahvilin kalan gün sayısını", "Fiyatın faiz değişimine duyarlılığını", "İhraççının kredi notunu", "Kupon ödeme sıklığını"], "answerIndex": 1, "explanation": "Durasyonu 7 olan bir tahvilde 1 puanlık faiz artışı fiyatı kabaca %7 düşürür." },
+    { "id": "q3", "prompt": "'Devlet tahvili risksizdir' ifadesinin eksik yanı nedir?", "options": ["Devletler de sık sık iflas eder", "Kredi riski düşük olsa da faiz ve enflasyon riski sürer", "Tahviller vergilendirilmez", "Tahvil fiyatları hiç değişmez"], "answerIndex": 1, "explanation": "Vadeye kadar tutulursa nominal ödeme bellidir; ama arada fiyat dalgalanır ve sabit kuponun alım gücü enflasyonla erir." }
+  ]
+}
+]

@@ -212,14 +212,79 @@ await step("kütüphaneye dönüş ilerlemeyi gösteriyor", async () => {
   if (pct === "%0") throw new Error("kart ilerlemesi güncellenmedi");
 });
 
-await step("anahtarsız üretim ayarlara yönlendiriyor", async () => {
+await step("finans kursu: dersler ve altı grafik", async () => {
+  await page.locator(".course-card", { hasText: "Finans" }).click();
+  await page.waitForSelector("nav.tabs button");
+  const accent = await page.evaluate(() =>
+    getComputedStyle(document.documentElement).getPropertyValue("--accent-light").trim());
+  if (accent !== "#2b5d8c") throw new Error("finans vurgu rengi: " + accent);
+
+  const course = await page.evaluate(() => fetch("courses/finans.json").then(r => r.json()));
+  if (course.lessons.length !== 12) throw new Error("ders sayısı: " + course.lessons.length);
+
+  const withChart = course.lessons
+    .filter(l => l.sections.some(s => s.kind === "chart"))
+    .map(l => ({ title: l.title, chart: l.sections.find(s => s.kind === "chart").chartId }));
+  if (withChart.length !== 6) throw new Error("grafikli ders sayısı: " + withChart.length);
+
+  for (const l of withChart) {
+    await page.click("nav.tabs li:nth-child(2) button");
+    await page.locator(".lesson-title", { hasText: l.title }).first().click();
+    await page.waitForSelector(".chart svg path");
+
+    const texts = [await page.textContent(".chart-read")];
+    const slider = await page.$(".chart input[type=range]");
+    if (!slider) throw new Error(l.chart + ": denetim yok");
+    for (const bound of ["min", "max"]) {
+      await slider.evaluate((el, b) => {
+        el.value = el.getAttribute(b);
+        el.dispatchEvent(new Event("input", { bubbles: true }));
+      }, bound);
+      await page.waitForTimeout(40);
+      texts.push(await page.textContent(".chart-read"));
+      const svg = await page.$eval(".chart svg", n => n.innerHTML);
+      if (/NaN|Infinity/.test(svg)) throw new Error(l.chart + " (" + bound + "): çizimde NaN");
+    }
+    if (new Set(texts).size === 1) throw new Error(l.chart + ": kaydırıcı ölü");
+    for (const t of texts) {
+      if (!t.trim()) throw new Error(l.chart + ": okuma metni boş");
+      if (/NaN|Infinity|undefined/.test(t)) throw new Error(l.chart + ": okuma metninde " + t);
+    }
+    await page.click("#back");
+  }
+});
+
+await step("finans kursunda tarih ve arama", async () => {
+  await page.click("nav.tabs li:nth-child(3) button");
+  await page.waitForSelector("ol.tl li");
+  const events = await page.$$eval("ol.tl li", n => n.length);
+  if (events !== 22) throw new Error("olay sayısı: " + events);
+  await page.click(".chips button:has-text('Modern finans')");
+  await page.waitForTimeout(80);
+  const filtered = await page.$$eval("ol.tl li", n => n.length);
+  if (filtered >= events || filtered === 0) throw new Error("dönem süzgeci: " + filtered);
+  await page.click(".seg button:has-text('İsimler')");
+  await page.waitForTimeout(80);
+  if (!(await page.textContent("main")).includes("Markowitz")) throw new Error("isimler gelmedi");
+
+  await page.click("nav.tabs li:nth-child(5) button");
+  await page.fill("input[type=search]", "durasyon");
+  await page.waitForTimeout(150);
+  if (!(await page.textContent("main")).includes("Durasyon")) throw new Error("arama sözlüğü bulamadı");
+  await page.click("#back");
+  await page.waitForSelector(".course-card");
+});
+
+await step("kütüphanede olmayan konu istek bağlantısı veriyor", async () => {
   await page.fill("input.ask", "sanat tarihi");
-  // anahtar yokken düğme kurs oluşturmayı vaat etmemeli
-  const label = await page.textContent(".ask-action .btn");
-  if (!/API anahtarı ekle/.test(label)) throw new Error("yanıltıcı düğme etiketi: " + label);
-  await page.click(".ask-action .btn");
+  const a = page.locator(".ask-action a.btn");
+  const label = await a.textContent();
+  if (!/konusunu iste/.test(label)) throw new Error("istek düğmesi yok: " + label);
+  const href = await a.getAttribute("href");
+  if (!href.startsWith("https://github.com/") || !href.includes("issues/new")) throw new Error("istek adresi yanlış: " + href);
+  if (!decodeURIComponent(href).includes("Kurs isteği: sanat tarihi")) throw new Error("istek başlığı konuyu taşımıyor");
+  await page.click(".block.card.row:has-text('Ayarlar')");
   await page.waitForSelector("input[placeholder='sk-ant-...']");
-  if (!(await page.textContent("main")).includes("Sıradaki adım")) throw new Error("ayarlarda bağlam yok");
 });
 
 await step("API anahtarı kaydediliyor", async () => {
@@ -228,14 +293,12 @@ await step("API anahtarı kaydediliyor", async () => {
   await page.waitForTimeout(150);
   const stored = await page.evaluate(() => JSON.parse(localStorage.getItem("okul-v1")).apiKey);
   if (stored !== "sk-ant-test-anahtar") throw new Error("anahtar kaydedilmedi");
-  // anahtar kaydedilince üretim buradan doğrudan başlatılabilmeli
-  if (!(await page.textContent("main")).includes("için kurs oluştur")) throw new Error("ayarlarda başlatma düğmesi yok");
 });
 
 await step("kurs üretimi uçtan uca", async () => {
   await page.click(".btn.quiet:has-text('Kütüphaneye dön')");
   await page.fill("input.ask", "sanat tarihi");
-  await page.click("text=için kurs oluştur");
+  await page.click("text=Kendi anahtarımla şimdi üret");
   await page.waitForSelector("text=Kursu aç", { timeout: 30000 });
   const txt = await page.textContent("main");
   if (!/Sanat Tarihi/.test(txt)) throw new Error("üretilen kurs adı yok");

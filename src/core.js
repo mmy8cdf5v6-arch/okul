@@ -279,7 +279,8 @@
     if (course && course.id === id) { go("kurs", { tab: "kurs", lesson: null }); return; }
     busy = true;
     route.screen = "kurs"; route.courseId = id; route.tab = "kurs"; route.lesson = null;
-    route.query = ""; route.open = null; route.study = "kartlar"; route.era = "hepsi";
+    route.query = ""; route.open = null; route.study = "kartlar";
+    route.era = "hepsi"; route.histTab = "cizelge";
     render();
     loadCourse(id).then(function (c) {
       course = c; indexCourse(); resetStudy(); busy = false;

@@ -703,5 +703,135 @@
           : "Bu fiyatta salımın %" + r0(a * 100) + "'i azaltılır; maliyeti fiyatın üstünde olan azaltımlar yapılmaz. " +
             "Yeşil alan toplam azaltım maliyetidir." };
       }
+    },
+
+    "iskonto": {
+      title: "Bugünkü değer: zaman parayı eritir",
+      note: "İskonto oranı, o parayı beklerken vazgeçtiğiniz getiridir. Oran yükseldikçe gelecek bugünde daha az yer kaplar.",
+      controls: [
+        { key: "r", label: "İskonto oranı", min: 2, max: 40, step: 2, def: 10, fmt: pctS },
+        { key: "y", label: "Vade", min: 5, max: 40, step: 5, def: 20, fmt: function (v) { return v + " yıl"; } }
+      ],
+      draw: function (p) {
+        var r = p.r / 100, Y = p.y, i, pts = [];
+        for (i = 0; i <= 60; i++) {
+          var t = (Y * i) / 60;
+          pts.push([t / Y, Math.pow(1 + r, -t)]);
+        }
+        var end = Math.pow(1 + r, -Y);
+        var half = Math.log(2) / Math.log(1 + r);
+        var s = frame("Yıl", "100 lira bugün ne eder");
+        s += gArea(pts.concat([[1, 0], [0, 0]]), { c: "var(--accent)", o: 0.10 });
+        s += gPoly(pts, { c: "var(--accent)", w: 2.4 });
+        if (half <= Y) {
+          s += gLine(0, 0.5, half / Y, 0.5, { c: "var(--makro)", w: 1.3, d: "3 3" });
+          s += gLine(half / Y, 0, half / Y, 0.5, { c: "var(--makro)", w: 1.3, d: "3 3" });
+          s += gTxt(half / Y, 0.5, "yarıya iner", { a: "start", dx: 5, dy: -4, c: "var(--makro)", b: 1, s: 9 });
+        }
+        s += gDot(1, end, { c: "var(--ink)" });
+        s += gTxt(1, end, r0(end * 100) + " TL", { a: "end", dy: -9, c: "var(--ink)", b: 1, s: 10 });
+        [0, 0.5].forEach(function (v) { s += gTxt(v, 0, r0(v * Y) + "", { a: "middle", dy: 12, s: 9 }); });
+        return { svg: s, text: "Yıllık %" + p.r + " iskonto oranıyla, " + Y + " yıl sonra elinize geçecek 100 lira " +
+          "bugün " + r0(end * 100) + " lira eder. Değerin yarıya inmesi yaklaşık " + r1(half) + " yıl sürer." };
+      }
+    },
+
+    "reel-getiri": {
+      title: "Nominal getiri, reel alım gücü",
+      note: "Cebinizdeki rakam değil, o rakamla alabildiğiniz mal artarsa zenginleşirsiniz.",
+      controls: [
+        { key: "n", label: "Nominal getiri", min: 0, max: 60, step: 5, def: 30, fmt: pctS },
+        { key: "e", label: "Enflasyon", min: 0, max: 60, step: 5, def: 25, fmt: pctS }
+      ],
+      draw: function (p) {
+        var n = p.n / 100, e = p.e / 100, Y = 10, i;
+        var real = (1 + n) / (1 + e) - 1;
+        var end = Math.pow(1 + real, Y);
+        var top = Math.max(end, 1.6);
+        var pts = [];
+        for (i = 0; i <= 60; i++) {
+          var t = (Y * i) / 60;
+          pts.push([t / Y, Math.min(1, Math.pow(1 + real, t) / top)]);
+        }
+        var base = 1 / top;
+        var up = real >= 0;
+        var s = frame("Yıl", "Alım gücü (başlangıç = 1)");
+        s += gPoly(pts, { c: up ? "var(--ok)" : "var(--no)", w: 2.4 });
+        s += gLine(0, base, 1, base, { c: "var(--rule)", w: 1.4, d: "4 3" });
+        // Etiket, eğrinin gittiği yönün tersine konur; yoksa çizgiyle çakışır.
+        s += gTxt(0.02, base, "başlangıç", { a: "start", dy: up ? 12 : -6, s: 9 });
+        s += gDot(1, Math.min(1, end / top), { c: "var(--ink)" });
+        s += gTxt(1, Math.min(1, end / top), r1(end) + "×", { a: "end", dy: up ? -9 : 13, c: "var(--ink)", b: 1, s: 10 });
+        [0, 5].forEach(function (v) { s += gTxt(v / Y, 0, v + "", { a: "middle", dy: 12, s: 9 }); });
+        return { svg: s, text: "Nominal %" + p.n + ", enflasyon %" + p.e + " ise reel getiri yılda %" + r1(real * 100) + ". " +
+          (Math.abs(real) < 0.001
+            ? "Alım gücünüz yerinde sayıyor: kazandığınız her kuruşu fiyatlar geri alıyor."
+            : "On yılın sonunda alım gücünüz " + r1(end) + " katına " + (up ? "çıkar." : "iner.")) };
+      }
+    },
+
+    "cesitlendirme": {
+      title: "Çeşitlendirme riski nereye kadar düşürür?",
+      note: "Şirkete özgü riski dağıtabilirsiniz; herkesi aynı anda vuran piyasa riskini dağıtamazsınız.",
+      controls: [{ key: "k", label: "Varlıklar arası korelasyon", min: 0, max: 90, step: 10, def: 30, fmt: pctS }],
+      draw: function (p) {
+        var rho = p.k / 100, N = 30, i;
+        var vol = function (n) { return Math.sqrt(1 / n + (1 - 1 / n) * rho); };
+        var pts = [];
+        for (i = 1; i <= N; i++) pts.push([(i - 1) / (N - 1), vol(i)]);
+        var floorV = Math.sqrt(rho);
+        var s = frame("Hisse sayısı", "Oynaklık (tek hisse = 1)");
+        s += gArea(pts.concat([[1, 0], [0, 0]]), { c: "var(--accent)", o: 0.10 });
+        s += gPoly(pts, { c: "var(--accent)", w: 2.4 });
+        if (floorV > 0.02) {
+          s += gLine(0, floorV, 1, floorV, { c: "var(--no)", w: 1.6, d: "5 3" });
+          s += gTxt(0.98, floorV, "dağıtılamayan risk", { a: "end", dy: 13, c: "var(--no)", s: 9 });
+        }
+        s += gDot(0, 1, { c: "var(--ink)" });
+        s += gDot((20 - 1) / (N - 1), vol(20), { c: "var(--ok)" });
+        s += gTxt((20 - 1) / (N - 1), vol(20), "20 hisse", { a: "middle", dy: -9, c: "var(--ok)", b: 1, s: 9 });
+        [1, 15].forEach(function (v) { s += gTxt((v - 1) / (N - 1), 0, v + "", { a: "middle", dy: 12, s: 9 }); });
+        return { svg: s, text: "20 hisselik bir portföyün oynaklığı, tek hissenin oynaklığının %" + r0(vol(20) * 100) +
+          "'ine iner. " + (rho < 0.05
+            ? "Korelasyon sıfıra yakınken risk neredeyse tümüyle dağıtılabilir; asıl zorluk gerçekten bağımsız varlık bulmaktır."
+            : "Ne kadar hisse eklerseniz ekleyin %" + r0(floorV * 100) + "'in altına inemezsiniz: kalan kısım piyasa riskidir.") };
+      }
+    },
+
+    "ucret-yuku": {
+      title: "Ücretin bileşik yükü",
+      note: "Getiri belirsiz, ücret kesin. Yüzde birlik fark on yıllarda birikimin beşte birine kadar çıkabilir.",
+      controls: [
+        { key: "f", label: "Yıllık ücret", min: 0, max: 250, step: 25,
+          fmt: function (v) { return "%" + (v / 100).toFixed(2); }, def: 100 },
+        { key: "y", label: "Süre", min: 10, max: 40, step: 5, def: 30, fmt: function (v) { return v + " yıl"; } }
+      ],
+      draw: function (p) {
+        var f = p.f / 10000, g = 0.07, Y = p.y, i;
+        var top = Math.pow(1 + g, Y);
+        var gross = [], net = [];
+        for (i = 0; i <= 60; i++) {
+          var t = (Y * i) / 60;
+          gross.push([t / Y, Math.pow(1 + g, t) / top]);
+          net.push([t / Y, Math.pow(1 + g - f, t) / top]);
+        }
+        var gEnd = Math.pow(1 + g, Y), nEnd = Math.pow(1 + g - f, Y);
+        var loss = (1 - nEnd / gEnd) * 100;
+        var s = frame("Yıl", "Birikim (başlangıç = 1)");
+        if (f > 0) {
+          s += gArea(gross.concat(net.slice().reverse()), { c: "var(--no)", o: 0.20 });
+        }
+        s += gPoly(gross, { c: "var(--rule)", w: 1.8, d: "4 3" });
+        s += gPoly(net, { c: "var(--accent)", w: 2.4 });
+        s += gDot(1, nEnd / top, { c: "var(--ink)" });
+        s += gTxt(0.62, Math.pow(1 + g, 0.62 * Y) / top, "ücretsiz", { a: "end", dy: -7, s: 9 });
+        s += gTxt(1, nEnd / top, r1(nEnd) + "×", { a: "end", dy: 13, c: "var(--ink)", b: 1, s: 10 });
+        [0, 0.5].forEach(function (v) { s += gTxt(v, 0, r0(v * Y) + "", { a: "middle", dy: 12, s: 9 }); });
+        return { svg: s, text: f === 0
+          ? "Ücret yokken paranız brüt getirinin tamamını tutar: " + Y + " yılda " + r1(gEnd) + " katına çıkar."
+          : "Yılda %7 brüt getiride birikim " + Y + " yılda " + r1(gEnd) + " katına çıkardı; %" +
+            (p.f / 100).toFixed(2) + " ücretle " + r1(nEnd) + " katına çıkıyor. Ücret birikimin %" +
+            r1(loss) + "'ini götürüyor: kırmızı alan onun payı." };
+      }
     }
   };

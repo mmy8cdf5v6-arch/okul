@@ -19,9 +19,7 @@
 
       if (!q) {
         action.appendChild(el("p", { class: "small muted", style: "margin:.7rem 0 0",
-          text: state.apiKey
-            ? "Konuyu yazıp Enter'a bas."
-            : "Kurs oluşturmak için Ayarlar'dan kendi Anthropic API anahtarını eklemen gerekiyor." }));
+          text: "Konuyu yaz. Kütüphanede varsa açılır, yoksa isteyebilirsin." }));
         return;
       }
 
@@ -35,23 +33,34 @@
         hits.forEach(function (e) { matches.appendChild(courseCard(e)); });
       }
 
-      /* Anahtar yoksa düğme kurs oluşturmaz, Ayarlar'a götürür — etiketi bunu söylesin. */
-      action.appendChild(el("button", {
-        class: "btn wide",
-        text: state.apiKey
-          ? "“" + route.query.trim() + "” için kurs oluştur"
-          : "Kurs oluşturmak için API anahtarı ekle →",
-        onclick: function () { requestGeneration(route.query.trim()); }
+      var topic = route.query.trim();
+
+      /* Asıl yol: konuyu iste. Kurs hazırlanıp kütüphaneye eklenir ve
+         herkese açık olur — tek bir tarayıcıda kalmaz. */
+      action.appendChild(el("a", {
+        class: "btn wide", style: "display:block;text-align:center;text-decoration:none",
+        href: requestUrl(topic), target: "_blank", rel: "noopener noreferrer",
+        text: "“" + topic + "” konusunu iste"
       }));
-      if (!state.apiKey) {
-        action.appendChild(el("p", { class: "small muted", style: "margin:.6rem 0 0",
-          text: "Üretim, senin Anthropic hesabından doğrudan bu tarayıcıdan yapılır — bu sitenin sunucusu yok. Anahtarı bir kez ekle, sonra istediğin konuyu yaz." }));
+      action.appendChild(el("p", { class: "small muted", style: "margin:.6rem 0 0",
+        text: hits.length
+          ? "Kütüphanedeki kurs aradığın şey değilse bu konuyu ayrıca isteyebilirsin. İstekler GitHub üzerinden açılır; hazırlanan kurs herkesin görebileceği biçimde siteye eklenir."
+          : "Bu konu kütüphanede yok. İstek GitHub üzerinden açılır; hazırlanan kurs herkesin görebileceği biçimde siteye eklenir." }));
+
+      /* Kendi Anthropic anahtarı olanlar için anında üretim — Ayarlar'dan açılır. */
+      if (state.apiKey) {
+        action.appendChild(el("button", { class: "btn quiet", style: "margin-top:.5rem",
+          text: "Kendi anahtarımla şimdi üret →",
+          onclick: function () { requestGeneration(topic); } }));
       }
     }
 
     input.addEventListener("input", function (e) { route.query = e.target.value; paintBox(); });
     input.addEventListener("keydown", function (e) {
-      if (e.key === "Enter" && route.query.trim()) requestGeneration(route.query.trim());
+      if (e.key === "Enter" && route.query.trim()) {
+        var a = action.querySelector("a.btn");
+        if (a) a.click();
+      }
     });
     paintBox();
 
@@ -80,7 +89,7 @@
       el("div", null, [
         el("p", { class: "label", text: "Ayarlar" }),
         el("p", { class: "small muted", style: "margin:.25rem 0 0",
-          text: state.apiKey ? "API anahtarı ekli · " + modelLabel() : "API anahtarı yok · yedekleme ve kurs yönetimi" })
+          text: state.apiKey ? "API anahtarı ekli · " + modelLabel() : "Yedekleme, kurs yönetimi ve isteğe bağlı üretim" })
       ]),
       el("span", { class: "chev", text: "→" })
     ]));
@@ -127,6 +136,18 @@
     return card;
   }
 
+  var REPO = "https://github.com/mmy8cdf5v6-arch/okul";
+
+  function requestUrl(topic) {
+    var body = [
+      "Konu: " + topic, "",
+      "Bu konuda bir kurs istiyorum.", "",
+      "Eklemek istediğin bir ayrıntı varsa (hangi düzey, neye ağırlık verilsin, neyi kapsamasın) buraya yazabilirsin."
+    ].join("\n");
+    return REPO + "/issues/new?title=" + encodeURIComponent("Kurs isteği: " + topic) +
+      "&body=" + encodeURIComponent(body);
+  }
+
   function requestGeneration(topic) {
     if (!topic) return;
     if (!state.apiKey) { go("ayarlar", { query: route.query }); return; }
@@ -158,9 +179,9 @@
     }
 
     out.appendChild(el("section", { class: "card stack" }, [
-      el("p", { class: "label", text: "Anthropic API anahtarı" }),
+      el("p", { class: "label", text: "İsteğe bağlı: kendi anahtarınla anında üretim" }),
       el("p", { class: "small muted", style: "margin:0",
-        text: "Kurs üretimi bu anahtarla, doğrudan senin tarayıcından Anthropic'e yapılır. Bu sitenin sunucusu yok; anahtar hiçbir yere gönderilmez, yalnızca bu tarayıcıda saklanır." }),
+        text: "Kurs istemek için anahtar gerekmez — kütüphanedeki kutudan istek gönderirsin. Beklemek istemiyorsan ve kendi Anthropic API anahtarın varsa, kursu anında kendin üretebilirsin. Üretim doğrudan bu tarayıcıdan yapılır; sitenin sunucusu yok, anahtar başka hiçbir yere gitmez. Anthropic API'si kredi ister; Claude.ai aboneliği bunu kapsamaz." }),
       keyInput,
       el("div", { class: "grid2" }, [
         el("button", { class: "btn ghost", text: "Göster / gizle", onclick: function () {

@@ -9,8 +9,13 @@ Sunucusu yok: statik bir site olarak çalışır, ilerleme tarayıcıda saklanı
 ## Nasıl çalışır
 
 **Kütüphane.** Ana ekranda bir kutu ve kurs kartları var. Kutuya bir konu
-yazdığında önce kütüphanende eşleşen kurs aranır; yoksa o konu için yeni bir kurs
-üretilir. Üretilen kurslar kütüphanede kalır ve tıklanarak yeniden açılır.
+yazdığında önce kütüphanende eşleşen kurs aranır. Yoksa iki yol açılır: o konuyu
+depoya bir istek olarak göndermek (kimseden anahtar istemez) ya da kendi API
+anahtarınla o an üretmek. Üretilen kurslar kütüphanede kalır ve tıklanarak
+yeniden açılır.
+
+Hazır kurslar: **İktisat Defteri** (35 ders, 105 soru, 21 grafik) ve
+**Finans** (12 ders, 36 soru, 6 grafik).
 
 **Üretim.** Dört aşamada ilerler ve her aşama ekranda görünür:
 
@@ -34,9 +39,10 @@ istekler doğrudan tarayıcıdan `api.anthropic.com` adresine yapılır
 > anahtarı yoktur. Kendi anahtarını girerse üretebilir ve maliyeti ona yansır.
 > Ortak kullanılan bir bilgisayarda anahtar bırakma.
 
-**Grafikler.** 21 interaktif SVG grafik elle yazılmış koddur ve iktisada özeldir;
-yalnızca İktisat Defteri kursunda görünür. Üretilen kurslarda metin, liste, örnek,
-alıntı, formül bölümleri, sınav, sözlük, kişiler ve zaman çizelgesi bulunur.
+**Grafikler.** 25 interaktif SVG grafik elle yazılmış koddur; yalnızca hazır
+kurslarda görünür (21'i İktisat Defteri'nde, 6'sı Finans'ta — ikisi ortak).
+Üretilen kurslarda metin, liste, örnek, alıntı, formül bölümleri, sınav, sözlük,
+kişiler ve zaman çizelgesi bulunur.
 
 ## Yapı
 
@@ -46,12 +52,18 @@ okul/
 ├─ assets/                 derlenmiş çıktı (depoya işlenir — Pages bunu sunar)
 │  ├─ app.js
 │  └─ styles.css
-├─ courses/
+├─ courses/                sunulan kurs verisi (küçültülmüş JSON)
 │  ├─ index.json           kütüphane listesi
-│  └─ iktisat.json         hazır kurs verisi
+│  ├─ iktisat.json
+│  └─ finans.json
+├─ content/                elle yazılan kaynak metin (Finans)
+│  ├─ finans-a.json        1-6. dersler
+│  ├─ finans-b.json        7-12. dersler
+│  ├─ finans-refs.json     künye, modüller, sözlük, isimler, çizelge, grafik yerleşimi
+│  └─ build_finans.py      content/ → courses/finans.json + index girdisi
 ├─ src/
 │  ├─ core.js              durum, depolama, yönlendirme, kabuk
-│  ├─ charts.js            SVG grafik motoru + 21 grafik
+│  ├─ charts.js            SVG grafik motoru + 25 grafik
 │  ├─ course.js            kurs özeti, dersler, ders, ders içi sınav, tarih
 │  ├─ study.js             kartlar, deneme sınavı, istatistik, arama
 │  ├─ generate.js          Anthropic API istemcisi + üretim hattı
@@ -103,6 +115,18 @@ ama `src/` değiştirdiğinde `python3 build.py` çalıştırıp çıktıyı da 
 ## Hazır kurs eklemek
 
 `courses/` altına bir JSON koy ve `courses/index.json` listesine bir satır ekle.
+Tek dosya elle bakılamayacak kadar büyürse Finans'taki gibi `content/` altında
+parçalara ayır ve küçük bir betikle birleştir:
+
+```bash
+python3 content/build_finans.py   # parçaları birleştirir, tutarlılığı denetler,
+                                  # courses/finans.json ve index girdisini yazar
+```
+
+Betik ders kimliklerinin tekilliğini, her dersin tanımlı bir modüle bağlı
+olduğunu, sözlük ve isim girdilerinin var olan derslere işaret ettiğini,
+çizelge olaylarının tanımlı dönem ve isimleri kullandığını denetler.
+
 Kurs nesnesi:
 
 | Alan | Açıklama |

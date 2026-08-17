@@ -1,0 +1,173 @@
+[
+{
+  "id": "fonlar-ve-endeksler",
+  "moduleId": "piyasalar",
+  "order": 3,
+  "title": "Fonlar ve endeksler: aktif mi, pasif mi?",
+  "subtitle": "Piyasayı yenmek zordur; piyasayı satın almak kolaydır.",
+  "minutes": 9,
+  "keyTerms": ["yatırım fonu", "endeks fonu", "ETF", "yönetim ücreti", "aktif yönetim"],
+  "sections": [
+    { "kind": "text", "body": "Fon, çok sayıda yatırımcının parasını toplayıp tek bir portföyde yöneten yapıdır. Küçük tutarla onlarca varlığa dağılabilmenizi sağlar. İki temel yaklaşımı vardır: aktif yönetimde bir ekip hangi varlığın daha iyi performans göstereceğine karar verir; pasif yönetimde fon, bir endeksin bileşimini olduğu gibi kopyalar ve seçim yapmaz." },
+    { "kind": "text", "title": "Aritmetiğin kaçınılmaz sonucu", "body": "Tüm yatırımcıların ortalama getirisi, tanım gereği piyasanın getirisidir — çünkü hepsi birlikte piyasayı oluşturur. Dolayısıyla maliyetlerden önce, aktif yatırımcıların ortalaması piyasaya eşittir; maliyetlerden sonra ise ortalama olarak piyasanın altında kalır. William Sharpe'ın 'aktif yönetimin aritmetiği' diye bilinen bu gözlemi bir tahmin değil, bir muhasebe özdeşliğidir. Bazı fonların piyasayı yenmesi mümkündür; hepsinin yenmesi matematiksel olarak imkânsızdır." },
+    { "kind": "text", "title": "Peki iyi fonu önceden seçebilir miyiz?", "body": "Geçmiş performansın gelecekteki performansı öngörme gücü, uzun vadede zayıf çıkmıştır. Bir dönemin en iyi fonları, sonraki dönemde çoğunlukla ortalamaya döner. Üstelik seçim anında sıralamayı belirleyen şey beceri kadar şanstır ve ikisini birbirinden ayırmak için gereken veri, çoğu yatırımcının ömründen uzundur. Bu, aktif yönetimin değersiz olduğu anlamına gelmez; kimin başaracağını önceden bilmenin zor olduğu anlamına gelir." },
+    { "kind": "list", "title": "Fon seçerken bakılacaklar", "items": [
+      "Toplam gider oranı: yıllık kesintinin yüzdesi. Uzun vadede getiriden daha öngörülebilir bir etkendir.",
+      "Ne izlediği: fonun gerçekten neye yatırım yaptığı, adından değil içeriğinden anlaşılır.",
+      "İzleme farkı: pasif fonun endeksten ne kadar saptığı.",
+      "Büyüklük ve işlem hacmi: küçük ve az işlem gören fonlarda alım satım maliyeti artar.",
+      "Vergi ve dağıtım politikası: temettünün dağıtılması ya da fon içinde yeniden yatırılması sonucu değiştirir."
+    ]},
+    { "kind": "formula", "title": "Ücretin uzun vadeli etkisi", "expression": "Kalan pay = ((1 + r − ü) / (1 + r))ⁿ", "note": "r brüt getiri, ü yıllık ücret oranı, n yıl sayısı. %7 brüt getiri ve %2 ücretle 30 yıl sonunda birikimin kabaca üçte biri ücrete gider — üstelik bu, iyi bir yılda da kötü bir yılda da kesilir." },
+    { "kind": "example", "title": "Örnek: endeks fonunun doğuşu", "body": "John Bogle 1976'da bireysel yatırımcılara açık ilk endeks fonunu kurduğunda fikir alay konusu oldu; 'ortalamayı hedeflemek' sektörde vasatlığın savunusu sayıldı. Bugün pasif fonlar dünya genelinde trilyonlarca dolarlık varlığı yönetiyor. Değişimi getiren parlak bir öngörü değil, düşük maliyetin uzun vadede biriken etkisiydi." },
+    { "kind": "text", "title": "Pasif yatırımın kendi sınırları", "body": "Endeks fonu piyasayı yenmeyi vaat etmez, piyasayla birlikte düşmeyi de engellemez: 2008'de endeks fonu tutan biri de yarıya yakın değer kaybetti. Ayrıca pasif payın büyümesi, fiyatların bilgiyi ne kadar iyi yansıttığına dair yeni bir tartışma açtı — herkes izlerse, fiyatı kim belirleyecek? Bugünkü pasif oranlarda bu sorunun pratik bir kriz yarattığına dair güçlü bir kanıt yok, ama açık bir soru olarak duruyor." }
+  ],
+  "quiz": [
+    { "id": "q1", "prompt": "Aktif yönetimin aritmetiği ne söyler?", "options": ["Aktif fonlar her zaman kaybeder", "Maliyetlerden sonra aktif yatırımcıların ortalaması piyasanın altında kalır", "Endeks fonları risksizdir", "Piyasayı yenmek imkânsızdır"], "answerIndex": 1, "explanation": "Tüm yatırımcıların toplamı piyasadır; ortalama maliyet öncesi piyasaya eşit, maliyet sonrası altındadır. Bazıları yenebilir, hepsi yenemez." },
+    { "id": "q2", "prompt": "Yıllık %2 yönetim ücreti neden bu kadar önemlidir?", "options": ["Vergiden düşülemez", "Her yıl kesilir ve bileşik etkiyle birikimin büyük bir kısmını alır", "Yalnızca kötü yıllarda alınır", "Getiriyi doğrudan yarıya indirir"], "answerIndex": 1, "explanation": "Ücret getiriden bağımsız olarak her yıl kesilir; otuz yıllık bir ufukta birikimin üçte birine yaklaşan bir tutara ulaşabilir." },
+    { "id": "q3", "prompt": "Geçmiş fon performansına bakarak seçim yapmanın temel sorunu nedir?", "options": ["Veriler gizlidir", "Geçmiş performansın gelecek performansı öngörme gücü zayıftır", "Fonlar geçmişi açıklamaz", "Yalnızca aktif fonlar için geçerlidir"], "answerIndex": 1, "explanation": "İyi dönemler çoğunlukla ortalamaya döner; kısa geçmişte beceriyi şanstan ayırmak istatistiksel olarak çok zordur." }
+  ]
+},
+{
+  "id": "kaldirac-ve-turevler",
+  "moduleId": "piyasalar",
+  "order": 4,
+  "title": "Kaldıraç ve türevler",
+  "subtitle": "Aynı araç hem sigorta hem kumar olabilir; farkı niyet değil, konum belirler.",
+  "minutes": 9,
+  "keyTerms": ["kaldıraç", "vadeli işlem", "opsiyon", "korunma", "marj"],
+  "sections": [
+    { "kind": "text", "body": "Kaldıraç, borçlanarak elinizdekinden büyük bir pozisyon taşımaktır. 10.000 lirayla 100.000 liralık varlık tutuyorsanız kaldıracınız 10 kattır: varlık %10 yükselirse paranızı ikiye katlarsınız, %10 düşerse sıfırlanırsınız. Kaldıraç getiriyi büyütmez, getiri ile kaybı birlikte büyütür — ve ikisi simetrik değildir, çünkü sıfırlanan bir hesabın toparlanma şansı kalmaz." },
+    { "kind": "formula", "title": "Kaybı geri almanın asimetrisi", "expression": "Gereken toparlanma = 1 / (1 − kayıp) − 1", "note": "%50 kaybeden birinin başa dönmesi için %100 kazanması gerekir; %80 kaybeden için gereken %400'dür. Kaldıraç bu asimetriyi keskinleştirdiği için tehlikelidir." },
+    { "kind": "text", "title": "Türev nedir", "body": "Türev, değeri başka bir varlığa bağlı olan sözleşmedir. Vadeli işlem, ileri bir tarihte belirli fiyattan alım satım yükümlülüğüdür. Opsiyon ise yükümlülük değil hak verir: alıcı isterse kullanır, istemezse yalnızca ödediği primi kaybeder. Türevlerin doğuşu spekülasyon değil korunmadır; çiftçi hasat öncesi fiyatı sabitler, ihracatçı kur riskini kapatır." },
+    { "kind": "list", "title": "Aynı araç, iki farklı kullanım", "items": [
+      "Korunma: elinizdeki riski azaltmak için ters yönde pozisyon almak. Buğday üreticisinin vadeli satışı böyledir.",
+      "Spekülasyon: elinizde olmayan bir riski, yalnızca fiyat tahmininizden kazanmak için üstlenmek.",
+      "Sözleşme aynıdır; farkı yaratan, pozisyonun mevcut bir riski kapatıp kapatmadığıdır.",
+      "Bu yüzden 'türevler kötüdür' de 'türevler güvenlidir' de yanlıştır; soru daima kimin hangi riski taşıdığıdır."
+    ]},
+    { "kind": "example", "title": "Örnek: 1998 ve tanıdık ders", "body": "Long-Term Capital Management, aralarında Nobel ödüllü iktisatçıların da bulunduğu bir ekip tarafından yönetiliyordu ve modelleri son derece incelikliydi. Küçük fiyat farklarından kazanmak için çok yüksek kaldıraç kullandılar. 1998'de piyasalar modelin 'neredeyse imkânsız' saydığı biçimde hareket edince fon birkaç hafta içinde çöktü ve sistemik risk yarattığı için müdahaleyle tasfiye edildi. Ders, modelin yanlışlığından çok kaldıracın hata payını sıfıra indirmesiydi." },
+    { "kind": "text", "title": "Marj tamamlama çağrısı", "body": "Kaldıraçlı pozisyonda teminatınız belirli bir eşiğin altına düşerse aracı kurum ek teminat ister; koyamazsanız pozisyonu zorla kapatır. Bunun kritik yanı zamanlamasıdır: tasfiye tam da fiyatların en kötü olduğu anda gerçekleşir. Yani kaldıraçlı yatırımcı, 'bekleyip toparlanmasını görme' seçeneğini de kaybeder. Kaldıracın asıl riski kaybın büyümesi değil, hayatta kalma süresinin kısalmasıdır." },
+    { "kind": "text", "title": "Sıradan yatırımcı için sonuç", "body": "Türevler ve kaldıraç, riski yönetmek isteyen kurumlar için meşru araçlardır. Bireysel yatırımcının uzun vadeli birikiminde ise çoğunlukla gereksizdir: uzun vadede kazandıran şey, doğru anı yakalamak değil piyasada kalabilmektir. Kaldıraç tam da bunu, yani kalabilmeyi zorlaştırır." }
+  ],
+  "quiz": [
+    { "id": "q1", "prompt": "%50 değer kaybeden bir portföyün başa dönmesi için ne kadar kazanması gerekir?", "options": ["%50", "%75", "%100", "%150"], "answerIndex": 2, "explanation": "100 lira 50'ye düşer; 100'e dönmesi için 50'nin ikiye katlanması, yani %100 kazanç gerekir. Kayıp derinleştikçe asimetri sertleşir." },
+    { "id": "q2", "prompt": "Opsiyonu vadeli işlemden ayıran temel fark nedir?", "options": ["Opsiyon daha ucuzdur", "Opsiyon hak verir, yükümlülük getirmez", "Vadeli işlem borsada işlem görmez", "Opsiyonun vadesi yoktur"], "answerIndex": 1, "explanation": "Opsiyon alıcısı isterse kullanır; kullanmazsa yalnızca primi kaybeder. Vadeli işlemde ise taraflar yükümlüdür." },
+    { "id": "q3", "prompt": "Marj tamamlama çağrısını özellikle tehlikeli yapan nedir?", "options": ["Komisyon alınması", "Tasfiyenin fiyatların en kötü olduğu anda gerçekleşmesi", "Vergi doğurması", "Yalnızca hisse senetlerinde olması"], "answerIndex": 1, "explanation": "Pozisyon zorla, en olumsuz anda kapanır; beklemek ve toparlanmayı görmek seçeneği ortadan kalkar." }
+  ]
+},
+{
+  "id": "cesitlendirme-ve-portfoy",
+  "moduleId": "yatirimci",
+  "order": 1,
+  "title": "Çeşitlendirme ve portföy kurmak",
+  "subtitle": "Finansın bedava öğle yemeğine en yakın şeyi.",
+  "minutes": 9,
+  "keyTerms": ["çeşitlendirme", "korelasyon", "varlık dağılımı", "yeniden dengeleme"],
+  "sections": [
+    { "kind": "text", "body": "Çeşitlendirme, birbirinden farklı biçimde hareket eden varlıkları bir arada tutmaktır. Etkisi sezgiye aykırıdır: birlikte tutulan varlıkların dalgalanması, tek tek dalgalanmalarının ortalamasından düşük olabilir. Harry Markowitz'in 1952'de gösterdiği bu sonuç modern portföy kuramının temelidir ve finansta bedava öğle yemeğine en yakın şey diye anılır." },
+    { "kind": "text", "title": "Belirleyici olan korelasyondur", "body": "Çeşitlendirmenin gücü varlık sayısından değil, varlıkların birlikte hareket etme derecesinden gelir. Aynı sektörden yirmi hisse tutmak, sanıldığı kadar çeşitlendirme sağlamaz; hepsi aynı şoka aynı anda tepki verir. Farklı ülkeler, farklı sektörler ve farklı varlık sınıfları arasında dağılmak asıl işi görür. Kritik uyarı: korelasyonlar sabit değildir ve tam da en çok ihtiyaç duyulan kriz anlarında birbirine yaklaşma eğilimindedir." },
+    { "kind": "list", "title": "İki tür risk", "items": [
+      "Şirkete özgü risk: yangın, dava, yönetim hatası, ürünün tutmaması. Çeşitlendirmeyle büyük ölçüde ortadan kaldırılabilir.",
+      "Piyasa riski: resesyon, faiz şoku, savaş, salgın. Herkesi birlikte etkiler; çeşitlendirmeyle yok edilemez.",
+      "Piyasa, yalnızca ikinci tür risk için prim öder — çünkü birincisinden kaçınmak zaten mümkündür.",
+      "Bunun pratik anlamı: gereksiz yere yoğunlaşan yatırımcı, karşılığında ek getiri almadığı bir risk taşır."
+    ]},
+    { "kind": "text", "title": "Varlık dağılımı, hisse seçiminden önemlidir", "body": "Bir portföyün getirisindeki dalgalanmanın büyük kısmını, hangi hisselerin seçildiği değil hisse-tahvil-nakit gibi sınıflar arasındaki dağılım açıklar. Bu, yatırımcı için rahatlatıcı bir bulgudur: en çok emek isteyen ve en az sonuç veren iş olan tek tek varlık seçimi yerine, birkaç büyük ve nispeten kolay karara odaklanmak yeterlidir." },
+    { "kind": "example", "title": "Örnek: ufka göre dağılım", "body": "Parayı iki yıl sonra ev peşinatı için kullanacaksanız, hisse ağırlıklı bir portföy uygun değildir: piyasa tam o yıl %30 düşerse plan çöker. Yirmi yıl sonra kullanılacak bir emeklilik birikiminde ise aynı düşüş, sonuçta iz bırakmayabilecek bir dalgalanmadır. Doğru dağılımı belirleyen şey piyasa tahmini değil, paraya ne zaman ihtiyaç duyacağınızdır." },
+    { "kind": "text", "title": "Yeniden dengeleme", "body": "Zamanla iyi giden varlık sınıfı portföyde büyür ve dağılımınız bozulur. Yeniden dengeleme, belirli aralıklarla hedef oranlara dönmektir — yani yükseleni bir miktar satıp düşenden almaktır. Duygusal olarak zordur, çünkü kazananı satıp kaybedeni almak gibi hissettirir. İşlevi getiriyi artırmak değil, risk düzeyinizi seçtiğiniz yerde tutmaktır." },
+    { "kind": "quote", "text": "Çeşitlendirme cehalete karşı bir korumadır. Ne yaptığını bilen için pek anlamlı değildir.", "source": "Warren Buffett — yoğunlaşmayı savunan karşı görüş" }
+  ],
+  "quiz": [
+    { "id": "q1", "prompt": "Çeşitlendirmenin gücü esas olarak neye bağlıdır?", "options": ["Varlık sayısına", "Varlıkların birlikte hareket etme derecesine", "Portföyün büyüklüğüne", "İşlem sıklığına"], "answerIndex": 1, "explanation": "Düşük korelasyonlu varlıklar birbirinin dalgalanmasını söndürür. Aynı yönde hareket eden yirmi varlık, çeşitlendirme sağlamaz." },
+    { "id": "q2", "prompt": "Piyasa hangi risk için prim öder?", "options": ["Şirkete özgü risk", "Çeşitlendirmeyle yok edilemeyen piyasa riski", "Likidite riski", "Her ikisi için eşit"], "answerIndex": 1, "explanation": "Kaçınılabilir bir riski üstlenmenin karşılığı yoktur; prim yalnızca kaçınılamayan sistematik risk için ödenir." },
+    { "id": "q3", "prompt": "Yeniden dengelemenin temel amacı nedir?", "options": ["Getiriyi en çoklamak", "Risk düzeyini hedeflenen yerde tutmak", "Vergi avantajı sağlamak", "İşlem maliyetini düşürmek"], "answerIndex": 1, "explanation": "Zamanla bozulan dağılımı hedefe döndürerek portföyün risk profilini korur; getiri artışı garantisi vermez." }
+  ]
+},
+{
+  "id": "maliyetler-ve-vergi",
+  "moduleId": "yatirimci",
+  "order": 2,
+  "title": "Maliyetler: kesin olan tek şey",
+  "subtitle": "Getiriyi kimse garanti edemez; ücretler garantilidir.",
+  "minutes": 8,
+  "keyTerms": ["gider oranı", "işlem maliyeti", "alım satım farkı", "vergi ertelemesi"],
+  "sections": [
+    { "kind": "text", "body": "Yatırımda gelecekteki getiri bilinmez, ama maliyetler baştan bellidir ve her koşulda ödenir. Bu asimetri, maliyetleri yatırımcının kontrol edebildiği en güçlü değişken yapar. İyi bir yıl da geçirseniz kötü bir yıl da, ücret aynı oranda kesilir." },
+    { "kind": "list", "title": "Maliyet kalemleri", "items": [
+      "Fon gider oranı: yıllık, varlık üzerinden kesilir; görünmez çünkü hesaptan ayrıca düşülmez, fiyata gömülüdür.",
+      "Alım satım komisyonu: her işlemde ödenir; sık işlem yapanı orantısız cezalandırır.",
+      "Alım satım farkı: alış ve satış fiyatı arasındaki makas. Az işlem gören varlıklarda gizli ve büyük bir maliyettir.",
+      "Kur dönüşüm maliyeti: yabancı varlıklarda her giriş çıkışta ödenir.",
+      "Vergi: gerçekleşen kazanç üzerinden; erken satmak vergiyi öne çeker ve bileşik büyümeyi keser.",
+      "Enflasyon: en büyük ve en kolay unutulan maliyet."
+    ]},
+    { "kind": "text", "title": "Sık işlem yapmanın çifte bedeli", "body": "Her alım satım iki kez maliyet doğurur: doğrudan komisyon ve fiyat farkı, dolaylı olarak da vergiyi öne çekerek bileşik büyümeyi kesme. Bireysel yatırımcılar üzerine yapılan geniş çalışmalar, işlem sıklığı en yüksek grubun net getirisinin en düşük olduğunu tutarlı biçimde buluyor. Hareketsizlik pasiflik gibi görünür; oysa çoğu zaman aktif bir karardır." },
+    { "kind": "formula", "title": "Verginin ertelenmesinin değeri", "expression": "Ertelenen vergi = portföyde çalışmaya devam eden sermaye", "note": "Kazancı gerçekleştirip vergi ödediğinizde, o vergi tutarı bir daha getiri üretmez. Uzun tutmanın avantajı yalnızca komisyondan tasarruf değil, vergilenmemiş sermayenin bileşiklenmeye devam etmesidir." },
+    { "kind": "example", "title": "Örnek: iki fon, aynı strateji", "body": "Aynı endeksi izleyen iki fondan biri yılda %0,1, diğeri %1,5 ücret alsın. Yatırım stratejileri, riskleri, tuttukları hisseler aynı. Yılda %7 brüt getiri ve 30 yıl varsayımıyla ikinci fondaki yatırımcı, birincidekinin ulaştığı birikimin kabaca üçte ikisi kadarına ulaşır. Aradaki farkı yaratan hiçbir beceri, hiçbir öngörü yok — yalnızca ücret." },
+    { "kind": "text", "title": "Ucuz her zaman doğru değildir", "body": "Maliyet önemlidir ama tek ölçüt değildir. Çok düşük ücretli ama izlediği endeksten sapan, likiditesi zayıf ya da yapısı karmaşık bir ürün pahalıya mal olabilir. Doğru soru 'en ucuzu hangisi' değil, 'aynı işi yapan ürünler arasında en ucuzu hangisi' sorusudur. Karşılaştırma ancak eşdeğerler arasında anlamlıdır." }
+  ],
+  "quiz": [
+    { "id": "q1", "prompt": "Maliyetleri yatırımın en güçlü kontrol edilebilir değişkeni yapan nedir?", "options": ["Vergiden düşülebilmesi", "Getiri belirsizken maliyetin kesin ve her koşulda ödenir olması", "Yalnızca kâr edilen yıllarda alınması", "Enflasyondan etkilenmemesi"], "answerIndex": 1, "explanation": "Gelecekteki getiriyi kimse bilmez; ücret ise baştan bellidir ve iyi kötü her yıl kesilir." },
+    { "id": "q2", "prompt": "Sık işlem yapmanın dolaylı maliyeti nedir?", "options": ["Fon gider oranını artırır", "Vergiyi öne çekerek bileşik büyümeyi keser", "Enflasyonu yükseltir", "Portföyün riskini azaltır"], "answerIndex": 1, "explanation": "Gerçekleşen kazanç vergilenir ve o tutar bir daha getiri üretmez; komisyon ve fiyat farkı bunun üstüne eklenir." },
+    { "id": "q3", "prompt": "İki fonu ücret üzerinden karşılaştırmak ne zaman anlamlıdır?", "options": ["Her zaman", "Aynı işi yapan, eşdeğer ürünler olduklarında", "Yalnızca aktif fonlarda", "Yalnızca uzun vadede"], "answerIndex": 1, "explanation": "Farklı strateji ve riskteki ürünlerde düşük ücret tek başına üstünlük göstermez; karşılaştırma eşdeğerler arasında yapılır." }
+  ]
+},
+{
+  "id": "davranissal-tuzaklar",
+  "moduleId": "yatirimci",
+  "order": 3,
+  "title": "Davranışsal tuzaklar",
+  "subtitle": "Portföyün en zayıf halkası genellikle portföy değildir.",
+  "minutes": 8,
+  "keyTerms": ["kayıptan kaçınma", "aşırı güven", "sürü davranışı", "çıpalama", "davranış açığı"],
+  "sections": [
+    { "kind": "text", "body": "Yatırımcıların elde ettiği getiri, yatırım yaptıkları fonların getirisinin genellikle altında kalır. Sebep fonların kötü olması değil, yatırımcıların yanlış zamanlarda girip çıkmasıdır: yükselişin sonunda alıp düşüşün dibinde satmak. Bu farka davranış açığı denir ve çoğu portföyde ürün seçiminden daha belirleyicidir." },
+    { "kind": "list", "title": "En sık tekrarlanan sapmalar", "items": [
+      "Kayıptan kaçınma: aynı büyüklükteki kayıp, kazançtan yaklaşık iki kat güçlü hissedilir. Zarardaki hisseyi 'başa baş gelsin' diye tutmanın nedeni budur.",
+      "Aşırı güven: kendi tahmin gücünü olduğundan yüksek sanmak. Sık işlem yapmanın ve gereksiz yoğunlaşmanın kaynağıdır.",
+      "Çıpalama: alış fiyatına takılıp kalmak. Oysa piyasa sizin ne ödediğinizi bilmez ve umursamaz.",
+      "Sürü davranışı: herkes alıyorsa doğru olmalı varsayımı. Balonların yakıtı budur.",
+      "Doğrulama yanlılığı: elindeki pozisyonu destekleyen haberi arayıp aksini görmezden gelmek.",
+      "Sonuç yanlılığı: iyi sonuçlanan kararı iyi karar sanmak. Şans ile beceri böyle karışır."
+    ]},
+    { "kind": "text", "title": "Zamanlama neden bu kadar zor", "body": "Piyasadan çıkmak iki doğru karar gerektirir: ne zaman çıkacağınız ve ne zaman geri gireceğiniz. İkincisi çok daha zordur, çünkü en sert yükseliş günleri genellikle en sert düşüşlerin hemen ardından gelir. Uzun vadeli getirinin önemli bir kısmının çok az sayıda güne sıkıştığını gösteren çalışmalar, o birkaç günü kaçırmanın uzun vadeli sonucu nasıl bozduğunu ortaya koyuyor. Kenarda beklerken 'doğru anı' kollamak, çoğu zaman o günlerin kaçırılmasıyla sonuçlanır." },
+    { "kind": "example", "title": "Örnek: kendine karşı kural koymak", "body": "Davranışsal sapmalar bilinmekle geçmez; farkında olan yatırımcı da aynı anda aynı paniği yaşar. İşe yarayan şey, kararı duygunun devrede olmadığı bir zamana taşımaktır: düzenli ve otomatik alım talimatı, önceden yazılmış bir varlık dağılımı planı, yılda bir kez yapılan yeniden dengeleme. Ortak mantık, kriz anında karar vermek yerine krizden önce verilmiş bir karara uymaktır." },
+    { "kind": "text", "title": "Haberler ve gürültü", "body": "Finansal medyanın işi doğru tahmin etmek değil, ilgi çekmektir; her günün bir açıklaması olmak zorundadır. Oysa günlük fiyat hareketlerinin büyük kısmı gürültüdür ve uzun vadeli bir yatırımcı için bilgi taşımaz. Portföyüne daha seyrek bakan yatırımcının daha az panik satışı yaptığını gösteren bulgular var — çünkü ne kadar sık bakarsanız, kayıp görme olasılığınız o kadar artar." },
+    { "kind": "quote", "text": "Yatırımcının başlıca sorunu, hatta en büyük düşmanı, muhtemelen kendisidir.", "source": "Benjamin Graham, Akıllı Yatırımcı, 1949" }
+  ],
+  "quiz": [
+    { "id": "q1", "prompt": "Davranış açığı nedir?", "options": ["Fonlar arasındaki getiri farkı", "Yatırımcının elde ettiği getirinin, yatırım yaptığı ürünün getirisinin altında kalması", "Enflasyon ile faiz arasındaki fark", "Alış ve satış fiyatı arasındaki makas"], "answerIndex": 1, "explanation": "Yanlış zamanlarda giriş çıkış yapmak, ürünün getirisiyle yatırımcının getirisi arasında kalıcı bir fark açar." },
+    { "id": "q2", "prompt": "Piyasadan çıkıp doğru anda geri girmek neden bu kadar zordur?", "options": ["Komisyonlar yüksektir", "En sert yükseliş günleri genellikle sert düşüşlerin hemen ardından gelir", "Borsalar kapalı kalır", "Vergi engeli vardır"], "answerIndex": 1, "explanation": "İki ayrı doğru karar gerekir ve en iyi günler en kötü günlere yakın kümelenir; kenarda beklemek o günleri kaçırmak demektir." },
+    { "id": "q3", "prompt": "Davranışsal sapmalara karşı en etkili yaklaşım nedir?", "options": ["Sapmaları öğrenip anlık kararlarda dikkatli olmak", "Kararı duygunun devrede olmadığı bir zamana taşıyıp kurala bağlamak", "Daha sık portföy kontrolü yapmak", "Uzman tahminlerini takip etmek"], "answerIndex": 1, "explanation": "Bilmek yetmez; otomatik alım, önceden yazılmış dağılım planı ve düzenli yeniden dengeleme kararı krizden önceye taşır." }
+  ]
+},
+{
+  "id": "balonlar-ve-krizler",
+  "moduleId": "yatirimci",
+  "order": 4,
+  "title": "Balonlar ve krizler",
+  "subtitle": "Ayrıntılar hep değişir, örüntü nadiren.",
+  "minutes": 9,
+  "keyTerms": ["varlık balonu", "kaldıraç döngüsü", "banka hücumu", "sistemik risk", "son kredi mercii"],
+  "sections": [
+    { "kind": "text", "body": "Balon, bir varlığın fiyatının dayandığı nakit akışlarıyla açıklanamayacak düzeye çıkmasıdır. Tanımın zorluğu, ancak patladıktan sonra kesinleşmesidir; içindeyken her balonun ikna edici bir gerekçesi vardır. Yine de tarih boyunca tekrarlanan bir örüntü görünür: gerçek bir yenilik, ardından kredinin genişlemesi, sonra 'bu sefer farklı' anlatısı ve nihayet kredinin durmasıyla gelen çöküş." },
+    { "kind": "list", "title": "Balonun aşamaları", "items": [
+      "Yer değiştirme: gerçek bir yenilik ya da politika değişikliği fiyatı meşru biçimde yükseltir.",
+      "Patlama: yükseliş kendi gerekçesine dönüşür; fiyat arttığı için alınır.",
+      "Coşku: kaldıraç devreye girer, borçla alım kazançları da kayıpları da büyütür; yeni yatırımcılar akın eder.",
+      "Kâr realizasyonu: bilenler sessizce çıkmaya başlar, fiyat yatay seyreder.",
+      "Panik: kredi akışı durur, herkes aynı kapıya yönelir, kaldıraç bu kez aşağı yönde çalışır."
+    ]},
+    { "kind": "text", "title": "Bankalar neden krizin merkezinde", "body": "Banka kısa vadeli mevduat toplar, uzun vadeli kredi verir. Bu vade uyumsuzluğu normal zamanda kârlı, panik anında ölümcüldür: herkes aynı anda parasını isterse en sağlam banka bile ödeyemez. Diamond ve Dybvig'in gösterdiği gibi banka hücumu kendi kendini gerçekleştiren bir dengedir — beklentinin kendisi sonucu üretir. Mevduat sigortası ve merkez bankasının son kredi mercii işlevi tam da bu dengeyi kırmak için vardır." },
+    { "kind": "example", "title": "Örnek: 2008 ve 2023", "body": "2008'de ABD konut kredileri karmaşık menkul kıymetlere paketlenmiş, riskin nerede biriktiği görünmez hâle gelmişti; fiyatlar dönünce zincirleme çöküş yaşandı. 2023'te Silicon Valley Bank ise mevduatını uzun vadeli tahvillere yatırmıştı; faizler hızla yükselince bu tahvillerin değeri düştü ve mevduat sahiplerinin çoğu sigorta limitinin üstünde olduğu için banka iki günde çöktü. Mekanizma yüzyıllık klasik banka hücumuydu; değişen tek şey hızıydı — kuyruk kapıda değil telefondaydı." },
+    { "kind": "text", "title": "Minsky'nin rahatsız edici tezi", "body": "Hyman Minsky, uzun süren istikrarın kendisinin istikrarsızlık ürettiğini savundu. Sakin dönemlerde risk almak normalleşir, borçlanma artar, ihtiyat gereksiz görünmeye başlar; sistem bir sonraki şoka karşı sessizce kırılganlaşır. Uzun süre marjinal kalan bu tez 2008'den sonra ana akıma döndü. Yatırımcı için pratik sonucu şudur: her şeyin sakin göründüğü dönem, tedbiri gevşetmek için değil gözden geçirmek için doğru zamandır." },
+    { "kind": "text", "title": "Bir yatırımcı bundan ne çıkarmalı", "body": "Balonları önceden ve kesin biçimde tespit etmek mümkün değildir; kimse zirveyi tutarlı olarak bilemez. Yapılabilecek olan, tepe noktayı tahmin etmek değil, bir çöküşe dayanabilecek biçimde konumlanmaktır: taşıyabileceğinizden fazla kaldıraç kullanmamak, kısa vadede ihtiyaç duyacağınız parayı riskli varlıkta tutmamak ve bir varlığın hikâyesi ne kadar ikna ediciyse ona o kadar dikkatle bakmak. Krizlerde en çok kaybedenler haklı olmayanlar değil, haklı çıkmayı bekleyecek kadar dayanamayanlardır." }
+  ],
+  "quiz": [
+    { "id": "q1", "prompt": "Bir balonu tanımlayan şey nedir?", "options": ["Fiyatın hızlı yükselmesi", "Fiyatın dayandığı nakit akışlarından kopması", "İşlem hacminin artması", "Yeni yatırımcıların gelmesi"], "answerIndex": 1, "explanation": "Hızlı yükseliş tek başına balon değildir; ayırt edici olan fiyatın temel değerle bağının kopmasıdır." },
+    { "id": "q2", "prompt": "Banka hücumunu 'kendi kendini gerçekleştiren denge' yapan nedir?", "options": ["Bankanın gerçekten iflas etmiş olması", "Vade uyumsuzluğu nedeniyle sağlam bankanın da eşzamanlı talebi karşılayamaması", "Merkez bankasının faiz artırması", "Kredi talebinin düşmesi"], "answerIndex": 1, "explanation": "Kısa vadeli mevduatla uzun vadeli kredi finanse edildiği için, herkesin aynı anda çekmesi beklentisi sonucu tek başına üretir." },
+    { "id": "q3", "prompt": "Minsky'nin istikrar tezinin özü nedir?", "options": ["İstikrar her zaman büyümeyi artırır", "Uzun süren sakinlik risk almayı normalleştirir ve kırılganlık biriktirir", "Krizler öngörülebilir", "Merkez bankaları krizleri önleyebilir"], "answerIndex": 1, "explanation": "İstikrar istikrarsızlaştırıcıdır: sakin dönemde borç ve risk iştahı artar, sistem bir sonraki şoka karşı zayıflar." }
+  ]
+}
+]
