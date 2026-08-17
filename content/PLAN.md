@@ -26,7 +26,7 @@ grafik yazılır, süs olacaksa yazılmaz.
 | 9 | Medya ve propaganda okuryazarlığı | `medya` | Bugünü anlamak | 3 | ✅ |
 | 10 | Mimarlık tarihi | `mimarlik` | Klasikler | 4 | ✅ |
 | 11 | Sağlık okuryazarlığı | `saglik` | Bugünü anlamak | 4 | ✅ |
-| 12 | Evrim biyolojisi | `evrim` | Klasikler | 4 | |
+| 12 | Evrim biyolojisi | `evrim` | Klasikler | 4 | ✅ |
 | 13 | Hukuk okuryazarlığı | `hukuk` | Bugünü anlamak | 1 | |
 | 14 | Dilbilim ve Türkçenin yapısı | `dilbilim` | Klasikler | 3 | |
 

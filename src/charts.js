@@ -2526,5 +2526,176 @@
             "İnsanlar en kötü hissettikleri gün başvurdukları için, herhangi bir tedavinin ilk gözlemi neredeyse her zaman olumlu görünür. " +
             "Kontrol grubunun varlık sebebi tam olarak bu payı ayıklamaktır." };
       }
+    },
+
+    /* ---- evrim ---- */
+
+    "secilim-hizi": {
+      title: "Küçük bir avantaj ne kadar hızlı yayılır",
+      note: "Haploid bir modelde her kuşakta p' = p(1+s) / (1+sp). Gerçek popülasyonlarda baskınlık, göç ve sürüklenme işi karmaşıklaştırır ama büyüklük mertebesi budur.",
+      controls: [
+        { key: "s", label: "Üreme avantajı", min: 1, max: 20, step: 1, def: 5, fmt: pctS },
+        { key: "b", label: "Başlangıç sıklığı", min: 1, max: 100, step: 1, def: 10,
+          fmt: function (v) { return "binde " + v; } }
+      ],
+      draw: function (p) {
+        var s0 = p.s / 100, p0 = p.b / 1000, i;
+        var kus = function (hedef) {
+          return Math.log((hedef / (1 - hedef)) / (p0 / (1 - p0))) / Math.log(1 + s0);
+        };
+        var t99 = kus(0.99);
+        var GMAX = Math.max(50, Math.ceil((t99 * 1.15) / 50) * 50);
+        var pt = function (t) {
+          var o = (p0 / (1 - p0)) * Math.pow(1 + s0, t);
+          return o / (1 + o);
+        };
+        var pts = [];
+        for (i = 0; i <= 80; i++) pts.push([i / 80, pt((GMAX * i) / 80)]);
+        var s = frame("Kuşak", "Sıklık");
+        [0.5, 0.99].forEach(function (v) {
+          s += gLine(0, v, 1, v, { c: "var(--rule)", w: 1, d: "2 4" });
+          s += gTxt(0.01, v, "%" + r0(v * 100), { a: "start", dy: v > 0.9 ? 12 : -4, s: 8.5 });
+        });
+        s += gPoly(pts, { c: "var(--accent)", w: 2.6 });
+        var t50 = kus(0.5);
+        s += gDot(t50 / GMAX, 0.5, { c: "var(--ink)" });
+        s += gTxt(t50 / GMAX, 0.5, r0(t50) + " kuşak", {
+          a: t50 / GMAX > 0.6 ? "end" : "start", dx: t50 / GMAX > 0.6 ? -7 : 7, dy: -6,
+          c: "var(--ink)", b: 1, s: 10 });
+        [GMAX / 2].forEach(function (v) { s += gTxt(v / GMAX, 0, r0(v), { a: "middle", dy: 12, s: 9 }); });
+        return { svg: s, text: "Binde " + p.b + " sıklıkla başlayan ve taşıyıcısına %" + p.s +
+          " üreme avantajı veren bir özellik, popülasyonun yarısına " + r0(t50) + " kuşakta, %99'una " +
+          r0(t99) + " kuşakta ulaşıyor. " +
+          "Yüzde beşlik bir avantaj bir bireyin ömründe fark edilmez; birkaç yüz kuşakta popülasyonu baştan yazar. " +
+          "Evrimin sezgiye aykırı yanı büyük sıçramalar değil, küçük farkların üst üste binmesidir." };
+      }
+    },
+
+    "suruklenme": {
+      title: "Küçük popülasyonda şans, seçilimden güçlüdür",
+      note: "Sekiz ayrı popülasyon, hepsi aynı sıklıkla başlıyor ve aynı avantaja sahip. Aradaki tek fark, her kuşakta hangi bireylerin üreyebildiği. Sabit tohumlu bir üreteç kullanıldığı için kaydırıcıyı geri aldığınızda aynı tarih tekrarlanır.",
+      controls: [
+        { key: "k", label: "Popülasyon büyüklüğü", min: 0, max: 30, step: 1, def: 10,
+          fmt: function (v) { return r0(10 * Math.pow(10, v / 10)) + " birey"; } },
+        { key: "s", label: "Üreme avantajı", min: 0, max: 5, step: 1, def: 1, fmt: pctS }
+      ],
+      draw: function (p) {
+        var N = 10 * Math.pow(10, p.k / 10), s0 = p.s / 100, G = 150, YOL = 8, i, t, y;
+        var tohum = 987654321;
+        var rnd = function () { tohum = (tohum * 1664525 + 1013904223) % 4294967296; return tohum / 4294967296; };
+        var nrm = function () { return (rnd() + rnd() + rnd() + rnd() - 2) / 0.5774; };
+        var s = frame("Kuşak", "Sıklık");
+        s += gLine(0, 0.5, 1, 0.5, { c: "var(--rule)", w: 1, d: "2 4" });
+        var sabit = 0, kayip = 0;
+        for (y = 0; y < YOL; y++) {
+          var f = 0.5, pts = [[0, 0.5]];
+          for (t = 1; t <= G; t++) {
+            if (f > 0 && f < 1) {
+              f = (f * (1 + s0)) / (1 + s0 * f);
+              f = f + Math.sqrt((f * (1 - f)) / (2 * N)) * nrm();
+              f = Math.max(0, Math.min(1, f));
+              if (f < 1 / (2 * N)) f = 0;
+              if (f > 1 - 1 / (2 * N)) f = 1;
+            }
+            pts.push([t / G, f]);
+          }
+          if (f === 1) sabit++;
+          if (f === 0) kayip++;
+          s += gPoly(pts, { c: f === 1 ? "var(--ink)" : f === 0 ? "var(--no)" : "var(--accent)", w: 1.6 });
+        }
+        [50, 100].forEach(function (v) { s += gTxt(v / G, 0, v, { a: "middle", dy: 12, s: 9 }); });
+        s += gTxt(0.01, 1, "yerleşti", { a: "start", dy: 11, c: "var(--ink)", b: 1, s: 8.5 });
+        s += gTxt(0.01, 0, "kayboldu", { a: "start", dy: -4, c: "var(--no)", b: 1, s: 8.5 });
+        var esik = 1 / (2 * N);
+        return { svg: s, text: r0(N) + " bireylik sekiz popülasyonda, aynı %" + p.s +
+          " avantaja sahip bir özellik 150 kuşak izlendi: " + sabit + " popülasyonda yerleşti, " +
+          kayip + " popülasyonda kayboldu, " + (YOL - sabit - kayip) + " popülasyonda hâlâ yolda. " +
+          (s0 > esik
+            ? "Avantaj (%" + p.s + ") sürüklenme eşiğinden (%" + r2(esik * 100) + ") büyük olduğu için seçilim yönü belirliyor."
+            : "Avantaj (%" + p.s + ") sürüklenme eşiğinin (%" + r2(esik * 100) + ") altında kaldığı için sonucu şans belirliyor: " +
+              "küçük popülasyonda faydalı bir özellik de yok olabilir, zararlı bir özellik de yerleşebilir.") };
+      }
+    },
+
+    "molekuler-saat": {
+      title: "Moleküler saat ve doygunluk",
+      note: "Jukes-Cantor modeli: gözlenen fark p = ¾(1 − e^(−4d/3)), d ise gerçekte biriken değişim sayısı. Dört harf olduğu için iki tamamen ilgisiz dizi bile ancak %75 farklı çıkar.",
+      controls: [
+        { key: "t", label: "Ayrılmadan bu yana", min: 0, max: 30, step: 1, def: 12,
+          fmt: function (v) { return r0(Math.pow(10, v / 10)) + " milyon yıl"; } },
+        { key: "m", label: "Değişim hızı", min: 2, max: 20, step: 1, def: 10,
+          fmt: function (v) { return "milyon yılda ‰" + (v / 10).toFixed(1); } }
+      ],
+      draw: function (p) {
+        var T0 = 1, T1 = 1000, mu = (p.m / 10) / 1000, i;   // birim: değişim/bölge/milyon yıl
+        var X = function (t) { return Math.log(t / T0) / Math.log(T1 / T0); };
+        var D = function (t) { return 2 * mu * t; };
+        var P = function (t) { return 0.75 * (1 - Math.exp((-4 * D(t)) / 3)); };
+        var ger = [], goz = [];
+        for (i = 0; i <= 70; i++) {
+          var t = T0 * Math.pow(T1 / T0, i / 70);
+          ger.push([X(t), Math.min(1, D(t))]);
+          goz.push([X(t), P(t)]);
+        }
+        var s = frame("Ayrılma zamanı", "Dizi farkı");
+        s += gLine(0, 0.75, 1, 0.75, { c: "var(--no)", w: 1.4, d: "4 3" });
+        s += gTxt(0.02, 0.75, "%75: rastgele iki dizi", { a: "start", dy: -5, c: "var(--no)", b: 1, s: 8.5 });
+        s += gTxt(0.02, 0.97, "kesikli: gerçekte biriken değişim", { a: "start", c: "var(--muted)", s: 8.5 });
+        s += gTxt(0.02, 0.88, "dolu: dizide görünen fark", { a: "start", c: "var(--accent)", b: 1, s: 8.5 });
+        s += gPoly(ger, { c: "var(--muted)", w: 1.6, d: "3 3" });
+        s += gPoly(goz, { c: "var(--accent)", w: 2.6 });
+        var tt = Math.pow(10, p.t / 10);
+        s += gDot(X(tt), P(tt), { c: "var(--ink)" });
+        s += gTxt(X(tt), P(tt), "%" + r1(P(tt) * 100), {
+          a: X(tt) > 0.6 ? "end" : "start", dx: X(tt) > 0.6 ? -7 : 7, dy: -6, c: "var(--ink)", b: 1, s: 10 });
+        [3, 30].forEach(function (v) { s += gTxt(X(v), 0, v + " my", { a: "middle", dy: 12, s: 9 }); });
+        return { svg: s, text: r0(tt) + " milyon yıl önce ayrılmış iki soy hattında, her yüz konumda gerçekte " +
+          r2(D(tt) * 100) + " değişim birikti ama dizilerin yalnızca %" + r1(P(tt) * 100) +
+          "'i farklı görünüyor. " +
+          (D(tt) < 0.05
+            ? "Yakın akrabalarda ikisi neredeyse aynıdır; insanla şempanzenin dizilerinin %98'den fazla örtüşmesinin sebebi budur."
+            : "Aynı yer ikinci kez değiştiğinde ilk değişim görünmez olur; bu yüzden gözlenen fark gerçek değişimin gerisinde kalır ve %75'te doyar. Çok eski ayrılmalar tek bir gene bakarak okunamaz.") };
+      }
+    },
+
+    "akraba-secilimi": {
+      title: "Fedakârlık ne zaman yayılır",
+      note: "Hamilton kuralı: r·b > c. Akrabalık katsayısı r, ortak atadan gelen genlerin beklenen ortak payıdır. Kuralın söylediği şey fedakârlığın soylu olduğu değil, hangi koşulda kalıtsal olarak kârlı olduğudur.",
+      controls: [
+        { key: "r", type: "choice", label: "Kime yardım ediliyor", def: "kardes", options: [
+          ["kardes", "Kardeş"], ["yegen", "Yeğen"], ["kuzen", "Kuzen"], ["yabanci", "Yabancı"]] },
+        { key: "b", label: "Fayda / maliyet oranı", min: 1, max: 20, step: 1, def: 4,
+          fmt: function (v) { return v + " kat"; } }
+      ],
+      draw: function (p) {
+        var AKRABA = { kardes: ["kardeş", 0.5], yegen: ["yeğen", 0.25], kuzen: ["kuzen", 0.125], yabanci: ["yabancı", 0.02] };
+        var R0 = 0.02, R1 = 0.8, TOP = 20, i;
+        var X = function (r) { return Math.log(r / R0) / Math.log(R1 / R0); };
+        var esik = function (r) { return 1 / r; };
+        var pts = [];
+        for (i = 0; i <= 70; i++) {
+          var r = R0 * Math.pow(R1 / R0, i / 70);
+          if (esik(r) <= TOP) pts.push([X(r), esik(r) / TOP]);
+        }
+        var s = frame("Akrabalık (r)", "Fayda / maliyet");
+        if (pts.length) {
+          s += gArea(pts.concat([[1, 1], [pts[0][0], 1]]), { c: "var(--ok)", o: 0.12 });
+          s += gPoly(pts, { c: "var(--ok)", w: 2.2 });
+        }
+        s += gTxt(0.99, 0.93, "fedakârlık yayılır", { a: "end", c: "var(--ok)", b: 1, s: 9 });
+        s += gTxt(0.02, 0.06, "yayılmaz", { a: "start", c: "var(--no)", b: 1, s: 9 });
+        var rr = AKRABA[p.r][1], bc = p.b, gecer = rr * bc > 1;
+        s += gDot(X(rr), Math.min(1, bc / TOP), { c: gecer ? "var(--ok)" : "var(--no)" });
+        s += gTxt(X(rr), Math.min(1, bc / TOP), AKRABA[p.r][0], {
+          a: X(rr) > 0.6 ? "end" : "start", dx: X(rr) > 0.6 ? -7 : 7, dy: -6,
+          c: "var(--ink)", b: 1, s: 10 });
+        [0.05, 0.25].forEach(function (v) { s += gTxt(X(v), 0, r2(v), { a: "middle", dy: 12, s: 9 }); });
+        return { svg: s, text: "Bir " + AKRABA[p.r][0] + " için (r = " + r2(rr) +
+          ") fedakârlığın yayılması, kazandırdığı faydanın kendi maliyetinin " + r1(esik(rr)) +
+          " katından büyük olmasını gerektiriyor. Bu ayarda oran " + bc + " kat: kural " +
+          (gecer ? "sağlanıyor, davranış yayılır." : "sağlanmıyor, davranış yayılmaz.") +
+          " Haldane'a atfedilen espri tam olarak bunu söyler: iki kardeşim ya da sekiz kuzenim için canımı veririm. " +
+          "Kural, fedakârlığın genlerin hesabında nasıl kârlı hâle geldiğini açıklar; ahlaki bir öğüt değildir." };
+      }
     }
   };

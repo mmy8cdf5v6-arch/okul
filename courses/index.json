@@ -180,5 +180,19 @@
     "questions": 36,
     "charts": 4,
     "file": "courses/saglik.json"
+  },
+  {
+    "id": "evrim",
+    "title": "Evrim biyolojisi",
+    "subtitle": "Mekanizma, kanıt, sonuç",
+    "description": "Kalıtımdan doğal seçilime, fosil kaydından moleküler saate: canlılığın çeşitliliğini üreten sürecin nasıl işlediği ve nereden bilindiği.",
+    "icon": "🧬",
+    "accent": "#3d6b2a",
+    "accentDark": "#96c97a",
+    "category": "klasik",
+    "lessons": 12,
+    "questions": 36,
+    "charts": 4,
+    "file": "courses/evrim.json"
   }
 ]

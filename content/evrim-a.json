@@ -1,0 +1,472 @@
+[
+  {
+    "id": "kalitim-ve-cesitlilik",
+    "moduleId": "mekanizma",
+    "order": 1,
+    "title": "Kalıtım, mutasyon ve çeşitlilik",
+    "subtitle": "Seçilimin üzerinde çalışacağı hammadde.",
+    "minutes": 8,
+    "keyTerms": ["gen", "alel", "mutasyon", "fenotip", "rekombinasyon", "kalıtılabilirlik"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Evrimin işlemesi için üç koşul yeter ve bu üç koşul birbirinden bağımsızdır: bireyler arasında fark olmalı, bu fark yavrulara aktarılmalı ve fark üreme başarısını değiştirmeli. Üçü bir arada bulunduğunda evrim bir olasılık değil, matematiksel bir zorunluluktur. Darwin'in en büyük açığı ikinci koşuldu: kalıtımın nasıl işlediğini bilmiyordu."
+      },
+      {
+        "kind": "text",
+        "title": "Karışan boya sorunu",
+        "body": "Darwin'in çağında kalıtımın, iki boyanın karışması gibi çalıştığı düşünülüyordu. Bu doğru olsaydı, her kuşakta çeşitlilik yarıya inerdi ve birkaç kuşak sonra herkes ortalamaya yakınsardı; seçilimin üzerinde çalışacağı fark kalmazdı. İtiraz ciddiydi ve Darwin buna tatmin edici bir cevap veremedi. Cevap aslında yazılmıştı: Mendel, kalıtımın karışarak değil, bozulmadan aktarılan birimler hâlinde işlediğini göstermişti. İki çalışmanın buluşması otuz beş yıl aldı."
+      },
+      {
+        "kind": "list",
+        "title": "Çeşitlilik nereden gelir",
+        "items": [
+          "Mutasyon: DNA'daki değişiklik. Her insan yaklaşık yetmiş yeni mutasyonla doğar; çoğu hiçbir şey yapmaz.",
+          "Rekombinasyon: üreme sırasında kromozomların parça değiştirmesi. Yeni harf üretmez ama mevcut harfleri sonsuz sayıda yeni birleşimde toplar.",
+          "Gen akışı: başka bir popülasyondan gelen bireylerin taşıdığı aleller.",
+          "Gen ikilenmesi: bir genin kopyalanması. Kopyalardan biri eski işini sürdürürken diğeri yeni bir işleve kayabilir; yeniliğin en verimli kaynaklarındandır."
+        ]
+      },
+      {
+        "kind": "text",
+        "title": "Mutasyon yönsüzdür",
+        "body": "En sık yapılan hatalardan biri, mutasyonun ihtiyaca göre ortaya çıktığını sanmaktır. Antibiyotikli ortamda direnç mutasyonu belirmez; direnç mutasyonu zaten vardır ve antibiyotik onu taşıyanları ayakta bırakır. Bu ayrım deneyle gösterilmiştir: bakterilerin antibiyotikle hiç karşılaşmadan önce de dirençli hatlar barındırdığı doğrudan kanıtlanmıştır. Mutasyon rastgeledir; rastgele olmayan şey hangi mutasyonun kalacağıdır."
+      },
+      {
+        "kind": "example",
+        "title": "Kalıtılabilirlik neyi ölçmez",
+        "body": "Bir özelliğin kalıtılabilirliği yüzde seksen ise, bu 'sizin boyunuzun yüzde sekseni genlerinizden geliyor' demek değildir. Ölçülen şey bir topluluktaki farkların ne kadarının genetik farklardan geldiğidir ve topluluk değişince oran da değişir. Herkesin aynı beslendiği bir toplulukta boy farklarının neredeyse tamamı genetik görünür; beslenmenin çok eşitsiz olduğu bir toplulukta aynı özelliğin kalıtılabilirliği düşer. Kalıtılabilirlik bireye ait bir sayı değildir ve gruplar arası farkları açıklamak için kullanılamaz."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Evrimin işlemesi için gereken üç koşul nedir?",
+        "options": [
+          "Mutasyon, göç, izolasyon",
+          "Bireyler arasında fark, farkın kalıtılması, farkın üreme başarısını değiştirmesi",
+          "Uzun zaman, büyük popülasyon, çevre değişimi",
+          "Rekabet, işbirliği, uyum"
+        ],
+        "answerIndex": 1,
+        "explanation": "Bu üçü bir arada bulunduğunda evrim bir olasılık değil, kaçınılmaz bir sonuçtur. Hangi canlıdan söz edildiğinin bir önemi yoktur."
+      },
+      {
+        "id": "q2",
+        "prompt": "Antibiyotik direnci nasıl ortaya çıkar?",
+        "options": [
+          "Bakteriler antibiyotiğe karşı direnç geliştirmeye karar verir",
+          "Direnç mutasyonu antibiyotikten önce zaten vardır; antibiyotik onu taşıyanları ayakta bırakır",
+          "Antibiyotik bakterinin DNA'sını değiştirir",
+          "Bakteriler dirençli olmayı öğrenir"
+        ],
+        "answerIndex": 1,
+        "explanation": "Mutasyon ihtiyaca göre belirmez. Bu, bakterilerin antibiyotikle hiç karşılaşmadan önce dirençli hatlar barındırdığını gösteren deneylerle kanıtlanmıştır."
+      },
+      {
+        "id": "q3",
+        "prompt": "Bir özelliğin kalıtılabilirliğinin yüksek olması ne anlama gelir?",
+        "options": [
+          "O özellik bireyde tümüyle genlerle belirlenir",
+          "İncelenen toplulukta gözlenen farkların büyük kısmı genetik farklardan gelir",
+          "Çevre hiçbir rol oynamaz",
+          "Gruplar arası farklar da genetiktir"
+        ],
+        "answerIndex": 1,
+        "explanation": "Kalıtılabilirlik topluluğa özgü bir orandır. Çevre eşitlendikçe yükselir, çevre farklılaştıkça düşer; bireye ya da gruplar arası farklara uygulanamaz."
+      }
+    ]
+  },
+  {
+    "id": "dogal-secilim",
+    "moduleId": "mekanizma",
+    "order": 2,
+    "title": "Doğal seçilim",
+    "subtitle": "Rastgele olan mutasyondur, seçilim değil.",
+    "minutes": 9,
+    "keyTerms": ["doğal seçilim", "uyum", "uygunluk", "seçilim katsayısı", "yönlü seçilim", "dengeleyici seçilim"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Doğal seçilim, biriken küçük farkların üzerine kurulu bir süzgeçtir. Her kuşakta, bazı bireyler diğerlerinden biraz daha fazla yavru bırakır. Bu 'biraz daha fazla' kalıtsal bir farka bağlıysa, o fark bir sonraki kuşakta biraz daha yaygın olur. Süreçte hiçbir yönlendirme, hiçbir hedef, hiçbir öngörü yoktur. Yalnızca aynı işlemin kuşak kuşak tekrarlanması vardır."
+      },
+      { "kind": "chart", "chartId": "secilim-hizi" },
+      {
+        "kind": "text",
+        "body": "Grafiğin gösterdiği şey, sezginin en çok yanıldığı yerdir. Yüzde beşlik bir üreme avantajı — yani ortalama yüz yavru yerine yüz beş yavru — tek bir kuşakta hiçbir şey ifade etmez, gözle görülmez, ölçülmesi bile zordur. Aynı avantaj birkaç yüz kuşak boyunca çalıştığında popülasyonu baştan yazar. Evrimin gücü büyük sıçramalardan değil, küçük farkların üst üste binmesinden gelir."
+      },
+      {
+        "kind": "list",
+        "title": "Seçilimin biçimleri",
+        "items": [
+          "Yönlü seçilim: bir uçtaki bireyler sürekli avantajlıysa ortalama o yöne kayar. Antibiyotik direnci böyle yayılır.",
+          "Dengeleyici seçilim: uçlar cezalandırılır, ortada kalmak avantajlıdır. İnsanda doğum ağırlığı klasik örnektir.",
+          "Ayırıcı seçilim: iki uç da ortadan avantajlıysa popülasyon ikiye ayrılma eğilimine girer.",
+          "Sıklığa bağlı seçilim: bir özelliğin avantajı ne kadar yaygın olduğuna bağlıdır; nadir olmak başlı başına avantaj olabilir.",
+          "Dengeleyici çokbiçimlilik: melez bireyin avantajlı olması iki aleli birden ayakta tutar. Orak hücre alelinin sıtma bölgelerinde kalıcı olması bunun örneğidir."
+        ]
+      },
+      {
+        "kind": "text",
+        "title": "Uygunluk nedir, ne değildir",
+        "body": "Uygunluk günlük dildeki 'güçlü olmak' değildir. Ölçtüğü tek şey, bir sonraki kuşağa bırakılan üreyebilir yavru sayısıdır. Bir canlı daha yavaş, daha küçük, daha kısa ömürlü olabilir ve yine de daha uygun olabilir. Bu yüzden 'en güçlü hayatta kalır' sloganı iki kez yanlıştır: ne güç ölçüttür ne de hayatta kalmak tek başına yeter. Kısır bir birey ne kadar uzun yaşarsa yaşasın, evrimsel olarak yoktur."
+      },
+      {
+        "kind": "example",
+        "title": "Her özellik uyum değildir",
+        "body": "Bir özelliği gördüğünüzde 'bu ne işe yarar' diye sormak doğal bir tepkidir ama her zaman doğru soru değildir. Bazı özellikler başka bir özelliğin yan ürünüdür, bazıları sürüklenmeyle yerleşmiştir, bazıları geçmişte işe yaramış ama artık yaramamaktadır. Kafatası dikişleri doğumu kolaylaştırır ama yumurtadan çıkan sürüngenlerde de vardır; yani doğum için evrilmemiştir. Her özellik için bir işlev hikâyesi uydurmak, kanıtla desteklenmediğinde bilim değil anlatıdır."
+      },
+      {
+        "kind": "quote",
+        "text": "Bu yaşam görüşünde bir yücelik vardır... bu kadar basit bir başlangıçtan sonsuz sayıda en güzel ve en harikulade biçim evrilmiştir ve evrilmektedir.",
+        "source": "Charles Darwin, Türlerin Kökeni'nin son cümlesi, 1859"
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Evrimde rastgele olan nedir?",
+        "options": [
+          "Seçilim",
+          "Mutasyon — hangi değişikliğin ortaya çıkacağı; hangisinin kalacağı ise rastgele değildir",
+          "Her ikisi de",
+          "Hiçbiri"
+        ],
+        "answerIndex": 1,
+        "explanation": "Mutasyon ihtiyaca bakmadan ortaya çıkar. Seçilim ise sistematik bir süzgeçtir; bu ayrım evrimi anlamanın anahtarıdır."
+      },
+      {
+        "id": "q2",
+        "prompt": "Evrimsel uygunluk neyi ölçer?",
+        "options": [
+          "Fiziksel gücü",
+          "Bir sonraki kuşağa bırakılan üreyebilir yavru sayısını",
+          "Ömür uzunluğunu",
+          "Zekâyı"
+        ],
+        "answerIndex": 1,
+        "explanation": "Daha yavaş, daha küçük ya da daha kısa ömürlü bir canlı daha uygun olabilir. Ölçüt yalnızca üreme başarısıdır."
+      },
+      {
+        "id": "q3",
+        "prompt": "Orak hücre alelinin sıtma bölgelerinde kalıcı olmasının sebebi nedir?",
+        "options": [
+          "Zararsız olması",
+          "Melez bireylerin sıtmaya karşı avantajlı olması; seçilim iki aleli birden ayakta tutar",
+          "Mutasyonun sürekli tekrarlanması",
+          "Genetik sürüklenme"
+        ],
+        "answerIndex": 1,
+        "explanation": "Tek kopya taşıyan birey sıtmaya daha dayanıklıdır, iki kopya taşıyan ise ağır hastalanır. Denge, iki aleli de popülasyonda tutar."
+      }
+    ]
+  },
+  {
+    "id": "suruklenme-ve-nufus",
+    "moduleId": "mekanizma",
+    "order": 3,
+    "title": "Genetik sürüklenme",
+    "subtitle": "Evrimi yalnızca seçilim yürütmüyor.",
+    "minutes": 9,
+    "keyTerms": ["genetik sürüklenme", "şişe boynu", "kurucu etkisi", "etkin popülasyon büyüklüğü", "nötr kuram"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Her kuşakta, bir sonraki kuşağa geçen aleller mevcut havuzdan bir örneklemdir ve her örneklemde şans payı vardır. Bir alel hiçbir avantajı olmadığı hâlde yaygınlaşabilir, faydalı bir alel şansızlık eseri kaybolabilir. Bu sürece genetik sürüklenme denir ve popülasyon küçüldükçe gücü artar — tıpkı on kez yazı tura atmanın, bin kez atmaktan çok daha dengesiz sonuç vermesi gibi."
+      },
+      { "kind": "chart", "chartId": "suruklenme" },
+      {
+        "kind": "formula",
+        "title": "Sürüklenme eşiği",
+        "expression": "s < 1 / (2N)  →  sonucu seçilim değil şans belirler"
+      },
+      {
+        "kind": "text",
+        "body": "Bu tek satır, moleküler evrimin büyük kısmını açıklar. Popülasyon on bin bireyse, yüz binde birden küçük avantajlar görünmez olur; popülasyon yüz bireyse, binde beşlik bir avantaj bile şansın gürültüsünde kaybolur. Aynı mutasyon büyük bir popülasyonda seçilime tabi, küçük bir popülasyonda etkisiz sayılır. Evrimin hızını ve yönünü belirleyen şey yalnızca çevre değil, popülasyonun büyüklüğüdür."
+      },
+      {
+        "kind": "list",
+        "title": "Sürüklenmenin görünür sonuçları",
+        "items": [
+          "Şişe boynu: popülasyon ani biçimde küçülür ve hayatta kalanların taşıdığı sınırlı çeşitlilik kalıcılaşır. Çitalarda genetik çeşitliliğin çok düşük olması buna bağlanır.",
+          "Kurucu etkisi: küçük bir grup yeni bir bölgeye yerleşir ve o gruptaki rastlantısal sıklıklar yeni popülasyonun tamamına damgasını vurur. Bazı ada topluluklarında nadir hastalıkların olağandışı sıklıkta görülmesinin sebebi budur.",
+          "Etkin popülasyon: genetik açıdan sayılan birey sayısı, sayımdan çoğunlukla çok daha küçüktür; üremeye katılmayan bireyler sayılmaz.",
+          "Koruma biyolojisi: nesli tehlikedeki bir türde sayının yüzlere düşmesi, sayı sonradan artsa bile kaybedilen çeşitliliği geri getirmez."
+        ]
+      },
+      {
+        "kind": "text",
+        "title": "Nötr kuram",
+        "body": "Moleküler biyoloji geliştikçe beklenmedik bir şey görüldü: türler arasındaki dizi farklarının büyük kısmı işlevsel bir etki taşımıyordu. Kimura, moleküler düzeydeki değişimlerin çoğunun nötr olduğunu ve sürüklenmeyle yayıldığını savundu. Bu, seçilimi reddetmek değil, onun nerede işlediğini daraltmaktı: seçilim organizmanın gözlenen özelliklerinde güçlüdür, dizinin çoğu bölgesinde ise değişim büyük ölçüde şansla birikir. Moleküler saatin neden bu kadar düzenli işlediğinin cevabı da buradadır."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Genetik sürüklenme ne zaman baskın hâle gelir?",
+        "options": [
+          "Çevre hızla değiştiğinde",
+          "Popülasyon küçük olduğunda; seçilim avantajı 1/(2N) eşiğinin altında kaldığında",
+          "Mutasyon hızı yükseldiğinde",
+          "Göç arttığında"
+        ],
+        "answerIndex": 1,
+        "explanation": "Küçük örneklemde şans payı büyüktür. Küçük popülasyonlarda faydalı bir alel de kaybolabilir, zararlı bir alel de yerleşebilir."
+      },
+      {
+        "id": "q2",
+        "prompt": "Şişe boynu etkisi nedir?",
+        "options": [
+          "Türlerin birbirinden ayrılması",
+          "Popülasyonun ani küçülmesiyle çeşitliliğin kaybolması; sayı sonradan artsa da çeşitlilik geri gelmez",
+          "Mutasyonların artması",
+          "Göçün durması"
+        ],
+        "answerIndex": 1,
+        "explanation": "Hayatta kalan küçük grubun taşıdığı sınırlı çeşitlilik kalıcılaşır. Koruma biyolojisinde sayı kadar çeşitliliğin de izlenmesinin sebebi budur."
+      },
+      {
+        "id": "q3",
+        "prompt": "Nötr kuram ne savunur?",
+        "options": [
+          "Doğal seçilim yoktur",
+          "Moleküler düzeydeki değişimlerin çoğu etkisizdir ve sürüklenmeyle yayılır",
+          "Bütün mutasyonlar zararlıdır",
+          "Evrim tesadüftür"
+        ],
+        "answerIndex": 1,
+        "explanation": "Kuram seçilimi reddetmez; onun esas olarak organizmanın gözlenen özelliklerinde işlediğini, dizinin çoğu bölgesinde ise şansın belirleyici olduğunu söyler."
+      }
+    ]
+  },
+  {
+    "id": "tur-olusumu",
+    "moduleId": "mekanizma",
+    "order": 4,
+    "title": "Tür nedir, tür nasıl oluşur",
+    "subtitle": "Doğa keskin sınırlar çizmez; sınırları biz çizeriz.",
+    "minutes": 8,
+    "keyTerms": ["tür", "üreme yalıtımı", "coğrafi ayrılma", "halka tür", "uyumsal yayılma"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Tür kavramı, biyolojinin en çok tartışılan tanımlarından biridir. En yaygın tanım üremeye dayanır: doğada birbiriyle üreyip verimli döl verebilen topluluklar aynı türdendir. Bu tanım memelilerde iyi çalışır, eşeysiz üreyen bakterilerde tümüyle çöker, fosillerde uygulanamaz ve melezleşen bitkilerde işe yaramaz. Tanımın zorluğu bir eksiklik değil, evrimin doğrudan sonucudur: ayrılma bir olay değil bir süreçtir ve süreç sırasında ara durumlar vardır."
+      },
+      {
+        "kind": "list",
+        "title": "Tür oluşumunun yolları",
+        "items": [
+          "Coğrafi ayrılma: bir dağ yükselir, bir nehir yatak değiştirir, deniz seviyesi bir kara köprüsünü keser. En yaygın yol budur.",
+          "Ekolojik ayrılma: aynı bölgede farklı kaynaklara yönelen gruplar birbirinden uzaklaşır; farklı bitkilerde beslenen böcekler klasik örnektir.",
+          "Üreme zamanı ya da davranışının kayması: aynı yerde yaşayan iki grup farklı mevsimde ya da farklı çağrıyla üredikleri için karşılaşmaz.",
+          "Kromozom sayısının katlanması: bitkilerde tek kuşakta yeni tür oluşabilir; buğdayın tarihi bu tür olayların üstüne kuruludur.",
+          "Uyumsal yayılma: boş bir alana giren bir soy kısa sürede çok sayıda türe ayrılır. Ada takımadaları ve büyük yok oluşlardan sonraki dönemler bunun sahnesidir."
+        ]
+      },
+      {
+        "kind": "example",
+        "title": "Halka türler",
+        "body": "Bir dağ sırasının iki yakasında yayılan bir kuş topluluğunu düşünün. Komşu popülasyonlar birbiriyle rahatça üreyebilir; ama halka kapandığında, iki uçtaki topluluklar karşılaşır ve üreyemez. Aynı anda hem 'aynı tür' hem 'ayrı tür' olan bir zincir ortaya çıkar. Bu örnekler nadirdir ve her biri ayrıntıda tartışılır, ama gösterdikleri şey nettir: tür sınırı doğada bulunan bir çizgi değil, sürekli bir değişimin üstüne bizim koyduğumuz bir işarettir."
+      },
+      {
+        "kind": "text",
+        "title": "Melezleşme sanıldığından yaygın",
+        "body": "Uzun süre türlerin birbirinden kesin biçimde ayrıldığı, melezlerin ise kısır ve önemsiz olduğu varsayıldı. Genom karşılaştırmaları bu resmi değiştirdi. Ayrılmış soylar arasında sonradan gen alışverişi şaşırtıcı derecede yaygın: ayılarda, kurtlarda, kelebeklerde ve insanda. Bugün Afrika dışındaki insanların genomunda küçük ama gerçek bir Neandertal payı bulunur. Yaşam ağacı, kesin dallara ayrılan temiz bir ağaçtan çok, yer yer birbirine dokunan bir ağa benziyor."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Üremeye dayalı tür tanımı nerede tıkanır?",
+        "options": [
+          "Memelilerde",
+          "Eşeysiz üreyen canlılarda ve fosillerde",
+          "Kuşlarda",
+          "Hiçbir yerde"
+        ],
+        "answerIndex": 1,
+        "explanation": "Bakterilerde üreme temelli bir sınır yoktur, fosillere ise test uygulanamaz. Tanımın zorluğu evrimin sürekliliğinin doğrudan sonucudur."
+      },
+      {
+        "id": "q2",
+        "prompt": "Tür oluşumunun en yaygın yolu hangisidir?",
+        "options": [
+          "Kromozom katlanması",
+          "Coğrafi ayrılma",
+          "Melezleşme",
+          "Mutasyon hızının artması"
+        ],
+        "answerIndex": 1,
+        "explanation": "Bir dağın yükselmesi, nehrin yatak değiştirmesi ya da deniz seviyesinin bir kara köprüsünü kesmesi popülasyonu böler ve gen akışını durdurur."
+      },
+      {
+        "id": "q3",
+        "prompt": "Genom karşılaştırmaları tür sınırları hakkında ne gösterdi?",
+        "options": [
+          "Türler arası gen alışverişinin hiç olmadığını",
+          "Ayrılmış soylar arasında melezleşmenin sanıldığından çok daha yaygın olduğunu",
+          "Bütün melezlerin kısır olduğunu",
+          "Tür kavramının gereksiz olduğunu"
+        ],
+        "answerIndex": 1,
+        "explanation": "Ayılardan kelebeklere, insandan kurda kadar birçok soyda ayrıldıktan sonra gen alışverişi olduğu görüldü. Yaşam ağacı yer yer bir ağa benziyor."
+      }
+    ]
+  },
+  {
+    "id": "fosil-kaydi",
+    "moduleId": "kanit",
+    "order": 1,
+    "title": "Fosil kaydı",
+    "subtitle": "Eksik bir kayıt, yine de tutarlı bir sıra veriyor.",
+    "minutes": 8,
+    "keyTerms": ["fosil", "geçiş formu", "tabakalanma", "radyometrik tarihleme", "kitlesel yok oluş"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Fosilleşmek istisnadır. Bir canlının öldüğü yerde hızla gömülmesi, oksijenden korunması, doğru mineral koşullarının bulunması ve milyonlarca yıl boyunca kayanın erozyona uğramaması gerekir. Bu koşullar bir araya geldiğinde bile fosili bulmak için birinin doğru yeri kazması şarttır. Yani fosil kaydı eksiktir; ama eksik olmasıyla eleştirilmesi, bir kütüphanenin yanmış olmasını kitapların hiç var olmadığına kanıt saymaya benzer."
+      },
+      {
+        "kind": "text",
+        "title": "Sıranın kendisi kanıttır",
+        "body": "Fosil kaydının en güçlü yanı içerdiği fosiller değil, içermedikleridir. Kambriyen tabakalarında memeli yoktur. Devoniyen'de çiçekli bitki yoktur. Hiçbir tabakada, o tabakadan çok sonra ortaya çıkması gereken bir canlı bulunmamıştır. Milyonlarca fosil, yüzlerce ülkede, iki yüz yıldır kazılıyor ve bu sıra hiç bozulmadı. Tek bir aykırı fosil — örneğin Kambriyen kayasında bir tavşan — bütün resmi sarsardı. Kuramın en güçlü kanıtı, sınavı bu kadar çok kez geçmiş olmasıdır."
+      },
+      {
+        "kind": "list",
+        "title": "Geçiş formları",
+        "items": [
+          "Tiktaalik: yüzgeçle bacak arası özellikler taşıyan balık. Nerede aranacağı önceden hesaplanıp o yaştaki kayada bulunmuştur; bu, bir öngörünün doğrulanmasıdır.",
+          "Archaeopteryx: dişleri ve kuyruk omurları olan tüylü canlı; sürüngenlerle kuşlar arasındaki bağı somutlaştırır.",
+          "Ambulocetus ve akrabaları: karadan denize dönen balina soyunun adım adım kaydı. Bacaklar küçülür, burun delikleri yukarı kayar.",
+          "Australopithecus: küçük beyinli ama dik yürüyen homininler; iki ayaklılığın büyük beyinden önce geldiğini gösterir.",
+          "Her geçiş formu iki geçiş formu daha ister; bu bir açık değil, kaydın giderek sıklaşması demektir."
+        ]
+      },
+      {
+        "kind": "text",
+        "title": "Yaş nasıl ölçülüyor",
+        "body": "Radyometrik tarihleme, radyoaktif bir elementin bilinen ve sabit bir hızla bozunmasına dayanır. Farklı elementler farklı zaman aralıklarını kapsar: karbon-14 elli bin yıla kadar, potasyum-argon milyonlarca yıla, uranyum-kurşun milyarlarca yıla uzanır. Aynı örnek farklı yöntemlerle bağımsız olarak tarihlendiğinde sonuçlar birbiriyle uyuşur. Bağımsız yöntemlerin aynı sayıyı vermesi, tek bir yöntemin kendi başına verdiği sayıdan çok daha güçlü bir kanıttır."
+      },
+      {
+        "kind": "example",
+        "title": "Kitlesel yok oluşlar",
+        "body": "Fosil kaydında beş kez, türlerin büyük bölümü kısa sürede kaybolur. En bilineni altmış altı milyon yıl önce kuş olmayan dinozorların sonunu getiren olaydır; en büyüğü ise Permiyen sonundaki, deniz türlerinin yaklaşık yüzde doksanının yok olduğu çöküştür. Her yok oluş, ardından hızlı bir uyumsal yayılma getirir: memelilerin çeşitlenmesi dinozorların boşalttığı yerin doğrudan sonucudur. Bugün tür kayıp hızı doğal düzeyin çok üstünde ve bu kez sebebi tek bir tür."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Fosil kaydının en güçlü kanıtı nedir?",
+        "options": [
+          "Bulunan fosillerin çokluğu",
+          "Tabakaların sırasının hiç bozulmaması: hiçbir tabakada oraya ait olmayan bir canlı bulunmamıştır",
+          "Fosillerin iyi korunmuş olması",
+          "Tarihleme yöntemlerinin çeşitliliği"
+        ],
+        "answerIndex": 1,
+        "explanation": "Kambriyen kayasında bir tavşan bulunsa bütün resim sarsılırdı. İki yüz yıllık kazıya rağmen böyle bir aykırılık çıkmamıştır."
+      },
+      {
+        "id": "q2",
+        "prompt": "Tiktaalik neden özellikle önemlidir?",
+        "options": [
+          "En eski fosil olduğu için",
+          "Nerede ve hangi yaştaki kayada bulunacağı önceden hesaplanıp orada bulunduğu için",
+          "En iyi korunmuş fosil olduğu için",
+          "En büyük fosil olduğu için"
+        ],
+        "answerIndex": 1,
+        "explanation": "Kuram bir öngörüde bulundu, kazı öngörüyü doğruladı. Bu, fosilin kendisinden daha güçlü bir kanıt türüdür."
+      },
+      {
+        "id": "q3",
+        "prompt": "Radyometrik tarihlemenin güvenilirliğini asıl artıran şey nedir?",
+        "options": [
+          "Tek bir yöntemin çok hassas olması",
+          "Farklı elementlere dayanan bağımsız yöntemlerin aynı örnek için uyumlu sonuç vermesi",
+          "Yöntemin ucuz olması",
+          "Laboratuvar sayısının çokluğu"
+        ],
+        "answerIndex": 1,
+        "explanation": "Karbon-14, potasyum-argon ve uranyum-kurşun farklı fiziksel süreçlere dayanır. Aynı sayıyı vermeleri tek bir yöntemin ölçümünden çok daha güçlüdür."
+      }
+    ]
+  },
+  {
+    "id": "karsilastirmali-anatomi",
+    "moduleId": "kanit",
+    "order": 2,
+    "title": "Anatomi, embriyoloji ve kalıntılar",
+    "subtitle": "Kusurlar, tasarımdan çok tarihi ele verir.",
+    "minutes": 8,
+    "keyTerms": ["homoloji", "analoji", "yakınsak evrim", "körelmiş yapı", "kusurlu tasarım"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Yarasanın kanadı, balinanın yüzgeci, atın ön bacağı ve insanın eli bambaşka işler yapar. Ama hepsinde aynı kemik dizilimi vardır: bir uzun kemik, iki kemik, bir avuç küçük kemik, beş sıra parmak. İşlevleri bu kadar farklıysa, aynı planı paylaşmalarının bir sebebi olmalıdır. Ortak atadan türeyiş bu sebebi verir: hepsi aynı ön ayaktan, farklı yönlerde değiştirilerek türemiştir."
+      },
+      {
+        "kind": "list",
+        "title": "Benzerliğin iki ayrı sebebi",
+        "items": [
+          "Homoloji: ortak atadan gelen benzerlik. Yapı planı aynı, işlev farklıdır — yarasa kanadı ile insan eli gibi.",
+          "Analoji: benzer sorunun benzer çözümünden doğan benzerlik. İşlev aynı, yapı planı farklıdır — kuş kanadı ile böcek kanadı gibi.",
+          "Yakınsak evrim: akraba olmayan soyların bağımsız olarak aynı çözüme ulaşması. Kamera gözü omurgalılarda ve ahtapotta ayrı ayrı ortaya çıkmıştır; ilginç biçimde ahtapotun gözünde omurgalıdaki kör nokta yoktur."
+        ]
+      },
+      {
+        "kind": "text",
+        "title": "Kalıntı yapılar",
+        "body": "Balinaların vücudunun içinde, hiçbir işe yaramayan küçük kalça kemikleri gömülüdür. Kanat çırpamayan kuşların kanat kemikleri vardır. Mağara balıklarında deri altında gömülü, işlevsiz göz yapıları bulunur. İnsanda kuyruk sokumu, üçüncü göz kapağının kalıntısı ve tüy diken kaslar aynı sınıftadır. Bu yapılar 'işe yaramaz' oldukları için değil, geçmişte işe yaramış olduklarını ele verdikleri için önemlidir."
+      },
+      {
+        "kind": "example",
+        "title": "Zürafanın siniri",
+        "body": "Gırtlağı çalıştıran sinir, beyinden çıkar, boyun boyunca aşağı iner, kalpteki bir damarın altından dolaşır ve boyun boyunca geri yukarı çıkar. İnsanda bu birkaç santimlik bir fazlalıktır. Zürafada aynı yol dört metreyi bulur. Sıfırdan tasarlansa kimsenin yapmayacağı bu düzenleme, balık atalarında sinirin doğrudan bir yol izlemesiyle açıklanır: boyun uzadıkça sinir de esneyerek uzamış, ama yolunu değiştirememiştir. Evrim mevcut olanı değiştirir; baştan başlayamaz."
+      },
+      {
+        "kind": "text",
+        "title": "Embriyoloji",
+        "body": "Gelişimin erken evrelerinde, çok farklı canlıların embriyoları birbirine şaşırtıcı ölçüde benzer. İnsan embriyosunda solungaç yarıklarına karşılık gelen yapılar belirir; bunlar solungaca dönüşmez, çene ve orta kulak kemiklerine dönüşür. Bu benzerlik 'embriyonun atalarını tekrar yaşadığı' anlamına gelmez — bu eski ve yanlış bir yorumdur. Anlamı daha sadedir: gelişimin erken adımları çok sayıda sonraki adımın temeli olduğu için değiştirilmesi zordur, bu yüzden korunur."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Yarasa kanadı ile insan eli arasındaki ilişki nedir?",
+        "options": [
+          "Analoji",
+          "Homoloji: aynı yapı planı, farklı işlev; ortak atadan gelir",
+          "Yakınsak evrim",
+          "Rastlantı"
+        ],
+        "answerIndex": 1,
+        "explanation": "İşlevler bambaşka olduğu hâlde kemik dizilimi aynıdır. Bu ortak plan, ortak atadan türeyişin doğrudan işaretidir."
+      },
+      {
+        "id": "q2",
+        "prompt": "Zürafanın gırtlak siniri neyi gösterir?",
+        "options": [
+          "Kusursuz bir tasarımı",
+          "Evrimin mevcut yapıyı değiştirdiğini, baştan başlayamadığını",
+          "Sinirin gereksiz olduğunu",
+          "Zürafanın boynunun sonradan uzadığını"
+        ],
+        "answerIndex": 1,
+        "explanation": "Balık atalarında kısa ve doğrudan olan yol, boyun uzadıkça esneyerek uzadı ama yolunu değiştiremedi. Kusur, tarihi ele verir."
+      },
+      {
+        "id": "q3",
+        "prompt": "Embriyoların erken evrelerdeki benzerliği nasıl açıklanır?",
+        "options": [
+          "Embriyo atalarının evrelerini tekrar yaşar",
+          "Gelişimin erken adımları sonraki çok sayıda adımın temeli olduğu için değiştirilmesi zordur ve korunur",
+          "Rastlantıdır",
+          "Bütün canlılar aynı hızda gelişir"
+        ],
+        "answerIndex": 1,
+        "explanation": "'Embriyo atalarını tekrarlar' yorumu eski ve yanlıştır. Doğru açıklama, erken gelişim adımlarındaki değişikliklerin çok maliyetli olması ve bu yüzden korunmasıdır."
+      }
+    ]
+  }
+]

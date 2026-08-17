@@ -1,0 +1,472 @@
+[
+  {
+    "id": "molekuler-kanit",
+    "moduleId": "kanit",
+    "order": 3,
+    "title": "Moleküler kanıt ve moleküler saat",
+    "subtitle": "Aynı ağaç, tamamen bağımsız bir yöntemle ikinci kez çizildi.",
+    "minutes": 9,
+    "keyTerms": ["moleküler saat", "doygunluk", "ortak genetik kod", "endojen retrovirüs", "yalancı gen"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Darwin'in ve onu izleyen üç kuşağın elinde DNA yoktu. Akrabalık ağacı kemiklere, dişlere ve gelişim evrelerine bakılarak çizildi. Yirminci yüzyılın ikinci yarısında diziler okunmaya başlayınca, aynı ağaç tümüyle bağımsız bir veriden yeniden çizilebildi. İki ağacın büyük ölçüde örtüşmesi, evrim biyolojisinin en sağlam sınavlarından biridir: birbirinden habersiz iki yöntemin aynı sonucu vermesi için ya ikisinin de doğru olması ya da olağanüstü bir tesadüf gerekir."
+      },
+      {
+        "kind": "list",
+        "title": "Dizilerin taşıdığı kanıtlar",
+        "items": [
+          "Ortak genetik kod: bakteriden insana neredeyse bütün canlılar aynı kodu kullanır. Kimyasal olarak zorunlu değildir; ortak bir başlangıcın kalıntısıdır.",
+          "İç içe geçmiş benzerlik: dizi farkları rastgele dağılmaz, tam olarak akrabalık ağacının öngördüğü kalıpta dağılır.",
+          "Endojen retrovirüsler: geçmişte genoma yerleşmiş virüs kalıntıları. İnsanla şempanzede aynı konumlarda bulunmaları, ortak bir atada yerleştiklerinin doğrudan kanıtıdır.",
+          "Yalancı genler: bozulmuş, artık çalışmayan gen kalıntıları. İnsanda C vitamini üreten genin bozuk kopyası, aynı bozuk hâliyle diğer primatlarda da bulunur.",
+          "Kromozom kaynaşması: insanda kromozom sayısı diğer büyük maymunlardan bir çift azdır. İkinci kromozomun tam ortasında, kaynaşmış iki kromozomun uç ve merkez izleri durmaktadır."
+        ]
+      },
+      { "kind": "chart", "chartId": "molekuler-saat" },
+      {
+        "kind": "text",
+        "body": "Moleküler saat, dizi farklarının zamanla düzenli birikmesinden yararlanır. Grafiğin gösterdiği tuzak ise doygunluktur: aynı konum ikinci kez değiştiğinde ilk değişim görünmez olur. Yakın akrabalarda gözlenen fark gerçek değişim sayısına eşittir; çok eski ayrılmalarda ise gözlenen fark yüzde yetmiş beşte doyar, çünkü dört harf vardır ve tamamen ilgisiz iki dizi bile bu kadar farklıdır. Bu yüzden yüz milyonlarca yıllık ayrılmalar tek bir gene bakarak okunamaz; yavaş değişen bölgelere ve düzeltme modellerine ihtiyaç duyulur."
+      },
+      {
+        "kind": "text",
+        "title": "Saatin kalibrasyonu",
+        "body": "Moleküler saat kendi başına takvim vermez; yalnızca oran verir. Mutlak yaşa çevirmek için fosil kaydından gelen bilinen ayrılma tarihleriyle ayarlanması gerekir. Bu, iki kanıt hattının birbirini beslediği anlamına gelir ve zaman zaman gerilim üretir: bazı gruplarda moleküler tahminler fosil kaydından belirgin biçimde daha eski çıkar. Bu farklar tartışılıyor ve çözülmüş değil. Kanıt hatlarının çoğu yerde uyuşması güçlüdür; uyuşmadıkları yerlerin açıkça söylenmesi ise dürüstlüktür."
+      },
+      {
+        "kind": "example",
+        "title": "İnsan ile şempanze",
+        "body": "İnsan ve şempanze dizilerinin yaklaşık yüzde doksan sekiz buçuğu örtüşür. Bu sayı hem çok büyük hem yanıltıcıdır. Büyüktür, çünkü altı ila yedi milyon yıllık bir ayrılma için beklenen büyüklük tam olarak budur. Yanıltıcıdır, çünkü örtüşmeyen yüzde bir buçuk, otuz milyondan fazla konum eder ve bunların bir kısmı gelişimi yönlendiren düzenleyici bölgelerdedir. Genomdaki küçük yüzdeler, organizmadaki küçük farklara karşılık gelmek zorunda değildir."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Endojen retrovirüslerin insanla şempanzede aynı konumlarda bulunması neyi gösterir?",
+        "options": [
+          "İki türün aynı virüse yakalandığını",
+          "Virüsün ortak bir atanın genomuna yerleştiğini",
+          "Virüslerin belirli konumları tercih ettiğini",
+          "Rastlantıyı"
+        ],
+        "answerIndex": 1,
+        "explanation": "Yerleşme konumu genomda rastgeledir. Aynı konumu paylaşmanın makul tek açıklaması, yerleşmenin ayrılmadan önce ortak atada gerçekleşmiş olmasıdır."
+      },
+      {
+        "id": "q2",
+        "prompt": "Moleküler saatte doygunluk nedir?",
+        "options": [
+          "Mutasyonların durması",
+          "Aynı konumun ikinci kez değişmesiyle önceki değişimin görünmez olması; gözlenen fark gerçeğin gerisinde kalır",
+          "Dizilerin okunamaması",
+          "Saatin hızlanması"
+        ],
+        "answerIndex": 1,
+        "explanation": "Dört harf olduğu için tamamen ilgisiz iki dizi bile ancak %75 farklıdır. Çok eski ayrılmalar bu yüzden tek bir gene bakarak okunamaz."
+      },
+      {
+        "id": "q3",
+        "prompt": "Anatomik ve moleküler akrabalık ağaçlarının örtüşmesi neden önemlidir?",
+        "options": [
+          "Hesaplama kolaylığı sağladığı için",
+          "Birbirinden bağımsız iki veri türünün aynı sonuca ulaşması, tesadüfle açıklanamayacak kadar güçlü bir sınavdır",
+          "Fosillere ihtiyaç kalmadığı için",
+          "Daha hızlı olduğu için"
+        ],
+        "answerIndex": 1,
+        "explanation": "Kemiklerden çizilen ağaç ile dizilerden çizilen ağacın aynı çıkması, iki yöntemin de aynı gerçek tarihi okuduğunu gösterir."
+      }
+    ]
+  },
+  {
+    "id": "gozlenen-evrim",
+    "moduleId": "kanit",
+    "order": 4,
+    "title": "Gözümüzün önünde evrim",
+    "subtitle": "Milyonlarca yıl beklemek gerekmiyor.",
+    "minutes": 8,
+    "keyTerms": ["direnç", "yapay seçilim", "uzun süreli evrim deneyi", "seçilim katsayısı"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Evrimin en sık dile getirilen itirazlarından biri, gözlenemeyecek kadar yavaş olduğudur. Bu doğru değildir. Kuşak süresi kısa olan canlılarda evrim insan ömrüne sığar ve düzenli olarak ölçülür. Dahası, bunun bir kısmı doğrudan bizim yarattığımız seçilim baskısıyla olur ve faturasını biz öderiz."
+      },
+      {
+        "kind": "list",
+        "title": "Doğrudan gözlenen örnekler",
+        "items": [
+          "Antibiyotik direnci: hastanelerde ve hayvancılıkta uygulanan yoğun seçilim baskısı, dirençli hatları yıllar içinde yaygınlaştırıyor. Dünya Sağlık Örgütü bunu en büyük sağlık tehditlerinden biri sayıyor.",
+          "Böcek ve yabani ot direnci: tarımsal ilaçlara direnç, aynı mekanizmayla ve aynı hızda gelişiyor.",
+          "Kanser hücreleri: bir tümörün içindeki hücreler değişir, çeşitlenir ve ilaç baskısı altında seçilir. Tedavi direncinin evrimsel bir süreç olduğu bugün tedavi planlamasında dikkate alınıyor.",
+          "Balıkçılık baskısı: büyük bireyler yakalandıkça, erken ve küçük boyda üreyen hatlar avantajlı hâle geliyor; ticari balık türlerinde ortalama boy düşüyor.",
+          "Kentte yaşayan canlılar: sıcaklık, aydınlatma ve gürültü, kentli popülasyonlarda ölçülebilir farklar üretiyor."
+        ]
+      },
+      {
+        "kind": "text",
+        "title": "Yapay seçilim",
+        "body": "Darwin'in argümanı büyük ölçüde herkesin bildiği bir olgudan yola çıkar: güvercin yetiştiricileri, köpek ıslahçıları ve çiftçiler binlerce yıldır seçilim uyguluyor ve sonuçları çarpıcı. Bütün köpek ırkları kurttan, on beş binyıldan kısa bir sürede türetildi. Mısırın atası, birkaç sert taneli küçük bir ottur. Eğer insan eliyle bu kadarı birkaç bin yılda yapılabiliyorsa, doğa aynı işi yüz milyonlarca yıl boyunca yaptığında ortaya çıkacak çeşitliliği hayal etmek zor değildir."
+      },
+      {
+        "kind": "example",
+        "title": "Dondurulmuş geçmiş",
+        "body": "1988'de başlayan uzun süreli evrim deneyinde on iki bakteri popülasyonu aynı koşulda üretiliyor ve her beş yüz kuşakta örnekler donduruluyor. Bu, evrim biyolojisinde eşi olmayan bir imkân sağlıyor: geçmişi istediğiniz noktadan yeniden başlatabiliyorsunuz. Popülasyonlardan biri, otuz bin kuşak sonra ortamdaki sitratı besin olarak kullanmayı başardı. Dondurulmuş örneklerle geriye dönüldüğünde, bu yeniliğin tek bir mutasyondan değil, çok daha önce yerleşmiş ve tek başına hiçbir şey yapmayan bir dizi ön adımın üstüne bindiği gösterildi. Evrimde tarih, sonucu belirliyor."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Antibiyotik direncinin hızla yayılmasının sebebi nedir?",
+        "options": [
+          "Bakterilerin öğrenmesi",
+          "Yoğun antibiyotik kullanımının çok güçlü bir seçilim baskısı yaratması ve bakterilerde kuşak süresinin çok kısa olması",
+          "Antibiyotiklerin bozulması",
+          "Mutasyon hızının artması"
+        ],
+        "answerIndex": 1,
+        "explanation": "Güçlü seçilim baskısı ile kısa kuşak süresi bir araya geldiğinde evrim insan ölçeğinde gözlenebilir hâle gelir."
+      },
+      {
+        "id": "q2",
+        "prompt": "Uzun süreli evrim deneyinin en özgün yanı nedir?",
+        "options": [
+          "Çok sayıda tür kullanması",
+          "Örneklerin dondurulması sayesinde geçmişin istenen noktadan yeniden başlatılabilmesi",
+          "Doğada yapılması",
+          "Kısa sürmesi"
+        ],
+        "answerIndex": 1,
+        "explanation": "Dondurulmuş örnekler, bir yeniliğin hangi ön adımların üstüne bindiğini deneyle sınamayı mümkün kılar. Bu imkân başka hiçbir yerde yoktur."
+      },
+      {
+        "id": "q3",
+        "prompt": "Ticari balıkçılığın balık popülasyonlarında yol açtığı evrimsel değişim nedir?",
+        "options": [
+          "Balıklar daha hızlı yüzmeye başlar",
+          "Büyük bireyler yakalandıkça erken ve küçük boyda üreyen hatlar avantajlı hâle gelir",
+          "Balıklar daha az yumurta bırakır",
+          "Hiçbir değişim olmaz"
+        ],
+        "answerIndex": 1,
+        "explanation": "Seçilim baskısını insan uygular. Sonuç, ticari türlerde ölçülebilir biçimde düşen ortalama boy ve erkene kayan üreme yaşıdır."
+      }
+    ]
+  },
+  {
+    "id": "cinsel-secilim",
+    "moduleId": "sonuc",
+    "order": 1,
+    "title": "Cinsel seçilim",
+    "subtitle": "Hayatta kalmayı zorlaştıran özellikler nasıl yayılır.",
+    "minutes": 8,
+    "keyTerms": ["cinsel seçilim", "eş tercihi", "pahalı sinyal", "uygunluk"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Tavus kuşunun kuyruğu, hayatta kalma açısından açık bir yüktür: ağırdır, uçmayı zorlaştırır, avcıya uzaktan görünür. Darwin bu kuyruğun kendisini rahatsız ettiğini yazmıştı. Çözüm, uygunluğun hayatta kalmak değil üremek olduğunu hatırlamakta yatar. Ölmemeye biraz daha az yarayan bir özellik, eş bulmaya çok daha fazla yarıyorsa yayılır."
+      },
+      {
+        "kind": "list",
+        "title": "İki mekanizma",
+        "items": [
+          "Aynı cins içinde rekabet: boynuz, ağırlık, bölge tutma. Kazanan eşe erişir.",
+          "Karşı cinsin tercihi: renk, şarkı, dans, yuva yapımı. Tercih edilen yayılır.",
+          "Tercihin kendisi de kalıtsaldır ve özellikle birlikte evrilir. Bu, kaçak bir döngü üretebilir: özellik abartıldıkça tercih de güçlenir.",
+          "Pahalı sinyal: yalnızca gerçekten sağlıklı bireyin taşıyabileceği kadar maliyetli olan gösterge, tam da maliyetli olduğu için güvenilirdir.",
+          "Süsler çoğu zaman parazit yükü ve beslenme durumuyla ilişkilidir; yani bir sağlık raporu işlevi görür."
+        ]
+      },
+      {
+        "kind": "text",
+        "title": "Neden çoğunlukla erkekler süslü",
+        "body": "Bir yavruya yatırılan enerji cinsler arasında eşit değildir. Yumurta, spermden çok daha pahalıdır; gebelik ve yavru bakımı bu farkı büyütür. Daha çok yatırım yapan taraf seçici olur, daha az yatırım yapan taraf rekabet eder. Bu yüzden çoğu türde erkekler süslü ve gösterişçidir. Kural değil eğilimdir: erkeğin yavruya baktığı türlerde — deniz atı, bazı kuşlar — desen tersine döner ve süslü olan dişilerdir. Mekanizma cinsiyete değil, yatırım asimetrisine bağlıdır."
+      },
+      {
+        "kind": "example",
+        "title": "İnsanda dikkat",
+        "body": "Cinsel seçilim insan davranışına uygulandığında dikkatli olmak gerekir. İnsanda kültürel aktarım, öğrenme ve toplumsal normlar davranışın büyük kısmını belirler ve bunlar kuşaklar arasında genlerden çok daha hızlı değişir. Bir davranış kalıbının yaygın olması, onun evrimsel bir uyum olduğunu göstermez; kültürel de olabilir, tarihsel bir kalıntı da. Bu alanda ileri sürülen açıklamaların çoğu sınanabilir öngörü üretmediği için eleştirilir ve bu eleştiri yerindedir. Mevcut düzeni doğal ilan etmek için evrime başvurmak, bilimsel bir akıl yürütme değil, bir retorik hamlesidir."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Tavus kuşunun kuyruğu hayatta kalmayı zorlaştırdığı hâlde neden yayılmıştır?",
+        "options": [
+          "Avcıları korkuttuğu için",
+          "Eş bulmaya sağladığı katkı, hayatta kalmaya getirdiği yükten büyük olduğu için",
+          "Uçmaya yardım ettiği için",
+          "Isı yalıtımı sağladığı için"
+        ],
+        "answerIndex": 1,
+        "explanation": "Uygunluk hayatta kalmak değil üremektir. Ölme riskini artıran bir özellik, üreme başarısını daha çok artırıyorsa yayılır."
+      },
+      {
+        "id": "q2",
+        "prompt": "Pahalı sinyal neden güvenilirdir?",
+        "options": [
+          "Nadir olduğu için",
+          "Yalnızca gerçekten sağlıklı bir bireyin taşıyabileceği kadar maliyetli olduğu için taklit edilemez",
+          "Görünür olduğu için",
+          "Kalıtsal olduğu için"
+        ],
+        "answerIndex": 1,
+        "explanation": "Maliyet, sinyali sahtekârlığa kapatır. Zayıf bir birey aynı süsü taşıyamayacağı için sinyal bilgi taşır."
+      },
+      {
+        "id": "q3",
+        "prompt": "Bazı türlerde dişilerin süslü olmasının sebebi nedir?",
+        "options": [
+          "Rastlantı",
+          "Yavruya yatırım asimetrisinin tersine dönmesi: erkeğin yavruya baktığı türlerde seçici taraf erkektir",
+          "Avcıların farklı olması",
+          "İklim"
+        ],
+        "answerIndex": 1,
+        "explanation": "Belirleyici olan cinsiyet değil, yavruya yapılan yatırımdır. Deniz atı gibi türlerde desen bu yüzden tersine döner."
+      }
+    ]
+  },
+  {
+    "id": "isbirligi",
+    "moduleId": "sonuc",
+    "order": 2,
+    "title": "İşbirliğinin evrimi",
+    "subtitle": "Bencil bir sürecin nasıl fedakârlık ürettiği.",
+    "minutes": 9,
+    "keyTerms": ["akrabalık katsayısı", "Hamilton kuralı", "karşılıklı özgecilik", "grup seçilimi"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Doğal seçilim üreme başarısını ödüllendiriyorsa, kendi üremesinden vazgeçip başkasına yardım eden bireyler nasıl var olabilir? Bu, evrim kuramının uzun süre en ciddi açığı sayıldı. Karınca kolonisindeki işçilerin tamamı kısırdır; hiçbiri kendi yavrusunu bırakmaz. Böyle bir davranış nasıl yayılır?"
+      },
+      {
+        "kind": "text",
+        "title": "Genin bakış açısı",
+        "body": "Cevap, hesabın hangi düzeyde tutulduğunu değiştirmekle geldi. Bir alelin yayılması için onu taşıyan bireyin üremesi şart değildir; aynı aleli taşıyan başka bireylerin üremesi de işi görür. Kardeşiniz genlerinizin ortalama yarısını taşır. Kendi bir yavrunuzdan vazgeçip kardeşinizin iki yavru daha bırakmasını sağlarsanız, aynı aleller açısından hesap başa baş çıkar. Fedakârlık, bu bakış açısından bir istisna değil, doğrudan bir sonuçtur."
+      },
+      { "kind": "chart", "chartId": "akraba-secilimi" },
+      {
+        "kind": "formula",
+        "title": "Hamilton kuralı",
+        "expression": "r · b > c"
+      },
+      {
+        "kind": "text",
+        "body": "Kural sadedir: akrabalık katsayısı çarpı yardımın karşı tarafa sağladığı fayda, yardım edenin ödediği maliyetten büyükse davranış yayılır. Karıncalarda ve arılarda işçilerin kısır olması bu kuralla açıklanır: bu türlerin garip kalıtım düzeni yüzünden kız kardeşler birbirine, kendi yavrularına olacağından daha yakın akrabadır. Kısır bir işçi olarak kız kardeşleri büyütmek, o genler açısından kendi yavrusunu büyütmekten daha kârlıdır. Kural insan davranışına uygulanırken dikkat gerekir; ama kuralın sosyal böceklerdeki başarısı tartışmasızdır."
+      },
+      {
+        "kind": "list",
+        "title": "Akrabalık dışındaki yollar",
+        "items": [
+          "Karşılıklı özgecilik: aynı bireylerle tekrar tekrar karşılaşılıyorsa, bugün verilen yarın geri gelebilir. Yarasalarda kan paylaşımı ve maymunlarda tımar bunun örnekleridir.",
+          "İtibar: davranışın üçüncü kişilerce görülmesi, işbirliğini karşılık beklemeden de kârlı kılabilir.",
+          "Cezalandırma: bedavacıları cezalandıran bireylerin varlığı işbirliğini ayakta tutar; cezalandırmanın kendisi de maliyetlidir ve bu ayrı bir bulmacadır.",
+          "Ortakyaşam: farklı türler arasında da işbirliği evrilir. Karmaşık hücrenin kendisi, iki ayrı canlının kalıcı ortaklığından doğmuştur.",
+          "Grup seçilimi: seçilimin grup düzeyinde işlediği savı hâlâ tartışılıyor; naif biçimleri kabul görmüyor, daha ince biçimleri ise ciddiye alınıyor."
+        ]
+      },
+      {
+        "kind": "quote",
+        "text": "İki kardeşim ya da sekiz kuzenim için canımı veririm.",
+        "source": "J. B. S. Haldane'a atfedilen espri — Hamilton kuralının otuz yıl öncesinden sezgisi"
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Hamilton kuralı ne der?",
+        "options": [
+          "En güçlü hayatta kalır",
+          "Akrabalık çarpı fayda, maliyetten büyükse fedakârlık yayılır",
+          "İşbirliği her zaman kârlıdır",
+          "Grup bireyden önemlidir"
+        ],
+        "answerIndex": 1,
+        "explanation": "r·b > c. Kural, fedakârlığın hangi koşulda genlerin hesabında kârlı hâle geldiğini söyler; ahlaki bir öğüt değildir."
+      },
+      {
+        "id": "q2",
+        "prompt": "Karınca ve arılarda işçilerin kısır olması nasıl açıklanır?",
+        "options": [
+          "Kraliçe onları engeller",
+          "Kalıtım düzenleri yüzünden kız kardeşler birbirine kendi yavrularından daha yakın akrabadır; kardeş büyütmek daha kârlıdır",
+          "Yeterli besin olmadığı için",
+          "Rastlantıyla"
+        ],
+        "answerIndex": 1,
+        "explanation": "Akrabalık katsayısı kız kardeşler arasında olağandışı yüksektir. Hamilton kuralı bu durumda kısırlığı doğrudan öngörür."
+      },
+      {
+        "id": "q3",
+        "prompt": "Akraba olmayan bireyler arasında işbirliği hangi koşulda sürdürülebilir?",
+        "options": [
+          "Hiçbir koşulda",
+          "Tekrarlanan karşılaşmalar, itibar ve bedavacıların cezalandırılması varsa",
+          "Sadece aynı türdeyseler",
+          "Sadece besin bolsa"
+        ],
+        "answerIndex": 1,
+        "explanation": "Bugün verilenin yarın geri gelme ihtimali, işbirliğini akrabalık olmadan da kârlı kılar. İtibar ve cezalandırma bu dengeyi güçlendirir."
+      }
+    ]
+  },
+  {
+    "id": "insan-evrimi",
+    "moduleId": "sonuc",
+    "order": 3,
+    "title": "İnsan evrimi",
+    "subtitle": "Bir merdiven değil, budanmış bir çalı.",
+    "minutes": 9,
+    "keyTerms": ["iki ayaklılık", "hominin", "kadim DNA", "melezleşme"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "İnsan evriminin en yaygın görseli yanlıştır: eğik bir maymunun adım adım doğrulup insana dönüştüğü o sıra, hiç var olmamış bir düzeni anlatır. Gerçek resim bir merdiven değil, budanmış bir çalıdır. Aynı anda birden çok hominin türü yaşamıştır; bunların çoğu bizim atamız değil, kuzenimizdir ve hepsi tükenmiştir. Bugün tek bir insan türünün bulunması tarihin kuralı değil, istisnasıdır."
+      },
+      {
+        "kind": "list",
+        "title": "Sıra beklendiği gibi değil",
+        "items": [
+          "Önce dik yürüme geldi: yaklaşık dört milyon yıl önce, beyin hâlâ şempanze büyüklüğündeyken homininler iki ayak üstünde yürüyordu.",
+          "Laetoli'deki 3,6 milyon yıllık ayak izleri bunu kemiklerden bağımsız olarak doğrular.",
+          "Alet kullanımı beyin büyümesinden önce başlar; en eski taş aletler 3,3 milyon yıl öncesine tarihlenir.",
+          "Beyin büyümesi son iki milyon yılda hızlanır ve ateşin kullanımı, pişirmenin sağladığı enerjiyle birlikte anılır.",
+          "Dil ve simgesel düşünce en zor izlenen adımdır; boya, gömü ve süs eşyaları dolaylı kanıttır."
+        ]
+      },
+      {
+        "kind": "text",
+        "title": "Kadim DNA",
+        "body": "Son yirmi yılın en büyük dönüşümü, fosillerden DNA okunabilir hâle gelmesidir. Neandertal genomunun dizilenmesi, Afrika dışındaki bugünkü insanların genomunda yüzde bir ile dört arasında Neandertal payı bulunduğunu gösterdi. Yani iki grup karşılaşmış ve melezleşmiştir. Denisova insanı ise daha da çarpıcı bir örnektir: tek bir parmak kemiğinden dizilenen genomla, o güne kadar bilinmeyen bir insan grubu tanımlandı. Fosil değil, dizi önce geldi."
+      },
+      {
+        "kind": "example",
+        "title": "Irk kavramının biyolojik karşılığı",
+        "body": "İnsan türü, benzer büyüklükteki memeli türleriyle karşılaştırıldığında olağandışı ölçüde tek biçimlidir; genetik çeşitliliğimiz tek bir şempanze topluluğununkinden azdır. Bunun sebebi türün geçmişteki küçüklüğü ve yakın tarihli yayılmasıdır. Çeşitliliğin büyük kısmı gruplar arasında değil, grupların içinde bulunur. Yüzeydeki farklar — deri rengi gibi — az sayıda gene bağlıdır, güneş ışığına uyum gibi yerel seçilim baskılarıyla açıklanır ve bir sınıflandırma temeli sunmaz. Halk dilindeki ırk kategorileri, biyolojik değil toplumsal kategorilerdir."
+      },
+      {
+        "kind": "text",
+        "title": "Evrim durmadı",
+        "body": "İnsanın evriminin bittiği yaygın bir kanıdır ve yanlıştır. Son on bin yılda ölçülebilir seçilim izleri vardır: yetişkinlikte süt sindirebilme, yüksek irtifada oksijen kullanımı, nişasta sindirimi ve bazı hastalıklara direnç. Bunların hepsi tarımın ve göçün yarattığı yeni koşullara verilen yanıtlardır. Kültür seçilim baskısını kaldırmaz; onu değiştirir. Süt sindirimi, hayvan evcilleştirildiği için avantajlı hâle gelmiştir — yani kültür, kendi genetik sonucunu üretmiştir."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "İnsan evriminde hangisi önce gelmiştir?",
+        "options": [
+          "Büyük beyin",
+          "İki ayak üstünde yürüme",
+          "Dil",
+          "Ateş"
+        ],
+        "answerIndex": 1,
+        "explanation": "Dört milyon yıl önce beyin hâlâ şempanze büyüklüğündeyken homininler dik yürüyordu. Laetoli ayak izleri bunu doğrudan gösterir."
+      },
+      {
+        "id": "q2",
+        "prompt": "Neandertal genomunun dizilenmesi ne gösterdi?",
+        "options": [
+          "İki grubun hiç karşılaşmadığını",
+          "Afrika dışındaki bugünkü insanların genomunda küçük ama gerçek bir Neandertal payı bulunduğunu",
+          "Neandertallerin insanın atası olduğunu",
+          "Neandertallerin ayrı bir cins olduğunu"
+        ],
+        "answerIndex": 1,
+        "explanation": "İki grup karşılaşmış ve melezleşmiştir. Bu, tür sınırlarının sanıldığı kadar geçirimsiz olmadığının somut örneğidir."
+      },
+      {
+        "id": "q3",
+        "prompt": "İnsandaki genetik çeşitlilik hakkında hangisi doğrudur?",
+        "options": [
+          "Memeliler arasında olağandışı yüksektir",
+          "Olağandışı düşüktür ve çeşitliliğin büyük kısmı gruplar arasında değil grupların içindedir",
+          "Gruplar arasında eşit dağılmıştır",
+          "Deri rengiyle güçlü biçimde ilişkilidir"
+        ],
+        "answerIndex": 1,
+        "explanation": "İnsan türünün genetik çeşitliliği tek bir şempanze topluluğununkinden azdır. Yüzeydeki farklar az sayıda gene bağlıdır ve sınıflandırma temeli sunmaz."
+      }
+    ]
+  },
+  {
+    "id": "yanlis-anlamalar",
+    "moduleId": "sonuc",
+    "order": 4,
+    "title": "Yanlış anlamalar ve kötüye kullanım",
+    "subtitle": "Evrim ne olduğunu anlatır, ne yapılması gerektiğini değil.",
+    "minutes": 9,
+    "keyTerms": ["sosyal Darwinizm", "doğalcılık yanılgısı", "öjeni", "uyum"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Evrim, hakkında en çok konuşulan ve en çok yanlış anlaşılan bilimsel kuramlardan biridir. Yanlış anlamaların bir kısmı zararsız kavram karışıklıklarıdır; bir kısmı ise tarih boyunca ciddi zarar vermiş siyasi kullanımlardır. İkisini ayırmak ve ikisini de adıyla söylemek gerekir."
+      },
+      {
+        "kind": "list",
+        "title": "Sık rastlanan hatalar",
+        "items": [
+          "'Sadece bir teori': bilimde teori tahmin değil, çok sayıda gözlemi açıklayan sınanmış çerçevedir. Yerçekimi de bir teoridir.",
+          "'İnsan maymundan geldi': hayır, insanla bugünkü maymunların ortak bir atası vardır. Kuzeniniz sizden gelmez.",
+          "'Evrimin bir hedefi var': yoktur. Basitten karmaşığa doğru zorunlu bir yönelim de yoktur; parazitlerin çoğu atalarından daha basittir.",
+          "'En güçlü hayatta kalır': ne güç ölçüttür ne de hayatta kalmak yeter. Ölçüt üremedir.",
+          "'Ara form yok': her yeni fosil bir ara formdur ve zaten kaydın tamamı ara formlardan oluşur.",
+          "'Rastlantı bu karmaşıklığı üretemez': seçilim rastlantı değildir. Rastgele olan mutasyondur; seçilim ise biriktiren bir süzgeçtir."
+        ]
+      },
+      {
+        "kind": "text",
+        "title": "Doğalcılık yanılgısı",
+        "body": "Evrim bize doğada ne olduğunu anlatır. Ne yapmamız gerektiğine dair tek bir cümle söylemez. Doğada bebek öldürme, zorla çiftleşme, kardeş katli ve parazitlik yaygındır; hiçbiri bu davranışları meşrulaştırmaz. 'Doğaldır, öyleyse doğrudur' çıkarımı mantıksal bir hatadır ve adı doğalcılık yanılgısıdır. Ahlaki sorular ahlaki tartışmayla çözülür; biyoloji verileri o tartışmanın malzemesi olabilir, hakemi olamaz."
+      },
+      {
+        "kind": "example",
+        "title": "Sosyal Darwinizm ve öjeni",
+        "body": "On dokuzuncu yüzyılın sonunda, doğal seçilim toplumsal eşitsizliği meşrulaştırmak için kullanıldı: yoksulluk 'uyumsuzluğun' sonucu ilan edildi, yardım etmek doğaya aykırı sayıldı. Bu görüş Darwin'in yazdıklarından çıkmaz; dönemin siyasetinin bilime giydirilmiş hâlidir. Öjeni ise bir adım öteye geçti ve insan popülasyonunun seçilimle 'iyileştirilmesi' önerildi. Yirminci yüzyılın ilk yarısında birçok ülkede zorla kısırlaştırma yasaları çıkarıldı ve program Nazi Almanyası'nda kitlesel cinayete dönüştü. Öjeni yalnızca ahlaki olarak değil, bilimsel olarak da yanlıştı: karmaşık özelliklerin kalıtım yapısı hakkında tümüyle hatalı varsayımlara dayanıyordu."
+      },
+      {
+        "kind": "text",
+        "title": "Bugünkü hâli",
+        "body": "Aynı akıl yürütme biçimi bugün de dolaşımdadır: mevcut toplumsal düzeni 'doğal' ilan etmek, gruplar arası farkları genetiğe bağlamak, bir davranışın yaygın olmasından onun kaçınılmaz olduğu sonucunu çıkarmak. Bunların hiçbiri evrim biyolojisinin sonucu değildir. Kuramı doğru anlamak, aynı zamanda onun neyi söylemediğini bilmektir. Evrim biyolojisi, canlılığın nereden geldiğine dair olağanüstü bir cevap verir. Nasıl yaşamamız gerektiğine dair hiçbir şey söylemez ve söylediğini iddia eden herkes ya kuramı ya da mantığı yanlış kullanıyordur."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "'Evrim sadece bir teoridir' itirazının hatası nedir?",
+        "options": [
+          "Evrim bir yasadır",
+          "Bilimde teori tahmin değil, çok sayıda gözlemi açıklayan ve sınanmış bir çerçevedir",
+          "Evrim kanıtlanmıştır",
+          "Teori kelimesi yanlış çevrilmiştir"
+        ],
+        "answerIndex": 1,
+        "explanation": "Günlük dildeki 'teori' ile bilimdeki 'teori' aynı şey değildir. Yerçekimi ve hastalıkların mikrop kuramı da birer teoridir."
+      },
+      {
+        "id": "q2",
+        "prompt": "Doğalcılık yanılgısı nedir?",
+        "options": [
+          "Doğayı yanlış gözlemlemek",
+          "Doğada olandan olması gerekene atlamak",
+          "Evrimi reddetmek",
+          "Deneyleri doğada yapmak"
+        ],
+        "answerIndex": 1,
+        "explanation": "Bir şeyin doğada bulunması onu meşru kılmaz. Evrim ne olduğunu anlatır; ne yapılması gerektiği ahlaki bir sorudur."
+      },
+      {
+        "id": "q3",
+        "prompt": "Öjeni programları hakkında hangisi doğrudur?",
+        "options": [
+          "Bilimsel olarak doğruydu ama ahlaki olarak yanlıştı",
+          "Hem ahlaki olarak yanlıştı hem de karmaşık özelliklerin kalıtımı hakkında hatalı varsayımlara dayanıyordu",
+          "Darwin'in önerisiydi",
+          "Yalnızca kuramsal kaldı"
+        ],
+        "answerIndex": 1,
+        "explanation": "Programlar zorla kısırlaştırmalara ve kitlesel suçlara zemin hazırladı; dayandıkları genetik varsayımlar da yanlıştı."
+      }
+    ]
+  }
+]
