@@ -1,0 +1,486 @@
+[
+  {
+    "id": "armagan-ve-degis-tokus",
+    "moduleId": "kultur",
+    "order": 3,
+    "title": "Armağan, borç ve piyasa",
+    "subtitle": "Hiçbir armağan karşılıksız değildir.",
+    "minutes": 9,
+    "keyTerms": ["armağan", "karşılıklılık", "kula halkası", "potlaç", "borç"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Armağan vermek, ilk bakışta çıkarsız bir davranış gibi görünür. Antropolojinin en dayanıklı bulgularından biri bunun tersidir: armağan her zaman bir yükümlülük yaratır ve tam da bu yüzden işe yarar. Vermek zorunluluğu, almak zorunluluğu ve geri vermek zorunluluğu bir üçlü oluşturur. Karşılık verilmediğinde ilişki değil, onur zedelenir."
+      },
+      {
+        "kind": "text",
+        "title": "Armağanla alışverişin farkı",
+        "body": "Bir dükkândan bir şey satın aldığınızda işlem tamamlanır ve taraflar birbirine hiçbir şey borçlu kalmaz. Armağanda ise tam tersi olur: alışveriş bilerek tamamlanmaz, çünkü kapanmamış hesap ilişkiyi ayakta tutar. Bu yüzden armağanın karşılığı hemen ve tam olarak verilmez; bu, ilişkiyi bitirmek anlamına gelir. Aynı sebeple bir davete gidip parasını ödemek hakaret sayılır: para, ilişkiyi işleme çevirir."
+      },
+      {
+        "kind": "list",
+        "title": "Klasik örnekler",
+        "items": [
+          "Kula halkası: Melanezya'da adalar arasında yıllarca dolaşan kolyeler ve bilezikler. Hiçbiri tüketilmez, hiçbiri satılmaz; taşıdıkları şey saygınlık ve ittifaktır.",
+          "Potlaç: Kuzeybatı Amerika'da servetin dağıtılarak — bazen yakılarak — saygınlık kazanıldığı tören. Sömürge yönetimleri bunu 'israf' sayıp yasakladı.",
+          "Karşılıklı yardımlaşma: imece, komşuya iş gücü vermek, düğünde takı takmak. Türkiye'de bu düzeneklerin hepsi hâlâ işler durumdadır ve hepsi kayıt tutulmadan hesaplanır.",
+          "Ev sahipliği: yemeğe çağırmak ve çağrılmak, dünyanın her yerinde en yaygın karşılıklılık biçimidir.",
+          "Bahşiş, dünür hediyesi, asker uğurlaması: hepsinde miktar kadar zamanlama ve görünürlük önemlidir."
+        ]
+      },
+      {
+        "kind": "example",
+        "title": "Takas efsanesi",
+        "body": "İktisat ders kitaplarının klasik anlatısı şöyledir: önce takas vardı, takas zahmetli olduğu için para icat edildi, sonra kredi geldi. Antropolojik kayıt bu sırayı desteklemez. Küçük ölçekli topluluklarda gözlenen şey, herkesin herkese olan yükümlülüklerinin akılda tutulduğu bir borç ağıdır; takas ise çoğunlukla yabancılarla, yani ilişki kurulmayacak kişilerle yapılır. Yani borç paradan önce gelir. Bu sav tartışmalıdır ve tarihçiler tarafından eleştirilmiştir; ama 'önce takas vardı' anlatısının hiçbir doğrudan kanıtı olmadığı da doğrudur."
+      },
+      {
+        "kind": "text",
+        "title": "Piyasa her şeyi çözer mi",
+        "body": "Antropolojinin buradaki katkısı piyasayı reddetmek değil, sınırını göstermektir. Piyasa değişimi tanımadığınız insanlarla iş yapmayı mümkün kılar ve bu muazzam bir kazançtır. Ama her ilişkiyi işleme çevirmenin bir bedeli vardır: kapanan her hesap, bir bağı da kapatır. Bakım, komşuluk, arkadaşlık ve aile içindeki emeğin piyasa dilinde ifade edilememesi bir eksiklik değil; o ilişkilerin başka bir mantıkla çalışmasıdır. İki mantığı karıştırmak — mesela çocuk bakımını yalnızca maliyet olarak hesaplamak — çoğu zaman yanlış cevaplar verir."
+      },
+      {
+        "kind": "quote",
+        "text": "Armağanda verilen şey, verenin bir parçasıdır; bu yüzden geri verilmesi gerekir.",
+        "source": "Marcel Mauss, Armağan Üzerine Deneme, 1925"
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Armağan ile piyasa alışverişi arasındaki temel fark nedir?",
+        "options": [
+          "Armağanda para kullanılmaz",
+          "Alışveriş hesabı kapatır, armağan ise hesabı bilerek açık bırakarak ilişkiyi sürdürür",
+          "Armağan daha değerlidir",
+          "Armağanda karşılık beklenmez"
+        ],
+        "answerIndex": 1,
+        "explanation": "Kapanmamış hesap ilişkiyi ayakta tutar. Bu yüzden karşılığı hemen ve tam vermek, ilişkiyi bitirmek anlamına gelir."
+      },
+      {
+        "id": "q2",
+        "prompt": "Kula halkasındaki nesnelerin özelliği nedir?",
+        "options": [
+          "Çok değerli hammaddeden yapılmaları",
+          "Tüketilmemeleri ve satılmamaları; taşıdıkları şeyin saygınlık ve ittifak olması",
+          "Yalnızca kadınlar tarafından taşınmaları",
+          "Para yerine kullanılmaları"
+        ],
+        "answerIndex": 1,
+        "explanation": "Nesneler adalar arasında yıllarca dolaşır. Değişimin işlevi ekonomik değil, siyasal ve toplumsaldır."
+      },
+      {
+        "id": "q3",
+        "prompt": "'Önce takas vardı, sonra para icat edildi' anlatısı hakkında hangisi doğrudur?",
+        "options": [
+          "Antropolojik kayıtla doğrulanmıştır",
+          "Doğrudan kanıtı yoktur; gözlenen şey daha çok karşılıklı yükümlülüklerden oluşan borç ağlarıdır",
+          "Yalnızca Avrupa için geçerlidir",
+          "Kesin olarak çürütülmüştür"
+        ],
+        "answerIndex": 1,
+        "explanation": "Takas çoğunlukla yabancılarla yapılır. Topluluk içinde gözlenen şey akılda tutulan bir yükümlülük ağıdır. Bu sav tartışmalıdır ama klasik anlatının da dayanağı zayıftır."
+      }
+    ]
+  },
+  {
+    "id": "ritual-ve-inanc",
+    "moduleId": "kultur",
+    "order": 4,
+    "title": "Ritüel, kirlilik ve anlam",
+    "subtitle": "Tören, yaptığı işten çok kurduğu ortaklık için vardır.",
+    "minutes": 9,
+    "keyTerms": ["ritüel", "geçiş töreni", "eşik durumu", "kirlilik ve düzen", "yoğun betimleme"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Ritüel, kurallı ve tekrarlanan sembolik davranıştır. Dinî olmak zorunda değildir: maç öncesi aynı çorabı giymek, mezuniyet cübbesi, askere uğurlama, yeni yıl kutlaması ve şirket toplantısının açılış turu aynı sınıftadır. Antropolojinin sorusu 'bu gerçekten işe yarıyor mu' değildir; 'bu insanlar için ne yapıyor'dur."
+      },
+      {
+        "kind": "text",
+        "title": "Geçiş törenleri",
+        "body": "Doğum, ergenliğe geçiş, evlilik, askerlik ve ölüm — bütün toplumlarda bu geçişler törenlerle işaretlenir ve törenler şaşırtıcı ölçüde ortak bir yapı taşır. Önce ayrılma vardır: kişi eski konumundan koparılır. Sonra eşik gelir: ne eski ne yeni olduğu, kuralların askıya alındığı belirsiz bir ara evre. En sonunda yeniden katılma: kişi yeni konumuyla topluluğa döner. Askerlik, üniversiteye başlama ve düğün öncesi gecelerin hepsinde bu üçlü yapıyı görürsünüz."
+      },
+      {
+        "kind": "text",
+        "title": "Kirlilik yerinde olmayan şeydir",
+        "body": "Yiyecek yasakları ve temizlik kuralları dışarıdan bakınca keyfî görünür. Bir okuma bunları hijyen bilgisine indirger — domuz eti hastalık taşıdığı için yasaklanmıştır gibi. Bu açıklama zayıftır, çünkü aynı riski taşıyan başka hayvanlar yasaklanmaz. Daha güçlü okuma şudur: yasaklanan şeyler çoğu zaman sınıflandırma sistemine sığmayanlardır. Ne tam kara ne tam deniz hayvanı olan, geviş getirdiği hâlde çift tırnaklı olmayan, ait olduğu kategoriyi bulandıran şey 'kirli' sayılır. Kirlilik bir mikrop meselesi değil, düzen meselesidir; kir, yerinde olmayan maddedir."
+      },
+      {
+        "kind": "list",
+        "title": "Ritüel ne yapar",
+        "items": [
+          "Ortaklık kurar: birlikte yapılan zahmetli ve anlamsız görünen eylemler, gruba aidiyeti güçlendirir.",
+          "Maliyet sinyali verir: katılması pahalı olan tören, kimin gerçekten bağlı olduğunu görünür kılar.",
+          "Belirsizliği yönetir: sonucu denetleyemediğiniz durumlarda — hastalık, deniz, savaş, sınav — ritüel yoğunlaşır.",
+          "Zamanı bölümler: tekrar eden törenler yılı, ömrü ve haftayı okunabilir parçalara ayırır.",
+          "Yasın işini görür: ölüm törenleri, geride kalanların yeniden düzenlenmesini sağlar.",
+          "Değişime direnç sağlar: ritüel, bir bilgiyi anlamı unutulduktan sonra bile taşımayı sürdürebilir."
+        ]
+      },
+      {
+        "kind": "example",
+        "title": "Bir horoz dövüşünü anlamak",
+        "body": "Bali'de horoz dövüşünü betimleyen ünlü çalışma, olayın kumar ya da eğlence olmadığını gösterir. Bahisler, kimin kime akraba olduğu, hangi köyün hangi köye rakip sayıldığı ve saygınlığın nasıl dağıldığıyla kurallı biçimde ilişkilidir. Yani ortada bir hayvan dövüşü değil, toplumun kendi hiyerarşisini kendine anlattığı bir metin vardır. Antropoloğun işi de bu metni okumaktır; bu yaklaşıma yoğun betimleme denir ve alanın yönünü kalıcı olarak değiştirmiştir."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Geçiş törenlerinin ortak üçlü yapısı nedir?",
+        "options": [
+          "Hazırlık, kutlama, dağılma",
+          "Ayrılma, eşik, yeniden katılma",
+          "Davet, tören, ziyafet",
+          "Söz, nişan, düğün"
+        ],
+        "answerIndex": 1,
+        "explanation": "Kişi eski konumundan koparılır, kuralların askıya alındığı belirsiz bir ara evreden geçer ve yeni konumuyla topluluğa döner."
+      },
+      {
+        "id": "q2",
+        "prompt": "Kirlilik kurallarının en güçlü açıklaması hangisidir?",
+        "options": [
+          "Hijyen bilgisi",
+          "Sınıflandırma sistemine sığmayan şeylerin işaretlenmesi",
+          "Ekonomik kısıtlar",
+          "Keyfî gelenek"
+        ],
+        "answerIndex": 1,
+        "explanation": "Hijyen açıklaması zayıftır çünkü aynı riski taşıyan başka hayvanlar yasaklanmaz. Kir, yerinde olmayan maddedir."
+      },
+      {
+        "id": "q3",
+        "prompt": "Ritüellerin belirsizlik karşısındaki rolü nedir?",
+        "options": [
+          "Belirsizliği ortadan kaldırır",
+          "Sonucu denetleyemediğimiz durumlarda yoğunlaşır ve belirsizliği yönetilebilir kılar",
+          "Hiçbir ilişkisi yoktur",
+          "Yalnızca dinî toplumlarda görülür"
+        ],
+        "answerIndex": 1,
+        "explanation": "Denizciler, sporcular ve sınav öncesi öğrenciler arasında ritüelin yoğunlaşması aynı örüntünün farklı görünümleridir."
+      }
+    ]
+  },
+  {
+    "id": "esitsizlik",
+    "moduleId": "toplum",
+    "order": 1,
+    "title": "Eşitsizliğin doğuşu",
+    "subtitle": "Kaynağın miktarı değil, saklanabilirliği belirleyicidir.",
+    "minutes": 9,
+    "keyTerms": ["depolanabilirlik", "artı ürün", "şeflik", "devlet", "zorun tekeli"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Eşitsizlik insan doğasının kaçınılmaz sonucu mudur, yoksa belirli koşullarda ortaya çıkan bir düzenleme midir? Antropolojik kayıt ikinci cevabı destekler. Küçük ve hareketli topluluklarda eşitlik kendiliğinden değil, etkin biçimde korunur; öne çıkanı alaya alma, paylaşmayanı dışlama ve gerekirse gruptan ayrılma bunun araçlarıdır. Yani eşitsizlik eğilimi her zaman vardır — sorulması gereken, bu eğilimin ne zaman bastırılamaz hâle geldiğidir."
+      },
+      {
+        "kind": "text",
+        "title": "Belirleyici koşul: el konabilirlik",
+        "body": "Bir kaynağın eşitsizlik üretmesi için bol olması yetmez; saklanabilir, savunulabilir ve el konabilir olması gerekir. Bir günde tüketilmesi gereken avın eti paylaşılmak zorundadır. Bir yıl saklanabilen tahıl ise sayılabilir, ambara konabilir, vergilendirilebilir ve miras bırakılabilir. Aynı sebeple, deniz seviyesinde yoğun ve öngörülebilir somon akışı olan bölgelerde tarım olmadan da hiyerarşi ve kölelik ortaya çıkmıştır. Belirleyici olan tarım değil, kaynağın biçimidir."
+      },
+      {
+        "kind": "list",
+        "title": "Örgütlenme biçimleri",
+        "items": [
+          "Grup: birkaç düzine kişi, kalıcı liderlik yok, kararlar tartışmayla alınır.",
+          "Kabile: birkaç yüz-birkaç bin kişi, akrabalık temelli, geçici önderler.",
+          "Şeflik: kalıtsal ama kurumsallaşmamış otorite; şef ayrıcalıklıdır ama zorla vergilendiremez.",
+          "Devlet: zor kullanma yetkisinin tekelleşmesi, vergi, kayıt ve uzmanlaşmış yönetici sınıf.",
+          "Bu dizi bir merdiven değildir: toplumlar bu biçimler arasında ileri geri hareket etmiş, devletten kaçıp dağa çekilenler olmuştur.",
+          "Aynı toplum yıl içinde biçim değiştirebilir: bazı topluluklarda avlanma mevsiminde katı hiyerarşi, geri kalan zamanda eşitlikçi düzen görülür."
+        ]
+      },
+      {
+        "kind": "example",
+        "title": "Devletten kaçmak",
+        "body": "Devletin ortaya çıkışı çoğu zaman kaçınılmaz bir ilerleme olarak anlatılır. Güneydoğu Asya'nın dağlık iç bölgeleri üzerine yapılan çalışmalar başka bir okuma önerir: buradaki topluluklar geride kalmış değil, bilerek uzaklaşmış olabilir. Kayıt tutulmasını zorlaştıran ekinler, yazıya dayanmayan gelenek ve dağınık yerleşim, vergi ve askerlikten kaçınmanın araçları olarak okunabilir. Bu tez tartışmalıdır ve fazla iradeci bulunmuştur; ama en azından 'devletsizlik = ilkellik' denklemini kırar."
+      },
+      {
+        "kind": "text",
+        "title": "Ölçmek mümkün mü",
+        "body": "Arkeoloji, geçmiş eşitsizliği doğrudan ölçmenin yollarını geliştirdi: mezarlardaki eşya farkı, iskeletlerdeki beslenme izleri ve en yaygın kullanılanı, ev büyüklüklerinin dağılımı. Bu ölçümler kıtalar arasında karşılaştırıldığında ilginç bir örüntü çıkar: eşitsizlik tarımla birlikte artar, ama artış hızı bölgeye göre çok farklıdır. Büyük hayvanların evcilleştirilebildiği yerlerde — çift süren öküz, at, ulaşım — eşitsizlik daha hızlı büyümüştür. Coğrafyanın payı vardır, ama tek başına belirleyici değildir."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Bir kaynağın eşitsizlik üretmesi için hangi özellik belirleyicidir?",
+        "options": [
+          "Bol olması",
+          "Saklanabilir, savunulabilir ve el konabilir olması",
+          "Besleyici olması",
+          "Taşınabilir olması"
+        ],
+        "answerIndex": 1,
+        "explanation": "Avın eti paylaşılmak zorundadır; tahıl ambara konabilir. Somon akışı olan bölgelerde tarım olmadan da hiyerarşi çıkmıştır."
+      },
+      {
+        "id": "q2",
+        "prompt": "Devleti önceki örgütlenme biçimlerinden ayıran temel özellik nedir?",
+        "options": [
+          "Nüfusun büyüklüğü",
+          "Zor kullanma yetkisinin tek bir merkezde tekelleşmesi",
+          "Şehirlerin varlığı",
+          "Ticaretin gelişmesi"
+        ],
+        "answerIndex": 1,
+        "explanation": "Şeflik kalıtsal ayrıcalık sağlar ama zorla vergilendiremez. Zorun tekeli, vergi ve kayıtla birlikte devleti kurar."
+      },
+      {
+        "id": "q3",
+        "prompt": "Örgütlenme biçimleri arasındaki ilişki nasıldır?",
+        "options": [
+          "Zorunlu bir merdivendir",
+          "Toplumlar bu biçimler arasında ileri geri hareket edebilir; hatta aynı toplum yıl içinde biçim değiştirebilir",
+          "Geri dönüş imkânsızdır",
+          "Yalnızca dış müdahaleyle değişir"
+        ],
+        "answerIndex": 1,
+        "explanation": "Bazı topluluklarda avlanma mevsiminde katı hiyerarşi, geri kalan zamanda eşitlikçi düzen görülmüştür. Devletten kaçıp dağa çekilen örnekler de vardır."
+      }
+    ]
+  },
+  {
+    "id": "grup-ve-olcek",
+    "moduleId": "toplum",
+    "order": 2,
+    "title": "Ölçek ve örgütlenme",
+    "subtitle": "Tanımadığın biriyle nasıl güven kurulur?",
+    "minutes": 8,
+    "keyTerms": ["ölçek sorunu", "Dunbar sayısı", "hayalî cemaat", "sözlü gelenek"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Bir topluluk büyüdükçe, onu bir arada tutan mekanizmalar da değişmek zorunda kalır. Küçük bir grupta kurallar yazılı olmak zorunda değildir: herkes herkesi tanır, kim ne yaptı bilinir, dedikodu yeterli bir denetim aracıdır. Bu düzenin bir üst sınırı vardır ve sınırı belirleyen şey, izlenmesi gereken ilişki sayısının kişi sayısından çok daha hızlı büyümesidir."
+      },
+      { "kind": "chart", "chartId": "grup-buyuklugu" },
+      {
+        "kind": "text",
+        "body": "Grafik, örgütlenme sorununun aritmetiğini gösteriyor: grup iki katına çıkınca izlenecek ilişki dört katına çıkıyor. Belli bir eşikten sonra kimse ağı takip edemez ve tanışıklığa dayalı düzen çöker. Tam bu noktada kurumlar devreye girer — unvanlar, üniformalar, yazılı kurallar, kimlik belgeleri, mahkemeler ve para. Bunların hepsi aynı işi yapar: tanımadığın biriyle güven kurmayı mümkün kılmak. 150 sayısına gelince: yaygın biçimde alıntılanır ve en az o kadar eleştirilir; kesin bir sınır değil, bir büyüklük mertebesi olarak anlaşılmalıdır."
+      },
+      {
+        "kind": "list",
+        "title": "Ölçek büyüdükçe ne icat edilir",
+        "items": [
+          "Yazı: sözlü belleğin taşıyamayacağı miktarda kayıt tutmak için. İlk metinler destan değil, ambar hesabıdır.",
+          "Para: tanımadığın biriyle, karşılıklı yükümlülük kurmadan değişim yapmak için.",
+          "Hukuk: anlaşmazlığı tarafların gücünden bağımsız bir kurala bağlamak için.",
+          "Din ve ortak semboller: birbirini hiç görmemiş insanlara ortak bir aidiyet vermek için.",
+          "Bürokrasi: kararın kişiye değil makama bağlanması; kişi değişse de işleyişin sürmesi.",
+          "Standart: ölçü birimleri, takvim, saat — uzaktaki insanlarla eşgüdüm kurmanın altyapısı."
+        ]
+      },
+      {
+        "kind": "example",
+        "title": "Hayalî cemaat",
+        "body": "Bir ulusun bütün üyeleri birbirini tanımaz, tanıyamaz. Yine de aynı takımı tutar, aynı bayram gününde toplanır ve tanımadığı biri için üzülür. Bu, matbaanın yaygınlaşmasıyla mümkün olan bir şeydir: aynı gazeteyi aynı sabah okuyan yüz binlerce insan, birbirini görmeden aynı 'şimdi'de yaşadığını hisseder. Bugün aynı işi ekranlar ve akışlar yapıyor. Ölçek sorununun çözümü teknik değil, çoğu zaman semboliktir."
+      },
+      {
+        "kind": "text",
+        "title": "Sözlü belleğin teknikleri",
+        "body": "Yazı olmadan uzun metinlerin kuşaklar boyu aktarılması mümkündür ve bunun kendine özgü teknikleri vardır: ölçü ve kafiye, tekrarlanan kalıp ifadeler, sayısal düzenler, ezgi ve törenle eşleşme. Bu teknikler hatayı sınırlar. Türkiye'de âşık geleneği, destan anlatıcılığı ve Kur'an hafızlığı aynı ailedendir. Sözlü gelenek 'yazının yokluğu' değil, kendi kurallarına sahip başka bir bilgi teknolojisidir."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Grup büyüklüğü iki katına çıktığında izlenecek ikili ilişki sayısı ne olur?",
+        "options": [
+          "İki katına çıkar",
+          "Yaklaşık dört katına çıkar",
+          "Değişmez",
+          "Yarıya iner"
+        ],
+        "answerIndex": 1,
+        "explanation": "İlişki sayısı n(n−1)/2 ile büyür; yani kişi sayısının karesiyle orantılıdır. Tanışıklığa dayalı düzenin sınırı buradan gelir."
+      },
+      {
+        "id": "q2",
+        "prompt": "Kurumların (unvan, yazılı kural, kimlik belgesi) temel işlevi nedir?",
+        "options": [
+          "Bürokrasi yaratmak",
+          "Tanımadığın biriyle güven kurmayı mümkün kılmak",
+          "Vergi toplamak",
+          "Hiyerarşiyi güçlendirmek"
+        ],
+        "answerIndex": 1,
+        "explanation": "Herkesin herkesi tanıdığı ölçekte bunlara gerek yoktur. Ölçek büyüdüğünde kişisel tanışıklığın yerini kurumlar alır."
+      },
+      {
+        "id": "q3",
+        "prompt": "Sözlü gelenek hakkında en doğru ifade hangisidir?",
+        "options": [
+          "Yazının yokluğudur",
+          "Ölçü, kafiye ve kalıp gibi kendi hata sınırlayıcı teknikleri olan başka bir bilgi teknolojisidir",
+          "Güvenilmezdir",
+          "Yalnızca kısa metinler için işler"
+        ],
+        "answerIndex": 1,
+        "explanation": "Âşık geleneği, destan anlatıcılığı ve hafızlık aynı ailedendir. Teknikler, aktarımdaki hatayı sistematik biçimde sınırlar."
+      }
+    ]
+  },
+  {
+    "id": "alan-calismasi",
+    "moduleId": "toplum",
+    "order": 3,
+    "title": "Alan çalışması ve etik",
+    "subtitle": "Kim, kimi, kimin için yazıyor?",
+    "minutes": 9,
+    "keyTerms": ["alan çalışması", "kaynak kişi", "bilgilendirilmiş onam", "temsil sorunu", "sömürgecilik mirası"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Alan çalışması genellikle bir yıldan uzun sürer, dil öğrenmeyi gerektirir ve araştırmacının gündelik hayata katılmasını ister. Amacı, insanların ne söylediğiyle ne yaptığı arasındaki farkı görebilmektir; anket bunu göremez, çünkü ankette insanlar çoğu zaman kuralı anlatır. Ama bu yöntemin bedeli de vardır: araştırmacı orada bulunmakla neyi gözlediğini değiştirir ve gördüğü şey, kiminle konuştuğuna bağlıdır."
+      },
+      {
+        "kind": "list",
+        "title": "Yöntemin sistematik zayıflıkları",
+        "items": [
+          "Kimin konuştuğu: araştırmacıya yaklaşanlar genellikle dil bilen, dışa dönük ve statüsü olanlardır. Sessiz kalanlar metne girmez.",
+          "Cinsiyet ayrımı: birçok toplulukta erkek araştırmacı kadınların dünyasına, kadın araştırmacı erkeklerinkine ulaşamaz.",
+          "Tekrarlanabilirlik: aynı köye giden iki antropoloğun farklı sonuçlara varması ünlü tartışmalar üretmiştir.",
+          "Genelleme: tek bir topluluk için doğru olan, o kültür için doğru olmak zorunda değildir.",
+          "Zamanlama: bir yıl içinde gözlenen düzen, uzun bir değişimin ortasından alınmış tek bir kare olabilir.",
+          "Araştırmacının etkisi: kaynak sağlamak, tercümanlık yaptırmak ve para ödemek yerel dengeleri değiştirir."
+        ]
+      },
+      {
+        "kind": "text",
+        "title": "Sömürgecilik mirası",
+        "body": "Antropoloji, sömürge yönetimlerine yönetilecek halklar hakkında bilgi sağlayarak kurumsallaştı. Bu, geçmişte kalmış bir utanç değil, alanın bugünkü kurallarının doğrudan sebebidir. Toplanan insan kalıntılarının ve kutsal nesnelerin müzelerden kaynak topluluklara iadesi, bilgilendirilmiş onam zorunluluğu, araştırma sonuçlarının topluluğa geri götürülmesi ve askerî amaçlı kullanıma dair yasaklar — hepsi bu geçmişle hesaplaşmanın ürünüdür ve tartışma sürmektedir."
+      },
+      {
+        "kind": "example",
+        "title": "Günlükler yayımlandığında",
+        "body": "Katılımcı gözlemi standart hâline getiren araştırmacının özel günlükleri ölümünden sonra yayımlandığında, alan sarsıldı. Metinlerde sıkıntı, öfke, yalnızlık ve incelediği insanlara yönelik açık önyargılar vardı. Bu, çalışmalarını geçersiz kılmadı; ama 'tarafsız gözlemci' imgesini kalıcı olarak çatlattı. Bugün etnografyalar çoğunlukla araştırmacının konumunu — kim olduğunu, nasıl karşılandığını, neyi göremediğini — açıkça yazarak başlar. Bu bir zayıflık itirafı değil, yöntemin dürüst hâlidir."
+      },
+      {
+        "kind": "quote",
+        "text": "Etnografya, tarafsız bir ayna değil; belirli bir yerden, belirli bir kişi tarafından yazılmış bir metindir.",
+        "source": "1980'lerin temsil tartışmasının özeti"
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Alan çalışmasının ankete göre üstünlüğü nedir?",
+        "options": [
+          "Daha çok kişiye ulaşması",
+          "İnsanların söyledikleriyle yaptıkları arasındaki farkı görebilmesi",
+          "Daha hızlı olması",
+          "Sayısal sonuç vermesi"
+        ],
+        "answerIndex": 1,
+        "explanation": "Ankette insanlar çoğu zaman kuralı anlatır. Ne yapıldığını görmek için orada uzun süre bulunmak gerekir."
+      },
+      {
+        "id": "q2",
+        "prompt": "Kaynak kişi seçiminin yarattığı sistematik sorun nedir?",
+        "options": [
+          "Çok pahalı olması",
+          "Araştırmacıya yaklaşanların genellikle dil bilen ve statüsü olan kişiler olması; sessizlerin metne girmemesi",
+          "Kaynak kişilerin yalan söylemesi",
+          "Yeterince kaynak kişi bulunamaması"
+        ],
+        "answerIndex": 1,
+        "explanation": "Gördüğünüz şey kiminle konuştuğunuza bağlıdır. Cinsiyet ayrımı da benzer biçimde erişimi sınırlar."
+      },
+      {
+        "id": "q3",
+        "prompt": "Bugün etnografyaların araştırmacının konumunu açıkça yazmasının anlamı nedir?",
+        "options": [
+          "Yöntemin zayıflığının itirafı",
+          "Yöntemin dürüst hâli: metnin belirli bir yerden yazıldığının okura bildirilmesi",
+          "Kişisel anlatıya kayma",
+          "Akademik bir moda"
+        ],
+        "answerIndex": 1,
+        "explanation": "Tarafsız gözlemci imgesi sürdürülemez olduğu için, kim olduğunu ve neyi göremediğini söylemek metnin okunabilirliğini artırır."
+      }
+    ]
+  },
+  {
+    "id": "bugunun-antropolojisi",
+    "moduleId": "toplum",
+    "order": 4,
+    "title": "Bugünün antropolojisi",
+    "subtitle": "Alan artık uzakta değil.",
+    "minutes": 9,
+    "keyTerms": ["kalkınma eleştirisi", "kent antropolojisi", "dijital etnografya", "temsil sorunu"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Antropolojinin klasik imgesi — uzak bir adaya giden araştırmacı — bugün gerçeği yansıtmıyor. Alan çalışması artık bir hastane koridorunda, bir çağrı merkezinde, bir borsanın işlem katında, bir göçmen mahallesinde ya da bir çevrimiçi toplulukta yapılıyor. Yöntem aynı: uzun süre orada bulunmak, dili öğrenmek, katılmak ve yazmak. Değişen, 'orası'nın nerede olduğu."
+      },
+      {
+        "kind": "list",
+        "title": "Bugün ne yapılıyor",
+        "items": [
+          "Kalkınma projelerinin etnografyası: dışarıdan tasarlanan projelerin yerel bilgiyi göz ardı ettiği için nasıl başarısız olduğunu tek tek vakalarla göstermek.",
+          "Kurum etnografyası: bir bakanlığın, bankanın ya da yazılım şirketinin kendi ritüellerini ve kararlarını incelemek.",
+          "Göç ve mültecilik: sınırın iki yakasında aynı ağı izlemek; Türkiye bu çalışmaların en yoğun alanlarından biri.",
+          "Sağlık antropolojisi: hastalığın ve tedavinin kültürel anlamı; hastanın hekimle neden anlaşamadığı.",
+          "Bilim ve teknoloji çalışmaları: laboratuvarda bilginin nasıl üretildiğini, tartışıldığını ve kapatıldığını gözlemek.",
+          "Dijital etnografya: çevrimiçi toplulukların, oyun dünyalarının ve platform emeğinin katılımcı gözlemle incelenmesi."
+        ]
+      },
+      {
+        "kind": "text",
+        "title": "Kim yazıyor",
+        "body": "Alandaki en büyük dönüşüm yöntemde değil, yazanın kimliğinde. Bir zamanlar 'hakkında yazılan' topluluklardan gelen araştırmacılar bugün alanın merkezinde. Bu, konuların da değişmesini getirdi: dışarıdan ilginç görünen egzotik ayrıntılar yerine, toplulukların kendi öncelikleri — toprak hakkı, dilin kaybı, sağlık hizmetine erişim, madencilik — öne çıktı. Karşılığında yeni bir soru doğdu: içeriden bakmak her zaman daha doğru mu görür? Cevap net değil; içeriden bakış bazı şeyleri görünmez kılabilir. En verimli çalışmalar çoğu zaman ikisinin birlikte yürütüldüğü olanlar."
+      },
+      {
+        "kind": "example",
+        "title": "Türkiye'de alan",
+        "body": "Türkiye antropoloji için hem zengin hem çalışılmayı bekleyen bir alan: kırdan kente göçün üç kuşaklık izleri, hemşehri ağlarının kentteki işlevi, imece ve komşuluk düzeneklerinin apartmandaki hâli, mevsimlik tarım işçiliği, mübadele ve zorunlu göç anlatılarının aile belleğindeki yeri, alevi-sünni komşuluk pratikleri, esnaf ahlakının ve pazarlık kültürünün kuralları. Bunların hepsi 'sıradan' göründüğü için az çalışılmıştır — oysa antropolojinin en iyi yaptığı şey, sıradan olanın ne kadar kurallı olduğunu göstermektir."
+      },
+      {
+        "kind": "text",
+        "title": "Alanın kalıcı katkısı",
+        "body": "Antropolojiden geriye kalan tek bir cümle olsaydı, muhtemelen şu olurdu: yaptığınız şeyin tek yol olmadığını bilmek. Aile, mülkiyet, zaman, hastalık, ölüm ve adalet üzerine kurduğumuz düzenlerin hepsi insan yapımıdır ve başka biçimlerde de kurulabilmiştir. Bu, hiçbir düzenin diğerinden iyi olmadığı anlamına gelmez; ama mevcut düzeni doğa yasası sanmayı imkânsız kılar. Bir şeyin değiştirilebilir olduğunu görmek, onu değiştirmenin ilk koşuludur."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Bugün alan çalışması nerede yapılıyor?",
+        "options": [
+          "Yalnızca uzak topluluklarda",
+          "Hastane, çağrı merkezi, mahalle ve çevrimiçi topluluk dâhil her yerde; yöntem aynı, 'orası' değişti",
+          "Yalnızca arşivlerde",
+          "Yalnızca üniversitelerde"
+        ],
+        "answerIndex": 1,
+        "explanation": "Uzun süre orada bulunmak, dili öğrenmek ve katılmak ilkeleri korunur; alanın nerede olduğu değişmiştir."
+      },
+      {
+        "id": "q2",
+        "prompt": "Kalkınma eleştirisi ne gösterir?",
+        "options": [
+          "Kalkınmanın gereksiz olduğunu",
+          "Dışarıdan tasarlanan projelerin yerel bilgiyi göz ardı ettiği için sıkça başarısız olduğunu",
+          "Yerel toplulukların değişime kapalı olduğunu",
+          "Projelerin çok pahalı olduğunu"
+        ],
+        "answerIndex": 1,
+        "explanation": "Bu kez incelenen taraf topluluk değil, kalkınmacının kendisidir. Antropoloji aracını müdahale edene çevirir."
+      },
+      {
+        "id": "q3",
+        "prompt": "İncelenen topluluklardan gelen araştırmacıların alana girmesi neyi değiştirdi?",
+        "options": [
+          "Hiçbir şeyi",
+          "Konuları: egzotik ayrıntılar yerine toprak hakkı, dil kaybı ve sağlık erişimi gibi kendi öncelikleri öne çıktı",
+          "Yöntemi tümüyle",
+          "Alanın tarafsızlığını sağladı"
+        ],
+        "answerIndex": 1,
+        "explanation": "'İçeriden bakış her zaman daha doğru mu görür' sorusunun cevabı net değil; en verimli çalışmalar çoğu zaman ikisinin birlikte yürütüldükleridir."
+      }
+    ]
+  }
+]

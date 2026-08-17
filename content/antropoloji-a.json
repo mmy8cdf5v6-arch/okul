@@ -1,0 +1,481 @@
+[
+  {
+    "id": "antropoloji-nedir",
+    "moduleId": "insan",
+    "order": 1,
+    "title": "Antropoloji ne yapar",
+    "subtitle": "Tanıdık olanı yabancı, yabancı olanı tanıdık kılmak.",
+    "minutes": 8,
+    "keyTerms": ["etnografya", "katılımcı gözlem", "dört alt alan", "kültürel görecilik", "etnosentrizm"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Antropolojinin sorusu sade ama iddialıdır: insan olmanın kaç farklı biçimi var? Bu soruyu yanıtlamak için bir topluluğun içinde uzun süre yaşamak, dilini öğrenmek, gündelik hayatına katılmak ve gördüğünü ayrıntısıyla yazmak gerekir. Ortaya çıkan metne etnografya, yönteme katılımcı gözlem denir."
+      },
+      {
+        "kind": "list",
+        "title": "Dört alt alan",
+        "items": [
+          "Kültürel antropoloji: yaşayan toplulukların inanç, örgütlenme ve gündelik hayatı.",
+          "Biyolojik antropoloji: insanın evrimi, iskelet, beslenme ve sağlığın türsel tarihi.",
+          "Dilbilimsel antropoloji: dilin toplumsal kullanımı ve düşünceyle ilişkisi.",
+          "Arkeoloji: geçmiş toplulukların bıraktığı maddi kalıntılardan hayatı yeniden kurmak.",
+          "Dördünü tek çatı altında toplama geleneği Kuzey Amerika'ya özgüdür; Avrupa'da bu alanlar çoğunlukla ayrı bölümlerdir."
+        ]
+      },
+      {
+        "kind": "text",
+        "title": "Kültürel görecilik",
+        "body": "Alanın kurucu ilkesi şudur: bir uygulamayı anlamak istiyorsanız, önce kendi ölçütlerinizi bir kenara koymanız gerekir. Bir toplulukta tuhaf görünen bir kural, o topluluğun kendi bağlamı içinde çoğu zaman anlaşılır bir işlev taşır. Buradaki incelik önemlidir ve sık kaçırılır: anlamak, onaylamak değildir. Kültürel görecilik bir yöntem ilkesidir, ahlaki bir teslimiyet değil; hiçbir antropolog 'bu onların kültürü' diyerek zarar veren bir uygulamayı savunmak zorunda değildir."
+      },
+      {
+        "kind": "example",
+        "title": "Alanın kuruluş günahı",
+        "body": "On dokuzuncu yüzyılda antropoloji, toplumları vahşetten uygarlığa doğru bir basamağa dizmekle işe başladı ve bu şema sömürge yönetimlerine hazır bir gerekçe sundu: 'geri kalmış' halkları yönetmek, onlara yapılan bir iyilikti. Alanın bu varsayımı yıkması kırk yıl aldı ve içeriden geldi. Boas, göçmen çocuklarının kafatası ölçülerinin bir kuşakta değiştiğini gösterdiğinde, sabit ırk tiplerine dayanan bütün yapı çöktü. Bu, bir bilim dalının kendi temelini kendi araçlarıyla yıkmasının en açık örneklerindendir."
+      },
+      {
+        "kind": "text",
+        "title": "Kendine bakmak",
+        "body": "Antropoloji uzun süre 'uzaktaki başkaları'nı inceledi. Bugün en verimli çalışmalar kendi toplumuna dönenlerdir: bir hastanenin, bir borsanın, bir laboratuvarın, bir apartmanın etnografyası. Yöntem aynı kalır ama etkisi tersine döner — tanıdık olanı yabancılaştırır. Bir toplantı odasındaki oturma düzeninin, bir düğündeki takı töreninin ya da bir yazılım ekibinin ritüellerinin ne kadar kurallı olduğunu ancak dışarıdan bakıldığında görürsünüz."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Kültürel görecilik ne demektir?",
+        "options": [
+          "Her uygulamayı onaylamak",
+          "Bir uygulamayı, kendi ölçütlerinizle değil o kültürün bağlamı içinde anlamaya çalışmak",
+          "Kültürleri sıralamak",
+          "Yargıda bulunmamak"
+        ],
+        "answerIndex": 1,
+        "explanation": "Bir yöntem ilkesidir, ahlaki bir teslimiyet değil. Anlamak ile onaylamak arasındaki fark bu ilkenin merkezindedir."
+      },
+      {
+        "id": "q2",
+        "prompt": "Boas'ın göçmen çocukları üzerine ölçümü neyi gösterdi?",
+        "options": [
+          "Beslenmenin önemsiz olduğunu",
+          "Kafatası ölçülerinin bir kuşakta değişebildiğini; yani sabit ırk tiplerinin dayanaksız olduğunu",
+          "Göçün zararlı olduğunu",
+          "Ölçümlerin hatalı olduğunu"
+        ],
+        "answerIndex": 1,
+        "explanation": "Sabit ırk tiplerine dayanan antropolojinin temeli bu ölçümle sarsıldı. Alan kendi kuruluş varsayımını kendi araçlarıyla yıktı."
+      },
+      {
+        "id": "q3",
+        "prompt": "Katılımcı gözlemin anketten farkı nedir?",
+        "options": [
+          "Daha hızlı olması",
+          "Araştırmacının hayata katılarak, söylenenle yapılan arasındaki farkı görebilmesi",
+          "Daha çok kişiye ulaşması",
+          "Sayısal olması"
+        ],
+        "answerIndex": 1,
+        "explanation": "İnsanlar ne yaptıklarını anlatırken çoğu zaman kuralı anlatır. Ne yapıldığını görmek için orada bulunmak gerekir."
+      }
+    ]
+  },
+  {
+    "id": "insanin-yayilmasi",
+    "moduleId": "insan",
+    "order": 2,
+    "title": "İnsanın yayılması ve çeşitliliği",
+    "subtitle": "Çeşitliliğin büyük kısmı gruplar arasında değil, grupların içinde.",
+    "minutes": 9,
+    "keyTerms": ["Afrika'dan çıkış", "gruplar arası pay (Fst)", "kademeli değişim", "gen-kültür birlikte evrimi"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Bugünkü bütün insanlar Afrika'da ortaya çıkmış bir topluluğun torunlarıdır. Yayılma yaklaşık altmış bin yıl önce hızlandı; Avustralya'ya elli bin, Avrupa'ya kırk beş bin, Amerika'ya en az on beş bin yıl önce ulaşıldı. Bu resim iki bağımsız kaynaktan gelir — fosiller ve genomlar — ve ikisi büyük ölçüde uyuşur."
+      },
+      { "kind": "chart", "chartId": "izolasyon-ve-farklilasma" },
+      {
+        "kind": "text",
+        "body": "Grafiğin gösterdiği ilişki, insan çeşitliliği hakkındaki en yaygın yanlış anlamayı doğrudan hedef alır. Kuşakta tek bir göçmen bile grupların birbirinden uzaklaşmasını büyük ölçüde engeller. İnsan tarihi boyunca hiçbir topluluk gerçekten yalıtılmadı: evlilik, ticaret, savaş ve göç sürekli bir alışveriş sağladı. Sonuç ölçülebilir — insan popülasyonları arasındaki genetik farklılaşma, benzer yayılıma sahip memelilere göre düşüktür."
+      },
+      {
+        "kind": "list",
+        "title": "Çeşitliliğin biçimi",
+        "items": [
+          "Toplam genetik çeşitliliğin yaklaşık yüzde seksen sekizi, herhangi bir grubun içinde bulunur.",
+          "Değişim coğrafyada keskin sınırlarla değil kademeli olarak gerçekleşir; iki köy arasında ani bir sıçrama yoktur.",
+          "Farklı özellikler farklı sınırlar çizer: deri rengi, kan grubu ve laktoz sindirimi haritaları birbiriyle örtüşmez.",
+          "Afrika içindeki genetik çeşitlilik, dünyanın geri kalanının tamamındakinden fazladır; çünkü çıkan grup küçük bir örneklemdi.",
+          "Yüzeydeki en görünür fark olan deri rengi, az sayıda gene bağlıdır ve güneş ışığına uyumla açıklanır.",
+          "Bu bulguların hiçbiri insanlar arasında fark olmadığı anlamına gelmez; farkların ırk kategorilerine denk düşmediği anlamına gelir."
+        ]
+      },
+      {
+        "kind": "example",
+        "title": "Kültür genleri değiştirir",
+        "body": "Yetişkinlikte süt sindirebilme yeteneği, insan soyunda birden çok kez ve birbirinden bağımsız olarak ortaya çıktı: Kuzey Avrupa'da, Doğu Afrika'da ve Arap Yarımadası'nda farklı genetik değişikliklerle. Ortak noktaları, hepsinin hayvan evcilleştirmesinden sonra yayılmış olmasıdır. Yani önce kültürel bir değişiklik oldu, o değişiklik yeni bir seçilim baskısı yarattı ve genler bunu izledi. Kültür ile biyoloji arasındaki ilişki tek yönlü değildir."
+      },
+      {
+        "kind": "text",
+        "title": "Melezleşme",
+        "body": "Genom karşılaştırmaları, bugünkü insanların atalarının karşılaştıkları diğer insan gruplarıyla çocuk sahibi olduğunu gösterdi. Afrika dışındaki insanlarda küçük ama gerçek bir Neandertal payı, Okyanusya'da ayrıca bir Denisova payı bulunur. Bu, tür sınırlarının sanıldığı kadar geçirimsiz olmadığını gösterir ve insan tarihinin temiz bir ağaçtan çok, yer yer birleşen bir ağ olduğunu hatırlatır."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "İnsan genetik çeşitliliği nasıl dağılmıştır?",
+        "options": [
+          "Çoğu gruplar arasında",
+          "Yaklaşık yüzde seksen sekizi herhangi bir grubun içinde",
+          "Eşit olarak",
+          "Kıtalara göre keskin biçimde"
+        ],
+        "answerIndex": 1,
+        "explanation": "Rastgele iki insan arasındaki farkın büyük kısmı, hangi kıtadan geldiklerinden bağımsızdır."
+      },
+      {
+        "id": "q2",
+        "prompt": "Kuşakta tek bir göçmenin etkisi nedir?",
+        "options": [
+          "İhmal edilebilir",
+          "Grupların birbirinden genetik olarak uzaklaşmasını büyük ölçüde engeller",
+          "Farklılaşmayı artırır",
+          "Yalnızca küçük gruplarda etkilidir"
+        ],
+        "answerIndex": 1,
+        "explanation": "Fst ≈ 1/(1+4Nm) bağıntısı gereği, çok az bir alışveriş bile farklılaşmayı düşük tutmaya yeter."
+      },
+      {
+        "id": "q3",
+        "prompt": "Yetişkinlikte süt sindirimi örneği neyi gösterir?",
+        "options": [
+          "Genlerin kültürü belirlediğini",
+          "Kültürel bir değişikliğin yeni bir seçilim baskısı yaratıp genetik değişime yol açabildiğini",
+          "Sütün her toplumda içildiğini",
+          "Genetik değişimin çok yavaş olduğunu"
+        ],
+        "answerIndex": 1,
+        "explanation": "Önce hayvan evcilleştirildi, sonra süt sindirimi yayıldı. Üstelik bu, birbirinden bağımsız genetik değişikliklerle birden çok kez oldu."
+      }
+    ]
+  },
+  {
+    "id": "avci-toplayicilik",
+    "moduleId": "insan",
+    "order": 3,
+    "title": "Avcı-toplayıcı hayat",
+    "subtitle": "İnsan tarihinin yüzde doksan beşi.",
+    "minutes": 9,
+    "keyTerms": ["avcı-toplayıcılık", "zorunlu eşitlik", "paylaşma talebi", "hareketlilik"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Tarım on iki bin yıl önce başladı; insan soyu ise yüz binlerce yıldır var. Yani bugünkü zihnimizin ve bedenimizin biçimlendiği koşullar, çiftlik ya da şehir değil, küçük gruplar hâlinde hareketli bir hayattır. Bu, bugünü o hayata göre yaşamamız gerektiği anlamına gelmez — ama neden bazı şeylerin bize doğal, bazılarının zor geldiğini anlamaya yardımcı olur."
+      },
+      {
+        "kind": "text",
+        "title": "Tek bir 'avcı-toplayıcı hayat' yok",
+        "body": "En sık yapılan hata, bütün avcı-toplayıcıları tek bir örnekmiş gibi anlatmaktır. Oysa Kuzeybatı Amerika'nın somon avcıları yerleşikti, depolama yapıyordu ve belirgin bir hiyerarşiye sahipti; Kalahari'nin küçük grupları hareketli ve eşitlikçiydi; Avustralya'nın toplulukları son derece karmaşık akrabalık sistemleri kurmuştu. Ortak olan geçim tekniği değil, bunun çevreye göre kurduğu farklı düzenlerdir. Ayrıca bugün gözlenen topluluklar, geçmişin dondurulmuş örnekleri değildir; hepsi tarım toplumlarıyla binlerce yıldır komşudur."
+      },
+      {
+        "kind": "list",
+        "title": "Sık rastlanan düzenler",
+        "items": [
+          "Hareketlilik: yer değiştirmek, taşınamayacak kadar çok şey biriktirmeyi engeller.",
+          "Zorunlu eşitlik: öne çıkmaya çalışanı alaya alma, paylaşmayanı dışlama gibi mekanizmalarla hiyerarşi etkin biçimde bastırılır. Eşitlik kendiliğinden değil, sürekli çalışılarak korunur.",
+          "Paylaşma talebi: elde edilen etin istendiğinde verilmesi zorunludur. Belirsiz bir çevrede bu, bilinen en iyi sigortadır.",
+          "Esnek gruplar: anlaşmazlık çıktığında ayrılıp başka gruba katılmak mümkündür; bu, zoru sınırlayan en güçlü araçtır.",
+          "İş bölümü: cinsiyete göre bir bölünme yaygındır ama içeriği toplumdan topluma değişir ve 'erkek avlar, kadın toplar' şeması çoğu yerde fazla keskindir.",
+          "Bilgi yoğunluğu: yüzlerce bitki türü, hayvan davranışı ve mevsim işareti ezbere bilinir. Bu hayat basit değildir, yalnızca farklı bir uzmanlık ister."
+        ]
+      },
+      {
+        "kind": "example",
+        "title": "İlk bolluk toplumu tartışması",
+        "body": "1960'larda öne sürülen bir sav, avcı-toplayıcıların geçim için günde yalnızca birkaç saat çalıştığını ve dolayısıyla 'ilk bolluk toplumu'nu oluşturduğunu iddia etti. Sav çekiciydi ve tarım öncesi hayata bakışı kalıcı biçimde değiştirdi. Sonraki ölçümler daha ölçülü bir tablo verdi: yemek hazırlama, alet yapımı ve taşınma sayıldığında toplam iş yükü tahmin edilenden yüksekti, bebek ölümleri ve şiddet kaynaklı ölümler ise yüksek oranlardaydı. Doğru ders 'o hayat daha iyiydi' değil; 'tarım kendiliğinden bir ilerleme değildi' olmalıdır."
+      },
+      {
+        "kind": "quote",
+        "text": "Bolluk iki yoldan elde edilebilir: çok üreterek ya da az isteyerek.",
+        "source": "Marshall Sahlins, İlk Bolluk Toplumu, 1968 — savın en dayanıklı cümlesi"
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Avcı-toplayıcı topluluklar hakkında en doğru ifade hangisidir?",
+        "options": [
+          "Hepsi eşitlikçi ve hareketliydi",
+          "Çevreye göre çok farklı düzenler kurmuşlardır; kimi yerleşik ve hiyerarşik, kimi hareketli ve eşitlikçiydi",
+          "Hepsi yerleşikti",
+          "Hepsi aynı akrabalık sistemini kullanırdı"
+        ],
+        "answerIndex": 1,
+        "explanation": "Kuzeybatı Amerika'nın somon avcıları yerleşik ve hiyerarşikti; Kalahari grupları hareketli ve eşitlikçiydi. Ortak olan teknik değil, çeşitliliktir."
+      },
+      {
+        "id": "q2",
+        "prompt": "Küçük gruplarda eşitlik nasıl korunur?",
+        "options": [
+          "Kendiliğinden, insanlar doğal olarak eşitlikçi olduğu için",
+          "Öne çıkanı alaya alma ve paylaşmayanı dışlama gibi mekanizmalarla, yani sürekli çalışılarak",
+          "Bir liderin kararıyla",
+          "Yazılı kurallarla"
+        ],
+        "answerIndex": 1,
+        "explanation": "Eşitlik bir varsayılan durum değil, etkin biçimde sürdürülen bir düzendir. Hiyerarşi eğilimi sürekli bastırılır."
+      },
+      {
+        "id": "q3",
+        "prompt": "'İlk bolluk toplumu' savından çıkarılacak en doğru ders nedir?",
+        "options": [
+          "O hayat bugünkünden iyiydi",
+          "Tarım kendiliğinden bir ilerleme değildi",
+          "Avcı-toplayıcılar hiç çalışmıyordu",
+          "Sav tümüyle geçersizdir"
+        ],
+        "answerIndex": 1,
+        "explanation": "Sonraki ölçümler iş yükünün tahminden yüksek, ölüm oranlarının da yüksek olduğunu gösterdi. Kalan ders, tarıma geçişin bir kazanç-kayıp değişimi olduğudur."
+      }
+    ]
+  },
+  {
+    "id": "tarima-gecis",
+    "moduleId": "insan",
+    "order": 4,
+    "title": "Tarıma geçiş",
+    "subtitle": "Bir ilerleme değil, bir değiş tokuş.",
+    "minutes": 9,
+    "keyTerms": ["neolitik", "ehlileştirme", "artı ürün", "depolanabilirlik"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Tarım, dünyanın en az on bir ayrı bölgesinde birbirinden bağımsız olarak ortaya çıktı: Bereketli Hilal, Çin, Yeni Gine, Mezoamerika, And Dağları, Batı Afrika ve diğerleri. Bu bağımsız tekrar, olayın tesadüf olmadığını gösterir. Ama neden olduğu hâlâ tartışmalıdır — iklim değişimi, nüfus baskısı, yerleşikliğin kendisi ve tören merkezlerinin çekimi öne sürülen açıklamalar arasındadır."
+      },
+      {
+        "kind": "text",
+        "title": "İskeletlerin söylediği",
+        "body": "Tarıma geçen toplulukların iskeletleri, geçişin sağlık açısından bir kayıp olduğunu gösterir: boy ortalaması düşer, diş çürüğü ve enamel bozuklukları artar, demir eksikliği yaygınlaşır, eklem aşınmaları çoğalır. Beslenme daha bol ama daha tekdüze hâle gelmiştir. Yerleşiklik ve hayvanla yakın temas, bulaşıcı hastalıkları büyütür. Yine de tarım her yerde yayıldı — çünkü ölçüt bireyin sağlığı değil, birim alandan beslenebilen insan sayısıydı. Tarım toplumları daha hasta ama daha kalabalıktı ve kalabalık kazandı."
+      },
+      {
+        "kind": "list",
+        "title": "Neyi değiştirdi",
+        "items": [
+          "Artı ürün: tüketilenden fazlasını üretmek mümkün hâle geldi.",
+          "Depolanabilirlik: tahıl saklanabilir, sayılabilir ve el konabilir. Bu, avın etinde mümkün değildi.",
+          "Uzmanlaşma: herkesin yiyecek üretmediği bir düzen kuruldu; zanaatkâr, asker, rahip ve yönetici ortaya çıktı.",
+          "Mülkiyet: taşınmaz bir yatırım olan tarla, sahiplik ve miras kavramlarını zorunlu kıldı.",
+          "Nüfus: doğurganlık arttı, hareketlilik azaldı, aralar kısaldı.",
+          "Kayıt: kimin ne kadar verdiğini izlemek gerekti; bilinen ilk yazı örnekleri şiir değil, depo kayıtlarıdır."
+        ]
+      },
+      {
+        "kind": "example",
+        "title": "Göbeklitepe'nin sorusu",
+        "body": "Yerleşik düzenin klasik anlatısı şöyleydi: önce tarım, sonra köy, sonra artı ürün, en sonunda tapınak. Şanlıurfa yakınlarındaki Göbeklitepe bu sırayı zorlar. On beş tonluk dikili taşlarla kurulan anıtsal yapı topluluğu, tarımdan önceye tarihlenir. Bunun tek bir yorumu yoktur ve alanın kendisi hâlâ tartışmalıdır — ama en azından şunu gösterir: büyük ölçekli ortak emeği örgütleyen şey her zaman ekonomik zorunluluk olmak zorunda değildir. Belki de insanları bir araya toplayan ilk şey tarla değil, tören oldu."
+      },
+      {
+        "kind": "text",
+        "title": "Ehlileştirme çift yönlüdür",
+        "body": "Buğdayı biz mi ehlileştirdik, o mu bizi? Bu soru yalnızca bir söz oyunu değildir. Buğday, insan eliyle yayılarak dünyanın en geniş alanını kaplayan bitkilerden biri oldu; karşılığında insan, ömrünün büyük kısmını onu ekmeye, sulamaya, korumaya ve hasat etmeye ayırdı. Aynı şey inek, koyun ve tavuk için de geçerlidir. Ehlileştirme tek taraflı bir hâkimiyet değil, karşılıklı ve geri dönüşsüz bir bağımlılıktır."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Tarıma geçişin iskeletlerde görülen etkisi nedir?",
+        "options": [
+          "Sağlık göstergeleri belirgin biçimde iyileşti",
+          "Boy düştü, diş çürüğü ve besin eksiklikleri arttı, eklem aşınmaları çoğaldı",
+          "Hiçbir değişiklik olmadı",
+          "Yalnızca boy uzadı"
+        ],
+        "answerIndex": 1,
+        "explanation": "Beslenme daha bol ama daha tekdüze hâle geldi. Yerleşiklik ve hayvanla temas bulaşıcı hastalıkları büyüttü."
+      },
+      {
+        "id": "q2",
+        "prompt": "Tarım sağlık açısından kötü sonuç verdiği hâlde neden her yerde yayıldı?",
+        "options": [
+          "İnsanlar sonucu bilmiyordu",
+          "Ölçüt bireyin sağlığı değil, birim alandan beslenebilen insan sayısıydı; kalabalık kazandı",
+          "Devletler zorladı",
+          "Tesadüfen"
+        ],
+        "answerIndex": 1,
+        "explanation": "Tarım toplumları daha hasta ama daha kalabalıktı. Nüfus üstünlüğü, sağlık kaybını rekabet açısından telafi etti."
+      },
+      {
+        "id": "q3",
+        "prompt": "Depolanabilirlik neden bu kadar önemlidir?",
+        "options": [
+          "Açlığı önlediği için",
+          "Saklanabilen, sayılabilen ve el konabilen bir kaynak yarattığı için; eşitsizliğin ve vergilendirmenin önkoşuludur",
+          "Ticareti kolaylaştırdığı için",
+          "Taşımayı kolaylaştırdığı için"
+        ],
+        "answerIndex": 1,
+        "explanation": "Avın eti saklanamaz ve paylaşılmak zorundadır. Tahıl saklanabilir; bu fark, el koymayı ve hiyerarşiyi mümkün kılar."
+      }
+    ]
+  },
+  {
+    "id": "kultur-nedir",
+    "moduleId": "kultur",
+    "order": 1,
+    "title": "Kültür nasıl birikir",
+    "subtitle": "Hiçbirimizin tek başına icat edemeyeceği şeyleri kullanıyoruz.",
+    "minutes": 9,
+    "keyTerms": ["kültür", "birikimli kültür", "aktarım sadakati", "yalıtım ve kayıp"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Elinizdeki telefonu tek başınıza yapamazsınız. Kimse yapamaz. Madenin çıkarılmasından yarı iletken üretimine, işletim sisteminden dil modeline kadar hiçbir insan bu zincirin tamamını bilmez. İnsanı ayıran özellik bireysel zekâsı değil, kuşaklar boyunca biriken ve kimsenin tek başına taşımadığı bir bilgi yığınına erişebilmesidir. Buna birikimli kültür denir."
+      },
+      { "kind": "chart", "chartId": "kultur-birikimi" },
+      {
+        "kind": "text",
+        "body": "Grafikteki eşik fikri, birikimin nasıl işlediğini açıklar. Her aktarımda bir miktar kayıp olur: öğrenen, ustayı tam olarak taklit edemez. Ama yeterince çok kişi denerse, birileri şans eseri ustadan daha iyisini yapar ve yeni düzey oradan devam eder. Kalabalık ve bağlantı arttıkça bu telafi güçlenir; nüfus küçüldüğünde ya da bağlantı koptuğunda kayıp baskın gelir ve teknik gerilemeye başlar."
+      },
+      {
+        "kind": "text",
+        "title": "Tazmanya örneği",
+        "body": "Deniz seviyesinin yükselmesiyle yaklaşık on bin yıl önce Avustralya'dan kopan Tazmanya'da, arkeolojik kayıt zamanla bir daralma gösterir: kemik aletler, kompozit araçlar ve balık avcılığı kayıtlardan silinir. En çok tartışılan yorum, küçük ve yalıtılmış nüfusun karmaşık teknikleri sürdürmeye yetmemesidir. Bu yorum ciddi eleştiriler de aldı — çevresel değişim ve kültürel tercih gibi alternatifler öne sürüldü. Buradaki asıl ders, tek bir vakadan model doğrulamanın zorluğudur; ama aynı örüntü Pasifik adalarında ada büyüklüğüyle alet çeşitliliği arasındaki ilişkide de görülür."
+      },
+      {
+        "kind": "list",
+        "title": "Aktarımı güçlendiren şeyler",
+        "items": [
+          "Öğretme: insan, başkasına bilerek öğretme davranışını sistemli biçimde yapan tek türdür.",
+          "Dil: bir tekniğin yalnızca gösterilerek değil, anlatılarak da aktarılabilmesi sadakati büyük ölçüde artırır.",
+          "Aşırı taklit: çocuklar, gerekli olmayan adımları bile kopyalar. Verimsiz görünür ama nedenini anlamadığı bir adımı atlamayı önler.",
+          "Yazı ve kayıt: aktarımın tek tek insanların ömrüne bağımlılığını kırar.",
+          "Ağ yoğunluğu: kaç kişiyle temas edildiği, kaç kişi olunduğu kadar önemlidir.",
+          "Uzmanlaşma: kimsenin her şeyi bilmesi gerekmeyince, herkesin daha derin bilmesi mümkün olur."
+        ]
+      },
+      {
+        "kind": "example",
+        "title": "Yerel bilgi bir teknolojidir",
+        "body": "Amazon'da manyokun bazı çeşitleri işlenmeden yendiğinde siyanür zehirlenmesi yapar. Yerel işleme yöntemi çok adımlıdır: rendeleme, sıkma, yıkama, uzun süre bekletme ve pişirme. Adımlardan biri atlandığında etkisi hemen görülmez; zehirlenme yıllar içinde birikerek ortaya çıkar. Yani hiçbir birey, deneme yanılmayla bu yöntemi keşfedemez ya da adımların gerekliliğini doğrulayamaz. Yöntem, kimsenin nedenini bilmediği hâlde doğru biçimde aktarıldığı için çalışır. Bu, kültürel bilginin bireysel akıldan neden daha akıllı olabildiğinin en net örneğidir."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Birikimli kültür nedir?",
+        "options": [
+          "Çok şey bilmek",
+          "Her kuşağın öncekinin üstüne ekleyerek, tek bir insanın icat edemeyeceği karmaşıklığa ulaşması",
+          "Kültürel çeşitlilik",
+          "Geleneklerin korunması"
+        ],
+        "answerIndex": 1,
+        "explanation": "Kimse tek başına bir telefon yapamaz. İnsanı ayıran şey bireysel zekâ değil, bu birikime erişebilmektir."
+      },
+      {
+        "id": "q2",
+        "prompt": "Nüfus küçüldüğünde teknik neden gerileyebilir?",
+        "options": [
+          "İnsanlar aptallaştığı için",
+          "Her aktarımdaki kaybı telafi edecek kadar çok deneme olmadığı için",
+          "Kaynaklar azaldığı için",
+          "Öğretme isteği azaldığı için"
+        ],
+        "answerIndex": 1,
+        "explanation": "Kalabalıkta şans eseri ustayı geçen biri çıkar ve kayıp telafi edilir. Küçük ağlarda bu telafi zayıflar."
+      },
+      {
+        "id": "q3",
+        "prompt": "Manyok işleme örneği neyi gösterir?",
+        "options": [
+          "Yerel halkların kimyayı bildiğini",
+          "Kültürel bilginin, nedenini kimse bilmese bile doğru aktarıldığı için işleyebildiğini",
+          "Manyokun zehirli olmadığını",
+          "Deneme yanılmanın yeterli olduğunu"
+        ],
+        "answerIndex": 1,
+        "explanation": "Zehirlenme yıllar içinde birikerek ortaya çıktığı için hiçbir birey adımların gerekliliğini kendi başına doğrulayamaz. Yöntem, sadakatle aktarıldığı için çalışır."
+      }
+    ]
+  },
+  {
+    "id": "akrabalik",
+    "moduleId": "kultur",
+    "order": 2,
+    "title": "Akrabalık ve evlilik",
+    "subtitle": "Kimin akraba sayıldığı, kan bağının değil kuralın işidir.",
+    "minutes": 8,
+    "keyTerms": ["akrabalık", "soy çizgisi", "yakın akrabayla evlenme yasağı", "dışarıdan evlenme", "başlık ve çeyiz"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Akrabalık, antropolojinin en eski ve en teknik konusudur; çünkü küçük ölçekli toplumlarda akrabalık aynı anda siyaset, ekonomi, hukuk ve din demektir. Kimin akraba sayıldığı biyolojiden okunmaz. Bazı toplumlarda babanın erkek kardeşi de 'baba' diye adlandırılır; bazılarında sütkardeşlik kan kardeşliği kadar bağlayıcıdır; evlat edinme birçok yerde doğumla eşdeğerdir."
+      },
+      {
+        "kind": "list",
+        "title": "Temel eksenler",
+        "items": [
+          "Soy: aidiyet baba tarafından mı, anne tarafından mı, yoksa her ikisinden mi izleniyor?",
+          "Yerleşim: evlenen çift erkeğin ailesinin yanına mı, kadının yanına mı, yoksa ayrı mı yerleşiyor?",
+          "Eş sayısı: tek eşlilik, çok kadınla evlilik ya da nadiren çok erkekle evlilik.",
+          "Değişim: evlilikte gruplar arasında ne aktarılıyor — başlık mı, çeyiz mi, emek mi?",
+          "Yasak: yakın akrabayla evlenme her toplumda yasaktır, ama 'yakın'ın kimi kapsadığı çarpıcı biçimde değişir.",
+          "Terminoloji: akrabalık adlarının sistemi, kimin kiminle evlenebileceğini ve kimin kime ne borçlu olduğunu doğrudan kodlar."
+        ]
+      },
+      {
+        "kind": "text",
+        "title": "Yasak neden var",
+        "body": "Yakın akrabayla evlenme yasağı bilinen bütün toplumlarda bulunur. İki tür açıklama önerilir. Biyolojik açıklama, yakın akraba çiftleşmesinin zararlı çekinik alellerin bir araya gelme olasılığını artırmasına dayanır ve bu etki gerçektir. Toplumsal açıklama ise yasağın asıl işlevinin dışarıyla ittifak kurmaya zorlamak olduğunu söyler: kız kardeşinizle evlenmezseniz, onu başka bir gruba vererek o grupla kalıcı bir bağ kurarsınız. İki açıklama birbirini dışlamaz; ama yasağın kimi kapsadığının kültürden kültüre bu kadar değişmesi, toplumsal yanın ağırlığını gösterir."
+      },
+      {
+        "kind": "example",
+        "title": "Kuzen evliliği",
+        "body": "Bazı toplumlarda amca çocuğuyla evlenmek en makbul evliliktir; bazılarında kesin biçimde yasaktır. Ayrım çoğu zaman ince bir kurala dayanır: aynı soy çizgisinden gelen kuzen 'kardeş' sayılırken, karşı çizgiden gelen kuzen tercih edilen eş olabilir. Yani biyolojik yakınlık aynıdır, kural farklıdır. Türkiye'de akraba evliliği oranı bölgeye göre belirgin biçimde değişir ve kalıtsal hastalık taramalarında doğrudan hesaba katılır — kültürel bir kuralın sağlık politikasına dönüştüğü somut bir örnek."
+      },
+      {
+        "kind": "text",
+        "title": "Bugün ne oldu",
+        "body": "Akrabalık kuramı yirminci yüzyılın ortasında alanın merkeziydi, sonra gözden düştü ve bugün yeni sorularla geri döndü: üremeye yardımcı teknolojiler, taşıyıcı annelik, evlat edinme, aynı cinsten ebeveynlik ve genetik test sonucuyla bulunan biyolojik akrabalar. Bütün bu durumlarda aynı eski soru yeniden sorulur: akraba kimdir, kan mı bakım mı belirler, kimin sözü geçer? Antropolojinin yüz yıllık birikimi, tam da bu güncel tartışmalarda işe yarar."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Akrabalık sistemleri hakkında hangisi doğrudur?",
+        "options": [
+          "Biyolojik bağı doğrudan yansıtırlar",
+          "Kimin akraba sayıldığı kültürel bir kuraldır ve biyolojik bağla örtüşmek zorunda değildir",
+          "Her toplumda aynıdır",
+          "Yalnızca miras için kullanılır"
+        ],
+        "answerIndex": 1,
+        "explanation": "Sütkardeşlik, evlat edinme ve babanın erkek kardeşine 'baba' demek gibi örnekler kuralın biyolojiden bağımsız işlediğini gösterir."
+      },
+      {
+        "id": "q2",
+        "prompt": "Dışarıdan evlenme kuralının toplumsal işlevi nedir?",
+        "options": [
+          "Nüfusu artırmak",
+          "Gruplar arasında kalıcı ittifak ağları kurmak",
+          "Mirası korumak",
+          "Göçü engellemek"
+        ],
+        "answerIndex": 1,
+        "explanation": "Eşi dışarıdan almak, iki grup arasında karşılıklı yükümlülük yaratır. Akrabalık bu yüzden aynı zamanda siyasettir."
+      },
+      {
+        "id": "q3",
+        "prompt": "Kuzen evliliğinin bazı toplumlarda makbul, bazılarında yasak olması neyi gösterir?",
+        "options": [
+          "Biyolojik risk anlaşılmamıştır",
+          "Biyolojik yakınlık aynı olduğu hâlde kuralın kültürel olarak belirlendiğini",
+          "Kuralların rastgele olduğunu",
+          "Yasağın hiçbir işlevi olmadığını"
+        ],
+        "answerIndex": 1,
+        "explanation": "Aynı soy çizgisinden gelen kuzen 'kardeş' sayılırken karşı çizgiden gelen tercih edilen eş olabilir. Biyoloji aynı, sınıflandırma farklıdır."
+      }
+    ]
+  }
+]

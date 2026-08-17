@@ -32,7 +32,7 @@ kullanılabilir.
 | 11 | Sağlık okuryazarlığı | `saglik` | Bugünü anlamak | 4 | ✅ |
 | 12 | Evrim biyolojisi | `evrim` | Klasikler | 4 | ✅ |
 | 13 | Psikoloji | `psikoloji` | Bugünü anlamak | 4 | ✅ |
-| 14 | Antropoloji | `antropoloji` | Klasikler | 3 | |
+| 14 | Antropoloji | `antropoloji` | Klasikler | 3 | ✅ |
 | 15 | Biyoloji | `biyoloji` | Klasikler | 4 | |
 | 16 | Kuantum fiziği | `kuantum` | Klasikler | 5 | |
 | 17 | Matematik | `matematik` | Klasikler | 5 | |

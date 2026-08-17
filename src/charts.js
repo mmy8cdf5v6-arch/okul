@@ -2863,5 +2863,115 @@
           " birime çıkması gerekiyor. Eğri sıfırda kırılıyor: önemli olan ne kadarınız olduğu değil, " +
           "neyi başlangıç kabul ettiğiniz. Aynı sonuç 'kazanç' diye çerçevelenirse kabul, 'kayıp' diye çerçevelenirse ret üretir." };
       }
+    },
+
+    /* ---- antropoloji ---- */
+
+    "grup-buyuklugu": {
+      title: "Grup büyüdükçe izlenecek ilişki sayısı",
+      note: "İlişki sayısı n(n−1)/2 ile büyür: grup iki katına çıkınca izlenecek ilişki dört katına çıkar. 150 sınırı (Dunbar sayısı) bir doğa yasası değil, beyin büyüklüğü ile grup büyüklüğü arasındaki bir eğilimden çıkarılmış, tartışmalı bir tahmindir.",
+      controls: [{ key: "n", label: "Grup büyüklüğü", min: 5, max: 60, step: 1, def: 30,
+        fmt: function (v) { return r0(3 * Math.pow(10, v / 20)) + " kişi"; } }],
+      draw: function (p) {
+        var N0 = 3, N1 = 3000, i;
+        var X = function (n) { return Math.log(n / N0) / Math.log(N1 / N0); };
+        var Y = function (v) { return Math.max(0, Math.min(1, Math.log(v) / Math.log(5000000))); };
+        var bag = function (n) { return (n * (n - 1)) / 2; };
+        var pts = [];
+        for (i = 0; i <= 70; i++) {
+          var n = N0 * Math.pow(N1 / N0, i / 70);
+          pts.push([X(n), Y(bag(n))]);
+        }
+        var s = frame("Grup büyüklüğü", "İlişki sayısı");
+        [[5, "yakın çevre"], [50, "aşiret"], [150, "köy"]].forEach(function (v) {
+          s += gLine(X(v[0]), 0, X(v[0]), 1, { c: "var(--rule)", w: 1, d: "3 3" });
+          s += gTxt(X(v[0]), 1, v[1], { a: "start", dx: 3, dy: 2, s: 8.5 });
+        });
+        s += gPoly(pts, { c: "var(--accent)", w: 2.6 });
+        var n0 = 3 * Math.pow(10, p.n / 20), b = bag(n0);
+        s += gDot(X(n0), Y(b), { c: "var(--ink)" });
+        s += gTxt(X(n0), Y(b), r0(b) + " bağ", {
+          a: X(n0) > 0.6 ? "end" : "start", dx: X(n0) > 0.6 ? -7 : 7, dy: -6, c: "var(--ink)", b: 1, s: 10 });
+        [10, 300].forEach(function (v) { s += gTxt(X(v), 0, v, { a: "middle", dy: 12, s: 9 }); });
+        return { svg: s, text: r0(n0) + " kişilik bir grupta " + r0(b) +
+          " ikili ilişki var ve her kişi yalnızca kendi " + r0(n0 - 1) +
+          " bağını değil, çevresindekilerin birbiriyle olan bağlarını da izlemek zorunda. " +
+          (n0 <= 160
+            ? "Bu ölçekte herkes herkesi tanır; kurallar sözle yürür, denetimi dedikodu yapar ve yazılı hiçbir şeye gerek kalmaz."
+            : "Bu ölçekte kimse herkesi tanıyamaz. Kurumlar, unvanlar, yazılı kurallar ve kimlik belgeleri tam olarak burada gerekli hâle gelir: tanımadığın biriyle güven kurmanın başka yolu kalmaz.") };
+      }
+    },
+
+    "kultur-birikimi": {
+      title: "Kültür neden kalabalık ister",
+      note: "Basitleştirilmiş bir birikimli kültür modeli: her kuşakta öğrenen, gördüğü en usta kişiyi taklit eder ve biraz hata yapar. Kalabalıkta şans eseri ustayı geçen birinin çıkma olasılığı arttığı için kayıp telafi edilir. Tazmanya örneği bu modelin en çok tartışılan uygulamasıdır ve tek açıklama olmaktan uzaktır.",
+      controls: [
+        { key: "f", label: "Aktarımın sadakati", min: 40, max: 95, step: 5, def: 70, fmt: pctS },
+        { key: "n", label: "Bağlantılı nüfus", min: 5, max: 60, step: 1, def: 30,
+          fmt: function (v) { return r0(5 * Math.pow(10, v / 20)) + " kişi"; } }
+      ],
+      draw: function (p) {
+        var kayip = 12 * (1 - p.f / 100), N0 = 5, N1 = 5000, i;
+        var X = function (n) { return Math.log(n / N0) / Math.log(N1 / N0); };
+        var D = function (n) { return -kayip + Math.log(n) + 0.5772; };
+        var LO = -6, HI = 6, Y = function (val) { return Math.max(0, Math.min(1, (val - LO) / (HI - LO))); };
+        var pts = [];
+        for (i = 0; i <= 70; i++) {
+          var n = N0 * Math.pow(N1 / N0, i / 70);
+          pts.push([X(n), Y(D(n))]);
+        }
+        var s = frame("Bağlantılı nüfus", "Kuşak başına değişim");
+        s += gRect(0, 0, 1, Y(0), { c: "var(--no)", o: 0.07, r: 0 });
+        s += gLine(0, Y(0), 1, Y(0), { c: "var(--no)", w: 1.4, d: "4 3" });
+        s += gTxt(0.99, Y(0), "beceri kayboluyor", { a: "end", dy: 12, c: "var(--no)", b: 1, s: 8.5 });
+        s += gPoly(pts, { c: "var(--ok)", w: 2.6 });
+        var esik = Math.exp(kayip - 0.5772);
+        if (esik > N0 && esik < N1) {
+          s += gLine(X(esik), 0, X(esik), 1, { c: "var(--ink)", w: 1, d: "2 3" });
+          s += gTxt(X(esik), 1, "eşik", { a: "start", dx: 3, dy: 2, c: "var(--ink)", b: 1, s: 9 });
+        }
+        var n0 = 5 * Math.pow(10, p.n / 20), d0 = D(n0);
+        s += gDot(X(n0), Y(d0), { c: "var(--ink)" });
+        s += gTxt(X(n0), Y(d0), (d0 > 0 ? "+" : "") + r1(d0), {
+          a: X(n0) > 0.6 ? "end" : "start", dx: X(n0) > 0.6 ? -7 : 7, dy: -6, c: "var(--ink)", b: 1, s: 10 });
+        [20, 300].forEach(function (v) { s += gTxt(X(v), 0, v, { a: "middle", dy: 12, s: 9 }); });
+        return { svg: s, text: "Bu sadakatte beceri, ancak birbirine bağlı nüfus " + r0(esik) +
+          " kişiyi aştığında birikmeye başlıyor. " + r0(n0) + " kişilik bir ağda kuşak başına değişim " +
+          (d0 > 0 ? "+" + r1(d0) + ": birikim sürüyor." : r1(d0) + ": her kuşak biraz kaybediyor.") +
+          " Buradaki sonuç sezgiye aykırıdır: bir topluluğun teknolojisini belirleyen şey yalnızca zekâsı değil, " +
+          "kaç kişiyle ve ne sıklıkta bilgi alışverişi yaptığıdır. Yalıtılmış bir topluluk, hiçbir şey unutmak istemese de unutur." };
+      }
+    },
+
+    "izolasyon-ve-farklilasma": {
+      title: "Ne kadar alışveriş, ne kadar farklılaşma",
+      note: "Wright'ın klasik yaklaşımı: Fst ≈ 1 / (1 + 4Nm). Fst, toplam genetik çeşitliliğin ne kadarının gruplar arasında bulunduğunu ölçer. İnsanda ölçülen değer, benzer yayılıma sahip memelilerde alışılmış aralığın alt ucundadır.",
+      controls: [{ key: "m", label: "Kuşak başına göçmen", min: 0, max: 40, step: 1, def: 16,
+        fmt: function (v) { return (0.05 * Math.pow(1000, v / 40)).toFixed(2) + " kişi"; } }],
+      draw: function (p) {
+        var M0 = 0.05, M1 = 50, i;
+        var X = function (m) { return Math.log(m / M0) / Math.log(M1 / M0); };
+        var F = function (m) { return 1 / (1 + 4 * m); };
+        var pts = [];
+        for (i = 0; i <= 70; i++) {
+          var m = M0 * Math.pow(M1 / M0, i / 70);
+          pts.push([X(m), F(m)]);
+        }
+        var s = frame("Göçmen / kuşak", "Gruplar arası pay");
+        s += gLine(0, 0.12, 1, 0.12, { c: "var(--ok)", w: 1.4, d: "4 3" });
+        s += gTxt(0.99, 0.12, "insanda ölçülen: 0,12", { a: "end", dy: -5, c: "var(--ok)", b: 1, s: 8.5 });
+        s += gPoly(pts, { c: "var(--accent)", w: 2.6 });
+        var m0 = M0 * Math.pow(1000, p.m / 40), f0 = F(m0);
+        s += gDot(X(m0), f0, { c: "var(--ink)" });
+        s += gTxt(X(m0), f0, r2(f0), {
+          a: X(m0) > 0.6 ? "end" : "start", dx: X(m0) > 0.6 ? -7 : 7, dy: f0 > 0.9 ? 13 : -6,
+          c: "var(--ink)", b: 1, s: 10 });
+        [0.5, 5].forEach(function (v) { s += gTxt(X(v), 0, r1(v), { a: "middle", dy: 12, s: 9 }); });
+        return { svg: s, text: "Kuşak başına " + r2(m0) + " göçmenlik bir alışverişte, çeşitliliğin %" +
+          r0(f0 * 100) + "'i gruplar arasında, %" + r0((1 - f0) * 100) + "'i grupların içinde kalıyor. " +
+          "Şaşırtıcı olan, kuşakta tek bir göçmenin bile farklılaşmayı büyük ölçüde engellemesi. " +
+          "İnsanda ölçülen değer 0,12 civarındadır: çeşitliliğin yaklaşık yüzde seksen sekizi grupların içindedir. " +
+          "Rastgele iki insan arasındaki genetik farkın büyük kısmı, hangi kıtadan geldiklerinden bağımsızdır." };
+      }
     }
   };

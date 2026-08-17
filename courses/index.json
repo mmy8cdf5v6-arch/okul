@@ -208,5 +208,19 @@
     "questions": 36,
     "charts": 4,
     "file": "courses/psikoloji.json"
+  },
+  {
+    "id": "antropoloji",
+    "title": "Antropoloji",
+    "subtitle": "İnsan, kültür, toplum",
+    "description": "Avcı-toplayıcılıktan tarıma, akrabalıktan armağana: insan topluluklarının kaç farklı biçimde kurulabildiği ve bunun bize kendimiz hakkında ne söylediği.",
+    "icon": "🗿",
+    "accent": "#8a5a2b",
+    "accentDark": "#e0b177",
+    "category": "klasik",
+    "lessons": 12,
+    "questions": 36,
+    "charts": 3,
+    "file": "courses/antropoloji.json"
   }
 ]
