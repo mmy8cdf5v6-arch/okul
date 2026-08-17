@@ -68,5 +68,19 @@
     "questions": 36,
     "charts": 5,
     "file": "courses/olasilik.json"
+  },
+  {
+    "id": "muzik",
+    "title": "Müzik teorisi",
+    "subtitle": "Sesin fiziğinden makama",
+    "description": "Frekanstan armonik seriye, akort uzlaşmasından moda ve aksak usule: müziğin nasıl kurulduğunu oynanabilir grafiklerle öğren.",
+    "icon": "🎼",
+    "accent": "#8c5312",
+    "accentDark": "#e6ab63",
+    "category": "klasik",
+    "lessons": 12,
+    "questions": 36,
+    "charts": 5,
+    "file": "courses/muzik.json"
   }
 ]

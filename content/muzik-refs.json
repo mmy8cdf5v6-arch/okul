@@ -1,0 +1,498 @@
+{
+  "meta": {
+    "title": "Müzik teorisi",
+    "eyebrow": "Müzik",
+    "subtitle": "Sesin fiziğinden makama",
+    "description": "Frekanstan armonik seriye, akort uzlaşmasından moda ve aksak usule: müziğin nasıl kurulduğunu oynanabilir grafiklerle öğren.",
+    "icon": "🎼",
+    "accent": "#8c5312",
+    "accentDark": "#e6ab63",
+    "category": "klasik",
+    "figuresLabel": "İsimler",
+    "timelineLabel": "Zaman çizelgesi",
+    "timelineTitle": "Sesin tarihi",
+    "timelineIntro": "Pisagor'un telinden yayın algoritmasına: müziğin hem kuramı hem de dolaşım biçimi birkaç kez baştan kuruldu.",
+    "source": "builtin",
+    "hasCharts": true
+  },
+
+  "modules": [
+    {
+      "id": "fizik",
+      "title": "Sesin fiziği",
+      "description": "Frekans, armonik seri, aralık oranları ve akort sistemlerinin kaçınılmaz uzlaşması."
+    },
+    {
+      "id": "armoni",
+      "title": "Armoni ve ritim",
+      "description": "Gam, mod, akor, kadans ve zamanın eşit ile eşit olmayan bölünmesi."
+    },
+    {
+      "id": "bicim",
+      "title": "Biçim ve gelenekler",
+      "description": "Form, Batı müziğinin dönemleri, makam geleneği ve kaydın her şeyi değiştirmesi."
+    }
+  ],
+
+  "glossary": [
+    { "id": "frekans", "term": "Frekans", "definition": "Bir dalganın saniyedeki tekrar sayısı, hertz ile ölçülür. Kulağın perde olarak algıladığı fiziksel büyüklük.", "lessonId": "frekans-ve-perde" },
+    { "id": "perde", "term": "Perde", "definition": "Frekansın algısal karşılığı: sesin ne kadar tiz ya da pes duyulduğu.", "lessonId": "frekans-ve-perde" },
+    { "id": "oktav", "term": "Oktav", "definition": "Frekansın iki katına çıkması. Bilinen bütün müzik kültürlerinde aynı nota adıyla anılır.", "lessonId": "frekans-ve-perde" },
+    { "id": "sent", "term": "Sent", "definition": "Oktavın 1200'de biri. Frekans oranlarını toplanabilir hâle getiren logaritmik birim.", "lessonId": "frekans-ve-perde" },
+    { "id": "referans-perde", "term": "Referans perde", "definition": "La sesinin kaç hertz kabul edileceği. Evrensel bir sabit değil, 1939'da varılmış bir anlaşmadır.", "lessonId": "frekans-ve-perde" },
+    { "id": "armonik", "term": "Armonik", "definition": "Temel frekansın tam katı olan üst ses. Tek bir telin aynı anda ürettiği frekans yığınının parçası.", "lessonId": "armonik-seri" },
+    { "id": "temel-frekans", "term": "Temel frekans", "definition": "Armonik yığınının en pes bileşeni. Algılanan perdeyi belirleyen frekans.", "lessonId": "armonik-seri" },
+    { "id": "tini", "term": "Tını", "definition": "Sesin rengi. Aynı perdeyi çalan iki çalgıyı ayıran şey; armoniklerin göreli güçleriyle belirlenir.", "lessonId": "armonik-seri" },
+    { "id": "formant", "term": "Formant", "definition": "Gövdenin ya da ağız boşluğunun belirli frekansları yükseltmesi. İnsan sesinde ünlü harfleri ayıran özellik.", "lessonId": "armonik-seri" },
+    { "id": "atak", "term": "Atak", "definition": "Sesin ilk anları. Çalgı tanımada armonik dağılımı kadar belirleyicidir; atak kesilirse çalgı tanınmaz hâle gelir.", "lessonId": "armonik-seri" },
+    { "id": "aralik", "term": "Aralık", "definition": "İki ses arasındaki uzaklık. Fiziksel karşılığı frekans oranıdır.", "lessonId": "araliklar" },
+    { "id": "konsonans", "term": "Konsonans", "definition": "Basit oranlı iki sesin uyumlu duyulması. Armoniklerin örtüşmesine ve birleşik dalganın kısa örüntüsüne dayanır.", "lessonId": "araliklar" },
+    { "id": "disonans", "term": "Disonans", "definition": "Karmaşık oranlı seslerin gergin duyulması. Fiziksel bir zemini vardır ama sınırı kültüre göre değişir.", "lessonId": "araliklar" },
+    { "id": "vuru", "term": "Vuru", "definition": "Birbirine yakın iki frekansın düzenli olarak güçlenip zayıflaması. Saniyedeki sayısı frekans farkına eşittir; akortun temeli.", "lessonId": "araliklar" },
+    { "id": "besli", "term": "Beşli", "definition": "3:2 oranındaki aralık. Oktavdan sonra en basit oran; bütün akort sistemlerinin çıkış noktası.", "lessonId": "araliklar" },
+    { "id": "pisagor-kommasi", "term": "Pisagor komması", "definition": "On iki saf beşlinin yedi oktavı yaklaşık 24 sent aşması. Oktavı saf beşlilerle kapatmayı imkânsız kılan fark.", "lessonId": "akort-sistemleri" },
+    { "id": "saf-duzen", "term": "Saf düzen", "definition": "Aralıkların küçük tamsayı oranlarına oturtulduğu akort. Bir tonda kusursuz, başka tonlarda kullanılamaz.", "lessonId": "akort-sistemleri" },
+    { "id": "esit-tampere", "term": "Eşit tampere", "definition": "Oktavın on iki eşit yarım sese bölünmesi. Hiçbir aralık saf değildir ama her tondan her tona geçilebilir.", "lessonId": "akort-sistemleri" },
+    { "id": "mizac", "term": "Mizaç", "definition": "Saf oranlardan bilinçli sapmalarla kurulan akort düzeni. Her mizaç, hangi aralığın ne kadar bozulacağına dair bir tercihtir.", "lessonId": "akort-sistemleri" },
+    { "id": "gam", "term": "Gam", "definition": "Oktav içinden seçilen seslerin belirli bir adım kalıbıyla dizilmesi. Majör kalıbı T-T-Y-T-T-T-Y'dir.", "lessonId": "gam-ve-mod" },
+    { "id": "mod", "term": "Mod", "definition": "Aynı diziyi farklı bir dereceden başlatmak. Notalar aynı kalır, yarım seslerin yeri değişir ve renk tümüyle farklılaşır.", "lessonId": "gam-ve-mod" },
+    { "id": "pentatonik", "term": "Pentatonik", "definition": "Yarım ses içermeyen beş sesli dizi. Birbirinden bağımsız kültürlerde ortaya çıkmıştır.", "lessonId": "gam-ve-mod" },
+    { "id": "tam-yarim", "term": "Tam ve yarım ses", "definition": "Eşit tamperede iki ve bir yarım seslik adımlar. Bir dizinin karakterini belirleyen şey bunların sırasıdır.", "lessonId": "gam-ve-mod" },
+    { "id": "uclu-akor", "term": "Üçlü akor", "definition": "Gam derecelerinin bir atlanarak üst üste konmasıyla kurulan üç sesli akor: birinci, üçüncü ve beşinci dereceler.", "lessonId": "akor" },
+    { "id": "cevrim", "term": "Çevrim", "definition": "Akorun seslerinin yeniden sıralanıp bas sesin değiştirilmesi. Akor aynı kalır, duruşu ve akıcılığı değişir.", "lessonId": "akor" },
+    { "id": "yedili-akor", "term": "Yedili akor", "definition": "Üçlüye dördüncü bir sesin eklenmesi. Dominant yedili gerilim üretir ve çözülme ister.", "lessonId": "akor" },
+    { "id": "guc-akoru", "term": "Güç akoru", "definition": "Yalnızca temel ve beşliden oluşan akor. Üçlü ses bulunmadığı için ne majör ne minördür.", "lessonId": "akor" },
+    { "id": "tonik", "term": "Tonik", "definition": "Dizinin merkezi ve dinlenme yeri. Bütün armonik hareket buraya göre tarif edilir.", "lessonId": "kadans-ve-islev" },
+    { "id": "dominant", "term": "Dominant", "definition": "Beşinci derece üzerine kurulan akor. Tonike en güçlü çekimi uygulayan işlev.", "lessonId": "kadans-ve-islev" },
+    { "id": "subdominant", "term": "Subdominant", "definition": "Dördüncü derece akoru. Tonikten uzaklaşmayı başlatan işlev.", "lessonId": "kadans-ve-islev" },
+    { "id": "kadans", "term": "Kadans", "definition": "Armoninin noktalama işareti. Bir müzikal cümlenin nerede ve ne kadar kesin bittiğini belirler.", "lessonId": "kadans-ve-islev" },
+    { "id": "modulasyon", "term": "Modülasyon", "definition": "Eser içinde tonal merkezin değişmesi. Genellikle iki tonda da anlamlı olan ortak bir akorla yumuşatılır.", "lessonId": "kadans-ve-islev" },
+    { "id": "nabiz", "term": "Nabız", "definition": "Müziğin altında akan düzenli vuruş. Ölçü, bu vuruşların vurgu örüntüsüdür.", "lessonId": "ritim-ve-usul" },
+    { "id": "olcu", "term": "Ölçü", "definition": "Güçlü ve zayıf vuruşların tekrarlanan düzeni. Dinleyicinin ayağını nereye vuracağını bilmesini sağlar.", "lessonId": "ritim-ve-usul" },
+    { "id": "aksak", "term": "Aksak usul", "definition": "Eşit olmayan iki ve üçlü gruplardan kurulan ölçü. 9/8'de 2+2+2+3, 7/8'de 2+2+3.", "lessonId": "ritim-ve-usul" },
+    { "id": "senkop", "term": "Senkop", "definition": "Vurgunun beklenen güçlü zamandan kaydırılması. Caz ve funk müziğin ritmik motoru.", "lessonId": "ritim-ve-usul" },
+    { "id": "poliritim", "term": "Poliritim", "definition": "İki farklı bölünmenin aynı anda sürmesi, örneğin üçe karşı iki. Batı Afrika geleneklerinin merkezinde.", "lessonId": "ritim-ve-usul" },
+    { "id": "motif", "term": "Motif", "definition": "Tanınabilir en küçük müzikal birim. Cümleler ve temalar motiflerden kurulur.", "lessonId": "form" },
+    { "id": "sonat-formu", "term": "Sonat formu", "definition": "Sergi, gelişme ve yeniden sergi. Armonik gerilimin biçimsel bir dramaya dönüştürülmesi.", "lessonId": "form" },
+    { "id": "rondo", "term": "Rondo", "definition": "Bir bölümün sürekli geri döndüğü, aralara yeni bölümlerin girdiği form.", "lessonId": "form" },
+    { "id": "varyasyon", "term": "Varyasyon", "definition": "Aynı temanın her seferinde başka bir kılıkta sunulması.", "lessonId": "form" },
+    { "id": "polifoni", "term": "Polifoni", "definition": "Birden çok bağımsız ezgi hattının aynı anda ilerlemesi. Notasyon olmadan bu ölçekte kurulması neredeyse imkânsızdır.", "lessonId": "bati-donemleri" },
+    { "id": "notasyon", "term": "Notasyon", "definition": "Perde ve sürenin yazıya geçirilmesi. Müziği belleğin sınırlarından kurtardı; yazılamayan her şeyi de ikinci plana itti.", "lessonId": "bati-donemleri" },
+    { "id": "atonalite", "term": "Atonalite", "definition": "Tonal merkezin bilinçli olarak terk edilmesi. Schoenberg'in on iki ton yöntemi bu boşluğa bir düzen önerisiydi.", "lessonId": "bati-donemleri" },
+    { "id": "makam", "term": "Makam", "definition": "Yalnızca kullanılan sesleri değil, seyri — başlangıç, durak, yön ve karar davranışını da tarif eden yapı.", "lessonId": "makam-ve-usul" },
+    { "id": "koma", "term": "Koma", "definition": "Türk müziği kuramında tam sesin dokuzda biri. Eşit tamperede karşılığı olmayan sesleri mümkün kılan birim.", "lessonId": "makam-ve-usul" },
+    { "id": "seyir", "term": "Seyir", "definition": "Ezginin makam içindeki gidiş biçimi. Aynı sesleri kullanan iki makamı birbirinden ayıran şey.", "lessonId": "makam-ve-usul" },
+    { "id": "cesni", "term": "Çeşni", "definition": "Bir makamın karakterini veren küçük ses öbeği. Makamlar çeşnilerin birleşmesiyle kurulur.", "lessonId": "makam-ve-usul" },
+    { "id": "taksim", "term": "Taksim", "definition": "Usulsüz, doğaçlama giriş. Makamın seyrini dinleyiciye tanıtır.", "lessonId": "makam-ve-usul" },
+    { "id": "mesk", "term": "Meşk", "definition": "Notaya değil, ustadan öğrenciye doğrudan aktarıma dayalı geleneksel öğretim yöntemi.", "lessonId": "makam-ve-usul" },
+    { "id": "cok-kanalli", "term": "Çok kanallı kayıt", "definition": "Parçaların ayrı ayrı kaydedilip birleştirilmesi. Stüdyoyu kayıt aracı olmaktan çıkarıp besteleme aracına dönüştürdü.", "lessonId": "kayit-ve-bugun" },
+    { "id": "ornekleme", "term": "Örnekleme", "definition": "Başka bir kaydın parçasının yeni bir eserde malzeme olarak kullanılması. Hip-hop bu teknik üzerine kuruldu.", "lessonId": "kayit-ve-bugun" },
+    { "id": "gurluk-savasi", "term": "Gürlük savaşı", "definition": "Daha yüksek duyulmak için dinamik aralığın sıkıştırılması. Kazanılan dikkat, kaybedilen nefes.", "lessonId": "kayit-ve-bugun" }
+  ],
+
+  "figures": [
+    {
+      "id": "pisagor",
+      "name": "Pisagor",
+      "lifespan": "MÖ 570-495",
+      "oneLiner": "Uyumun basit tamsayı oranlarında olduğunu söyledi.",
+      "contributions": [
+        "Tel boyu oranlarıyla aralıklar arasındaki ilişkiyi kurdu",
+        "Oktav 2:1, beşli 3:2, dörtlü 4:3 oranlarını tanımladı",
+        "Bütün akort tarihinin başladığı sorunu — beşlilerle oktavı kapatma sorununu — miras bıraktı"
+      ],
+      "lessonId": "araliklar",
+      "tag": "Antik"
+    },
+    {
+      "id": "farabi",
+      "name": "Farabi",
+      "lifespan": "872-950",
+      "oneLiner": "Ortaçağın en kapsamlı müzik kuramı kitabını yazdı.",
+      "contributions": [
+        "Kitâbü'l-Mûsîka'l-Kebîr ile aralıkları ve çalgıları sistemli biçimde inceledi",
+        "Yunan kuramını Arapça kaynaklarla birleştirip genişletti",
+        "Ud üzerinde perde bölümlerini matematiksel olarak tarif etti"
+      ],
+      "lessonId": "akort-sistemleri",
+      "tag": "Ortaçağ"
+    },
+    {
+      "id": "guido",
+      "name": "Guido d'Arezzo",
+      "lifespan": "991-1033",
+      "oneLiner": "Notayı çizgi üzerine oturttu ve perdeleri adlandırdı.",
+      "contributions": [
+        "Dizekli notasyonu geliştirdi; perde artık kesin olarak yazılabiliyordu",
+        "Solmizasyon hecelerini (ut-re-mi…) ortaya koydu",
+        "Bir ilahiyi duymadan okumayı mümkün kılarak öğrenme süresini kısalttı"
+      ],
+      "lessonId": "bati-donemleri",
+      "tag": "Notasyon"
+    },
+    {
+      "id": "urmevi",
+      "name": "Safiyüddin Urmevi",
+      "lifespan": "1216-1294",
+      "oneLiner": "Makam kuramının bugün hâlâ kullanılan matematiksel temelini attı.",
+      "contributions": [
+        "Oktavı on yedi aralığa bölen sistemi kurdu",
+        "Perdeleri harflerle adlandıran bir gösterim geliştirdi",
+        "Kitâbü'l-Edvâr, sonraki yüzyılların başvuru metni oldu"
+      ],
+      "lessonId": "makam-ve-usul",
+      "tag": "Makam kuramı"
+    },
+    {
+      "id": "zarlino",
+      "name": "Gioseffo Zarlino",
+      "lifespan": "1517-1590",
+      "oneLiner": "Üçlüleri kurama soktu ve saf düzeni savundu.",
+      "contributions": [
+        "Majör ve minör üçlüyü armoninin temeli olarak tanımladı",
+        "Saf düzenin oranlarını sistemli biçimde savundu",
+        "Çok sesli yazımın kurallarını derledi"
+      ],
+      "lessonId": "akort-sistemleri",
+      "tag": "Rönesans kuramı"
+    },
+    {
+      "id": "monteverdi",
+      "name": "Claudio Monteverdi",
+      "lifespan": "1567-1643",
+      "oneLiner": "Sözün müziğe hükmedebileceğini savunarak yeni bir üslup açtı.",
+      "contributions": [
+        "Operayı olgun bir tür hâline getirdi",
+        "Disonansı ifade için serbestçe kullanmayı savundu",
+        "Rönesans dengesinden barok dramaya geçişi temsil eder"
+      ],
+      "lessonId": "bati-donemleri",
+      "tag": "Erken Barok"
+    },
+    {
+      "id": "rameau",
+      "name": "Jean-Philippe Rameau",
+      "lifespan": "1683-1764",
+      "oneLiner": "Armoniyi akorlar ve kökleri üzerinden düşünmeyi başlattı.",
+      "contributions": [
+        "1722'de armoni üzerine kuramsal incelemesini yayımladı",
+        "Temel bas kavramıyla çevrimleri aynı akorun biçimleri olarak açıkladı",
+        "Armoniyi armonik seriye dayandırmayı denedi"
+      ],
+      "lessonId": "kadans-ve-islev",
+      "tag": "Armoni kuramı"
+    },
+    {
+      "id": "bach",
+      "name": "Johann Sebastian Bach",
+      "lifespan": "1685-1750",
+      "oneLiner": "Bütün tonlarda yazarak iyi mizacın imkânını gösterdi.",
+      "contributions": [
+        "Das Wohltemperierte Klavier'de yirmi dört tonun hepsini kullandı",
+        "Kontrpuanı en yoğun biçimine taşıdı",
+        "Tonal armoninin olanaklarını sistemli biçimde tüketti"
+      ],
+      "lessonId": "akort-sistemleri",
+      "tag": "Barok"
+    },
+    {
+      "id": "dede-efendi",
+      "name": "Hammamizade İsmail Dede Efendi",
+      "lifespan": "1778-1846",
+      "oneLiner": "Klasik Osmanlı müziğinin son büyük ustası sayılır.",
+      "contributions": [
+        "Yüzlerce eser besteledi, birçok yeni makam terkip etti",
+        "Meşk geleneğiyle geniş bir öğrenci halkası yetiştirdi",
+        "Batı müziğinin saraya girdiği bir dönemde geleneği zirveye taşıdı"
+      ],
+      "lessonId": "makam-ve-usul",
+      "tag": "Osmanlı müziği"
+    },
+    {
+      "id": "helmholtz",
+      "name": "Hermann von Helmholtz",
+      "lifespan": "1821-1894",
+      "oneLiner": "Uyum ve pürüz duygusunu fizyolojiyle açıkladı.",
+      "contributions": [
+        "1863'te ton duyumunun kuramını yayımladı",
+        "Disonansı, birbirine yakın armoniklerin ürettiği pürüzle açıkladı",
+        "Müzik kuramı ile akustik ve fizyolojiyi birleştirdi"
+      ],
+      "lessonId": "araliklar",
+      "tag": "Akustik"
+    },
+    {
+      "id": "debussy",
+      "name": "Claude Debussy",
+      "lifespan": "1862-1918",
+      "oneLiner": "Akoru çözülmesi gereken bir gerilim olmaktan çıkarıp bir renge dönüştürdü.",
+      "contributions": [
+        "Tam ses dizisi ve paralel akorlarla tonal çekimi gevşetti",
+        "1889 Paris sergisinde duyduğu gamelan müziğinden etkilendi",
+        "Armoniyi işlevden bağımsız bir doku aracı olarak kullandı"
+      ],
+      "lessonId": "gam-ve-mod",
+      "tag": "İzlenimcilik"
+    },
+    {
+      "id": "rauf-yekta",
+      "name": "Rauf Yekta Bey",
+      "lifespan": "1871-1935",
+      "oneLiner": "Türk müziği kuramını modern bir dille yeniden yazdı.",
+      "contributions": [
+        "Makam ve usul sistemini Batılı okurlara tanıtan kapsamlı bir inceleme yazdı",
+        "Perdeleri oran temelli olarak yeniden tanımladı",
+        "Osmanlı repertuvarının notaya geçirilmesinde öncü rol oynadı"
+      ],
+      "lessonId": "makam-ve-usul",
+      "tag": "Türk müziği kuramı"
+    },
+    {
+      "id": "schoenberg",
+      "name": "Arnold Schoenberg",
+      "lifespan": "1874-1951",
+      "oneLiner": "Tonal merkezi bıraktı ve yerine yeni bir düzen ilkesi önerdi.",
+      "contributions": [
+        "Atonal yazıya geçti, ardından on iki ton tekniğini geliştirdi",
+        "On iki sesin hiçbirini merkez saymayan bir dizi mantığı kurdu",
+        "Yirminci yüzyıl sanat müziğinin ana tartışmasını başlattı"
+      ],
+      "lessonId": "bati-donemleri",
+      "tag": "Atonalite"
+    },
+    {
+      "id": "bartok",
+      "name": "Béla Bartók",
+      "lifespan": "1881-1945",
+      "oneLiner": "Köy ezgilerini fonografla kaydedip besteye taşıdı.",
+      "contributions": [
+        "Macaristan, Balkanlar ve Anadolu'da binlerce halk ezgisi derledi",
+        "Aksak usulleri ve modal dizileri sanat müziğine soktu",
+        "Etnomüzikolojiyi saha kaydına dayalı bir disipline dönüştürdü"
+      ],
+      "lessonId": "ritim-ve-usul",
+      "tag": "Halk müziği araştırması"
+    },
+    {
+      "id": "stravinski",
+      "name": "Igor Stravinski",
+      "lifespan": "1882-1971",
+      "oneLiner": "Ritmi armoninin önüne geçirdi.",
+      "contributions": [
+        "Bahar Ayini'nde düzensiz vurgu ve değişken ölçüyü merkeze aldı",
+        "Katmanlı ritmik yapılarla yeni bir zaman duygusu kurdu",
+        "Üslubunu yaşamı boyunca birkaç kez tümüyle değiştirdi"
+      ],
+      "lessonId": "ritim-ve-usul",
+      "tag": "20. yüzyıl"
+    }
+  ],
+
+  "eraLabels": {
+    "antik": "Antikten Ortaçağa",
+    "yazi": "Notanın çağı",
+    "tonal": "Tonal düzen",
+    "kirilma": "Kırılma ve kayıt"
+  },
+
+  "timeline": [
+    {
+      "id": "pisagor-oran",
+      "year": -530,
+      "yearLabel": "MÖ 530 dolayı",
+      "title": "Tel boyu ve oran",
+      "body": "Uyumlu aralıkların basit tamsayı oranlarına karşılık geldiği gözlemi, müziği ilk kez ölçülebilir bir konuya çevirir.",
+      "era": "antik",
+      "figureId": "pisagor"
+    },
+    {
+      "id": "farabi-kitap",
+      "year": 940,
+      "yearLabel": "940 dolayı",
+      "title": "Kitâbü'l-Mûsîka'l-Kebîr",
+      "body": "Farabi, aralıkları ve çalgıları sistemli biçimde inceler; Yunan kuramını genişleterek yüzyıllar boyunca okunacak bir başvuru metni bırakır.",
+      "era": "antik",
+      "figureId": "farabi"
+    },
+    {
+      "id": "guido-dizek",
+      "year": 1025,
+      "yearLabel": "1025 dolayı",
+      "title": "Dizekli notasyon",
+      "body": "Guido d'Arezzo perdeyi çizgi üzerine oturtur. Bir ezgiyi duymadan okumak mümkün hâle gelir; öğrenme süresi kısalır, repertuvar yayılır.",
+      "era": "yazi",
+      "figureId": "guido"
+    },
+    {
+      "id": "urmevi-edvar",
+      "year": 1252,
+      "yearLabel": "1252 dolayı",
+      "title": "Kitâbü'l-Edvâr",
+      "body": "Safiyüddin Urmevi oktavı on yedi aralığa bölen sistemi kurar. Makam kuramı matematiksel bir temel kazanır.",
+      "era": "yazi",
+      "figureId": "urmevi"
+    },
+    {
+      "id": "matbaa-nota",
+      "year": 1501,
+      "yearLabel": "1501",
+      "title": "Basılı nota",
+      "body": "Venedik'te hareketli harfle nota basımı başlar. Müzik ilk kez bir yayın nesnesi hâline gelir ve üsluplar kıtaya hızla yayılır.",
+      "era": "yazi"
+    },
+    {
+      "id": "zarlino-1558",
+      "year": 1558,
+      "yearLabel": "1558",
+      "title": "Üçlüler kurama giriyor",
+      "body": "Zarlino, majör ve minör üçlüyü armoninin temeli olarak tanımlar ve saf düzeni savunur. Ortaçağın beşli merkezli dünyası geride kalır.",
+      "era": "yazi",
+      "figureId": "zarlino"
+    },
+    {
+      "id": "orfeo",
+      "year": 1607,
+      "yearLabel": "1607",
+      "title": "Orfeo",
+      "body": "Monteverdi operayı olgun bir türe dönüştürür. Söz ile müzik arasındaki hiyerarşi tartışması, barok üslubun kapısını açar.",
+      "era": "tonal",
+      "figureId": "monteverdi"
+    },
+    {
+      "id": "rameau-1722",
+      "year": 1722,
+      "yearLabel": "1722",
+      "title": "Armoni İncelemesi",
+      "body": "Rameau, çevrimleri aynı akorun biçimleri olarak açıklar ve armoniyi kök hareketleri üzerinden düşünmeyi başlatır.",
+      "era": "tonal",
+      "figureId": "rameau"
+    },
+    {
+      "id": "wtk",
+      "year": 1722,
+      "yearLabel": "1722",
+      "title": "Das Wohltemperierte Klavier",
+      "body": "Bach yirmi dört tonun hepsinde prelüd ve füg yazar. İyi mizacın vaadi bir gösteriyle kanıtlanır.",
+      "era": "tonal",
+      "figureId": "bach"
+    },
+    {
+      "id": "piyano",
+      "year": 1700,
+      "yearLabel": "1700 dolayı",
+      "title": "Piyanonun icadı",
+      "body": "Cristofori'nin çekiçli mekanizması, tuşa basma gücüne göre gürlüğü değiştirmeyi mümkün kılar. Klavye ilk kez ifade taşıyabilir hâle gelir.",
+      "era": "tonal"
+    },
+    {
+      "id": "senfoni",
+      "year": 1800,
+      "yearLabel": "1800 dolayı",
+      "title": "Sonat formu olgunlaşıyor",
+      "body": "Senfoni, sonat ve yaylı dörtlü, sergi-gelişme-yeniden sergi kurgusuyla standartlaşır. Armonik gerilim biçimsel bir dramaya dönüşür.",
+      "era": "tonal"
+    },
+    {
+      "id": "dede-efendi-donem",
+      "year": 1820,
+      "yearLabel": "1820 dolayı",
+      "title": "Klasik Osmanlı müziğinin zirvesi",
+      "body": "Dede Efendi yüzlerce eser besteler ve meşk yoluyla geniş bir öğrenci halkası yetiştirir. Aynı yıllarda saraya Batı müziği de girmektedir.",
+      "era": "tonal",
+      "figureId": "dede-efendi"
+    },
+    {
+      "id": "helmholtz-1863",
+      "year": 1863,
+      "yearLabel": "1863",
+      "title": "Ton duyumunun kuramı",
+      "body": "Helmholtz, disonansı birbirine yakın armoniklerin ürettiği pürüzle açıklar. Müzik kuramı akustik ve fizyolojiyle birleşir.",
+      "era": "tonal",
+      "figureId": "helmholtz"
+    },
+    {
+      "id": "fonograf",
+      "year": 1877,
+      "yearLabel": "1877",
+      "title": "Fonograf",
+      "body": "Ses ilk kez kaydedilip yeniden çalınabilir hâle gelir. Müzik, yalnızca icra edildiği anda var olan bir şey olmaktan çıkar.",
+      "era": "kirilma"
+    },
+    {
+      "id": "gamelan-1889",
+      "year": 1889,
+      "yearLabel": "1889",
+      "title": "Paris'te gamelan",
+      "body": "Dünya sergisinde duyulan Cava müziği, Debussy ve çağdaşları üzerinde kalıcı iz bırakır. Batı armonisi ilk kez başka bir sistemle yüzleşir.",
+      "era": "kirilma",
+      "figureId": "debussy"
+    },
+    {
+      "id": "bartok-derleme",
+      "year": 1906,
+      "yearLabel": "1906",
+      "title": "Fonografla köy ezgileri",
+      "body": "Bartók ve Kodály saha kayıtlarına başlar. Halk müziği ilk kez kulaktan değil, kayıttan çalışılan bir malzeme olur.",
+      "era": "kirilma",
+      "figureId": "bartok"
+    },
+    {
+      "id": "bahar-ayini",
+      "year": 1913,
+      "yearLabel": "1913",
+      "title": "Bahar Ayini",
+      "body": "Stravinski'nin prömiyerinde salon karışır. Düzensiz vurgu ve sert armoni, ritmi yirminci yüzyıl müziğinin merkezine taşır.",
+      "era": "kirilma",
+      "figureId": "stravinski"
+    },
+    {
+      "id": "on-iki-ton",
+      "year": 1923,
+      "yearLabel": "1923",
+      "title": "On iki ton tekniği",
+      "body": "Schoenberg, hiçbir sesin merkez olmadığı bir düzen ilkesi geliştirir. Tonalitenin yerçekimi resmen kaldırılır.",
+      "era": "kirilma",
+      "figureId": "schoenberg"
+    },
+    {
+      "id": "la-440",
+      "year": 1939,
+      "yearLabel": "1939",
+      "title": "La = 440 hertz",
+      "body": "Uluslararası bir konferans referans perdeyi standartlaştırır. Yüzyıllardır değişken olan bir değer, ortak bir kabule bağlanır.",
+      "era": "kirilma"
+    },
+    {
+      "id": "cok-kanalli-kayit",
+      "year": 1955,
+      "yearLabel": "1955",
+      "title": "Çok kanallı kayıt",
+      "body": "Parçaların ayrı ayrı kaydedilip birleştirilmesi yaygınlaşır. Stüdyo bir kayıt aracı olmaktan çıkıp besteleme aracına dönüşür.",
+      "era": "kirilma"
+    },
+    {
+      "id": "sentezleyici",
+      "year": 1964,
+      "yearLabel": "1964",
+      "title": "Modüler sentezleyici",
+      "body": "Armonik dağılımı elle kurmak mümkün hâle gelir. Tını, seçilen bir çalgının özelliği olmaktan çıkıp tasarlanan bir malzeme olur.",
+      "era": "kirilma"
+    },
+    {
+      "id": "ornekleme-1980",
+      "year": 1980,
+      "yearLabel": "1980'ler",
+      "title": "Örnekleme yaygınlaşıyor",
+      "body": "Başka kayıtların parçaları yeni eserlerin malzemesi olur. Hip-hop bu teknik üzerine kurulur; telif tartışması da aynı anda başlar.",
+      "era": "kirilma"
+    },
+    {
+      "id": "yayin-platformlari",
+      "year": 2015,
+      "yearLabel": "2015",
+      "title": "Yayın verisi biçimi değiştiriyor",
+      "body": "Dinleme ölçümleri, girişleri kısaltan ve nakaratı öne alan bir yazım pratiğini yaygınlaştırır. Dağıtım biçimi bir kez daha müziğin biçimine karışır.",
+      "era": "kirilma"
+    }
+  ]
+}

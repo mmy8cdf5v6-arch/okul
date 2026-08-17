@@ -1296,5 +1296,187 @@
           r1(here * 100) + ". Sezgiyi şaşırtan şey şu: grupta " + r0(cift) + " ayrı kişi çifti var ve her biri " +
           "ayrı bir çakışma şansı taşıyor." };
       }
+    },
+
+    "armonik-seri": {
+      title: "Armonik seri",
+      note: "Tek bir telden çıkan ses aslında bir yığındır. Majör akorun üç sesi, doğada bu yığının içinde zaten durur.",
+      controls: [
+        { key: "n", label: "Kaç armonik", min: 1, max: 12, step: 1, def: 6,
+          fmt: function (v) { return v + " ses"; } },
+        { key: "d", label: "Üst seslerin gücü", min: 0, max: 100, step: 10, def: 50,
+          fmt: function (v) { return v < 30 ? "yumuşak" : v > 70 ? "parlak" : "orta"; } },
+        { key: "g", type: "choice", label: "Görünüm", def: "spektrum",
+          options: [["spektrum", "Spektrum"], ["dalga", "Dalga"]] }
+      ],
+      draw: function (p) {
+        var ADLAR = ["temel", "oktav", "beşli", "oktav", "bü. üçlü", "beşli", "~yedili",
+                     "oktav", "bü. ikili", "bü. üçlü", "—", "beşli"];
+        var e = 2 - 1.5 * (p.d / 100), N = p.n, i, k;
+        var amp = [];
+        for (k = 1; k <= N; k++) amp.push(Math.pow(k, -e));
+        var s;
+        if (p.g === "spektrum") {
+          s = frame("", "Güç");
+          for (k = 1; k <= N; k++) {
+            var cx = (k - 0.5) / N, w = Math.min(0.055, 0.4 / N);
+            s += gRect(cx - w, 0, cx + w, amp[k - 1], { c: k === 1 ? "var(--ink)" : "var(--accent)", o: k === 1 ? 0.9 : 0.75 });
+            if (N <= 8) s += gTxt(cx, amp[k - 1], ADLAR[k - 1], { a: "middle", dy: -5, s: 8, c: "var(--muted)" });
+            s += gTxt(cx, 0, k + "", { a: "middle", dy: 12, s: 9 });
+          }
+        } else {
+          var pts = [], tot = 0;
+          for (k = 1; k <= N; k++) tot += amp[k - 1];
+          for (i = 0; i <= 260; i++) {
+            var t = (2 * i) / 260, v = 0;
+            for (k = 1; k <= N; k++) v += amp[k - 1] * Math.sin(2 * Math.PI * k * t);
+            pts.push([i / 260, 0.5 + (v / (2 * tot)) * 0.92]);
+          }
+          s = frame("İki periyot", "Basınç");
+          s += gLine(0, 0.5, 1, 0.5, { c: "var(--rule)", w: 1.2, d: "4 3" });
+          s += gPoly(pts, { c: "var(--accent)", w: 2 });
+        }
+        return { svg: s, text: N === 1
+          ? "Tek bir saf sinüs: doğada neredeyse hiç duyulmaz. Üst armonikleri ekledikçe ses bir enstrümana benzemeye başlar."
+          : "İlk " + N + " armonik: " + ADLAR.slice(0, Math.min(N, 6)).join(", ") + (N > 6 ? "…" : "") +
+            ". Perde temel frekansla, tını ise üst armoniklerin güç dağılımıyla belirlenir — aynı notayı çalan flüt ile keman " +
+            "bu yüzden farklı duyulur." };
+      }
+    },
+
+    "konsonans": {
+      title: "Basit oranlar neden uyumlu duyulur",
+      note: "Kulağın 'uyum' dediği şey, iki sesin birleşik dalgasının kısa bir örüntüde tekrar etmesidir. Oran ne kadar basitse örüntü o kadar kısadır.",
+      controls: [{ key: "c", label: "İkinci sesin aralığı", min: 0, max: 12, step: 1, def: 7,
+        fmt: function (v) {
+          var A = ["unison", "kü. ikili", "bü. ikili", "kü. üçlü", "bü. üçlü", "dörtlü", "artık dörtlü",
+                   "beşli", "kü. altılı", "bü. altılı", "kü. yedili", "bü. yedili", "oktav"];
+          return A[v];
+        } }],
+      draw: function (p) {
+        var SAF = [[1, 1], [16, 15], [9, 8], [6, 5], [5, 4], [4, 3], [45, 32],
+                   [3, 2], [8, 5], [5, 3], [9, 5], [15, 8], [2, 1]];
+        var r = Math.pow(2, p.c / 12), saf = SAF[p.c], oran = saf[0] / saf[1];
+        var sent = 1200 * (Math.log(r / oran) / Math.log(2));
+        var pts = [], i;
+        for (i = 0; i <= 300; i++) {
+          var t = (4 * i) / 300;
+          pts.push([i / 300, 0.5 + (Math.sin(2 * Math.PI * t) + Math.sin(2 * Math.PI * r * t)) / 4.4]);
+        }
+        var s = frame("Zaman", "Birleşik dalga");
+        s += gLine(0, 0.5, 1, 0.5, { c: "var(--rule)", w: 1.2, d: "4 3" });
+        s += gPoly(pts, { c: "var(--accent)", w: 1.9 });
+        if (saf[1] <= 8) {                                  // basit oranda örüntü kısa: tekrarı işaretle
+          var per = saf[1] / 4;
+          for (i = 1; i * per < 1; i++) s += gLine(i * per, 0.06, i * per, 0.94, { c: "var(--ok)", w: 1, d: "3 3" });
+        }
+        return { svg: s, text: "Eşit tamperede bu aralığın oranı " + r2(r) + "; en yakın saf oran " +
+          saf[0] + ":" + saf[1] + " = " + r2(oran) + ". Fark " + (sent > 0 ? "+" : "") + r0(sent) + " sent. " +
+          (saf[1] <= 4
+            ? "Payda küçük olduğu için birleşik dalga kısa aralıklarla tekrar ediyor — yeşil çizgiler tekrarı gösteriyor. Kulak bunu uyum olarak duyar."
+            : saf[1] <= 8
+              ? "Orta karmaşıklıkta bir oran: örüntü var ama daha uzun. Batı armonisi bu aralıkları renk için kullanır."
+              : "Payda büyük: birleşik dalga uzun bir çevrimde tekrar ediyor, kulak düzenli bir örüntü yakalayamıyor. Gerilim duygusu buradan gelir.") };
+      }
+    },
+
+    "akort-sistemleri": {
+      title: "Akort: kaçınılmaz bir uzlaşma",
+      note: "Saf oranlar bir tonda kusursuzdur ama başka bir tona geçince bozulur. Eşit tampere, her aralığı biraz bozarak her tonu eşit derecede kullanılabilir kılar.",
+      controls: [{ key: "s", type: "choice", label: "Karşılaştırılan düzen", def: "dogal",
+        options: [["dogal", "Saf düzen"], ["pisagor", "Pisagor"]] }],
+      draw: function (p) {
+        var AD = ["do", "do♯", "re", "mi♭", "mi", "fa", "fa♯", "sol", "sol♯", "la", "si♭", "si"];
+        var SAF = [0, 111.73, 203.91, 315.64, 386.31, 498.04, 590.22, 701.96, 813.69, 884.36, 1017.60, 1088.27];
+        var PIS = [0, 90.22, 203.91, 294.13, 407.82, 498.04, 611.73, 701.96, 792.18, 905.87, 996.09, 1109.78];
+        var v = p.s === "dogal" ? SAF : PIS, top = 22, i;
+        var y = function (c) { return 0.5 + c / (2 * top); };
+        var s = frame("", "Sent farkı");
+        s += gLine(0, 0.5, 1, 0.5, { c: "var(--rule)", w: 1.4 });
+        s += gTxt(0.005, 0.5, "eşit tampere", { a: "start", dy: -4, s: 8.5 });
+        var enBuyuk = 0, enAd = "";
+        for (i = 0; i < 12; i++) {
+          var d = v[i] - 100 * i, cx = (i + 0.5) / 12;
+          if (Math.abs(d) > Math.abs(enBuyuk)) { enBuyuk = d; enAd = AD[i]; }
+          s += gRect(cx - 0.028, 0.5, cx + 0.028, Math.max(0.02, Math.min(0.98, y(d))),
+            { c: Math.abs(d) > 10 ? "var(--no)" : "var(--accent)", o: 0.8 });
+          s += gTxt(cx, 0, AD[i], { a: "middle", dy: 12, s: 8 });
+        }
+        return { svg: s, text: (p.s === "dogal"
+          ? "Saf düzende aralıklar küçük tamsayı oranlarına oturur; üçlüler pürüzsüzdür. "
+          : "Pisagor düzeni her şeyi saf beşliler üstüne kurar; beşliler kusursuz, üçlüler ise belirgin biçimde tiz kalır. ") +
+          "Eşit tampereye göre en büyük sapma " + enAd + " sesinde: " + (enBuyuk > 0 ? "+" : "") + r0(enBuyuk) +
+          " sent. On sentin üstündeki farklar kırmızı; eğitimli bir kulak bu farkı duyar." };
+      }
+    },
+
+    "modlar": {
+      title: "Aynı yedi ses, yedi ayrı renk",
+      note: "Modlar yeni notalar getirmez; aynı diziyi farklı bir sesten başlatır. Değişen şey, tam ve yarım seslerin sırasıdır.",
+      controls: [{ key: "k", label: "Mod", min: 1, max: 7, step: 1, def: 1,
+        fmt: function (v) {
+          return ["İyonyen", "Dorien", "Frigyen", "Lidyen", "Miksolidyen", "Aeolyen", "Lokrien"][v - 1];
+        } }],
+      draw: function (p) {
+        var ADLAR = ["İyonyen", "Dorien", "Frigyen", "Lidyen", "Miksolidyen", "Aeolyen", "Lokrien"];
+        var RENK = ["parlak", "hüzünlü ama yumuşak", "koyu ve gergin", "en parlak",
+                    "neşeli ama çözülmeyen", "hüzünlü", "kararsız"];
+        var TEMEL = [2, 2, 1, 2, 2, 2, 1], adim = [], i;
+        for (i = 0; i < 7; i++) adim.push(TEMEL[(i + p.k - 1) % 7]);
+        var derece = [0], t = 0;
+        for (i = 0; i < 7; i++) { t += adim[i]; derece.push(t); }
+        var siyah = [1, 3, 6, 8, 10];
+        var s = "";
+        for (i = 0; i <= 12; i++) {
+          var x = i / 12, ic = derece.indexOf(i) >= 0;
+          s += gRect(x - 0.036, 0.30, x + 0.036, 0.72, {
+            c: ic ? "var(--accent)" : (siyah.indexOf(i) >= 0 ? "var(--ink)" : "var(--rule)"),
+            o: ic ? 0.9 : 0.22, r: 2 });
+          if (ic) s += gTxt(x, 0.72, (derece.indexOf(i) + 1) + "", { a: "middle", dy: -5, s: 8.5, b: 1, c: "var(--ink)" });
+        }
+        s += gLine(0, 0.24, 1, 0.24, { c: "var(--rule)", w: 1.2 });
+        for (i = 0; i < 7; i++) {
+          var a = derece[i] / 12, b = derece[i + 1] / 12;
+          s += gTxt((a + b) / 2, 0.24, adim[i] === 1 ? "Y" : "T", {
+            a: "middle", dy: 13, s: 9, b: adim[i] === 1 ? 1 : 0,
+            c: adim[i] === 1 ? "var(--no)" : "var(--muted)" });
+        }
+        s += gTxt(0, 0.86, ADLAR[p.k - 1], { a: "start", s: 11, b: 1, c: "var(--ink)" });
+        return { svg: s, text: ADLAR[p.k - 1] + ": " + adim.map(function (a) { return a === 1 ? "yarım" : "tam"; }).join("-") +
+          ". Karakteri " + RENK[p.k - 1] + ". Yarım seslerin dizideki yeri (kırmızı Y'ler) modun rengini belirleyen tek şeydir." };
+      }
+    },
+
+    "usuller": {
+      title: "Eşit ve aksak usuller",
+      note: "Aksak usullerde ölçü, eşit olmayan iki ve üçlü gruplardan kurulur. Türkü ve halk dansı repertuvarının büyük kısmı bu usullerdedir.",
+      controls: [{ key: "u", type: "choice", label: "Usul", def: "98",
+        options: [["44", "4/4"], ["68", "6/8"], ["78", "7/8"], ["98", "9/8"]] }],
+      draw: function (p) {
+        var U = {
+          "44": { g: [2, 2, 2, 2], ad: "4/4", not: "Eşit ölçü: dört vuruş, ikişer sekizlik. Pop ve rock repertuvarının varsayılanı." },
+          "68": { g: [3, 3], ad: "6/8", not: "Altı sekizlik iki üçlü grup hâlinde. Eşit ama üçlü nabızlı; yürüyüş değil salınım verir." },
+          "78": { g: [2, 2, 3], ad: "7/8", not: "Aksak: iki kısa bir uzun. Sondaki üçlü grup, ölçüye o tanıdık topallamayı verir." },
+          "98": { g: [2, 2, 2, 3], ad: "9/8", not: "Karşılama ve pek çok Roman havasının usulü. Üç kısa grubun ardından gelen uzun grup ölçüyü sürükler." }
+        }[p.u];
+        var n = U.g.reduce(function (a, b) { return a + b; }, 0), i, j, at = 0;
+        var s = "";
+        U.g.forEach(function (uzun) {
+          var x0 = at / n, x1 = (at + uzun) / n;
+          // Grup kutusu sütunların arkasında durur; vurgu sırası böyle okunuyor.
+          s += gRect(x0 + 0.004, 0.22, x1 - 0.004, 0.9, { c: "var(--accent)", o: 0.09, r: 2 });
+          s += gTxt((x0 + x1) / 2, 0.22, uzun + "", { a: "middle", dy: 13, s: 10, b: 1,
+            c: uzun === 3 ? "var(--no)" : "var(--muted)" });
+          for (j = 0; j < uzun; j++) {
+            var cx = (at + j + 0.5) / n, vurgu = j === 0;
+            s += gRect(cx - 0.03, 0.26, cx + 0.03, vurgu ? 0.84 : 0.55, {
+              c: vurgu ? (uzun === 3 ? "var(--no)" : "var(--accent)") : "var(--rule)",
+              o: vurgu ? 0.9 : 0.8, r: 2 });
+          }
+          at += uzun;
+        });
+        s += gTxt(0, 0.99, U.ad + "  ·  " + U.g.join("+"), { a: "start", s: 11, b: 1, c: "var(--ink)" });
+        return { svg: s, text: U.ad + " = " + U.g.join("+") + ". Uzun sütunlar grup başlarındaki vurguları gösteriyor. " + U.not };
+      }
     }
   };

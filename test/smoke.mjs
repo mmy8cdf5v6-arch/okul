@@ -279,6 +279,13 @@ await step("bütün hazır kursların grafikleri çiziliyor", async () => {
         const svg = await fig.locator("svg").innerHTML();
         if (/NaN|Infinity/.test(svg)) throw new Error(l.chart + " (" + bound + "): çizimde NaN");
       }
+      for (let i = 0; i < segs.length; i++) {
+        await segs[i].click();
+        await page.waitForTimeout(30);
+        texts.push(await fig.locator(".chart-read").textContent());
+        const svg = await fig.locator("svg").innerHTML();
+        if (/NaN|Infinity/.test(svg)) throw new Error(l.chart + " (seçenek " + i + "): çizimde NaN");
+      }
       if (sliders.length && new Set(texts).size === 1) throw new Error(l.chart + ": kaydırıcı ölü");
       for (const t of texts) {
         if (!t.trim()) throw new Error(l.chart + ": okuma metni boş");

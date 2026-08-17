@@ -18,7 +18,7 @@ grafik yazılır, süs olacaksa yazılmaz.
 | 1 | İstatistik okuryazarlığı | `istatistik` | Bugünü anlamak | 5 | ✅ |
 | 2 | Sanat tarihi | `sanat-tarihi` | Klasikler | 2 | ✅ |
 | 3 | Olasılık ve karar verme | `olasilik` | Bugünü anlamak | 5 | ✅ |
-| 4 | Müzik teorisi | `muzik` | Klasikler | 5 | |
+| 4 | Müzik teorisi | `muzik` | Klasikler | 5 | ✅ |
 | 5 | Yapay zekâ okuryazarlığı | `yapay-zeka` | Bugünü anlamak | 4 | |
 | 6 | Felsefe tarihi | `felsefe` | Klasikler | 1 | |
 | 7 | İklim ve enerji | `iklim` | Bugünü anlamak | 5 | |

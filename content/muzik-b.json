@@ -1,0 +1,482 @@
+[
+  {
+    "id": "kadans-ve-islev",
+    "moduleId": "armoni",
+    "order": 3,
+    "title": "Kadans ve armonik işlev",
+    "subtitle": "Akorlar rastgele sıralanmaz; birbirini çeker.",
+    "minutes": 8,
+    "keyTerms": ["tonik", "dominant", "subdominant", "kadans", "çözülme", "modülasyon"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Tonal müzikte akorlar eşit değildir. Tonik, dizinin merkezi ve dinlenme yeridir. Dominant, beşinci derece üzerine kurulur ve tonike güçlü bir çekim uygular. Subdominant, dördüncü derecedir ve tonikten uzaklaşmayı başlatır. Yüzlerce yıllık Batı müziğinin iskeleti, bu üç işlev arasındaki gerilim ve çözülme döngüsüdür."
+      },
+      {
+        "kind": "text",
+        "title": "Dominantın gücü nereden geliyor",
+        "body": "Dominant yedili akorda iki ses birlikte gerilim üretir. Yedinci derece tonike yarım ses uzaklıktadır ve yukarı çekilir; eklenen yedili ses ise aşağı çözülmek ister. İki ses zıt yönlerde aynı hedefe akar. Bu yüzden dominanttan tonike gidiş, Batı armonisindeki en güçlü hareket sayılır ve otantik kadans adını alır."
+      },
+      {
+        "kind": "list",
+        "title": "Kadans türleri",
+        "items": [
+          "Otantik kadans (V–I): en güçlü kapanış. Cümlenin noktası.",
+          "Plagal kadans (IV–I): daha yumuşak, ilahilerin 'âmin' kapanışı.",
+          "Yarım kadans (…–V): dominantta askıda kalır; virgül gibi.",
+          "Aldatıcı kadans (V–vi): dominant çözülür ama beklenen yere değil; sürprizin adı.",
+          "Kadans, armoninin noktalama işaretidir; bir müzikal cümlenin nerede bittiğini kulak buradan anlar."
+        ]
+      },
+      {
+        "kind": "text",
+        "title": "Modülasyon: ton değiştirmek",
+        "body": "Bir eserin ortasında merkez değişebilir. Genellikle ortak bir akor köprü olarak kullanılır: hem eski hem yeni tonda anlamlı olan bir akor bulunur ve dinleyici farkına varmadan taşınır. Yakın tonlar arasında geçiş yumuşak, uzak tonlara sıçrama çarpıcıdır. Eşit tamperenin sunduğu asıl serbestlik buydu; modülasyonun tarihi, mizaç tarihine sıkı sıkıya bağlıdır."
+      },
+      {
+        "kind": "example",
+        "title": "Örnek: dört yüzyıllık bir kalıp",
+        "body": "Barok dönemde yaygınlaşan iki-beş-bir zinciri (ii–V–I), bugün caz standartlarının temel yapı taşıdır. Subdominant işlev gerilimi başlatır, dominant onu keskinleştirir, tonik çözer. Aynı üç adımlık mantık Bach'ta da, bir bebop temasında da, bir pop şarkısının köprüsünde de aynı işi görür. Armonik dil değişir, işlev mantığı büyük ölçüde kalır."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Dominant akorun tonike çekiminin sebebi nedir?",
+        "options": [
+          "Daha yüksek sesle çalınması",
+          "İçindeki yedinci derecenin tonike yarım ses uzaklıkta olması ve eklenen yedilinin aşağı çözülmek istemesi",
+          "Daha çok ses içermesi",
+          "Gamın en pes akoru olması"
+        ],
+        "answerIndex": 1,
+        "explanation": "İki ses zıt yönlerde aynı hedefe akar. Bu ikili gerilim, dominanttan tonike gidişi en güçlü armonik hareket yapar."
+      },
+      {
+        "id": "q2",
+        "prompt": "Aldatıcı kadans nedir?",
+        "options": [
+          "Kadansın hiç yapılmaması",
+          "Dominantın tonik yerine beklenmedik bir akora çözülmesi",
+          "İki kadansın üst üste gelmesi",
+          "Tonikte başlayıp tonikte bitmek"
+        ],
+        "answerIndex": 1,
+        "explanation": "Beklenti kurulur ama karşılanmaz. Kadans, dinleyicinin bir kapanış beklediği yerde başka bir yere gider ve cümleyi sürdürür."
+      },
+      {
+        "id": "q3",
+        "prompt": "Modülasyon nasıl yumuşatılır?",
+        "options": [
+          "Tempoyu düşürerek",
+          "Hem eski hem yeni tonda anlamlı olan ortak bir akoru köprü olarak kullanarak",
+          "Sesi kısarak",
+          "Enstrümanı değiştirerek"
+        ],
+        "answerIndex": 1,
+        "explanation": "Ortak akor, iki tonda da geçerli olduğu için dinleyiciyi fark ettirmeden taşır. Ani ve köprüsüz geçişler çarpıcı ama sert duyulur."
+      }
+    ]
+  },
+
+  {
+    "id": "ritim-ve-usul",
+    "moduleId": "armoni",
+    "order": 4,
+    "title": "Ritim, ölçü ve aksak",
+    "subtitle": "Zamanı bölmenin eşit ve eşit olmayan yolları.",
+    "minutes": 9,
+    "keyTerms": ["nabız", "ölçü", "vurgu", "aksak usul", "senkop", "poliritim"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Müzikte zaman düzenli bir nabza dayanır. Nabız vuruşları vurgu bakımından eşit değildir; belirli aralıklarla güçlenirler ve bu tekrarlanan güçlü-zayıf örüntüsüne ölçü denir. Ölçü, dinleyicinin ayağını nereye vuracağını bilmesini sağlayan şeydir. Ritim ise nabzın üzerine yazılan sürelerin desenidir; ikisi aynı şey değildir."
+      },
+      {
+        "kind": "chart",
+        "chartId": "usuller"
+      },
+      {
+        "kind": "text",
+        "title": "Aksak usuller",
+        "body": "Batı geleneğinin varsayılan ölçüleri eşit gruplardan kuruludur: 4/4 dört eşit vuruş, 3/4 üç eşit vuruş. Anadolu, Balkan ve Yakın Doğu repertuvarında ise ölçü çoğu zaman eşit olmayan gruplardan kurulur. 9/8 usulünde 2+2+2+3, 7/8'de 2+2+3 grupları vardır. Sondaki üç birimlik grup ölçüye o karakteristik topal yürüyüşü verir. Bu, bir düzensizlik değil, başka türlü bir düzendir."
+      },
+      {
+        "kind": "list",
+        "title": "Ritmi hareketlendiren araçlar",
+        "items": [
+          "Senkop: vurgunun beklenen yerden kaydırılması. Cazın ve funk müziğin ana motoru.",
+          "Poliritim: iki farklı bölünmenin aynı anda sürmesi, örneğin üçe karşı iki. Batı Afrika geleneklerinin merkezinde.",
+          "Hemiola: aynı sürenin bir kez ikişerli, bir kez üçerli gruplanması.",
+          "Groove: ölçünün mekanik konumundan hafifçe önde ya da arkada çalmak; makine ile insan arasındaki fark burada.",
+          "Serbest ritim: taksim, uzun hava ve giriş bölümlerinde nabzın bilinçli olarak askıya alınması."
+        ]
+      },
+      {
+        "kind": "example",
+        "title": "Örnek: zeybek zamanı",
+        "body": "Ağır zeybek 9/8 usulündedir ama vuruşlar o kadar geniştir ki dinleyici çoğu zaman ölçüyü saymaz, hisseder. Aynı usul, hızlandırıldığında ve gruplama değiştirildiğinde bambaşka bir dansa dönüşür. Usul bir sayım değil, bedenin nasıl hareket edeceğine dair bir talimattır — bu yüzden halk müziği usulleri dans adlarıyla anılır."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Ölçü ile ritim arasındaki fark nedir?",
+        "options": [
+          "Aynı şeydir",
+          "Ölçü nabzın tekrarlanan vurgu örüntüsü, ritim ise bu nabzın üstüne yazılan süre desenidir",
+          "Ölçü hız, ritim yükseklik ile ilgilidir",
+          "Ritim yalnızca vurmalı çalgılarda vardır"
+        ],
+        "answerIndex": 1,
+        "explanation": "Ölçü altta duran çerçevedir, ritim onun üstünde kurulan desendir. Aynı ölçüde sonsuz sayıda farklı ritim yazılabilir."
+      },
+      {
+        "id": "q2",
+        "prompt": "9/8 aksak usulünde gruplar nasıl dizilir?",
+        "options": ["3+3+3", "2+2+2+3", "4+5", "Eşit dokuz vuruş"],
+        "answerIndex": 1,
+        "explanation": "Üç kısa grubun ardından gelen üç birimlik uzun grup, usulün karakteristik yürüyüşünü verir."
+      },
+      {
+        "id": "q3",
+        "prompt": "Senkop nedir?",
+        "options": [
+          "Tempo değişimi",
+          "Vurgunun beklenen yerden kaydırılması",
+          "Ölçünün değişmesi",
+          "İki ölçünün birleştirilmesi"
+        ],
+        "answerIndex": 1,
+        "explanation": "Senkop, beklenen güçlü zamanı boş bırakıp vurguyu zayıf zamana taşır. Caz ve funk müziğin ritmik enerjisi büyük ölçüde buradan gelir."
+      }
+    ]
+  },
+
+  {
+    "id": "form",
+    "moduleId": "bicim",
+    "order": 1,
+    "title": "Müzikal form",
+    "subtitle": "Tekrar, değişiklik ve dönüş: bir esere zaman içinde şekil vermek.",
+    "minutes": 8,
+    "keyTerms": ["motif", "cümle", "tema", "sonat formu", "rondo", "varyasyon"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Müzik zaman içinde akar; dinleyicinin yolunu kaybetmemesi için tanınabilir işaretlere ihtiyacı vardır. Bu işaretleri kuran şey tekrardır. En küçük tanınabilir birim motiftir — Beethoven'ın Beşinci Senfoni'sindeki dört nota gibi. Motifler birleşerek cümle, cümleler birleşerek tema olur. Form, bu birimlerin hangi sırayla döndüğüdür."
+      },
+      {
+        "kind": "list",
+        "title": "Yaygın form kalıpları",
+        "items": [
+          "Strofik: her kıta aynı müzikle söylenir. Türkülerin ve pop şarkıların çoğu.",
+          "İki bölümlü (AB) ve üç bölümlü (ABA): tekrarın en sade hâli; ABA dinleyiciye 'eve dönüş' duygusu verir.",
+          "Rondo (ABACA): bir bölüm sürekli geri döner, aralara yeni bölümler girer.",
+          "Tema ve varyasyonlar: aynı malzeme her seferinde başka bir kılıkta.",
+          "Sonat formu: sergi, gelişme ve yeniden sergi. Batı müziğinin en iddialı biçimsel kurgusu."
+        ]
+      },
+      {
+        "kind": "text",
+        "title": "Sonat formu neden önemli",
+        "body": "Sonat formu, iki temayı farklı tonlarda tanıtır, sonra onları çatıştırıp parçalar, en sonunda ikisini de ana tonda birleştirir. Bu, armonik gerilimin biçimsel bir dramaya dönüştürülmesidir. Klasik dönemin senfoni, sonat ve dörtlülerinin ilk bölümleri neredeyse daima bu kalıptadır. Formun kendisi bir anlatı taşır: ayrılık, çatışma, uzlaşma."
+      },
+      {
+        "kind": "text",
+        "title": "Popüler müzikte biçim",
+        "body": "Bugünün şarkı formu farklı ama aynı mantığa dayanır: giriş, kıta, ön nakarat, nakarat, köprü. Nakarat, dinleyicinin döndüğü yerdir; köprü, dönüşü daha tatmin edici kılmak için kurulan sapmadır. Yayın platformlarının dinleme verisi, ilk otuz saniyede nakarata ulaşmayan şarkıların bırakılma oranını yükselttiğini gösterdi; son yıllarda giriş bölümlerinin kısalması bu ölçümlerin doğrudan sonucudur."
+      },
+      {
+        "kind": "example",
+        "title": "Örnek: Bolero",
+        "body": "Ravel'in Bolero'su on beş dakika boyunca tek bir ezgiyi ve tek bir ritim kalıbını tekrarlar. Değişen tek şey orkestrasyon ve gürlüktür. Eser, biçimin illa tema çatışmasına dayanması gerekmediğini gösterir: sabit bir malzemenin renk ve yoğunluk üzerinden büyütülmesi de bir formdur. Ravel eseri için 'içinde müzik olmayan bir orkestrasyon çalışması' demişti."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Motif nedir?",
+        "options": [
+          "Bir eserin ana teması",
+          "Tanınabilir en küçük müzikal birim",
+          "Akor dizisi",
+          "Ölçü kalıbı"
+        ],
+        "answerIndex": 1,
+        "explanation": "Motif, birkaç notadan oluşan ve tekrarlandığında tanınan en küçük birimdir. Cümleler ve temalar motiflerden kurulur."
+      },
+      {
+        "id": "q2",
+        "prompt": "Sonat formunun üç ana bölümü nedir?",
+        "options": [
+          "Giriş, kıta, nakarat",
+          "Sergi, gelişme, yeniden sergi",
+          "Tema, varyasyon, kadans",
+          "A, B, A"
+        ],
+        "answerIndex": 1,
+        "explanation": "Temalar sergide farklı tonlarda tanıtılır, gelişmede çatışır ve parçalanır, yeniden sergide ana tonda birleşir."
+      },
+      {
+        "id": "q3",
+        "prompt": "Bolero biçimsel olarak neyi gösterir?",
+        "options": [
+          "Formun mutlaka tema çatışmasına dayanması gerektiğini",
+          "Sabit bir malzemenin renk ve yoğunluk üzerinden büyütülmesinin de bir form olabileceğini",
+          "Tekrarın müzikte kullanılamayacağını",
+          "Sonat formunun evrenselliğini"
+        ],
+        "answerIndex": 1,
+        "explanation": "Ezgi ve ritim değişmez; yalnızca orkestrasyon ve gürlük büyür. Biçim, tematik gelişme olmadan da kurulabilir."
+      }
+    ]
+  },
+
+  {
+    "id": "bati-donemleri",
+    "moduleId": "bicim",
+    "order": 2,
+    "title": "Batı müziğinin dönemleri",
+    "subtitle": "Tek sesten çok sese, saraydan konser salonuna.",
+    "minutes": 9,
+    "keyTerms": ["polifoni", "barok", "klasik", "romantik", "atonalite"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Batı sanat müziğinin tarihi, birkaç büyük kırılmayla özetlenebilir. Tek sesli ilahiden çok sesliliğe geçiş, notasyonun icadı, tonal sistemin kuruluşu, tonal sistemin çözülüşü ve kaydın icadı. Her kırılma, hem müziğin kendisini hem de kimin için yazıldığını değiştirdi."
+      },
+      {
+        "kind": "list",
+        "title": "Dönemler kısaca",
+        "items": [
+          "Ortaçağ: tek sesli ilahi, sonra ilk çok sesli denemeler. Notasyon gelişiyor.",
+          "Rönesans: dengeli çok seslilik, sözün anlaşılırlığı önemli bir tartışma.",
+          "Barok: tonal sistem yerleşir, bas hattı üzerine kurulu doku, opera doğar.",
+          "Klasik: berrak cümle yapısı, sonat formu, senfoni ve yaylı dörtlünün olgunlaşması.",
+          "Romantik: orkestra büyür, ifade öne çıkar, tonalite gerilir, milli okullar doğar.",
+          "20. yüzyıl: atonalite, on iki ton tekniği, minimalizm, elektronik ve kayıt."
+        ]
+      },
+      {
+        "kind": "text",
+        "title": "Notasyon her şeyi değiştirdi",
+        "body": "Perdeyi ve süreyi kâğıda yazma yeteneği, müziği belleğin sınırlarından kurtardı. Bir besteci artık kendi çalamayacağı, hatta hiç duymayacağı bir eseri kurgulayabiliyordu. Çok seslilik bu yüzden Avrupa'da bu ölçüde gelişti: yazı olmadan sekiz partili bir dokuyu tasarlamak neredeyse imkânsızdır. Notasyonun bedeli de vardı — yazıya geçmeyen her şey, süslemeler, tonlamalar, esneklikler, zamanla ikinci sınıf sayıldı."
+      },
+      {
+        "kind": "text",
+        "title": "Tonalitenin çözülüşü",
+        "body": "19. yüzyıl boyunca besteciler tonal merkezi giderek zorladı; Wagner'in çözülmeyi sürekli erteleyen armonisi bir dönüm noktasıdır. Schoenberg 20. yüzyılın başında merkezi tümüyle bıraktı ve on iki sesi eşit sayan bir yöntem geliştirdi. Bu, dinleyici kitlesiyle sanat müziği arasındaki mesafenin açıldığı dönemdir. Aynı yüzyılda Bartók ve Kodály halk müziğini kaydederek başka bir kaynağa yöneldi; Stravinski ritmi merkeze aldı."
+      },
+      {
+        "kind": "example",
+        "title": "Örnek: 1913, iki olay",
+        "body": "Aynı yıl Paris'te Stravinski'nin Bahar Ayini'nin prömiyerinde salon karıştı; ritmik şiddet ve armonik sertlik izleyiciyi böldü. Aynı yıllarda Bartók, Anadolu ve Balkanlar'da fonograf silindirlerine köy ezgileri kaydediyordu. Biri geleneği kırıyor, diğeri kaybolmakta olan bir geleneği kayda geçiriyordu. Yirminci yüzyıl müziği bu iki hareketin arasında kuruldu."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Notasyonun gelişmesi çok sesliliği neden mümkün kıldı?",
+        "options": [
+          "Çalgıların yapımını kolaylaştırdı",
+          "Belleğe sığmayacak karmaşıklıkta dokuların tasarlanmasına ve saklanmasına izin verdi",
+          "Akort sistemini düzeltti",
+          "Müziği ucuzlattı"
+        ],
+        "answerIndex": 1,
+        "explanation": "Yazı olmadan çok partili bir dokuyu kurgulamak ve aktarmak neredeyse imkânsızdır. Notasyon, bestecinin belleğin sınırlarını aşmasını sağladı."
+      },
+      {
+        "id": "q2",
+        "prompt": "Barok dönemin belirleyici gelişmesi hangisidir?",
+        "options": [
+          "Atonalitenin doğuşu",
+          "Tonal sistemin yerleşmesi ve operanın doğuşu",
+          "Sonat formunun olgunlaşması",
+          "Elektronik müziğin başlaması"
+        ],
+        "answerIndex": 1,
+        "explanation": "Barok dönemde tonal armoni yerleşti, bas hattı üzerine kurulu doku standartlaştı ve opera bir tür olarak ortaya çıktı."
+      },
+      {
+        "id": "q3",
+        "prompt": "Schoenberg'in on iki ton tekniğinin temel fikri nedir?",
+        "options": [
+          "Yalnızca on iki nota kullanmak",
+          "On iki sesi eşit sayarak bir tonal merkezi ortadan kaldırmak",
+          "Oktavı on iki eşit parçaya bölmek",
+          "On iki çalgı kullanmak"
+        ],
+        "answerIndex": 1,
+        "explanation": "Amaç, hiçbir sesin merkez hâline gelmemesidir. Tonalitenin yerçekimi kaldırılınca müzik başka bir düzenleme ilkesine ihtiyaç duydu."
+      }
+    ]
+  },
+
+  {
+    "id": "makam-ve-usul",
+    "moduleId": "bicim",
+    "order": 3,
+    "title": "Makam ve usul",
+    "subtitle": "On iki sese sığmayan bir gelenek.",
+    "minutes": 9,
+    "keyTerms": ["makam", "koma", "seyir", "usul", "taksim", "meşk"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Türk müziği geleneği, eşit tamperenin on iki sesiyle tarif edilemez. Oktav dokuz komalık tam sesler ve daha küçük aralıklar üzerinden bölünür; bugün yaygın olarak kullanılan Arel-Ezgi-Uzdilek sistemi oktavı elli üç komaya ayırır. Piyanoda çalınamayan sesler, bu repertuvarın karakterini taşıyan seslerdir. Bir makamı 'minör gibi' diye çevirmek, tam da onu makam yapan şeyi silmektir."
+      },
+      {
+        "kind": "text",
+        "title": "Makam bir dizi değildir",
+        "body": "Makam, kullanılan sesleri belirtmenin ötesinde bir davranış tarif eder. Hangi sesten başlanır, hangi sesler üzerinde durulur, ezgi hangi yönde ilerler, nerede karar verilir — bunların tümüne seyir denir. Aynı sesleri kullanan iki makam, seyirleri farklıysa farklı makamlardır. Bu yüzden makam öğrenmek bir dizi ezberlemek değil, bir repertuvarı içselleştirmektir."
+      },
+      {
+        "kind": "chart",
+        "chartId": "usuller"
+      },
+      {
+        "kind": "list",
+        "title": "Geleneğin kendine özgü kavramları",
+        "items": [
+          "Koma: tam sesin dokuzda biri; makam müziğinin en küçük yapı birimi.",
+          "Karar ve güçlü: ezginin dinlendiği ve vurguladığı iki temel perde.",
+          "Çeşni: bir makamın karakterini veren küçük ses öbeği; makamlar çeşnilerden kurulur.",
+          "Taksim: usulsüz, doğaçlama giriş. Makamın seyrini dinleyiciye tanıtır.",
+          "Usul: ritmik kalıp. Sofyan gibi kısa usullerden yüz vuruşu aşan büyük usullere kadar geniş bir yelpaze.",
+          "Meşk: notaya değil, ustadan öğrenciye aktarıma dayalı geleneksel öğretim yöntemi."
+        ]
+      },
+      {
+        "kind": "text",
+        "title": "Notaya geçiş ve tartışması",
+        "body": "Osmanlı müziği yüzyıllarca meşk yoluyla aktarıldı; notasyon vardı ama merkezi değildi. Cumhuriyet döneminde repertuvarın notaya geçirilmesi, kaybolmayı önledi ama aktarımın doğasını da değiştirdi. Notaya yazılamayan süslemeler, esneklikler ve icra farkları zamanla zayıfladı. Aynı tartışma, farklı biçimlerde, dünyanın bütün sözlü müzik geleneklerinde yaşandı."
+      },
+      {
+        "kind": "example",
+        "title": "Örnek: iki hüseyni",
+        "body": "Aynı makamı çalan iki icracıyı dinleyin: kullandıkları perdeler kâğıt üzerinde aynıdır, ama bazı seslerin tam olarak nerede basıldığı, hangi sesin ne kadar tutulduğu, geçişlerin nasıl kaydırıldığı farklıdır. Bu farklar hata değil, üsluptur. Makam müziğinde icra, eserin dışında bir yorum katmanı değil, eserin kendisinin bir parçasıdır."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Makam ile gam arasındaki temel fark nedir?",
+        "options": [
+          "Makam daha az ses kullanır",
+          "Makam yalnızca sesleri değil, seyri — başlangıç, durak, yön ve karar davranışını da tarif eder",
+          "Makamlar yalnızca vokal müzikte kullanılır",
+          "Gam daha eskidir"
+        ],
+        "answerIndex": 1,
+        "explanation": "Aynı sesleri kullanan iki makam, seyirleri farklıysa farklı makamlardır. Makam bir ses kümesi değil, bir davranış tarifidir."
+      },
+      {
+        "id": "q2",
+        "prompt": "Koma nedir?",
+        "options": [
+          "Bir usul türü",
+          "Tam sesin dokuzda biri kabul edilen küçük aralık",
+          "Bir makam adı",
+          "Doğaçlama bölüm"
+        ],
+        "answerIndex": 1,
+        "explanation": "Türk müziği kuramında tam ses dokuz komaya bölünür. Bu küçük aralıklar, eşit tamperede karşılığı olmayan sesleri mümkün kılar."
+      },
+      {
+        "id": "q3",
+        "prompt": "Meşk geleneğinin notaya geçişle zayıflayan yanı nedir?",
+        "options": [
+          "Repertuvarın büyüklüğü",
+          "Notaya yazılamayan süsleme, esneklik ve icra farklarının aktarımı",
+          "Usullerin sayısı",
+          "Makamların isimleri"
+        ],
+        "answerIndex": 1,
+        "explanation": "Nota, perde ve süreyi kaydeder; üslubu kaydetmez. Yazıya geçmeyen icra bilgisi, aktarım biçimi değişince zayıflar."
+      }
+    ]
+  },
+
+  {
+    "id": "kayit-ve-bugun",
+    "moduleId": "bicim",
+    "order": 4,
+    "title": "Kayıt teknolojisi ve bugünün müziği",
+    "subtitle": "Müziği saklanabilir hâle getirmek, müziğin kendisini değiştirdi.",
+    "minutes": 9,
+    "keyTerms": ["kayıt", "çok kanallı kayıt", "eşitleme", "gürlük savaşı", "yayın algoritması"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "1877'de fonografın icadına kadar müzik, yalnızca icra edildiği anda vardı. Kayıt bunu değiştirdi ve etkileri teknik olmaktan çok kültüreldi. Bir icra artık tekrar tekrar dinlenebiliyor, karşılaştırılabiliyor, taklit edilebiliyordu. Repertuvar kavramı, yıldız icracı kavramı ve müziğin bir ürün olarak alınıp satılması bu icadın ardından geldi."
+      },
+      {
+        "kind": "text",
+        "title": "Süre biçimi belirledi",
+        "body": "Erken 78'lik plaklar tek yüzde yaklaşık üç dakika taşıyordu. Popüler şarkının üç dakikalık standart uzunluğu, estetik bir karar değil bu fiziksel sınırın kalıntısıdır. Uzunçalarların gelmesiyle albüm bir bütün olarak tasarlanabilir hâle geldi; 1960'ların kavram albümleri bu imkânın ürünüdür. Bugün yayın platformlarının ödeme ve öneri mekanizmaları şarkıları yeniden kısaltıyor ve girişleri budayarak biçimi bir kez daha yeniden şekillendiriyor."
+      },
+      {
+        "kind": "list",
+        "title": "Stüdyonun bir çalgıya dönüşmesi",
+        "items": [
+          "Çok kanallı kayıt: parçalar ayrı ayrı kaydedilip birleştirilebilir. İcra artık tek bir an değildir.",
+          "Kes-yapıştır kurgu: en iyi bölümler farklı alımlardan birleştirilir.",
+          "Yankı ve gecikme: mekân duygusu sonradan üretilebilir hâle gelir.",
+          "Perde düzeltme: yanlış basılan bir perde sonradan yerine oturtulur; bir üslup aracına da dönüşmüştür.",
+          "Örnekleme: başka bir kaydın parçası yeni bir eserin malzemesi olur; hip-hop bu teknik üzerine kuruldu.",
+          "Gürlük savaşı: daha yüksek duyulmak için kayıtların dinamik aralığının sıkıştırılması — kazanılan dikkat, kaybedilen nefes."
+        ]
+      },
+      {
+        "kind": "text",
+        "title": "Bugün müzik nasıl dolaşıyor",
+        "body": "Dağıtım maliyeti sıfıra yaklaşınca darboğaz üretimden dikkate kaydı. Bugün bir eserin kaderini belirleyen şey büyük ölçüde öneri sistemlerinin onu kime göstereceğidir. Bunun iki yüzü var: bağımsız bir müzisyen aracısız dinleyiciye ulaşabiliyor; aynı zamanda görünürlük, dinleme verisine göre çalışan sistemlerin elinde toplanıyor. Üretim araçlarının demokratikleşmesi, dağıtımın demokratikleşmesi anlamına gelmedi."
+      },
+      {
+        "kind": "example",
+        "title": "Örnek: bir davul ölçüsünün ömrü",
+        "body": "1969'da kaydedilmiş altı saniyelik bir davul solosu, örnekleme yoluyla binlerce parçada kullanıldı ve hip-hop ile elektronik müziğin ritmik dilini biçimlendirdi. Kaydı yapan müzisyenler bu kullanımdan uzun süre hiçbir gelir elde etmedi. Örnek, kayıt teknolojisinin hem yaratıcı imkânını hem de telif sorununu tek bir vakada gösterir."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Popüler şarkının üç dakikalık standart uzunluğu nereden gelir?",
+        "options": [
+          "Dinleyicinin dikkat süresinden",
+          "Erken 78'lik plakların tek yüze sığdırdığı süreden",
+          "Radyo yasalarından",
+          "Sonat formundan"
+        ],
+        "answerIndex": 1,
+        "explanation": "Fiziksel bir sınır estetik bir norma dönüştü. Uzunçalarlar geldiğinde biçim genişledi; yayın platformları bugün onu yeniden kısaltıyor."
+      },
+      {
+        "id": "q2",
+        "prompt": "Çok kanallı kaydın müzik üzerindeki temel etkisi nedir?",
+        "options": [
+          "Ses kalitesini yükseltmesi",
+          "İcrayı tek bir an olmaktan çıkarıp katman katman kurulabilir hâle getirmesi",
+          "Kayıt maliyetini düşürmesi",
+          "Canlı konserleri sonlandırması"
+        ],
+        "answerIndex": 1,
+        "explanation": "Parçaların ayrı kaydedilip birleştirilebilmesi, stüdyoyu bir kayıt aracı olmaktan çıkarıp bir besteleme aracına dönüştürdü."
+      },
+      {
+        "id": "q3",
+        "prompt": "Gürlük savaşı neye yol açar?",
+        "options": [
+          "Kayıtların uzamasına",
+          "Dinamik aralığın sıkıştırılmasıyla sesin sürekli yüksek ama nefessiz duyulmasına",
+          "Perdenin yükselmesine",
+          "Tempoların hızlanmasına"
+        ],
+        "answerIndex": 1,
+        "explanation": "Daha yüksek duyulma yarışı, sessiz ile gürültülü arasındaki farkı siler. Kazanılan dikkat, kaybedilen dinamik ifadedir."
+      }
+    ]
+  }
+]

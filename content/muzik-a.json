@@ -1,0 +1,490 @@
+[
+  {
+    "id": "frekans-ve-perde",
+    "moduleId": "fizik",
+    "order": 1,
+    "title": "Frekans ve perde",
+    "subtitle": "Müziğin bütün malzemesi, saniyede kaç kez titreştiğiyle başlar.",
+    "minutes": 8,
+    "keyTerms": ["frekans", "perde", "oktav", "sent", "logaritmik algı"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Ses, havadaki basınç dalgalanmasıdır. Bir dalganın saniyede kaç kez tekrarlandığına frekans denir ve hertz ile ölçülür. Kulağın bunu bir yükseklik duygusu olarak yorumlamasına perde deriz. İnsan kulağı kabaca 20 ile 20.000 hertz arasını duyar; müzikte kullanılan aralık bunun çok daha darıdır."
+      },
+      {
+        "kind": "text",
+        "title": "Kulak oranları duyar, farkları değil",
+        "body": "Müzik teorisinin en temel gerçeği budur. 100 hertz ile 200 hertz arasındaki uzaklık, kulağa 200 ile 400 arasındakiyle aynı gelir; ikisi de bir oktavdır. Oysa birinci farkta 100 hertz, ikincisinde 200 hertz vardır. Algı frekansın kendisiyle değil logaritmasıyla orantılıdır. Bütün müzik sistemleri, farkla değil oranla çalıştığı için bu şekilde kurulmuştur."
+      },
+      {
+        "kind": "formula",
+        "title": "Oktav ve sent",
+        "expression": "oktav = frekansın iki katı        1 oktav = 1200 sent = 12 yarım ses",
+        "note": "Sent, oranları toplanabilir hâle getiren logaritmik birimdir. İki sesin arasındaki sent farkı, 1200 × log₂(f₂/f₁) ile bulunur. Eğitimli bir kulak, aynı anda çalan iki seste 5-6 sentlik farkı ayırt eder."
+      },
+      {
+        "kind": "text",
+        "title": "Referans perde bir uzlaşmadır",
+        "body": "Bugün la sesi çoğunlukla 440 hertz kabul edilir ama bu evrensel bir sabit değil, 1939'da varılmış bir anlaşmadır. Barok dönem çalgıları çoğunlukla 415 hertz civarında akort edilirdi — yaklaşık yarım ses pes. Kimi orkestralar bugün daha parlak bir ton için 442 ya da 443'ü tercih eder. Bach'ın duyduğu do sesi, bugün duyduğumuz do değildi."
+      },
+      {
+        "kind": "list",
+        "title": "Frekans ve çalgı",
+        "items": [
+          "Telin uzunluğu iki katına çıkarsa frekans yarıya iner: bir oktav pes.",
+          "Gerginlik artarsa frekans yükselir; akort anahtarı tam olarak bunu yapar.",
+          "Kalın tel daha ağırdır, daha yavaş titreşir; bas telleri bu yüzden sarımlıdır.",
+          "Üflemeli çalgılarda hava sütununun boyu aynı işi görür.",
+          "Sıcaklık hava sütununu etkiler; nefesli çalgılar ısındıkça tizleşir, bu yüzden konser öncesi ısıtılır."
+        ]
+      },
+      {
+        "kind": "example",
+        "title": "Örnek: piyanonun ucu",
+        "body": "Piyanonun en pes teli yaklaşık 27.5 hertz, en tiz teli yaklaşık 4186 hertzdir. Aradaki oran yaklaşık 152, yani yedi oktavdan biraz fazla. Bu geniş aralıkta kulak, aynı nota adını sekiz kez duyar — do sesi her oktavda kendini tekrar eder. Aynı nota adının farklı yüksekliklerde aynı sayılmasına oktav denkliği denir ve bilinen bütün müzik kültürlerinde vardır."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "220 hertz ile 440 hertz arasındaki uzaklık, 440 ile 880 arasındakiyle nasıl karşılaştırılır?",
+        "options": [
+          "İlki daha büyüktür",
+          "İkincisi daha büyüktür",
+          "Kulağa eşit gelirler; ikisi de bir oktavdır",
+          "Karşılaştırılamazlar"
+        ],
+        "answerIndex": 2,
+        "explanation": "Kulak oranları algılar. İki frekans arasındaki oran aynıysa (burada 2:1) algılanan uzaklık da aynıdır, hertz farkı iki katı olsa bile."
+      },
+      {
+        "id": "q2",
+        "prompt": "Bir sent nedir?",
+        "options": [
+          "Bir hertzlik fark",
+          "Oktavın 1200'de biri; oranları toplanabilir kılan logaritmik birim",
+          "Yarım sesin adı",
+          "Referans perdenin birimi"
+        ],
+        "answerIndex": 1,
+        "explanation": "Sent, aralıkları çarpma yerine toplama ile hesaplamayı sağlar. Bir yarım ses eşit tamperede tam olarak 100 senttir."
+      },
+      {
+        "id": "q3",
+        "prompt": "La = 440 hertz kabulü hakkında doğru olan hangisidir?",
+        "options": [
+          "Fiziksel bir sabittir",
+          "1939'da varılmış bir anlaşmadır; tarih boyunca ve bugün de farklı değerler kullanılmıştır",
+          "Piyanonun yapısından gelir",
+          "İnsan kulağının merkez frekansıdır"
+        ],
+        "answerIndex": 1,
+        "explanation": "Referans perde bir uzlaşmadır. Barok icralarda 415 hertz yaygındır, kimi orkestralar bugün 442-443 kullanır."
+      }
+    ]
+  },
+
+  {
+    "id": "armonik-seri",
+    "moduleId": "fizik",
+    "order": 2,
+    "title": "Armonik seri ve tını",
+    "subtitle": "Tek bir ses aslında hiçbir zaman tek değildir.",
+    "minutes": 9,
+    "keyTerms": ["armonik", "temel frekans", "tını", "üst ses", "formant"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Gerilmiş bir tel titreştiğinde yalnızca bütün hâlde titreşmez. Aynı anda ikiye, üçe, dörde bölünerek de titreşir. Bu bölünmelerin her biri kendi frekansını üretir: temel frekansın tam katları. Duyduğunuz tek ses, aslında bu frekansların üst üste binmiş hâlidir. Perdeyi temel frekans belirler; sesin rengini, yani tınıyı, üst armoniklerin güç dağılımı belirler."
+      },
+      {
+        "kind": "chart",
+        "chartId": "armonik-seri"
+      },
+      {
+        "kind": "text",
+        "title": "Doğada duran akor",
+        "body": "Armonik serinin ilk altı sesine bakın: temel, oktav, beşli, oktav, büyük üçlü, beşli. Bu, majör akorun ta kendisidir. Batı armonisinin majör üçlüyü temel almasının fiziksel bir zemini vardır — akor, tek bir telin içinde zaten duruyordu. Yedinci armonik ise eşit tampere sistemdeki hiçbir sese tam oturmaz; caz ve blues geleneğinin sevdiği 'ezik' yedili duygusu buradan gelir."
+      },
+      {
+        "kind": "text",
+        "title": "Tını neden çalgıya göre değişir",
+        "body": "Aynı notayı çalan flüt ile keman farklı duyulur, çünkü armoniklerin güç dağılımı farklıdır. Flütte üst armonikler zayıftır, ses saf ve yumuşaktır. Kemanda ve özellikle obuada güçlüdür, ses parlak ve keskindir. Klarnetin kapalı boru yapısı çift numaralı armonikleri bastırır ve o karakteristik içi boş tonu verir. Bir sentezleyicide 'ses tasarlamak', büyük ölçüde bu dağılımı elle kurmaktır."
+      },
+      {
+        "kind": "list",
+        "title": "Tınıyı belirleyen diğer etkenler",
+        "items": [
+          "Atak: sesin ilk kırk milisaniyesi. Piyanonun çekiç sesi kaldırılırsa çalgı tanınmaz hâle gelir.",
+          "Formant: gövdenin belirli frekansları yükseltmesi. İnsan sesinde ünlü harfleri ayıran şey budur.",
+          "Sönüm: armoniklerin farklı hızlarda sönmesi; tiz armonikler genellikle daha çabuk kaybolur.",
+          "Gürültü bileşeni: nefes sesi, yay sürtünmesi, mızrap teması — hepsi tanımayı kolaylaştırır.",
+          "Vibrato ve hafif perde dalgalanmaları, sesi 'canlı' kılan şeydir."
+        ]
+      },
+      {
+        "kind": "example",
+        "title": "Örnek: doğal borazan",
+        "body": "Pistonsuz bir borazanda çalınabilecek sesler yalnızca armonik serinin sesleridir; dudak basıncı hangi armoniğin öne çıkacağını belirler. Bu yüzden klasik dönem öncesi borazan partileri pes bölgede seyrek, tiz bölgede yoğundur — armonikler yukarı çıktıkça birbirine yaklaşır. Askeri boru komutlarının o karakteristik ezgisi, bir tercih değil bir zorunluluktu."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Bir sesin perdesini ve tınısını sırasıyla ne belirler?",
+        "options": [
+          "Şiddet ve süre",
+          "Temel frekans ve üst armoniklerin güç dağılımı",
+          "Çalgının boyu ve malzemesi",
+          "Ortamın akustiği"
+        ],
+        "answerIndex": 1,
+        "explanation": "Perde temel frekansla belirlenir. Aynı perdeyi çalan iki çalgının farklı duyulmasının sebebi armoniklerin göreli güçleridir."
+      },
+      {
+        "id": "q2",
+        "prompt": "Armonik serinin ilk altı sesi hangi akoru verir?",
+        "options": ["Minör akor", "Majör akor", "Eksik akor", "Yedili akor"],
+        "answerIndex": 1,
+        "explanation": "Temel, oktav, beşli, oktav, büyük üçlü, beşli — bu bir majör üçlüdür. Batı armonisinin fiziksel dayanaklarından biri budur."
+      },
+      {
+        "id": "q3",
+        "prompt": "Pistonsuz bir borazanla neden yalnızca belirli sesler çalınabilir?",
+        "options": [
+          "Çalgı bozuk olduğu için",
+          "Hava sütunu yalnızca armonik serinin frekanslarında kararlı biçimde titreştiği için",
+          "Dudak basıncı yetersiz olduğu için",
+          "Metal ince olduğu için"
+        ],
+        "answerIndex": 1,
+        "explanation": "Boru uzunluğu sabitken kararlı titreşimler yalnızca temel frekansın tam katlarında oluşur. Piston, boru uzunluğunu değiştirerek yeni bir seri açar."
+      }
+    ]
+  },
+
+  {
+    "id": "araliklar",
+    "moduleId": "fizik",
+    "order": 3,
+    "title": "Aralıklar ve basit oranlar",
+    "subtitle": "Uyum bir zevk meselesi değil, önce bir oran meselesidir.",
+    "minutes": 9,
+    "keyTerms": ["aralık", "konsonans", "disonans", "beşli", "vuru"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "İki ses arasındaki uzaklığa aralık denir. Pisagor'a atfedilen gözlem şudur: iki telin boyu basit tamsayı oranındaysa birlikte çalındıklarında uyumlu duyulur. 2:1 oktav, 3:2 beşli, 4:3 dörtlü, 5:4 büyük üçlü. Oran karmaşıklaştıkça uyum azalır ve gerilim artar."
+      },
+      {
+        "kind": "chart",
+        "chartId": "konsonans"
+      },
+      {
+        "kind": "text",
+        "title": "Neden basit oran uyumlu duyulur",
+        "body": "İki açıklama birbirini tamamlar. Birincisi, basit oranlı iki sesin birleşik dalgası kısa bir örüntüde tekrar eder; kulak bu düzenliliği yakalar. İkincisi ve daha güçlüsü, armoniklerin örtüşmesidir: 3:2 oranındaki iki sesin armonikleri büyük ölçüde üst üste düşer. Örtüşmeyen ama birbirine çok yakın armonikler ise saniyede birkaç kez dalgalanan bir titreşim üretir; kulağın pürüz olarak duyduğu şey budur."
+      },
+      {
+        "kind": "text",
+        "title": "Vuru olayı ve akort",
+        "body": "Birbirine çok yakın iki frekans çalındığında ses düzenli olarak güçlenip zayıflar. Bu dalgalanmanın saniyedeki sayısı, iki frekans arasındaki farka eşittir: 440 ve 443 hertz birlikte çalınırsa saniyede üç vuru duyulur. Akortçular tam bu olguyu kullanır — vurular yavaşladıkça iki ses yaklaşmış demektir, tümüyle kaybolduğunda akort tamamdır."
+      },
+      {
+        "kind": "list",
+        "title": "Aralıkların geleneksel sınıflandırması",
+        "items": [
+          "Tam konsonanslar: unison, oktav, beşli. Oranları en basit olanlar.",
+          "Yumuşak konsonanslar: büyük ve küçük üçlüler ile altılılar. Batı armonisinin rengini bunlar verir.",
+          "Disonanslar: ikililer, yedililer ve artık dörtlü. Çözülme talep ederler.",
+          "Dörtlünün konumu tarihsel olarak tartışmalıdır: bazı dönemlerde konsonans, bazılarında disonans sayılmıştır.",
+          "Sınıflandırma fizikten çıkar ama kültüre göre değişir; disonans mutlak değil, öğrenilmiş bir kategoridir."
+        ]
+      },
+      {
+        "kind": "example",
+        "title": "Örnek: değişen kulak",
+        "body": "Ortaçağ Avrupa müziğinde üçlüler disonans sayılırdı; çok sesli müzik oktav, beşli ve dörtlü üzerine kuruluydu. İngiliz kaynaklı bir pratik olarak üçlülerin yaygınlaşması yüzyıllar aldı. Bugün ise en 'huzurlu' akor sayılan majör üçlünün merkezinde tam da o üçlü vardır. Fizik değişmedi; kulağın alışkanlığı değişti."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Beşli aralığının saf oranı nedir?",
+        "options": ["2:1", "3:2", "4:3", "5:4"],
+        "answerIndex": 1,
+        "explanation": "Saf beşli 3:2 oranındadır. Oktav 2:1, dörtlü 4:3, büyük üçlü 5:4'tür."
+      },
+      {
+        "id": "q2",
+        "prompt": "440 ve 443 hertz birlikte çalındığında ne duyulur?",
+        "options": [
+          "Tek bir pürüzsüz ses",
+          "Saniyede üç kez güçlenip zayıflayan bir dalgalanma",
+          "Bir oktav",
+          "Hiçbir ses"
+        ],
+        "answerIndex": 1,
+        "explanation": "Vuru sayısı iki frekansın farkına eşittir. Akortçular vuruların yavaşlamasını ve kaybolmasını dinleyerek akort yapar."
+      },
+      {
+        "id": "q3",
+        "prompt": "Ortaçağ müziğinde üçlülerin disonans sayılması neyi gösterir?",
+        "options": [
+          "Fizik yasalarının değiştiğini",
+          "Konsonans-disonans ayrımının fiziğe dayansa da kültürel olarak biçimlendiğini",
+          "Çalgıların akortsuz olduğunu",
+          "Üçlülerin oranının karmaşık olduğunu"
+        ],
+        "answerIndex": 1,
+        "explanation": "Oranlar sabittir ama hangi oranların 'huzurlu' sayılacağı tarihsel olarak değişir. Disonans öğrenilmiş bir kategoridir."
+      }
+    ]
+  },
+
+  {
+    "id": "akort-sistemleri",
+    "moduleId": "fizik",
+    "order": 4,
+    "title": "Akort sistemleri",
+    "subtitle": "Saf oranlar bir arada duramaz; bütün müzik tarihi bu uzlaşmanın tarihi.",
+    "minutes": 9,
+    "keyTerms": ["Pisagor komması", "saf düzen", "eşit tampere", "mizaç", "sent"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Sorun basit bir aritmetik gerçekten çıkar. Saf beşliyi (3:2) art arda on iki kez üst üste koyarsanız, başladığınız sese yedi oktav yukarıda dönmeniz gerekir. Ama dönmezsiniz: (3/2)¹² ile 2⁷ birbirine eşit değildir. Aradaki yaklaşık 24 sentlik fark Pisagor komması olarak bilinir. Bir oktavı saf beşlilerle kapatmak matematiksel olarak imkânsızdır."
+      },
+      {
+        "kind": "chart",
+        "chartId": "akort-sistemleri"
+      },
+      {
+        "kind": "text",
+        "title": "Üç yol, üç ödün",
+        "body": "Pisagor düzeni beşlileri kusursuz tutar; bedeli, üçlülerin belirgin biçimde tiz ve gergin kalmasıdır. Saf düzen, seçilen bir tonun üçlülerini de kusursuzlaştırır; bedeli, başka bir tona geçildiğinde bazı aralıkların dayanılmaz hâle gelmesidir. Eşit tampere ise oktavı on iki eşit parçaya böler: hiçbir aralık saf değildir ama hiçbiri de kullanılamaz değildir. Bugünkü piyano bu üçüncü uzlaşmadır."
+      },
+      {
+        "kind": "text",
+        "title": "Neyi kazandık, neyi kaybettik",
+        "body": "Eşit tamperenin kazancı serbestliktir: her tondan her tona geçilebilir, aynı parça istenen yükseklikte çalınabilir, çalgılar birbiriyle sorunsuz çalar. Kaybı ise saflıktır. Eşit tampere büyük üçlü, saf oranından yaklaşık 14 sent tizdir ve dikkatle dinlendiğinde hafif bir pürüz taşır. Bir a capella koro ya da yaylı dörtlü, akorları anlık olarak saf oranlara çeker; bu yüzden piyanoyla birlikte çaldıklarında ton hafifçe değişir."
+      },
+      {
+        "kind": "list",
+        "title": "Sistemin tarihi kısaca",
+        "items": [
+          "Antikçağ ve Ortaçağ: Pisagor düzeni, beşliler ve dörtlüler merkezli.",
+          "Rönesans: orta tonlu mizaç, üçlüleri güzelleştirir ama uzak tonları kullanılamaz kılar.",
+          "Barok: 'iyi mizaç' arayışları; her ton kullanılabilir ama her tonun kendi rengi vardır.",
+          "Bach'ın Das Wohltemperierte Klavier'i bütün tonlarda yazılmış bir gösteridir.",
+          "19. yüzyıl: eşit tampere yaygınlaşır, tonlar arası karakter farkı büyük ölçüde silinir.",
+          "Bugün: elektronik çalgılar sayesinde tarihsel mizaçlar yeniden erişilebilir durumda."
+        ]
+      },
+      {
+        "kind": "quote",
+        "text": "İyi akort edilmiş bir klavye, hiçbir aralığı kusursuz olmayan ama hiçbir tonu da kullanılamaz olmayan klavyedir.",
+        "source": "Barok dönem mizaç tartışmalarının özeti"
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Pisagor komması nedir?",
+        "options": [
+          "İki nota arasındaki en küçük aralık",
+          "On iki saf beşlinin yedi oktavı yaklaşık 24 sent aşması",
+          "Eşit tamperede yarım sesin değeri",
+          "Vuru sayısı"
+        ],
+        "answerIndex": 1,
+        "explanation": "(3/2)¹² ile 2⁷ eşit değildir. Bu fark, oktavı saf beşlilerle kapatmayı imkânsız kılar ve bütün mizaç tartışmalarının kaynağıdır."
+      },
+      {
+        "id": "q2",
+        "prompt": "Eşit tamperenin temel kazancı nedir?",
+        "options": [
+          "Bütün aralıkların saf olması",
+          "Her tondan her tona serbestçe geçilebilmesi",
+          "Çalgıların daha kolay yapılması",
+          "Üçlülerin kusursuzlaşması"
+        ],
+        "answerIndex": 1,
+        "explanation": "Eşit tamperede hiçbir aralık saf değildir ama hiçbiri de kullanılamaz değildir. Kazanılan şey, sınırsız geçiş serbestliğidir."
+      },
+      {
+        "id": "q3",
+        "prompt": "Bir a capella koronun akorları piyanodan farklı duyulmasının sebebi nedir?",
+        "options": [
+          "İnsan sesi akortsuzdur",
+          "Şarkıcılar akorları anlık olarak saf oranlara çeker; piyano ise eşit tamperede sabittir",
+          "Koro her zaman daha peslerden söyler",
+          "Piyanonun armonikleri farklıdır"
+        ],
+        "answerIndex": 1,
+        "explanation": "Perdesi sürekli ayarlanabilen topluluklar saf oranlara yönelir. Sabit perdeli çalgılar bunu yapamaz; bu yüzden birlikte çaldıklarında ton hafifçe kayar."
+      }
+    ]
+  },
+
+  {
+    "id": "gam-ve-mod",
+    "moduleId": "armoni",
+    "order": 1,
+    "title": "Gam ve mod",
+    "subtitle": "On iki sesten yedisini seçmek, bir dünya kurmaktır.",
+    "minutes": 9,
+    "keyTerms": ["gam", "mod", "tam ve yarım ses", "majör", "minör", "pentatonik"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Eşit tampere bir oktavı on iki eşit yarım sese böler. Müzik bu on ikisini aynı anda kullanmaz; genellikle yedisini seçer ve aralarındaki mesafeyi belirli bir sıraya koyar. Bu sıraya gam denir. Majör gamın kalıbı tam-tam-yarım-tam-tam-tam-yarım'dır. Kalıbı değiştirmeden başka bir sesten başlarsanız aynı gamı elde edersiniz; kalıbın kendisini kaydırırsanız yeni bir mod elde edersiniz."
+      },
+      {
+        "kind": "chart",
+        "chartId": "modlar"
+      },
+      {
+        "kind": "text",
+        "title": "Yarım seslerin yeri her şeyi belirler",
+        "body": "Yedi modun hepsi aynı yedi notayı kullanır; farkları yalnızca yarım seslerin dizideki konumudur. İyonyen'de yarım sesler 3-4 ve 7-8 arasındadır; yedinci derece tonike yarım ses uzaklıkta olduğu için güçlü bir çekim yaratır, gam 'parlak' duyulur. Aeolyen'de yarım sesler 2-3 ve 5-6 arasına kayar, çekim zayıflar ve renk hüzünlenir. Frigyen'in ikinci derecesinin yarım ses olması, ona İspanyol ve Anadolu müziğinde tanıdık gelen o koyu rengi verir."
+      },
+      {
+        "kind": "list",
+        "title": "Diğer yaygın diziler",
+        "items": [
+          "Pentatonik: beş sesli, yarım ses içermez. Yanlış nota yapmak neredeyse imkânsızdır; dünyanın her yerinde bağımsız olarak ortaya çıkmıştır.",
+          "Blues dizisi: pentatoniğe eklenen 'ezik' seslerle kurulur, sabit perdeye tam oturmaz.",
+          "Armonik minör: yedinci derece yarım ses yükseltilerek tonik çekimi geri kazandırılır; altıncı ile yedinci arasında bir buçuk sesli sıçrama doğar.",
+          "Tam ses dizisi: altı eşit adım, hiç yarım ses yok. Merkez duygusu vermez; izlenimci müziğin sevdiği belirsizlik buradan gelir.",
+          "Türk müziği dizileri yarım sesten daha küçük aralıklar kullanır; on iki sesli kalıp bu repertuvarı tarif etmeye yetmez."
+        ]
+      },
+      {
+        "kind": "example",
+        "title": "Örnek: aynı melodi, farklı mod",
+        "body": "Bir halk ezgisini alıp yalnızca üçüncü derecesini yarım ses indirin: majörden minöre geçer ve karakter tümüyle değişir, tek bir nota değişmiş olmasına rağmen. Aynı ezgide bunun yerine dördüncü dereceyi yarım ses yükseltirseniz Lidyen'e geçersiniz; bu kez ezgi olduğundan daha aydınlık ve uçucu duyulur. Modal renk, bir süs değil yapının kendisidir."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Majör gamın adım kalıbı nedir?",
+        "options": [
+          "Tam-yarım-tam-tam-yarım-tam-tam",
+          "Tam-tam-yarım-tam-tam-tam-yarım",
+          "Yarım-tam-tam-tam-yarım-tam-tam",
+          "Bütün adımlar tam"
+        ],
+        "answerIndex": 1,
+        "explanation": "Majör (İyonyen) kalıbı T-T-Y-T-T-T-Y'dir. Bu kalıbı bir derece kaydırmak Dorien'i, iki derece kaydırmak Frigyen'i verir."
+      },
+      {
+        "id": "q2",
+        "prompt": "Modlar arasındaki fark neyden kaynaklanır?",
+        "options": [
+          "Farklı notalar kullanmalarından",
+          "Aynı notaların, yarım seslerin dizideki yeri değişecek biçimde farklı bir sesten başlatılmasından",
+          "Farklı akort sistemlerinden",
+          "Farklı tempo kullanmalarından"
+        ],
+        "answerIndex": 1,
+        "explanation": "Yedi mod aynı yedi notayı paylaşır. Değişen tek şey, tam ve yarım seslerin sıralanışıdır — ve modun bütün karakteri buradan gelir."
+      },
+      {
+        "id": "q3",
+        "prompt": "Pentatonik dizinin yaygınlığının teknik sebebi nedir?",
+        "options": [
+          "Beş nota ezberlemesi kolaydır",
+          "Yarım ses içermediği için sesler arasında keskin sürtünme oluşmaz",
+          "Yalnızca beş telli çalgılarda kullanılır",
+          "Eşit tampereye en uygun dizidir"
+        ],
+        "answerIndex": 1,
+        "explanation": "Yarım sesin yokluğu, hangi iki ses birlikte çalınırsa çalınsın belirgin bir pürüz oluşmamasını sağlar. Bu yüzden birbirinden bağımsız kültürlerde ortaya çıkmıştır."
+      }
+    ]
+  },
+
+  {
+    "id": "akor",
+    "moduleId": "armoni",
+    "order": 2,
+    "title": "Akor",
+    "subtitle": "Üç sesi üst üste koymak, müziğe dikey bir boyut ekler.",
+    "minutes": 8,
+    "keyTerms": ["üçlü akor", "majör", "minör", "çevrim", "yedili akor", "gerilim sesleri"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Akor, aynı anda duyulan üç ya da daha fazla sestir. Batı armonisinin temel yapı taşı, gam derecelerinin bir atlanarak üst üste konmasıyla kurulan üçlü akordur: birinci, üçüncü ve beşinci dereceler. Bu basit kural, majör ve minör akorların hepsini üretir. Aradaki tek fark, ortadaki sesin konumudur."
+      },
+      {
+        "kind": "formula",
+        "title": "Dört temel üçlü",
+        "expression": "majör = 4 + 3 yarım ses    minör = 3 + 4    eksik = 3 + 3    artık = 4 + 4",
+        "note": "Sayılar, alttan üste doğru yarım ses mesafeleridir. Majör ile minör arasındaki fark tek bir yarım sestir; taşıdıkları duygusal yük ise bütünüyle farklıdır."
+      },
+      {
+        "kind": "text",
+        "title": "Çevrim: aynı akor, başka yüz",
+        "body": "Akorun seslerini yeniden sıralayıp en pesteki sesi değiştirmeye çevrim denir. Do-mi-sol ile mi-sol-do aynı akordur ama farklı durur: birincisi sağlam ve kapalı, ikincisi hafif ve akıcıdır. Bas sesi neyse akorun ağırlık merkezi orasıdır. Bir akor dizisini akıcı kılmak, büyük ölçüde çevrimleri iyi seçmek demektir; iyi bir eşlik, seslerin en az mesafeyle bir sonraki akora geçmesiyle kurulur."
+      },
+      {
+        "kind": "list",
+        "title": "Akoru zenginleştirmek",
+        "items": [
+          "Yedili: dördüncü bir ses eklenir. Dominant yedili gerilim üretir ve çözülme ister; majör yedili yumuşak ve durağan duyulur.",
+          "Dokuzlu, on birli, on üçlü: caz armonisinin renk katmanları.",
+          "Askı akorları: üçlü sesin yerini ikinci ya da dördüncü derece alır; akorun cinsiyeti belirsizleşir.",
+          "Güç akoru: yalnızca temel ve beşli. Ne majör ne minör; distorsiyonla çalındığında bulanmadığı için rock müziğin temeli.",
+          "Ses genişletmeleri melodinin altında bir doku kurar; hangi sesin en üstte olduğu, dinleyicinin duyduğu ezgiyi belirler."
+        ]
+      },
+      {
+        "kind": "example",
+        "title": "Örnek: dört akorluk şarkı",
+        "body": "I–V–vi–IV dizisi, son elli yılın pop repertuvarında sayısız şarkının iskeletidir. Sebebi tembellik değil, bu dizinin iki özelliği bir arada taşımasıdır: majörden minöre geçişte duygusal bir dönüş yaratır ve sonunda tonike güçlü bir dönüş sağlar. Aynı dört akorun üstüne birbirinden çok farklı ezgiler kurulabilir; armoni bir zemindir, şarkı değildir."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Majör ile minör üçlü arasındaki fark nedir?",
+        "options": [
+          "Beşli sesin konumu",
+          "Ortadaki üçlü sesin yarım ses aşağıda ya da yukarıda olması",
+          "Akorun kaç sesten oluştuğu",
+          "Bas sesin yüksekliği"
+        ],
+        "answerIndex": 1,
+        "explanation": "Majör 4+3, minör 3+4 yarım sestir. Tek bir yarım seslik fark, akorun karakterini tümüyle değiştirir."
+      },
+      {
+        "id": "q2",
+        "prompt": "Akor çevrimi neyi değiştirir?",
+        "options": [
+          "Akorun adını",
+          "Hangi sesin bas olduğunu, dolayısıyla akorun ağırlığını ve akıcılığını",
+          "Akorun majör ya da minör olmasını",
+          "Akorun ses sayısını"
+        ],
+        "answerIndex": 1,
+        "explanation": "Çevrim aynı sesleri farklı sırayla dizer. Akor aynı kalır ama bas değiştiği için duruşu ve bir sonraki akora bağlanışı değişir."
+      },
+      {
+        "id": "q3",
+        "prompt": "Güç akoru neden ne majör ne minördür?",
+        "options": [
+          "İki ses aynı anda çalındığı için",
+          "Cinsiyeti belirleyen üçlü sesi içermediği için",
+          "Distorsiyonlu çalındığı için",
+          "Beşli aralık disonans olduğu için"
+        ],
+        "answerIndex": 1,
+        "explanation": "Güç akorunda yalnızca temel ve beşli vardır. Majör-minör ayrımını yapan üçlü ses bulunmadığı için akor bu ayrımın dışında kalır."
+      }
+    ]
+  }
+]
