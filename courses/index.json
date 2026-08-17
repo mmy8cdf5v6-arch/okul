@@ -40,5 +40,19 @@
     "questions": 36,
     "charts": 5,
     "file": "courses/istatistik.json"
+  },
+  {
+    "id": "sanat-tarihi",
+    "title": "Sanat tarihi",
+    "subtitle": "Bakmayı öğrenmek",
+    "description": "Kompozisyondan perspektife bakmanın araçları, Antik'ten çağdaşa biçimin tarihi ve bir yapıtın değerini kimin belirlediği.",
+    "icon": "🎨",
+    "accent": "#a1442f",
+    "accentDark": "#f0a08d",
+    "category": "klasik",
+    "lessons": 12,
+    "questions": 36,
+    "charts": 2,
+    "file": "courses/sanat-tarihi.json"
   }
 ]

@@ -1,0 +1,501 @@
+[
+  {
+    "id": "barok",
+    "moduleId": "bicim",
+    "order": 3,
+    "title": "Barok ve karşı-reform",
+    "subtitle": "Sanat, ikna etmesi istenen bir araç hâline geliyor.",
+    "minutes": 8,
+    "keyTerms": ["barok", "karşı-reform", "tenebrizm", "hareket", "natürmort"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "16. yüzyılda Reform, dinsel imgeyi tartışmaya açtı; kimi bölgelerde kiliseler resimlerinden arındırıldı. Katolik Kilisesi'nin buna verdiği yanıt imgeden vazgeçmek değil, onu güçlendirmek oldu. Trento Konsili sanatın açık, duygusal ve inandırıcı olmasını istedi. Barok, bu talebin biçimsel karşılığıdır: hareket, karşıtlık, tırmanan duygu ve izleyiciyi sahneye çeken bir kurgu."
+      },
+      {
+        "kind": "text",
+        "title": "Caravaggio: sahnenin içine düşmek",
+        "body": "Caravaggio azizleri idealize etmedi; sokaktan model aldı, ayak tabanlarını kirli çizdi, sahneyi karanlığın içinden tek bir ışıkla kesti. Aziz Matta'nın Çağrılışı'nda ışık, İsa'nın işaret ettiği elin yönünde gelir ve masadaki adamların yüzlerini sırayla yakalar. İzleyici olayı seyretmez, olayın olduğu odada durur. Bu doğrudanlık dönemin kimi çevrelerini rahatsız etti ama etkisi Avrupa'nın her yerine yayıldı."
+      },
+      {
+        "kind": "list",
+        "title": "Barok resmin işaretleri",
+        "items": [
+          "Çapraz kompozisyon: sahne yataylık yerine köşegen boyunca kurulur.",
+          "Bir anın en gergin noktası seçilir: kılıç tam inerken, kumaş tam savrulurken.",
+          "Işık, mekânı aydınlatmak için değil vurgu yapmak için kullanılır.",
+          "Figürler çerçeveyi aşar, izleyicinin alanına taşar.",
+          "Tavan resimlerinde mimariyle resim birleşir, mekân açılıyormuş gibi görünür."
+        ]
+      },
+      {
+        "kind": "text",
+        "title": "Kuzeyde başka bir yol",
+        "body": "Protestan Hollanda'da kilise siparişi yoktu; onun yerine tüccarlardan oluşan bir alıcı sınıfı vardı. Sonuç, konu çeşitliliğinde bir patlama oldu: manzara, iç mekân, günlük hayat sahneleri, natürmort, grup portresi. Resimler küçüldü, çünkü kilise duvarına değil eve giriyordu. Sanat piyasası bugünkü anlamına ilk kez burada yaklaştı: ressamlar sipariş üzerine değil, satmak üzere üretmeye başladı."
+      },
+      {
+        "kind": "example",
+        "title": "Örnek: Rembrandt'ın gece bekçileri",
+        "body": "1642 tarihli grup portresi, ısmarlayan milis üyelerinin her birini eşit ve düzgün sıralamak yerine hareket hâlinde, farklı ışık düzeylerinde gösterir. Kimi öne çıkar, kimi gölgede kalır. Bir grup portresi olmaktan çıkıp bir sahneye dönüşür. Rembrandt'ın müşterilerini memnun edip etmediği tartışmalıdır; resmin tarihindeki yeri değildir."
+      },
+      {
+        "kind": "text",
+        "title": "Osmanlı'da eşzamanlı bir başka yol",
+        "body": "Aynı yüzyıllarda Osmanlı'da resim, kitap sayfasında gelişiyordu. Minyatürde perspektif ve gölge aranmaz; olayın bütünü, mekânın kuşbakışı düzeni ve figürlerin mertebesi gösterilir. Nakkaş Osman'ın sefer ve tören tasvirleri belgesel bir kesinlik taşır. 18. yüzyılda Levni'nin tek figür çalışmaları ise ölçekte, duruşta ve renkte yeni bir hafiflik getirir; Batı resmiyle temas artarken minyatür de değişir."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Trento Konsili'nin sanattan beklentisi neydi?",
+        "options": [
+          "Dinsel imgelerin kaldırılması",
+          "Sanatın açık, duygusal ve inandırıcı olarak inancı güçlendirmesi",
+          "Yalnızca soyut bezeme kullanılması",
+          "Sanatçıların anonim kalması"
+        ],
+        "answerIndex": 1,
+        "explanation": "Karşı-reform imgeden vazgeçmedi; onu daha etkili bir ikna aracı hâline getirmek istedi. Barok'un duygusal yoğunluğu bu talebin biçimsel karşılığıdır."
+      },
+      {
+        "id": "q2",
+        "prompt": "Hollanda'da resim konularının çeşitlenmesinin temel sebebi nedir?",
+        "options": [
+          "Yeni boyaların bulunması",
+          "Kilise siparişinin yerini, evine resim alan tüccar bir alıcı sınıfının alması",
+          "Kralın emri",
+          "Loncaların dağılması"
+        ],
+        "answerIndex": 1,
+        "explanation": "Alıcı değişince konu ve boyut da değişti. Manzara, natürmort ve iç mekân sahneleri açık piyasa için üretilen türler olarak yaygınlaştı."
+      },
+      {
+        "id": "q3",
+        "prompt": "Osmanlı minyatüründe perspektif ve gölgenin bulunmaması neyi gösterir?",
+        "options": [
+          "Tekniğin bilinmediğini",
+          "Amacın mekânsal yanılsama değil, olayın bütününü ve mertebeleri göstermek olduğunu",
+          "Kâğıdın uygun olmadığını",
+          "Resmin yasak olduğunu"
+        ],
+        "answerIndex": 1,
+        "explanation": "Minyatür farklı bir görsel programa dayanır: sahnenin tamamı okunabilsin, kim kimdir belli olsun. Bu bir eksiklik değil, başka bir tercihtir."
+      }
+    ]
+  },
+
+  {
+    "id": "neoklasik-ve-romantizm",
+    "moduleId": "bicim",
+    "order": 4,
+    "title": "Neoklasikten Romantizme",
+    "subtitle": "Akıl mı, duygu mu? Aynı yüzyıl iki cevabı da verdi.",
+    "minutes": 8,
+    "keyTerms": ["neoklasisizm", "romantizm", "yüce", "akademi", "salon"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "18. yüzyılın ikinci yarısında Pompei ve Herculaneum kazıları antik dünyayı gözle görülür kıldı. Aynı dönemde Aydınlanma, aklı ve yurttaşlık erdemini öne çıkardı. Neoklasisizm bu ikisinin kesişimidir: net kontur, dingin renk, kahramanca ve ahlaki konular. David'in Horatiusların Yemini, devrim öncesi Fransa'da bir tabloyu siyasi bir bildiriye çevirdi."
+      },
+      {
+        "kind": "text",
+        "title": "Romantizmin itirazı",
+        "body": "Romantizm neoklasisizme bir üslup olarak değil, bir tutum olarak karşı çıktı. Ölçü yerine taşkınlığı, kurallar yerine bireyin duygusunu, ideal beden yerine doğanın ezici gücünü öne aldı. 'Yüce' kavramı burada anahtardır: güzel olan hoşa gider, yüce olan ürkütür. Fırtınadaki gemi, buzulun altında ezilen tekne, uçurumun kenarında duran figür — bunlar insanın küçüklüğünü gösteren sahnelerdir."
+      },
+      {
+        "kind": "list",
+        "title": "İki tutumun karşılaştırması",
+        "items": [
+          "Neoklasik: çizgi öncelikli, fırça izi gizlenir. Romantik: renk ve fırça izi görünür.",
+          "Neoklasik: antik tarih ve erdem. Romantik: güncel felaket, egzotik olan, düş ve delilik.",
+          "Neoklasik: kompozisyon dengeli ve yatay. Romantik: çapraz, dengesiz, savrulan.",
+          "Neoklasik: sanatçı bir ustadır. Romantik: sanatçı bir dâhi, hatta bir kâhindir.",
+          "İkisi de akademiye bağlıdır; kopuş henüz kurumun içinde yaşanır."
+        ]
+      },
+      {
+        "kind": "example",
+        "title": "Örnek: Goya'nın 3 Mayıs 1808'i",
+        "body": "Goya, Napolyon askerlerinin İspanyol sivilleri kurşuna dizişini resmederken kahramanlık geleneğini tersine çevirdi. Kurbanın kolları havada, gömleği bembeyaz, yüzü korkuyla açık; askerler yüzsüz bir sıra hâlinde, tek bir fener sahneyi keser. Savaş resmi burada ilk kez zaferi değil, dehşeti anlatır. Yirminci yüzyılın savaş imgeleri bu tablodan çıkacaktır."
+      },
+      {
+        "kind": "text",
+        "title": "Salon: kapı ve duvar",
+        "body": "Fransız Akademisi'nin düzenlediği Salon, bir sanatçının görünür olmasının neredeyse tek yoluydu. Jüri hangi yapıtın asılacağına, hangi yüksekliğe asılacağına karar veriyordu; göz hizası itibar, tavan hizası ise unutulma demekti. Bu tekel, 1863'te reddedilen yapıtların ayrı bir sergide gösterilmesiyle çatladı. Modern sanatın kurumsal tarihi büyük ölçüde bu çatlaktan doğar."
+      },
+      {
+        "kind": "quote",
+        "text": "Aklın uykusu canavarlar doğurur.",
+        "source": "Goya, Los Caprichos, 1799"
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Romantizmde 'yüce' kavramı neyi anlatır?",
+        "options": [
+          "Kusursuz orantıyı",
+          "İnsanı ürküten, ezen ve küçüklüğünü hissettiren büyüklüğü",
+          "Dinsel kutsallığı",
+          "Aristokrat inceliği"
+        ],
+        "answerIndex": 1,
+        "explanation": "Güzel hoşa giderken yüce korku ve hayranlık karışımı bir duygu üretir. Romantik manzaralardaki fırtına, buzul ve uçurum bu kavramın görsel karşılığıdır."
+      },
+      {
+        "id": "q2",
+        "prompt": "Neoklasik resimde fırça izinin gizlenmesi neyi ifade eder?",
+        "options": [
+          "Boyanın yetersizliğini",
+          "Çizginin ve idealize edilmiş biçimin önceliğini",
+          "Aceleyle çalışıldığını",
+          "Konunun önemsizliğini"
+        ],
+        "answerIndex": 1,
+        "explanation": "Neoklasik anlayışta yapıtın kendisi değil temsil ettiği ideal önemlidir; el izi bu idealin önüne geçmemelidir. Romantikler tam tersini yapacaktır."
+      },
+      {
+        "id": "q3",
+        "prompt": "Salon'un sanat tarihindeki rolü nedir?",
+        "options": [
+          "Sanatçıların eğitim aldığı okul",
+          "Görünür olmanın neredeyse tek yolu olan, jürisi ve asma hiyerarşisiyle güç sahibi sergi kurumu",
+          "Bir sanat akımı",
+          "Kraliyet koleksiyonu"
+        ],
+        "answerIndex": 1,
+        "explanation": "Salon hem kapı hem duvardı: kimin gösterileceğine ve nereye asılacağına karar veriyordu. Bu tekelin çatlaması modern sanatın önünü açtı."
+      }
+    ]
+  },
+
+  {
+    "id": "izlenimcilik",
+    "moduleId": "kopus",
+    "order": 1,
+    "title": "İzlenimcilik ve fotoğrafın etkisi",
+    "subtitle": "Fotoğraf benzerliği üstlenince resim başka bir soru sormaya başladı.",
+    "minutes": 9,
+    "keyTerms": ["izlenimcilik", "açık hava resmi", "anlık", "japonizm", "fotoğraf"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "1839'da fotoğrafın duyurulması resim için hem bir tehdit hem bir kurtuluştu. Benzerlik üretmek artık bir makinenin işiydi ve makine bunu daha ucuza, daha hızlı yapıyordu. Portre ressamlarının önemli bir kısmı geçim kaynağını kaybetti. Ama aynı gelişme resmi, yüzyıllardır taşıdığı belgeleme yükünden kurtardı. Soru değişti: resim, fotoğrafın yapamadığı neyi yapabilir?"
+      },
+      {
+        "kind": "text",
+        "title": "Anı resmetmek",
+        "body": "İzlenimcilerin cevabı ışığın ve anın kendisiydi. Aynı katedrali günün farklı saatlerinde resmeden Monet, konusunun katedral değil ışık olduğunu göstermiş oluyordu. Fırça izleri bırakıldı, kontur çözüldü, gölgeler renklendi. Tüp boyanın icadı ve taşınabilir şövale, ressamı atölyeden çıkarıp doğrudan manzaranın içine soktu. Demiryolu, Paris'ten kırlara bir günde gidip dönmeyi mümkün kılmıştı."
+      },
+      {
+        "kind": "list",
+        "title": "Fotoğrafın resme öğrettikleri",
+        "items": [
+          "Kadraj: figürün çerçeve tarafından kesilebileceği fikri.",
+          "Anlık duruş: dengesiz, geçici, poz verilmemiş bedenler.",
+          "Alışılmadık açı: yukarıdan ya da çok yakından bakış.",
+          "Bulanıklık: hareketin izinin resimde de kalabileceği.",
+          "Bu öğelerin bir kısmı aynı dönemde Japon baskılarından da geliyordu; iki kaynak birbirini destekledi."
+        ]
+      },
+      {
+        "kind": "example",
+        "title": "Örnek: 1874 sergisi ve bir hakaret",
+        "body": "Salon tarafından sürekli reddedilen bir grup ressam 1874'te kendi sergilerini açtı. Bir eleştirmen, Monet'nin 'İzlenim, gün doğumu' adlı tablosundan yola çıkarak grubu alaya aldı: bunlar resim değil, izlenim. Ad tutuldu ve grup onu sahiplendi. Sanat tarihinde akım adlarının önemli bir kısmı böyle, karşıtların ağzından çıkmıştır."
+      },
+      {
+        "kind": "text",
+        "title": "Sonrasında: yapıyı geri getirmek",
+        "body": "İzlenimcilikten sonra gelen kuşak, anlık izlenimin kompozisyonu çözdüğünü düşündü. Cézanne doğayı küre, koni ve silindire indirgemeyi denedi ve aynı nesneyi birden çok bakış noktasından kurdu. Seurat, rengi optik kurallara göre noktalara ayırdı. Van Gogh rengi gözlemden koparıp duyguya bağladı. Bu üç yol, yirminci yüzyılın üç ayrı damarını besleyecekti."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Fotoğrafın resim üzerindeki temel etkisi nedir?",
+        "options": [
+          "Resmi tamamen ortadan kaldırdı",
+          "Benzerlik üretme yükünü üstlenerek resmi başka sorulara yöneltti",
+          "Renk kullanımını yasakladı",
+          "Portre resmini yaygınlaştırdı"
+        ],
+        "answerIndex": 1,
+        "explanation": "Belgeleme işlevi makineye geçince resim, ışık, algı, biçim ve sonunda kendi doğası üzerine sorular sormaya başladı."
+      },
+      {
+        "id": "q2",
+        "prompt": "Monet'nin aynı yapıyı farklı saatlerde defalarca resmetmesi neyi gösterir?",
+        "options": [
+          "Yapıyı belgelemek istediğini",
+          "Konusunun yapı değil, üzerine düşen ışık ve o anın algısı olduğunu",
+          "Sipariş üzerine çalıştığını",
+          "Tekniğini geliştirmeye çalıştığını"
+        ],
+        "answerIndex": 1,
+        "explanation": "Dizi hâlinde çalışmak, konunun nesne değil değişen ışık olduğunu ortaya koyar. İzlenimciliğin özü buradadır."
+      },
+      {
+        "id": "q3",
+        "prompt": "Cézanne'ın izlenimcilikten ayrıldığı nokta nedir?",
+        "options": [
+          "Atölyeye geri dönmesi",
+          "Anlık izlenimin çözdüğü yapıyı, biçimleri temel geometrik hacimlere indirgeyerek geri kurmaya çalışması",
+          "Fotoğraf kullanmayı reddetmesi",
+          "Yalnızca portre yapması"
+        ],
+        "answerIndex": 1,
+        "explanation": "Cézanne kalıcı bir yapı arıyordu. Aynı nesneyi birden çok bakış noktasından kurma denemesi, kübizmin doğrudan öncülüdür."
+      }
+    ]
+  },
+
+  {
+    "id": "soyutlama",
+    "moduleId": "kopus",
+    "order": 2,
+    "title": "Soyutlamaya giden yol",
+    "subtitle": "Resim, bir şeyi göstermek zorunda olmadığını keşfediyor.",
+    "minutes": 9,
+    "keyTerms": ["soyutlama", "kübizm", "süprematizm", "de stijl", "non-figüratif"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Soyutlama bir gecede olmadı. Yolu üç adımda özetlemek mümkündür. Önce renk gözlemden koparıldı: Van Gogh ve Fauve'lar bir yüzü yeşile, bir gökyüzünü kırmızıya boyadı. Sonra biçim tek bakış noktasından koparıldı: kübizm nesneyi parçalayıp birden çok andan yeniden kurdu. En sonunda konu tümüyle bırakıldı: tuvalde artık hiçbir şeyin tasviri kalmadı."
+      },
+      {
+        "kind": "text",
+        "title": "Kübizm ne yaptı",
+        "body": "Picasso ve Braque 1907-1914 arasında nesneyi cepheden, yandan ve üstten görülen yüzeylerin aynı düzlemde toplandığı bir sisteme çevirdi. Derinlik reddedilmedi, düzleştirildi. Sonraki aşamada gazete parçaları, duvar kâğıdı ve harfler tuvale yapıştırıldı: kolaj, resmin dışarıdan malzeme alabileceğini gösterdi. Bu, yirminci yüzyıl sanatının en çok kullanılan araçlarından biri olacaktı."
+      },
+      {
+        "kind": "list",
+        "title": "Soyutlamanın farklı gerekçeleri",
+        "items": [
+          "Kandinsky: renk ve biçim, müzik gibi doğrudan iç dünyaya seslenir.",
+          "Malevich: nesnenin tümden atılması, saf duyumun tek yolu — süprematizm.",
+          "Mondrian ve De Stijl: evrensel bir düzen arayışı; yalnızca dik açı ve ana renkler.",
+          "Rus konstrüktivistleri: sanatın nesnesi tablo değil, yeni bir toplumun tasarımı olmalı.",
+          "Her biri soyutlamayı savunur ama gerekçeleri birbiriyle çelişir; ortak bir program yoktur."
+        ]
+      },
+      {
+        "kind": "example",
+        "title": "Örnek: Siyah Kare",
+        "body": "Malevich'in 1915'te sergilediği Siyah Kare, beyaz zemin üzerinde siyah bir kareden ibarettir. Sergide tabloyu odanın köşesine, geleneksel olarak ikonun asıldığı yere astı. Yapıt bir provokasyon değil bir iddiaydı: resim, dünyadaki hiçbir şeyi göstermeden var olabilir. Yüz yıl sonra röntgen incelemesi altta başka bir kompozisyon buldu; Malevich sıfır noktasına bir denemenin üzerini örterek varmıştı."
+      },
+      {
+        "kind": "text",
+        "title": "Türkiye'de eşzamanlı gelişme",
+        "body": "Osman Hamdi Bey'in akademik resmi ve arkeoloji çalışmaları, Osmanlı'da modern kurumların kuruluşuyla iç içedir; Sanayi-i Nefise Mektebi 1882'de açılır. Cumhuriyet döneminde Müstakil Ressamlar ve ardından D Grubu, kübizmin ve konstrüktivizmin araçlarını yerel konularla birleştirir. Soyutlama Türkiye'ye 1950'lerde güçlü biçimde girer; kalıgrafik gelenekle kurulan ilişki, buradaki soyutlamaya kendine özgü bir yön verir."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Kübizmin temel yeniliği nedir?",
+        "options": [
+          "Renkleri parlaklaştırması",
+          "Nesneyi birden çok bakış noktasından görülen yüzeylerin aynı düzlemde toplandığı bir sisteme çevirmesi",
+          "Fotoğraf kullanması",
+          "Yalnızca geometrik şekiller çizmesi"
+        ],
+        "answerIndex": 1,
+        "explanation": "Kübizm tek bakış noktalı perspektifi terk eder. Nesne tek bir andan değil, birden çok andan kurulur."
+      },
+      {
+        "id": "q2",
+        "prompt": "Kolajın sanat tarihindeki önemi nedir?",
+        "options": [
+          "Boyayı ucuzlatması",
+          "Resmin dışarıdan gerçek malzeme alabileceğini göstermesi",
+          "Perspektifi geri getirmesi",
+          "Tuval boyutunu büyütmesi"
+        ],
+        "answerIndex": 1,
+        "explanation": "Gazete, kâğıt ve kumaşın tuvale girmesi, yapıtın yalnızca temsil değil nesne de olabileceğini gösterdi. Yirminci yüzyıl bu kapıdan geçti."
+      },
+      {
+        "id": "q3",
+        "prompt": "Soyutlamayı savunanların ortak bir programı var mıydı?",
+        "options": [
+          "Evet, hepsi aynı manifestoyu imzaladı",
+          "Hayır; Kandinsky'nin içsellik, Malevich'in saf duyum ve Mondrian'ın evrensel düzen gerekçeleri birbirinden farklıydı",
+          "Evet, hepsi yalnızca ana renkleri kullandı",
+          "Hayır, çünkü soyutlama tek bir kişinin buluşuydu"
+        ],
+        "answerIndex": 1,
+        "explanation": "Soyutlama tek bir fikir değil, birbiriyle çelişen gerekçelerle aynı sonuca varan birkaç ayrı yoldur."
+      }
+    ]
+  },
+
+  {
+    "id": "avangart",
+    "moduleId": "kopus",
+    "order": 3,
+    "title": "Avangart ve kavramsal dönüş",
+    "subtitle": "Soru artık 'nasıl yapılmış' değil, 'bu neden sanat'.",
+    "minutes": 8,
+    "keyTerms": ["avangart", "hazır nesne", "dada", "sürrealizm", "kavramsal sanat"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Birinci Dünya Savaşı, Avrupa'nın akla ve ilerlemeye olan güvenini kırdı. Dada bu kırılmanın adıdır: anlamsızlığı bir yöntem olarak benimseyen, kurumu ve beğeniyi hedef alan bir hareket. Sürrealizm aynı kopuşu psikanaliz üzerinden sürdürdü; bilinçdışı, rüya ve otomatik yazım, akıl dışını bir kaynak hâline getirdi."
+      },
+      {
+        "kind": "text",
+        "title": "Çeşme ve sorduğu soru",
+        "body": "Marcel Duchamp 1917'de bir seramik pisuarı ters çevirip imzaladı ve sergiye gönderdi. Yapıt reddedildi ama soru kaldı: bir nesneyi sanat yapan şey nedir? El becerisi değil, çünkü nesne fabrikada üretilmişti. Malzeme değil. Geriye seçme eylemi, adlandırma ve sergileme bağlamı kalıyordu. Yirminci yüzyıl sanatının büyük kısmı bu sorunun etrafında döner."
+      },
+      {
+        "kind": "list",
+        "title": "Kavramsal dönüşün sonuçları",
+        "items": [
+          "Yapıt kalıcı bir nesne olmak zorunda değil: performans, olay, talimat.",
+          "Fikir, gerçekleşmesinden önemli olabilir; sertifika yapıtın kendisi hâline gelir.",
+          "Bağlam belirleyici: aynı nesne müzede sanat, dükkânda emtiadır.",
+          "İzleyici tamamlayıcı bir rol üstlenir; anlam yapıtta değil karşılaşmada kurulur.",
+          "Eleştiri, artık yalnızca yapıtı değil kurumu da konu edinir."
+        ]
+      },
+      {
+        "kind": "example",
+        "title": "Örnek: soyut dışavurumculuk ve New York",
+        "body": "İkinci Dünya Savaşı, Avrupa'dan Amerika'ya büyük bir sanatçı ve entelektüel göçü yarattı. Sanat merkezi Paris'ten New York'a kaydı. Pollock'un tuvali yere serip üzerine boya damlatması, resmi bir imge üretme işi olmaktan çıkarıp bir eylemin kaydına dönüştürdü. Bu dönemde Amerikan soyut resminin devlet destekli programlarla yurt dışında sergilenmesi, sanat ile kültürel diplomasinin nasıl kesiştiğinin de örneğidir."
+      },
+      {
+        "kind": "text",
+        "title": "Pop: yüksek ve alçak arasındaki duvar",
+        "body": "1960'larda Warhol, Lichtenstein ve çağdaşları reklam, çizgi roman ve ambalajı doğrudan yapıta taşıdı. Warhol'un ipek baskıyla çoğalttığı Marilyn portreleri hem tekrar hem tüketim üzerinedir. Yüksek sanat ile popüler kültür arasındaki hiyerarşi bu dönemde ciddi biçimde aşınır. Warhol atölyesine 'Fabrika' demişti; ironi kasıtlıydı."
+      },
+      {
+        "kind": "quote",
+        "text": "Sanatçının rolü yapmak değil, seçmektir.",
+        "source": "Duchamp'ın hazır nesne fikrinin özeti"
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Duchamp'ın hazır nesnesi hangi soruyu ortaya attı?",
+        "options": [
+          "Hangi boya daha kalıcıdır?",
+          "Bir nesneyi sanat yapan şey el becerisi değilse nedir — seçme, adlandırma ve bağlam mı?",
+          "Sanat nasıl satılır?",
+          "Perspektif gerekli midir?"
+        ],
+        "answerIndex": 1,
+        "explanation": "Fabrikada üretilmiş bir nesnenin sergiye girmesi, sanatı tanımlayan şeyin üretim becerisi değil karar ve bağlam olabileceğini gösterdi."
+      },
+      {
+        "id": "q2",
+        "prompt": "Dada hareketinin çıkış noktası nedir?",
+        "options": [
+          "Rönesans'a dönme isteği",
+          "Birinci Dünya Savaşı sonrası akla ve ilerlemeye duyulan güvenin kırılması",
+          "Fotoğrafın icadı",
+          "Yeni boya teknolojileri"
+        ],
+        "answerIndex": 1,
+        "explanation": "Dada, savaşın yıktığı akılcılık inancına karşı anlamsızlığı bilinçli bir yöntem olarak benimsedi ve sanat kurumunu hedef aldı."
+      },
+      {
+        "id": "q3",
+        "prompt": "Pop sanatın temel etkisi nedir?",
+        "options": [
+          "Soyutlamayı sonlandırması",
+          "Yüksek sanat ile popüler kültür arasındaki hiyerarşiyi aşındırması",
+          "Perspektifi geri getirmesi",
+          "Sanatı müzelerden çıkarması"
+        ],
+        "answerIndex": 1,
+        "explanation": "Reklam, ambalaj ve çizgi romanın yapıta girmesi, 'yüksek' ve 'alçak' kültür ayrımını sorgulanır hâle getirdi."
+      }
+    ]
+  },
+
+  {
+    "id": "cagdas-ve-piyasa",
+    "moduleId": "kopus",
+    "order": 4,
+    "title": "Çağdaş sanat ve piyasa",
+    "subtitle": "Yapıtın değerini kim, neye göre belirliyor?",
+    "minutes": 9,
+    "keyTerms": ["çağdaş sanat", "bienal", "küratör", "kurum eleştirisi", "sanat piyasası"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Çağdaş sanat bir üslup değil, bir dönemin adıdır: kabaca 1960'lardan bugüne. Ortak biçimsel özellik aramak boşunadır. Ortak olan koşullardır — küresel bir sergi ağı, küratörün belirleyici rolü, kavramın malzemeye önceliği, ve bir yapıtın çoğu zaman yerleştirme, video, performans ya da katılım biçiminde ortaya çıkması."
+      },
+      {
+        "kind": "text",
+        "title": "Değer nasıl kuruluyor",
+        "body": "Sanat piyasasının fiyat oluşumu diğer piyasalardan iki noktada ayrılır. Birincisi, mallar birbirinin yerine geçmez: her yapıt tektir, bu yüzden karşılaştırmalı fiyat zayıf bir çıpadır. İkincisi, satıcılar arzı doğrudan yönetir: galeriler kime satacaklarını seçer, sanatçının üretimini kısar, koleksiyonun müzeye gitmesini önemser. Fiyat burada yalnızca talebi değil, kurumsal onayı da yansıtır."
+      },
+      {
+        "kind": "list",
+        "title": "Bir yapıtın kariyer basamakları",
+        "items": [
+          "Galeri: ilk temsil, birincil piyasada satış, koleksiyoncu seçimi.",
+          "Kurumsal sergi: müze ya da bienal, akademik yazıya konu olma.",
+          "Müzayede: ikincil piyasa, kamuya açık fiyat oluşumu.",
+          "Kalıcı koleksiyon: müzeye girmek, uzun vadeli itibarın çıpası.",
+          "Kanon: ders kitaplarına ve müfredata girmek — en yavaş ve en belirleyici aşama."
+        ]
+      },
+      {
+        "kind": "text",
+        "title": "Kurum eleştirisi",
+        "body": "1970'lerden itibaren birçok sanatçı, işini doğrudan müzenin ve piyasanın işleyişi üzerine kurdu. Kim sergileniyor, kim finanse ediyor, hangi hikâye anlatılıyor, hangi eserler nereden geldi? Müze koleksiyonlarının sömürgeci geçmişle ilişkisi, kadın ve Batı dışı sanatçıların temsili, sponsorluk ilişkileri bu tartışmanın kalıcı başlıklarıdır. Kurum eleştirisi zamanla kurumun kendi programına da girdi — bu ironinin kendisi de tartışma konusudur."
+      },
+      {
+        "kind": "example",
+        "title": "Örnek: bienal ağı",
+        "body": "1895'te kurulan Venedik Bienali uzun süre tekti. 1980'lerden itibaren sayıları hızla arttı; İstanbul Bienali 1987'de başladı ve şehri uluslararası çağdaş sanat haritasına yerleştirdi. Bienaller sanatçıyı ulusal pazardan çıkarıp küresel bir dolaşıma soktu. Eleştirisi de burada: benzer isimlerin benzer sergilerde dolaştığı, yerelin dekora dönüştüğü söylenir."
+      },
+      {
+        "kind": "text",
+        "title": "Bugün bakmayı sürdürmek",
+        "body": "Çağdaş bir yapıtın karşısında ilk dersteki sorular hâlâ işe yarar: göz nereye gidiyor, ne dışarıda bırakılmış, malzeme neden bu. Buna iki soru eklenir: bu yapıt nerede duruyor ve kim tarafından oraya konuldu? Sanat tarihi öğrenmenin pratik faydası, bir yapıtı beğenip beğenmemekten önce ne yaptığını görebilmektir."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Sanat piyasasını diğer piyasalardan ayıran özellik nedir?",
+        "options": [
+          "Fiyatların devlet tarafından belirlenmesi",
+          "Malların birbirinin yerine geçmemesi ve satıcıların arzı doğrudan yönetmesi",
+          "Alıcı sayısının sınırsız olması",
+          "Ürünlerin standart olması"
+        ],
+        "answerIndex": 1,
+        "explanation": "Her yapıt tek olduğu için karşılaştırmalı fiyat zayıftır; galeriler kime satacaklarını seçerek arzı ve itibarı birlikte yönetir."
+      },
+      {
+        "id": "q2",
+        "prompt": "Kurum eleştirisi neyi konu edinir?",
+        "options": [
+          "Boyaların kalitesini",
+          "Müzenin ve piyasanın kimi sergilediğini, kimin finanse ettiğini ve hangi hikâyeyi anlattığını",
+          "Yalnızca sergi mekânlarının mimarisini",
+          "Sanat eğitimini"
+        ],
+        "answerIndex": 1,
+        "explanation": "Kurum eleştirisi yapıtı üreten çerçeveyi konu alır: temsil, finansman, kökenler ve kanonun nasıl kurulduğu."
+      },
+      {
+        "id": "q3",
+        "prompt": "Bienallerin sanat üzerindeki etkisi nedir?",
+        "options": [
+          "Sanatçıları ulusal pazarla sınırlaması",
+          "Sanatçıyı küresel bir dolaşıma sokması, ama yerelin dekora dönüşmesi eleştirisini de doğurması",
+          "Müzayede fiyatlarını sabitlemesi",
+          "Yalnızca resim sergilenmesini sağlaması"
+        ],
+        "answerIndex": 1,
+        "explanation": "Bienal ağı görünürlüğü küreselleştirdi. Eleştirisi de bu küreselleşmenin benzeşmeye ve yerelin yüzeysel temsiline yol açtığı yönünde."
+      }
+    ]
+  }
+]

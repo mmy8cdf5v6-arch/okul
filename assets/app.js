@@ -1433,6 +1433,80 @@
             : "Ama toplamda B önde görünüyor: %" + r0(bAll * 100) + "'e %" + r0(aAll * 100) + ". Sebep A'nın kötü olması değil, ağır vakaların %" +
               p.k + "'inin A'ya gitmesi.") };
       }
+    },
+
+    "perspektif": {
+      title: "Tek kaçış noktalı perspektif",
+      note: "Aynı boydaki iki figürün ekranda farklı büyüklükte çıkması bir kural değil, bir hesabın sonucudur. Brunelleschi'nin bulduğu şey bu hesaptı.",
+      controls: [
+        { key: "h", label: "Ufuk çizgisi (göz hizası)", min: 30, max: 80, step: 5, def: 55, fmt: pctS },
+        { key: "d", label: "İzleyici mesafesi", min: 15, max: 90, step: 5, def: 35,
+          fmt: function (v) { return v < 30 ? "yakın" : v > 65 ? "uzak" : "orta"; } }
+      ],
+      draw: function (p) {
+        var H = p.h / 100, d = p.d / 10, i;
+        /* Tek kaçış noktalı izdüşüm: z derinliğindeki bir zemin noktası
+           ekranda kaçış noktasına d/(d+z) oranında yaklaşır. */
+        var yz = function (z) { return H * (1 - d / (d + z)); };
+        var xz = function (x0, z) { return 0.5 + (x0 - 0.5) * (d / (d + z)); };
+        var s = gRect(0, H, 1, 1, { c: "var(--makro)", o: 0.07, r: 0 });   // arka duvar
+        s += gRect(0, 0, 1, H, { c: "var(--accent)", o: 0.09, r: 0 });     // zemin
+        for (i = 0; i <= 6; i++) {                       // zemine dik çizgiler
+          s += gLine(i / 6, 0, 0.5, H, { c: "var(--rule)", w: 1.1 });
+        }
+        [1.2, 3, 6, 11, 20, 40].forEach(function (z) {   // enine çizgiler
+          var y = yz(z);
+          s += gLine(xz(0, z), y, xz(1, z), y, { c: "var(--rule)", w: 1.1 });
+        });
+        s += gLine(0, H, 1, H, { c: "var(--makro)", w: 1.6, d: "5 3" });
+        s += gTxt(0.02, H, "ufuk çizgisi", { a: "start", dy: -5, c: "var(--makro)", s: 9 });
+
+        /* İki figür de göz hizasıyla aynı boyda. Bu durumda tepe noktaları
+           yz(z) + H·d/(d+z) = H olur: mesafe ne olursa olsun başları ufuk
+           çizgisine değer. Perspektifin en çok işe yarayan tek kuralı budur. */
+        var near = 1.2, far = 14;
+        [[near, 0.20], [far, 0.66]].forEach(function (f) {
+          var z = f[0], k = d / (d + z), fx = xz(f[1], z), fy = yz(z);
+          s += gRect(fx - 0.05 * k, fy, fx + 0.05 * k, H, { c: "var(--accent)", o: 0.85, r: 1 });
+        });
+        var ratio = ((d / (d + near)) / (d / (d + far)));
+        s += gDot(0.5, H, { c: "var(--ink)", r: 3.5 });
+        s += gTxt(0.5, H, "kaçış noktası", { a: "middle", dy: -9, c: "var(--ink)", b: 1, s: 9 });
+        return { svg: s, text: "İki figür de göz hizanızla aynı boyda, bu yüzden ikisinin de başı " +
+          "ufuk çizgisine değiyor — mesafeden bağımsız olarak. Yakındaki, uzaktakinin " + r1(ratio) +
+          " katı görünüyor. " + (p.d < 30
+            ? "İzleyici yaklaştıkça derinlik abartılır: zemin hızla daralır, mekân dramatikleşir."
+            : p.d > 65
+              ? "İzleyici uzaklaştıkça izdüşüm düzleşir; kareler neredeyse eşit aralıklı görünür."
+              : "Ufuk çizgisini yükseltirseniz sahneye tepeden, alçaltırsanız aşağıdan bakarsınız.") };
+      }
+    },
+
+    "esz-zamanli-karsitlik": {
+      title: "Aynı gri, iki farklı zemin",
+      note: "Renkler burada bilerek sabit değerlerde çizilir; kurstaki diğer grafiklerin aksine temaya göre değişmezler, çünkü gösterilen şey karşılaştırmanın kendisi.",
+      controls: [
+        { key: "k", label: "Zeminler arası karşıtlık", min: 0, max: 100, step: 10, def: 90, fmt: pctS },
+        { key: "b", type: "choice", label: "Bağlantı şeridi", def: "yok",
+          options: [["yok", "Kapalı"], ["var", "Açık"]] }
+      ],
+      draw: function (p) {
+        var k = p.k / 100, L1 = 50 + 42 * k, L2 = 50 - 42 * k, G = "hsl(0 0% 50%)";
+        var bg = function (L) { return "hsl(0 0% " + r0(L) + "%)"; };
+        var s = gRect(0, 0, 0.5, 1, { c: bg(L2), r: 0 });
+        s += gRect(0.5, 0, 1, 1, { c: bg(L1), r: 0 });
+        if (p.b === "var") s += gRect(0, 0.44, 1, 0.56, { c: G, r: 0 });
+        s += gRect(0.13, 0.3, 0.37, 0.7, { c: G, r: 2 });
+        s += gRect(0.63, 0.3, 0.87, 0.7, { c: G, r: 2 });
+        s += gTxt(0.25, 0.06, "koyu zemin", { a: "middle", c: bg(L2 > 50 ? 20 : 88), s: 9, b: 1 });
+        s += gTxt(0.75, 0.06, "açık zemin", { a: "middle", c: bg(L1 > 50 ? 20 : 88), s: 9, b: 1 });
+        return { svg: s, text: k === 0
+          ? "Zeminler eşitken iki kare de aynı görünüyor — çünkü gerçekten aynılar."
+          : "İki kare de tam olarak aynı gri. Koyu zemindeki açık, açık zemindeki koyu görünüyor. " +
+            (p.b === "var"
+              ? "Bağlantı şeridi ikisini birleştirince yanılsama çöküyor: göz artık tek bir yüzey görüyor."
+              : "Bağlantı şeridini açıp ikisini birleştirin; yanılsama anında dağılır. Göz mutlak parlaklığı değil, komşusuyla farkı ölçer.") };
+      }
     }
   };
 

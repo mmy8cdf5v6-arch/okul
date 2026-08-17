@@ -37,7 +37,7 @@ def main():
                     break
             i += 1
         control = charts[start:i + 1]
-        if "def:" not in control and 'type: "choice"' not in control:
+        if "def:" not in control:
             sys.exit("başlangıç değeri (def) olmayan grafik denetimi:\n  " + " ".join(control.split()))
 
     # grafik kimlikleri gerçekten tanımlı mı?

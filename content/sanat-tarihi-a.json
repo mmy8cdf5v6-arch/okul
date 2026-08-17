@@ -1,0 +1,515 @@
+[
+  {
+    "id": "bicim-ve-kompozisyon",
+    "moduleId": "bakmak",
+    "order": 1,
+    "title": "Biçim ve kompozisyon",
+    "subtitle": "Bir yapıta bakarken gözünüz neden oraya gidiyor?",
+    "minutes": 8,
+    "keyTerms": ["kompozisyon", "denge", "negatif alan", "ritim", "odak"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Sanat tarihine girmenin iki kapısı vardır. Biri konudur: kim, ne zaman, neyi resmetti. Diğeri biçimdir: yüzeyde ne var, nasıl düzenlenmiş, göz nereye gidiyor. İkincisi daha az konuşulur ama önce gelir; çünkü bir yapıtın konusunu bilmeden de bakabilirsiniz, biçimini görmeden ise konusunu okuyamazsınız. Kompozisyon, bu düzenlemenin adıdır."
+      },
+      {
+        "kind": "text",
+        "title": "Göz rastgele gezmez",
+        "body": "Bir tabloya bakan göz saniyeler içinde belirli noktalara sıçrar ve orada durur. Bu noktaları belirleyen şeyler bellidir: en yüksek karşıtlık, en keskin ayrıntı, insan yüzü, bakış yönü, çizgilerin kesiştiği yer. Ressam bunları bilir ve gözü yönetir. Caravaggio karanlık bir sahnede tek bir eli aydınlatır; oraya bakarsınız. Vermeer pencereden gelen ışığı bir alnın üzerine düşürür; oraya bakarsınız. Kompozisyonu okumak, bu yönlendirmeyi fark etmektir."
+      },
+      {
+        "kind": "list",
+        "title": "Bakarken sorulacak beş soru",
+        "items": [
+          "Göz ilk nereye gidiyor, sonra nereye? Bir yol var mı?",
+          "Ağırlık nasıl dengeleniyor — simetriyle mi, karşı ağırlıkla mı?",
+          "Boşluk nerede? Doldurulmamış alan neyi taşıyor?",
+          "Yatay, dikey ve çapraz çizgilerden hangisi baskın?",
+          "Çerçeve nerede kesiyor? Kesilen şey dışarıda bir dünya olduğunu mu söylüyor?"
+        ]
+      },
+      {
+        "kind": "text",
+        "title": "Denge simetri demek değildir",
+        "body": "Simetri en kolay dengedir ve bu yüzden çoğunlukla törensel etki yaratır: ikonlar, mihraplar, taht sahneleri. Ama denge asimetrik de kurulabilir. Küçük ama parlak bir leke, büyük ama sönük bir kütleyi dengeler. Bir yöne bakan figürün önündeki boşluk, arkasındaki kalabalığı karşılar. Japon baskılarının Avrupa resmine öğrettiği şeylerden biri tam olarak buydu: merkezi boş bırakıp ağırlığı kenara toplamak."
+      },
+      {
+        "kind": "example",
+        "title": "Örnek: Las Meninas",
+        "body": "Velázquez'in 1656 tarihli tablosunda ressamın kendisi, prenses, nedimeler, bir ayna, açık bir kapı ve arkada duran bir figür vardır. Kompozisyon izleyiciyi tablonun içine yerleştirir: aynadaki kral ve kraliçe, tam sizin durduğunuz noktadan yansır. Yapıtın konusu bir portre değil, bakma eyleminin kendisidir. Biçim burada doğrudan anlam üretir."
+      },
+      {
+        "kind": "text",
+        "title": "Ritim ve tekrar",
+        "body": "Tekrarlanan biçimler gözü belirli bir hızda ilerletir. Bir sıra sütun, bir dizi baş, aynı jestin farklı figürlerde yinelenmesi — bunlar müzikteki ritme benzer bir zaman duygusu kurar. Tekrarın bozulduğu yer ise vurgudur: on figürün dokuzu aynı yöne bakıyorsa, tersine bakan onuncu figür tablonun konusudur."
+      },
+      {
+        "kind": "quote",
+        "text": "Resim, bakanın gözünü yönetme sanatıdır. Ressam neye baktığınızı seçer; siz baktığınızı sanırsınız.",
+        "source": "Biçimsel çözümlemenin temel kabullerinden"
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Bir tabloda gözün ilk gittiği noktayı en çok belirleyen şey nedir?",
+        "options": [
+          "Tuvalin ortası",
+          "En yüksek karşıtlığın, en keskin ayrıntının ve insan yüzünün bulunduğu yer",
+          "En büyük nesne",
+          "En koyu renk"
+        ],
+        "answerIndex": 1,
+        "explanation": "Göz karşıtlığa, ayrıntıya ve yüzlere çekilir. Ressam bu eğilimleri bilerek karşıtlığı istediği yere yerleştirir."
+      },
+      {
+        "id": "q2",
+        "prompt": "Asimetrik denge nasıl kurulur?",
+        "options": [
+          "Ancak simetriyle kurulabilir",
+          "Küçük ama yoğun bir öğe, büyük ama sönük bir kütleyi karşılayacak biçimde yerleştirilerek",
+          "Tuvalin ikiye bölünmesiyle",
+          "Bütün figürlerin aynı boyda çizilmesiyle"
+        ],
+        "answerIndex": 1,
+        "explanation": "Görsel ağırlık yalnızca boyuta değil; parlaklığa, doygunluğa, ayrıntı yoğunluğuna ve anlamsal öneme de bağlıdır."
+      },
+      {
+        "id": "q3",
+        "prompt": "Negatif alan nedir?",
+        "options": [
+          "Koyu renkle boyanmış bölgeler",
+          "Nesnelerin arasında ve çevresinde kalan, kompozisyonun parçası olan boşluk",
+          "Boyanmamış tuval",
+          "Çerçevenin dışı"
+        ],
+        "answerIndex": 1,
+        "explanation": "Boşluk pasif bir artık değildir; biçimleri tanımlar, nefes verir ve ağırlık taşır. Doğu resminde boşluk çoğu zaman asıl konudur."
+      }
+    ]
+  },
+
+  {
+    "id": "renk-ve-isik",
+    "moduleId": "bakmak",
+    "order": 2,
+    "title": "Renk ve ışık",
+    "subtitle": "Renk mutlak değildir; komşusuna göre görülür.",
+    "minutes": 8,
+    "keyTerms": ["ton", "doygunluk", "değer", "chiaroscuro", "eş zamanlı karşıtlık"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Rengin üç boyutu vardır. Ton, rengin adıdır: kırmızı, mavi, yeşil. Doygunluk, o rengin ne kadar saf olduğudur; griye yaklaştıkça düşer. Değer ise açıklık-koyuluk derecesidir. Ressamlar için en önemlisi çoğu zaman üçüncüsüdür: bir tablonun yapısı, renkler griye çevrildiğinde bile ayakta duruyorsa sağlamdır."
+      },
+      {
+        "kind": "text",
+        "title": "Göz farkı ölçer, mutlak değeri değil",
+        "body": "İnsan görme sistemi bir yüzeyin parlaklığını tek başına değil, çevresine göre değerlendirir. Aynı gri, koyu bir zeminde açık, açık bir zeminde koyu görünür. Buna eş zamanlı karşıtlık denir ve bir yanılsama değil, görmenin çalışma biçimidir. Ressamlar bunu yüzyıllarca sezgiyle kullandı; 19. yüzyılda Chevreul kimyasal olarak inceleyip kurala bağladı ve İzlenimciler doğrudan bu kuraldan yararlandı."
+      },
+      {
+        "kind": "chart",
+        "chartId": "esz-zamanli-karsitlik"
+      },
+      {
+        "kind": "text",
+        "title": "Chiaroscuro ve tenebrizm",
+        "body": "Chiaroscuro, ışık ile gölgenin bir hacmi yontacak biçimde kullanılmasıdır; Leonardo'da yumuşak geçişlerle, sfumato ile görünür. Tenebrizm ise bunun sert biçimidir: sahnenin büyük kısmı karanlıkta bırakılır, tek bir ışık kaynağı dramatik bir vurgu kurar. Caravaggio'nun yaptığı budur ve etkisi İspanya'dan Hollanda'ya kadar yayılmıştır. Işık burada bir aydınlatma değil, bir anlatım aracıdır."
+      },
+      {
+        "kind": "list",
+        "title": "Rengin taşıdığı yükler",
+        "items": [
+          "Malzeme: lapis lazuliden yapılan ultramarin altından pahalıydı; Meryem'in mavi cüppesi bir maliyet beyanıdır.",
+          "Simge: Bizans ikonunda altın zemin ışığı değil, mekânsızlığı ve ilahi olanı gösterir.",
+          "Optik: yan yana konan tamamlayıcı renkler birbirini parlatır; karıştırılınca griye düşer.",
+          "Duygu: sıcak renkler öne gelir, soğuk renkler geri çekilir; bu, derinlik kurmanın renkle yapılan biçimidir.",
+          "Teknoloji: tüp boyanın icadı ressamı atölyeden çıkardı ve açık havada resmi mümkün kıldı."
+        ]
+      },
+      {
+        "kind": "example",
+        "title": "Örnek: gölgeler renklidir",
+        "body": "Klasik atölye geleneğinde gölge, rengin siyahla koyulaştırılmış hâliydi. İzlenimciler dışarıda çalışırken gölgenin siyah olmadığını gördü: güneş ışığında bir gölge, gökyüzünden gelen mavi ışıkla dolar. Monet'nin kar resimlerinde kar beyaz değil mavi, mor ve pembedir. Bu bir üslup tercihi değil, doğrudan bir gözlemdi."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Eş zamanlı karşıtlık nedir?",
+        "options": [
+          "İki rengin karıştırılması",
+          "Bir yüzeyin açıklığının, çevresindeki yüzeylere göre farklı algılanması",
+          "Aynı anda iki tabloya bakmak",
+          "Tamamlayıcı renklerin birbirini yok etmesi"
+        ],
+        "answerIndex": 1,
+        "explanation": "Göz mutlak parlaklığı değil komşu yüzeylerle farkı ölçer. Aynı gri, koyu zeminde açık, açık zeminde koyu görünür."
+      },
+      {
+        "id": "q2",
+        "prompt": "Bir tablonun 'değer yapısı' neden önemlidir?",
+        "options": [
+          "Tablonun parasal değerini belirler",
+          "Renkler griye çevrildiğinde bile kompozisyonun okunabilir kalmasını sağlar",
+          "Boyanın kalitesini gösterir",
+          "Çerçeve seçimini belirler"
+        ],
+        "answerIndex": 1,
+        "explanation": "Açık-koyu düzeni kompozisyonun iskeletidir. Değer yapısı sağlamsa yapıt siyah beyaz bir kopyada bile ayakta durur."
+      },
+      {
+        "id": "q3",
+        "prompt": "Tenebrizm nedir?",
+        "options": [
+          "Yumuşak geçişlerle hacim kurmak",
+          "Sahnenin büyük kısmını karanlıkta bırakıp tek bir güçlü ışık kaynağı kullanmak",
+          "Altın zemin kullanmak",
+          "Açık havada resim yapmak"
+        ],
+        "answerIndex": 1,
+        "explanation": "Tenebrizm chiaroscuro'nun sert biçimidir. Caravaggio'yla özdeşleşmiş, ışığı dramatik bir anlatım aracına çevirmiştir."
+      }
+    ]
+  },
+
+  {
+    "id": "perspektif",
+    "moduleId": "bakmak",
+    "order": 3,
+    "title": "Perspektifin icadı",
+    "subtitle": "Derinlik doğal değildir; bulunmuş bir hesaptır.",
+    "minutes": 9,
+    "keyTerms": ["kaçış noktası", "ufuk çizgisi", "doğrusal perspektif", "hava perspektifi", "kısaltma"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Düz bir yüzeyde üç boyutlu bir mekân yanılsaması kurmak, sanıldığı kadar doğal bir iş değildir. Antik Roma duvar resimlerinde deneme girişimleri vardır ama tutarlı bir sistem yoktur. Orta Çağ resmi bu sorunu çözmeye çalışmaz; boyut orada mekânı değil önemi gösterir, en büyük figür en kutsal olandır. Doğrusal perspektif, 15. yüzyıl Floransa'sında bulunmuş bir geometri tekniğidir."
+      },
+      {
+        "kind": "text",
+        "title": "Brunelleschi'nin deneyi",
+        "body": "Filippo Brunelleschi 1413 dolayında Floransa Vaftizhanesi'ni geometrik kurallara göre bir panele resmetti. Panelin ortasına küçük bir delik açtı; izleyici panelin arkasından deliğe bakıyor, önüne tuttuğu aynada resmi görüyordu. Aynayı indirdiğinde gerçek yapı, kaldırdığında resim görünüyordu ve ikisi üst üste çakışıyordu. Bu, bir resmin görme koşullarını ilk kez matematiksel olarak taklit ettiğinin kanıtıydı."
+      },
+      {
+        "kind": "chart",
+        "chartId": "perspektif"
+      },
+      {
+        "kind": "text",
+        "title": "Sistemin üç parçası",
+        "body": "Doğrusal perspektifin kuralı sadedir. Ufuk çizgisi izleyicinin göz hizasıdır. İzleyiciye dik uzanan bütün paralel doğrular, ufuk çizgisi üzerindeki tek bir kaçış noktasında birleşir. Eşit aralıklar uzaklaştıkça belirli bir orana göre daralır. Alberti 1435'te bu kuralları yazıya döktü ve resmi 'bir pencereden bakmak' olarak tanımladı. Bu tanım, Avrupa resminin dört yüzyıllık programı oldu."
+      },
+      {
+        "kind": "list",
+        "title": "Derinlik kurmanın diğer yolları",
+        "items": [
+          "Hava perspektifi: uzaktaki nesneler soluklaşır, maviye kayar, ayrıntısını yitirir.",
+          "Örtüşme: önde duran nesne arkadakini keser — en basit ve en güçlü derinlik ipucu.",
+          "Kısaltma: izleyiciye doğru uzanan bir kol ya da gövde, kısalmış olarak çizilir.",
+          "Doku gradyanı: yüzeydeki desen uzaklaştıkça sıklaşır.",
+          "Renk sıcaklığı: sıcak renkler öne gelir, soğuklar geri çekilir."
+        ]
+      },
+      {
+        "kind": "text",
+        "title": "Perspektif bir tercih hâline geliyor",
+        "body": "Doğrusal perspektif dört yüzyıl boyunca doğruluğun ölçüsü sayıldı. 19. yüzyılın sonunda bu kabul çözülür. Japon baskıları Avrupa'ya başka bir mekân anlayışı gösterir. Cézanne aynı sahneyi birden çok bakış noktasından kurar. Kübizm nesneyi tek bir andan değil, birden çok andan resmeder. Perspektif ortadan kalkmaz ama tek doğru olmaktan çıkar: artık bir seçenektir."
+      },
+      {
+        "kind": "quote",
+        "text": "Resim, üzerinden konunun görüldüğü açık bir penceredir.",
+        "source": "Leon Battista Alberti, De Pictura, 1435"
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Orta Çağ resminde figür boyutları neye göre belirlenir?",
+        "options": [
+          "İzleyiciye uzaklıklarına göre",
+          "Dinsel ya da toplumsal önemlerine göre",
+          "Tuvalin boyutuna göre",
+          "Renk seçimine göre"
+        ],
+        "answerIndex": 1,
+        "explanation": "Orta Çağ resmi mekânsal derinlik değil hiyerarşi gösterir. En büyük figür en yakın olan değil, en önemli olandır."
+      },
+      {
+        "id": "q2",
+        "prompt": "Ufuk çizgisi neyi gösterir?",
+        "options": [
+          "Tablonun ortasını",
+          "İzleyicinin göz hizasını",
+          "Işık kaynağının yerini",
+          "Tuvalin üst sınırını"
+        ],
+        "answerIndex": 1,
+        "explanation": "Ufuk çizgisi izleyicinin göz hizasıdır ve kaçış noktası daima onun üzerindedir. Yükseltmek sahneye tepeden, alçaltmak aşağıdan bakmak demektir."
+      },
+      {
+        "id": "q3",
+        "prompt": "Hava perspektifi nedir?",
+        "options": [
+          "Kuş bakışı çizim",
+          "Uzaktaki nesnelerin soluklaşması, maviye kayması ve ayrıntısını yitirmesi",
+          "Kaçış noktasının gökyüzünde olması",
+          "Açık havada resim yapmak"
+        ],
+        "answerIndex": 1,
+        "explanation": "Atmosferdeki parçacıklar uzak nesnelerin karşıtlığını düşürür ve rengini soğutur. Leonardo bunu sistemli biçimde kullanmıştır."
+      }
+    ]
+  },
+
+  {
+    "id": "ikonografi",
+    "moduleId": "bakmak",
+    "order": 4,
+    "title": "İkonografi: resmin dili",
+    "subtitle": "Resimdeki nesneler çoğu zaman nesne değil, sözcüktür.",
+    "minutes": 8,
+    "keyTerms": ["ikonografi", "atribü", "alegori", "vanitas", "ikonoloji"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Bir azizin yanındaki tekerlek, bir kadının elindeki terazi, masadaki sönmüş mum: bunlar dekor değildir. Yüzyıllar boyunca resim, okuma yazma bilmeyenlerin de anlayabileceği ortak bir simge dağarcığı kullandı. İkonografi, bu dağarcığı okuma disiplinidir. Bir yapıtın 'neyi gösterdiğini' değil, 'ne söylediğini' anlamak için gereklidir."
+      },
+      {
+        "kind": "list",
+        "title": "Sık karşılaşılan işaretler",
+        "items": [
+          "Anahtar: Aziz Petrus. Aslan: Aziz Markos ya da Aziz Hieronymus.",
+          "Terazi ve gözü bağlı figür: Adalet. Çapa: umut. Ayna: kibir ya da hakikat.",
+          "Kafatası, sönen mum, solmuş çiçek, kum saati: vanitas — her şeyin geçiciliği.",
+          "Köpek: sadakat. Portakal ya da elma: günah ve cennet göndermeleri.",
+          "Zambak: saflık; Meryem'e Müjde sahnelerinin değişmez öğesi.",
+          "Osmanlı minyatüründe altın zemin ve ölçek: mekân değil, konum ve mertebe."
+        ]
+      },
+      {
+        "kind": "text",
+        "title": "Panofsky'nin üç katmanı",
+        "body": "Erwin Panofsky, bir yapıtı okumanın üç düzeyi olduğunu söyler. Birincisi doğal anlamdır: burada bir kadın var, elinde bir çiçek tutuyor. İkincisi geleneksel anlamdır: bu kadın Meryem, çiçek zambak, sahne Müjde. Üçüncüsü ikonolojidir: bu sahnenin neden bu dönemde, bu şehirde, bu biçimde resmedildiği — yani yapıtın içinden çıktığı dünyanın kendisi."
+      },
+      {
+        "kind": "example",
+        "title": "Örnek: Arnolfini Portresi",
+        "body": "Van Eyck'in 1434 tarihli tablosunda bir çift el ele durur. Tek bir mum yanmaktadır, terlikler çıkarılmıştır, ayakta bir köpek vardır, arka duvardaki dışbükey aynada iki tanık yansır ve üstünde 'Jan van Eyck buradaydı' yazar. Yorumcular yüzyıllardır bunun bir nikâh belgesi mi, bir anma resmi mi, yoksa varlık gösteren bir portre mi olduğunu tartışır. Kesin olan şu: hiçbir nesne oraya tesadüfen konmamıştır."
+      },
+      {
+        "kind": "text",
+        "title": "Simge dili neden çözüldü",
+        "body": "Ortak simge dağarcığı, ortak bir izleyici kitlesi gerektirir. Reform, matbaa, ulus devletler ve laikleşme bu ortaklığı parçaladı. 19. yüzyılda ressam artık herkesin bildiği bir sözlükten değil, kendi kurduğu bir dilden konuşmaya başladı. Bu, modern sanatın 'anlaşılmaz' bulunmasının teknik sebebidir: sözlük artık paylaşılan değil, yapıta özgüdür."
+      },
+      {
+        "kind": "quote",
+        "text": "Bir tabloyu görmek yetmez; hangi dilde konuştuğunu bilmek gerekir.",
+        "source": "İkonografik yöntemin çıkış noktası"
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Vanitas öğeleri neyi anlatır?",
+        "options": [
+          "Zenginliği ve gücü",
+          "Dünyevi şeylerin ve hayatın geçiciliğini",
+          "Bilimsel merakı",
+          "Aile bağlarını"
+        ],
+        "answerIndex": 1,
+        "explanation": "Kafatası, sönen mum, kum saati ve solmuş çiçek geçiciliği hatırlatır. Özellikle 17. yüzyıl Hollanda natürmortlarında yaygındır."
+      },
+      {
+        "id": "q2",
+        "prompt": "Panofsky'nin üçüncü düzeyi olan ikonoloji neyi araştırır?",
+        "options": [
+          "Resimde ne görüldüğünü",
+          "Simgelerin geleneksel karşılıklarını",
+          "Yapıtın hangi tarihsel ve kültürel koşullardan çıktığını",
+          "Boyanın kimyasal bileşimini"
+        ],
+        "answerIndex": 2,
+        "explanation": "İkonoloji, simgeleri çözmenin ötesine geçip yapıtın içinden çıktığı dünyayı — dönemin inançlarını, siyasetini ve toplumsal düzenini — konu edinir."
+      },
+      {
+        "id": "q3",
+        "prompt": "Modern sanatın simge dili neden daha zor okunur?",
+        "options": [
+          "Ressamlar daha az yetenekli olduğu için",
+          "Ortak simge dağarcığı çözüldüğü ve her sanatçı kendi diline yöneldiği için",
+          "Boyalar değiştiği için",
+          "Tablolar küçüldüğü için"
+        ],
+        "answerIndex": 1,
+        "explanation": "Ortak sözlük paylaşılan bir izleyici kitlesine dayanıyordu. O kitle parçalanınca sanatçı kendi kurduğu dilden konuşmaya başladı."
+      }
+    ]
+  },
+
+  {
+    "id": "antik-ve-ortacag",
+    "moduleId": "bicim",
+    "order": 1,
+    "title": "Antikten Orta Çağ'a",
+    "subtitle": "Bedenin keşfi, kaybı ve yeniden bulunuşu.",
+    "minutes": 9,
+    "keyTerms": ["kontrapost", "kanon", "mozaik", "ikon", "gotik"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Mısır sanatı üç bin yıl boyunca aynı kurallara sadık kaldı: baş profilden, göz cepheden, gövde cepheden, bacaklar profilden. Bu bir beceriksizlik değil, bir tercihti — figürün her parçası en tanınır açısından gösteriliyordu. Yunan heykeli MÖ 5. yüzyılda bu kuralı kırar. Ağırlığın tek bacağa verildiği, kalçanın kaydığı, omuzun karşı yöne döndüğü duruş — kontrapost — bedeni ilk kez yaşayan bir bütün olarak gösterir."
+      },
+      {
+        "kind": "text",
+        "title": "Kanon: ölçüye bağlanan güzellik",
+        "body": "Polykleitos, ideal bedenin oranlarını sayısal bir kurala bağladı ve buna kanon adını verdi. Baş, gövdenin belirli bir kesri olacaktı; parmak, avuç, ön kol birbiriyle sabit oranlara girecekti. Bu fikir Yunan'dan Roma'ya, oradan Rönesans'a geçti ve Batı sanatının en uzun ömürlü varsayımlarından biri oldu: güzellik ölçülebilir bir düzendir."
+      },
+      {
+        "kind": "text",
+        "title": "Bizans: mekânsızlığın tercihi",
+        "body": "Roma'nın ardından gelen Bizans sanatı, gerçekçiliği kaybettiği için değil, istemediği için bıraktı. Altın zeminli mozaikte gölge yoktur, derinlik yoktur, figürler ağırlıksızdır. Amaç bir bedeni değil bir varlığı göstermektir; ikon, bakılan değil karşısında durulan bir nesnedir. Aynı estetik anlayış İslam sanatında farklı bir yoldan yürür: figürün yerini geometri, hat ve bitkisel bezeme alır."
+      },
+      {
+        "kind": "list",
+        "title": "Gotik neyi değiştirdi",
+        "items": [
+          "Katedral duvarı taşıyıcı olmaktan çıkıp cama dönüştü; renkli ışık mekânın malzemesi oldu.",
+          "Heykel nişten öne çıktı, figürler birbirine dönüp konuşmaya başladı.",
+          "Meryem tasvirleri sertlikten çıkıp anne-çocuk ilişkisine yaklaştı.",
+          "Kitap resmi el yazmalarında ayrıntı ve doğa gözlemi arttı.",
+          "Sanatçı adları belgelerde daha sık görünmeye başladı: anonimlik çözülüyordu."
+        ]
+      },
+      {
+        "kind": "example",
+        "title": "Örnek: Giotto'nun kırılması",
+        "body": "Giotto, 1300 dolayında Padova'daki Arena Şapeli'ni resmederken figürlere ağırlık verdi. Cüppeler bedenin üzerinde katlanıyor, figürler yere basıyor, yüzlerde tanınabilir duygular beliriyordu. Yas sahnesinde Meryem'in oğlunun yüzüne eğilişi, dinsel bir formül değil bir insan jestidir. Vasari üç yüzyıl sonra sanat tarihini yazarken başlangıç noktası olarak onu seçecekti."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Kontrapost nedir?",
+        "options": [
+          "Figürün tam simetrik durması",
+          "Ağırlığın tek bacağa verilmesiyle kalça ve omuzların karşıt yönde kayması",
+          "İki figürün karşılıklı yerleştirilmesi",
+          "Koyu ve açık renklerin karşıtlığı"
+        ],
+        "answerIndex": 1,
+        "explanation": "Kontrapost, bedene doğal bir gerilim ve hareket duygusu verir. Yunan heykelinin katı duruştan kopuşunu simgeler."
+      },
+      {
+        "id": "q2",
+        "prompt": "Bizans mozaiklerinde derinlik ve gölgenin bulunmaması neyi gösterir?",
+        "options": [
+          "Teknik bilginin kaybolduğunu",
+          "Amacın fiziksel bir mekân değil, mekân dışı bir varlık göstermek olduğunu",
+          "Malzemenin yetersizliğini",
+          "Sanatçıların acele ettiğini"
+        ],
+        "answerIndex": 1,
+        "explanation": "Bizans estetiği gerçekçiliği bilinçli olarak reddeder. Altın zemin, dünyevi mekânın değil ilahi olanın alanıdır."
+      },
+      {
+        "id": "q3",
+        "prompt": "Giotto'nun getirdiği temel yenilik nedir?",
+        "options": [
+          "Yağlı boyayı bulması",
+          "Figürlere hacim, ağırlık ve tanınabilir insan duygusu kazandırması",
+          "Doğrusal perspektifi tamamlaması",
+          "İlk otoportreyi yapması"
+        ],
+        "answerIndex": 1,
+        "explanation": "Giotto matematiksel perspektifi kurmadı ama figürleri yere bastırdı ve onlara okunabilir bir duygu verdi. Rönesans'ın önünü açan kırılma budur."
+      }
+    ]
+  },
+
+  {
+    "id": "ronesans",
+    "moduleId": "bicim",
+    "order": 2,
+    "title": "Rönesans",
+    "subtitle": "Ölçü, gözlem ve sanatçının doğuşu.",
+    "minutes": 9,
+    "keyTerms": ["hümanizm", "sfumato", "yağlı boya", "patronaj", "otoportre"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Rönesans'ı tek bir üslupla tanımlamak zordur; asıl değişen, sanatın ne olduğuna dair kabuldür. Zanaatkâr, üzerinde düşünen ve adı bilinen bir yaratıcıya dönüşür. Konu dinsel kalmaya devam eder ama insan bedeni, doğa gözlemi ve geometri merkeze gelir. Antik dünyanın metinleri ve heykelleri, taklit edilecek bir ölçüt olarak yeniden okunur."
+      },
+      {
+        "kind": "text",
+        "title": "İki teknik devrim",
+        "body": "İtalya'da perspektif geometrisi gelişirken Kuzey Avrupa'da yağlı boya olgunlaşır. Yağ, tempera gibi hızlı kurumadığı için katman katman şeffaf sırlar sürmeye izin verir; bu da derinlikli renk, ıslak parlaklık ve kumaş dokusu demektir. Van Eyck'in tablolarındaki cam, kürk ve metal ayrıntısı bu teknikle mümkün olmuştu. İki yenilik yüzyıl içinde birbirine karışır."
+      },
+      {
+        "kind": "list",
+        "title": "Rönesans'ı taşıyan koşullar",
+        "items": [
+          "Ticaretle zenginleşen kent devletleri ve banker aileler: Medici patronajı.",
+          "Matbaanın gravür yoluyla imgeyi çoğaltması ve üslupları hızla yayması.",
+          "Antik metinlerin yeniden çevrilmesi ve okunması.",
+          "Sanatçının sözleşmelerde adıyla anılması, ücretin ustalığa göre belirlenmesi.",
+          "Anatomi çalışmalarının, çoğu zaman yasağı esneterek, atölyeye girmesi."
+        ]
+      },
+      {
+        "kind": "text",
+        "title": "Leonardo'nun sfumatosu",
+        "body": "Leonardo, konturun doğada bulunmadığını savundu: bir biçim diğerine keskin bir çizgiyle değil, dumanlı bir geçişle bağlanır. Sfumato budur. Mona Lisa'nın ifadesinin belirsizliği bu tekniğin doğrudan sonucudur — ağız köşeleri ve göz çevresi keskin tanımdan kaçırıldığı için ifade, bakışın yönüne göre değişir. Teknik burada bir üslup süsü değil, izlenimin kendisini üreten şeydir."
+      },
+      {
+        "kind": "example",
+        "title": "Örnek: Dürer'in otoportresi",
+        "body": "Albrecht Dürer, 1500'de kendini cepheden, uzun saçlı ve o güne dek yalnızca İsa tasvirlerinde kullanılan bir duruşta resmetti. Yanına Latince şunu yazdı: 'Ben, Nürnbergli Albrecht Dürer, kendimi yirmi sekiz yaşında kalıcı renklerle böyle yaptım.' Bu, sanatçının kendini bir zanaatkâr değil, bir yaratıcı olarak ilan edişidir. Aynı Dürer, gravür baskılarını Avrupa'ya satan ilk kitlesel sanat girişimcisiydi."
+      },
+      {
+        "kind": "quote",
+        "text": "Resim, ressamın zihninde başlar; el yalnızca onu izler.",
+        "source": "Leonardo'ya atfedilen defter notlarından"
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Yağlı boyanın temperaya göre asıl üstünlüğü nedir?",
+        "options": [
+          "Daha ucuz olması",
+          "Yavaş kuruduğu için katmanlı, şeffaf sırlarla derin renk ve ayrıntı yapılabilmesi",
+          "Daha hızlı çalışmaya izin vermesi",
+          "Duvara uygulanabilmesi"
+        ],
+        "answerIndex": 1,
+        "explanation": "Yağın yavaş kuruması üst üste şeffaf katmanlar sürmeyi mümkün kılar. Kuzey resminin ünlü doku ve parlaklık etkisi buradan gelir."
+      },
+      {
+        "id": "q2",
+        "prompt": "Sfumato nedir?",
+        "options": [
+          "Keskin konturlarla çizim",
+          "Biçimler arasındaki geçişin dumanlı, konturaz bir yumuşaklıkla kurulması",
+          "Altın yaldız kullanımı",
+          "Fresk tekniği"
+        ],
+        "answerIndex": 1,
+        "explanation": "Leonardo doğada keskin kontur bulunmadığını savundu. Sfumato, ifadenin belirsiz ve değişken görünmesinin teknik sebebidir."
+      },
+      {
+        "id": "q3",
+        "prompt": "Rönesans'ta sanatçının konumundaki değişim nedir?",
+        "options": [
+          "Sanatçı anonimleşti",
+          "Zanaatkâr statüsünden, adı bilinen ve üzerine düşünen bir yaratıcı konumuna geçti",
+          "Sanatçılar loncalardan tamamen çıktı",
+          "Sanat kilise dışında yasaklandı"
+        ],
+        "answerIndex": 1,
+        "explanation": "Sözleşmelerde ad geçmesi, otoportrenin yaygınlaşması ve sanat üzerine kuram yazımı bu statü değişiminin işaretleridir."
+      }
+    ]
+  }
+]

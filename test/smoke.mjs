@@ -73,56 +73,56 @@ await page.route("https://api.anthropic.com/**", async route => {
 
   if (props.includes("modules")) {
     payload = {
-      title: "Sanat Tarihi", eyebrow: "Sanat tarihi", subtitle: "Bakmayı öğrenmek",
-      description: "Mağara resminden çağdaş sanata biçimlerin ve fikirlerin tarihi.",
-      icon: "🎨", accent: "#8a3d63", figuresLabel: "Sanatçılar",
-      timelineTitle: "Biçimlerin tarihi", timelineIntro: "Mağaradan müzeye.",
+      title: "Mitoloji", eyebrow: "Mitoloji", subtitle: "Tanrılar, kahramanlar, anlatılar",
+      description: "Yaratılış anlatılarından kahraman yolculuğuna, mitlerin yapısı ve izleri.",
+      icon: "🏺", accent: "#8a3d63", figuresLabel: "Kahramanlar",
+      timelineTitle: "Anlatının tarihi", timelineIntro: "Sözlü gelenekten yazıya.",
       modules: [
-        { id: "temeller", title: "Temeller", description: "Bakmanın araçları.", lessons: [
-          { id: "bicim", title: "Biçim ve kompozisyon", subtitle: "Bir resmi neye göre okuruz?", minutes: 8, keyTerms: ["kompozisyon", "denge"] },
-          { id: "renk", title: "Renk ve ışık", subtitle: "Rengin taşıdığı anlam.", minutes: 7, keyTerms: ["palet", "chiaroscuro"] },
-          { id: "perspektif", title: "Perspektif", subtitle: "Derinliğin icadı.", minutes: 9, keyTerms: ["kaçış noktası"] }
+        { id: "yapi", title: "Mitin yapısı", description: "Anlatıyı kuran öğeler.", lessons: [
+          { id: "yaratilis", title: "Yaratılış anlatıları", subtitle: "Dünya nasıl başladı?", minutes: 8, keyTerms: ["kaos", "kozmogoni"] },
+          { id: "kahraman", title: "Kahraman yolculuğu", subtitle: "Tekrarlanan bir kalıp.", minutes: 7, keyTerms: ["çağrı", "dönüş"] },
+          { id: "tufan", title: "Tufan anlatıları", subtitle: "Aynı hikâye, farklı halklar.", minutes: 9, keyTerms: ["tufan", "ortak kaynak"] }
         ]},
-        { id: "donemler", title: "Dönemler", description: "Rönesanstan moderne.", lessons: [
-          { id: "ronesans", title: "Rönesans", subtitle: "İnsanın ölçü olması.", minutes: 9, keyTerms: ["hümanizm"] },
-          { id: "barok", title: "Barok", subtitle: "Hareket ve karşıtlık.", minutes: 8, keyTerms: ["tenebrizm"] },
-          { id: "modern", title: "Modern sanat", subtitle: "Kırılma.", minutes: 9, keyTerms: ["avangart"] }
+        { id: "gelenekler", title: "Gelenekler", description: "Yunan'dan Anadolu'ya.", lessons: [
+          { id: "yunan", title: "Yunan mitolojisi", subtitle: "Olympos düzeni.", minutes: 9, keyTerms: ["Olympos"] },
+          { id: "mezopotamya", title: "Mezopotamya", subtitle: "Gılgamış ve ölümlülük.", minutes: 8, keyTerms: ["Gılgamış"] },
+          { id: "anadolu", title: "Anadolu mitleri", subtitle: "Hitit ve sonrası.", minutes: 9, keyTerms: ["Telipinu"] }
         ]}
       ]
     };
   } else if (props === "quiz,sections") {
     payload = {
       sections: [
-        { kind: "text", title: "", body: "Bir yapıtın önce biçimine bakılır: çizgi, kütle ve boşluğun düzeni.", items: [], expression: "", note: "", text: "", source: "" },
-        { kind: "text", title: "Denge", body: "Simetri tek denge biçimi değildir; ağırlıklar renk ve dokuyla da kurulur.", items: [], expression: "", note: "", text: "", source: "" },
-        { kind: "list", title: "Bakarken sorulacaklar", body: "", items: ["Göz nereye çekiliyor?", "Işık nereden geliyor?", "Boşluk neyi taşıyor?"], expression: "", note: "", text: "", source: "" },
-        { kind: "example", title: "Örnek: Las Meninas", body: "Velázquez izleyiciyi tablonun içine yerleştirir.", items: [], expression: "", note: "", text: "", source: "" },
-        { kind: "quote", title: "", body: "", items: [], expression: "", note: "", text: "Resim sessiz şiirdir.", source: "Simonides'e atfedilir" }
+        { kind: "text", title: "", body: "Yaratılış anlatıları çoğu gelenekte bir düzensizlik durumuyla başlar ve ayrışmayla sürer.", items: [], expression: "", note: "", text: "", source: "" },
+        { kind: "text", title: "Ayrışma", body: "Gök ile yerin birbirinden ayrılması, farklı kültürlerde tekrarlanan bir motiftir.", items: [], expression: "", note: "", text: "", source: "" },
+        { kind: "list", title: "Ortak öğeler", body: "", items: ["Başlangıçtaki kaos", "Ayrışma", "İlk insanın yapılışı"], expression: "", note: "", text: "", source: "" },
+        { kind: "example", title: "Örnek: Enuma Eliş", body: "Babil anlatısında dünya, bir çatışmanın ardından kurulur.", items: [], expression: "", note: "", text: "", source: "" },
+        { kind: "quote", title: "", body: "", items: [], expression: "", note: "", text: "Mit, hiç olmamış ama daima olan şeydir.", source: "Sallustius'a atfedilir" }
       ],
       quiz: [
-        { id: "q1", prompt: "Kompozisyon nedir?", options: ["Renk karışımı", "Öğelerin yüzeydeki düzeni", "Tuval boyutu", "Çerçeve türü"], answerIndex: 1, explanation: "Kompozisyon, öğelerin düzenlenişidir." },
-        { id: "q2", prompt: "Denge yalnızca simetriyle mi kurulur?", options: ["Evet", "Hayır, renk ve dokuyla da kurulur", "Yalnızca heykelde", "Yalnızca modern sanatta"], answerIndex: 1, explanation: "Asimetrik denge yaygındır." },
-        { id: "q3", prompt: "Negatif alan nedir?", options: ["Boyanmamış tuval", "Nesneler arasındaki boşluk", "Koyu renkler", "Arka plan rengi"], answerIndex: 1, explanation: "Boşluk da kompozisyonun parçasıdır." }
+        { id: "q1", prompt: "Kozmogoni nedir?", options: ["Tanrı listesi", "Evrenin oluşumunu anlatan anlatı", "Kahraman destanı", "Ritüel metni"], answerIndex: 1, explanation: "Kozmogoni, evrenin nasıl kurulduğunu anlatan mit türüdür." },
+        { id: "q2", prompt: "Yaratılış anlatılarında sık görülen motif hangisidir?", options: ["Gök ile yerin ayrılması", "Deniz savaşı", "Kral seçimi", "Kervan yolculuğu"], answerIndex: 0, explanation: "Ayrışma motifi birbirinden uzak geleneklerde tekrarlanır." },
+        { id: "q3", prompt: "Kaos ne anlama gelir?", options: ["Ceza", "Başlangıçtaki biçimsiz düzensizlik", "Yeraltı dünyası", "Kutsal dağ"], answerIndex: 1, explanation: "Kaos, düzenin kurulmasından önceki biçimsiz durumdur." }
       ]
     };
   } else if (props === "figures,glossary") {
     payload = {
       glossary: [
-        { id: "kompozisyon", term: "Kompozisyon", definition: "Öğelerin yüzey üzerindeki düzeni.", lessonId: "bicim" },
-        { id: "chiaroscuro", term: "Chiaroscuro", definition: "Işık ve gölgenin sert karşıtlığı.", lessonId: "renk" },
-        { id: "perspektif", term: "Perspektif", definition: "Derinlik yanılsaması kuran çizim düzeni.", lessonId: "perspektif" }
+        { id: "kozmogoni", term: "Kozmogoni", definition: "Evrenin oluşumunu anlatan mit türü.", lessonId: "yaratilis" },
+        { id: "monomit", term: "Monomit", definition: "Kahraman anlatılarında tekrarlanan ortak kalıp.", lessonId: "kahraman" },
+        { id: "tufan", term: "Tufan anlatısı", definition: "Dünyayı silen su felaketini konu alan mit.", lessonId: "tufan" }
       ],
       figures: [
-        { id: "velazquez", name: "Diego Velázquez", lifespan: "1599-1660", tag: "Barok", oneLiner: "Bakışın kendisini resmetti.", contributions: ["Las Meninas", "Saray portreleri"], lessonId: "barok" },
-        { id: "picasso", name: "Pablo Picasso", lifespan: "1881-1973", tag: "Kübizm", oneLiner: "Biçimi parçalayıp yeniden kurdu.", contributions: ["Avignonlu Kızlar", "Guernica"], lessonId: "modern" }
+        { id: "gilgamis", name: "Gılgamış", lifespan: "MÖ 2100 dolayı", tag: "Mezopotamya", oneLiner: "Ölümsüzlüğü arayıp ölümlülüğü öğrendi.", contributions: ["Gılgamış Destanı", "Enkidu ile dostluk"], lessonId: "mezopotamya" },
+        { id: "odysseus", name: "Odysseus", lifespan: "Destan çağı", tag: "Yunan", oneLiner: "Dönüş yolculuğunun kalıcı örneği.", contributions: ["Odysseia", "Truva atı"], lessonId: "yunan" }
       ]
     };
   } else {
     payload = {
       eras: [{ id: "erken", label: "Erken dönem" }, { id: "modern", label: "Modern" }],
       events: [
-        { id: "ronesans-baslar", year: 1400, yearLabel: "1400'ler", title: "Rönesans başlar", body: "Floransa'da yeni bir resim anlayışı doğar.", era: "erken", figureId: "" },
-        { id: "guernica", year: 1937, yearLabel: "1937", title: "Guernica", body: "Picasso savaşın tanıklığını resme çevirir.", era: "modern", figureId: "picasso" }
+        { id: "gilgamis-tablet", year: -2100, yearLabel: "MÖ 2100", title: "Gılgamış anlatısı", body: "Mezopotamya'da destan tabletlere yazılır.", era: "erken", figureId: "gilgamis" },
+        { id: "odysseia", year: -700, yearLabel: "MÖ 700", title: "Odysseia", body: "Dönüş yolculuğu yazıya geçirilir.", era: "modern", figureId: "odysseus" }
       ]
     };
   }
@@ -321,13 +321,13 @@ await step("finans kursunda tarih ve arama", async () => {
 });
 
 await step("kütüphanede olmayan konu istek bağlantısı veriyor", async () => {
-  await page.fill("input.ask", "sanat tarihi");
+  await page.fill("input.ask", "mitoloji");
   const a = page.locator(".ask-action a.btn");
   const label = await a.textContent();
   if (!/konusunu iste/.test(label)) throw new Error("istek düğmesi yok: " + label);
   const href = await a.getAttribute("href");
   if (!href.startsWith("https://github.com/") || !href.includes("issues/new")) throw new Error("istek adresi yanlış: " + href);
-  if (!decodeURIComponent(href).includes("Kurs isteği: sanat tarihi")) throw new Error("istek başlığı konuyu taşımıyor");
+  if (!decodeURIComponent(href).includes("Kurs isteği: mitoloji")) throw new Error("istek başlığı konuyu taşımıyor");
   await page.click(".block.card.row:has-text('Ayarlar')");
   await page.waitForSelector("input[placeholder='sk-ant-...']");
 });
@@ -342,11 +342,11 @@ await step("API anahtarı kaydediliyor", async () => {
 
 await step("kurs üretimi uçtan uca", async () => {
   await page.click(".btn.quiet:has-text('Kütüphaneye dön')");
-  await page.fill("input.ask", "sanat tarihi");
+  await page.fill("input.ask", "mitoloji");
   await page.click("text=Kendi anahtarımla şimdi üret");
   await page.waitForSelector("text=Kursu aç", { timeout: 30000 });
   const txt = await page.textContent("main");
-  if (!/Sanat Tarihi/.test(txt)) throw new Error("üretilen kurs adı yok");
+  if (!/Mitoloji/.test(txt)) throw new Error("üretilen kurs adı yok");
   if (!/6 ders/.test(txt)) throw new Error("ders sayısı beklenmedik: " + txt.slice(0, 200));
   if (!/\(6\/6\)/.test(txt)) throw new Error("ders sayacı yanlış: " + (txt.match(/Dersler yazılıyor [^\n]*/) || [])[0]);
   if (!/Yaklaşık maliyet/.test(txt)) throw new Error("maliyet gösterilmiyor");
@@ -357,7 +357,7 @@ await step("üretilen kurs açılıyor ve çalışıyor", async () => {
   await page.click("text=Kursu aç");
   await page.waitForSelector("nav.tabs button");
   const title = await page.textContent("#title");
-  if (title !== "Sanat Tarihi") throw new Error("başlık: " + title);
+  if (title !== "Mitoloji") throw new Error("başlık: " + title);
   const accent = await page.evaluate(() => getComputedStyle(document.documentElement).getPropertyValue("--accent-light").trim());
   if (accent !== "#8a3d63") throw new Error("üretilen kursun rengi uygulanmadı: " + accent);
   await page.click("nav.tabs li:nth-child(2) button");
@@ -375,7 +375,7 @@ await step("üretilen kursta tarih sekmesi", async () => {
   await page.waitForSelector(".tl li");
   const n = await page.$$eval(".tl li", x => x.length);
   if (n !== 2) throw new Error("olay sayısı: " + n);
-  await page.click("text=Sanatçılar");
+  await page.click("text=Kahramanlar");
   await page.waitForSelector(".thinker-name");
 });
 
@@ -383,7 +383,7 @@ await step("yeniden yüklemede kurs ve ilerleme duruyor", async () => {
   await page.reload();
   await page.waitForSelector(".course-card");
   const titles = await page.$$eval(".course-title", n => n.map(x => x.textContent));
-  if (!titles.includes("Sanat Tarihi")) throw new Error("üretilen kurs kayboldu: " + titles);
+  if (!titles.includes("Mitoloji")) throw new Error("üretilen kurs kayboldu: " + titles);
   if ((await page.$$eval(".badge", n => n.length)) !== 1) throw new Error("rozet yok");
 });
 
