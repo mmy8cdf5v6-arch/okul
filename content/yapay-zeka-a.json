@@ -1,0 +1,490 @@
+[
+  {
+    "id": "oruntu-ve-veri",
+    "moduleId": "nasil",
+    "order": 1,
+    "title": "Örüntü ve eğitim verisi",
+    "subtitle": "Model kural ezberlemez; örneklerden düzenlilik çıkarır.",
+    "minutes": 8,
+    "keyTerms": ["makine öğrenmesi", "eğitim verisi", "parametre", "genelleme", "aşırı uyum"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Klasik yazılımda kuralları programcı yazar: eğer şu koşul varsa şunu yap. Makine öğrenmesinde ise kurallar yazılmaz, örneklerden çıkarılır. Sisteme binlerce kedi fotoğrafı ve etiketi verilir; sistem kediyi tanımlayan özellikleri kendisi bulur. Bunu yaparken içindeki milyonlarca sayıyı — parametreleri — tahmin hatası azalacak biçimde tekrar tekrar ayarlar."
+      },
+      {
+        "kind": "text",
+        "title": "Genelleme: asıl mesele",
+        "body": "Bir modelin başarısı, gördüğü örnekleri hatırlamasıyla değil, görmediği örneklerde doğru davranmasıyla ölçülür. Buna genelleme denir. Eğitim verisini ezberleyip yeni veride başarısız olan modele aşırı uyum yapmış denir. Bu yüzden değerlendirme daima ayrı bir veri kümesinde yapılır; eğitimde kullanılan veriyle sınav yapmak, soruları önceden vermek gibidir."
+      },
+      {
+        "kind": "text",
+        "title": "Veri neyi içeriyorsa model onu öğrenir",
+        "body": "Model, verideki her düzenliliği eşit hevesle öğrenir — işe yarayanı da, yanıltıcı olanı da. Kar üzerindeki fotoğraflardan kurt tanımayı öğrenen bir sistemin aslında karı tanıdığı, klasik bir örnektir. Veri kümesinde hangi dillerin, hangi coğrafyaların, hangi bakış açılarının ne kadar temsil edildiği, modelin ne yapabileceğini doğrudan belirler. Türkçe içerik, internetteki metnin küçük bir kesridir ve bu, Türkçe performansında doğrudan görünür."
+      },
+      {
+        "kind": "list",
+        "title": "Temel kavramlar",
+        "items": [
+          "Eğitim verisi: modelin örüntüleri çıkardığı örnekler.",
+          "Parametre: eğitim sırasında ayarlanan sayılar. Büyük dil modellerinde milyarlarca tanedir.",
+          "Kayıp fonksiyonu: tahminin gerçekten ne kadar saptığını ölçen sayı; eğitim bunu küçültmeye çalışır.",
+          "Genelleme: görülmemiş veride doğru davranma yeteneği.",
+          "Aşırı uyum: eğitim verisini ezberleyip yeni veride başarısız olmak.",
+          "Doğrulama kümesi: eğitim sırasında kullanılmayan, dürüst ölçüm için ayrılan veri."
+        ]
+      },
+      {
+        "kind": "example",
+        "title": "Örnek: işe alım modeli",
+        "body": "Bir şirket geçmiş işe alım kararlarıyla bir model eğitir. Model geçmişte kimlerin işe alındığını çok iyi öğrenir. Ama geçmişteki kararlar belirli bir grubu sistematik olarak dışladıysa, model bu örüntüyü de öğrenir ve geleceğe taşır. Sistem 'tarafsız' değildir; geçmişin ortalamasıdır. Bunu düzeltmek bir algoritma sorunu değil, hangi verinin kullanılacağına dair bir karardır."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Aşırı uyum nedir?",
+        "options": [
+          "Modelin çok yavaş çalışması",
+          "Eğitim verisini ezberleyip görülmemiş veride başarısız olmak",
+          "Parametre sayısının az olması",
+          "Eğitimin çok kısa sürmesi"
+        ],
+        "answerIndex": 1,
+        "explanation": "Aşırı uyumda model, verideki gerçek düzenlilikler yerine o örneklere özgü ayrıntıları da öğrenir. Bu yüzden değerlendirme ayrı bir veri kümesinde yapılır."
+      },
+      {
+        "id": "q2",
+        "prompt": "Kar üzerinde çekilmiş fotoğraflardan kurt tanımayı 'öğrenen' bir modelin sorunu nedir?",
+        "options": [
+          "Yeterince parametresi yoktur",
+          "Verideki yanıltıcı bir düzenliliği öğrenmiştir: kurdu değil, karı tanımaktadır",
+          "Fotoğraflar düşük çözünürlüktedir",
+          "Eğitimi çok uzun sürmüştür"
+        ],
+        "answerIndex": 1,
+        "explanation": "Model verideki her düzenliliği eşit hevesle öğrenir. Etiketle rastlantısal olarak ilişkili bir arka plan özelliği, gerçek özellik kadar kolay öğrenilir."
+      },
+      {
+        "id": "q3",
+        "prompt": "Geçmiş kararlarla eğitilen bir işe alım modeli neden 'tarafsız' sayılamaz?",
+        "options": [
+          "Kod açık kaynak olmadığı için",
+          "Geçmişteki sistematik ayrımları da bir örüntü olarak öğrenip geleceğe taşıdığı için",
+          "Yeterince veri olmadığı için",
+          "Model çok karmaşık olduğu için"
+        ],
+        "answerIndex": 1,
+        "explanation": "Model geçmişin ortalamasını öğrenir. Geçmiş kararlar taraflıysa, o taraflılık modelin öğrendiği düzenliliğin parçası olur."
+      }
+    ]
+  },
+
+  {
+    "id": "temsil-ve-gomme",
+    "moduleId": "nasil",
+    "order": 2,
+    "title": "Temsil: anlamı sayıya çevirmek",
+    "subtitle": "Model sözcüklerle değil, sayı dizileriyle çalışır.",
+    "minutes": 8,
+    "keyTerms": ["gömme", "vektör", "belirteç", "benzerlik", "boyut"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Bir sinir ağı metni doğrudan işleyemez; her şeyi sayıya çevirmesi gerekir. Metin önce belirteçlere bölünür — kabaca sözcük parçalarına. Her belirteç sonra bir sayı dizisiyle, yani bir vektörle temsil edilir. Bu temsile gömme denir ve eğitim sırasında öğrenilir; elle yazılmaz."
+      },
+      {
+        "kind": "chart",
+        "chartId": "gomme"
+      },
+      {
+        "kind": "text",
+        "title": "Yakınlık anlam yakınlığıdır",
+        "body": "Gömme uzayının şaşırtıcı özelliği şudur: anlamca yakın sözcükler bu uzayda birbirine yakın konumlanır. Kedi ile köpek yakın durur, kedi ile tren uzak. Bu, hiç kimsenin böyle programlamamasına rağmen ortaya çıkar; çünkü benzer bağlamlarda geçen sözcüklerin benzer temsillere sahip olması, tahmin hatasını azaltan bir çözümdür. Arama motorları, öneri sistemleri ve benzerlik hesaplarının tamamı bu geometri üzerinde çalışır."
+      },
+      {
+        "kind": "text",
+        "title": "Belirteçler sözcük değildir",
+        "body": "Metin sözcüklere değil, istatistiksel olarak seçilmiş parçalara bölünür. Sık geçen sözcükler tek bir belirteç olurken, seyrek ve uzun sözcükler birkaç parçaya ayrılır. Bu bölünme İngilizce metne göre optimize edildiği için Türkçe gibi sondan eklemeli dillerde aynı anlam daha çok belirteç harcar. Sonuç pratikte görünür: aynı metin Türkçede daha pahalıya işlenir ve bağlam penceresinde daha çok yer kaplar."
+      },
+      {
+        "kind": "list",
+        "title": "Gömmelerin gündelik kullanımları",
+        "items": [
+          "Anlamsal arama: aranan sözcük geçmese bile ilgili belgeyi bulmak.",
+          "Öneri: benzer içerikleri veya ürünleri yakınlıklarına göre sıralamak.",
+          "Kümeleme: binlerce müşteri yorumunu konu başlıklarına ayırmak.",
+          "Yinelenen kayıt tespiti: farklı yazılmış aynı şeyleri eşleştirmek.",
+          "Erişimli üretim: bir soruya cevap verirken önce ilgili belgeleri gömme yakınlığıyla bulmak."
+        ]
+      },
+      {
+        "kind": "example",
+        "title": "Örnek: benzerliğin yanılttığı yer",
+        "body": "Gömme benzerliği anlam yakınlığını ölçer, doğruluğu değil. 'Aşı otizme yol açar' ile 'Aşı otizme yol açmaz' cümleleri bu uzayda birbirine çok yakındır; ikisi de aynı konudan, aynı sözcüklerle bahseder. Bu yüzden yalnızca benzerliğe dayanan bir arama, birbirinin tam tersini söyleyen iki kaynağı eşit derecede ilgili bulur. Değerlendirme adımı ayrıca gerekir."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Gömme nedir?",
+        "options": [
+          "Bir metnin sıkıştırılmış hâli",
+          "Bir belirtecin, eğitim sırasında öğrenilen sayısal vektör temsili",
+          "Modelin çıktısı",
+          "Sözcüklerin alfabetik sırası"
+        ],
+        "answerIndex": 1,
+        "explanation": "Gömme, bir belirteci temsil eden sayı dizisidir. Elle yazılmaz; eğitim sırasında tahmin hatasını azaltacak biçimde öğrenilir."
+      },
+      {
+        "id": "q2",
+        "prompt": "Türkçe metinlerin daha çok belirteç harcamasının sebebi nedir?",
+        "options": [
+          "Türkçe harfleri farklı olduğu için",
+          "Belirteç bölünmesi ağırlıklı olarak İngilizce metne göre kurulduğu için sondan eklemeli yapı daha çok parçaya ayrılır",
+          "Türkçe metinler daha uzun olduğu için",
+          "Modeller Türkçe bilmediği için"
+        ],
+        "answerIndex": 1,
+        "explanation": "Bölünme, eğitim verisindeki sıklıklara göre öğrenilir. İngilizce ağırlıklı bir dağılımda Türkçe eklerin her biri ayrı parçalara düşer."
+      },
+      {
+        "id": "q3",
+        "prompt": "'Aşı otizme yol açar' ile 'Aşı otizme yol açmaz' cümlelerinin gömme uzayında yakın olması neyi gösterir?",
+        "options": [
+          "İki cümlenin de doğru olduğunu",
+          "Benzerliğin konu yakınlığını ölçtüğünü, doğruluğu ölçmediğini",
+          "Gömmelerin hatalı olduğunu",
+          "Modelin olumsuzluğu hiç anlamadığını"
+        ],
+        "answerIndex": 1,
+        "explanation": "Benzerlik, aynı konudan bahsetmeyi yakalar. Doğruluk ayrı bir değerlendirme gerektirir; yalnızca benzerliğe dayanan arama zıt iddiaları eşit ilgili bulur."
+      }
+    ]
+  },
+
+  {
+    "id": "dikkat-ve-uretim",
+    "moduleId": "nasil",
+    "order": 3,
+    "title": "Dikkat ve üretim",
+    "subtitle": "Model bir cevap seçmez; her adımda bir olasılık dağılımı üretir.",
+    "minutes": 9,
+    "keyTerms": ["dikkat", "bağlam penceresi", "örnekleme", "sıcaklık", "otoregresif üretim"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Bugünkü dil modellerinin temelindeki fikir dikkat mekanizmasıdır. Bir sözcüğün anlamı, cümledeki diğer sözcüklere bağlıdır: 'yüz' sözcüğünün ne demek olduğunu, çevresindeki sözcükler belirler. Dikkat, her belirtecin diğerlerinden ne kadar bilgi alacağını hesaplar. Bu mekanizma 2017'de yayımlanan bir çalışmayla merkeze oturdu ve bugünkü modellerin tamamının ortak omurgası hâline geldi."
+      },
+      {
+        "kind": "chart",
+        "chartId": "sonraki-sozcuk"
+      },
+      {
+        "kind": "text",
+        "title": "Her seferinde bir belirteç",
+        "body": "Metin üretimi otoregresiftir: model bir sonraki belirteci tahmin eder, onu metne ekler, sonra yeniden tahmin eder. Her adımda ürettiği şey tek bir sözcük değil, bütün sözcükler üzerinde bir olasılık dağılımıdır. Hangisinin seçileceğine örnekleme kuralı karar verir. Sıcaklık düşükse hep en olası seçenek gelir ve metin tutarlı ama tekdüze olur; yüksekse düşük olasılıklı seçenekler de gelir ve metin şaşırtıcı ama tutarsızlaşır."
+      },
+      {
+        "kind": "text",
+        "title": "Bağlam penceresi",
+        "body": "Modelin aynı anda dikkate alabileceği belirteç sayısı sınırlıdır; buna bağlam penceresi denir. Pencerenin dışında kalan hiçbir şey hesaba katılmaz. Uzun bir sohbette baştaki bilgilerin 'unutulması' bir bellek arızası değil, pencerenin doğal sınırıdır. Pencere büyüdükçe hesap maliyeti hızla artar; bu yüzden uzun belgelerle çalışırken metnin tamamını vermek yerine ilgili parçaları seçip vermek yaygın bir yöntemdir."
+      },
+      {
+        "kind": "list",
+        "title": "Bunun pratik sonuçları",
+        "items": [
+          "Aynı soruya iki kez farklı cevap gelmesi bir tutarsızlık değil, örneklemenin doğal sonucudur.",
+          "Kesin ve tekrarlanabilir çıktı isteniyorsa sıcaklık düşürülür.",
+          "Model 'düşünmez, sonra yazar'; yazarken düşünür. Adım adım açıklama istemek doğruluğu artırabilir.",
+          "İstemin başına ve sonuna konan bilgiler, ortasına konanlardan daha etkili olma eğilimindedir.",
+          "Bağlam penceresine sığmayan bilgi, modelin bilmediği bilgidir."
+        ]
+      },
+      {
+        "kind": "example",
+        "title": "Örnek: neden sayı sayamıyor",
+        "body": "Bir metindeki harf sayısını sormak çoğu zaman yanlış cevaplanır. Sebebi zekâ eksikliği değil, temsil biçimidir: model harfleri değil belirteçleri görür. 'çilek' sözcüğü tek bir belirteç olarak temsil ediliyorsa, içindeki harfler modelin doğrudan eriştiği bir bilgi değildir. Aynı model karmaşık bir metni özetlerken başarılı olup basit bir sayma işinde takılabilir; bu, yeteneklerin insan sezgisine göre dizilmediğini gösterir."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Dil modeli her adımda ne üretir?",
+        "options": [
+          "Tek bir doğru cevap",
+          "Bütün olası belirteçler üzerinde bir olasılık dağılımı",
+          "Bir cümle",
+          "Bir arama sorgusu"
+        ],
+        "answerIndex": 1,
+        "explanation": "Model bir dağılım üretir; hangi belirtecin seçileceğine örnekleme kuralı karar verir. Sıcaklık bu seçimin ne kadar riskli olacağını belirler."
+      },
+      {
+        "id": "q2",
+        "prompt": "Sıcaklığın yükseltilmesi ne yapar?",
+        "options": [
+          "Modeli hızlandırır",
+          "Dağılımı düzleştirir; düşük olasılıklı seçeneklerin gelme şansı artar",
+          "Bağlam penceresini büyütür",
+          "Doğruluğu artırır"
+        ],
+        "answerIndex": 1,
+        "explanation": "Yüksek sıcaklık dağılımı düzleştirir. Çıktı daha şaşırtıcı ama aynı ölçüde tutarsız hâle gelir."
+      },
+      {
+        "id": "q3",
+        "prompt": "Uzun bir sohbette baştaki bilgilerin dikkate alınmaması neyle açıklanır?",
+        "options": [
+          "Modelin belleğinin dolması",
+          "Bağlam penceresinin sınırlı olması; pencere dışındaki hiçbir şey hesaba katılmaz",
+          "İnternet bağlantısının kesilmesi",
+          "Sıcaklığın yüksek olması"
+        ],
+        "answerIndex": 1,
+        "explanation": "Bağlam penceresi, modelin aynı anda dikkate alabileceği belirteç sayısıdır. Dışarıda kalan bilgi, model açısından hiç var olmamış gibidir."
+      }
+    ]
+  },
+
+  {
+    "id": "egitim-asamalari",
+    "moduleId": "nasil",
+    "order": 4,
+    "title": "Eğitim aşamaları",
+    "subtitle": "Bir modeli faydalı hâle getirmek, onu eğitmekten ibaret değil.",
+    "minutes": 8,
+    "keyTerms": ["ön eğitim", "ince ayar", "insan geri bildirimi", "hizalama", "sistem istemi"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Bir dil modelinin hayatı birkaç aşamadan geçer. Ön eğitimde model, çok büyük miktarda metin üzerinde tek bir görevi tekrarlar: sonraki belirteci tahmin etmek. Bu aşamanın sonunda ortaya dil hakkında çok şey bilen ama ne yapması gerektiğini bilmeyen bir sistem çıkar. Ham hâliyle bir soruya cevap vermek yerine, benzer soruların listesini üretmeye devam edebilir."
+      },
+      {
+        "kind": "text",
+        "title": "Talimat izlemeyi öğretmek",
+        "body": "İkinci aşamada model, soru-cevap ve talimat örnekleriyle ince ayardan geçirilir. Artık bir isteğe cevap vermesi gerektiğini öğrenmiştir. Üçüncü aşamada insan değerlendiriciler farklı cevapları karşılaştırır ve tercih edilen cevaplar model tarafından ödül olarak öğrenilir. Bu aşamaya insan geri bildirimiyle öğrenme denir; modelin üslubunu, yardımseverliğini ve neyi reddedeceğini büyük ölçüde burası belirler."
+      },
+      {
+        "kind": "list",
+        "title": "Aşamaların ayırdıkları",
+        "items": [
+          "Ön eğitim bilgiyi verir; hizalama davranışı verir. İkisi farklı şeylerdir.",
+          "Bir modelin bir konuyu bilmemesi ile o konuda konuşmayı reddetmesi ayrı sorunlardır.",
+          "Sistem istemi, her sohbetin başına konan ve davranışı yönlendiren gizli talimattır.",
+          "İnce ayar, dar bir alanda davranışı özelleştirir; yeni bilgi öğretmenin verimli yolu değildir.",
+          "Yeni bilgi vermek için genellikle erişimli üretim kullanılır: ilgili belgeler istemin içine konur."
+        ]
+      },
+      {
+        "kind": "text",
+        "title": "Değerlendirenler kim",
+        "body": "İnsan geri bildirimi aşamasında hangi cevabın 'daha iyi' sayılacağına insanlar karar verir. Bu insanların kim olduğu, hangi yönergelerle çalıştığı ve hangi kültürel bağlamdan geldiği, modelin son davranışına doğrudan yansır. Bir modelin nezaket anlayışı, hangi konularda temkinli davranacağı ve neyi tartışmalı sayacağı teknik bir çıktı değil, yazılı yönergelerin ve o yönergeleri uygulayan insanların sonucudur."
+      },
+      {
+        "kind": "example",
+        "title": "Örnek: yardımseverlik ile doğruluk gerilimi",
+        "body": "İnsan değerlendiriciler, kendinden emin ve kesin görünen cevapları tercih etme eğilimindedir. Bu tercih ödül olarak öğrenilirse, model 'bilmiyorum' demek yerine emin görünmeyi öğrenir. Hizalama süreci bu yüzden yalnızca bir cilalama değil, doğrudan bir doğruluk meselesidir; ödülün neyi ödüllendirdiği, modelin ne tür hatalar yapacağını belirler."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Ön eğitim aşamasında model ne öğrenir?",
+        "options": [
+          "Soruları cevaplamayı",
+          "Metinde sonraki belirteci tahmin etmeyi",
+          "İnsan tercihlerini",
+          "Hangi konuları reddedeceğini"
+        ],
+        "answerIndex": 1,
+        "explanation": "Ön eğitim tek bir görevden ibarettir: sonraki belirteci tahmin etmek. Talimat izleme ve davranış, sonraki aşamalarda kazandırılır."
+      },
+      {
+        "id": "q2",
+        "prompt": "Bir modele yeni ve güncel bilgi vermenin yaygın yolu nedir?",
+        "options": [
+          "İnce ayar yapmak",
+          "İlgili belgeleri istemin içine koymak — erişimli üretim",
+          "Sıcaklığı düşürmek",
+          "Bağlam penceresini küçültmek"
+        ],
+        "answerIndex": 1,
+        "explanation": "İnce ayar davranışı özelleştirmek için uygundur; bilgi eklemenin verimli yolu değildir. Güncel bilgi genellikle isteme eklenerek verilir."
+      },
+      {
+        "id": "q3",
+        "prompt": "İnsan geri bildirimiyle öğrenmenin doğruluk açısından riski nedir?",
+        "options": [
+          "Modeli yavaşlatması",
+          "Kendinden emin görünen cevapların tercih edilmesi durumunda modelin 'bilmiyorum' demek yerine emin görünmeyi öğrenmesi",
+          "Bağlam penceresini daraltması",
+          "Eğitim verisini silmesi"
+        ],
+        "answerIndex": 1,
+        "explanation": "Ödül neyi ödüllendiriyorsa model onu öğrenir. Kesinlik görüntüsü ödüllendirilirse, belirsizliği dürüstçe bildirme davranışı zayıflar."
+      }
+    ]
+  },
+
+  {
+    "id": "halusinasyon",
+    "moduleId": "sinirlar",
+    "order": 1,
+    "title": "Halüsinasyon neden bir arıza değil",
+    "subtitle": "Sistem doğruyu değil, olasıyı üretmek üzere kurulmuş.",
+    "minutes": 9,
+    "keyTerms": ["halüsinasyon", "olabilirlik", "kaynak gösterme", "doğrulanabilirlik", "kalibrasyon"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Dil modelinin ürettiği uydurma bilgiye halüsinasyon deniyor. Adı yanıltıcıdır, çünkü bir arızayı ima eder. Oysa sistem, doğru bilgiyi saklayan bir veritabanı değildir; verilen bağlamda olası devamı üreten bir mekanizmadır. Var olmayan bir kitabın adı, gerçek bir kitabın adı kadar olasıdır — hatta bazen daha olasıdır, çünkü daha 'tipik' görünür. Uydurma, sistemin çalışma biçiminin doğal bir sonucudur."
+      },
+      {
+        "kind": "text",
+        "title": "En tehlikeli hata türü",
+        "body": "Halüsinasyonu tehlikeli yapan şey içeriği değil biçimidir. Uydurulan bilgi, doğru bilgiyle tamamen aynı üslupla, aynı kesinlikle ve aynı akıcılıkla gelir. İnsan zihni akıcılığı güvenilirlik işareti olarak okuduğu için, hatayı yakalamak zorlaşır. Bir kaynak listesindeki sahte künyeler gerçek künyelerle aynı biçimde yazılır: yazar adı makul, dergi adı gerçek, yıl uygun, sayfa numarası inandırıcıdır."
+      },
+      {
+        "kind": "list",
+        "title": "Riskin arttığı yerler",
+        "items": [
+          "Seyrek ve ayrıntılı olgular: künye, tarih, sayı, alıntı, mevzuat maddesi.",
+          "Az temsil edilen diller ve yerel konular; Türkçe kaynaklı ayrıntılarda risk belirgin biçimde yüksektir.",
+          "Modelin eğitim verisinden sonra olmuş olaylar.",
+          "Soru yanlış bir varsayım içeriyorsa: model varsayımı düzeltmek yerine üstüne inşa etme eğilimindedir.",
+          "Uzun ve çok adımlı cevaplar: erken bir hata sonraki adımların dayanağı hâline gelir."
+        ]
+      },
+      {
+        "kind": "text",
+        "title": "Ne işe yarar, ne işe yaramaz",
+        "body": "Pratik ayrım şudur: doğrulaması kolay işlerde model çok değerlidir, doğrulaması zor işlerde risklidir. Bir metni yeniden yazdırmak, bir kodun ne yaptığını anlatmak, bir listeyi düzenlemek — çıktıyı gözle kontrol edebilirsiniz. Bir istatistiğin doğru olup olmadığını ya da bir mahkeme kararının gerçekten var olup olmadığını ise ancak bağımsız bir kaynaktan doğrulayabilirsiniz. Kural basittir: doğrulamayacağınız bir çıktıyı kullanmayın."
+      },
+      {
+        "kind": "example",
+        "title": "Örnek: olmayan davalar",
+        "body": "2023'te New York'ta iki avukat, hazırladıkları dilekçeye yapay zekâ aracının ürettiği altı mahkeme kararını kaynak gösterdi. Kararların hiçbiri yoktu. Mahkeme avukatlara para cezası verdi. Olayın dikkat çekici yanı, avukatların araca kararların gerçek olup olmadığını sorması ve 'evet, gerçek' cevabını almasıydı. Sistemin kendi çıktısını doğrulaması, aynı mekanizmanın bir kez daha çalışmasından ibaretti."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Halüsinasyon neden bir 'arıza' sayılmaz?",
+        "options": [
+          "Nadiren görüldüğü için",
+          "Sistem doğruyu saklamak üzere değil, olası devamı üretmek üzere kurulduğu için",
+          "Yalnızca eski modellerde görüldüğü için",
+          "Kullanıcı hatasından kaynaklandığı için"
+        ],
+        "answerIndex": 1,
+        "explanation": "Uydurma bilgi, mekanizmanın doğal çıktısıdır. Var olmayan bir künye, gerçeği kadar 'olası' görünebilir."
+      },
+      {
+        "id": "q2",
+        "prompt": "Halüsinasyonu yakalamayı zorlaştıran şey nedir?",
+        "options": [
+          "Kısa olması",
+          "Doğru bilgiyle aynı üslup, kesinlik ve akıcılıkla sunulması",
+          "Yalnızca teknik konularda görülmesi",
+          "Modelin uyarı vermesi"
+        ],
+        "answerIndex": 1,
+        "explanation": "Akıcılık zihinde güvenilirlik işareti olarak okunur. Uydurma bilgi, biçim olarak doğrudan ayırt edilemez."
+      },
+      {
+        "id": "q3",
+        "prompt": "Modelin çıktısını yine modele doğrulatmak neden yeterli değildir?",
+        "options": [
+          "Çok pahalı olduğu için",
+          "Aynı mekanizmanın bir kez daha çalışmasından ibaret olduğu için bağımsız bir kanıt üretmez",
+          "Model bunu reddettiği için",
+          "Bağlam penceresi yetmediği için"
+        ],
+        "answerIndex": 1,
+        "explanation": "Doğrulama ancak bağımsız bir kaynaktan gelirse anlamlıdır. Sistemin kendi çıktısını onaylaması yeni bir bilgi eklemez."
+      }
+    ]
+  },
+
+  {
+    "id": "yanlilik",
+    "moduleId": "sinirlar",
+    "order": 2,
+    "title": "Yanlılık ve temsil",
+    "subtitle": "Model kimin dünyasını öğrendiyse, onun bakışını taşır.",
+    "minutes": 8,
+    "keyTerms": ["yanlılık", "temsil", "kalıp yargı", "geri besleme döngüsü", "adalet ölçütleri"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Yanlılık, bir modelin belirli gruplar hakkında sistematik olarak farklı davranmasıdır. Kaynağı çoğunlukla kötü niyet değil, veridir. İnternet metni belirli dilleri, coğrafyaları ve toplumsal konumları orantısız biçimde temsil eder; model bu dağılımı öğrenir. Mesleklerle cinsiyetlerin geçmiş metinlerdeki ilişkisi, modelin ürettiği metne de yansır."
+      },
+      {
+        "kind": "text",
+        "title": "Yanlılık nerede görünür",
+        "body": "Üretilen metinde kalıp yargılar olarak görünür: belirli meslekler belirli cinsiyetlerle, belirli isimler belirli özelliklerle eşleşir. Görüntü üretiminde daha da belirgindir. Ama en ciddi biçimi karar sistemlerindedir: kredi puanlama, işe alım ön elemesi, risk değerlendirmesi. Burada yanlılık bir üslup sorunu değil, doğrudan bir hak kaybıdır."
+      },
+      {
+        "kind": "list",
+        "title": "Yanlılığın kaynakları",
+        "items": [
+          "Örneklem: veride kimlerin ne kadar temsil edildiği.",
+          "Etiketleme: verinin nasıl etiketlendiği ve kimin etiketlediği.",
+          "Hedef seçimi: neyi tahmin etmeye çalıştığınız. 'Kim iyi çalışan olur' yerine 'kim işe alındı' sorusunu ölçmek başlı başına bir yanlılıktır.",
+          "Değerlendirme: performansın hangi gruplarda ayrı ayrı ölçüldüğü. Ortalama başarı, alt gruplardaki başarısızlığı gizler.",
+          "Geri besleme: modelin kararının yeni veriyi üretmesi, yani kendi öngörüsünü doğrular hâle gelmesi."
+        ]
+      },
+      {
+        "kind": "text",
+        "title": "Adalet tek bir tanım değil",
+        "body": "Bir sistemin 'adil' olması birden çok biçimde tanımlanabilir: gruplar arasında eşit kabul oranı, eşit hata oranı, ya da eşit isabet. Matematiksel olarak gösterilmiştir ki taban oranları gruplar arasında farklıysa bu ölçütlerin hepsini birden sağlamak mümkün değildir. Yani adalet, seçilmesi gereken bir tanımdır. Bu seçim teknik bir optimizasyon değil, açıkça savunulması gereken bir değer kararıdır."
+      },
+      {
+        "kind": "example",
+        "title": "Örnek: geri besleme döngüsü",
+        "body": "Bir tahmine dayalı polislik sistemi, geçmişte çok devriye gezilen mahalleleri riskli olarak işaretler. Oraya daha çok devriye gönderilir, daha çok kayıt tutulur, model bir sonraki turda o mahalleleri daha da riskli bulur. Sistem kendi öngörüsünü doğrulayan veriyi üretmektedir. Bu döngü, model ne kadar iyi olursa olsun ölçümle müdahalenin ayrılmaması durumunda kaçınılmazdır."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Model yanlılığının başlıca kaynağı nedir?",
+        "options": [
+          "Programcıların kasıtlı tercihleri",
+          "Eğitim verisinin, etiketlemenin ve hedef seçiminin taşıdığı sistematik eğilimler",
+          "Donanım sınırları",
+          "Bağlam penceresi"
+        ],
+        "answerIndex": 1,
+        "explanation": "Yanlılık genellikle kötü niyetten değil, verinin ve problem tanımının kendisinden gelir. Model, verideki dağılımı öğrenir."
+      },
+      {
+        "id": "q2",
+        "prompt": "Farklı adalet ölçütleri hakkında doğru olan nedir?",
+        "options": [
+          "Hepsi aynı anda sağlanabilir",
+          "Taban oranları gruplar arasında farklıysa hepsini birden sağlamak matematiksel olarak mümkün değildir",
+          "Yalnızca bir tane adalet tanımı vardır",
+          "Adalet tümüyle teknik bir sorundur"
+        ],
+        "answerIndex": 1,
+        "explanation": "Eşit kabul oranı, eşit hata oranı ve eşit isabet aynı anda sağlanamaz. Hangisinin öncelikli olduğu bir değer kararıdır."
+      },
+      {
+        "id": "q3",
+        "prompt": "Geri besleme döngüsü neden tehlikelidir?",
+        "options": [
+          "Modeli yavaşlatır",
+          "Modelin kararı yeni veriyi ürettiği için sistem kendi öngörüsünü doğrular hâle gelir",
+          "Veri miktarını azaltır",
+          "Bağlam penceresini doldurur"
+        ],
+        "answerIndex": 1,
+        "explanation": "Ölçüm ile müdahale ayrılmadığında model, kendi çıktısının yarattığı veriyle beslenir ve baştaki eğilim zamanla pekişir."
+      }
+    ]
+  }
+]

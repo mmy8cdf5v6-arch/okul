@@ -82,5 +82,19 @@
     "questions": 36,
     "charts": 5,
     "file": "courses/muzik.json"
+  },
+  {
+    "id": "yapay-zeka",
+    "title": "Yapay zekâ okuryazarlığı",
+    "subtitle": "Nasıl çalışır, neyi yapamaz",
+    "description": "Örüntüden gömmeye, halüsinasyondan karar sistemlerine: bu araçların gerçekte ne yaptığını, nerede güvenilir olduğunu ve nerede olmadığını öğren.",
+    "icon": "🧠",
+    "accent": "#2f5fa8",
+    "accentDark": "#8db4ee",
+    "category": "gunumuz",
+    "lessons": 12,
+    "questions": 36,
+    "charts": 4,
+    "file": "courses/yapay-zeka.json"
   }
 ]

@@ -1898,6 +1898,138 @@
         s += gTxt(0, 0.99, U.ad + "  ·  " + U.g.join("+"), { a: "start", s: 11, b: 1, c: "var(--ink)" });
         return { svg: s, text: U.ad + " = " + U.g.join("+") + ". Uzun sütunlar grup başlarındaki vurguları gösteriyor. " + U.not };
       }
+    },
+
+    "sonraki-sozcuk": {
+      title: "Sonraki sözcük: bir olasılık dağılımı",
+      note: "Dil modeli bir cevap seçmez, bir dağılım üretir. Sıcaklık, o dağılımdan nasıl örneklendiğini belirler: aynı kaydırıcı hem yaratıcılığı hem saçmalamayı yönetir.",
+      controls: [{ key: "t", label: "Sıcaklık", min: 10, max: 150, step: 10, def: 70,
+        fmt: function (v) { return (v / 100).toFixed(1); } }],
+      draw: function (p) {
+        var W = ["uyudu", "kaçtı", "atladı", "geldi", "havladı", "eridi"];
+        var P0 = [0.40, 0.22, 0.17, 0.12, 0.06, 0.03];
+        var T = p.t / 100, i, tot = 0, q = [];
+        for (i = 0; i < P0.length; i++) { q.push(Math.pow(P0[i], 1 / T)); tot += q[i]; }
+        for (i = 0; i < q.length; i++) q[i] /= tot;
+        var s = frame("", "Olasılık");
+        s += gTxt(0.99, 1, "\u201cKedi ___\u201d", { a: "end", dy: 2, s: 10.5, b: 1, c: "var(--ink)" });
+        for (i = 0; i < W.length; i++) {
+          var cx = (i + 0.5) / W.length;
+          s += gRect(cx - 0.055, 0, cx + 0.055, q[i] * 0.88, { c: i > 3 ? "var(--no)" : "var(--accent)", o: i === 0 ? 0.9 : 0.65 });
+          s += gTxt(cx, q[i] * 0.88, "%" + r0(q[i] * 100), { a: "middle", dy: -5, s: 8.5, c: "var(--muted)" });
+          s += gTxt(cx, 0, W[i], { a: "middle", dy: 12, s: 8.5, c: i > 3 ? "var(--no)" : "var(--muted)" });
+        }
+        return { svg: s, text: T <= 0.3
+          ? "Sıcaklık düşükken dağılım tek bir seçeneğe çöküyor: model neredeyse her zaman \u201c" + W[0] + "\u201d diyor (%" +
+            r0(q[0] * 100) + "). Metin tutarlı ama tekdüze olur."
+          : T >= 1.2
+            ? "Sıcaklık yüksekken dağılım düzleşiyor. \u201chavladı\u201d ve \u201ceridi\u201d gibi bağlama uymayan seçenekler toplamda %" +
+              r0((q[4] + q[5]) * 100) + " paya çıkıyor — bu ayarda üretim şaşırtıcı olduğu kadar tutarsız da olur."
+            : "Bu ayarda en olası sözcük %" + r0(q[0] * 100) + " paya sahip, ama alternatifler de canlı. " +
+              "Modelin \u201cbildiği\u201d şey bir cevap değil, bu dağılımın kendisidir." };
+      }
+    },
+
+    "gomme": {
+      title: "Anlamı yer olarak düşünmek",
+      note: "Model sözcükleri sayı dizilerine çevirir. Bu uzayda yakınlık anlam yakınlığıdır — burada iki boyut var, gerçekte binlerce.",
+      controls: [
+        { key: "x", label: "Sorgu — yatay", min: 0, max: 100, step: 5, def: 50, fmt: function (v) { return v + ""; } },
+        { key: "y", label: "Sorgu — dikey", min: 0, max: 100, step: 5, def: 50, fmt: function (v) { return v + ""; } }
+      ],
+      draw: function (p) {
+        var K = [
+          ["kedi", 0.18, 0.80], ["köpek", 0.30, 0.88], ["kuş", 0.10, 0.66],
+          ["elma", 0.80, 0.84], ["üzüm", 0.90, 0.70], ["armut", 0.70, 0.74],
+          ["korku", 0.16, 0.22], ["sevinç", 0.30, 0.30], ["öfke", 0.08, 0.36],
+          ["tren", 0.78, 0.18], ["uçak", 0.90, 0.30], ["araba", 0.68, 0.28]
+        ];
+        var qx = p.x / 100, qy = p.y / 100, i;
+        var d = K.map(function (k, i2) {
+          return { i: i2, ad: k[0], m: Math.sqrt(Math.pow(k[1] - qx, 2) + Math.pow(k[2] - qy, 2)) };
+        }).sort(function (a, b) { return a.m - b.m; });
+        var yakin = [d[0].i, d[1].i, d[2].i];
+        var s = frame("", "");
+        for (i = 0; i < 3; i++) s += gLine(qx, qy, K[yakin[i]][1], K[yakin[i]][2], { c: "var(--accent)", w: 1.2, d: "3 3" });
+        K.forEach(function (k, i2) {
+          var on = yakin.indexOf(i2) >= 0;
+          s += gDot(k[1], k[2], { c: on ? "var(--accent)" : "var(--rule)", r: on ? 4 : 3 });
+          s += gTxt(k[1], k[2], k[0], { a: "middle", dy: -7, s: 8.5, b: on ? 1 : 0,
+            c: on ? "var(--ink)" : "var(--muted)" });
+        });
+        s += gDot(qx, qy, { c: "var(--no)", r: 5 });
+        return { svg: s, text: "Sorguya en yakın üç sözcük: " + d[0].ad + ", " + d[1].ad + ", " + d[2].ad +
+          ". Sözcükler anlamlarına göre öbekleniyor — hayvanlar, meyveler, duygular, taşıtlar. " +
+          "Arama, öneri ve benzerlik hesaplarının tamamı bu geometri üzerinde çalışır." };
+      }
+    },
+
+    "hata-birikimi": {
+      title: "Çok adımlı işlerde hata birikir",
+      note: "Tek bir adımda yüksek görünen doğruluk, adımlar zincirlendiğinde hızla erir. Otomatik iş akışlarında asıl sınav budur.",
+      controls: [
+        { key: "p", label: "Adım başına doğruluk", min: 80, max: 100, step: 1, def: 95, fmt: pctS },
+        { key: "n", label: "Adım sayısı", min: 1, max: 30, step: 1, def: 10,
+          fmt: function (v) { return v + " adım"; } }
+      ],
+      draw: function (p) {
+        var a = p.p / 100, N = 30, i, pts = [], ref = [];
+        for (i = 1; i <= N; i++) {
+          pts.push([(i - 1) / (N - 1), Math.pow(a, i)]);
+          ref.push([(i - 1) / (N - 1), Math.pow(0.99, i)]);
+        }
+        var here = Math.pow(a, p.n);
+        var s = frame("Adım sayısı", "Baştan sona başarı");
+        s += gPoly(ref, { c: "var(--rule)", w: 1.6, d: "4 3" });
+        s += gTxt(0.99, Math.pow(0.99, N), "%99'luk adım", { a: "end", dy: -5, s: 8.5 });
+        s += gArea(pts.concat([[1, 0], [0, 0]]), { c: "var(--accent)", o: 0.10 });
+        s += gPoly(pts, { c: "var(--accent)", w: 2.4 });
+        s += gLine((p.n - 1) / (N - 1), 0, (p.n - 1) / (N - 1), here, { c: "var(--rule)", w: 1.1, d: "2 3" });
+        s += gDot((p.n - 1) / (N - 1), here, { c: "var(--ink)" });
+        s += gTxt((p.n - 1) / (N - 1), here, "%" + r0(here * 100), {
+          a: p.n > 20 ? "end" : "start", dx: p.n > 20 ? -6 : 6, dy: -5, c: "var(--ink)", b: 1, s: 10 });
+        [10, 20].forEach(function (v) { s += gTxt((v - 1) / (N - 1), 0, v + "", { a: "middle", dy: 12, s: 9 }); });
+        return { svg: s, text: "Adım başına %" + p.p + " doğruluk, " + p.n + " adımlık bir işte baştan sona %" +
+          r0(here * 100) + " başarı demek. " + (here < 0.5
+            ? "Zincir yarıdan fazla vakada bir yerde kırılıyor; ara kontrol noktası koymadan böyle bir akış çalışmaz."
+            : "Adım sayısını artırmadan önce, her adımın bağımsız olarak doğrulanıp doğrulanamayacağına bakmak gerekir.") };
+      }
+    },
+
+    "esik": {
+      title: "Eşiği nereye koyarsanız, hatayı seçersiniz",
+      note: "Bir sınıflandırıcı 'doğru' ya da 'yanlış' değildir; bir eşikle kullanılır. Eşiği kaydırmak hatayı yok etmez, türünü değiştirir.",
+      controls: [
+        { key: "e", label: "Karar eşiği", min: 20, max: 80, step: 2, def: 50, fmt: function (v) { return v + ""; } },
+        { key: "f", label: "İki grubun ayrışması", min: 10, max: 60, step: 5, def: 30,
+          fmt: function (v) { return v < 20 ? "zayıf" : v > 45 ? "güçlü" : "orta"; } }
+      ],
+      draw: function (p) {
+        var sd = 0.12, m0 = 0.5 - p.f / 200, m1 = 0.5 + p.f / 200, t = p.e / 100, i;
+        var yog = function (x, m) { return Math.exp(-Math.pow((x - m) / sd, 2) / 2); };
+        var A = [], B = [];
+        for (i = 0; i <= 120; i++) {
+          var x = i / 120;
+          A.push([x, yog(x, m0) * 0.82]);
+          B.push([x, yog(x, m1) * 0.82]);
+        }
+        var yp = 1 - ncdf((t - m0) / sd);      // yanlış pozitif oranı
+        var yn = ncdf((t - m1) / sd);          // yanlış negatif oranı
+        var s = frame("Modelin verdiği puan", "Sıklık");
+        s += gArea(A.filter(function (q) { return q[0] >= t; }).concat([[1, 0], [t, 0]]), { c: "var(--no)", o: 0.32 });
+        s += gArea([[0, 0], [t, 0]].concat(B.filter(function (q) { return q[0] <= t; }).reverse()), { c: "var(--makro)", o: 0.30 });
+        s += gPoly(A, { c: "var(--muted)", w: 1.8 });
+        s += gPoly(B, { c: "var(--accent)", w: 2.2 });
+        s += gLine(t, 0, t, 0.96, { c: "var(--ink)", w: 1.8, d: "4 3" });
+        s += gTxt(t, 0.96, "eşik", { a: t > 0.55 ? "end" : "start", dx: t > 0.55 ? -5 : 5, dy: 2, c: "var(--ink)", b: 1, s: 9 });
+        s += gTxt(0.02, 0.62, "uygun değil", { a: "start", s: 8.5, c: "var(--muted)" });
+        s += gTxt(0.98, 0.62, "uygun", { a: "end", s: 8.5, c: "var(--accent)", b: 1 });
+        return { svg: s, text: "Bu eşikte uygun olmayanların %" + r0(yp * 100) + "'i yanlışlıkla kabul ediliyor, " +
+          "uygun olanların %" + r0(yn * 100) + "'i ise gereksiz yere eleniyor. " +
+          (p.f < 20
+            ? "İki grup birbirine bu kadar karışmışken hiçbir eşik iyi değildir; sorun eşikte değil, modelin ayırt etme gücünde."
+            : "Eşiği yükseltmek birinci hatayı azaltır ve ikincisini büyütür. Hangisinin daha pahalı olduğu teknik değil, kurumsal bir karardır.") };
+      }
     }
   };
 

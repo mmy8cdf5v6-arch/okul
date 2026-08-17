@@ -1,0 +1,477 @@
+{
+  "meta": {
+    "title": "Yapay zekâ okuryazarlığı",
+    "eyebrow": "Yapay zekâ",
+    "subtitle": "Nasıl çalışır, neyi yapamaz",
+    "description": "Örüntüden gömmeye, halüsinasyondan karar sistemlerine: bu araçların gerçekte ne yaptığını, nerede güvenilir olduğunu ve nerede olmadığını öğren.",
+    "icon": "🧠",
+    "accent": "#2f5fa8",
+    "accentDark": "#8db4ee",
+    "category": "gunumuz",
+    "figuresLabel": "İsimler",
+    "timelineLabel": "Zaman çizelgesi",
+    "timelineTitle": "Makinenin öğrenme tarihi",
+    "timelineIntro": "Turing'in sorusundan bugünkü araçlara: iki uzun kış, birkaç yanlış vaat ve birkaç gerçek kırılma.",
+    "source": "builtin",
+    "hasCharts": true
+  },
+
+  "modules": [
+    {
+      "id": "nasil",
+      "title": "Nasıl çalışır",
+      "description": "Örüntü, gömme, dikkat ve eğitim aşamaları: kaputun altında ne olduğu."
+    },
+    {
+      "id": "sinirlar",
+      "title": "Neyi yapamaz",
+      "description": "Halüsinasyon, yanlılık, ölçme sorunu ve güvenlik: sınırların nereden geldiği."
+    },
+    {
+      "id": "birlikte",
+      "title": "Birlikte yaşamak",
+      "description": "Telif, kişisel veri, otomatik karar ve gündelik kullanım pratiği."
+    }
+  ],
+
+  "glossary": [
+    { "id": "makine-ogrenmesi", "term": "Makine öğrenmesi", "definition": "Kuralların elle yazılmak yerine örneklerden çıkarıldığı yaklaşım. Program değil, veriden ayarlanan bir parametre kümesi.", "lessonId": "oruntu-ve-veri" },
+    { "id": "egitim-verisi", "term": "Eğitim verisi", "definition": "Modelin örüntüleri çıkardığı örnekler. Veride ne varsa model onu öğrenir — işe yarayanı da yanıltıcı olanı da.", "lessonId": "oruntu-ve-veri" },
+    { "id": "parametre", "term": "Parametre", "definition": "Eğitim sırasında ayarlanan sayılar. Büyük dil modellerinde milyarlarca tanedir.", "lessonId": "oruntu-ve-veri" },
+    { "id": "genelleme", "term": "Genelleme", "definition": "Görülmemiş veride doğru davranma yeteneği. Bir modelin başarısı ezberlemesiyle değil bununla ölçülür.", "lessonId": "oruntu-ve-veri" },
+    { "id": "asiri-uyum", "term": "Aşırı uyum", "definition": "Eğitim verisini ezberleyip yeni veride başarısız olmak. Değerlendirmenin ayrı bir kümede yapılmasının sebebi.", "lessonId": "oruntu-ve-veri" },
+    { "id": "kayip", "term": "Kayıp fonksiyonu", "definition": "Tahminin gerçekten ne kadar saptığını ölçen sayı. Eğitim, bu sayıyı küçültmeye çalışmaktan ibarettir.", "lessonId": "oruntu-ve-veri" },
+    { "id": "gomme-t", "term": "Gömme", "definition": "Bir belirtecin sayısal vektör temsili. Elle yazılmaz; eğitim sırasında öğrenilir.", "lessonId": "temsil-ve-gomme" },
+    { "id": "belirtec", "term": "Belirteç", "definition": "Metnin bölündüğü istatistiksel parça. Sözcükle aynı şey değildir; sondan eklemeli dillerde bir sözcük birkaç belirteç harcar.", "lessonId": "temsil-ve-gomme" },
+    { "id": "vektor", "term": "Vektör", "definition": "Bir nesneyi temsil eden sayı dizisi. Gömme uzayında yön ve uzaklık, anlam ilişkilerine karşılık gelir.", "lessonId": "temsil-ve-gomme" },
+    { "id": "anlamsal-benzerlik", "term": "Anlamsal benzerlik", "definition": "İki gömmenin birbirine yakınlığı. Konu yakınlığını ölçer; doğruluğu ölçmez.", "lessonId": "temsil-ve-gomme" },
+    { "id": "erisimli-uretim", "term": "Erişimli üretim", "definition": "Cevap vermeden önce ilgili belgelerin bulunup isteme eklenmesi. Güncel bilgi vermenin yaygın yolu.", "lessonId": "temsil-ve-gomme" },
+    { "id": "dikkat", "term": "Dikkat mekanizması", "definition": "Her belirtecin diğerlerinden ne kadar bilgi alacağını hesaplayan yapı. Bugünkü modellerin ortak omurgası.", "lessonId": "dikkat-ve-uretim" },
+    { "id": "baglam-penceresi", "term": "Bağlam penceresi", "definition": "Modelin aynı anda dikkate alabileceği belirteç sayısı. Dışarıda kalan bilgi, model açısından yoktur.", "lessonId": "dikkat-ve-uretim" },
+    { "id": "otoregresif", "term": "Otoregresif üretim", "definition": "Her adımda bir belirteç üretip onu metne ekleyerek devam etme. Model yazarken düşünür.", "lessonId": "dikkat-ve-uretim" },
+    { "id": "sicaklik", "term": "Sıcaklık", "definition": "Örnekleme dağılımının ne kadar düzleştirileceğini belirleyen ayar. Düşükse tutarlı ama tekdüze, yüksekse şaşırtıcı ama tutarsız.", "lessonId": "dikkat-ve-uretim" },
+    { "id": "on-egitim", "term": "Ön eğitim", "definition": "Çok büyük metin üzerinde sonraki belirteci tahmin etme aşaması. Bilgiyi verir, davranışı vermez.", "lessonId": "egitim-asamalari" },
+    { "id": "ince-ayar", "term": "İnce ayar", "definition": "Dar bir alanda davranışı özelleştirmek için yapılan ek eğitim. Yeni bilgi öğretmenin verimli yolu değildir.", "lessonId": "egitim-asamalari" },
+    { "id": "insan-geri-bildirimi", "term": "İnsan geri bildirimi", "definition": "Değerlendiricilerin cevapları karşılaştırıp tercih ettiği seçeneğin ödül olarak öğrenilmesi. Üslubu ve reddetme davranışını büyük ölçüde bu belirler.", "lessonId": "egitim-asamalari" },
+    { "id": "hizalama", "term": "Hizalama", "definition": "Modelin davranışını istenen değerlere ve kullanım biçimine yaklaştırma çalışması. Bilgiden ayrı bir aşamadır.", "lessonId": "egitim-asamalari" },
+    { "id": "sistem-istemi", "term": "Sistem istemi", "definition": "Her sohbetin başına konan, davranışı yönlendiren gizli talimat.", "lessonId": "egitim-asamalari" },
+    { "id": "halusinasyon-t", "term": "Halüsinasyon", "definition": "Modelin uydurduğu, doğruymuş gibi sunulan bilgi. Bir arıza değil, olası devamı üretmenin doğal sonucu.", "lessonId": "halusinasyon" },
+    { "id": "dogrulanabilirlik", "term": "Doğrulanabilirlik", "definition": "Bir çıktının bağımsız olarak kontrol edilebilmesi. Modelin güvenilir kullanımını belirleyen tek pratik ölçüt.", "lessonId": "halusinasyon" },
+    { "id": "kalibrasyon", "term": "Kalibrasyon", "definition": "Modelin ifade ettiği güvenin gerçek doğruluk oranıyla örtüşmesi. Kesin görünmeyi ödüllendiren eğitim bunu bozar.", "lessonId": "halusinasyon" },
+    { "id": "yanlilik-t", "term": "Yanlılık", "definition": "Modelin belirli gruplar hakkında sistematik olarak farklı davranması. Kaynağı çoğunlukla veridir.", "lessonId": "yanlilik" },
+    { "id": "temsil", "term": "Temsil", "definition": "Veri kümesinde hangi dillerin, coğrafyaların ve toplumsal konumların ne kadar yer aldığı. Modelin ne yapabileceğini doğrudan belirler.", "lessonId": "yanlilik" },
+    { "id": "adalet-olcutleri", "term": "Adalet ölçütleri", "definition": "Eşit kabul oranı, eşit hata oranı, eşit isabet. Taban oranları farklıysa hepsi aynı anda sağlanamaz.", "lessonId": "yanlilik" },
+    { "id": "geri-besleme", "term": "Geri besleme döngüsü", "definition": "Modelin kararının yeni veriyi üretmesi ve sistemin kendi öngörüsünü doğrular hâle gelmesi.", "lessonId": "yanlilik" },
+    { "id": "kiyaslama", "term": "Kıyaslama testi", "definition": "Modelleri karşılaştırmak için kullanılan standart soru kümesi. Ölçtüğü şeyle merak edilen şey çoğu zaman aynı değildir.", "lessonId": "degerlendirme" },
+    { "id": "veri-sizintisi", "term": "Veri sızıntısı", "definition": "Test sorularının eğitim verisine karışması. Puanı, sınav sorularını önceden görmüş olmanın sonucuna çevirir.", "lessonId": "degerlendirme" },
+    { "id": "doygunluk", "term": "Doygunluk", "definition": "Bir kıyaslama testinin yaygınlaşıp herkes ona göre iyileştirme yaptıkça ayırt ediciliğini kaybetmesi.", "lessonId": "degerlendirme" },
+    { "id": "hata-birikimi-t", "term": "Hata birikimi", "definition": "Çok adımlı işlerde adım başına doğruluğun üstel olarak erimesi. %95 doğruluk, 20 adımda %36'ya iner.", "lessonId": "degerlendirme" },
+    { "id": "istem-enjeksiyonu", "term": "İstem enjeksiyonu", "definition": "Modelin okuduğu içeriğe gizlenmiş bir cümlenin talimat gibi işlenmesi. Veri ile talimatın aynı akışta gelmesinin sonucu.", "lessonId": "guvenlik" },
+    { "id": "dolayli-saldiri", "term": "Dolaylı saldırı", "definition": "Zararlı talimatın kullanıcıdan değil, modelin okuyacağı bir web sayfasından ya da belgeden gelmesi.", "lessonId": "guvenlik" },
+    { "id": "yetki-siniri", "term": "Yetki sınırı", "definition": "Modele verilen araçların yapabileceklerinin daraltılması. Metin düzeyinde tam koruma mümkün olmadığı için asıl savunma budur.", "lessonId": "guvenlik" },
+    { "id": "arac-kullanimi", "term": "Araç kullanımı", "definition": "Modelin dosya okuma, arama, kod çalıştırma gibi dış işlevleri çağırabilmesi. Yetenek arttıkça güvenlik yüzeyi de büyür.", "lessonId": "guvenlik" },
+    { "id": "adil-kullanim", "term": "Adil kullanım", "definition": "Telifli içeriğin belirli koşullarda izinsiz kullanılabilmesi. Eğitim verisi tartışmasının merkezindeki hukuki kavram.", "lessonId": "telif-ve-emek" },
+    { "id": "ezberleme", "term": "Ezberleme", "definition": "Modelin bazı eğitim içeriklerini neredeyse birebir üretebilmesi. Dönüştürücü kullanım savunmasını zayıflatır.", "lessonId": "telif-ve-emek" },
+    { "id": "gorunmeyen-emek", "term": "Görünmeyen emek", "definition": "Veri etiketleme, cevap karşılaştırma ve zararlı içerik ayıklama işi. Çoğunlukla düşük ücretli ve düşük görünürlüklü.", "lessonId": "telif-ve-emek" },
+    { "id": "gorev-bilesimi", "term": "Görev bileşimi", "definition": "Bir mesleğin işlerinin dağılımı. Etki meslek düzeyinde değil, görev düzeyinde ölçülür.", "lessonId": "telif-ve-emek" },
+    { "id": "kisisel-veri-t", "term": "Kişisel veri", "definition": "Belirli bir kişiyi tanımlayan ya da tanımlanabilir kılan her bilgi. Türkiye'de işlenmesi KVKK kapsamındadır.", "lessonId": "kisisel-veri" },
+    { "id": "veri-saklama", "term": "Veri saklama", "definition": "Girdilerin ne kadar süreyle tutulduğu. İnsan erişimi ve eğitimde kullanımdan ayrı olarak sorulması gereken bir şey.", "lessonId": "kisisel-veri" },
+    { "id": "yerel-calistirma", "term": "Yerel çalıştırma", "definition": "Modelin kendi cihazınızda çalıştırılması. Veri dışarı çıkmaz; bedeli yetenek ve hızdır.", "lessonId": "kisisel-veri" },
+    { "id": "unutulma-hakki", "term": "Unutulma hakkı", "definition": "Kişisel verinin silinmesini isteme hakkı. Bilgi parametrelere dağılmış olduğu için eğitilmiş modelde uygulanması teknik olarak zordur.", "lessonId": "kisisel-veri" },
+    { "id": "otomatik-karar", "term": "Otomatik karar", "definition": "Bir kişi hakkında insan müdahalesi olmadan verilen karar. Hızlıdır, ama itirazı çoğu zaman zordur.", "lessonId": "karar-sistemleri" },
+    { "id": "esik-t", "term": "Karar eşiği", "definition": "Bir puanın hangi noktadan sonra kabul sayılacağı. Eşik hatayı yok etmez, türünü ve kimin üstüne düşeceğini değiştirir.", "lessonId": "karar-sistemleri" },
+    { "id": "aciklanabilirlik", "term": "Açıklanabilirlik", "definition": "Kararın hangi bilgilere dayandığının anlaşılır biçimde ortaya konması. İtiraz hakkının ön koşulu.", "lessonId": "karar-sistemleri" },
+    { "id": "otomasyona-guven", "term": "Otomasyona güven yanlılığı", "definition": "Denetlemekle görevli insanın sistemin önerisine uyma eğilimi. 'İnsan onayı' güvencesini zayıflatan olgu.", "lessonId": "karar-sistemleri" },
+    { "id": "vekil-degisken", "term": "Vekil değişken", "definition": "Korunan bir özelliği dolaylı olarak temsil eden girdi — posta kodu gibi. Özelliği modelden çıkarmak yanlılığı çıkarmaz.", "lessonId": "karar-sistemleri" },
+    { "id": "istem", "term": "İstem", "definition": "Modele verilen talimat ve bağlam. İyi bir istemin çoğu, modelin bilmediği bağlamı vermekten ibarettir.", "lessonId": "kullanim-pratigi" },
+    { "id": "beceri-erozyonu", "term": "Beceri erozyonu", "definition": "Sürekli devredilen becerilerin zamanla körelmesi. Öğrenme aşamasındaki bir işi devretmek, öğrenmeyi devretmektir.", "lessonId": "kullanim-pratigi" }
+  ],
+
+  "figures": [
+    {
+      "id": "turing",
+      "name": "Alan Turing",
+      "lifespan": "1912-1954",
+      "oneLiner": "'Makineler düşünebilir mi' sorusunu sınanabilir bir soruya çevirdi.",
+      "contributions": [
+        "1936'da hesaplanabilirliğin kuramsal temelini kurdu",
+        "1950'de makine zekâsı için bir davranış ölçütü önerdi",
+        "Soruyu tanımdan sınamaya taşıyarak alanı başlattı"
+      ],
+      "quote": {
+        "text": "Makineler düşünebilir mi sorusu, üzerinde tartışmaya değmeyecek kadar anlamsız.",
+        "source": "Computing Machinery and Intelligence, 1950"
+      },
+      "lessonId": "oruntu-ve-veri",
+      "tag": "Kuramsal temel"
+    },
+    {
+      "id": "rosenblatt",
+      "name": "Frank Rosenblatt",
+      "lifespan": "1928-1971",
+      "oneLiner": "İlk öğrenen yapay sinir ağını yaptı ve fazlasını vaat etti.",
+      "contributions": [
+        "1958'de algılayıcıyı geliştirdi ve donanım olarak inşa etti",
+        "Örneklerden ağırlık ayarlayan ilk çalışan öğrenme kuralını gösterdi",
+        "Abartılı beklentiler, ilk yapay zekâ kışının hazırlayıcılarından oldu"
+      ],
+      "lessonId": "oruntu-ve-veri",
+      "tag": "Sinir ağları"
+    },
+    {
+      "id": "minsky",
+      "name": "Marvin Minsky ve Seymour Papert",
+      "lifespan": "1969",
+      "oneLiner": "Tek katmanlı ağların sınırlarını gösterip alanı bir kışa soktular.",
+      "contributions": [
+        "1969'da algılayıcının çözemediği problemleri matematiksel olarak ortaya koydular",
+        "Eleştiri doğruydu ama çok katmanlı ağlara genellendiği için etkisi abartıldı",
+        "Fon akışının kesilmesiyle sinir ağı araştırmaları on yıl yavaşladı"
+      ],
+      "lessonId": "oruntu-ve-veri",
+      "tag": "Birinci kış"
+    },
+    {
+      "id": "hinton",
+      "name": "Geoffrey Hinton",
+      "lifespan": "1947-",
+      "oneLiner": "Derin ağların eğitilebileceğinde ısrar etti ve haklı çıktı.",
+      "contributions": [
+        "Geri yayılım algoritmasının yaygınlaşmasında belirleyici rol oynadı",
+        "2012'de görüntü tanımada derin ağların üstünlüğünü gösteren çalışmaya öncülük etti",
+        "Sonraki yıllarda bu teknolojinin risklerini açıkça tartışmaya açtı"
+      ],
+      "lessonId": "egitim-asamalari",
+      "tag": "Derin öğrenme"
+    },
+    {
+      "id": "lecun",
+      "name": "Yann LeCun",
+      "lifespan": "1960-",
+      "oneLiner": "Evrişimli ağları geliştirip görüntü işlemeyi dönüştürdü.",
+      "contributions": [
+        "1989'da el yazısı rakam tanıma için evrişimli ağ tasarladı",
+        "Sistem yıllarca banka çeklerinin okunmasında kullanıldı",
+        "Görüntü işlemede bugünkü mimarilerin temelini attı"
+      ],
+      "lessonId": "oruntu-ve-veri",
+      "tag": "Görüntü işleme"
+    },
+    {
+      "id": "bengio",
+      "name": "Yoshua Bengio",
+      "lifespan": "1964-",
+      "oneLiner": "Sözcükleri vektörle temsil etme fikrini dil modellerine soktu.",
+      "contributions": [
+        "2003'te sinirsel dil modelini ortaya koydu",
+        "Sözcük gömmelerinin kuramsal temelini hazırladı",
+        "Derin öğrenmenin dil alanına taşınmasında belirleyici oldu"
+      ],
+      "lessonId": "temsil-ve-gomme",
+      "tag": "Dil modelleri"
+    },
+    {
+      "id": "li",
+      "name": "Fei-Fei Li",
+      "lifespan": "1976-",
+      "oneLiner": "Sorunun algoritma değil veri olduğunu gösterdi.",
+      "contributions": [
+        "2009'da milyonlarca etiketli görüntüden oluşan veri kümesini kurdu",
+        "Yıllık yarışmayla alanı ortak bir ölçüte bağladı",
+        "Derin öğrenme atılımının önünü açan altyapıyı sağladı"
+      ],
+      "lessonId": "degerlendirme",
+      "tag": "Veri kümeleri"
+    },
+    {
+      "id": "vaswani",
+      "name": "Dönüştürücü mimarisi ekibi",
+      "lifespan": "2017",
+      "oneLiner": "Dikkati merkeze alan mimariyi tanıttılar.",
+      "contributions": [
+        "2017'de yayımlanan çalışmada yinelemeli yapıları tümüyle dikkat mekanizmasıyla değiştirdiler",
+        "Eğitimin paralelleştirilebilmesi ölçeklenmenin önünü açtı",
+        "Bugünkü dil modellerinin tamamı bu mimarinin türevleri"
+      ],
+      "lessonId": "dikkat-ve-uretim",
+      "tag": "Dönüştürücü"
+    },
+    {
+      "id": "buolamwini",
+      "name": "Joy Buolamwini",
+      "lifespan": "1989-",
+      "oneLiner": "Yüz tanıma sistemlerinin kimlerde başarısız olduğunu ölçtü.",
+      "contributions": [
+        "2018'de ticari sistemlerin koyu tenli kadınlarda çok daha yüksek hata verdiğini gösterdi",
+        "Ortalama başarı yerine alt grup performansını ölçmeyi gündeme taşıdı",
+        "Bulgular birkaç şirketin ürününü geri çekmesine yol açtı"
+      ],
+      "lessonId": "yanlilik",
+      "tag": "Algoritmik adalet"
+    },
+    {
+      "id": "gebru",
+      "name": "Timnit Gebru",
+      "lifespan": "1983-",
+      "oneLiner": "Büyük dil modellerinin risklerini erken ve açıkça yazdı.",
+      "contributions": [
+        "Veri kümelerinin ve modellerin belgelenmesi için standart öneriler geliştirdi",
+        "2021'de büyük dil modellerinin çevresel, dilsel ve toplumsal maliyetlerini derleyen çalışmaya katkı verdi",
+        "Alanın kendi kendini denetleme kapasitesini tartışmaya açtı"
+      ],
+      "lessonId": "yanlilik",
+      "tag": "Etik ve denetim"
+    },
+    {
+      "id": "mitchell",
+      "name": "Margaret Mitchell",
+      "lifespan": "1980-",
+      "oneLiner": "Modellerin ne için uygun olduğunu yazılı hâle getirmeyi önerdi.",
+      "contributions": [
+        "Model kartları önerisiyle kullanım sınırlarının belgelenmesini savundu",
+        "Performansın alt gruplar bazında raporlanmasını standart hâline getirmeye çalıştı",
+        "Şeffaflığı teknik değil kurumsal bir uygulama olarak çerçeveledi"
+      ],
+      "lessonId": "degerlendirme",
+      "tag": "Şeffaflık"
+    },
+    {
+      "id": "gigerenzer-yz",
+      "name": "Gerd Gigerenzer",
+      "lifespan": "1947-",
+      "oneLiner": "Riskin nasıl anlatıldığının, ne olduğu kadar önemli olduğunu gösterdi.",
+      "contributions": [
+        "Belirsizlik altında karar için sade sezgisel kuralları savundu",
+        "Otomatik karar sistemlerinin risk iletişimini eleştirdi",
+        "Sayıların doğal biçimde sunulmasının anlayışı yükselttiğini gösterdi"
+      ],
+      "lessonId": "karar-sistemleri",
+      "tag": "Risk okuryazarlığı"
+    },
+    {
+      "id": "weizenbaum",
+      "name": "Joseph Weizenbaum",
+      "lifespan": "1923-2008",
+      "oneLiner": "Kendi yaptığı sohbet programına gösterilen tepkiden ürktü.",
+      "contributions": [
+        "1966'da basit kalıp eşlemeyle çalışan bir sohbet programı yazdı",
+        "İnsanların programa gerçek bir muhatap gibi davranmasını gözlemledi",
+        "Bilgisayarın hangi kararlara sokulmaması gerektiğini savunan ilk eleştirilerden birini yazdı"
+      ],
+      "lessonId": "kullanim-pratigi",
+      "tag": "Erken eleştiri"
+    },
+    {
+      "id": "shannon",
+      "name": "Claude Shannon",
+      "lifespan": "1916-2001",
+      "oneLiner": "Dilin istatistiksel olarak modellenebileceğini 1948'de gösterdi.",
+      "contributions": [
+        "Bilgi kuramını kurdu ve entropiyi tanımladı",
+        "Harf ve sözcük olasılıklarıyla İngilizceye benzeyen metin üretti",
+        "Bugünkü dil modellerinin kavramsal atası sayılan deneyleri yaptı"
+      ],
+      "lessonId": "dikkat-ve-uretim",
+      "tag": "Bilgi kuramı"
+    }
+  ],
+
+  "eraLabels": {
+    "temel": "Kuramsal temel",
+    "kis": "Vaatler ve kışlar",
+    "derin": "Derin öğrenme",
+    "bugun": "Bugünkü araçlar"
+  },
+
+  "timeline": [
+    {
+      "id": "shannon-1948",
+      "year": 1948,
+      "yearLabel": "1948",
+      "title": "Bilgi kuramı",
+      "body": "Shannon, dilin istatistiksel yapısını ölçer ve harf olasılıklarıyla İngilizceye benzeyen metin üretir. Bugünkü dil modellerinin kavramsal atası.",
+      "era": "temel",
+      "figureId": "shannon"
+    },
+    {
+      "id": "turing-1950",
+      "year": 1950,
+      "yearLabel": "1950",
+      "title": "Turing'in sorusu",
+      "body": "'Makineler düşünebilir mi' sorusu, tanım tartışmasından çıkarılıp davranışa dayalı sınanabilir bir ölçüte bağlanır.",
+      "era": "temel",
+      "figureId": "turing"
+    },
+    {
+      "id": "dartmouth",
+      "year": 1956,
+      "yearLabel": "1956",
+      "title": "Dartmouth toplantısı",
+      "body": "Alan adını burada alır. Katılımcılar, temel sorunların bir yaz çalışmasıyla çözülebileceğini öngörür.",
+      "era": "temel"
+    },
+    {
+      "id": "algilayici",
+      "year": 1958,
+      "yearLabel": "1958",
+      "title": "Algılayıcı",
+      "body": "Rosenblatt, örneklerden ağırlık ayarlayan ilk çalışan öğrenme kuralını donanım olarak inşa eder. Basın büyük vaatlerle yazar.",
+      "era": "temel",
+      "figureId": "rosenblatt"
+    },
+    {
+      "id": "eliza",
+      "year": 1966,
+      "yearLabel": "1966",
+      "title": "ELIZA",
+      "body": "Basit kalıp eşlemeyle çalışan bir program, kullanıcılarda gerçek bir muhatapla konuşma izlenimi yaratır. Weizenbaum bu tepkiden rahatsız olur.",
+      "era": "temel",
+      "figureId": "weizenbaum"
+    },
+    {
+      "id": "perceptrons",
+      "year": 1969,
+      "yearLabel": "1969",
+      "title": "Sınırların gösterilmesi",
+      "body": "Minsky ve Papert tek katmanlı ağların çözemediği problemleri ortaya koyar. Fon akışı kesilir; birinci yapay zekâ kışı başlar.",
+      "era": "kis",
+      "figureId": "minsky"
+    },
+    {
+      "id": "uzman-sistemler",
+      "year": 1980,
+      "yearLabel": "1980'ler",
+      "title": "Uzman sistemler",
+      "body": "Kuralların elle yazıldığı sistemler ticarileşir. Kural sayısı arttıkça bakım maliyeti patlar ve ikinci kış gelir.",
+      "era": "kis"
+    },
+    {
+      "id": "geri-yayilim",
+      "year": 1986,
+      "yearLabel": "1986",
+      "title": "Geri yayılım yaygınlaşıyor",
+      "body": "Çok katmanlı ağların eğitilebileceğini gösteren yöntem yaygın biçimde duyurulur. Sinir ağları sessizce geri döner.",
+      "era": "kis",
+      "figureId": "hinton"
+    },
+    {
+      "id": "lenet",
+      "year": 1989,
+      "yearLabel": "1989",
+      "title": "Evrişimli ağ ve çekler",
+      "body": "LeCun'un el yazısı rakam tanıma sistemi gerçek bir işte çalışır. Sinir ağları ilk kez ticari olarak fark yaratır.",
+      "era": "kis",
+      "figureId": "lecun"
+    },
+    {
+      "id": "deep-blue",
+      "year": 1997,
+      "yearLabel": "1997",
+      "title": "Satrançta yenilgi",
+      "body": "Bir bilgisayar dünya şampiyonunu yener. Ama yöntem öğrenme değil, büyük hesap gücüyle arama ve elle yazılmış değerlendirmedir.",
+      "era": "kis"
+    },
+    {
+      "id": "bengio-2003",
+      "year": 2003,
+      "yearLabel": "2003",
+      "title": "Sinirsel dil modeli",
+      "body": "Bengio ve arkadaşları sözcükleri vektörle temsil eden bir dil modeli önerir. Gömme fikri dil alanına girer.",
+      "era": "derin",
+      "figureId": "bengio"
+    },
+    {
+      "id": "imagenet",
+      "year": 2009,
+      "yearLabel": "2009",
+      "title": "Büyük etiketli veri kümesi",
+      "body": "Fei-Fei Li'nin kurduğu milyonlarca görüntülük küme, alanı ortak bir ölçüte bağlar. Darboğazın algoritma değil veri olduğu görülür.",
+      "era": "derin",
+      "figureId": "li"
+    },
+    {
+      "id": "alexnet",
+      "year": 2012,
+      "yearLabel": "2012",
+      "title": "Görüntü tanımada kırılma",
+      "body": "Derin bir ağ, yarışmada hata oranını belirgin biçimde düşürür. Ekran kartlarıyla eğitim ve büyük veri bir araya gelmiştir.",
+      "era": "derin",
+      "figureId": "hinton"
+    },
+    {
+      "id": "word2vec",
+      "year": 2013,
+      "yearLabel": "2013",
+      "title": "Sözcük gömmeleri yaygınlaşıyor",
+      "body": "Anlamı vektör olarak temsil etmek pratik bir araca dönüşür. Anlamsal arama ve öneri sistemleri bu temelde yeniden kurulur.",
+      "era": "derin"
+    },
+    {
+      "id": "alphago",
+      "year": 2016,
+      "yearLabel": "2016",
+      "title": "Go'da yenilgi",
+      "body": "Öğrenme ve arama birleşimi, uzun süre erişilemez sayılan bir oyunda dünya çapında bir oyuncuyu yener.",
+      "era": "derin"
+    },
+    {
+      "id": "transformer",
+      "year": 2017,
+      "yearLabel": "2017",
+      "title": "Dönüştürücü mimarisi",
+      "body": "Dikkat mekanizması merkeze alınır, yinelemeli yapılar terk edilir. Eğitim paralelleşir ve ölçeklenmenin önü açılır.",
+      "era": "derin",
+      "figureId": "vaswani"
+    },
+    {
+      "id": "gender-shades",
+      "year": 2018,
+      "yearLabel": "2018",
+      "title": "Kimlerde başarısız oluyor",
+      "body": "Buolamwini, ticari yüz tanıma sistemlerinin koyu tenli kadınlarda çok daha yüksek hata verdiğini ölçer. Ortalama başarının gizlediği şey görünür olur.",
+      "era": "derin",
+      "figureId": "buolamwini"
+    },
+    {
+      "id": "olcek-yasalari",
+      "year": 2020,
+      "yearLabel": "2020",
+      "title": "Ölçek yasaları",
+      "body": "Model boyutu, veri ve hesap arttıkça performansın düzenli biçimde iyileştiği gösterilir. Yatırımın yönü buna göre belirlenir.",
+      "era": "bugun"
+    },
+    {
+      "id": "riskler-2021",
+      "year": 2021,
+      "yearLabel": "2021",
+      "title": "Maliyetlerin derlenmesi",
+      "body": "Büyük dil modellerinin çevresel, dilsel ve toplumsal maliyetlerini derleyen çalışma, alanın kendi kendini denetleme kapasitesini de tartışmaya açar.",
+      "era": "bugun",
+      "figureId": "gebru"
+    },
+    {
+      "id": "sohbet-araclari",
+      "year": 2022,
+      "yearLabel": "2022",
+      "title": "Sohbet arayüzü",
+      "body": "İnsan geri bildirimiyle hizalanmış modeller genel kullanıma açılır. Teknoloji laboratuvardan çıkıp gündelik bir araca dönüşür.",
+      "era": "bugun"
+    },
+    {
+      "id": "olmayan-davalar",
+      "year": 2023,
+      "yearLabel": "2023",
+      "title": "Olmayan mahkeme kararları",
+      "body": "İki avukat, dilekçelerine üretilmiş sahte kararları kaynak gösterir ve ceza alır. Halüsinasyon soyut bir risk olmaktan çıkar.",
+      "era": "bugun"
+    },
+    {
+      "id": "ab-yasasi",
+      "year": 2024,
+      "yearLabel": "2024",
+      "title": "Risk temelli düzenleme",
+      "body": "Avrupa Birliği, kullanım alanlarını risk düzeyine göre sınıflandıran kapsamlı bir yapay zekâ düzenlemesi kabul eder. Yüksek riskli karar sistemlerine şeffaflık ve denetim yükümlülüğü gelir.",
+      "era": "bugun"
+    }
+  ]
+}
