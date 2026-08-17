@@ -3102,6 +3102,172 @@
           " Haldane'a atfedilen espri tam olarak bunu söyler: iki kardeşim ya da sekiz kuzenim için canımı veririm. " +
           "Kural, fedakârlığın genlerin hesabında nasıl kârlı hâle geldiğini açıklar; ahlaki bir öğüt değildir." };
       }
+    },
+
+    /* ---- psikoloji ---- */
+
+    "unutma-egrisi": {
+      title: "Unutma eğrisi ve aralıklı tekrar",
+      note: "Hatırlama üstel bir sönüm olarak modellendi: R = e^(−t/S). Her tekrar S'yi iki katına çıkarır ve tekrar, hatırlama %50'ye düştüğü anda yapılır. Zaman ekseni logaritmiktir; tekrarların eşit aralıklı görünmesi tam da aralıkların katlanarak büyüdüğü anlamına gelir.",
+      controls: [
+        { key: "n", label: "Tekrar sayısı", min: 0, max: 6, step: 1, def: 5,
+          fmt: function (v) { return v === 0 ? "tekrar yok" : v + " tekrar"; } },
+        { key: "s", label: "İlk kalıcılık", min: 1, max: 5, step: 1, def: 2,
+          fmt: function (v) { return v + " gün"; } }
+      ],
+      draw: function (p) {
+        var T0 = 0.5, T1 = 120, LN2 = Math.LN2, i, k;
+        var X = function (t) { return Math.log(t / T0) / Math.log(T1 / T0); };
+        /* tekrar anları: her seferinde hatırlama %50'ye düştüğünde */
+        var anlar = [], S = p.s, t = 0;
+        for (k = 0; k < p.n; k++) { t += S * LN2; S *= 2; anlar.push([t, S]); }
+        var R = function (x, kac) {
+          var son = 0, kal = p.s, j;
+          for (j = 0; j < kac; j++) {
+            if (anlar[j][0] > x) break;
+            son = anlar[j][0]; kal = anlar[j][1];
+          }
+          return Math.exp(-(x - son) / kal);
+        };
+        var yalin = [], plan = [];
+        for (i = 0; i <= 200; i++) {
+          var x = T0 * Math.pow(T1 / T0, i / 200);
+          yalin.push([X(x), R(x, 0)]);
+          plan.push([X(x), R(x, p.n)]);
+        }
+        var s = frame("Geçen süre", "Hatırlama");
+        s += gLine(0, 0.5, 1, 0.5, { c: "var(--rule)", w: 1, d: "2 4" });
+        s += gTxt(0.99, 0.5, "%50", { a: "end", dy: -4, s: 8.5 });
+        anlar.forEach(function (a) {
+          s += gLine(X(a[0]), 0, X(a[0]), 1, { c: "var(--accent)", w: 1, d: "2 3" });
+        });
+        s += gPoly(yalin, { c: "var(--muted)", w: 1.4, d: "3 3" });
+        if (p.n) s += gPoly(plan, { c: "var(--accent)", w: 2.6 });
+        s += gTxt(0.02, 0.06, "kesikli: hiç tekrar etmezsen", { a: "start", c: "var(--muted)", s: 8.5 });
+        [[1, "1 gün"], [7, "1 hafta"], [30, "1 ay"]].forEach(function (v) {
+          s += gTxt(X(v[0]), 0, v[1], { a: "middle", dy: 12, s: 8.5 });
+        });
+        var son = R(T1, p.n), yok = R(T1, 0);
+        return { svg: s, text: p.n === 0
+          ? "Tek seferlik çalışmadan sonra dört ayın sonunda geriye pratikte hiçbir şey kalmıyor. " +
+            "Unutmanın hızlı olması bir kusur değil: zihin, tekrar karşılaşmadığı şeyi önemsiz sayar."
+          : p.n + " tekrarla dört ayın sonunda hatırlama %" + r0(son * 100) + "; hiç tekrar etmeseydin %" +
+            r0(yok * 100) + " olacaktı. Son tekrar " + r0(anlar[p.n - 1][0]) +
+            ". günde ve o noktadan sonra kalıcılık " + r0(anlar[p.n - 1][1]) + " güne çıkmış durumda. " +
+            "Dikey çizgiler eşit aralıklı görünüyor çünkü eksen logaritmik: gerçekte her aralık bir öncekinin iki katı. " +
+            "Aynı sayıda tekrarı bir geceye sıkıştırmak bu eğriyi üretmez." };
+      }
+    },
+
+    "stres-performans": {
+      title: "Gerilim performansı ne zaman bozar",
+      note: "Şematik bir model (Yerkes-Dodson): performans uyarılmaya göre ters U çizer ve tepe noktası görev karmaşıklaştıkça sola kayar. Sayılar ölçüm değil, ilişkinin biçimini göstermek içindir.",
+      controls: [
+        { key: "z", label: "Görevin karmaşıklığı", min: 0, max: 100, step: 10, def: 50, fmt: pctS },
+        { key: "u", label: "Uyarılma düzeyi", min: 0, max: 100, step: 5, def: 50, fmt: pctS }
+      ],
+      draw: function (p) {
+        var i, k;
+        var tepe = function (d) { return 0.78 - 0.48 * d; };
+        var genis = function (d) { return 0.32 - 0.13 * d; };
+        var P = function (d, a) {
+          var m = tepe(d), w = genis(d);
+          return Math.exp(-((a - m) * (a - m)) / (2 * w * w));
+        };
+        var s = frame("Uyarılma", "Performans");
+        var d0 = p.z / 100;
+        [[0, "var(--muted)"], [1, "var(--muted)"], [d0, "var(--accent)"]].forEach(function (pair, idx) {
+          var pts = [];
+          for (i = 0; i <= 60; i++) pts.push([i / 60, P(pair[0], i / 60)]);
+          s += gPoly(pts, { c: pair[1], w: idx === 2 ? 2.6 : 1.2, d: idx === 2 ? "" : "3 3" });
+        });
+        s += gTxt(tepe(0), 1, "kolay iş", { a: "middle", dy: -3, c: "var(--muted)", s: 8.5 });
+        s += gTxt(tepe(1), 1, "zor iş", { a: "middle", dy: -3, c: "var(--muted)", s: 8.5 });
+        var a0 = p.u / 100, y = P(d0, a0);
+        s += gLine(tepe(d0), 0, tepe(d0), 1, { c: "var(--ok)", w: 1.2, d: "4 3" });
+        s += gTxt(tepe(d0), 0, "en iyi", { a: tepe(d0) > 0.6 ? "end" : "start", dx: tepe(d0) > 0.6 ? -4 : 4, dy: -5, c: "var(--ok)", b: 1, s: 9 });
+        s += gDot(a0, y, { c: "var(--ink)" });
+        s += gTxt(a0, y, "%" + r0(y * 100), {
+          a: a0 > 0.6 ? "end" : "start", dx: a0 > 0.6 ? -7 : 7, dy: y > 0.9 ? 13 : -6, c: "var(--ink)", b: 1, s: 10 });
+        k = a0 - tepe(d0);
+        return { svg: s, text: "Bu karmaşıklıkta en iyi performans %" + r0(tepe(d0) * 100) +
+          " uyarılmada; sen %" + p.u + " uyarılmadasın ve performans tepe değerin %" + r0(y * 100) + "'i kadar. " +
+          (Math.abs(k) < 0.08
+            ? "Neredeyse tam noktadasın."
+            : k > 0
+              ? "Fazla gerilim, karmaşık işlerde dikkati daraltır ve işleyen belleği doldurur; sınav kaygısının başarıyı düşürmesi budur."
+              : "Yetersiz uyarılma da bir sorundur: iş çok kolaysa ya da hiç önemsemiyorsan zihin devreye tam girmez.") +
+          " Basit ve alışkanlık hâline gelmiş işlerde tepe sağdadır — orada gerilim yardım eder." };
+      }
+    },
+
+    "korelasyon-ve-tahmin": {
+      title: "Bir ilişki ne kadar şey söyler",
+      note: "Sabit tohumlu 150 kişilik yapay bir örneklem. Psikolojide yayımlanan ilişkilerin çoğu 0,10 ile 0,30 arasındadır; bu, grup ortalamaları için gerçek bir bilgi, tek bir kişi için neredeyse hiçbir şeydir.",
+      controls: [{ key: "r", label: "İlişkinin gücü (r)", min: 0, max: 90, step: 5, def: 25,
+        fmt: function (v) { return (v / 100).toFixed(2); } }],
+      draw: function (p) {
+        var N = 150, r = p.r / 100, i, tohum = 424242;
+        var rnd = function () { tohum = (tohum * 1664525 + 1013904223) % 4294967296; return tohum / 4294967296; };
+        var nrm = function () { return (rnd() + rnd() + rnd() + rnd() - 2) / 0.5774; };
+        var xs = [], es = [];
+        for (i = 0; i < N; i++) { xs.push(nrm()); es.push(nrm()); }
+        var M = function (v) { return Math.max(0, Math.min(1, (v + 2.6) / 5.2)); };
+        var s = frame("Ölçüm A", "Ölçüm B");
+        s += gLine(M(0), 0, M(0), 1, { c: "var(--rule)", w: 1, d: "2 4" });
+        s += gLine(0, M(0), 1, M(0), { c: "var(--rule)", w: 1, d: "2 4" });
+        var ust = 0;
+        for (i = 0; i < N; i++) {
+          var y = r * xs[i] + Math.sqrt(1 - r * r) * es[i];
+          if (xs[i] > 0 && y > 0) ust++;
+          s += gDot(M(xs[i]), M(y), { r: 2.4, c: "var(--accent)" });
+        }
+        s += gLine(M(-2.6), M(-2.6 * r), M(2.6), M(2.6 * r), { c: "var(--ink)", w: 2 });
+        return { svg: s, text: "İlişkinin gücü r = " + (r).toFixed(2) + ". Bu, B'deki değişkenliğin %" +
+          r0(r * r * 100) + "'ini açıklıyor; kalan %" + r0((1 - r * r) * 100) + " başka şeylerden geliyor. " +
+          "A'da ortalamanın üstünde olan birinin B'de de üstünde olma olasılığı yaklaşık %" +
+          r0((0.25 + Math.asin(r) / (2 * Math.PI)) * 200) + " — hiç ilişki olmasaydı %50 olacaktı. " +
+          (r < 0.35
+            ? "Bulut neredeyse yuvarlak: ilişki gerçek olabilir ama tek bir kişi hakkında tahmin yürütmeye yetmez."
+            : "İlişki güçlendikçe bulut çizgiye yaklaşıyor; yine de tek tek noktaların çizgiden ne kadar uzakta olabildiğine bakın.") };
+      }
+    },
+
+    "kayip-kacinma": {
+      title: "Kaybetmek, kazanmaktan daha ağır basar",
+      note: "Kahneman ve Tversky'nin değer işlevi: v(x) = x^0,88 kazançta, −λ(−x)^0,88 kayıpta. Fayda eğrisinden farkı, ölçünün toplam servet değil bir referans noktasına göre değişim olması ve sıfırda bir kırılma bulunmasıdır.",
+      controls: [
+        { key: "l", label: "Kayıp katsayısı (λ)", min: 10, max: 30, step: 1, def: 22,
+          fmt: function (v) { return (v / 10).toFixed(1) + " kat"; } },
+        { key: "b", label: "Riske atılan miktar", min: 10, max: 100, step: 10, def: 50,
+          fmt: function (v) { return v + " birim"; } }
+      ],
+      draw: function (p) {
+        var lam = p.l / 10, A = 0.88, M = 100, i;
+        var v = function (x) { return x >= 0 ? Math.pow(x, A) : -lam * Math.pow(-x, A); };
+        var VM = lam * Math.pow(M, A);
+        var X = function (x) { return (x + M) / (2 * M); };
+        var Y = function (y) { return (y + VM) / (2 * VM); };
+        var pts = [];
+        for (i = 0; i <= 80; i++) { var x = -M + (2 * M * i) / 80; pts.push([X(x), Y(v(x))]); }
+        var s = frame("Değişim", "Algılanan değer");
+        s += gLine(0, Y(0), 1, Y(0), { c: "var(--rule)", w: 1, d: "2 4" });
+        s += gLine(X(0), 0, X(0), 1, { c: "var(--rule)", w: 1, d: "2 4" });
+        s += gPoly(pts, { c: "var(--accent)", w: 2.6 });
+        var b = p.b;
+        s += gDot(X(b), Y(v(b)), { c: "var(--ok)" });
+        s += gDot(X(-b), Y(v(-b)), { c: "var(--no)" });
+        s += gTxt(X(b), Y(v(b)), "+" + b, { a: "end", dx: -6, dy: -4, c: "var(--ok)", b: 1, s: 9.5 });
+        s += gTxt(X(-b), Y(v(-b)), "−" + b, { a: "start", dx: 6, dy: 10, c: "var(--no)", b: 1, s: 9.5 });
+        s += gTxt(0.02, 0.14, "kayıp", { a: "start", c: "var(--no)", s: 8.5 });
+        s += gTxt(0.98, 0.93, "kazanç", { a: "end", c: "var(--ok)", s: 8.5 });
+        var gerek = Math.pow(lam, 1 / A) * b;
+        return { svg: s, text: b + " birim kaybetmek " + r1(lam) +
+          " kat daha ağır hissedildiği için, yazı tura ile " + b + " birim kazanma ihtimali bu kaybı dengelemiyor. " +
+          "Bahsin kabul edilebilir olması için kazanç tarafının " + r0(gerek) +
+          " birime çıkması gerekiyor. Eğri sıfırda kırılıyor: önemli olan ne kadarınız olduğu değil, " +
+          "neyi başlangıç kabul ettiğiniz. Aynı sonuç 'kazanç' diye çerçevelenirse kabul, 'kayıp' diye çerçevelenirse ret üretir." };
+      }
     }
   };
 

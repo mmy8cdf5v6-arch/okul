@@ -17,7 +17,7 @@ Kurslar: **İktisat Defteri** (35 ders, 105 soru, 21 grafik) ve her biri
 **Olasılık ve karar**, **Müzik teorisi**, **Yapay zekâ okuryazarlığı**,
 **Felsefe tarihi**, **İklim ve enerji**, **Astronomi**, **Medya
 okuryazarlığı**, **Mimarlık tarihi**, **Sağlık okuryazarlığı**,
-**Evrim biyolojisi**. Program ve modül iskeletleri `content/PLAN.md` içinde.
+**Evrim biyolojisi**, **Psikoloji**. Program ve modül iskeletleri `content/PLAN.md` içinde.
 
 **Ders.** Her ders metin, liste, örnek, alıntı, formül ve grafik bölümlerinden
 kurulur, sonunda üç soruluk bir sınav vardır. Dersin ikide ikisi doğru
@@ -27,7 +27,7 @@ yanıtlandığında tamamlanmış sayılır.
 aralıklı tekrar takvimiyle (0, 1, 3, 7, 21 gün) gelir. Ayrıca deneme sınavı,
 yanlışların istatistiği ve kurs içi arama var.
 
-**Grafikler.** 73 etkileşimli SVG grafik elle yazılmış koddur. Hepsi gerçek bir
+**Grafikler.** 77 etkileşimli SVG grafik elle yazılmış koddur. Hepsi gerçek bir
 hesap yapar, kaydırıcıya bağlıdır ve rastgelelik kullanmaz; renkler CSS
 değişkenlerinden gelir, böylece koyu temada da çalışır.
 
@@ -58,7 +58,8 @@ okul/
 │  ├─ medya.json
 │  ├─ mimarlik.json
 │  ├─ saglik.json
-│  └─ evrim.json
+│  ├─ evrim.json
+│  └─ psikoloji.json
 ├─ content/                elle yazılan kaynak metin
 │  ├─ PLAN.md              kurs programı ve modül iskeletleri
 │  ├─ <kurs>-a.json        ders dizisi (b, c… diye devam eder)
@@ -66,7 +67,7 @@ okul/
 │  └─ build_course.py      content/ → courses/<kurs>.json + index girdisi
 ├─ src/
 │  ├─ core.js              durum, depolama, yönlendirme, kabuk
-│  ├─ charts.js            SVG grafik motoru + 73 grafik
+│  ├─ charts.js            SVG grafik motoru + 77 grafik
 │  ├─ course.js            kurs özeti, dersler, ders, ders içi sınav, tarih
 │  ├─ study.js             kartlar, deneme sınavı, istatistik, arama
 │  ├─ home.js              kütüphane ve ayarlar

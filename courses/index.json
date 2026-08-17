@@ -194,5 +194,19 @@
     "questions": 36,
     "charts": 4,
     "file": "courses/evrim.json"
+  },
+  {
+    "id": "psikoloji",
+    "title": "Psikoloji",
+    "subtitle": "Zihin, davranış, yöntem",
+    "description": "Algıdan belleğe, duygudan sosyal etkiye: insan davranışı hakkında gerçekten ne biliniyor, nereden biliniyor ve nerede bilinmiyor.",
+    "icon": "🧠",
+    "accent": "#7d4b9c",
+    "accentDark": "#c9a3e8",
+    "category": "gunumuz",
+    "lessons": 12,
+    "questions": 36,
+    "charts": 4,
+    "file": "courses/psikoloji.json"
   }
 ]

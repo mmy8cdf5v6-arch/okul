@@ -1,0 +1,484 @@
+[
+  {
+    "id": "kisilik",
+    "moduleId": "insan",
+    "order": 3,
+    "title": "Kişilik ve ölçmenin sınırı",
+    "subtitle": "Gerçek bir ilişki, tek bir kişi hakkında çok az şey söyleyebilir.",
+    "minutes": 9,
+    "keyTerms": ["beş faktör", "ilişki katsayısı", "etki büyüklüğü", "kişilik testleri"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "İnsanları betimlemek için yüzlerce sıfat kullanılır. Bu sıfatlar büyük örneklemlerde birbirleriyle nasıl kümelendiğine bakıldığında, tekrar tekrar beş boyut çıkar: deneyime açıklık, sorumluluk, dışadönüklük, uyumluluk ve duygusal denge. Bu beş boyut farklı dillerde ve kültürlerde büyük ölçüde tekrarlanır; kişilik araştırmasının en sağlam bulgularından biridir."
+      },
+      {
+        "kind": "text",
+        "title": "Boyut mu, tip mi",
+        "body": "Önemli bir ayrım var: bu beş özellik boyuttur, tip değil. Herkes her boyutta bir yerdedir ve dağılım süreklidir; insanları 'dışadönük' ve 'içedönük' diye ikiye ayıran keskin bir çizgi yoktur. İnsanları dört ya da on altı tipe ayıran popüler testlerin sorunu tam burada başlar: sürekli bir dağılımı ortadan kesip iki kutu üretirler, bu yüzden aynı kişi birkaç hafta sonra farklı bir tip çıkar. Betimleyici ifadeler herkese uyacak kadar genel olduğu için de test doğru gelmiş gibi hissedilir."
+      },
+      { "kind": "chart", "chartId": "korelasyon-ve-tahmin" },
+      {
+        "kind": "text",
+        "body": "Grafik, psikolojiyi okurken en çok gereken şeyi gösteriyor: bir ilişkinin var olması ile o ilişkinin bir kişi hakkında tahmin yürütmeye yetmesi ayrı meselelerdir. Psikolojide yayımlanan ilişkilerin çoğu 0,10 ile 0,30 arasındadır. Bu, binlerce kişilik bir toplulukta gerçek ve önemli bir bilgi olabilir — sorumluluk boyutu yüksek olanların ortalama iş performansı gerçekten daha iyidir. Ama karşınızdaki tek bir kişi için, bulut neredeyse yuvarlaktır."
+      },
+      {
+        "kind": "list",
+        "title": "Bilinenler",
+        "items": [
+          "Kişilik özellikleri erişkinlikte oldukça kararlıdır ama taş gibi sabit değildir; ortalama olarak insanlar yaşlandıkça daha sorumlu ve daha uyumlu olur.",
+          "Sorumluluk boyutu, iş performansı ve sağlık davranışlarıyla en tutarlı ilişkiyi gösteren özelliktir.",
+          "Durum, kişilikten çoğu zaman daha güçlüdür: aynı kişi farklı ortamlarda çok farklı davranır.",
+          "İşe alımda kişilik testlerinin kestirim gücü, iş örneği ve yapılandırılmış görüşmenin belirgin biçimde altındadır.",
+          "'Anlamlı' bulunmak, etkinin büyük olduğu anlamına gelmez; büyük örneklemde çok küçük etkiler de anlamlı çıkar."
+        ]
+      },
+      {
+        "kind": "example",
+        "title": "Herkese uyan tarif",
+        "body": "Bir kişilik testinin sonucu olarak sunulan şu metni düşünün: 'Başkalarının sizi beğenmesine ihtiyaç duyarsınız ama kendinize karşı eleştirelsiniz. Kullanılmamış epeyce potansiyeliniz var. Bazen dışadönük ve sosyalken bazen içe kapanıksınız.' Bu metin herkese doğru gelir, çünkü herkes için doğru olacak kadar geneldir. Deneylerde katılımcılara aynı metin verildiğinde çoğu kişi 'beni çok iyi anlatıyor' der. Bir kişilik değerlendirmesinin işe yarayıp yaramadığını anlamanın basit bir sınavı vardır: sonuç, sizin dışınızda birine uymuyor mu?"
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Beş faktör modeli hakkında hangisi doğrudur?",
+        "options": [
+          "İnsanları beş tipe ayırır",
+          "Beş sürekli boyuttur; herkes her boyutta bir yerdedir",
+          "Yalnızca batı toplumlarında geçerlidir",
+          "Zamanla tamamen değişir"
+        ],
+        "answerIndex": 1,
+        "explanation": "Dağılım süreklidir; keskin bir tip sınırı yoktur. İnsanları kutulara ayıran popüler testlerin tutarsızlığı da buradan gelir."
+      },
+      {
+        "id": "q2",
+        "prompt": "r = 0,25'lik bir ilişki ne anlama gelir?",
+        "options": [
+          "Güçlü bir tahmin gücü",
+          "Değişkenliğin yaklaşık %6'sını açıklayan, grup düzeyinde gerçek ama birey için çok zayıf bir bağ",
+          "Nedensellik",
+          "Hiçbir ilişki yok"
+        ],
+        "answerIndex": 1,
+        "explanation": "0,25'in karesi yaklaşık 0,06'dır. Büyük topluluklarda anlamlı bir bilgidir; tek bir kişi hakkında tahmin yürütmeye yetmez."
+      },
+      {
+        "id": "q3",
+        "prompt": "İşe alımda hangisi kişilik testinden daha iyi kestirim yapar?",
+        "options": [
+          "Serbest sohbet",
+          "İş örneği ve yapılandırılmış görüşme",
+          "El yazısı analizi",
+          "Referans mektupları"
+        ],
+        "answerIndex": 1,
+        "explanation": "Adayın işin kendisine benzer bir görevi yapması ve herkese aynı soruların sorulduğu yapılandırılmış görüşme, en iyi kestirim yöntemleridir."
+      }
+    ]
+  },
+  {
+    "id": "sosyal-etki",
+    "moduleId": "insan",
+    "order": 4,
+    "title": "Başkalarının yanında",
+    "subtitle": "Davranışı açıklarken karakter fazla, durum eksik hesaplanır.",
+    "minutes": 9,
+    "keyTerms": ["temel atıf hatası", "uyma", "itaat", "seyirci etkisi", "grup düşüncesi", "iç grup yanlılığı"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Sosyal psikolojinin en tekrarlanan bulgusu şudur: insanlar başkalarının davranışını karaktere, kendi davranışlarını duruma bağlar. Randevuya geç kalan siz iseniz trafik vardır; karşı taraf ise saygısızdır. Bu asimetri, kendini beğenmişlikten değil bilgi farkından doğar — kendi durumunuzu içeriden bilirsiniz, karşınızdakininkini bilmezsiniz. Ama sonucu ciddidir: davranışı açıklarken durumun payını sistematik olarak eksik hesaplarız."
+      },
+      {
+        "kind": "list",
+        "title": "Grubun içindeyken değişenler",
+        "items": [
+          "Uyma: apaçık yanlış olduğu görülen bir yanıt, grup söylediğinde tekrarlanabilir. Tek bir müttefikin varlığı bu etkiyi büyük ölçüde kırar.",
+          "İtaat: otorite konumundaki birinin talimatı, kişinin kendi değerlerine aykırı davranmasını kolaylaştırır. Bu deneylerin klasik anlatımı sonradan hem yöntem hem etik açısından ağır biçimde eleştirilmiştir.",
+          "Seyirci etkisi: kalabalık büyüdükçe yardım etme olasılığı düşer; sorumluluk dağılır. Çözüm somuttur — birine doğrudan seslenmek.",
+          "Grup düşüncesi: uyum baskısı eleştirel değerlendirmeyi bastırır. Aykırı görüşü söylemenin bedelli olduğu ortamlarda kötü kararlar üretilir.",
+          "İç grup yanlılığı: tamamen keyfî biçimde kurulmuş gruplarda bile kendi grubunu kayırma ortaya çıkar."
+        ]
+      },
+      {
+        "kind": "text",
+        "title": "Klasiklerin yeniden okunması",
+        "body": "Ders kitaplarının en ünlü sosyal psikoloji deneylerinin bir kısmı, sonradan yapılan incelemelerde ciddi biçimde sarsıldı. Hapishane simülasyonu olarak bilinen çalışmanın katılımcılarına açık yönlendirme yapıldığı belgelendi. İtaat deneylerinin ses kayıtları, deneycinin protokolde olmayan biçimde ısrar ettiğini gösterdi. Bir cinayete otuz sekiz kişinin seyirci kaldığı anlatısının gazetecilik kurgusu olduğu ortaya çıktı. Bu, sosyal etkinin gerçek olmadığı anlamına gelmez — uyma ve seyirci etkisi bağımsız çalışmalarda defalarca doğrulanmıştır. Anlamı şudur: çarpıcı tek bir deney, tekrar edilmiş ölçülü bulgudan daha az güvenilirdir."
+      },
+      {
+        "kind": "example",
+        "title": "Bir kişiye seslenmek",
+        "body": "Kalabalık bir yerde birinin yardıma ihtiyacı varsa, 'yardım edin' diye bağırmak en zayıf çağrıdır; herkes başkasının müdahale edeceğini varsayar. Belirli bir kişiye işaret edip 'mavi montlu bey, siz ambulansı arayın' demek sorumluluğu tek bir kişiye yükler ve müdahale olasılığını belirgin biçimde artırır. İlk yardım eğitimlerinde bu kural boşuna öğretilmez; bir psikoloji bulgusunun doğrudan hayata çevrilmiş hâlidir."
+      },
+      {
+        "kind": "text",
+        "title": "Kötülük sıradan mıdır",
+        "body": "Bu deneylerden çıkarılan popüler ders, 'doğru koşullarda herkes korkunç şeyler yapar' biçimindedir. Bu okuma hem fazla iddialı hem tehlikeli biçimde rahatlatıcıdır: sorumluluğu duruma yıkar. Daha dikkatli okuma şudur: durum, davranışın payında sanılandan çok daha büyük yer tutar; ama insanlar edilgen makineler değildir, deneylerde de çoğu zaman önemli bir azınlık direnmiştir. Kurumsal tasarımın önemi buradan gelir — kötü tasarlanmış bir sistem, iyi niyetli insanlardan kötü sonuçlar üretebilir."
+      },
+      {
+        "kind": "quote",
+        "text": "Davranışı anlamak istiyorsanız, kişiye bakmadan önce içinde bulunduğu duruma bakın.",
+        "source": "Sosyal psikolojinin en tekrarlanan dersi"
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Temel atıf hatası nedir?",
+        "options": [
+          "Kendini fazla eleştirmek",
+          "Başkasının davranışını karaktere, kendi davranışını duruma bağlamak",
+          "Grupları karıştırmak",
+          "İstatistiksel bir hata"
+        ],
+        "answerIndex": 1,
+        "explanation": "Kendi durumunuzu içeriden bilir, karşınızdakininkini bilmezsiniz. Sonuç, durumun payını sistematik olarak eksik hesaplamaktır."
+      },
+      {
+        "id": "q2",
+        "prompt": "Kalabalıkta yardım alma olasılığını artırmanın en etkili yolu nedir?",
+        "options": [
+          "Daha yüksek sesle bağırmak",
+          "Belirli bir kişiyi işaret edip ondan somut bir şey istemek",
+          "Beklemek",
+          "Herkese aynı anda seslenmek"
+        ],
+        "answerIndex": 1,
+        "explanation": "Sorumluluk dağıldıkça kimse üstlenmez. Tek bir kişiye adres göstermek sorumluluğu tekrar toplar."
+      },
+      {
+        "id": "q3",
+        "prompt": "Ünlü sosyal psikoloji deneylerinin sonradan eleştirilmesi ne anlama gelir?",
+        "options": [
+          "Sosyal etki diye bir şey yoktur",
+          "Çarpıcı tek bir deney, tekrar edilmiş ölçülü bulgudan daha az güvenilirdir",
+          "Bütün psikoloji geçersizdir",
+          "Deneyler hiç yapılmamıştır"
+        ],
+        "answerIndex": 1,
+        "explanation": "Uyma ve seyirci etkisi bağımsız çalışmalarda defalarca doğrulandı. Sarsılan şey, tek bir gösterişli deneye dayanan anlatılardır."
+      }
+    ]
+  },
+  {
+    "id": "gelisim",
+    "moduleId": "insan",
+    "order": 5,
+    "title": "Gelişim: bebeklikten yaşlılığa",
+    "subtitle": "İlk yıllar önemlidir; 'her şey ilk üç yaşta biter' değildir.",
+    "minutes": 8,
+    "keyTerms": ["gelişim", "bağlanma", "ergenlik", "kalıtılabilirlik"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Bebekler uzun süre boş bir levha sayıldı. Bakış süresi yöntemleri bu resmi değiştirdi: bebeklere beklenmedik bir sahne gösterildiğinde daha uzun baktıkları görüldü ve bu, neyi beklediklerini ölçmenin yolunu açtı. Sonuç şaşırtıcıydı — birkaç aylık bebekler nesnelerin görünmediklerinde de var olmayı sürdürdüğünü, katı cisimlerin birbirinin içinden geçemeyeceğini ve küçük sayıların farkını sezebiliyordu."
+      },
+      {
+        "kind": "text",
+        "title": "Bağlanma",
+        "body": "Bebeğin bakım verenle kurduğu ilişki örüntüsü, sonraki ilişkiler için bir şablon oluşturur. Güvenli bağlanma, bakım verenin tutarlı ve ulaşılabilir olmasıyla ilişkilidir; mükemmel olmasıyla değil. Bağlanma örüntüsünün sonraki hayatı etkilediği ama belirlemediği, uzun izlem çalışmalarında görülmüştür: örüntü değişebilir, sonraki ilişkiler onarıcı olabilir. Popüler anlatının 'çocukluk kaderdir' vurgusu, verinin gösterdiğinden daha katıdır."
+      },
+      {
+        "kind": "list",
+        "title": "Dönemler ve dengeler",
+        "items": [
+          "Erken çocukluk: dil ve temel bilişsel beceriler için özellikle duyarlı bir dönem. Yoksunluk burada en ağır iz bırakır.",
+          "Ergenlik: ödül duyarlılığı, dürtü denetiminden önce olgunlaşır. Risk almanın artması bu zamanlama farkından doğar, akılsızlıktan değil.",
+          "Ergenlikte akran etkisi tepe yapar; aynı riskli karar, akranların yanında belirgin biçimde daha sık alınır.",
+          "Yetişkinlik: kristalleşmiş bilgi (birikim, sözcük dağarcığı, uzmanlık) yaşla artmayı sürdürür.",
+          "Yaşlanma: işlem hızı düşer ama muhakeme ve duygu düzenlemesi çoğu insanda iyileşir.",
+          "Bilişsel yedek: eğitim, sosyal etkinlik ve fiziksel hareket, bunama belirtilerinin ortaya çıkışını geciktirmekle ilişkilidir."
+        ]
+      },
+      {
+        "kind": "text",
+        "title": "Kalıtım ve çevre tartışması",
+        "body": "İkiz ve evlat edinme çalışmaları, çoğu psikolojik özellikte kalıtımın önemli bir pay taşıdığını gösterir. Buradan iki yanlış sonuç sıkça çıkarılır. Birincisi 'demek ki değişmez' — oysa kalıtılabilirlik değiştirilebilirlik hakkında hiçbir şey söylemez; boy büyük ölçüde kalıtsaldır ama beslenme düzelince kuşaklar boyunca uzamıştır. İkincisi 'demek ki gruplar arası farklar da genetiktir' — bu geçersiz bir sıçramadır, çünkü kalıtılabilirlik yalnızca ölçüldüğü topluluğun içindeki farklar için tanımlıdır."
+      },
+      {
+        "kind": "example",
+        "title": "Ekran ve gençler",
+        "body": "Son yıllarda gençlerde kaygı ve depresif belirti bildirimleri birçok ülkede arttı ve bu artışın sosyal medyayla ilişkisi yoğun biçimde tartışılıyor. Bulguların durumu şudur: ilişki tutarlı biçimde bulunuyor ama etki büyüklükleri küçük, nedensellik yönü belirsiz ve kızlarda erkeklerden büyük. Kullanım süresinden çok kullanım biçiminin (karşılaştırma, uykudan çalınan saatler, zorbalık) belirleyici olduğuna dair kanıt daha güçlü. Kesin konuşan iki taraf da veriden fazlasını söylüyor."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Ergenlikte risk almanın artmasının temel sebebi nedir?",
+        "options": [
+          "Bilgi eksikliği",
+          "Ödül duyarlılığının dürtü denetiminden önce olgunlaşması",
+          "Zekânın düşük olması",
+          "Riski hesaplayamamak"
+        ],
+        "answerIndex": 1,
+        "explanation": "Ergenler riski çoğu zaman doğru hesaplar; fark, ödülün o yaşta çok daha çekici olmasında ve frenin daha geç olgunlaşmasındadır."
+      },
+      {
+        "id": "q2",
+        "prompt": "Bir özelliğin kalıtılabilirliğinin yüksek olması ne anlama gelmez?",
+        "options": [
+          "Topluluk içindeki farkların önemli kısmı genetiktir",
+          "O özellik değiştirilemez",
+          "İkiz çalışmalarında ölçülebilir",
+          "Çevrenin de payı vardır"
+        ],
+        "answerIndex": 1,
+        "explanation": "Kalıtılabilirlik değiştirilebilirlik hakkında hiçbir şey söylemez. Boy büyük ölçüde kalıtsaldır ama beslenme düzelince kuşaklar boyunca uzamıştır."
+      },
+      {
+        "id": "q3",
+        "prompt": "Sosyal medya ve gençlerde ruh sağlığı ilişkisinin bugünkü durumu nedir?",
+        "options": [
+          "Nedensellik kesin olarak kanıtlandı",
+          "İlişki tutarlı bulunuyor ama etkiler küçük ve nedensellik yönü hâlâ belirsiz",
+          "Hiçbir ilişki bulunamadı",
+          "Yalnızca erkeklerde görülüyor"
+        ],
+        "answerIndex": 1,
+        "explanation": "Kullanım süresinden çok kullanım biçiminin belirleyici olduğuna dair kanıt daha güçlü. Kesin konuşan iki taraf da veriden fazlasını söylüyor."
+      }
+    ]
+  },
+  {
+    "id": "ruh-sagligi",
+    "moduleId": "yontem",
+    "order": 1,
+    "title": "Ruh sağlığı",
+    "subtitle": "Tanı bir sınıflandırmadır, bir kimlik değil.",
+    "minutes": 9,
+    "keyTerms": ["ruhsal bozukluk", "damgalama", "duygu düzenlemesi"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Üzüntü ile depresyon, kaygı ile kaygı bozukluğu, titizlik ile takıntı arasındaki fark derece değil işlev meselesidir. Ruhsal bir bozukluktan söz edebilmek için belirtilerin süreklilik göstermesi ve kişinin işlevini — çalışmasını, ilişkilerini, günlük hayatını — belirgin biçimde bozması gerekir. Bu eşik keyfî değildir ama keskin de değildir; sınıflandırma sistemleri de zaman içinde değişir."
+      },
+      {
+        "kind": "list",
+        "title": "Yaygın yanlış anlamalar",
+        "items": [
+          "'Depresyon üzüntüdür' — değildir. En sık bildirilen belirtilerden biri hiçbir şeyden zevk alamamaktır ve bu üzüntüden farklı bir durumdur.",
+          "'Kimyasal dengesizlik' anlatısı fazla basittir. Serotonin eksikliğine dayanan tek nedenli açıklama bugün desteklenmemektedir; bu, ilaçların işe yaramadığı anlamına gelmez.",
+          "'İrade meselesi' — değildir; ama tedavi süreci kişinin etkin katılımını gerektirir.",
+          "İntihardan söz etmek riski artırmaz; sorulduğunda konuşmak, en çok önerilen ilk adımlardan biridir.",
+          "Tanı bir kimlik değildir. 'Ben kaygı bozukluğuyum' ile 'kaygı bozukluğum var' arasındaki fark, tedaviye bakışı da değiştirir."
+        ]
+      },
+      {
+        "kind": "text",
+        "title": "Tanı sistemleri neyi yapar",
+        "body": "Tanı el kitapları, kan tahlilinde ölçülen bir şeyi sınıflandırmaz; belirti örüntülerini adlandırır. Bunun bir yararı vardır: ortak bir dil kurar, araştırmayı ve tedaviyi karşılaştırılabilir kılar. Bir sınırı da vardır: aynı tanıyı alan iki kişi çok farklı tablolar gösterebilir ve tanılar arasındaki sınırlar bulanıktır. Bu yüzden alanda tanıları kesin kutular yerine boyutlar olarak ele alan yaklaşımlar güç kazanıyor."
+      },
+      {
+        "kind": "example",
+        "title": "Damgalama neyi engeller",
+        "body": "Ruhsal bozukluğu olan kişilerin şiddet uygulama olasılığının toplum ortalamasından yüksek olmadığı, aksine şiddete uğrama olasılıklarının belirgin biçimde yüksek olduğu tekrar tekrar gösterilmiştir. Buna rağmen medyadaki temsil tersini kurar. Damgalamanın somut sonucu, insanların yardım istemekte gecikmesidir: Türkiye dâhil birçok ülkede ruhsal sorun yaşayanların önemli bir bölümü hiç profesyonel destek almaz ve alanların çoğu yıllar sonra başvurur."
+      },
+      {
+        "kind": "text",
+        "title": "Ne zaman destek almalı",
+        "body": "Basit bir eşik vardır ve klinik bir bilgi gerektirmez: belirtiler iki haftadan uzun sürüyorsa, işinizi, ilişkilerinizi ya da uykunuzu belirgin biçimde bozuyorsa, ya da kendinize zarar verme düşünceleri varsa, beklemenin bir yararı yoktur. Türkiye'de ilk basamak için aile hekimi, acil durumlar için 112 ve psikolojik destek için resmî kriz hatları başvuru noktalarıdır. Erken başvurunun süreci kısalttığı, geciktirmenin ise tabloyu ağırlaştırdığı iyi belgelenmiştir."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Bir belirtinin ruhsal bozukluk sayılması için temel ölçüt nedir?",
+        "options": [
+          "Şiddetli olması",
+          "Süreklilik göstermesi ve kişinin işlevini belirgin biçimde bozması",
+          "Kan tahlilinde görülmesi",
+          "Başkaları tarafından fark edilmesi"
+        ],
+        "answerIndex": 1,
+        "explanation": "Ayrım derece değil işlev meselesidir. Eşik keyfî değildir ama keskin de değildir."
+      },
+      {
+        "id": "q2",
+        "prompt": "Depresyonun 'kimyasal dengesizlik' olarak açıklanması hakkında hangisi doğrudur?",
+        "options": [
+          "Tam olarak doğrudur",
+          "Fazla basit bir anlatıdır; tek nedenli serotonin açıklaması bugün desteklenmez ama bu ilaçların işe yaramadığı anlamına gelmez",
+          "İlaçların etkisiz olduğunu gösterir",
+          "Hiçbir biyolojik temel yoktur"
+        ],
+        "answerIndex": 1,
+        "explanation": "Mekanizma anlatısının zayıflaması, tedavinin etkisini ortadan kaldırmaz. İkisi ayrı sorulardır."
+      },
+      {
+        "id": "q3",
+        "prompt": "Ruhsal bozukluğu olan kişiler ve şiddet ilişkisi nasıldır?",
+        "options": [
+          "Şiddet uygulama olasılıkları belirgin biçimde yüksektir",
+          "Şiddete uğrama olasılıkları yüksektir; uygulama olasılıkları toplum ortalamasının üstünde değildir",
+          "İlişki yoktur, hiç şiddet görülmez",
+          "Yalnızca belirli tanılarda ilişki vardır"
+        ],
+        "answerIndex": 1,
+        "explanation": "Medyadaki temsil bunun tersini kurar ve damgalamayı besler. Damgalamanın somut sonucu, yardım istemenin gecikmesidir."
+      }
+    ]
+  },
+  {
+    "id": "terapi-ve-kanit",
+    "moduleId": "yontem",
+    "order": 2,
+    "title": "Terapi işe yarıyor mu",
+    "subtitle": "Bazıları evet, bazıları hayır — ve bunu ölçmek mümkün.",
+    "minutes": 8,
+    "keyTerms": ["bilişsel davranışçı terapi", "ortak etkenler", "etki büyüklüğü"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Psikoterapinin işe yarayıp yaramadığı bir inanç meselesi değildir; randomize deneylerle ölçülür ve ölçülmüştür. Sonuç şudur: bazı yaklaşımların belirli sorunlarda açık ve tekrarlanan etkisi vardır, bazılarının hiçbir kanıtı yoktur, birkaçının ise zarar verdiği gösterilmiştir. Bu ayrımı yapmak, terapiye güvenmenin karşıtı değil önkoşuludur."
+      },
+      {
+        "kind": "list",
+        "title": "Kanıt durumu",
+        "items": [
+          "Bilişsel davranışçı terapi, kaygı bozuklukları ve depresyonda en çok sınanmış ve en tutarlı etkiyi gösteren yaklaşımdır.",
+          "Maruz bırakma temelli yöntemler, fobiler ve travma sonrası stres bozukluğunda güçlü kanıta sahiptir.",
+          "Farklı kuramsal yaklaşımların ölçülen etkileri, sanılandan birbirine daha yakındır; buna ortak etkenler tartışması denir.",
+          "İlişkinin niteliği — güven, anlaşılmış hissetmek — sonucu yöntemden bağımsız olarak öngörür.",
+          "Kritik olay sonrası zorunlu tek seanslık 'psikolojik bilgilendirme' uygulamalarının bazı çalışmalarda zarar verdiği görülmüştür; kanıt, iyi niyeti yeterli saymamayı öğretir.",
+          "Kanıt tabanı ağırlıklı olarak batılı örneklemlerden gelir; kültürel uyarlama üzerine çalışmalar hâlâ yetersizdir."
+        ]
+      },
+      {
+        "kind": "text",
+        "title": "Ortak etkenler",
+        "body": "Farklı yöntemlerin sonuçlarının birbirine yakın çıkması, hepsinin paylaştığı ögelere işaret eder: düzenli görüşülen güvenli bir ilişki, sorunu anlamlandıran bir çerçeve, iyileşebileceğine dair umut ve haftalık olarak bir şeyle yüzleşmeyi sürdürmek. Bu, tekniğin önemsiz olduğu anlamına gelmez — belirli sorunlarda belirli teknikler açıkça öndedir. Ama iyi bir ilişki kurulamadığında tekniğin tek başına taşımadığı da doğrudur."
+      },
+      {
+        "kind": "example",
+        "title": "İyi bir terapiyi neden anlarsınız",
+        "body": "Birkaç somut işaret vardır. Hedefler adı konarak belirlenir ve ilerleme aralıklarla değerlendirilir. Seanslar arasında yapılacak bir şey vardır. Terapist, yaklaşımının hangi kanıta dayandığını sorulduğunda açıklayabilir. Süre baştan tartışılır ve 'yıllarca sürer' varsayılmaz. Buna karşılık kanıtı olmayan yöntemlerin ortak işaretleri de bellidir: her soruna aynı çözümü sunmak, hızlı ve kesin sonuç vadetmek, eleştiriyi direnç sayarak yanıtsız bırakmak."
+      },
+      {
+        "kind": "quote",
+        "text": "Soru terapinin işe yarayıp yaramadığı değil; hangi terapinin, hangi sorunda, kimde işe yaradığıdır.",
+        "source": "Kanıta dayalı psikoterapi tartışmasının özeti"
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Farklı terapi yaklaşımlarının etkilerinin birbirine yakın çıkması neye işaret eder?",
+        "options": [
+          "Hiçbirinin işe yaramadığına",
+          "Hepsinin paylaştığı ortak etkenlere: güvenli ilişki, anlamlandırma çerçevesi, umut ve süreklilik",
+          "Ölçümlerin hatalı olduğuna",
+          "Tekniğin tamamen önemsiz olduğuna"
+        ],
+        "answerIndex": 1,
+        "explanation": "Teknik önemsiz değildir; belirli sorunlarda belirli teknikler açıkça öndedir. Ama ortak ögeler etkinin önemli bir kısmını taşır."
+      },
+      {
+        "id": "q2",
+        "prompt": "Kaygı bozuklukları ve depresyonda en çok sınanmış yaklaşım hangisidir?",
+        "options": [
+          "Serbest çağrışım",
+          "Bilişsel davranışçı terapi",
+          "Hipnoz",
+          "Sanat terapisi"
+        ],
+        "answerIndex": 1,
+        "explanation": "Düşünce örüntüleri ile davranışı birlikte hedefleyen bu yaklaşım, en geniş randomize deney tabanına sahiptir."
+      },
+      {
+        "id": "q3",
+        "prompt": "Kanıtı zayıf bir yöntemin tipik işareti nedir?",
+        "options": [
+          "Hedef belirlemesi",
+          "Her soruna aynı çözümü sunması ve hızlı, kesin sonuç vadetmesi",
+          "Ara değerlendirme yapması",
+          "Süreyi baştan tartışması"
+        ],
+        "answerIndex": 1,
+        "explanation": "Tek çözüm, kesin vaat ve eleştiriyi 'direnç' sayarak yanıtsız bırakmak, kanıt eksikliğinin en tanıdık işaretleridir."
+      }
+    ]
+  },
+  {
+    "id": "tekrarlanabilirlik",
+    "moduleId": "yontem",
+    "order": 3,
+    "title": "Psikolojinin kendini sınaması",
+    "subtitle": "Bir alanın kendi hatasını bulup düzeltmesi, güvenilirliğin kanıtıdır.",
+    "minutes": 9,
+    "keyTerms": ["tekrarlanabilirlik krizi", "dar örneklem sorunu", "ön kayıt", "sonradan hipotez kurma", "geçerlik ve güvenirlik"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "2010'ların başında psikoloji rahatsız edici bir soruyla yüzleşti: ders kitaplarındaki bulgular tekrar edildiğinde çıkıyor mu? Yüz çalışmanın bağımsız olarak yeniden yapıldığı büyük bir projede, sonuçların yarıdan azı doğrulandı ve doğrulananların etki büyüklükleri de belirgin biçimde küçüktü. Bu, alan için sarsıcıydı; ama asıl önemli olan sonrasında olanlardır."
+      },
+      {
+        "kind": "list",
+        "title": "Krizi üreten mekanizmalar",
+        "items": [
+          "Küçük örneklem: az kişili çalışmalar gerçek etkiyi hem kaçırır hem de bulduğunda abartır.",
+          "Analiz serbestliği: hangi katılımcıların çıkarılacağı, hangi ölçütün raporlanacağı, hangi düzeltmenin yapılacağı serbestse anlamlı sonuç bulmak neredeyse kaçınılmazdır.",
+          "Yayın yanlılığı: 'fark bulunamadı' sonuçları yayımlanmaz, literatür sistematik olarak iyimserleşir.",
+          "Sonradan hipotez kurma: veriye bakıp bulunan sonucu baştan beri beklenen hipotez gibi sunmak.",
+          "Dar örneklem: bulguların ezici çoğunluğu batılı, eğitimli, sanayileşmiş toplumlardan gelen üniversite öğrencilerine dayanıyordu.",
+          "Teşvik yapısı: çarpıcı ve yeni bulgu yayımlanır, tekrar çalışması yayımlanmazdı."
+        ]
+      },
+      {
+        "kind": "text",
+        "title": "Ne değişti",
+        "body": "Düzeltme somut oldu. Ön kayıt yaygınlaştı: hipotez ve analiz planı veri toplanmadan ilan ediliyor. Veri ve analiz kodu paylaşımı standart hâline geldi. Örneklemler büyüdü; onlarca laboratuvarın aynı protokolü yürüttüğü ortak projeler kuruldu. Sonucu ne olursa olsun yayımlanmayı baştan taahhüt eden dergi formatları çıktı. Sonuç ölçülebilir: ön kayıtlı çalışmalarda olumlu sonuç oranı belirgin biçimde düştü — yani sistem çalışıyor."
+      },
+      {
+        "kind": "example",
+        "title": "Hangi bulgular sarsıldı",
+        "body": "Kalem ısırarak gülümsemenin insanı daha neşeli yaptığı, güçlü duruş almanın hormon düzeylerini ve risk alma davranışını değiştirdiği, iradenin sınırlı bir depo gibi tükendiği ve bilinçdışı hazırlamanın yürüme hızını değiştirdiği gibi popüler bulgular, büyük ve ön kayıtlı tekrarlarda ya çıkmadı ya da çok küçüldü. Buna karşılık aralıklı tekrarın üstünlüğü, geri çağırma etkisi, uyma, kayıptan kaçınma ve çerçeveleme gibi bulgular defalarca doğrulandı. Ayrımı yapan şey, bulgunun ne kadar çarpıcı olduğu değil, kaç kez ve ne büyüklükte örneklemde sınandığıdır."
+      },
+      {
+        "kind": "text",
+        "title": "Bir psikoloji haberini okumak",
+        "body": "Pratik bir süzgeç: kaç kişi üzerinde yapıldı? Tek bir çalışma mı, tekrarlanmış bir bulgu mu? Etki büyüklüğü verilmiş mi, yoksa yalnızca 'anlamlı' mı deniyor? Örneklem kimlerden oluşuyor? Sonuç bir kan değerinden mi, gerçek bir davranıştan mı geliyor? Ve en önemlisi: haber, bulguyu bir yaşam tavsiyesine çeviriyor mu — çünkü grup ortalamasındaki küçük bir farktan tek bir kişiye tavsiye çıkarmak, bu kursun baştan sona anlattığı hatanın kendisidir."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Yüz psikoloji çalışmasının tekrar edildiği projede ne bulundu?",
+        "options": [
+          "Hepsi doğrulandı",
+          "Sonuçların yarıdan azı doğrulandı ve doğrulananların etkileri de daha küçüktü",
+          "Hiçbiri doğrulanmadı",
+          "Proje tamamlanamadı"
+        ],
+        "answerIndex": 1,
+        "explanation": "Sonuç alan için sarsıcıydı. Asıl önemli olan, alanın bunu açıkça kabul edip yöntemini değiştirmesidir."
+      },
+      {
+        "id": "q2",
+        "prompt": "Ön kaydın işlevi nedir?",
+        "options": [
+          "Çalışmayı hızlandırmak",
+          "Hipotezi ve analiz planını veri toplanmadan ilan ederek sonradan hikâye yazmayı engellemek",
+          "Maliyeti düşürmek",
+          "Katılımcı bulmak"
+        ],
+        "answerIndex": 1,
+        "explanation": "Ön kayıtlı çalışmalarda olumlu sonuç oranının düşmesi, düzeltmenin gerçekten işlediğinin ölçülebilir kanıtıdır."
+      },
+      {
+        "id": "q3",
+        "prompt": "Bir bulgunun güvenilirliğini en iyi ne gösterir?",
+        "options": [
+          "Ne kadar çarpıcı olduğu",
+          "Kaç kez ve ne büyüklükte örneklemlerde bağımsız olarak tekrarlandığı",
+          "Hangi dergide yayımlandığı",
+          "Ne kadar çok paylaşıldığı"
+        ],
+        "answerIndex": 1,
+        "explanation": "Aralıklı tekrar ve kayıptan kaçınma gibi bulgular defalarca doğrulandı; güçlü duruş ve irade deposu gibi çarpıcı bulgular sarsıldı."
+      }
+    ]
+  }
+]

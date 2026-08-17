@@ -1,17 +1,17 @@
 # Kurs programı
 
-Kütüphaneye elle yazılacak on dört kurs. Sıra, her turda bir çağdaş ve bir
-klasik kurs çıkacak biçimde eşleştirildi; böylece kütüphane iki taraftan
-birden büyüyor.
+Kütüphaneye elle yazılan yirmi kurs. Sıra, her turda bir çağdaş ve bir klasik
+kurs çıkacak biçimde eşleştirildi; böylece kütüphane iki taraftan birden büyüdü
+ve iki kategori onar kursta eşitlendi.
 
 Her kursun ölçüsü Finans'la aynı: **12 ders, 36 soru, 40+ terimlik sözlük,
 10-14 isim, 18-24 olaylık zaman çizelgesi.** Grafik sayısı konuya göre
 değişir — kavramı kaydırıcıyla oynatmanın gerçekten bir şey öğrettiği yerde
 grafik yazılır, süs olacaksa yazılmaz.
 
-Program on iki kursta kapatıldı. Son iki başlık iskeletiyle birlikte aşağıda
-duruyor ama yazılmadı; kütüphaneye yeni kurs eklemek gerekirse başlangıç
-noktası olarak kullanılabilir.
+Hukuk ve dilbilim başlıkları iskeletiyle birlikte aşağıda duruyor ama
+yazılmadı; kütüphaneye ileride kurs eklemek gerekirse başlangıç noktası olarak
+kullanılabilir.
 
 ## Sıra
 
@@ -31,8 +31,14 @@ noktası olarak kullanılabilir.
 | 10 | Mimarlık tarihi | `mimarlik` | Klasikler | 4 | ✅ |
 | 11 | Sağlık okuryazarlığı | `saglik` | Bugünü anlamak | 4 | ✅ |
 | 12 | Evrim biyolojisi | `evrim` | Klasikler | 4 | ✅ |
-| 13 | Hukuk okuryazarlığı | `hukuk` | Bugünü anlamak | 1 | yazılmadı |
-| 14 | Dilbilim ve Türkçenin yapısı | `dilbilim` | Klasikler | 3 | yazılmadı |
+| 13 | Psikoloji | `psikoloji` | Bugünü anlamak | 4 | ✅ |
+| 14 | Antropoloji | `antropoloji` | Klasikler | 3 | |
+| 15 | Biyoloji | `biyoloji` | Klasikler | 4 | |
+| 16 | Kuantum fiziği | `kuantum` | Klasikler | 5 | |
+| 17 | Matematik | `matematik` | Klasikler | 5 | |
+| 18 | Jeopolitik | `jeopolitik` | Bugünü anlamak | 4 | |
+| — | Hukuk okuryazarlığı | `hukuk` | Bugünü anlamak | 1 | yazılmadı |
+| — | Dilbilim ve Türkçenin yapısı | `dilbilim` | Klasikler | 3 | yazılmadı |
 
 ## Modül iskeletleri
 
@@ -89,11 +95,36 @@ zorluğu, hekimle konuşmak.
 doğal seçilim, genetik sürüklenme, tür oluşumu, akrabalık ağacı, fosil kaydı,
 moleküler kanıt, cinsel seçilim, işbirliğinin evrimi, insan evrimi.
 
-**13. Hukuk okuryazarlığı** — Hukukun düzeni · Günlük hayat · Uyuşmazlık.
+**13. Psikoloji** — Zihin nasıl çalışır · Kendini ve başkasını okumak ·
+Yöntem ve sınırlar. Algı, bellek ve unutma eğrisi, öğrenme, dikkat, duygu,
+motivasyon, kişilik, sosyal etki, kalabalık içinde karar, ruh sağlığı,
+psikolojinin tekrarlanabilirlik sınavı.
+
+**14. Antropoloji** — İnsan türü · Kültür · Toplum biçimleri. Fiziksel
+antropoloji, avcı-toplayıcılık, tarıma geçiş, akrabalık, armağan ve değiş
+tokuş, ritüel, kültürün birikmesi, dil ve göç, alan çalışması etiği.
+
+**15. Biyoloji** — Hücre · Sistemler · Yaşamın ölçeği. Hücre, zar ve difüzyon,
+enzimler, enerji, DNA'dan proteine, çoğalma, dokular, dolaşım ve solunum,
+bağışıklık, ekosistem ve enerji akışı, ölçek yasaları.
+
+**16. Kuantum fiziği** — Kriz · Kuram · Sonuçlar. Kara cisim ışıması, foton,
+çift yarık, dalga fonksiyonu, belirsizlik, atom düzeyleri, tünelleme, spin,
+dolanıklık ve Bell, yorumlar, teknolojiye çıkan yollar.
+
+**17. Matematik** — Sayı ve yapı · Değişim · Yöntem. Sayı sistemleri, asal
+sayılar, kanıt nedir, sonsuzluk, geometri ve koordinat, fonksiyon, türev,
+integral, seriler ve Fourier, doğrusal cebir, kaos, matematiğin sınırları.
+
+**18. Jeopolitik** — Coğrafya · Güç · Bugünkü fay hatları. Harita okumak,
+denizler ve boğazlar, kara gücü-deniz gücü tartışması, enerji ve tedarik,
+demografi, kurumlar ve ittifaklar, yaptırım, su, Türkiye'nin konumu.
+
+**Hukuk okuryazarlığı** — Hukukun düzeni · Günlük hayat · Uyuşmazlık.
 Norm hiyerarşisi, hak ve borç, sözleşmenin kuruluşu, kira, iş sözleşmesi ve
 fesih, tüketici hakları, kişisel veri, dava süreci, arabuluculuk.
 
-**14. Dilbilim ve Türkçenin yapısı** — Dilin parçaları · Diller arasında ·
+**Dilbilim ve Türkçenin yapısı** — Dilin parçaları · Diller arasında ·
 Türkçe. Ses, biçimbirim, sözdizimi, anlam, dil aileleri, ses değişimi
 kuralları, yazının icadı, sondan eklemeli yapı, ünlü uyumu, sözcük türetme,
 dil değişimi ve alıntılar.

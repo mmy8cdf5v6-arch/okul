@@ -1,0 +1,484 @@
+[
+  {
+    "id": "algi-ve-dikkat",
+    "moduleId": "zihin",
+    "order": 1,
+    "title": "Algı ve dikkat",
+    "subtitle": "Görmek, kaydetmek değil tahmin etmektir.",
+    "minutes": 8,
+    "keyTerms": ["algı", "dikkat", "dikkatsizlik körlüğü", "değişim körlüğü", "çoklu görev"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Gözünüzden beyne giden bilgi, beynin görme alanına gelen bilginin küçük bir kısmıdır; geri kalanı beynin kendi tahminlerinden gelir. Algı, dışarıdaki dünyanın pasif bir kaydı değil, duyulardan gelen zayıf ve belirsiz sinyallerle kurulan etkin bir modeldir. Görme yanılsamaları bu modelin kusuru değil, çalışma biçiminin görünür hâle geldiği anlardır."
+      },
+      {
+        "kind": "text",
+        "title": "Dikkat bir seçimdir",
+        "body": "Zihnin işleme kapasitesi, duyuların topladığı bilginin yanında çok küçüktür. Dikkat bu darboğazı yönetir: bir yere bakmak, aynı anda geri kalanı görmemek demektir. Bu bir zayıflık değil zorunluluktur; her şeye aynı anda bakan bir sistem hiçbir şeyi işleyemez. Ancak sonuçları sezgiye aykırıdır: dikkatiniz başka yerdeyken, gözünüzün tam ortasındaki büyük ve beklenmedik bir şeyi görmeyebilirsiniz."
+      },
+      {
+        "kind": "example",
+        "title": "Bakmak ile görmek",
+        "body": "Katılımcılardan bir videoda top paslarını saymaları istendiğinde, sahnenin ortasından geçen belirgin ve alakasız bir figürü çoğu kişi fark etmez. Videoyu ikinci kez izlediklerinde inanmakta zorlanırlar. Aynı mekanizma trafikte de işler: 'baktım ama görmedim' ifadesi bir mazeret değil, algının nasıl çalıştığının doğru bir tarifidir. Motosikletli kazalarında sürücülerin verdiği en sık ifade budur."
+      },
+      {
+        "kind": "list",
+        "title": "Dikkatin sınırları",
+        "items": [
+          "Dikkatsizlik körlüğü: dikkat başka yere yönelikken beklenmedik nesne fark edilmez.",
+          "Değişim körlüğü: bir kesme ya da göz kırpma anında yapılan büyük değişiklik görülmez.",
+          "Çoklu görev diye bir şey yoktur: iki bilişsel iş aynı anda değil, hızlı geçişle yürütülür ve her geçişin bir bedeli vardır.",
+          "Kesinti maliyeti: bölünmüş bir işe geri dönüp tam odaklanmak dakikalar alır; bildirimlerin asıl maliyeti baktığınız süre değil, sonrasıdır.",
+          "Otomatikleşmiş işler bu kuralın dışındadır: yürürken konuşabilirsiniz, çünkü yürümek dikkat istemez."
+        ]
+      },
+      {
+        "kind": "text",
+        "title": "Beklenti algıyı biçimlendirir",
+        "body": "Ne beklediğiniz, ne gördüğünüzü değiştirir. Belirsiz bir sesi, bir sözcüğü bekliyorsanız o sözcük olarak duyarsınız. Bulanık bir görüntüde önce bir şey söylenirse, o şeyi görürsünüz. Bu, insanların 'kandırılabilir' olmasından değil, algının doğası gereği bir tahmin işlemi olmasından kaynaklanır. Aynı sebeple, bir olayı gördüğünü söyleyen iki kişi iyi niyetle bambaşka şeyler anlatabilir."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Algı hakkında en doğru ifade hangisidir?",
+        "options": [
+          "Duyulardan gelenin doğrudan kaydıdır",
+          "Zayıf duyusal sinyallerle kurulan etkin bir tahmin sürecidir",
+          "Yalnızca görmede geçerlidir",
+          "Beklentiden bağımsızdır"
+        ],
+        "answerIndex": 1,
+        "explanation": "Beyne ulaşan bilginin büyük kısmı beynin kendi tahminlerinden gelir. Yanılsamalar bu mekanizmanın görünür hâle geldiği anlardır."
+      },
+      {
+        "id": "q2",
+        "prompt": "Çoklu görev gerçekte ne yapar?",
+        "options": [
+          "İki işi aynı anda yürütür",
+          "İşler arasında hızlı geçiş yapar ve her geçişin zaman ile hata maliyeti vardır",
+          "Kapasiteyi ikiye katlar",
+          "Yalnızca yorucudur, başka etkisi yoktur"
+        ],
+        "answerIndex": 1,
+        "explanation": "İki bilişsel iş aynı anda yürütülemez. Otomatikleşmiş işler (yürümek gibi) bu kuralın dışındadır çünkü dikkat gerektirmezler."
+      },
+      {
+        "id": "q3",
+        "prompt": "'Baktım ama görmedim' ifadesi nasıl değerlendirilmelidir?",
+        "options": [
+          "Kaçamak bir mazeret olarak",
+          "Dikkatsizlik körlüğünün doğru bir tarifi olarak",
+          "Görme bozukluğu belirtisi olarak",
+          "Yalan olarak"
+        ],
+        "answerIndex": 1,
+        "explanation": "Dikkat başka yere yönelikken görme alanının tam ortasındaki belirgin bir nesne fark edilmeyebilir. Trafik kazalarında sık rastlanan bir durumdur."
+      }
+    ]
+  },
+  {
+    "id": "bellek",
+    "moduleId": "zihin",
+    "order": 2,
+    "title": "Bellek ve unutma",
+    "subtitle": "Hatırlamak, bir dosyayı açmak değil yeniden inşa etmektir.",
+    "minutes": 10,
+    "keyTerms": ["işleyen bellek", "uzun süreli bellek", "unutma eğrisi", "aralıklı tekrar", "anının yeniden kurulması", "sahte anı"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Bellek tek bir sistem değildir. Bir işlem sırasında akılda tuttuğunuz birkaç öge (bir telefon numarası, bir cümlenin başı) işleyen bellektedir ve kapasitesi şaşırtıcı derecede küçüktür. Yıllar önceki bir günün kokusu ise uzun süreli bellektedir ve orada kapasite pratikte sınırsızdır. Sorun depolamak değil, doğru anda geri çağırabilmektir."
+      },
+      {
+        "kind": "text",
+        "title": "Unutma bir arıza değil",
+        "body": "Öğrendiğiniz bir şeyi en hızlı ilk saatlerde ve ilk günde unutursunuz; sonra eğri yavaşlar. Bu, zihnin bozuk çalıştığı anlamına gelmez. Tekrar karşılaşılmayan bilgiyi silmek, sınırlı bir geri çağırma sisteminde makul bir stratejidir. Her şeyi hatırlayan az sayıdaki kişinin hayatının kolaylaşmadığı, aksine zorlaştığı bilinmektedir."
+      },
+      { "kind": "chart", "chartId": "unutma-egrisi" },
+      {
+        "kind": "text",
+        "body": "Grafiğin gösterdiği şey pratik bir sonuç taşır: aynı toplam süreyi bir geceye sıkıştırmakla haftalara yaymak aynı şey değildir. Tekrarı, tam da unutmaya başladığınız anda yapmak izi en çok güçlendirir; bu yüzden aralıklar giderek genişler. Bu kursun kart takvimi de böyle çalışır — bir kart doğru bilindiğinde bir sonraki karşılaşma 1, 3, 7 ve 21 gün sonrasına atılır."
+      },
+      {
+        "kind": "list",
+        "title": "Neyin işe yaradığı ölçüldü",
+        "items": [
+          "Kendini sınamak, tekrar okumaktan belirgin biçimde iyidir. Zorlanarak hatırlamak izi güçlendirir.",
+          "Aralıklı çalışma, sıkıştırılmış çalışmadan uzun vadede kat kat üstündür.",
+          "Karıştırarak çalışmak (farklı türde soruları sıralamak) tek konuyu blok hâlinde çalışmaktan iyidir, ama o an daha zor hissettirir.",
+          "Altını çizmek ve tekrar okumak en yaygın, en sevilen ve en etkisiz yöntemlerdir.",
+          "Kendine açıklamak ('bu neden böyle') anlamayı ve kalıcılığı birlikte artırır.",
+          "'Öğrenme stilleri' iddiası — görselseniz görsel öğrenirsiniz — sınandığında desteklenmemiştir."
+        ]
+      },
+      {
+        "kind": "example",
+        "title": "Anılar yeniden yazılabilir",
+        "body": "Bir kazayı izleyen kişilere 'arabalar birbirine çarptığında hız neydi' diye sorulduğunda verilen tahmin, 'birbirini parçaladığında' diye sorulduğunda belirgin biçimde yükselir. Bir hafta sonra ikinci gruptakiler, olmayan cam kırıklarını hatırladıklarını söyler. Hiç yaşanmamış çocukluk olayları da telkinle canlı anılara dönüştürülebilmiştir. Bunun anlamı, insanların yalan söylediği değil; hatırlamanın bir kaydı okumak değil, izlerden yeniden kurmak olduğudur. Bu yüzden görgü tanıklığı, mahkemede sanıldığından çok daha kırılgan bir kanıttır."
+      },
+      {
+        "kind": "quote",
+        "text": "Bellek, kaydettiğimiz değil, her seferinde yeniden kurduğumuz şeydir.",
+        "source": "Yeniden kurma yaklaşımının özeti, 20. yüzyıl bellek araştırmaları"
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Aralıklı tekrarın sıkıştırılmış çalışmaya üstünlüğünün sebebi nedir?",
+        "options": [
+          "Daha az yorucu olması",
+          "Tekrarın, unutmaya başlandığı anda yapılmasının izi en çok güçlendirmesi",
+          "Daha çok zaman ayrılması",
+          "Motivasyonu artırması"
+        ],
+        "answerIndex": 1,
+        "explanation": "Zorlanarak hatırlamak izi güçlendirir. Bu yüzden aralıklar her doğru hatırlayıştan sonra genişletilir."
+      },
+      {
+        "id": "q2",
+        "prompt": "Aşağıdakilerden hangisi en etkisiz çalışma yöntemidir?",
+        "options": [
+          "Kendini sınamak",
+          "Metnin altını çizip tekrar okumak",
+          "Kendine açıklamak",
+          "Farklı soru türlerini karıştırarak çalışmak"
+        ],
+        "answerIndex": 1,
+        "explanation": "Altını çizmek ve tekrar okumak en yaygın ve en sevilen yöntemlerdir; ölçüldüğünde en az işe yarayanlar da bunlardır."
+      },
+      {
+        "id": "q3",
+        "prompt": "Görgü tanıklığının kırılgan olmasının temel sebebi nedir?",
+        "options": [
+          "Tanıkların genellikle yalan söylemesi",
+          "Hatırlamanın bir kaydı okumak değil, izlerden yeniden kurmak olması ve telkinden etkilenmesi",
+          "Tanıkların dikkatsiz olması",
+          "Zamanla her şeyin tamamen silinmesi"
+        ],
+        "answerIndex": 1,
+        "explanation": "Sorunun sorulma biçimi bile ifadeyi değiştirir. Kişi iyi niyetli olabilir ve yine de hiç olmamış ayrıntıları canlı biçimde hatırlayabilir."
+      }
+    ]
+  },
+  {
+    "id": "ogrenme",
+    "moduleId": "zihin",
+    "order": 3,
+    "title": "Öğrenme ve alışkanlık",
+    "subtitle": "Davranışı belirleyen, ödülün kendisi değil düzenidir.",
+    "minutes": 8,
+    "keyTerms": ["koşullanma", "pekiştirme", "değişken oranlı ödül", "geri çağırma etkisi", "aktarım sorunu"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Öğrenmenin en yalın biçimi eşleşmedir: bir uyaran başka bir uyaranla ya da bir sonuçla düzenli olarak birlikte geldiğinde, zihin bu bağı kurar. Zil sesiyle yemeğin eşleşmesi, bir kokuyla bulantının eşleşmesi ya da bir mekânla kaygının eşleşmesi aynı mekanizmadır. Bu öğrenme isteğe bağlı değildir; bilerek de bozamazsınız."
+      },
+      {
+        "kind": "text",
+        "title": "Ödülün düzeni",
+        "body": "Bir davranışın ardından gelen sonuç onu güçlendirir. Ama asıl belirleyici olan, ödülün ne kadar sık değil hangi düzende geldiğidir. Her seferinde ödül veren bir davranış, ödül kesildiğinde hızla söner. Ödül rastgele aralıklarla ve öngörülemez biçimde geliyorsa, davranış inanılmaz derecede dirençli hâle gelir. Kumar makineleri, sonsuz kaydırılan akışlar ve bildirimler tam olarak bu çizelgeyi kullanır: bir sonraki kaydırmada ne çıkacağını bilmemek, bilmekten çok daha bağlayıcıdır."
+      },
+      {
+        "kind": "list",
+        "title": "Öğrenmenin az konuşulan zorlukları",
+        "items": [
+          "Aktarım: bir bağlamda öğrenilen, başka bağlama kendiliğinden taşınmaz. Sınıfta çözülen problem, hayatta aynı biçimde karşınıza çıkmaz.",
+          "Akıcılık yanılgısı: bir metni akıcı okuyabilmek, onu bildiğiniz anlamına gelmez. Kolay hissettiren yöntemler genellikle daha az öğretir.",
+          "Zorlanma iyidir: hemen hatırlanan bir şey pek az öğrenilir; biraz zorlanmak kalıcılığı artırır.",
+          "Geri bildirim gecikmesi: hatanın hemen düzeltilmesi her zaman en iyisi değildir, ama hiç düzeltilmemesi her zaman kötüdür.",
+          "Uzmanlık dar olur: bir alandaki ustalık başka alana kendiliğinden geçmez; satranç ustası genel olarak daha zeki hâle gelmez."
+        ]
+      },
+      {
+        "kind": "example",
+        "title": "Alışkanlığı ipucundan tutmak",
+        "body": "Bir alışkanlık üç parçalıdır: ipucu, davranış ve ödül. İradeyle davranışa doğrudan direnmek en yorucu ve en başarısız yoldur, çünkü irade tükenen bir kaynak gibi davranır. Etkili olan, ipucunu değiştirmektir: telefonu başka odada şarj etmek, kurabiyeyi görünmeyen bir dolaba koymak, spor kıyafetini kapının önüne bırakmak. Ortamı düzenlemek, kendinle savaşmaktan hem daha kolay hem daha kalıcıdır."
+      },
+      {
+        "kind": "text",
+        "title": "Ceza neden zayıf bir araçtır",
+        "body": "Ceza davranışı bastırır ama yerine ne konacağını öğretmez. Etkisi cezayı verenin varlığına bağlıdır, kaygı üretir ve ilişkiyi zedeler. Ayrıca ceza çoğu zaman gecikmeli gelir; oysa öğrenmede sonucun davranışa yakın olması belirleyicidir. Bu yüzden hem eğitimde hem yönetimde, istenen davranışı adlandırıp pekiştirmek, istenmeyeni cezalandırmaktan daha iyi sonuç verir."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Hangi ödül düzeni en dirençli alışkanlığı üretir?",
+        "options": [
+          "Her seferinde ödül",
+          "Rastgele ve öngörülemez aralıklarla ödül",
+          "Hiç ödül yok",
+          "Sabit zaman aralığıyla ödül"
+        ],
+        "answerIndex": 1,
+        "explanation": "Öngörülemezlik davranışı söndürmeyi çok zorlaştırır. Kumar makineleri ve sonsuz akışlar bu çizelge üzerine kuruludur."
+      },
+      {
+        "id": "q2",
+        "prompt": "Alışkanlığı değiştirmenin en etkili yolu nedir?",
+        "options": [
+          "İradeyle davranışa direnmek",
+          "İpucunu değiştirmek, yani ortamı düzenlemek",
+          "Cezalandırmak",
+          "Hedefi büyütmek"
+        ],
+        "answerIndex": 1,
+        "explanation": "İrade tükenen bir kaynak gibi davranır. Ortamı düzenlemek — telefonu başka odaya koymak gibi — hem daha kolay hem daha kalıcıdır."
+      },
+      {
+        "id": "q3",
+        "prompt": "Cezanın öğrenme aracı olarak zayıf olmasının sebebi nedir?",
+        "options": [
+          "Hiç etki etmemesi",
+          "Davranışı bastırıp yerine ne konacağını öğretmemesi, kaygı üretmesi ve genellikle gecikmeli gelmesi",
+          "Çok pahalı olması",
+          "Yalnızca çocuklarda işe yaramaması"
+        ],
+        "answerIndex": 1,
+        "explanation": "Ceza ne yapılmayacağını söyler, ne yapılacağını söylemez. Etkisi cezayı verene bağlıdır ve ilişkiyi zedeler."
+      }
+    ]
+  },
+  {
+    "id": "dusunme-hatalari",
+    "moduleId": "zihin",
+    "order": 4,
+    "title": "Kestirme yollar ve düzenli hatalar",
+    "subtitle": "Hatalar rastgele değil; öngörülebilir yönlerde.",
+    "minutes": 9,
+    "keyTerms": ["kestirme yol (sezgisel)", "erişilebilirlik", "çapalama", "doğrulama yanlılığı", "çerçeveleme", "kayıptan kaçınma"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Zihin, her karar için bütün seçenekleri tartan bir hesap makinesi değildir; hızlı ve çoğu zaman yeterince iyi çalışan kestirme yollar kullanır. Bu kestirmeler ustaca tasarlanmış araçlardır — ama belirli koşullarda düzenli olarak yanılırlar. Önemli olan, yanılmanın rastgele değil öngörülebilir yönde olmasıdır. Bu da onları hem tanınabilir hem de kötüye kullanılabilir kılar."
+      },
+      {
+        "kind": "list",
+        "title": "En sık rastlananlar",
+        "items": [
+          "Erişilebilirlik: aklına kolay gelen şeyi daha sık sanmak. Uçak kazası haber olur, kalp krizi olmaz; sonuç, risk algısının bozulmasıdır.",
+          "Çapalama: ilk duyulan sayının sonraki tahminleri kendine çekmesi. Tamamen ilgisiz bir sayı bile bunu yapar.",
+          "Doğrulama yanlılığı: inandığını destekleyen bilgiyi aramak, çürütecek olanı görmezden gelmek.",
+          "Temsil edicilik: bir şeyin tipik örneğe benzemesini, o şey olma olasılığıyla karıştırmak. Taban oranı unutulur.",
+          "Geriye dönük kesinlik: olay olduktan sonra 'zaten belliydi' demek. Geçmişi anlamayı da geleceği tahmin etmeyi de bozar.",
+          "Batık maliyet: harcanan emeği kurtarmak için kötü bir işe devam etmek. Harcanan geri gelmez; karar ileriye bakmalıdır."
+        ]
+      },
+      { "kind": "chart", "chartId": "kayip-kacinma" },
+      {
+        "kind": "text",
+        "body": "Kayıptan kaçınma, karar hatalarının en geniş sonuçlu olanıdır. Aynı sonucu 'kazanç' ya da 'kayıp' olarak çerçevelemek kararı çevirebilir. Elindeki bir eşyayı satmak için istediğin fiyat, aynı eşyayı almak için ödeyeceğinden yüksektir. Zarar eden bir yatırımı satmak, kâr edeni satmaktan çok daha zordur. Sigortaya fazla ödeme yapmak ile küçük bir riski almamak aynı mekanizmadan gelir. Sezgi burada sistematik biçimde yanılır ve bunu bilmek tek başına düzeltmez — ama sayıyı yazıya dökmek düzeltir."
+      },
+      {
+        "kind": "example",
+        "title": "İki sistem anlatısı",
+        "body": "Düşünmenin hızlı-sezgisel ve yavaş-çabalı iki kip hâlinde anlatılması popüler bir çerçevedir ve öğretici bir metafordur. Ancak beyinde birbirinden ayrı iki sistem bulunduğu anlamına gelmez ve son yıllarda bu ikiliğin fazla keskin çizildiği eleştirisi güç kazanmıştır. Çerçeveyi bir düşünme aracı olarak kullanmak yararlıdır; anatomik bir iddia olarak almak değildir."
+      },
+      {
+        "kind": "text",
+        "title": "Ne işe yarar",
+        "body": "Yanlılıkları bilmek, onlardan korunmaya tek başına yetmez; herkes kendini ortalamanın üstünde tarafsız sanır. İşe yarayan şeyler daha somuttur: kararı yazıya dökmek, sayıyı mutlak biçimde ifade etmek, kararı verirken karşı tarafın en güçlü argümanını yazmak, önemli kararlarda bir gece beklemek ve baştan 'hangi kanıt beni fikrimden döndürür' sorusunu cevaplamak. Yanlılık kişisel bir kusur değil, ortak bir işletim biçimidir; çözüm de kişisel çabadan çok yöntemdir."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Erişilebilirlik kestirmesi riski nasıl bozar?",
+        "options": [
+          "Riskleri olduğundan küçük gösterir",
+          "Aklına kolay gelen, yani haberlerde çok yer alan olayları daha sık sandırır",
+          "Yalnızca sayısal risklerde çalışır",
+          "Etkisi ihmal edilebilir"
+        ],
+        "answerIndex": 1,
+        "explanation": "Uçak kazası haber olur, kalp krizi olmaz. Hatırlama kolaylığı sıklıkla karıştırılınca risk sıralaması bozulur."
+      },
+      {
+        "id": "q2",
+        "prompt": "Kayıptan kaçınma ne demektir?",
+        "options": [
+          "Riskten tamamen kaçınmak",
+          "Aynı büyüklükteki kaybın kazançtan yaklaşık iki kat ağır hissedilmesi",
+          "Kayıpları hesaba katmamak",
+          "Sigorta yaptırmamak"
+        ],
+        "answerIndex": 1,
+        "explanation": "Bu asimetri yüzünden yazı turayla 100 kazanma ihtimali, 100 kaybetme ihtimalini dengelemez; kabul için kazanç tarafının belirgin biçimde büyümesi gerekir."
+      },
+      {
+        "id": "q3",
+        "prompt": "Düşünme hatalarına karşı en işe yarayan yaklaşım nedir?",
+        "options": [
+          "Yanlılıkları öğrenmek yeterlidir",
+          "Yöntemsel önlemler: kararı yazıya dökmek, sayıyı mutlak ifade etmek, karşı argümanı yazmak, beklemek",
+          "Sezgiye güvenmek",
+          "Hızlı karar vermek"
+        ],
+        "answerIndex": 1,
+        "explanation": "Yanlılıkları bilmek tek başına korumaz; herkes kendini ortalamanın üstünde tarafsız sanır. İşe yarayan şey kişisel çaba değil, yöntemdir."
+      }
+    ]
+  },
+  {
+    "id": "duygu",
+    "moduleId": "insan",
+    "order": 1,
+    "title": "Duygu ve stres",
+    "subtitle": "Duygu bir arıza değil, bir bilgi kaynağıdır.",
+    "minutes": 8,
+    "keyTerms": ["duygu", "duygu düzenlemesi", "stres tepkisi", "ters U ilişkisi"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Duygu, bedensel bir değişim, durumun bir değerlendirmesi ve bunun adlandırılmasının birlikte oluşturduğu bir durumdur. Kalp atışının hızlanması tek başına ne korku ne heyecandır; hangisi olduğu, bulunduğunuz duruma ve ona verdiğiniz anlama bağlıdır. Bu yüzden aynı bedensel uyarılma, sınav öncesinde kaygı, sahneye çıkmadan önce heyecan olarak yaşanabilir ve bu ikisi arasındaki fark performansı gerçekten değiştirir."
+      },
+      {
+        "kind": "text",
+        "title": "Adlandırmanın gücü",
+        "body": "Bir duyguyu ayrıntılı biçimde adlandırabilmek — kızgın mı, hayal kırıklığına mı uğramış, yoksa yorgun mu olduğunuzu ayırabilmek — o duygunun şiddetini ve süresini azaltır. Bu beceri kişiden kişiye belirgin biçimde değişir ve öğrenilebilir. Duyguyu bastırmak ise ters etki yapar: dışarıya daha az yansır ama içeride daha uzun sürer ve bedensel yükü artar. Bastırmak yerine yeniden değerlendirmek — duruma başka bir açıdan bakmak — hem daha etkili hem daha az yıpratıcıdır."
+      },
+      { "kind": "chart", "chartId": "stres-performans" },
+      {
+        "kind": "text",
+        "body": "Stres tepkisi tehdide karşı bedeni harekete geçiren bir sistemdir ve kısa süreliyse yararlıdır: dikkati keskinleştirir, enerjiyi seferber eder. Sorun sürekli hâle geldiğinde başlar. Grafiğin gösterdiği ilişki de bunun karar tarafıdır: gerilimin yararlı olduğu bir aralık vardır ve bu aralık, iş karmaşıklaştıkça daralır ve sola kayar. Basit ve otomatikleşmiş bir işte yüksek gerilim performansı artırır; karmaşık, yeni ve dikkat isteyen bir işte aynı gerilim onu bozar."
+      },
+      {
+        "kind": "list",
+        "title": "Ölçülmüş olanlar",
+        "items": [
+          "Kronik stres uykuyu, bağışıklığı ve kalp-damar sağlığını olumsuz etkiler; bu ilişki iyi belgelenmiştir.",
+          "Denetim duygusu belirleyicidir: aynı yük, üzerinde söz sahibi olduğunuzda çok daha az yıpratır.",
+          "Sosyal destek stresin etkisini azaltır ve bu, en tutarlı bulgulardan biridir.",
+          "Uyku yoksunluğu duygu düzenlemesini en hızlı bozan tek etkendir; öfke eşiğini düşürür, olumsuzu abartır.",
+          "Düzenli fiziksel etkinliğin kaygı ve depresif belirtiler üzerindeki olumlu etkisi randomize deneylerde de görülmüştür.",
+          "'Stres her zaman zararlıdır' önermesi yanlıştır; zararlı olan denetimsiz ve sürekli olandır."
+        ]
+      },
+      {
+        "kind": "example",
+        "title": "Kaygıyı heyecana çevirmek",
+        "body": "Konuşma öncesinde 'sakin olmalıyım' demek çoğu zaman işe yaramaz, çünkü uyarılmış bir bedeni bir anda yatıştırmak zordur. Buna karşılık aynı bedensel duruma 'heyecanlıyım' demek daha küçük bir adımdır ve deneylerde performansı iyileştirdiği gösterilmiştir. Fark bedende değil, yüklenen anlamdadır: kaygı tehdit çerçevesi kurar, heyecan fırsat çerçevesi."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Duyguyu bastırmakla yeniden değerlendirmek arasındaki fark nedir?",
+        "options": [
+          "Aynı şeydir",
+          "Bastırmak dışarıya yansımayı azaltır ama içeride süreyi ve bedensel yükü artırır; yeniden değerlendirme daha etkili ve daha az yıpratıcıdır",
+          "Yeniden değerlendirme duyguyu yok sayar",
+          "Bastırmak her zaman daha iyidir"
+        ],
+        "answerIndex": 1,
+        "explanation": "Bastırma yalnızca ifadeyi kısar. Duruma başka bir açıdan bakmak ise duygunun kendisini değiştirir."
+      },
+      {
+        "id": "q2",
+        "prompt": "Yüksek gerilim hangi işte performansı artırır?",
+        "options": [
+          "Karmaşık ve yeni işlerde",
+          "Basit ve otomatikleşmiş işlerde",
+          "Her işte",
+          "Hiçbir işte"
+        ],
+        "answerIndex": 1,
+        "explanation": "Ters U ilişkisinin tepe noktası, görev karmaşıklaştıkça sola kayar. Karmaşık işlerde aynı gerilim dikkati daraltır ve performansı bozar."
+      },
+      {
+        "id": "q3",
+        "prompt": "Aynı iş yükünün daha az yıpratıcı olmasını sağlayan en tutarlı etken hangisidir?",
+        "options": [
+          "Yükün miktarının azalması",
+          "Kişinin yük üzerinde denetim sahibi olması",
+          "Daha çok ücret",
+          "Daha kısa süre"
+        ],
+        "answerIndex": 1,
+        "explanation": "Denetim duygusu, stresin etkisini belirleyen en güçlü değişkenlerden biridir. Aynı yük, üzerinde söz sahibi olunduğunda çok daha az yıpratır."
+      }
+    ]
+  },
+  {
+    "id": "motivasyon",
+    "moduleId": "insan",
+    "order": 2,
+    "title": "Motivasyon ve erteleme",
+    "subtitle": "İstek beklenmez, koşulları kurulur.",
+    "minutes": 8,
+    "keyTerms": ["içsel motivasyon", "öz yeterlik", "erteleme", "alışkanlık döngüsü"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Motivasyonun, iş başlamadan önce ortaya çıkması gereken bir duygu olduğu düşünülür. Gözlenen sıra çoğu zaman terstir: küçük bir başlangıç eylem üretir, eylem ilerleme üretir, ilerleme de isteği. 'Canım isteyince yaparım' beklentisi, tam da bu döngüyü hiç başlatmadığı için işlemez."
+      },
+      {
+        "kind": "text",
+        "title": "İçeriden ve dışarıdan",
+        "body": "İşin kendisinden gelen istek ile dışarıdan verilen ödül aynı şey değildir. Zaten ilgi duyulan bir işe para bağlandığında, bazı durumlarda içsel istek zayıflar: iş, kendi başına yapılan bir şey olmaktan çıkıp ödül için yapılan bir şeye dönüşür. Bu etki her koşulda ortaya çıkmaz ve boyutu tartışılmıştır; ama yönü tutarlıdır. Pratikte anlamı şudur: kimsenin sevmediği rutin işlerde dış ödül işe yarar, sevilerek yapılan işlerde ödülü öne çıkarmak riskli bir hamledir."
+      },
+      {
+        "kind": "list",
+        "title": "İsteği besleyen üç şey",
+        "items": [
+          "Özerklik: nasıl yapılacağına dair söz sahibi olmak. Aynı işin dayatılması ile seçilmesi bambaşka deneyimlerdir.",
+          "Yetkinlik: ilerlediğini görmek. Görünür ilerleme, uzak bir hedeften çok daha güçlü bir yakıttır.",
+          "Bağ: yapılan işin başkalarıyla ilişkili olması, birinin işe değer vermesi.",
+          "Öz yeterlik: 'bunu yapabilirim' inancı. Yetenekten ayrıdır ve çabayı, dayanıklılığı doğrudan belirler.",
+          "Zorluk ayarı: iş becerinizin biraz üstündeyse akış oluşur; çok kolaysa can sıkıntısı, çok zorsa kaygı."
+        ]
+      },
+      {
+        "kind": "text",
+        "title": "Erteleme bir zaman yönetimi sorunu değil",
+        "body": "Erteleyen insanlar tembel değildir; erteledikleri işle ilgili olumsuz bir duygudan — sıkıntı, belirsizlik, başarısızlık korkusu, kendini yetersiz hissetme — kaçınırlar. Bu yüzden takvim uygulamaları çoğu zaman işe yaramaz: sorun planlama değil duygudur. İşe yarayan yaklaşımlar duyguyu hedefler: işi utanç verici derecede küçük bir ilk adıma indirmek, belirsizliği azaltmak için ilk adımı somutlaştırmak ve erteleyince kendine kızmayı bırakmak. Kendine sert davranmanın ertelemeyi artırdığı, öz şefkatin ise azalttığı ölçülmüştür."
+      },
+      {
+        "kind": "example",
+        "title": "İki dakika kuralı",
+        "body": "Bir işe başlamak için gereken eşiği düşürmenin en pratik yolu, hedefi tamamlamaktan çıkarıp başlamaya indirmektir: 'raporu bitir' değil, 'raporu aç ve bir cümle yaz'. Buradaki hile, iki dakikanın yeterli olması değildir; başladıktan sonra devam etmenin, hiç başlamamaktan çok daha kolay olmasıdır. Aynı mantıkla, işi bırakırken bir sonraki adımı yarım bırakmak — cümleyi bitirmeden kapatmak — ertesi gün başlamayı belirgin biçimde kolaylaştırır."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Motivasyon ile eylem arasındaki sıra genellikle nasıldır?",
+        "options": [
+          "Önce motivasyon, sonra eylem",
+          "Küçük bir başlangıç eylem üretir, eylem ilerleme, ilerleme de isteği",
+          "İkisi bağımsızdır",
+          "Motivasyon sadece dış ödülle gelir"
+        ],
+        "answerIndex": 1,
+        "explanation": "'Canım isteyince yaparım' beklentisi döngüyü hiç başlatmadığı için işlemez. İstek çoğu zaman başlamanın sonucudur."
+      },
+      {
+        "id": "q2",
+        "prompt": "Ertelemenin temel kaynağı nedir?",
+        "options": [
+          "Kötü zaman yönetimi",
+          "İşle ilgili olumsuz bir duygudan kaçınma",
+          "Tembellik",
+          "Bilgi eksikliği"
+        ],
+        "answerIndex": 1,
+        "explanation": "Sıkıntı, belirsizlik ya da başarısızlık korkusu ertelemeyi üretir. Bu yüzden planlama araçları çoğu zaman işe yaramaz; duyguyu hedefleyen yaklaşımlar yarar."
+      },
+      {
+        "id": "q3",
+        "prompt": "Zaten ilgi duyulan bir işe dış ödül bağlamanın riski nedir?",
+        "options": [
+          "Hiçbir riski yoktur",
+          "İçsel isteği zayıflatabilir: iş, kendi başına yapılan bir şeyden ödül için yapılan bir şeye dönüşür",
+          "İşi zorlaştırır",
+          "Yalnızca çocuklarda görülür"
+        ],
+        "answerIndex": 1,
+        "explanation": "Etki her koşulda ortaya çıkmaz ama yönü tutarlıdır. Rutin işlerde dış ödül işe yarar; sevilerek yapılan işlerde ödülü öne çıkarmak risklidir."
+      }
+    ]
+  }
+]
