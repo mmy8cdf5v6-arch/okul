@@ -1,0 +1,595 @@
+[
+  {
+    "id": "enerji-birimleri",
+    "moduleId": "enerji",
+    "order": 1,
+    "title": "Enerji, güç ve kilovatsaat",
+    "subtitle": "Tartışmanın yarısı, birimlerin karıştırılmasından çıkıyor.",
+    "minutes": 8,
+    "keyTerms": [
+      "enerji",
+      "güç",
+      "kilovatsaat",
+      "megavat",
+      "kapasite faktörü"
+    ],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Enerji ile güç aynı şey değildir ve bu ayrım yapılmadan enerji tartışmasının hiçbir cümlesi doğru okunamaz. Güç, birim zamanda aktarılan enerjidir; birimi vattır. Enerji ise gücün süreyle çarpımıdır; birimi vatsaat ya da joule'dür. Bir musluk benzetmesi işe yarar: güç akış hızıdır, enerji kovaya dolan miktardır."
+      },
+      {
+        "kind": "formula",
+        "title": "Temel bağıntı",
+        "expression": "enerji = güç × süre        1 kWh = 1000 W × 1 saat",
+        "note": "2000 vatlık bir ısıtıcı iki saat çalışırsa 4 kilovatsaat harcar. Elektrik faturasında ödediğiniz şey kilovatsaattir, kilovat değil."
+      },
+      {
+        "kind": "text",
+        "title": "Kurulu güç ile üretim farklı şeylerdir",
+        "body": "Bir santralin megavat cinsinden kurulu gücü, en iyi koşulda ne kadar üretebileceğini söyler. Yıl boyunca gerçekte ne ürettiğini ise kapasite faktörü belirler: kurulu gücün yüzde kaçı kadar üretim yapıldığı. Güneş için bu oran çoğu yerde %15-25, kara rüzgârı için %25-40, nükleer için %80-90 civarındadır. 'On megavatlık güneş santrali kuruldu' cümlesi tek başına ne kadar elektrik geleceğini söylemez."
+      },
+      {
+        "kind": "list",
+        "title": "Büyüklük duygusu",
+        "items": [
+          "Bir insanın günlük besin enerjisi yaklaşık 2,5 kWh — bir tost makinesinin iki buçuk saatlik tüketimi.",
+          "Bir Türkiye hanesinin aylık elektriği kabaca 200-250 kWh.",
+          "Ortalama bir binek otomobilin 100 kilometrede harcadığı benzin yaklaşık 60 kWh'lik enerji taşır.",
+          "Elektrikli bir otomobil aynı mesafede yaklaşık 18 kWh kullanır: fark, motorun verim farkıdır.",
+          "İstanbul'dan Londra'ya uçuşta kişi başına düşen enerji, hanenin birkaç aylık elektriğine denk gelir."
+        ]
+      },
+      {
+        "kind": "text",
+        "title": "Neden bu kadar çok birim var",
+        "body": "Enerji tartışmasında joule, kalori, kilovatsaat, ton eşdeğer petrol, BTU ve daha fazlası dolaşır. Bunların hepsi aynı şeyi ölçer; farklı sektörlerin tarihsel alışkanlıklarıdır. Karşılaştırma yaparken ilk iş her şeyi tek bir birime çevirmektir. Çevirmeden yapılan karşılaştırmalar, özellikle haberlerde, çoğu zaman yanlıştır — ve yanlışlığı fark edilmez, çünkü sayıların büyüklüğü hakkında sezgimiz yoktur."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Elektrik faturasında ödenen büyüklük nedir?",
+        "options": [
+          "Kilovat",
+          "Kilovatsaat",
+          "Megavat",
+          "Joule/saniye"
+        ],
+        "answerIndex": 1,
+        "explanation": "Kilovat güçtür, kilovatsaat enerjidir. Fatura, tüketilen enerji miktarı üzerinden hesaplanır."
+      },
+      {
+        "id": "q2",
+        "prompt": "Kapasite faktörü neyi ölçer?",
+        "options": [
+          "Santralin verimini",
+          "Kurulu gücün yüzde kaçı kadar gerçek üretim yapıldığını",
+          "Santralin maliyetini",
+          "Şebekeye bağlantı kapasitesini"
+        ],
+        "answerIndex": 1,
+        "explanation": "Kurulu güç en iyi koşuldaki üretimdir. Kapasite faktörü, yıl boyunca gerçekte ne kadar üretildiğini gösterir ve kaynağa göre çok değişir."
+      },
+      {
+        "id": "q3",
+        "prompt": "2000 vatlık bir ısıtıcı üç saat çalışırsa ne kadar enerji harcar?",
+        "options": [
+          "2 kWh",
+          "3 kWh",
+          "6 kWh",
+          "6000 kWh"
+        ],
+        "answerIndex": 2,
+        "explanation": "2 kW × 3 saat = 6 kWh. Güç ile sürenin çarpımı enerjiyi verir."
+      }
+    ]
+  },
+  {
+    "id": "donusum-ve-verim",
+    "moduleId": "enerji",
+    "order": 2,
+    "title": "Dönüşüm ve verim",
+    "subtitle": "Enerji yok olmaz ama her dönüşümde işe yaramaz hâle gelir.",
+    "minutes": 8,
+    "keyTerms": [
+      "verim",
+      "atık ısı",
+      "termodinamik",
+      "birincil enerji",
+      "faydalı enerji"
+    ],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Enerji korunur; bu birinci yasadır. Ama ikinci yasa daha belirleyicidir: her dönüşümde enerjinin bir kısmı düşük sıcaklıklı ısıya, yani iş yapmaya elverişsiz bir biçime dönüşür. Verim, girene göre işe yarayan çıkış oranıdır ve hiçbir zaman yüzde yüz olamaz."
+      },
+      {
+        "kind": "list",
+        "title": "Tipik verimler",
+        "items": [
+          "İçten yanmalı otomobil motoru: yaklaşık %20-30. Yakıtın büyük kısmı ısı olarak dışarı atılır.",
+          "Elektrik motoru: %85-95. Elektrikli araçların temel avantajı burada.",
+          "Kömür santrali: %35-45. Doğal gaz kombine çevrim: %55-60.",
+          "Isı pompası: 300-400 'verim' gösterir — ısı üretmez, taşır; bu yüzden birden büyük görünür.",
+          "Elektrikli rezistanslı ısıtıcı: %100. Ama ısı pompasına göre üç dört kat daha çok elektrik harcar."
+        ]
+      },
+      {
+        "kind": "text",
+        "title": "Isı pompası neden garip görünür",
+        "body": "Bir ısı pompası bir birim elektrikle üç dört birim ısı sağlar. Bu, enerjinin korunumunu çiğnemez; çünkü pompa ısı üretmez, dışarıdaki soğuk havadan içeriye ısı taşır. Elektrik, ısıyı üretmek için değil taşımak için harcanır. Isınmanın elektrifikasyonunda ısı pompalarının bu kadar merkezî olmasının sebebi budur: aynı konforu üçte bir enerjiyle sağlar."
+      },
+      {
+        "kind": "text",
+        "title": "Birincil enerji tuzağı",
+        "body": "Ülkelerin enerji tüketimi genellikle birincil enerji olarak raporlanır: yakılan kömürün, gazın ve petrolün toplam enerjisi. Ama bunun büyük kısmı atık ısı olarak kaybolur. Elektrifikasyon ilerledikçe birincil enerji tüketimi, hizmet düzeyi aynı kalsa bile düşer — çünkü kayıp azalır. Bu yüzden 'toplam enerji tüketimini şu kadar azaltmalıyız' hedefleri, ölçünün hangi enerji olduğu söylenmeden yorumlanamaz."
+      },
+      {
+        "kind": "example",
+        "title": "Örnek: benzin deposundan tekerleğe",
+        "body": "Depoya koyduğunuz benzinin enerjisinin yaklaşık dörtte biri tekerleğe ulaşır; gerisi motorda ve egzozda ısı olarak kaybolur. Elektrikli araçta şebekeden çıkan elektriğin yaklaşık %80'i tekerleğe ulaşır. Ama karşılaştırmayı burada bırakmak yanıltıcıdır: elektriğin üretilirken de bir verimi vardır. Doğru karşılaştırma, kaynaktan tekerleğe yapılan tam zincir hesabıdır."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Isı pompasının 'verimi' neden %100'ün üzerinde görünür?",
+        "options": [
+          "Enerji korunumunu çiğnediği için",
+          "Isı üretmeyip dışarıdan içeriye ısı taşıdığı, elektriği taşıma işi için harcadığı için",
+          "Ölçüm hatası olduğu için",
+          "Yakıt da kullandığı için"
+        ],
+        "answerIndex": 1,
+        "explanation": "Pompa ısıyı üretmez, taşır. Bu yüzden bir birim elektrikle üç dört birim ısı sağlayabilir; korunum yasası çiğnenmez."
+      },
+      {
+        "id": "q2",
+        "prompt": "İçten yanmalı motorun verimi kabaca ne kadardır?",
+        "options": [
+          "%5-10",
+          "%20-30",
+          "%50-60",
+          "%85-95"
+        ],
+        "answerIndex": 1,
+        "explanation": "Yakıt enerjisinin büyük kısmı ısı olarak kaybolur. Elektrik motorunun %85-95'lik verimiyle arasındaki fark, elektrifikasyonun temel gerekçelerinden biridir."
+      },
+      {
+        "id": "q3",
+        "prompt": "Birincil enerji tüketiminin elektrifikasyonla düşmesi neyi gösterir?",
+        "options": [
+          "Hizmet düzeyinin düştüğünü",
+          "Dönüşüm kayıplarının azaldığını; aynı hizmet daha az birincil enerjiyle sağlanabildiğini",
+          "Nüfusun azaldığını",
+          "Ölçüm yönteminin bozuk olduğunu"
+        ],
+        "answerIndex": 1,
+        "explanation": "Birincil enerjinin büyük kısmı atık ısıdır. Kayıp azaldıkça, aynı hizmet için gereken birincil enerji de düşer."
+      }
+    ]
+  },
+  {
+    "id": "enerji-yogunlugu",
+    "moduleId": "enerji",
+    "order": 3,
+    "title": "Enerji yoğunluğu ve ölçek",
+    "subtitle": "Bir kilogramda ne kadar enerji var — ve bu neden her şeyi belirliyor?",
+    "minutes": 8,
+    "keyTerms": [
+      "enerji yoğunluğu",
+      "güç yoğunluğu",
+      "arazi kullanımı",
+      "malzeme yoğunluğu",
+      "ölçek"
+    ],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Enerji yoğunluğu, birim kütle ya da hacim başına taşınan enerjidir. Fosil yakıtların yüz elli yıllık hâkimiyetinin arkasındaki tek en önemli sayı budur. Bir kilogram dizel yaklaşık 12 kilovatsaat enerji taşır; bugünkü en iyi lityum pillerin kilogramı 0,25 kilovatsaat civarındadır. Aradaki elli katlık fark, bazı işlerin neden kolay bazılarının neden zor elektriklendiğini doğrudan açıklar."
+      },
+      {
+        "kind": "text",
+        "title": "Neden otomobil kolay, uçak zor",
+        "body": "Bir otomobilde ağırlık bir dezavantajdır ama aşılabilir bir dezavantajdır: motorun üç dört kat verimli olması pil ağırlığını büyük ölçüde telafi eder. Uzun menzilli bir uçakta ise yakıt kütlenin çok büyük bir bölümünü oluşturur ve uçuş boyunca hafifleyerek avantaj sağlar. Aynı enerjiyi pille taşımak, uçağın kalkamayacağı kadar ağır olması demektir. Havacılığın en zor sektör olmasının sebebi bir teknoloji eksikliği değil, bu oran."
+      },
+      {
+        "kind": "list",
+        "title": "İki farklı yoğunluk",
+        "items": [
+          "Enerji yoğunluğu: bir kilogramda ne kadar enerji var? Taşınabilirliği belirler.",
+          "Güç yoğunluğu: bir metrekareden ne kadar güç alınır? Arazi kullanımını belirler.",
+          "Güneş ve rüzgârın güç yoğunluğu düşüktür; aynı enerji için çok daha geniş alan gerekir.",
+          "Ama arazi 'kaplanmış' olmak zorunda değildir: rüzgâr türbinleri arasındaki toprak tarıma açık kalır.",
+          "Nükleer ve fosil santraller yüksek güç yoğunluğuna sahiptir; buna karşılık yakıt zincirinin arazi ve su etkisi ayrıca hesaplanmalıdır."
+        ]
+      },
+      {
+        "kind": "text",
+        "title": "Malzeme yoğunluğu",
+        "body": "Düşük güç yoğunluğunun ikinci sonucu malzemedir. Aynı miktarda elektrik için yenilenebilir sistemler daha çok çelik, beton, bakır ve kritik mineral gerektirir. Bu, geçişin bir madencilik ve tedarik zinciri sorunu olduğu anlamına gelir. Karşılığında sürekli yakıt taşımaya son verilir: bir kez kurulan türbin kırk yıl boyunca yakıt istemez, oysa aynı sürede bir kömür santrali milyonlarca ton kömür yakar. Karşılaştırmayı yalnızca kurulum malzemesi üzerinden yapmak, bu farkı gizler."
+      },
+      {
+        "kind": "example",
+        "title": "Örnek: hidrojenin çekiciliği ve sorunu",
+        "body": "Hidrojenin kilogram başına enerjisi dizelin üç katıdır; bu onu havacılık ve ağır sanayi için çekici kılar. Ama hacim başına enerjisi çok düşüktür: sıvılaştırmak için eksi 253 dereceye soğutmak ya da çok yüksek basınçta sıkıştırmak gerekir. Üstelik hidrojen bir enerji kaynağı değil, bir taşıyıcıdır — üretmek için enerji harcanır ve zincirin her adımında kayıp olur. Doğrudan elektrifikasyonun mümkün olduğu yerde hidrojen kullanmak, aynı hizmeti iki üç kat enerjiyle almaktır."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Enerji yoğunluğu neyi belirler?",
+        "options": [
+          "Bir yakıtın fiyatını",
+          "Birim kütle ya da hacim başına taşınan enerjiyi, dolayısıyla taşınabilirliği",
+          "Santralin verimini",
+          "Karbon salımını"
+        ],
+        "answerIndex": 1,
+        "explanation": "Bir kilogram dizel, bir kilogram pilden yaklaşık elli kat fazla enerji taşır. Bu oran, hangi işlerin kolay hangilerinin zor elektrikleneceğini belirler."
+      },
+      {
+        "id": "q2",
+        "prompt": "Uzun menzilli havacılığın elektrifikasyonu neden özellikle zordur?",
+        "options": [
+          "Motorlar yetersiz olduğu için",
+          "Yakıt kütlenin büyük bölümünü oluşturur ve pil aynı enerjiyi taşıyamayacak kadar ağırdır",
+          "Havaalanlarında şarj altyapısı olmadığı için",
+          "Yolcular tercih etmediği için"
+        ],
+        "answerIndex": 1,
+        "explanation": "Otomobilde verim farkı ağırlığı telafi eder. Uçakta ise gereken pil kütlesi kalkışı imkânsız kılar; sorun teknoloji eksikliği değil, enerji yoğunluğu oranı."
+      },
+      {
+        "id": "q3",
+        "prompt": "Hidrojen hakkında doğru olan hangisidir?",
+        "options": [
+          "Bir enerji kaynağıdır",
+          "Bir enerji taşıyıcısıdır; üretmek enerji harcar ve zincirin her adımında kayıp olur",
+          "Kayıpsız depolanabilir",
+          "Elektrikten daha verimlidir"
+        ],
+        "answerIndex": 1,
+        "explanation": "Hidrojen yerden çıkarılmaz, üretilir. Doğrudan elektrifikasyonun mümkün olduğu yerde kullanmak, aynı hizmeti kat kat enerjiyle almak demektir."
+      }
+    ]
+  },
+  {
+    "id": "enerji-nereye-gidiyor",
+    "moduleId": "enerji",
+    "order": 4,
+    "title": "Enerji nereye gidiyor",
+    "subtitle": "Salımın tamamı elektrikten gelmiyor — bu yüzden çözüm de tek başına elektrikte değil.",
+    "minutes": 8,
+    "keyTerms": [
+      "sektörel dağılım",
+      "sanayi ısısı",
+      "çimento",
+      "tarım",
+      "zor sektörler"
+    ],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "İklim tartışması çoğu zaman elektrik üzerinden yürür ama küresel sera gazı salımının yalnızca dörtte birinden biraz fazlası elektrik ve ısı üretiminden gelir. Geri kalanı sanayi süreçleri, ulaşım, binalar, tarım ve arazi kullanımı arasında dağılır. Bu dağılımı bilmek, çözümlerin nereye yoğunlaşması gerektiğini de belirler."
+      },
+      {
+        "kind": "list",
+        "title": "Kabaca dağılım",
+        "items": [
+          "Elektrik ve ısı üretimi: en büyük tek dilim, yaklaşık dörtte bir.",
+          "Sanayi: çelik, çimento, kimya. Bir kısmı enerji, bir kısmı doğrudan kimyasal süreç salımı.",
+          "Ulaşım: karayolu ağırlıklı; havacılık ve denizcilik daha küçük ama azaltması en zor kısım.",
+          "Binalar: ısıtma, soğutma, pişirme.",
+          "Tarım ve arazi kullanımı: metan, azot oksit ve ormansızlaşma. Karbondioksit dışı gazların ağırlıklı kaynağı."
+        ]
+      },
+      {
+        "kind": "text",
+        "title": "Çimentonun özel durumu",
+        "body": "Çimento üretiminin salımı yalnızca fırını ısıtmaktan gelmez. Kalker ısıtıldığında kimyasal olarak ayrışır ve karbondioksit açığa çıkar; bu, kullanılan enerji ne kadar temiz olursa olsun devam eder. Süreç salımı denen bu kısım, çimento salımının yaklaşık yarısıdır. Aynı sorun çelikte kok kömürünün indirgeyici olarak kullanılmasında da vardır. Bu sektörlerde çözüm elektrifikasyon değil, sürecin kendisini değiştirmektir."
+      },
+      {
+        "kind": "text",
+        "title": "Kolay ve zor kısımlar",
+        "body": "Elektrik üretimini temizlemek ve karayolu taşımacılığını elektriklendirmek teknik olarak çözülmüş sayılabilir; sorun hız ve maliyettir. Uzun mesafeli havacılık, denizcilik, yüksek sıcaklık gerektiren sanayi ısısı, çimento ve gübre üretimi ise henüz olgun bir alternatife sahip değildir. Bir iklim planının ciddiyeti, kolay kısımlara ne dediğinden çok zor kısımlara ne dediğinden anlaşılır."
+      },
+      {
+        "kind": "example",
+        "title": "Örnek: metanın kısa ömrü",
+        "body": "Metan, atmosferde karbondioksitten çok daha kısa kalır — yaklaşık on iki yıl — ama kaldığı sürece çok daha güçlü bir sera gazıdır. Bu, metan salımını azaltmayı özellikle çekici kılar: etkisi hızlı görülür. Buna karşılık karbondioksitin bir kısmı yüzyıllar boyunca atmosferde kalır; bugün durdurulsa bile birikmiş etki devam eder. İki gaz için 'azaltım' aynı şey demek değildir."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Küresel sera gazı salımının elektrik ve ısı üretiminden gelen payı kabaca ne kadardır?",
+        "options": [
+          "Neredeyse tamamı",
+          "Yaklaşık dörtte biri",
+          "Yaklaşık onda biri",
+          "Yarısından fazlası"
+        ],
+        "answerIndex": 1,
+        "explanation": "En büyük tek dilim olsa da toplamın yalnızca dörtte biri kadardır. Sanayi, ulaşım, binalar ve tarım geri kalanı oluşturur."
+      },
+      {
+        "id": "q2",
+        "prompt": "Çimento üretimindeki 'süreç salımı' neden özel bir sorundur?",
+        "options": [
+          "Fırınlar çok enerji harcadığı için",
+          "Kalkerin kimyasal ayrışmasından geldiği için, kullanılan enerji temizlense bile devam eder",
+          "Nakliye salımı yüksek olduğu için",
+          "İşçilik yoğun olduğu için"
+        ],
+        "answerIndex": 1,
+        "explanation": "Salımın yaklaşık yarısı kimyasal süreçten gelir. Elektrifikasyon bu kısmı çözmez; sürecin kendisinin değişmesi gerekir."
+      },
+      {
+        "id": "q3",
+        "prompt": "Metanın karbondioksitten farkı nedir?",
+        "options": [
+          "Sera gazı değildir",
+          "Atmosferde çok daha kısa kalır ama kaldığı sürece çok daha güçlüdür",
+          "Yalnızca sanayiden çıkar",
+          "Etkisi ölçülemez"
+        ],
+        "answerIndex": 1,
+        "explanation": "Kısa ömür, metan azaltımının etkisinin hızlı görülmesini sağlar. Karbondioksitin bir kısmı ise yüzyıllarca atmosferde kalır."
+      }
+    ]
+  },
+  {
+    "id": "sera-etkisi",
+    "moduleId": "iklim",
+    "order": 1,
+    "title": "Sera etkisi",
+    "subtitle": "Fizik yeni değil: 19. yüzyılda ölçüldü, hesabı basit.",
+    "minutes": 9,
+    "keyTerms": [
+      "sera etkisi",
+      "albedo",
+      "kızılötesi",
+      "enerji dengesi",
+      "ışınımsal zorlama"
+    ],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Dünya güneşten görünür ışık alır ve kızılötesi ışıma olarak enerji verir. Uzun vadede gelen ile giden eşitlenir; bu dengeyi kuran sıcaklık, yüzey sıcaklığıdır. Atmosferdeki bazı gazlar görünür ışığa neredeyse şeffaftır ama kızılötesini soğurur ve bir kısmını yeryüzüne geri gönderir. Bu, dengenin daha yüksek bir sıcaklıkta kurulması demektir."
+      },
+      {
+        "kind": "chart",
+        "chartId": "sera-etkisi"
+      },
+      {
+        "kind": "text",
+        "title": "Fiziği kim, ne zaman kurdu",
+        "body": "Fourier 1820'lerde atmosferin yalıtkan etkisini fark etti. Eunice Foote 1856'da karbondioksit dolu bir kabın güneşte daha çok ısındığını ölçtü ve sonucun iklimsel anlamını yazdı; çalışması uzun süre unutuldu. Tyndall 1859'da hangi gazların kızılötesini soğurduğunu laboratuvarda ölçtü. Arrhenius 1896'da karbondioksitin iki katına çıkması hâlinde sıcaklık artışını hesapladı ve bugünkü tahminlere şaşırtıcı biçimde yakın bir sayı buldu. Bu, yeni bir iddia değil, yüz altmış yıllık bir ölçümdür."
+      },
+      {
+        "kind": "list",
+        "title": "Bilinen ve bilinmeyen",
+        "items": [
+          "Bilinen: sera gazlarının kızılötesini soğurduğu — laboratuvarda doğrudan ölçülür.",
+          "Bilinen: atmosferdeki karbondioksitin sanayi devriminden bu yana belirgin biçimde arttığı ve artışın kaynağının fosil yakıtlar olduğu; izotop oranları bunu gösterir.",
+          "Bilinen: yüzey ve okyanus sıcaklıklarının arttığı — birbirinden bağımsız birçok ölçüm dizisiyle.",
+          "Belirsiz olan: geri beslemelerin toplam gücü, dolayısıyla ısınmanın kesin büyüklüğü.",
+          "Belirsiz olan: bölgesel etkilerin dağılımı ve uç olayların sıklığındaki değişimin ayrıntısı."
+        ]
+      },
+      {
+        "kind": "text",
+        "title": "Albedo: gezegenin aynası",
+        "body": "Gelen güneş enerjisinin bir kısmı doğrudan yansıtılır. Bu oran albedodur ve yaklaşık %30'dur. Buzun albedosu çok yüksek, açık okyanusunki çok düşüktür. Bu yüzden buz erimesi yalnızca bir sonuç değil, aynı zamanda bir hızlandırıcıdır: daha az buz, daha çok soğurma, daha çok ısınma. Geri besleme kavramının en somut örneği budur."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Sera gazları enerji dengesini nasıl değiştirir?",
+        "options": [
+          "Güneş ışığını engelleyerek",
+          "Kızılötesi ışımayı soğurup bir kısmını geri göndererek dengenin daha yüksek sıcaklıkta kurulmasına yol açarak",
+          "Atmosferi kalınlaştırarak",
+          "Albedoyu düşürerek"
+        ],
+        "answerIndex": 1,
+        "explanation": "Görünür ışığa şeffaf, kızılötesine değildirler. Giden ışıma zorlaşınca denge daha yüksek bir yüzey sıcaklığında kurulur."
+      },
+      {
+        "id": "q2",
+        "prompt": "Sera etkisinin fiziği ne zaman ölçüldü?",
+        "options": [
+          "1990'larda",
+          "19. yüzyılda — Foote, Tyndall ve Arrhenius'un çalışmalarıyla",
+          "1960'larda",
+          "Henüz ölçülmedi"
+        ],
+        "answerIndex": 1,
+        "explanation": "Gazların kızılötesi soğurması 1850'lerde laboratuvarda ölçüldü. Arrhenius 1896'da bugünküne yakın bir ısınma tahmini yaptı."
+      },
+      {
+        "id": "q3",
+        "prompt": "Buz erimesi neden bir hızlandırıcıdır?",
+        "options": [
+          "Deniz seviyesini yükselttiği için",
+          "Yüksek albedolu buzun yerini düşük albedolu su alır ve daha çok güneş enerjisi soğurulur",
+          "Metan saldığı için",
+          "Okyanus akıntılarını durdurduğu için"
+        ],
+        "answerIndex": 1,
+        "explanation": "Buz gelen ışığın büyük kısmını yansıtır, açık su soğurur. Bu, ısınmayı kendi kendine besleyen bir geri besleme döngüsüdür."
+      }
+    ]
+  },
+  {
+    "id": "karbon-butcesi",
+    "moduleId": "iklim",
+    "order": 2,
+    "title": "Karbon döngüsü ve bütçe",
+    "subtitle": "Sıcaklığı belirleyen şey yıllık salım değil, toplam birikim.",
+    "minutes": 9,
+    "keyTerms": [
+      "karbon döngüsü",
+      "karbon bütçesi",
+      "birikimli salım",
+      "yutak",
+      "net sıfır"
+    ],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Karbon sürekli dolaşır: bitkiler alır, canlılar salar, okyanus çözer ve bırakır. Bu döngü sanayi öncesinde kabaca dengedeydi. Fosil yakıtlar ise milyonlarca yıldır döngünün dışında duran karbonu birkaç yüzyıl içinde atmosfere ekliyor. Salınan karbondioksitin yaklaşık yarısı okyanuslar ve kara ekosistemleri tarafından soğuruluyor; kalanı birikiyor."
+      },
+      {
+        "kind": "chart",
+        "chartId": "karbon-butcesi"
+      },
+      {
+        "kind": "text",
+        "title": "Neden 'bütçe'",
+        "body": "İklim biliminin şaşırtıcı sadelikteki bulgularından biri şudur: uzun vadeli sıcaklık artışı, toplam birikimli karbondioksit salımıyla yaklaşık doğrusal bir ilişki gösterir. Bu, belirli bir sıcaklık hedefine karşılık gelen sonlu bir toplam salım miktarı olduğu anlamına gelir. Kalan bütçe, o miktardan bugüne kadar salınanın çıkarılmış hâlidir. Yıllık salımı yavaşça azaltmak eğriyi düzleştirir ama altındaki alanı büyütmeye devam eder."
+      },
+      {
+        "kind": "list",
+        "title": "Bütçe hesabının ayrıntıları",
+        "items": [
+          "Bütçe bir olasılık ifadesidir: '%50 olasılıkla 1,5 °C altında kalmak için' gibi.",
+          "Karbondioksit dışı gazların katkısı ayrı varsayımlarla hesaba katılır.",
+          "Bütçe her yıl geçen yılın salımı kadar küçülür; gecikmek doğrudan pahalıdır.",
+          "Net sıfır, salımın sıfırlanması değil; kalan salımın kalıcı yutaklarla dengelenmesidir.",
+          "Yutakların kapasitesi sınırlıdır ve orman yangınlarıyla geri dönebilir; bu yüzden 'dengeleme' kesin bir çözüm sayılmaz."
+        ]
+      },
+      {
+        "kind": "text",
+        "title": "Gecikmenin bileşik maliyeti",
+        "body": "Bütçe mantığının en sert sonucu şudur: başlangıcı ertelemek, aynı hedefe ulaşmak için gereken yıllık azaltım hızını yükseltir. On yıl beklemek, sonraki dönemde iki kat daha dik bir düşüş gerektirebilir. Bu, teknik bir zorluk kadar bir siyaset ekonomisi sorunudur: dik geçişler pahalı ve toplumsal olarak sarsıcıdır. Erken ve ılımlı ile geç ve sert arasındaki seçim, tam olarak bugün yapılıyor."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Karbon bütçesi kavramı neye dayanır?",
+        "options": [
+          "Yıllık salım sınırlarına",
+          "Uzun vadeli sıcaklık artışının toplam birikimli salımla yaklaşık doğrusal ilişkisine",
+          "Ülkelerin gönüllü hedeflerine",
+          "Okyanusların soğurma kapasitesine"
+        ],
+        "answerIndex": 1,
+        "explanation": "Sıcaklık, o yılki salımla değil birikmiş toplamla belirlenir. Bu yüzden hedefe karşılık gelen sonlu bir toplam miktar tanımlanabilir."
+      },
+      {
+        "id": "q2",
+        "prompt": "'Net sıfır' ne anlama gelir?",
+        "options": [
+          "Hiç salım yapılmaması",
+          "Kalan salımın kalıcı yutaklarla dengelenmesi",
+          "Salımın yarıya indirilmesi",
+          "Fosil yakıt kullanımının durdurulması"
+        ],
+        "answerIndex": 1,
+        "explanation": "Bazı salımlar kısa vadede sıfırlanamaz. Net sıfır, bunların atmosferden karbon çeken yutaklarla dengelenmesidir."
+      },
+      {
+        "id": "q3",
+        "prompt": "Azaltıma geç başlamanın sonucu nedir?",
+        "options": [
+          "Bütçe büyür",
+          "Aynı hedefe ulaşmak için gereken yıllık azaltım hızı yükselir",
+          "Hiçbir şey değişmez",
+          "Sıcaklık hedefi otomatik olarak yükselir"
+        ],
+        "answerIndex": 1,
+        "explanation": "Bütçe her yıl küçüldüğü için kalan yol daha dik olur. Erken ve ılımlı ile geç ve sert arasındaki tercih bugün yapılıyor."
+      }
+    ]
+  },
+  {
+    "id": "geri-besleme",
+    "moduleId": "iklim",
+    "order": 3,
+    "title": "Geri besleme ve devrilme noktaları",
+    "subtitle": "Belirsizlik, bilgisizlik değil; asimetrik bir risk dağılımı.",
+    "minutes": 9,
+    "keyTerms": [
+      "geri besleme",
+      "iklim duyarlılığı",
+      "devrilme noktası",
+      "atalet",
+      "kalın kuyruk"
+    ],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Karbondioksitin iki katına çıkmasının doğrudan etkisi yaklaşık 1,2 derecedir ve bu hesap oldukça sağlamdır. Gerçek ısınmanın bundan büyük olmasının sebebi geri beslemelerdir. Isınan hava daha çok su buharı taşır ve su buharı da bir sera gazıdır. Eriyen buz albedoyu düşürür. Bulutlar hem soğutucu hem ısıtıcı etki yapar ve toplam işareti hâlâ en büyük belirsizlik kaynağıdır."
+      },
+      {
+        "kind": "chart",
+        "chartId": "geri-besleme"
+      },
+      {
+        "kind": "text",
+        "title": "Neden üst kuyruk uzun",
+        "body": "Isınma, geri besleme kazancına doğrusal değil hiperbolik bağlıdır. Kazanç 0,5'ten 0,6'ya çıkarsa ısınma 2,4'ten 3 dereceye çıkar; 0,7'den 0,8'e çıkarsa 4'ten 6 dereceye. Aynı büyüklükteki bir belirsizlik, üst uçta çok daha büyük bir sıcaklık aralığına karşılık gelir. İklim duyarlılığı tahminlerinin neden simetrik olmayan bir aralık olarak verildiğini bu açıklar — ve risk değerlendirmesinde önemli olan ortalama değil, üst kuyruğun ne kadar kötü olabileceğidir."
+      },
+      {
+        "kind": "list",
+        "title": "Devrilme noktaları",
+        "items": [
+          "Grönland ve Batı Antarktika buz örtülerinin geri döndürülemez erime eşiği.",
+          "Kuzey Atlantik'teki büyük akıntı sisteminin zayıflaması ya da durması.",
+          "Amazon'un yağmur ormanından savana yapısına geçmesi.",
+          "Donmuş toprakların çözülüp metan ve karbondioksit salması.",
+          "Bu eşiklerin yerleri kesin bilinmiyor. Bilinmemesi, olmadıkları anlamına gelmiyor; belirsizliğin kendisi bir risk faktörü."
+        ]
+      },
+      {
+        "kind": "text",
+        "title": "Atalet: gecikmeli sistem",
+        "body": "Okyanuslar devasa bir ısı deposudur ve yavaş ısınır. Bu, bugünkü karbondioksit düzeyinin etkisinin henüz tam görünmediği anlamına gelir; salım bugün sıfırlansa bile bir miktar ek ısınma yolda olur. Aynı atalet ters yönde de işler: azaltımın etkisi de yıllar içinde görünür. Sistemin gecikmeli olması, geri bildirime bakarak yönetmeyi imkânsız kılar — direksiyonu çevirdikten dakikalar sonra dönen bir gemi gibi."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "İklim duyarlılığı tahminlerinin üst kuyruğunun uzun olmasının sebebi nedir?",
+        "options": [
+          "Ölçüm hatası",
+          "Isınmanın geri besleme kazancına hiperbolik bağlı olması; aynı belirsizlik üst uçta çok daha geniş bir aralık üretir",
+          "Modellerin yetersizliği",
+          "Veri eksikliği"
+        ],
+        "answerIndex": 1,
+        "explanation": "ΔT = ΔT₀/(1−f) bağıntısı, f büyüdükçe hızla dikleşir. Kazançtaki simetrik belirsizlik sıcaklıkta simetrik olmayan bir aralığa dönüşür."
+      },
+      {
+        "id": "q2",
+        "prompt": "Devrilme noktalarının yerlerinin kesin bilinmemesi ne anlama gelir?",
+        "options": [
+          "Var olmadıkları",
+          "Belirsizliğin kendisinin bir risk faktörü olduğu",
+          "Endişeye gerek olmadığı",
+          "Modellerin geçersiz olduğu"
+        ],
+        "answerIndex": 1,
+        "explanation": "Eşiğin nerede olduğunu bilmemek, ona yaklaşmanın güvenli olduğunu göstermez. Belirsizlik burada rahatlatıcı değil, tedbir gerektiren bir bulgudur."
+      },
+      {
+        "id": "q3",
+        "prompt": "İklim sistemindeki atalet neyi zorlaştırır?",
+        "options": [
+          "Ölçüm yapmayı",
+          "Geri bildirime bakarak yönetmeyi: müdahalenin etkisi yıllar sonra görünür",
+          "Model kurmayı",
+          "Uluslararası anlaşmaları"
+        ],
+        "answerIndex": 1,
+        "explanation": "Okyanusların ısı kapasitesi sistemi gecikmeli kılar. Bugünkü düzeyin etkisi henüz tam görünmemiştir; azaltımın etkisi de gecikmeli görünür."
+      }
+    ]
+  }
+]

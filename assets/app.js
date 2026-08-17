@@ -2084,6 +2084,175 @@
               ? "Toplam en yüksek noktasında — faydacı ölçüt burayı seçer. Ama en kötü durumdaki kişi başlangıçtakinin çok altında."
               : "Kaydırıcıyı sağa itmek toplamı büyütüyor ve en alttakini aşağı çekiyor. İki ölçüt aynı veriden iki farklı 'doğru' çıkarır; hangisinin geçerli olduğu veriyle çözülemez.") };
       }
+    },
+
+    "sera-etkisi": {
+      title: "Sera etkisi: tek katmanlı hesap",
+      note: "Basitleştirilmiş bir denge modeli: gelen güneş enerjisi ile giden kızılötesi eşitlenir. Gerçek iklim modelleri çok daha karmaşıktır ama büyüklük mertebesi budur.",
+      controls: [
+        { key: "f", label: "Atmosferin kızılötesi tutma oranı", min: 0, max: 90, step: 1, def: 77, fmt: pctS },
+        { key: "a", label: "Yansıtma (albedo)", min: 20, max: 40, step: 1, def: 30, fmt: pctS }
+      ],
+      draw: function (p) {
+        var S = 1361, SIG = 5.67e-8, alb = p.a / 100, i;
+        var Ts = function (fr) {
+          var Te = Math.pow((S * (1 - alb)) / (4 * SIG), 0.25);
+          return Te / Math.pow(1 - fr / 2, 0.25) - 273.15;
+        };
+        var LO = -40, HI = 40, Y = function (c) { return (c - LO) / (HI - LO); };
+        var pts = [];
+        for (i = 0; i <= 90; i++) pts.push([i / 90, Math.max(0, Math.min(1, Y(Ts(i / 100))))]);
+        var simdi = Ts(p.f / 100), cip = Ts(0);
+        var s = frame("Kızılötesi tutma oranı", "Yüzey sıcaklığı");
+        s += gLine(0, Y(0), 1, Y(0), { c: "var(--rule)", w: 1.2, d: "3 3" });
+        s += gTxt(0.01, Y(0), "0 °C", { a: "start", dy: -4, s: 8.5 });
+        s += gLine(0, Y(15), 1, Y(15), { c: "var(--ok)", w: 1.3, d: "5 3" });
+        s += gTxt(0.01, Y(15), "bugünkü ortalama", { a: "start", dy: -4, c: "var(--ok)", s: 8.5 });
+        s += gPoly(pts, { c: "var(--accent)", w: 2.4 });
+        s += gDot(p.f / 90, Math.max(0, Math.min(1, Y(simdi))), { c: "var(--ink)" });
+        s += gTxt(p.f / 90, Math.max(0, Math.min(1, Y(simdi))), r1(simdi) + " °C", {
+          a: p.f > 60 ? "end" : "start", dx: p.f > 60 ? -6 : 6, dy: -5, c: "var(--ink)", b: 1, s: 10 });
+        [0, 45].forEach(function (v) { s += gTxt(v / 90, 0, "%" + v, { a: "middle", dy: 12, s: 9 }); });
+        return { svg: s, text: p.f === 0
+          ? "Atmosfer kızılötesini hiç tutmasaydı yüzey ortalaması " + r1(cip) + " °C olurdu: okyanuslar donardı. " +
+            "Sera etkisi bir arıza değil, hayatın ön koşulu."
+          : "Bu tutma oranında yüzey ortalaması " + r1(simdi) + " °C. Atmosfersiz durumla arasındaki " +
+            r1(simdi - cip) + " derecelik fark sera etkisidir. Sorun etkinin varlığı değil, sanayi devriminden bu yana " +
+            "tutma oranının artırılmış olması." };
+      }
+    },
+
+    "karbon-butcesi": {
+      title: "Kalan karbon bütçesi",
+      note: "Sıcaklık artışını belirleyen şey yıllık salım değil, toplam birikimdir. Bu yüzden geç başlayan bir azaltım, aynı hedefe ulaşmak için çok daha dik olmak zorundadır.",
+      controls: [{ key: "r", label: "Yıllık azaltım hızı", min: 0, max: 20, step: 1, def: 3, fmt: pctS }],
+      draw: function (p) {
+        var E0 = 40, B = 250, r = p.r / 100, N = 40, i;   // Gt CO₂/yıl, kalan bütçe Gt
+        var kum = function (t) { return r === 0 ? E0 * t : (E0 * (1 - Math.pow(1 - r, t))) / r; };
+        var TOP = 500, pts = [];
+        for (i = 0; i <= N; i++) pts.push([i / N, Math.min(1, kum(i) / TOP)]);
+        var tukenis = r === 0 ? B / E0
+          : (1 - (B * r) / E0 <= 0 ? Infinity : Math.log(1 - (B * r) / E0) / Math.log(1 - r));
+        var s = frame("Yıl (bugünden itibaren)", "Toplam salım (Gt CO₂)");
+        s += gArea(pts.concat([[1, 0], [0, 0]]), { c: "var(--accent)", o: 0.10 });
+        s += gPoly(pts, { c: "var(--accent)", w: 2.4 });
+        s += gLine(0, B / TOP, 1, B / TOP, { c: "var(--no)", w: 1.6, d: "5 3" });
+        s += gTxt(0.01, B / TOP, "1,5 °C bütçesi", { a: "start", dy: -5, c: "var(--no)", s: 9, b: 1 });
+        if (isFinite(tukenis) && tukenis <= N) {
+          s += gLine(tukenis / N, 0, tukenis / N, B / TOP, { c: "var(--ink)", w: 1.4, d: "2 3" });
+          s += gDot(tukenis / N, B / TOP, { c: "var(--ink)" });
+        }
+        [10, 20, 30].forEach(function (v) { s += gTxt(v / N, 0, v + "", { a: "middle", dy: 12, s: 9 }); });
+        return { svg: s, text: !isFinite(tukenis)
+          ? "Yılda %" + p.r + " azaltımla toplam salım " + r0(E0 / r) + " Gt'ta duruyor ve bütçe hiç tükenmiyor. " +
+            "Bu hızın bugüne kadar hiçbir büyük ekonomide sürdürülebilmiş olmadığını da eklemek gerekir."
+          : tukenis > N
+            ? "Yılda %" + p.r + " azaltımla bütçe kırk yılı aşan bir sürede tükeniyor."
+            : (p.r === 0
+                ? "Salım bugünkü düzeyde kalırsa kalan bütçe yaklaşık " + r1(tukenis) + " yılda biter."
+                : "Yılda %" + p.r + " azaltımla bütçe yaklaşık " + r1(tukenis) + " yılda tükeniyor. " +
+                  "Eğri düzleşiyor ama alan büyümeye devam ediyor: önemli olan eğrinin yüksekliği değil altında kalan alan.") };
+      }
+    },
+
+    "elektrik-kaynaklari": {
+      title: "Elektrik kaynakları: iki ölçüt",
+      note: "Değerler yaşam döngüsü çalışmalarının yaygın olarak kullanılan ortanca tahminleridir; ülkeye, teknolojiye ve kuruluma göre belirgin biçimde değişir.",
+      controls: [{ key: "o", type: "choice", label: "Ölçüt", def: "karbon",
+        options: [["karbon", "gCO₂/kWh"], ["olum", "Ölüm / TWh"]] }],
+      draw: function (p) {
+        var K = [
+          ["Kömür", 820, 24.6], ["Doğal gaz", 490, 2.8], ["Biyokütle", 230, 4.6],
+          ["Güneş", 45, 0.02], ["Hidro", 24, 1.3], ["Nükleer", 12, 0.03], ["Rüzgâr", 11, 0.04]
+        ];
+        var karbon = p.o === "karbon", i;
+        var en = karbon ? 820 : 24.6;
+        var s = "";
+        for (i = 0; i < K.length; i++) {
+          var v = karbon ? K[i][1] : K[i][2], y = 0.94 - i * 0.135;
+          s += gRect(0.30, y - 0.052, 0.30 + 0.68 * (v / en), y + 0.052,
+            { c: i < 3 ? "var(--no)" : "var(--ok)", o: 0.8, r: 2 });
+          s += gTxt(0.28, y, K[i][0], { a: "end", dy: 3.5, s: 9 });
+          s += gTxt(0.32 + 0.68 * (v / en), y, karbon ? r0(v) + "" : (v < 1 ? v.toFixed(2) : r1(v)),
+            { a: "start", dy: 3.5, s: 9, b: 1, c: "var(--muted)" });
+        }
+        return { svg: s, text: karbon
+          ? "Yaşam döngüsü boyunca üretilen sera gazı, kilovatsaat başına gram cinsinden. Kömür ile rüzgâr arasında yaklaşık " +
+            r0(820 / 11) + " kat fark var. Güneş ve rüzgârın değeri sıfır değildir: panel, türbin ve kurulum da salım üretir."
+          : "Terawattsaat başına düşen ölüm — kaza, kirlilik ve madencilik dahil. Kömürün payının büyük kısmı hava kirliliğinden " +
+            "gelir ve kazalardan çok daha fazladır. Nükleerin sayısı, büyük kazalar hesaba katıldığında bile en düşükler arasında." };
+      }
+    },
+
+    "elektrikli-arac": {
+      title: "Elektrikli araç şebekeye bağlı",
+      note: "Üretim salımı ömür boyu kilometreye yayılmıştır; elektrikli araçta pil yüzünden bu pay daha yüksektir. Bu yüzden karşılaştırma egzozla değil, baştan sona yapılmalıdır.",
+      controls: [
+        { key: "g", label: "Şebekenin karbon yoğunluğu", min: 0, max: 900, step: 50, def: 400,
+          fmt: function (v) { return v + " g/kWh"; } },
+        { key: "t", label: "Benzinlinin tüketimi", min: 4, max: 10, step: 1, def: 7,
+          fmt: function (v) { return v + " L/100km"; } }
+      ],
+      draw: function (p) {
+        var G = 900, i;
+        var benzin = 30 * p.t + 30;                       // yakıt + üretim, g CO₂/km
+        var elek = function (g) { return 0.18 * g + 55; };
+        var TOP = 400, Y = function (v) { return Math.min(1, v / TOP); };
+        var pts = [];
+        for (i = 0; i <= 60; i++) { var g = (G * i) / 60; pts.push([i / 60, Y(elek(g))]); }
+        var esit = (benzin - 55) / 0.18;
+        var s = frame("Şebeke karbon yoğunluğu", "g CO₂ / km");
+        s += gLine(0, Y(benzin), 1, Y(benzin), { c: "var(--no)", w: 2.2 });
+        s += gTxt(0.99, Y(benzin), "benzinli " + r0(benzin), { a: "end", dy: -5, c: "var(--no)", b: 1, s: 9 });
+        s += gPoly(pts, { c: "var(--accent)", w: 2.4 });
+        if (esit > 0 && esit < G) {
+          s += gLine(esit / G, 0, esit / G, Y(benzin), { c: "var(--rule)", w: 1.2, d: "2 3" });
+          s += gTxt(esit / G, 0, "başa baş", { a: "middle", dy: 12, s: 8.5, c: "var(--muted)" });
+        }
+        s += gDot(p.g / G, Y(elek(p.g)), { c: "var(--ink)" });
+        s += gTxt(p.g / G, Y(elek(p.g)), "elektrikli " + r0(elek(p.g)), {
+          a: p.g > 500 ? "end" : "start", dx: p.g > 500 ? -6 : 6, dy: 12, c: "var(--ink)", b: 1, s: 9 });
+        s += gTxt(300 / G, 0, "300", { a: "middle", dy: 12, s: 9 });
+        return { svg: s, text: "Şebeke " + p.g + " g/kWh iken elektrikli araç kilometre başına " + r0(elek(p.g)) +
+          " g, benzinli " + r0(benzin) + " g CO₂ üretiyor. " + (esit <= 0
+            ? "Bu tüketimdeki bir benzinli, en kirli şebekede bile elektrikliyi geçemez."
+            : esit >= G
+              ? "Başa baş noktası ölçeğin dışında: bu tüketimle elektrikli araç her şebekede önde."
+              : "Başa baş noktası " + r0(esit) + " g/kWh. Şebeke bundan temizse elektrikli, kirliyse benzinli öne geçer — " +
+                "ve şebekeler zamanla temizlendiği için aracın ömrü boyunca fark elektrikli lehine açılır.") };
+      }
+    },
+
+    "geri-besleme": {
+      title: "Geri besleme neden belirsizliği büyütür",
+      note: "İklim duyarlılığının üst kuyruğunun uzun olmasının sebebi budur: geri besleme kazancındaki simetrik bir belirsizlik, sıcaklıkta simetrik olmayan bir belirsizliğe dönüşür.",
+      controls: [{ key: "f", label: "Geri besleme kazancı", min: 0, max: 85, step: 5, def: 60,
+        fmt: function (v) { return (v / 100).toFixed(2); } }],
+      draw: function (p) {
+        var T0 = 1.2, TOP = 10, i;                        // geri beslemesiz doğrudan etki, °C
+        var dT = function (f) { return T0 / (1 - f); };
+        var pts = [];
+        for (i = 0; i <= 85; i++) pts.push([i / 85, Math.min(1, dT(i / 100) / TOP)]);
+        var band = [], band2 = [];
+        for (i = 52; i <= 70; i++) {
+          band.push([i / 85, Math.min(1, dT(i / 100) / TOP)]);
+          band2.push([i / 85, 0]);
+        }
+        var here = dT(p.f / 100);
+        var s = frame("Geri besleme kazancı", "CO₂ iki katına çıkarsa ısınma");
+        s += gArea(band.concat(band2.slice().reverse()), { c: "var(--accent)", o: 0.14 });
+        s += gPoly(pts, { c: "var(--accent)", w: 2.4 });
+        s += gLine(0, T0 / TOP, 1, T0 / TOP, { c: "var(--rule)", w: 1.2, d: "3 3" });
+        s += gTxt(0.01, T0 / TOP, "geri besleme yok: 1,2 °C", { a: "start", dy: -4, s: 8.5 });
+        s += gDot(p.f / 85, Math.min(1, here / TOP), { c: "var(--ink)" });
+        s += gTxt(p.f / 85, Math.min(1, here / TOP), r1(here) + " °C", {
+          a: p.f > 55 ? "end" : "start", dx: p.f > 55 ? -6 : 6, dy: -5, c: "var(--ink)", b: 1, s: 10 });
+        [0.25, 0.5, 0.75].forEach(function (v) { s += gTxt(v * 100 / 85, 0, v.toFixed(2), { a: "middle", dy: 12, s: 9 }); });
+        return { svg: s, text: "Kazanç " + (p.f / 100).toFixed(2) + " iken ısınma " + r1(here) + " °C. " +
+          "Gölgeli bant, bugünkü kanıtların işaret ettiği aralık. Kazanç 0,50'den 0,60'a çıkarsa ısınma " +
+          r1(dT(0.5)) + " °C'den " + r1(dT(0.6)) + " °C'ye; 0,70'ten 0,80'e çıkarsa " + r1(dT(0.7)) + " °C'den " +
+          r1(dT(0.8)) + " °C'ye gider. Aynı büyüklükteki belirsizlik, üst uçta çok daha pahalıya mal olur." };
+      }
     }
   };
 

@@ -1,0 +1,400 @@
+[
+  {
+    "id": "iklim-modelleri",
+    "moduleId": "iklim",
+    "order": 4,
+    "title": "İklim modelleri ve belirsizlik",
+    "subtitle": "Bir modelin işi geleceği bilmek değil, koşullu sonuç üretmek.",
+    "minutes": 8,
+    "keyTerms": ["iklim modeli", "senaryo", "topluluk tahmini", "geriye dönük sınama", "bölgesel ölçek"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "İklim modelleri, atmosferi ve okyanusu üç boyutlu bir ızgaraya bölüp her hücrede fizik denklemlerini çözer. Hava tahmini modelleriyle akrabadırlar ama farklı bir işi yaparlar. Hava tahmini belirli bir günü öngörmeye çalışır ve iki haftadan sonra kaotik davranış yüzünden anlamını yitirir. İklim modeli ise tek tek günleri değil, uzun dönemli istatistikleri kestirir. Bir zarın kaç geleceğini bilemezsiniz ama bin atışın ortalamasını iyi tahmin edebilirsiniz."
+      },
+      {
+        "kind": "text",
+        "title": "Senaryolar tahmin değildir",
+        "body": "Modeller 'şu yıl şu sıcaklık olacak' demez. 'Salımlar şu yolu izlerse sıcaklık şu aralıkta olur' der. Girdi olan salım yolu bir tahmin değil, bir varsayımdır ve insan kararlarına bağlıdır. Bu yüzden birden çok senaryo çalıştırılır. Haberlerde bir sayı tek başına verildiğinde, hangi senaryodan geldiği sorulmadıkça yorumlanamaz — en kötü senaryonun sonucu ile en olası senaryonun sonucu birbirine karıştırılır."
+      },
+      {
+        "kind": "list",
+        "title": "Modellerin nasıl sınandığı",
+        "items": [
+          "Geriye dönük sınama: geçmiş yüzyılın salımıyla çalıştırılıp gözlemle karşılaştırılır.",
+          "Volkanik patlamalar doğal bir sınav sağlar: modeller Pinatubo sonrası soğumayı önceden doğru kestirdi.",
+          "Bağımsız ekiplerin modelleri bir arada değerlendirilir; topluluk yayılımı belirsizliğin bir ölçüsüdür.",
+          "1970'ler ve 1980'lerde yapılan erken tahminlerin bugünkü gözlemlerle karşılaştırılması, temel öngörülerin tuttuğunu gösteriyor.",
+          "Modellerin en zayıf olduğu yerler bulut fiziği, bölgesel yağış ve uç olayların sıklığı."
+        ]
+      },
+      {
+        "kind": "text",
+        "title": "Ölçek küçüldükçe belirsizlik büyür",
+        "body": "Küresel ortalama sıcaklık, model çıktıları içinde en güvenilir olanıdır. Bir kıtanın ortalaması daha belirsizdir. Bir havzanın yağış rejimi ise çok daha belirsizdir. Uyum planlaması tam da bu en belirsiz ölçekte yapılmak zorundadır. Bu, planlamanın imkânsız olduğu anlamına gelmez; kesin tahmine değil, geniş bir aralıkta dayanıklı olmaya göre tasarlamak gerektiği anlamına gelir."
+      },
+      {
+        "kind": "example",
+        "title": "Örnek: 1979'daki hesap",
+        "body": "1979'da hazırlanan bir raporda, karbondioksitin iki katına çıkması hâlinde ısınmanın 1,5 ile 4,5 derece arasında olacağı yazıldı. Kırk yıllık ölçüm, hesaplama gücündeki devasa artış ve çok daha ayrıntılı modellerden sonra bugünkü aralık yalnızca biraz daraldı. Bu, ilerlemenin olmadığı anlamına gelmez — aralığın içindeki olasılık dağılımı çok daha iyi biliniyor. Ama temel sonucun kırk yıldır değişmemiş olması, bulgunun ne kadar sağlam olduğunu da gösteriyor."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "İklim modeli ile hava tahmini arasındaki temel fark nedir?",
+        "options": [
+          "İklim modelleri daha basittir",
+          "Hava tahmini belirli bir günü, iklim modeli uzun dönemli istatistikleri kestirir",
+          "İklim modelleri fizik kullanmaz",
+          "Hava tahmini daha uzun vadelidir"
+        ],
+        "answerIndex": 1,
+        "explanation": "Kaotik davranış tek tek günleri iki haftadan sonra öngörülemez kılar. İstatistikler ise öngörülebilir kalır — zarın ortalaması gibi."
+      },
+      {
+        "id": "q2",
+        "prompt": "Model çıktısı olan bir sıcaklık sayısı neden tek başına yorumlanamaz?",
+        "options": [
+          "Ölçüm hatası içerdiği için",
+          "Hangi salım senaryosundan geldiği bilinmeden anlamı belirsiz olduğu için",
+          "Modeller güvenilmez olduğu için",
+          "Birimler farklı olduğu için"
+        ],
+        "answerIndex": 1,
+        "explanation": "Salım yolu bir tahmin değil, insan kararlarına bağlı bir varsayımdır. Aynı model farklı senaryolarda çok farklı sonuçlar verir."
+      },
+      {
+        "id": "q3",
+        "prompt": "Ölçek küçüldükçe belirsizliğin artması uyum planlaması için ne anlama gelir?",
+        "options": [
+          "Planlama imkânsızdır",
+          "Kesin tahmine değil, geniş bir aralıkta dayanıklı olmaya göre tasarlamak gerekir",
+          "Yalnızca küresel önlemler alınmalıdır",
+          "Modeller kullanılmamalıdır"
+        ],
+        "answerIndex": 1,
+        "explanation": "Yerel yağış rejimi en belirsiz çıktıdır. Bu yüzden uyum, tek bir senaryoya değil bir aralığa dayanıklı olacak biçimde kurulur."
+      }
+    ]
+  },
+
+  {
+    "id": "elektrik-uretimi",
+    "moduleId": "cozum",
+    "order": 1,
+    "title": "Elektrik üretimi",
+    "subtitle": "Kaynakları karşılaştırmanın doğru yolu yaşam döngüsüdür.",
+    "minutes": 9,
+    "keyTerms": ["yaşam döngüsü analizi", "karbon yoğunluğu", "seviyelendirilmiş maliyet", "kapasite", "sistem maliyeti"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Bir elektrik kaynağının iklim etkisini ölçmek için bacadan çıkana bakmak yetmez. Yaşam döngüsü analizi, madenden inşaata, işletmeden sökümüne kadar bütün zinciri sayar. Güneş ve rüzgârın karbon yoğunluğu sıfır değildir; panel, türbin, beton ve nakliye salım üretir. Yine de fosil kaynaklarla arada mertebe farkı vardır."
+      },
+      {
+        "kind": "chart",
+        "chartId": "elektrik-kaynaklari"
+      },
+      {
+        "kind": "text",
+        "title": "Sayıların aralığı geniştir",
+        "body": "Bu değerler ortanca tahminlerdir ve kuruluma göre belirgin biçimde değişir. Güneş panelinin karbon yoğunluğu, üretildiği ülkenin şebekesine ve kurulduğu yerin güneşlenmesine göre iki üç kat farklılaşır. Doğal gazın değeri, üretim ve taşıma zincirindeki metan kaçaklarına çok duyarlıdır; kaçak yüksekse gazın avantajı büyük ölçüde erir. Bu yüzden tek bir sayıya değil, aralığa ve varsayımlara bakmak gerekir."
+      },
+      {
+        "kind": "list",
+        "title": "Maliyet nasıl karşılaştırılır",
+        "items": [
+          "Seviyelendirilmiş maliyet, bir santralin ömrü boyunca ürettiği elektriğin birim maliyetidir.",
+          "Bu ölçüt kaynakları karşılaştırmak için kullanışlıdır ama eksiktir: elektriğin ne zaman üretildiğini hesaba katmaz.",
+          "Değişken kaynakların payı arttıkça sistem maliyeti — depolama, yedek kapasite, şebeke — devreye girer.",
+          "Güneş ve rüzgâr maliyeti son on beş yılda çok hızlı düştü; bu düşüş çoğu tahmini geride bıraktı.",
+          "Nükleerin maliyeti ise inşaat süresi ve finansman maliyetine aşırı duyarlıdır; ülkeden ülkeye çok değişir."
+        ]
+      },
+      {
+        "kind": "text",
+        "title": "Ölüm oranları neden şaşırtıcı",
+        "body": "Terawattsaat başına ölüm sayılarında kömürün açık ara önde olması, kazalardan değil hava kirliliğinden gelir. Kömür yakmanın yol açtığı partikül kirliliği, dünya genelinde yılda yüz binlerce erken ölümle ilişkilendiriliyor. Nükleerin sayısının düşük çıkması ise büyük kazaların hesaba katılmadığı anlamına gelmez; katıldığında bile üretilen enerji başına düşen ölüm oranı en düşükler arasında kalıyor. Algı ile ölçüm arasındaki bu fark, riskin nasıl göründüğüyle ne kadar olduğu arasındaki farkın klasik bir örneği."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Yaşam döngüsü analizi neyi ölçer?",
+        "options": [
+          "Yalnızca yakma sırasındaki salımı",
+          "Madenden inşaata, işletmeden sökümüne bütün zincirdeki salımı",
+          "Yalnızca inşaat salımını",
+          "Elektrik faturasını"
+        ],
+        "answerIndex": 1,
+        "explanation": "Bacadan çıkana bakmak yetmez. Panel, türbin, beton ve nakliye de salım üretir; karşılaştırma bütün zincir üzerinden yapılmalıdır."
+      },
+      {
+        "id": "q2",
+        "prompt": "Doğal gazın karbon yoğunluğu hangi etkene çok duyarlıdır?",
+        "options": [
+          "Santralin yaşına",
+          "Üretim ve taşıma zincirindeki metan kaçaklarına",
+          "Hava sıcaklığına",
+          "Şebeke gerilimine"
+        ],
+        "answerIndex": 1,
+        "explanation": "Metan güçlü bir sera gazıdır. Kaçak oranı yüksekse gazın kömüre göre avantajı büyük ölçüde erir."
+      },
+      {
+        "id": "q3",
+        "prompt": "Kömürün ölüm oranındaki payının büyük kısmı nereden gelir?",
+        "options": [
+          "Maden kazalarından",
+          "Hava kirliliğinden",
+          "Nakliye kazalarından",
+          "Santral patlamalarından"
+        ],
+        "answerIndex": 1,
+        "explanation": "Partikül kirliliği, kazalardan çok daha fazla erken ölümle ilişkilendiriliyor. Görünmeyen risk, görünen riskten büyük olabilir."
+      }
+    ]
+  },
+
+  {
+    "id": "depolama-ve-sebeke",
+    "moduleId": "cozum",
+    "order": 2,
+    "title": "Depolama ve şebeke",
+    "subtitle": "Sorun elektriği üretmek değil, tam ihtiyaç anında üretmek.",
+    "minutes": 9,
+    "keyTerms": ["değişkenlik", "depolama", "esneklik", "talep yanıtı", "şebeke bağlantısı"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Elektrik, sanayi ürünleri içinde neredeyse tek istisnadır: üretildiği anda tüketilmek zorundadır. Şebeke her saniye arz ile talebi dengelemek durumundadır. Güneş ve rüzgârın payı arttıkça bu dengeleme zorlaşır, çünkü bu kaynakların ne zaman üreteceğine biz karar vermiyoruz. Sorun 'yeterli enerji var mı' değil, 'doğru anda var mı' sorusudur."
+      },
+      {
+        "kind": "list",
+        "title": "Esneklik araçları",
+        "items": [
+          "Pil depolama: saatlik ölçekte çok etkili, maliyeti hızla düştü. Günlerce süren durgun havalar için uygun değil.",
+          "Pompajlı hidroelektrik: en yaygın büyük ölçekli depolama; coğrafyaya bağımlı.",
+          "Şebeke bağlantıları: rüzgârın estiği yerden esmediği yere taşımak. En ucuz esneklik biçimlerinden biri.",
+          "Talep yanıtı: tüketimi üretimin bol olduğu saatlere kaydırmak. Elektrikli araç şarjı bunun en büyük fırsatı.",
+          "Yedek üretim: gaz santralleri ya da hidrojen. Nadiren çalışır ama hazır durması maliyetlidir.",
+          "Aşırı kurulum: ihtiyaçtan fazla kurup fazlasını atmak. Sezgiye aykırı ama bazı durumlarda depolamadan ucuz."
+        ]
+      },
+      {
+        "kind": "text",
+        "title": "Ördek eğrisi",
+        "body": "Güneşin payı yükseldikçe öğlen saatlerinde şebekeden çekilen net talep düşer, akşamüstü güneş çekilirken talep zirveye çıkar. Grafiğin aldığı biçim yüzünden buna ördek eğrisi denir. Zorluk toplam enerji değil, akşam saatlerindeki dik rampadır: sistemin birkaç saat içinde çok büyük bir kapasiteyi devreye alması gerekir. Depolamanın asıl işi bu rampayı yumuşatmaktır."
+      },
+      {
+        "kind": "text",
+        "title": "Zor kısım: uzun süreli durgunluk",
+        "body": "Birkaç saatlik dalgalanmayı piller çözer. Asıl zorluk, rüzgârsız ve bulutlu bir haftanın kışa denk gelmesidir. Bu tür olaylar için gereken depolama, pil teknolojisiyle ekonomik değildir. Tartışılan seçenekler arasında hidrojen, uzun süreli termal depolama, nükleer ya da hidroelektrik gibi kesintisiz kaynaklar ve geniş coğrafyaya yayılmış şebekeler var. Bir enerji planının ciddiyeti, bu haftayı nasıl geçirdiğini anlattığında ölçülür."
+      },
+      {
+        "kind": "example",
+        "title": "Örnek: şarj saatinin önemi",
+        "body": "Elektrikli araçların hepsi akşam eve gelince şarja takılırsa, tam da şebekenin en zorlandığı saate ek yük binmiş olur. Aynı araçlar gece ya da öğlen saatlerinde şarj olursa, sistem için yük olmaktan çıkıp esneklik kaynağına dönüşür. Fark, aracın kendisinde değil şarjın zamanlamasındadır; bu yüzden saatlik tarifeler teknik bir ayrıntı değil, sistemin işleyişini belirleyen bir araçtır."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Değişken yenilenebilir kaynakların temel zorluğu nedir?",
+        "options": [
+          "Yeterli enerji üretememeleri",
+          "Üretim zamanının kontrol edilememesi; şebekenin her an arz-talep dengesi kurması gerekmesi",
+          "Çok pahalı olmaları",
+          "Çok fazla yer kaplamaları"
+        ],
+        "answerIndex": 1,
+        "explanation": "Elektrik üretildiği anda tüketilmek zorundadır. Sorun toplam enerji değil, doğru anda enerji bulunmasıdır."
+      },
+      {
+        "id": "q2",
+        "prompt": "Ördek eğrisindeki asıl zorluk nedir?",
+        "options": [
+          "Öğlen üretim fazlası",
+          "Akşamüstü güneş çekilirken ortaya çıkan dik talep rampası",
+          "Gece talebinin düşüklüğü",
+          "Hafta sonu tüketimi"
+        ],
+        "answerIndex": 1,
+        "explanation": "Sistemin birkaç saat içinde büyük bir kapasiteyi devreye alması gerekir. Depolamanın asıl işi bu rampayı yumuşatmaktır."
+      },
+      {
+        "id": "q3",
+        "prompt": "Uzun süreli rüzgârsız ve bulutlu bir dönem için pil depolama neden yetersizdir?",
+        "options": [
+          "Piller soğukta çalışmaz",
+          "Günler süren bir açık için gereken kapasite pillerle ekonomik değildir",
+          "Piller şebekeye bağlanamaz",
+          "Piller çok hızlı boşalır"
+        ],
+        "answerIndex": 1,
+        "explanation": "Piller saatlik ölçekte etkilidir. Haftalık ölçekte gereken depolama için hidrojen, termal depolama ya da kesintisiz kaynaklar tartışılıyor."
+      }
+    ]
+  },
+
+  {
+    "id": "ulasim-ve-isinma",
+    "moduleId": "cozum",
+    "order": 3,
+    "title": "Ulaşım ve ısınma",
+    "subtitle": "Elektrifikasyon, aynı hizmeti çok daha az enerjiyle vermek demek.",
+    "minutes": 9,
+    "keyTerms": ["elektrifikasyon", "ısı pompası", "yaşam döngüsü karşılaştırması", "modal kayma", "yalıtım"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Ulaşım ve bina ısıtması, salımın büyük bir bölümünü oluşturur ve ikisinde de aynı çözüm öne çıkar: yakmayı bırakıp elektriğe geçmek. Bunun gerekçesi yalnızca elektriğin temizlenebilir olması değil, verim farkıdır. Elektrik motoru içten yanmalı motordan üç dört kat, ısı pompası doğalgaz kombisinden üç dört kat verimlidir. Aynı hizmet çok daha az enerjiyle sağlanır."
+      },
+      {
+        "kind": "chart",
+        "chartId": "elektrikli-arac"
+      },
+      {
+        "kind": "text",
+        "title": "Pil üretiminin payı",
+        "body": "Elektrikli aracın üretim salımı, pil yüzünden benzinliden yüksektir. Bu, kullanım aşamasındaki avantajla telafi edilir ama telafi anında olmaz. Şebeke ne kadar temizse başa baş noktası o kadar erken gelir; çoğu ülkede aracın ilk birkaç yılı içindedir. Aracın ömrü boyunca şebekenin de temizlenmesi, farkı zamanla açar. Bu yüzden karşılaştırma tek bir yıla değil, ömre bakılarak yapılmalıdır."
+      },
+      {
+        "kind": "list",
+        "title": "Ulaşımda etkinin sırası",
+        "items": [
+          "Hiç yolculuk gerektirmemek: uzaktan çalışma, yakın hizmetler, karma kullanımlı kentleşme.",
+          "Yürüme, bisiklet ve toplu taşıma: kişi başına enerji tüketiminde mertebe farkı yaratır.",
+          "Araç varsa küçük ve hafif olması: elektrikli bir SUV, elektrikli küçük bir araçtan belirgin biçimde fazla tüketir.",
+          "Elektrifikasyon: aynı yolculuk için enerji ve salımı düşürür.",
+          "Havacılık en zor kısım; pil enerji yoğunluğu uzun uçuşlar için yeterli değil ve alternatif yakıtlar henüz pahalı."
+        ]
+      },
+      {
+        "kind": "text",
+        "title": "Isınmada önce yalıtım",
+        "body": "Isı pompası verimli bir cihazdır ama kötü yalıtılmış bir binada bile büyük bir yük taşımak zorunda kalır. Sıralama önemlidir: önce yalıtım ve hava sızdırmazlığı, sonra cihaz değişimi. Türkiye'de bina stokunun önemli bir bölümünün ısı yalıtımı yetersizdir ve buradaki tasarruf potansiyeli, cihaz değişiminden büyüktür. Ayrıca yalıtım yaz aylarında soğutma yükünü de düşürür; iki mevsimde birden çalışan az sayıdaki müdahaleden biridir."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Elektrifikasyonun temel gerekçesi nedir?",
+        "options": [
+          "Elektriğin ucuz olması",
+          "Elektrik motoru ve ısı pompasının, yakmaya dayalı seçeneklerden çok daha verimli olması",
+          "Bakım maliyetinin düşüklüğü",
+          "Gürültünün azalması"
+        ],
+        "answerIndex": 1,
+        "explanation": "Aynı hizmet çok daha az enerjiyle sağlanır. Elektriğin temizlenebilir olması bunun üstüne eklenen ikinci bir avantajdır."
+      },
+      {
+        "id": "q2",
+        "prompt": "Elektrikli aracın başa baş noktası ne zaman gelir?",
+        "options": [
+          "Hiçbir zaman",
+          "Şebeke ne kadar temizse o kadar erken; çoğu ülkede ilk birkaç yıl içinde",
+          "Ancak yirmi yıl sonra",
+          "Satın alındığı gün"
+        ],
+        "answerIndex": 1,
+        "explanation": "Pil üretiminin ek salımı kullanım aşamasında telafi edilir. Şebeke temizlendikçe fark aracın ömrü boyunca açılır."
+      },
+      {
+        "id": "q3",
+        "prompt": "Isınmada doğru sıralama nedir?",
+        "options": [
+          "Önce cihaz değişimi, sonra yalıtım",
+          "Önce yalıtım ve hava sızdırmazlığı, sonra cihaz değişimi",
+          "Yalnızca cihaz değişimi",
+          "Yalnızca tarife değişimi"
+        ],
+        "answerIndex": 1,
+        "explanation": "Kötü yalıtılmış binada verimli cihaz bile büyük yük taşır. Yalıtım ayrıca yaz soğutma yükünü de düşürür."
+      }
+    ]
+  },
+
+  {
+    "id": "azaltim-uyum-politika",
+    "moduleId": "cozum",
+    "order": 4,
+    "title": "Azaltım, uyum ve politika",
+    "subtitle": "Hangi araç ne işe yarar — ve hangisi görüntüden ibaret.",
+    "minutes": 9,
+    "keyTerms": ["azaltım", "uyum", "karbon fiyatlaması", "karbon dengeleme", "adil geçiş"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "İklim politikası iki ayrı işi birden yapmak zorunda: azaltım, gelecekteki ısınmayı sınırlamak; uyum ise şimdiden gelmiş olan değişime dayanıklı olmak. İkisi birbirinin alternatifi değildir. Azaltım olmadan uyumun sınırı vardır; uyum olmadan ise bugünün riskleri karşılanamaz. Kaynak dağılımı tartışması genellikle bu iki iş arasındaki dengeye ilişkindir."
+      },
+      {
+        "kind": "list",
+        "title": "Azaltım araçları ve gerçek etkileri",
+        "items": [
+          "Karbon fiyatlaması: salıma bir fiyat koyar, azaltımın nerede en ucuz olduğunu piyasaya buldurur. Fiyat düşükse etkisiz kalır.",
+          "Standartlar ve yasaklar: verim standartları, yeni bina kuralları, satış yasakları. Öngörülebilir ve etkili, ama esnekliği düşük.",
+          "Araştırma desteği: bugün pahalı olan teknolojiyi ucuzlatır. Güneşin maliyet düşüşü büyük ölçüde bunun ürünü.",
+          "Altyapı yatırımı: şebeke, şarj ağı, demiryolu. Diğer araçların işe yaraması bunlara bağlı.",
+          "Karbon dengeleme: kalite denetimi zayıf olduğunda gerçek azaltım sağlamadan azaltım iddiası üretir; en çok istismar edilen araç."
+        ]
+      },
+      {
+        "kind": "text",
+        "title": "Uyum: ihmal edilen yarı",
+        "body": "Uyum, sıcak hava dalgalarına karşı kent planlaması, taşkın altyapısı, su yönetimi, tarımda çeşit değişikliği ve erken uyarı sistemleri demektir. Genellikle azaltımdan daha az konuşulur, çünkü küresel bir başarı hikâyesi üretmez; yereldir, teknik ve görünmezdir. Oysa Türkiye gibi Akdeniz havzasında yer alan ülkeler için kuraklık ve aşırı sıcak riski, bugünkü altyapının tasarlandığı koşulların dışına çıkmış durumda."
+      },
+      {
+        "kind": "text",
+        "title": "Adil geçiş",
+        "body": "Bir geçişin teknik olarak mümkün olması, siyasal olarak yürüyeceği anlamına gelmez. Kömür bölgelerindeki istihdam, ısınma maliyetindeki artışın düşük gelirli haneler üzerindeki etkisi ve maliyetin nasıl paylaşılacağı, geçişin hızını doğrudan belirler. Maliyeti orantısız biçimde alt gelir gruplarına yükleyen politikalar, çoğu ülkede geri alınmak zorunda kalmıştır. Adil geçiş bir süsleme değil, uygulanabilirliğin ön koşuludur."
+      },
+      {
+        "kind": "text",
+        "title": "Bireysel eylemin yeri",
+        "body": "Bireysel tercihlerin toplam salımdaki payı sınırlıdır ve sorunu bireye yıkan anlatı, sistemik değişimden kaçmanın bir yolu olarak da kullanılmıştır. Yine de bireysel kararların iki gerçek etkisi vardır: yüksek etkili birkaç karar — nerede yaşadığın, nasıl ısındığın, nasıl seyahat ettiğin — ölçülebilir fark yaratır; ve talebin yön değiştirmesi ürünlerin ve politikaların değişmesini hızlandırır. Doğru çerçeve 'birey mi sistem mi' değil, hangi bireysel kararın sistemi de kımıldattığıdır."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Azaltım ile uyum arasındaki ilişki nedir?",
+        "options": [
+          "Birbirinin alternatifidir",
+          "İkisi ayrı işlerdir: azaltım gelecekteki ısınmayı sınırlar, uyum gelmiş olan değişime dayanıklılık sağlar",
+          "Uyum azaltımın bir türüdür",
+          "Aynı şeyin iki adıdır"
+        ],
+        "answerIndex": 1,
+        "explanation": "Azaltım olmadan uyumun sınırı vardır; uyum olmadan bugünün riskleri karşılanamaz. İkisi birlikte yürütülmek zorundadır."
+      },
+      {
+        "id": "q2",
+        "prompt": "Karbon fiyatlamasının temel mantığı nedir?",
+        "options": [
+          "Salımı yasaklamak",
+          "Salıma fiyat koyup azaltımın nerede en ucuz olduğunu piyasaya buldurmak",
+          "Vergi geliri toplamak",
+          "Şirketleri cezalandırmak"
+        ],
+        "answerIndex": 1,
+        "explanation": "Merkezî bir planlayıcının bilemeyeceği şeyi fiyat bulur. Ama fiyat yeterince yüksek değilse araç etkisiz kalır."
+      },
+      {
+        "id": "q3",
+        "prompt": "Adil geçiş neden uygulanabilirliğin ön koşuludur?",
+        "options": [
+          "Ahlaki bir tercih olduğu için",
+          "Maliyeti orantısız biçimde alt gelir gruplarına yükleyen politikalar çoğu ülkede geri alınmak zorunda kaldığı için",
+          "Uluslararası anlaşmalar gerektirdiği için",
+          "Teknik olarak zorunlu olduğu için"
+        ],
+        "answerIndex": 1,
+        "explanation": "Teknik olarak mümkün olan bir geçiş, siyasal olarak taşınamıyorsa yürümez. Maliyet paylaşımı geçişin hızını doğrudan belirler."
+      }
+    ]
+  }
+]

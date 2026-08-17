@@ -110,5 +110,19 @@
     "questions": 36,
     "charts": 2,
     "file": "courses/felsefe.json"
+  },
+  {
+    "id": "iklim",
+    "title": "İklim ve enerji",
+    "subtitle": "Sayılarla düşünmek",
+    "description": "Kilovatsaatten karbon bütçesine, sera etkisinin fiziğinden şebeke esnekliğine: tartışmayı slogansız yürütmek için gereken büyüklükler.",
+    "icon": "🌍",
+    "accent": "#17705a",
+    "accentDark": "#57c9a9",
+    "category": "gunumuz",
+    "lessons": 12,
+    "questions": 36,
+    "charts": 5,
+    "file": "courses/iklim.json"
   }
 ]
