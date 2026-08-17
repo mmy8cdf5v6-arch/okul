@@ -264,5 +264,19 @@
     "questions": 36,
     "charts": 5,
     "file": "courses/matematik.json"
+  },
+  {
+    "id": "jeopolitik",
+    "title": "Jeopolitik",
+    "subtitle": "Coğrafya, güç, fay hatları",
+    "description": "Haritanın devletlerin davranışını nasıl kısıtladığı, kısıtlamanın nerede bittiği ve bugünün kavgalarının hangi somut darboğazlar üzerinden yürüdüğü.",
+    "icon": "◎",
+    "accent": "#4a5f7a",
+    "accentDark": "#9db4d0",
+    "category": "gunumuz",
+    "lessons": 12,
+    "questions": 36,
+    "charts": 4,
+    "file": "courses/jeopolitik.json"
   }
 ]

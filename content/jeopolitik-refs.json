@@ -1,0 +1,304 @@
+{
+  "meta": {
+    "title": "Jeopolitik",
+    "eyebrow": "Jeopolitik",
+    "subtitle": "Coğrafya, güç, fay hatları",
+    "description": "Haritanın devletlerin davranışını nasıl kısıtladığı, kısıtlamanın nerede bittiği ve bugünün kavgalarının hangi somut darboğazlar üzerinden yürüdüğü.",
+    "icon": "◎",
+    "accent": "#4a5f7a",
+    "accentDark": "#9db4d0",
+    "category": "gunumuz",
+    "figuresLabel": "İsimler",
+    "timelineLabel": "Zaman çizelgesi",
+    "timelineTitle": "Haritanın tarihi",
+    "timelineIntro": "Jeopolitik tarihi, coğrafyanın ne kadar belirleyici olduğu tartışmasının tarihidir. Bir uçta harita her şeyi açıklar; öbür uçta kurumlar ve teknoloji haritayı silip yeniden yazar. Aşağıdaki olaylar iki iddianın da payını gösterir.",
+    "source": "builtin",
+    "hasCharts": true
+  },
+  "modules": [
+    {
+      "id": "cografya",
+      "title": "Coğrafya",
+      "description": "Harita okumak, denizler ve geçitler, kara gücü-deniz gücü tartışması, kaynaklar."
+    },
+    {
+      "id": "guc",
+      "title": "Güç",
+      "description": "Ticaret ve bağımlılık, tedarik zincirleri, yaptırım, ittifaklar ve kurumlar."
+    },
+    {
+      "id": "fay",
+      "title": "Bugünkü fay hatları",
+      "description": "Demografi, su, enerji geçişi ve Türkiye'nin konumu."
+    }
+  ],
+  "glossary": [
+    { "id": "jeopolitik", "term": "Jeopolitik", "definition": "Coğrafi konumun devletlerin siyasi ve askerî davranışını nasıl kısıtladığını inceleyen alan. Kısıtlamak, belirlemek değildir; ikisini karıştırmak alanın klasik hatasıdır.", "lessonId": "harita-okumak" },
+    { "id": "projeksiyon", "term": "Projeksiyon", "definition": "Küre biçimindeki dünyanın düzleme aktarılma yöntemi. Her yöntem alanı, açıyı ya da mesafeyi bozar; hepsini birden koruyan bir harita yoktur.", "lessonId": "harita-okumak" },
+    { "id": "mercator", "term": "Mercator", "definition": "Açıları koruyan, bu yüzden denizcilikte kullanılan projeksiyon. Kutuplara yaklaştıkça alanları abartır: Grönland, Afrika kadar büyük görünür ama on dörtte biri kadardır.", "lessonId": "harita-okumak" },
+    { "id": "zihni-harita", "term": "Zihnî harita", "definition": "İnsanların kafalarındaki, ölçekleri ve komşulukları çarpıtılmış dünya tasviri. Siyasi tartışmalarda çoğu zaman gerçek haritanın yerine bu geçer.", "lessonId": "harita-okumak" },
+    { "id": "darbogaz", "term": "Deniz darboğazı", "definition": "Deniz ticaretinin sıkıştığı dar geçit. Kapanması ya da kapanma ihtimali, geçitten çok uzaktaki fiyatları hemen etkiler.", "lessonId": "deniz-ve-bogaz" },
+    { "id": "hurmuz", "term": "Hürmüz Boğazı", "definition": "Basra Körfezi'nin çıkışı. Dünya deniz yoluyla taşınan ham petrolünün beşte birinden fazlası buradan geçer; alternatif boru hattı kapasitesi bu hacmin çok altındadır.", "lessonId": "deniz-ve-bogaz" },
+    { "id": "malakka", "term": "Malakka Boğazı", "definition": "Hint Okyanusu ile Pasifik'i bağlayan geçit. Çin'in ithal enerjisinin büyük kısmı buradan geçer; Pekin'in bu bağımlılığı 'Malakka ikilemi' diye adlandırması, kara güzergâhlarına yatırımının gerekçesidir.", "lessonId": "deniz-ve-bogaz" },
+    { "id": "montro", "term": "Montrö Sözleşmesi", "definition": "1936'da imzalanan, Türk Boğazlarından geçişi düzenleyen sözleşme. Ticaret gemilerine barışta serbest geçiş tanır, savaş gemileri için tonaj ve süre sınırları koyar; Türkiye'ye savaş hâlinde geçişi kapatma yetkisi verir.", "lessonId": "deniz-ve-bogaz" },
+    { "id": "suveys", "term": "Süveyş Kanalı", "definition": "1869'da açılan, Akdeniz'i Kızıldeniz'e bağlayan kanal. Avrupa-Asya deniz yolunu Ümit Burnu'na göre haftalarca kısaltır; kapandığında bu süre geri gelir.", "lessonId": "deniz-ve-bogaz" },
+    { "id": "kara-gucu", "term": "Kara gücü", "definition": "Gücünü geniş kara kütlesinin denetiminden alan devlet modeli. Mackinder'ın kuramında Avrasya'nın iç bölgesi, denizden ulaşılamadığı için ayrıcalıklıdır.", "lessonId": "kara-ve-deniz" },
+    { "id": "deniz-gucu", "term": "Deniz gücü", "definition": "Gücünü deniz yollarının denetiminden alan devlet modeli. Mahan'a göre ticaret filosu, donanma ve üsler zinciri birbirinden ayrılamaz.", "lessonId": "kara-ve-deniz" },
+    { "id": "kalpgah", "term": "Kalpgâh", "definition": "Mackinder'ın Avrasya'nın iç kısmına verdiği ad. 'Kalpgâha hâkim olan dünyaya hâkim olur' formülü etkili oldu ama tarih tarafından doğrulanmadı.", "lessonId": "kara-ve-deniz" },
+    { "id": "kenar-kusak", "term": "Kenar kuşak", "definition": "Spykman'ın Avrasya'nın kıyı şeridine verdiği ad. Asıl mücadelenin iç bölgede değil, nüfusun ve limanların yoğunlaştığı kıyıda geçtiğini savundu; yirminci yüzyıl onu daha çok haklı çıkardı.", "lessonId": "kara-ve-deniz" },
+    { "id": "cografi-determinizm", "term": "Coğrafi determinizm", "definition": "Toplumların yazgısını iklim ve konumla açıklama eğilimi. Açıklayıcı gücü sınırlıdır ve tarihte sömürgeciliği meşrulaştırmak için kullanılmıştır; bugün ciddi çalışmalar coğrafyayı tek başına değil, kurumlarla birlikte ele alır.", "lessonId": "kara-ve-deniz" },
+    { "id": "kaynak-laneti", "term": "Kaynak laneti", "definition": "Yeraltı zenginliği bol ülkelerin ortalamada daha yavaş büyümesi ve daha kırılgan yönetilmesi gözlemi. Bir yasa değil, kurumların zayıf olduğu yerlerde belirginleşen bir eğilimdir.", "lessonId": "kaynaklar" },
+    { "id": "rantiye-devlet", "term": "Rantiye devlet", "definition": "Gelirinin büyük kısmını vergiden değil kaynak satışından alan devlet. Vatandaşa vergi bağımlılığı azaldıkça hesap verme baskısı da azalır; 'temsilsiz vergi olmaz'ın tersi işler.", "lessonId": "kaynaklar" },
+    { "id": "hollanda-hastaligi", "term": "Hollanda hastalığı", "definition": "Kaynak ihracatının para birimini değerlendirmesi ve sanayiyi rekabet dışı bırakması. Adını 1960'larda doğal gaz bulan Hollanda'nın sanayisinde yaşananlardan alır.", "lessonId": "kaynaklar" },
+    { "id": "varlik-fonu", "term": "Varlık fonu", "definition": "Kaynak gelirini bugünkü bütçeden ayırıp yatırıma çeviren kamu fonu. Norveç örneği, kaynak lanetinin kaçınılmaz olmadığını gösteren en güçlü karşı örnektir.", "lessonId": "kaynaklar" },
+    { "id": "cekim-modeli", "term": "Çekim modeli", "definition": "İki ülke arasındaki ticaretin ekonomilerinin büyüklüğüyle doğru, aradaki mesafeyle ters orantılı olduğunu söyleyen ampirik model. İktisadın en istikrarlı bulgularından biridir.", "lessonId": "ticaret-ve-bagimlilik" },
+    { "id": "karsilikli-bagimlilik", "term": "Karşılıklı bağımlılık", "definition": "İki tarafın da birbirini kesmekten zarar göreceği ticaret ilişkisi. Barışı garanti etmez; 1914 öncesi Avrupa buna en bilinen karşı örnektir.", "lessonId": "ticaret-ve-bagimlilik" },
+    { "id": "asimetrik-bagimlilik", "term": "Asimetrik bağımlılık", "definition": "Kesintiden bir tarafın diğerinden çok daha fazla zarar göreceği ilişki. Jeopolitik güç, karşılıklı bağımlılıktan değil, bu asimetriden doğar.", "lessonId": "ticaret-ve-bagimlilik" },
+    { "id": "tedarik-zinciri", "term": "Tedarik zinciri", "definition": "Bir ürünün hammaddeden son kullanıcıya kadar geçtiği üretim ve taşıma halkaları. Verimlilik için kısaltılan her halka, kesinti riskini artırır.", "lessonId": "tedarik-zinciri" },
+    { "id": "hhi", "term": "HHI", "definition": "Yoğunlaşma ölçüsü: pazar paylarının yüzde cinsinden karelerinin toplamı. Tek tedarikçili bir pazarda 10.000, çok dağınık bir pazarda birkaç yüz çıkar.", "lessonId": "tedarik-zinciri" },
+    { "id": "tam-zamaninda", "term": "Tam zamanında üretim", "definition": "Stok tutmayıp parçayı ihtiyaç anında getiren üretim yöntemi. Maliyeti düşürür, kesintiye dayanıklılığı da düşürür; 2020'den sonra bu denge yeniden tartışıldı.", "lessonId": "tedarik-zinciri" },
+    { "id": "dost-ulke", "term": "Dost ülkeye taşıma", "definition": "Üretimi en ucuz ülkeye değil, siyasi olarak güvenilir sayılan ülkeye kaydırma eğilimi. Riski azaltır, maliyeti artırır; ne kadarının gerçekten yapıldığı verilerde hâlâ tartışmalıdır.", "lessonId": "tedarik-zinciri" },
+    { "id": "yaptirim", "term": "Yaptırım", "definition": "Bir devletin davranışını değiştirmek için ticaret, finans ya da seyahat üzerine konan kısıtlama. Etkisi çoğu zaman hedeflenen davranış değişikliğinden çok ekonomik daralma olur.", "lessonId": "yaptirim" },
+    { "id": "ikincil-yaptirim", "term": "İkincil yaptırım", "definition": "Hedef ülkeyle iş yapan üçüncü ülke şirketlerine de uygulanan yaptırım. Asıl caydırıcı güç buradadır: bankalar dolar sisteminden çıkmayı göze alamaz.", "lessonId": "yaptirim" },
+    { "id": "rezerv-para", "term": "Rezerv para", "definition": "Merkez bankalarının rezervlerinde tuttuğu ve uluslararası ödemelerde yaygın kullanılan para. Doların bu konumu, ABD'ye başka hiçbir ülkede olmayan bir finansal kaldıraç verir.", "lessonId": "yaptirim" },
+    { "id": "swift", "term": "SWIFT", "definition": "Bankalar arası ödeme mesajlaşma ağı. Para taşımaz, talimat taşır; ama ağdan çıkarılan bir banka pratikte uluslararası ödeme yapamaz hâle gelir.", "lessonId": "yaptirim" },
+    { "id": "guvenlik-ikilemi", "term": "Güvenlik ikilemi", "definition": "Bir devletin kendini güvende hissetmek için yaptığı silahlanmanın, komşusunu tehdit altında hissettirip karşı silahlanmayı tetiklemesi. Kimse saldırı istemese de gerilim artar.", "lessonId": "kurumlar-ittifaklar" },
+    { "id": "caydiricilik", "term": "Caydırıcılık", "definition": "Saldırının bedelini kazancından yüksek göstererek saldırıyı önleme. İşe yaradığında hiçbir şey olmaz, bu yüzden başarısını ölçmek zordur.", "lessonId": "kurumlar-ittifaklar" },
+    { "id": "besinci-madde", "term": "Beşinci madde", "definition": "NATO antlaşmasının, üyelerden birine saldırıyı hepsine saldırı sayan maddesi. Tarihte bir kez, 2001'den sonra işletildi.", "lessonId": "kurumlar-ittifaklar" },
+    { "id": "veto", "term": "Veto", "definition": "BM Güvenlik Konseyi'nin beş daimî üyesinin karar tasarısını tek başına durdurabilme yetkisi. Konseyi büyük güçler arasındaki uyuşmazlıklarda işlevsiz bırakan yapısal özelliktir.", "lessonId": "kurumlar-ittifaklar" },
+    { "id": "yumusak-guc", "term": "Yumuşak güç", "definition": "Zorlamadan değil, çekicilikten doğan etki: kültür, eğitim, kurumların saygınlığı. Ölçmesi zordur ve tek başına hiçbir krizi çözmez, ama uzun vadede ittifakların maliyetini düşürür.", "lessonId": "kurumlar-ittifaklar" },
+    { "id": "bagimlilik-orani", "term": "Bağımlılık oranı", "definition": "Çalışma çağı dışındaki nüfusun çalışma çağındaki nüfusa oranı. Emeklilik ve sağlık harcamalarının sürdürülebilirliğini doğrudan belirler.", "lessonId": "demografi" },
+    { "id": "demografik-firsat", "term": "Demografik fırsat penceresi", "definition": "Doğurganlık düşerken yaşlı nüfusun henüz artmadığı, çalışan oranının en yüksek olduğu dönem. Geçicidir; iyi değerlendirilmezse bir daha gelmez.", "lessonId": "demografi" },
+    { "id": "yenilenme-duzeyi", "term": "Yenilenme düzeyi", "definition": "Nüfusun uzun vadede sabit kalması için gereken doğurganlık hızı; gelişmiş ülkelerde kadın başına yaklaşık 2,1 çocuk.", "lessonId": "demografi" },
+    { "id": "goc", "term": "Göç", "definition": "Nüfus hareketleri. Yaşlanan ülkeler için en hızlı işleyen düzeltme aracıdır ama siyaseten en tartışmalı olanıdır; demografi tartışmalarının çoğu aslında bu tartışmadır.", "lessonId": "demografi" },
+    { "id": "sinir-asan-su-t", "term": "Sınır aşan su", "definition": "Birden fazla ülkenin toprağından geçen nehir ya da akifer. Dünya nüfusunun yaklaşık yarısı böyle havzalarda yaşar.", "lessonId": "su" },
+    { "id": "yukari-havza", "term": "Yukarı havza", "definition": "Nehrin kaynağa yakın kısmı. Yukarı havzadaki ülke fiziksel olarak avantajlıdır; bu avantajın hukuken ne kadar hak doğurduğu ise çözülmüş bir soru değildir.", "lessonId": "su" },
+    { "id": "sanal-su", "term": "Sanal su", "definition": "Bir ürünü üretmek için harcanan su. Tahıl ithal eden bir ülke aslında su ithal eder; kurak ülkelerin su dengesi ancak bu hesapla anlaşılır.", "lessonId": "su" },
+    { "id": "ortak-havuz", "term": "Ortak havuz kaynağı", "definition": "Kullanımı engellenemeyen ama tükenebilen kaynak: yer altı suyu, balık stoğu, mera. Ostrom'un çalışmaları, bu kaynakların ne devletleştirmeden ne özelleştirmeden, yerel kurallarla da iyi yönetilebildiğini gösterdi.", "lessonId": "su" },
+    { "id": "kritik-mineral", "term": "Kritik mineral", "definition": "Arzı yoğunlaşmış ve ikamesi zor olduğu için stratejik sayılan maden: lityum, kobalt, nadir toprak elementleri, grafit. Kritiklik jeolojiden çok işleme kapasitesinin dağılımından doğar.", "lessonId": "enerji-gecisi" },
+    { "id": "nadir-toprak", "term": "Nadir toprak elementleri", "definition": "Mıknatıs ve elektronikte kullanılan on yedi element. Yer kabuğunda seyrek değildirler; asıl darboğaz, kirli ve maliyetli olan ayrıştırma işlemidir ve bu kapasite büyük ölçüde tek ülkede toplanmıştır.", "lessonId": "enerji-gecisi" },
+    { "id": "enterkonneksiyon", "term": "Enterkoneksiyon", "definition": "Elektrik şebekelerinin ülkeler arası bağlanması. Arz güvenliğini artırır ve yenilenebilir üretimin dalgalanmasını yutar; aynı zamanda yeni bir karşılıklı bağımlılık kurar.", "lessonId": "enerji-gecisi" },
+    { "id": "enerji-yogunlugu", "term": "Enerji yoğunluğu", "definition": "Bir birim üretim için harcanan enerji. Düşmesi, aynı büyümenin daha az yakıtla yapılabilmesi demektir ve ithalat bağımlılığını doğrudan azaltır.", "lessonId": "enerji-gecisi" },
+    { "id": "transit-ulke", "term": "Transit ülke", "definition": "Kaynağı ve pazarı başkalarına ait olan enerjinin üzerinden geçtiği ülke. Pazarlık gücü verir ama kaynak sahibi olmakla karıştırılmamalıdır; transit gelir kalemi çoğu zaman sanıldığından küçüktür.", "lessonId": "turkiyenin-konumu" },
+    { "id": "mavi-vatan", "term": "Deniz yetki alanları", "definition": "Kıta sahanlığı ve münhasır ekonomik bölge gibi, kıyı devletlerinin denizde hak iddia ettiği alanlar. Adaların bu alanları nasıl doğurduğu, Doğu Akdeniz'deki anlaşmazlığın hukuki çekirdeğidir.", "lessonId": "turkiyenin-konumu" },
+    { "id": "orta-koridor", "term": "Orta Koridor", "definition": "Çin'den Avrupa'ya Hazar ve Kafkasya üzerinden uzanan güzergâh. Deniz yoluna göre kısa, kuzey hattına göre daha az riskli; kapasitesi ise ikisinin de çok altındadır.", "lessonId": "turkiyenin-konumu" },
+    { "id": "stratejik-derinlik", "term": "Konum rantı", "definition": "Coğrafi konumdan kendiliğinden gelir beklentisi. Konum bir imkândır, gelir değil; kapasite, hukuki güvence ve öngörülebilirlik olmadan transit yolları başka güzergâhlara kayar.", "lessonId": "turkiyenin-konumu" }
+  ],
+  "figures": [
+    {
+      "id": "ibn-haldun",
+      "name": "İbn Haldun",
+      "lifespan": "1332-1406",
+      "oneLiner": "Devletlerin yükseliş ve çöküşünü coğrafya, geçim biçimi ve dayanışmayla açıkladı.",
+      "contributions": [
+        "Mukaddime'de tarihi olaylar dizisi olmaktan çıkarıp bir nedensellik sorusuna çevirdi",
+        "Göçebe ve yerleşik toplumların farklı dayanışma kapasitelerini karşılaştırdı",
+        "Devletlerin ömrünü kuşaklar üzerinden bir döngü olarak modelledi"
+      ],
+      "lessonId": "harita-okumak",
+      "tag": "Toplum"
+    },
+    {
+      "id": "piri-reis",
+      "name": "Piri Reis",
+      "lifespan": "1465-1553",
+      "oneLiner": "Akdeniz'i liman liman yazan denizci ve haritacı.",
+      "contributions": [
+        "Kitab-ı Bahriye'de kıyıları, rüzgârları ve limanları ayrıntısıyla anlattı",
+        "1513 tarihli dünya haritası, dönemin bilgi akışının izini taşır",
+        "Haritayı bir seyir aracı olarak, kullanım amacına göre kurgulamanın örneğini verdi"
+      ],
+      "lessonId": "harita-okumak",
+      "tag": "Harita"
+    },
+    {
+      "id": "mahan",
+      "name": "Alfred Thayer Mahan",
+      "lifespan": "1840-1914",
+      "oneLiner": "Deniz gücünü tarihin motoru sayan donanma subayı ve tarihçi.",
+      "contributions": [
+        "Ticaret filosu, donanma ve üsler zincirinin birlikte düşünülmesi gerektiğini savundu",
+        "Kitabı, birçok ülkede donanma bütçelerinin gerekçesi oldu",
+        "Deniz hâkimiyetinin savaş zamanı değil barış zamanı kurulduğunu vurguladı"
+      ],
+      "lessonId": "kara-ve-deniz",
+      "tag": "Deniz"
+    },
+    {
+      "id": "mackinder",
+      "name": "Halford Mackinder",
+      "lifespan": "1861-1947",
+      "oneLiner": "Avrasya'nın iç bölgesini dünyanın ekseni sayan coğrafyacı.",
+      "contributions": [
+        "1904'te demiryolunun kara gücünü deniz gücü karşısında güçlendireceğini öne sürdü",
+        "'Kalpgâh' kavramını ve ona bağlı üçlü formülü ortaya attı",
+        "Kuramı yirminci yüzyılda doğrulanmadı ama alanın sorularını biçimlendirdi"
+      ],
+      "lessonId": "kara-ve-deniz",
+      "tag": "Kara"
+    },
+    {
+      "id": "spykman",
+      "name": "Nicholas Spykman",
+      "lifespan": "1893-1943",
+      "oneLiner": "Asıl mücadelenin iç bölgede değil kıyı kuşağında geçtiğini savundu.",
+      "contributions": [
+        "'Kenar kuşak' kavramıyla Mackinder'ı tersine çevirdi",
+        "Nüfusun, limanların ve sanayinin kıyıda toplandığını verilerle gösterdi",
+        "Soğuk Savaş boyunca izlenen çevreleme siyasetinin kuramsal zeminini kurdu"
+      ],
+      "lessonId": "kara-ve-deniz",
+      "tag": "Kıyı"
+    },
+    {
+      "id": "haushofer",
+      "name": "Karl Haushofer",
+      "lifespan": "1869-1946",
+      "oneLiner": "Jeopolitiği yayılmacılığın diline çeviren isim; alanın uyarı levhası.",
+      "contributions": [
+        "Alman Geopolitik okulunu kurdu ve etkili bir dergi çıkardı",
+        "'Yaşam alanı' söylemini coğrafi bir zorunluluk gibi sundu",
+        "Bilimsel görünümlü coğrafi gerekçelerin fetih siyasetine nasıl kılıf olabildiğini gösterdi"
+      ],
+      "lessonId": "kara-ve-deniz",
+      "tag": "Uyarı"
+    },
+    {
+      "id": "braudel",
+      "name": "Fernand Braudel",
+      "lifespan": "1902-1985",
+      "oneLiner": "Tarihi olayların değil, coğrafyanın yavaş zamanının belirlediğini savundu.",
+      "contributions": [
+        "Akdeniz'i tek bir tarihsel birim olarak inceledi",
+        "Uzun süre, konjonktür ve olay diye üç ayrı zaman katmanı önerdi",
+        "İklim, mahsul ve yol ağlarını siyasi tarihin zemini hâline getirdi"
+      ],
+      "lessonId": "harita-okumak",
+      "tag": "Tarih"
+    },
+    {
+      "id": "malthus",
+      "name": "Thomas Malthus",
+      "lifespan": "1766-1834",
+      "oneLiner": "Nüfusun gıdadan hızlı arttığını öne sürdü; tahmini tutmadı, sorusu kaldı.",
+      "contributions": [
+        "Nüfus ile kaynak arasındaki ilişkiyi ilk kez sistematik biçimde ele aldı",
+        "Tarımsal verimlilikteki sıçramayı öngöremediği için tahmini yanlış çıktı",
+        "Kaynak sınırı tartışmasının bugün de kullanılan çerçevesini kurdu"
+      ],
+      "lessonId": "demografi",
+      "tag": "Nüfus"
+    },
+    {
+      "id": "boserup",
+      "name": "Ester Boserup",
+      "lifespan": "1910-1999",
+      "oneLiner": "Nüfus baskısının kıtlık değil yenilik ürettiğini gösterdi.",
+      "contributions": [
+        "Tarım tekniklerinin nüfus arttıkça yoğunlaştığını tarihsel verilerle savundu",
+        "Malthus'un nedensellik yönünü tersine çevirdi",
+        "Kadın emeğinin tarımdaki yerini kalkınma iktisadına soktu"
+      ],
+      "lessonId": "demografi",
+      "tag": "Nüfus"
+    },
+    {
+      "id": "ostrom",
+      "name": "Elinor Ostrom",
+      "lifespan": "1933-2012",
+      "oneLiner": "Ortak kaynakların yerel kurallarla iyi yönetilebildiğini alanda kanıtladı.",
+      "contributions": [
+        "Sulama şebekelerinden mera ve balıkçılığa yüzlerce örneği yerinde inceledi",
+        "'Ortakların trajedisi'nin kaçınılmaz olmadığını gösterdi",
+        "İşleyen ortak yönetimlerin paylaştığı sekiz tasarım ilkesini derledi"
+      ],
+      "lessonId": "su",
+      "tag": "Ortak kaynak"
+    },
+    {
+      "id": "schelling",
+      "name": "Thomas Schelling",
+      "lifespan": "1921-2016",
+      "oneLiner": "Çatışmayı pazarlık olarak modelledi; caydırıcılığın mantığını yazdı.",
+      "contributions": [
+        "Taahhüdün ve kendini bağlamanın nasıl güç ürettiğini gösterdi",
+        "Odak noktası kavramıyla açık iletişim olmadan anlaşmayı açıkladı",
+        "Silahlanma yarışlarının iletişimle nasıl yumuşatılabileceğini tartıştı"
+      ],
+      "lessonId": "kurumlar-ittifaklar",
+      "tag": "Strateji"
+    },
+    {
+      "id": "waltz",
+      "name": "Kenneth Waltz",
+      "lifespan": "1924-2013",
+      "oneLiner": "Devlet davranışını liderlerle değil sistemin yapısıyla açıkladı.",
+      "contributions": [
+        "Uluslararası düzende üstün bir otorite olmamasını temel açıklayıcı olarak aldı",
+        "Güç dengesinin kimse istemese de kendiliğinden oluştuğunu savundu",
+        "Kuramı, liderlerin ve iç siyasetin payını küçümsemekle eleştirilir"
+      ],
+      "lessonId": "kurumlar-ittifaklar",
+      "tag": "Kuram"
+    },
+    {
+      "id": "diamond",
+      "name": "Jared Diamond",
+      "lifespan": "1937-",
+      "oneLiner": "Kıtalar arası farkları coğrafyayla açıklamayı geniş bir okur kitlesine taşıdı.",
+      "contributions": [
+        "Evcilleştirilebilir tür sayısı ve kıtaların eksen yönü gibi somut değişkenler önerdi",
+        "Coğrafi açıklamayı ırkçı açıklamaların karşısına koydu",
+        "Kurumların ve tarihsel tercihlerin payını hafife almakla eleştirilir"
+      ],
+      "lessonId": "kaynaklar",
+      "tag": "Tartışma"
+    },
+    {
+      "id": "acemoglu",
+      "name": "Daron Acemoğlu",
+      "lifespan": "1967-",
+      "oneLiner": "Ülkeler arası refah farkının asıl kaynağının kurumlar olduğunu savundu.",
+      "contributions": [
+        "Kapsayıcı ve dışlayıcı kurumlar ayrımını geniş bir tarihsel veriyle işledi",
+        "Sömürge dönemi ölüm oranlarını kullanarak kurumların etkisini ayrıştırmayı denedi",
+        "2024 Nobel İktisat Ödülü'nü bu çalışma programıyla paylaştı"
+      ],
+      "lessonId": "kaynaklar",
+      "tag": "Kurumlar"
+    }
+  ],
+  "eraLabels": {
+    "erken": "Erken dönem",
+    "imparatorluk": "İmparatorluklar çağı",
+    "savas": "Savaşlar ve kutuplaşma",
+    "bugun": "Bugün"
+  },
+  "timeline": [
+    { "id": "tordesillas", "year": 1494, "yearLabel": "1494", "era": "erken", "title": "Dünyayı haritada bölmek", "body": "Tordesillas Antlaşması, henüz görülmemiş toprakları bir meridyen çizerek iki devlet arasında paylaştırdı. Haritanın gerçekliği tarif etmekten çıkıp onu kurmaya başladığı ilk büyük örnektir." },
+    { "id": "umit-burnu", "year": 1498, "yearLabel": "1498", "era": "erken", "title": "Ümit Burnu yolu açılıyor", "body": "Hindistan'a deniz yolunun bulunması, baharat ticaretinin Akdeniz üzerinden geçme zorunluluğunu ortadan kaldırdı. Yeni bir güzergâh, eski güzergâhın üzerindeki şehirlerin gelirini yıllar içinde eritti." },
+    { "id": "preveze", "year": 1538, "yearLabel": "1538", "era": "erken", "title": "Akdeniz'de deniz hâkimiyeti", "body": "Preveze'den sonra Osmanlı donanması Akdeniz'in doğusunda uzun süre belirleyici oldu. Deniz gücünün kıyı siyasetini nasıl doğrudan biçimlendirdiğinin klasik örneğidir." },
+    { "id": "vestfalya", "year": 1648, "yearLabel": "1648", "era": "erken", "title": "Egemenlik ilkesi", "body": "Vestfalya barışı, sınırları belli ve içişlerine karışılamaz devlet fikrini Avrupa siyasetinin temeline yerleştirdi. Bugünkü uluslararası hukukun çoğu kavramı bu zeminden çıkar." },
+    { "id": "malthus-deneme", "year": 1798, "yearLabel": "1798", "era": "erken", "title": "Nüfus üzerine deneme", "body": "Malthus, nüfusun gıdadan hızlı artacağını ve kıtlığın kaçınılmaz olduğunu yazdı. Tahmin tutmadı; ama kaynak ile nüfus arasındaki ilişkiyi soru hâline getirdi." },
+    { "id": "viyana", "year": 1815, "yearLabel": "1815", "era": "imparatorluk", "title": "Güç dengesi kuruluyor", "body": "Viyana Kongresi, hiçbir devletin tek başına belirleyici olamayacağı bir denge kurmayı amaçladı. Kırk yıla yakın büyük savaşsız dönem, dengeyi savunanların en sık andığı örnektir." },
+    { "id": "suveys-acilis", "year": 1869, "yearLabel": "1869", "era": "imparatorluk", "title": "Süveyş Kanalı açılıyor", "body": "Avrupa ile Asya arasındaki deniz yolu haftalarca kısaldı. Kanal, açıldığı andan itibaren hem ticaretin hem askerî planlamanın etrafında döndüğü bir nokta oldu." },
+    { "id": "mahan-kitap", "year": 1890, "yearLabel": "1890", "era": "imparatorluk", "title": "Deniz gücü kuramı", "body": "Mahan'ın kitabı, donanmayı ticaretin ve dolayısıyla refahın önkoşulu olarak sundu. Birçok ülkede donanma bütçelerinin gerekçesi doğrudan bu metin oldu." },
+    { "id": "mackinder-eksen", "year": 1904, "yearLabel": "1904", "era": "imparatorluk", "title": "Tarihin coğrafi ekseni", "body": "Mackinder, demiryolunun kara gücünü öne çıkaracağını ve Avrasya'nın iç bölgesinin belirleyici olacağını öne sürdü. Kuram etkili oldu ama tarih onu doğrulamadı." },
+    { "id": "panama", "year": 1914, "yearLabel": "1914", "era": "imparatorluk", "title": "Panama Kanalı", "body": "İki okyanus arasındaki mesafe bir kıtayı dolaşmak olmaktan çıktı. Kanalın kimin denetiminde olacağı, açıldığı günden beri bölge siyasetinin sabit maddesidir." },
+    { "id": "montro-imza", "year": 1936, "yearLabel": "1936", "era": "savas", "title": "Montrö Sözleşmesi", "body": "Türk Boğazlarından geçiş rejimi, ticaret gemilerine serbestlik tanıyan ve savaş gemilerine sınır koyan bir düzene bağlandı. Sözleşme, savaş hâlinde geçişi kapatma yetkisini Türkiye'ye verir." },
+    { "id": "bretton", "year": 1944, "yearLabel": "1944", "era": "savas", "title": "Bretton Woods", "body": "Savaş sonrası para düzeni doların merkezine oturtuldu. Bugün yaptırımların işlemesini sağlayan finansal ağın temeli, o toplantıda atılan kurumlarla kuruldu." },
+    { "id": "bm-veto", "year": 1945, "yearLabel": "1945", "era": "savas", "title": "Güvenlik Konseyi ve veto", "body": "Birleşmiş Milletler kurulurken beş devlete veto hakkı verildi. Bu, konseyi büyük güçlerin anlaştığı konularda etkili, anlaşmadığı konularda işlevsiz kılan yapısal tercihti." },
+    { "id": "bolunme", "year": 1947, "yearLabel": "1947", "era": "savas", "title": "Sınırların cetvelle çizilmesi", "body": "Hindistan'ın bölünmesinde sınır, birkaç hafta içinde ve sahayı görmeden çizildi. Milyonlarca insanın yerinden olmasıyla sonuçlandı; sınır çizmenin teknik değil siyasi bir iş olduğunun en ağır dersi." },
+    { "id": "nato-kurulus", "year": 1949, "yearLabel": "1949", "era": "savas", "title": "NATO kuruluyor", "body": "Ortak savunma taahhüdü, caydırıcılığı tek tek ülkelerden ittifakın tamamına taşıdı. Beşinci madde tarihte yalnızca bir kez işletildi." },
+    { "id": "suveys-krizi", "year": 1956, "yearLabel": "1956", "era": "savas", "title": "Süveyş krizi", "body": "Kanalın millîleştirilmesi askerî müdahaleye yol açtı ama müdahale siyasi olarak geri alındı. Kriz, sömürge sonrası dönemde gücün nasıl el değiştirdiğini açıkça gösterdi." },
+    { "id": "opec", "year": 1960, "yearLabel": "1960", "era": "savas", "title": "OPEC kuruluyor", "body": "Üretici ülkeler fiyat üzerinde ortak hareket etmek için örgütlendi. Kaynak sahipliğinin kendiliğinden güce dönüşmediği, örgütlenmenin gerektiği anlaşıldı." },
+    { "id": "petrol-ambargo", "year": 1973, "yearLabel": "1973", "era": "savas", "title": "Petrol ambargosu", "body": "Arz kısıntısı fiyatı katladı ve enerji güvenliği kavramını sanayi ülkelerinin gündemine kalıcı olarak soktu. Stratejik petrol stokları bu krizin ürünüdür." },
+    { "id": "su-protokol", "year": 1987, "yearLabel": "1987", "era": "savas", "title": "Fırat için protokol", "body": "Türkiye, sınırdan saniyede ortalama 500 metreküp su bırakmayı taahhüt etti. Geçici sayılan bu düzenleme, kalıcı bir paylaşım anlaşması yapılamadığı için yerinde kaldı." },
+    { "id": "sscb", "year": 1991, "yearLabel": "1991", "era": "bugun", "title": "Sovyetler Birliği dağılıyor", "body": "Tek gecede on beş yeni devlet, yeni sınırlar ve yeni boru hattı pazarlıkları ortaya çıktı. Kafkasya ve Orta Asya, seksen yıl sonra yeniden ayrı aktörler hâline geldi." },
+    { "id": "cin-dto", "year": 2001, "yearLabel": "2001", "era": "bugun", "title": "Çin Dünya Ticaret Örgütü'nde", "body": "Üretimin büyük ölçekte tek bir ülkeye kayması bu tarihten sonra hızlandı. Ucuzluk kazanıldı, yoğunlaşma riski birikti; iki sonucun aynı sürecin parçası olduğu ancak yıllar sonra tartışıldı." },
+    { "id": "kusak-yol", "year": 2013, "yearLabel": "2013", "era": "bugun", "title": "Kuşak ve Yol girişimi", "body": "Liman, demiryolu ve enerji yatırımlarından oluşan geniş bir program açıklandı. Altyapının hem ticaret hem etki aracı olduğu fikri, on dokuzuncu yüzyıl demiryolu siyasetinin bugünkü karşılığıdır." },
+    { "id": "salgin", "year": 2020, "yearLabel": "2020", "era": "bugun", "title": "Tedarik zincirleri kırılıyor", "body": "Tek bir fabrikanın durması, kıtalar ötesinde üretim bantlarını durdurdu. Verimlilik için kısaltılmış zincirlerin ne kadar kırılgan olduğu ilk kez bu ölçekte görüldü." },
+    { "id": "enerji-yeniden", "year": 2022, "yearLabel": "2022", "era": "bugun", "title": "Avrupa'nın enerji haritası yeniden çiziliyor", "body": "Boru hattı gazının yerini büyük ölçüde sıvılaştırılmış gaz ve yeni tedarikçiler aldı. Onlarca yıllık bir bağımlılığın birkaç mevsimde değiştirilebildiği, ama bedelinin ağır olduğu görüldü." },
+    { "id": "kizildeniz", "year": 2024, "yearLabel": "2024", "era": "bugun", "title": "Kızıldeniz trafiği sekiyor", "body": "Güvenlik riski yüzünden gemilerin önemli bir kısmı Ümit Burnu'ndan dolaşmaya başladı. Beş yüz yıl önce terk edilen güzergâhın geri dönmesi, darboğazların hâlâ ne kadar belirleyici olduğunu gösterdi." }
+  ]
+}

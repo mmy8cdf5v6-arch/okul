@@ -3976,6 +3976,231 @@
           " Burada rastgelelik yok: aynı sayıdan başlarsanız aynı diziyi alırsınız. Öngörülemezliğin kaynağı formül değil, " +
           "başlangıç değerini sonsuz hassasiyetle bilememek. Hava tahmininin bir haftadan öteye geçememesinin sebebi de budur." };
       }
+    },
+
+    "ticaret-cekimi": {
+      title: "Ticaret çekim yasasına uyar — uymadığı yerler anlamlıdır",
+      note: "Çekim modeli: iki ülke arasındaki ticaret, ekonomilerinin büyüklüğüyle doğru, aradaki mesafeyle ters orantılıdır. Ölçek katsayısı her seferinde en küçük kareler yöntemiyle verilere oturtulur, yani grafik modelin biçimini sınar. Ticaret rakamları 2023 civarı toplam mal ticaretinin yaklaşık değerleridir; mesafeler başkentler arasıdır.",
+      controls: [
+        { key: "b", label: "Mesafe üsteli", min: 0, max: 15, step: 1, def: 10,
+          fmt: function (v) { return r1(v / 10); } },
+        { key: "a", label: "Ekonomi üsteli", min: 4, max: 12, step: 1, def: 8,
+          fmt: function (v) { return r1(v / 10); } }
+      ],
+      draw: function (p) {
+        /* ad, ekonomi (milyar $), Ankara'ya uzaklık (km), gerçek ticaret (milyar $) */
+        var U = [
+          ["Almanya", 4500, 2130, 50],
+          ["İtalya", 2300, 1800, 32],
+          ["Rusya", 2000, 1770, 55],
+          ["Çin", 17800, 6900, 45],
+          ["ABD", 27000, 8600, 32]
+        ];
+        var a = p.a / 10, b = p.b / 10, i;
+        var ham = U.map(function (u) {
+          return Math.pow(u[1] / 1000, a) * Math.pow(1000 / u[2], b);
+        });
+        /* Ölçek katsayısını serbest bırakıp en küçük kareyle oturtuyoruz: soru
+           "ne kadar" değil, "hangi biçimde" azalıyor. */
+        var pay = 0, payda = 0;
+        for (i = 0; i < U.length; i++) { pay += ham[i] * U[i][3]; payda += ham[i] * ham[i]; }
+        var c = payda > 0 ? pay / payda : 0;
+        var tahmin = ham.map(function (h) { return c * h; });
+        var HI = 80, hata = 0, enBuyuk = 0, enBuyukAd = "";
+        var s = frame("", "milyar dolar");
+        [20, 40, 60].forEach(function (v) {
+          s += gLine(0, v / HI, 1, v / HI, { c: "var(--rule)", w: 0.8, d: "2 3" });
+          s += gTxt(0, v / HI, String(v), { a: "end", dx: -4, dy: 3, s: 8.5 });
+        });
+        var gw = 1 / U.length;
+        for (i = 0; i < U.length; i++) {
+          var x0 = i * gw + gw * 0.14, orta = i * gw + gw / 2;
+          s += gRect(x0, 0, orta - gw * 0.03, Math.min(1, U[i][3] / HI),
+            { c: "var(--ink)", o: 0.72, r: 1 });
+          s += gRect(orta + gw * 0.03, 0, i * gw + gw * 0.86, Math.min(1, tahmin[i] / HI),
+            { c: "var(--accent)", o: 0.5, s: "var(--accent)", sw: 1.2, d: "3 2", r: 1 });
+          s += gTxt(orta, 0, U[i][0], { a: "middle", dy: 12, s: 8 });
+          var f = Math.abs(tahmin[i] - U[i][3]);
+          hata += f;
+          if (f > enBuyuk) { enBuyuk = f; enBuyukAd = U[i][0]; }
+        }
+        s += gTxt(0.02, 0.95, "koyu: gerçek ticaret", { a: "start", c: "var(--ink)", s: 8.5, b: 1 });
+        s += gTxt(0.02, 0.87, "kesikli: modelin tahmini", { a: "start", c: "var(--accent)", s: 8.5, b: 1 });
+        hata = hata / U.length;
+        return { svg: s, text: "Mesafe üsteli " + r1(b) + ", ekonomi üsteli " + r1(a) +
+          " ile modelin ortalama sapması " + r0(hata) + " milyar dolar; en çok " + enBuyukAd +
+          " şaşırıyor. Onlarca ülke için yapılan ölçümlerde mesafe üsteli 1'e yakın çıkar: " +
+          "iki kat uzaklık, kabaca yarı ticaret demektir. Modelin tutturamadığı yerler asıl bilgiyi taşır — " +
+          "Rusya'yla ticaret enerji ithalatıyla şişer; ABD'yle ticaret ise gümrük birliği " +
+          "ve kara bağlantısı olmadığı için modelin verdiğinin altında kalır. Coğrafya kaderi belirlemez ama " +
+          "sapmayı açıklamak için hep bir sebep gerekir." };
+      }
+    },
+
+    "tedarik-yogunlasmasi": {
+      title: "Tek tedarikçiye bağlılığın fiyatı",
+      note: "Yoğunlaşma ölçüsü HHI, payların yüzde cinsinden karelerinin toplamıdır; rekabet otoriteleri 1500'ün üstünü yoğun, 2500'ün üstünü çok yoğun sayar. Kesinti sonrası fiyat etkisi, kısa vadeli talep esnekliği 0,3 varsayımıyla hesaplanan kaba bir tahmindir; gerçek etki stoklara ve ikame hızına göre değişir.",
+      controls: [
+        { key: "s", label: "En büyük tedarikçinin payı", min: 15, max: 90, step: 1, def: 45,
+          fmt: pctS },
+        { key: "n", label: "Kalanı paylaşan ülke", min: 1, max: 9, step: 1, def: 4,
+          fmt: function (v) { return v + " ülke"; } }
+      ],
+      draw: function (p) {
+        var s1 = p.s / 100, kalan = 1 - s1, n = p.n, i;
+        /* Kalan pay geometrik olarak azalarak dağıtılıyor: gerçek tedarik
+           tablolarında ikinci ve üçüncü kaynaklar da birbirine eşit olmaz. */
+        var w = [], top = 0;
+        for (i = 0; i < n; i++) { var v = Math.pow(0.62, i); w.push(v); top += v; }
+        var paylar = [s1];
+        for (i = 0; i < n; i++) paylar.push((kalan * w[i]) / top);
+        var hhi = 0;
+        paylar.forEach(function (v) { hhi += (100 * v) * (100 * v); });
+        var HI = 0.95;
+        var s = frame("", "pay");
+        [0.25, 0.5, 0.75].forEach(function (v) {
+          s += gLine(0, v / HI, 1, v / HI, { c: "var(--rule)", w: 0.8, d: "2 3" });
+          s += gTxt(0, v / HI, pctS(r0(100 * v)), { a: "end", dx: -4, dy: 3, s: 8.5 });
+        });
+        var gw = 1 / paylar.length;
+        for (i = 0; i < paylar.length; i++) {
+          s += gRect(i * gw + gw * 0.16, 0, (i + 1) * gw - gw * 0.16, Math.min(1, paylar[i] / HI),
+            { c: i === 0 ? "var(--no)" : "var(--accent)", o: i === 0 ? 0.85 : 0.45, r: 1 });
+          s += gTxt(i * gw + gw / 2, 0, i === 0 ? "1." : String(i + 1), { a: "middle", dy: 12, s: 8.5 });
+        }
+        s += gTxt(0.99, 0.93, "kırmızı: en büyük tedarikçi", { a: "end", c: "var(--no)", s: 8.5, b: 1 });
+        var zam = (s1 / 0.3) * 100;
+        return { svg: s, text: "En büyük tedarikçi payı " + pctS(p.s) + " iken HHI " + r0(hhi) + " — " +
+          (hhi > 2500 ? "rekabet otoritelerinin çok yoğun saydığı eşiğin üstünde."
+            : hhi > 1500 ? "yoğun sayılan aralıkta." : "dağınık bir tedarik tablosu.") +
+          " Bu tedarikçi kesilirse arzın " + pctS(p.s) + "'i bir gecede yok olur; kalan " + n +
+          " kaynak kısa vadede boşluğu dolduramaz. Talebin kısa vadede esnek olmadığı bir malda " +
+          "bu, kabaca " + pctS(r0(zam)) + " oranında bir fiyat sıçraması demektir. Yoğunlaşma tek başına " +
+          "kötü değildir — ucuzluk çoğu zaman ondan gelir. Kötü olan, kesinti hâlinde " +
+          "ikame hazırlığının olmamasıdır: stok, ikinci kaynak sözleşmesi, yurt içi kapasite. " +
+          "İleri çiplerde Tayvan'ın payı %90'a yaklaşır; Türkiye'nin doğal gazında ilk tedarikçinin " +
+          "payı yıllara göre %40 ile %55 arasında gezinmiştir." };
+      }
+    },
+
+    "yas-yapisi": {
+      title: "Nüfus yaşlanınca kaç kişi kaç kişiyi taşır",
+      note: "Türkiye'nin 2023 yaş dağılımından başlayan beş yıllık kohort projeksiyonu. Ölüm oranları projeksiyon boyunca sabit tutulur — tablo, ileri yaşlarda ömrün uzamasını karşılayacak biçimde seçilmiştir — ve göç yok sayılır; doğum sayısı 15-49 yaş kadın nüfusundan hesaplanır. Göç yok sayıldığı ve yaş bantları kaba tutulduğu için buradaki sayılar yayımlanmış resmî projeksiyonların bir miktar altında kalır; eğrinin yönü ve kaldıraçların göreli gücü ise doğrudur.",
+      controls: [
+        { key: "d", label: "Doğurganlık hızı", min: 10, max: 35, step: 1, def: 15,
+          fmt: function (v) { return r1(v / 10) + " çocuk"; } },
+        { key: "e", type: "choice", label: "Çalışma çağının üst sınırı", def: "65", options: [
+          ["65", "65 yaş"], ["70", "70 yaş"]] }
+      ],
+      draw: function (p) {
+        var BAS = [7.5, 7.8, 7.9, 7.7, 7.6, 7.7, 7.7, 7.6, 7.2, 6.5, 5.9, 5.2, 4.4, 3.5, 2.6, 1.6, 1.0, 0.6];
+        /* Beş yıllık hayatta kalma olasılıkları. Ölümlülüğün elli yıl boyunca
+           yavaşça iyileşmesini karşılamak için ileri yaşlarda bugünkü tablodan
+           bir miktar yüksek tutuldu. */
+        var SAG = [0.996, 0.999, 0.9985, 0.998, 0.997, 0.996, 0.994, 0.991, 0.986,
+          0.977, 0.964, 0.947, 0.925, 0.890, 0.835, 0.740, 0.590, 0.410];
+        var B = BAS.length, ADIM = 10, i, t;
+        /* 65 yaşı sınır alırsak çalışan bantlar 3..12, yaşlı bantlar 13..17;
+           70'e çekersek sınır bir bant kayar. */
+        var kes = p.e === "70" ? 14 : 13;
+        function oran(n) {
+          var calisan = 0, yasli = 0;
+          for (i = 3; i < kes; i++) calisan += n[i];
+          for (i = kes; i < B; i++) yasli += n[i];
+          return calisan > 0 ? (100 * yasli) / calisan : 0;
+        }
+        function seyir(tfr) {
+          var n = BAS.slice(), y = [oran(n)], k;
+          for (t = 0; t < ADIM; t++) {
+            var dogum = 0;
+            for (i = 3; i <= 9; i++) dogum += n[i];
+            dogum = 5 * (tfr / 35) * 0.49 * dogum;
+            k = new Array(B);
+            k[0] = dogum * SAG[0];
+            for (i = 1; i < B - 1; i++) k[i] = n[i - 1] * SAG[i - 1];
+            k[B - 1] = n[B - 2] * SAG[B - 2] + n[B - 1] * SAG[B - 1];
+            n = k;
+            y.push(oran(n));
+          }
+          return y;
+        }
+        var A = seyir(p.d / 10), R = seyir(2.1);
+        var HI = 60;
+        var s = frame("", "100 çalışana düşen yaşlı");
+        [20, 40].forEach(function (v) {
+          s += gLine(0, v / HI, 1, v / HI, { c: "var(--rule)", w: 0.8, d: "2 3" });
+          s += gTxt(0, v / HI, String(v), { a: "end", dx: -4, dy: 3, s: 8.5 });
+        });
+        function yol(y) {
+          return y.map(function (v, k) { return [k / ADIM, Math.max(0, Math.min(1, v / HI))]; });
+        }
+        s += gPoly(yol(R), { c: "var(--muted)", w: 1.6, d: "4 3" });
+        s += gPoly(yol(A), { c: "var(--accent)", w: 2.6 });
+        s += gDot(1, Math.min(1, A[ADIM] / HI), { c: "var(--accent)", r: 3.5 });
+        [0, 5, 10].forEach(function (k) {
+          s += gTxt(k / ADIM, 0, String(2025 + 5 * k), { a: k === 0 ? "start" : k === 10 ? "end" : "middle", dy: 12, s: 8.5 });
+        });
+        s += gTxt(0.02, 0.94, "kesikli: doğurganlık 2,1 olsaydı", { a: "start", c: "var(--muted)", s: 8.5 });
+        return { svg: s, text: "Doğurganlık " + r1(p.d / 10) + " çocukta kalırsa, bugün " +
+          r0(A[0]) + " olan oran 2075'te " + r0(A[ADIM]) + " oluyor: her yüz çalışana " +
+          r0(A[ADIM]) + " yaşlı. Nüfusun kendini yenilediği 2,1 düzeyinde bile oran " + r0(R[ADIM]) +
+          "'e çıkardı — çünkü yaşlanacak kuşak zaten doğmuş durumda. " +
+          (p.e === "70"
+            ? "Çalışma çağının üst sınırını 70'e çekmek oranı belirgin biçimde düşürüyor; emeklilik yaşı, bu denklemde en hızlı işleyen kaldıraçtır."
+              : "Çalışma çağının üst sınırını 70 yaptığınızda ne olduğuna bakın: emeklilik yaşı bu denklemin en hızlı işleyen kaldıracıdır.") +
+          " Jeopolitik açıdan önemi şudur: asker, vergi ve üretim yaş yapısından çıkar. " +
+          "Bugün genç görünen ülkelerin çoğu bu eğrinin başında; Türkiye 2000'lerdeki demografik " +
+          "fırsat penceresinin sonuna geldi." };
+      }
+    },
+
+    "sinir-asan-su": {
+      title: "Yukarı havza, aşağı havza",
+      note: "Fırat'ın Türkiye çıkışındaki doğal akışı kabaca yılda 30 kilometreküp, yıllık ortalaması saniyede 950 metreküp civarındadır; aylık dağılım kar erimesine göre şekillenir. Buradaki sayılar temsilîdir, işletme kayıtlarından alınmamıştır. 1987 protokolünde Türkiye, sınırdan saniyede ortalama 500 metreküp bırakmayı taahhüt etmiştir.",
+      controls: [
+        { key: "k", label: "Yukarı havzada tüketim", min: 0, max: 50, step: 1, def: 25, fmt: pctS },
+        { key: "y", label: "Yağış", min: -40, max: 20, step: 5, def: 0,
+          fmt: function (v) { return (v > 0 ? "+" : "") + pctS(v); } },
+        { key: "b", type: "choice", label: "Baraj işletmesi", def: "yok", options: [
+          ["yok", "Yok"], ["var", "Düzenlenmiş"]] }
+      ],
+      draw: function (p) {
+        var MEV = [0.6, 0.7, 1.2, 2.4, 2.6, 1.5, 0.7, 0.45, 0.35, 0.35, 0.45, 0.55];
+        var AD = ["Oc", "Şu", "Mr", "Ns", "My", "Hz", "Tm", "Ağ", "Ey", "Ek", "Ks", "Ar"];
+        var i, top = 0;
+        for (i = 0; i < 12; i++) top += MEV[i];
+        var ORT = 950 * (1 + p.y / 100) * (1 - p.k / 100);
+        var ak = [], altinda = 0, yil = 0;
+        for (i = 0; i < 12; i++) {
+          var q = p.b === "var" ? ORT : ORT * (MEV[i] * 12) / top;
+          ak.push(q);
+          if (q < 500) altinda++;
+          yil += q * 30.4 * 86400 / 1e9;
+        }
+        var HI = 2800;
+        var s = frame("", "m³/s");
+        [1000, 2000].forEach(function (v) {
+          s += gLine(0, v / HI, 1, v / HI, { c: "var(--rule)", w: 0.8, d: "2 3" });
+          s += gTxt(0, v / HI, String(v), { a: "end", dx: -4, dy: 3, s: 8.5 });
+        });
+        var gw = 1 / 12;
+        for (i = 0; i < 12; i++) {
+          s += gRect(i * gw + gw * 0.18, 0, (i + 1) * gw - gw * 0.18, Math.min(1, ak[i] / HI),
+            { c: ak[i] < 500 ? "var(--no)" : "var(--accent)", o: ak[i] < 500 ? 0.8 : 0.5, r: 1 });
+          s += gTxt(i * gw + gw / 2, 0, AD[i], { a: "middle", dy: 12, s: 7.5 });
+        }
+        s += gLine(0, 500 / HI, 1, 500 / HI, { c: "var(--ink)", w: 1.6, d: "5 3" });
+        s += gTxt(0.99, 0.93, "kesikli çizgi: protokoldeki 500 m³/s", { a: "end", c: "var(--ink)", s: 8.5, b: 1 });
+        return { svg: s, text: "Bu ayarlarla sınırdan yılda " + r1(yil) + " kilometreküp su geçiyor" +
+          (altinda ? " ve " + altinda + " ay taahhüt edilen 500 m³/s'nin altında kalıyor."
+            : " ve hiçbir ay taahhüt edilen 500 m³/s'nin altına düşmüyor.") +
+          (p.b === "var"
+            ? " Barajlar akışı düzleştiriyor: ilkbahar taşkını kayboluyor, yaz ayları yükseliyor. Aşağı havzadaki sulama için bu çoğu zaman iyi haberdir — kavga toplam miktarda çıkar, mevsimde değil."
+              : " Baraj olmadan akış tamamen kar erimesine bağlı: nisan-mayısta taşkın, eylül-ekimde kuraklık. Düzenleme olmadan aşağı havza yazın zaten susuzdur.") +
+          " Kuraklık ile tüketimin üst üste bindiği yıllarda mesele teknik olmaktan çıkıp siyasi hâle gelir: " +
+          "üç ülke de suyu kendi toprağında doğan bir kaynak ya da paylaşılması gereken bir nehir olarak tanımlar " +
+          "ve iki tanım arasında hakem yoktur." };
+      }
     }
   };
 

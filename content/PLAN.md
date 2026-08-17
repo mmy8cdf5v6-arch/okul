@@ -36,9 +36,12 @@ kullanılabilir.
 | 15 | Biyoloji | `biyoloji` | Klasikler | 4 | ✅ |
 | 16 | Kuantum fiziği | `kuantum` | Klasikler | 5 | ✅ |
 | 17 | Matematik | `matematik` | Klasikler | 5 | ✅ |
-| 18 | Jeopolitik | `jeopolitik` | Bugünü anlamak | 4 | |
+| 18 | Jeopolitik | `jeopolitik` | Bugünü anlamak | 4 | ✅ |
 | — | Hukuk okuryazarlığı | `hukuk` | Bugünü anlamak | 1 | yazılmadı |
 | — | Dilbilim ve Türkçenin yapısı | `dilbilim` | Klasikler | 3 | yazılmadı |
+
+**Program tamamlandı.** Kütüphane yirmi kursa ulaştı: 263 ders, 789 soru,
+98 grafik. Kategoriler onar kursta eşitlendi.
 
 ## Modül iskeletleri
 

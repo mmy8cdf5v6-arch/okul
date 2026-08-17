@@ -1,0 +1,494 @@
+[
+  {
+    "id": "harita-okumak",
+    "moduleId": "cografya",
+    "order": 1,
+    "title": "Harita okumak",
+    "subtitle": "Her harita bir iddiadır; tarafsız olanı yoktur.",
+    "minutes": 8,
+    "keyTerms": ["jeopolitik", "projeksiyon", "mercator", "zihnî harita"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Jeopolitik, coğrafi konumun devletlerin davranışını nasıl kısıtladığını inceler. Bu tanımdaki kilit sözcük 'kısıtlar'dır. Coğrafya bir ülkenin ne yapacağını söylemez; bazı seçenekleri pahalı, bazılarını neredeyse imkânsız hâle getirir. Denize çıkışı olmayan bir ülke ihracat yapamaz demek değildir, ama her tonu için komşusunun iznine muhtaçtır ve bu izin bir pazarlık kalemidir. Alanın bütün faydası bu tür kısıtları görünür kılmasında; bütün tehlikesi ise kısıtı yazgıya çevirmesindedir."
+      },
+      {
+        "kind": "text",
+        "title": "Düz haritanın yalanları",
+        "body": "Küre biçimindeki bir yüzeyi düzleme bozmadan aktarmak matematiksel olarak imkânsızdır. Her projeksiyon bir şeyi korur, başka şeyleri feda eder. Denizcilikte kullanılan Mercator açıları korur — pusula yönü haritada düz bir çizgidir — ama kutuplara doğru alanları büyütür. Sonuç, nesiller boyu okul duvarlarında Grönland'ı Afrika kadar büyük görmemizdir; oysa Afrika, Grönland'ın on dört katıdır. Bu bir komplo değil, bir ödünleşmedir. Ama ödünleşmenin farkında olmadan bakan biri, dünyanın kuzeyini olduğundan büyük sanır."
+      },
+      {
+        "kind": "list",
+        "title": "Bir haritaya bakarken sorulacaklar",
+        "items": [
+          "Merkezde ne var? Merkez seçimi hangi ülkeyi 'ortada', hangisini 'kenarda' gösteriyor?",
+          "Hangi projeksiyon kullanılmış ve hangi büyüklükler abartılıyor?",
+          "Neler çizilmemiş? Nüfus yoğunluğu, yükselti, mevsimlik buz, kimin haritasında görünmüyor?",
+          "Sınırlar kesin çizgiyle mi çizilmiş? Tartışmalı sınırlar çoğu haritada tartışmasız görünür.",
+          "Ölçek ne? Bir kıtayı gösteren haritada iki şehir yan yana durur; arada üç bin kilometre olabilir."
+        ]
+      },
+      {
+        "kind": "example",
+        "title": "Mesafeyi yanlış hatırlıyoruz",
+        "body": "İstanbul'dan Londra'ya uçuş yaklaşık 2500 kilometredir. İstanbul'dan Tahran'a ise 1800. Çoğu insan ikincisini 'çok daha uzak' sayar, çünkü zihnî harita fiziksel mesafeye değil, kültürel ve siyasi yakınlığa göre kurulur. Aynı çarpıtma Türkiye'nin Afrika'ya olan yakınlığında da vardır: Ankara ile Hartum arası, Ankara ile Berlin arasından kısadır. Zihnî haritalar dış politika tartışmalarında sessizce gerçek haritanın yerine geçer; farkında olmak, tartışmayı düzeltmenin ilk adımıdır."
+      },
+      {
+        "kind": "text",
+        "title": "Yavaş zaman",
+        "body": "Braudel, tarihin üç ayrı hızda aktığını söyledi. En üstte olaylar vardır: savaşlar, seçimler, antlaşmalar. Altında on yıllara yayılan ekonomik dalgalar. En altta ise neredeyse hiç değişmeyen coğrafya: dağ sıraları, yağış rejimi, hangi toprağın ne verdiği. Bir bölgenin siyasetini anlamak için üstteki katmana bakmak yeterli görünür ama en alttaki katman, aynı kavganın neden yüzyıllardır aynı geçitler ve aynı vadiler üzerinde çıktığını açıklar."
+      },
+      {
+        "kind": "quote",
+        "text": "Coğrafya, tarihin sahnesi değil, oyuncularından biridir.",
+        "source": "Jeopolitik yazınının sık tekrarlanan özeti"
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Mercator projeksiyonu neyi korur, neyi bozar?",
+        "options": [
+          "Alanı korur, açıyı bozar",
+          "Açıyı korur, kutuplara doğru alanı abartır",
+          "Hem alanı hem açıyı korur",
+          "Mesafeyi korur, yönü bozar"
+        ],
+        "answerIndex": 1,
+        "explanation": "Pusula yönünün düz çizgi olması denizcilik için değerlidir; bedeli, yüksek enlemlerde alanların büyümesidir."
+      },
+      {
+        "id": "q2",
+        "prompt": "'Coğrafya kısıtlar ama belirlemez' ne demektir?",
+        "options": [
+          "Coğrafyanın hiçbir etkisi yoktur",
+          "Bazı seçenekleri pahalı ya da imkânsız kılar, ama tercihi ortadan kaldırmaz",
+          "Coğrafya ülkelerin kaderini tamamen yazar",
+          "Sadece küçük ülkeler için geçerlidir"
+        ],
+        "answerIndex": 1,
+        "explanation": "Denize çıkışı olmayan bir ülke ihracat yapabilir; her seferinde komşusuyla pazarlık etmek zorunda kalır."
+      },
+      {
+        "id": "q3",
+        "prompt": "Zihnî harita nedir?",
+        "options": [
+          "Devletlerin gizli askerî haritaları",
+          "İnsanların kafasındaki, ölçeği ve komşulukları çarpıtılmış dünya tasviri",
+          "Uydu görüntülerinden üretilen sayısal harita",
+          "Tarihî haritaların arşivi"
+        ],
+        "answerIndex": 1,
+        "explanation": "Ankara-Hartum arasının Ankara-Berlin'den kısa olması çoğu kişiyi şaşırtır; zihnî harita fiziksel değil kültürel mesafeye göre kuruludur."
+      }
+    ]
+  },
+  {
+    "id": "deniz-ve-bogaz",
+    "moduleId": "cografya",
+    "order": 2,
+    "title": "Denizler ve geçitler",
+    "subtitle": "Dünya ticaretinin tamamı birkaç dar noktadan geçer.",
+    "minutes": 9,
+    "keyTerms": ["darboğaz", "hürmüz", "malakka", "montrö", "süveyş"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Ticaretin ağırlık olarak yaklaşık yüzde sekseni denizden taşınır. Deniz taşımacılığı bu kadar baskın olduğu için, deniz yollarının daraldığı yerler orantısız bir öneme sahiptir. Bu dar geçitlere darboğaz denir. Bir darboğazın kapanması değil, kapanma ihtimalinin belirmesi bile fiyatları hareket ettirir; çünkü sigorta primi ve navlun anında yükselir. Jeopolitiğin somut haritası, ülkelerin listesinden çok bu geçitlerin listesidir."
+      },
+      {
+        "kind": "list",
+        "title": "Belli başlı geçitler",
+        "items": [
+          "Hürmüz: Basra Körfezi'nin tek çıkışı. Deniz yoluyla taşınan ham petrolün beşte birinden fazlası buradan geçer ve alternatif boru hatları bu hacmin küçük bir kısmını taşıyabilir.",
+          "Malakka: Hint Okyanusu ile Pasifik arasındaki ana kapı. Çin'in ithal enerjisinin büyük bölümü buradan geçer.",
+          "Süveyş ve Babü'l-Mendep: Asya-Avrupa hattının kısa yolu. Kapandığında gemiler Ümit Burnu'ndan dolaşır, sefer haftalarca uzar.",
+          "Türk Boğazları: Karadeniz'in tek çıkışı. Tahıl, gübre ve enerji akışının önemli bir kısmı buradan geçer.",
+          "Panama: İki okyanus arası kısa yol. Kapasitesi, kanalı besleyen göllerin su seviyesine bağlıdır ve kuraklıkta geçiş sayısı düşer.",
+          "Danimarka Boğazları ve Cebelitarık: Baltık ve Akdeniz'in Atlantik'e açıldığı kapılar."
+        ]
+      },
+      {
+        "kind": "text",
+        "title": "Montrö'nün mantığı",
+        "body": "Türk Boğazlarının rejimi 1936 Montrö Sözleşmesi'yle düzenlenir. Sözleşme ticaret gemilerine barış zamanında serbest geçiş tanır. Savaş gemileri için ise Karadeniz'e kıyısı olan ve olmayan devletler arasında ayrım yapar: kıyıdaş olmayan devletlerin gemileri için tonaj sınırı ve kalış süresi sınırı vardır. Türkiye savaşa taraf olduğunda geçişi kapatabilir, savaş tehlikesi içinde saydığında ise kısıtlayabilir. Bu düzen, dar bir su yolunun büyük güçler arasında sürekli kriz konusu olmasını doksan yıldır önlemiş sayılır — sözleşmenin bugünün gemi tiplerine ne kadar uyduğu ise ayrı ve açık bir tartışmadır."
+      },
+      {
+        "kind": "example",
+        "title": "Beş yüz yıllık güzergâh geri döndü",
+        "body": "2024'te Kızıldeniz'deki güvenlik riski yüzünden konteyner gemilerinin önemli bir kısmı Süveyş yerine Ümit Burnu'nu tercih etti. Asya-Avrupa seferi yaklaşık on gün uzadı, yakıt tüketimi ve navlun yükseldi. 1498'de açılan ve 1869'da terk edilen yol, bir kanal kapanmadan, sadece riskli hâle geldiği için yeniden işler oldu. Darboğazın gücü fiziksel kapanmasında değil, kapanma ihtimalinin fiyatlanmasındadır."
+      },
+      {
+        "kind": "text",
+        "title": "Denizde kim ne iddia ediyor",
+        "body": "Denizler haritada boş görünür ama hukuken katmanlıdır: karasuları, bitişik bölge, münhasır ekonomik bölge, kıta sahanlığı. Anlaşmazlıkların çoğu bu katmanların nereden başlayacağından çıkar ve en çok da adalar üzerinden. Küçük bir ada, çevresinde büyük bir deniz alanı doğurabilir mi? Uluslararası hukuk buna kesin bir cevap vermez; hakemlik kararları duruma göre farklı sonuçlara ulaşmıştır. Doğu Akdeniz'deki anlaşmazlığın çekirdeği tam olarak bu belirsizliktir ve tarafların hepsinin kendi lehine bir okuması vardır."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Bir deniz darboğazının fiyatları etkilemesi için ne gerekir?",
+        "options": [
+          "Tamamen kapanması",
+          "Kapanma ihtimalinin belirmesi yeterlidir; sigorta ve navlun hemen yükselir",
+          "Savaş ilan edilmesi",
+          "Bir yıldan uzun süre kapalı kalması"
+        ],
+        "answerIndex": 1,
+        "explanation": "Risk fiyatlanır. 2024'te Süveyş kapanmadı, sadece riskli hâle geldi ve trafiğin bir kısmı Ümit Burnu'na kaydı."
+      },
+      {
+        "id": "q2",
+        "prompt": "Montrö Sözleşmesi savaş gemileri konusunda hangi ayrımı yapar?",
+        "options": [
+          "Büyük ve küçük gemiler arasında",
+          "Karadeniz'e kıyıdaş olan ve olmayan devletler arasında",
+          "NATO üyesi olan ve olmayanlar arasında",
+          "Hiçbir ayrım yapmaz"
+        ],
+        "answerIndex": 1,
+        "explanation": "Kıyıdaş olmayan devletlerin savaş gemileri için tonaj ve kalış süresi sınırları vardır."
+      },
+      {
+        "id": "q3",
+        "prompt": "Çin'in 'Malakka ikilemi' dediği durum nedir?",
+        "options": [
+          "Malakka'da ada anlaşmazlığı yaşaması",
+          "İthal enerjisinin büyük kısmının denetleyemediği tek bir geçitten geçmesi",
+          "Malakka'da liman inşa edememesi",
+          "Boğazın sığ olması"
+        ],
+        "answerIndex": 1,
+        "explanation": "Bu bağımlılık, Pekin'in kara güzergâhlarına ve boru hatlarına yaptığı yatırımın açık gerekçesidir."
+      }
+    ]
+  },
+  {
+    "id": "kara-ve-deniz",
+    "moduleId": "cografya",
+    "order": 3,
+    "title": "Kara gücü, deniz gücü ve kuramların sınırı",
+    "subtitle": "Etkili olan kuram ile doğru çıkan kuram aynı şey değil.",
+    "minutes": 9,
+    "keyTerms": ["kara gücü", "deniz gücü", "kalpgâh", "kenar kuşak", "coğrafi determinizm"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Yirminci yüzyılın başında iki rakip kuram, coğrafyayı gücün açıklaması hâline getirmeye çalıştı. Mahan'a göre asıl mesele denizdi: ticaret filosu, onu koruyacak donanma ve dünyaya yayılmış üsler zinciri olmadan hiçbir ülke büyük güç olamazdı. Mackinder ise demiryolunun her şeyi değiştireceğini savundu. Denizden ulaşılamayan Avrasya iç bölgesi — kalpgâh — artık kendi içinde hızla hareket edebilecek, buraya hâkim olan dünyaya hâkim olacaktı."
+      },
+      {
+        "kind": "quote",
+        "text": "Doğu Avrupa'ya hâkim olan Kalpgâh'a hükmeder; Kalpgâh'a hâkim olan Dünya Adası'na hükmeder; Dünya Adası'na hâkim olan dünyaya hükmeder.",
+        "source": "Halford Mackinder, 1919"
+      },
+      {
+        "kind": "text",
+        "title": "Ne oldu",
+        "body": "Yirminci yüzyıl Mackinder'ı doğrulamadı. Kalpgâhı elinde tutan devlet çöktü; belirleyici olan, nüfusun ve sanayinin toplandığı kıyı kuşağı oldu. Spykman bunu daha 1940'larda söylemişti: asıl mücadele iç bölgede değil kenar kuşakta geçer. Soğuk Savaş boyunca izlenen çevreleme siyaseti, tam da bu okumaya dayanıyordu. Kuramlar arasındaki bu hesaplaşma öğreticidir çünkü en etkili kuramın en doğru kuram olmadığını gösterir: Mackinder çok okundu, Spykman daha çok haklı çıktı."
+      },
+      {
+        "kind": "list",
+        "title": "Coğrafi açıklamanın tuzakları",
+        "items": [
+          "Geriye dönük uydurma: olan biten bir kez bilindikten sonra ona uyan bir coğrafi gerekçe her zaman bulunur.",
+          "Teknolojinin haritayı değiştirmesi: demiryolu, uçak, boru hattı, denizaltı kablosu — her biri 'kalıcı' sanılan bir avantajı eritti.",
+          "Kurumların atlanması: benzer coğrafyada, benzer kaynakla, çok farklı sonuçlar üretmiş komşu ülkeler vardır.",
+          "Ölçek karışıklığı: bir kıta için doğru olan bir vadi için, bir yüzyıl için doğru olan bir yıl için yanlış olabilir.",
+          "Meşrulaştırma: coğrafi zorunluluk iddiası, fetih ve işgal için en sık kullanılmış kılıflardan biridir."
+        ]
+      },
+      {
+        "kind": "example",
+        "title": "Alanın kirlendiği dönem",
+        "body": "1920'ler ve 30'larda Almanya'da gelişen Geopolitik okulu, Haushofer'in elinde 'yaşam alanı' söyleminin bilimsel görünümlü ambalajına dönüştü. Haritalar oklarla doldu, nüfus yoğunluğu bir yayılma hakkı gibi sunuldu. Savaştan sonra jeopolitik sözcüğü İngilizce yazında uzun süre kullanılamaz hâle geldi. Bu geçmiş alanın kendisini geçersiz kılmaz ama bir şey öğretir: coğrafi zorunluluk dili, siyasi tercihi doğa yasası gibi göstermek isteyenlerin en kolay ulaştığı dildir."
+      },
+      {
+        "kind": "text",
+        "title": "Bugün nasıl kullanılıyor",
+        "body": "Ciddi çalışmalar artık coğrafyayı tek başına değil, kurumlarla birlikte ele alıyor. Acemoğlu ve çalışma arkadaşlarının programı, ülkeler arası refah farkının asıl kaynağının mülkiyet güvencesi, hukukun öngörülebilirliği ve siyasi katılım gibi kurumsal değişkenler olduğunu savunur; coğrafya bu değişkenlerin tarihsel olarak nasıl kurulduğunu etkiler ama sonucu tek başına yazmaz. Doğru soru 'coğrafya mı kurumlar mı' değil, 'coğrafya kurumları hangi yollardan biçimlendirdi' sorusudur."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Spykman'ın Mackinder'a itirazı neydi?",
+        "options": [
+          "Coğrafyanın hiç önemi olmadığını savundu",
+          "Belirleyici olanın iç bölge değil, nüfus ve sanayinin yoğunlaştığı kıyı kuşağı olduğunu savundu",
+          "Deniz gücünün önemsiz olduğunu savundu",
+          "Demiryolunun hiç etkisi olmayacağını savundu"
+        ],
+        "answerIndex": 1,
+        "explanation": "Yirminci yüzyılın seyri Spykman'ı daha çok doğruladı; çevreleme siyaseti bu okumaya dayanıyordu."
+      },
+      {
+        "id": "q2",
+        "prompt": "Coğrafi determinizmin en önemli tarihsel sakıncası nedir?",
+        "options": [
+          "Haritaları yanlış çizmesi",
+          "Siyasi tercihi doğa yasası gibi göstererek fetih ve işgale kılıf sağlayabilmesi",
+          "Ekonomi verilerini kullanmaması",
+          "Sadece Avrupa'yı incelemesi"
+        ],
+        "answerIndex": 1,
+        "explanation": "1930'larda Alman Geopolitik okulunun 'yaşam alanı' söylemi bunun en açık örneğidir."
+      },
+      {
+        "id": "q3",
+        "prompt": "Bugünkü ciddi çalışmalarda coğrafya nasıl ele alınıyor?",
+        "options": [
+          "Tek başına belirleyici olarak",
+          "Tamamen dışlanarak",
+          "Kurumların tarihsel olarak nasıl kurulduğunu etkileyen bir değişken olarak",
+          "Yalnızca askerî planlamada"
+        ],
+        "answerIndex": 2,
+        "explanation": "Doğru soru 'coğrafya mı kurumlar mı' değil, coğrafyanın kurumları hangi yollardan biçimlendirdiğidir."
+      }
+    ]
+  },
+  {
+    "id": "kaynaklar",
+    "moduleId": "cografya",
+    "order": 4,
+    "title": "Kaynaklar: zenginlik mi, tuzak mı",
+    "subtitle": "Yeraltı zenginliğinin ne getireceğini yerüstündeki kurumlar belirler.",
+    "minutes": 8,
+    "keyTerms": ["kaynak laneti", "rantiye devlet", "hollanda hastalığı", "varlık fonu"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Sezgi, yeraltı zenginliğinin refah getireceğini söyler. Veriler daha karışık bir tablo çizer: petrol ve maden ihracatına bağımlı ülkeler ortalamada daha yavaş büyümüş, gelirleri daha çok dalgalanmış ve daha sık iç çatışma yaşamıştır. Bu gözleme kaynak laneti denir. Bir doğa yasası değildir — istisnaları vardır ve tam olarak neyi ölçtüğü tartışmalıdır — ama yeterince tekrarlanan bir örüntüdür."
+      },
+      {
+        "kind": "list",
+        "title": "Lanet nasıl işler",
+        "items": [
+          "Hollanda hastalığı: kaynak ihracatı para birimini değerlendirir, sanayi ve tarım ihracatı rekabet dışı kalır.",
+          "Dalgalanma: kaynak fiyatları oynaktır; buna bağlanmış bütçe iyi yıllarda şişer, kötü yıllarda kesintiye gider.",
+          "Rantiye etkisi: geliri vergiden gelmeyen devletin vatandaşa hesap verme baskısı azalır.",
+          "Ele geçirme kavgası: geliri tek bir kuyudan ya da madenden akan yerlerde iktidarı ele geçirmenin ödülü büyür.",
+          "Yatırım yanlışı: kalıcı olmayan gelir, kalıcı harcama kalemlerine bağlanır."
+        ]
+      },
+      {
+        "kind": "example",
+        "title": "Norveç neden farklı",
+        "body": "Norveç 1969'da Kuzey Denizi'nde petrol buldu ve kaynak lanetinin bütün maddelerine adaydı. Yapılan tercih basitti ama uygulaması zordu: petrol geliri bütçeye doğrudan girmedi, bir fona konuldu ve yurt dışında yatırıma çevrildi; bütçe her yıl sadece fonun beklenen reel getirisi kadarını kullanabildi. Böylece hem para birimi şişmedi hem gelir gelecek kuşaklara yayıldı. Ayrım kaynağın kendisinde değil, gelirin nereye aktığını belirleyen kuralda ve o kurala uyulmasını sağlayan kurumlardadır."
+      },
+      {
+        "kind": "text",
+        "title": "Türkiye'nin kaynak dengesi",
+        "body": "Türkiye enerjide büyük ölçüde dışa bağımlıdır: doğal gazın neredeyse tamamı, petrolün büyük kısmı ithal edilir. Bu, cari açığın sabit ve en büyük kalemini oluşturur ve enerji fiyatları ile enflasyon arasında doğrudan bir kanal kurar. Öte yandan Türkiye'nin kaynak laneti sorunu yoktur; sınavı tersidir. Bor, mermer, jeotermal potansiyeli ve son yıllarda Karadeniz'de bulunan doğal gaz gibi kalemler tabloyu bir miktar değiştirir ama ithalatın ölçeğini değiştirmez. Bu yapıda ithalat faturasını düşüren en güçlü kalem yeni bir kaynak bulmak değil, aynı üretimi daha az enerjiyle yapmaktır."
+      },
+      {
+        "kind": "text",
+        "title": "Boserup'un tersine çevirdiği şey",
+        "body": "Malthus, nüfus artışının kaynakları tüketip kıtlığa yol açacağını söylemişti. Boserup aynı ilişkiyi ters yönde okudu: nüfus baskısı, insanları daha yoğun tarım tekniklerine ve yeni düzenlemelere zorlar; kıtlık değil yenilik üretir. İkisi de kısmen haklıdır ve fark kurumlardadır. Baskı, uyum sağlayabilen bir toplumda yeniliğe; uyum kapasitesi olmayan bir toplumda kıtlığa dönüşür. Kaynak tartışmalarının çoğu, aslında bu uyum kapasitesi tartışmasıdır."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Hollanda hastalığı nedir?",
+        "options": [
+          "Kaynakların hızla tükenmesi",
+          "Kaynak ihracatının para birimini değerlendirip diğer sektörleri rekabet dışı bırakması",
+          "Madenlerde çalışan işçilerin hastalanması",
+          "Kaynak fiyatlarının düşmesi"
+        ],
+        "answerIndex": 1,
+        "explanation": "Adını 1960'larda doğal gaz bulan Hollanda'nın sanayisinde görülenlerden alır."
+      },
+      {
+        "id": "q2",
+        "prompt": "Norveç'in kaynak lanetinden kaçınmasını sağlayan asıl unsur neydi?",
+        "options": [
+          "Petrolünün az olması",
+          "Gelirin bütçeye doğrudan girmeyip fona aktarılması ve kullanımının kurala bağlanması",
+          "Petrolü hiç çıkarmaması",
+          "Nüfusunun küçük olması"
+        ],
+        "answerIndex": 1,
+        "explanation": "Ayrım kaynakta değil, gelirin nereye aktığını belirleyen kuralda ve o kurala uyulmasını sağlayan kurumlardadır."
+      },
+      {
+        "id": "q3",
+        "prompt": "Türkiye'nin enerji tablosunda ithalat faturasını düşüren en güçlü kalem nedir?",
+        "options": [
+          "Yeni kaynak bulmak",
+          "Aynı üretimi daha az enerjiyle yapmak",
+          "İthalatı yasaklamak",
+          "Kur politikası"
+        ],
+        "answerIndex": 1,
+        "explanation": "Enerji yoğunluğunun düşmesi, ithalat hacmini doğrudan ve kalıcı olarak azaltır."
+      }
+    ]
+  },
+  {
+    "id": "ticaret-ve-bagimlilik",
+    "moduleId": "guc",
+    "order": 1,
+    "title": "Ticaret, mesafe ve bağımlılık",
+    "subtitle": "Ticaret barışı garanti etmez; kimin kimden çok zarar göreceğini belirler.",
+    "minutes": 9,
+    "keyTerms": ["çekim modeli", "karşılıklı bağımlılık", "asimetrik bağımlılık"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "İktisadın en istikrarlı ampirik bulgularından biri, ülkeler arası ticaretin şaşırtıcı derecede basit bir kurala uymasıdır: iki ülke arasındaki ticaret, ekonomilerinin büyüklüğüyle doğru, aradaki mesafeyle ters orantılıdır. Fizikteki çekim yasasına benzediği için çekim modeli denir. Onlarca yıllık verilerde mesafe üsteli sürekli 1'e yakın çıkar — yani iki kat uzaklık, kabaca yarı ticaret. Konteynerin ve uçağın taşıma maliyetini bu kadar düşürdüğü bir çağda mesafenin bu kadar güçlü kalması ilk bakışta tuhaftır. Sebep sadece navlun değildir: ortak dil, hukuk sistemine aşinalık, tedarikçiyi ziyaret edebilme, aynı saat diliminde çalışabilme de mesafeyle azalır."
+      },
+      { "kind": "chart", "chartId": "ticaret-cekimi" },
+      {
+        "kind": "text",
+        "title": "Modelin şaştığı yerler",
+        "body": "Bir modelin asıl değeri, tutturduğu yerlerden çok tutturamadığı yerlerdedir. Türkiye'nin ticaret tablosunda Rusya modelin öngördüğünden çok yukarıdadır, çünkü ilişki büyük ölçüde tek kalemden — enerji ithalatından — oluşur ve bu kalem mesafeye değil boru hattına bağlıdır. ABD ve Britanya ise modelin altındadır: gümrük birliği yok, kara bağlantısı yok, ve Avrupa pazarına kilitlenmiş bir sanayi yapısı var. Sapmalar rastgele değildir; her biri kurumsal ya da altyapısal bir gerçeğe işaret eder."
+      },
+      {
+        "kind": "list",
+        "title": "Karşılıklı bağımlılık ne yapar, ne yapmaz",
+        "items": [
+          "Kesintinin maliyetini iki taraf için de yükseltir; bu caydırıcıdır.",
+          "Savaşı imkânsız kılmaz. 1914 öncesinde Avrupa ekonomileri tarihinin en yoğun ticaret ilişkisi içindeydi.",
+          "Asıl güç, bağımlılığın simetrisinden değil asimetrisinden doğar: kesintiden kim daha çok zarar görüyor?",
+          "Asimetri ölçülebilir: alternatif tedarikçi sayısı, stok süresi, ikame maliyeti ve ikameye geçiş süresi.",
+          "Zamanla değişir. Bugün asimetrik olan bir ilişki, birkaç yıllık yatırımla dengelenebilir."
+        ]
+      },
+      {
+        "kind": "example",
+        "title": "Aynı ticaret, iki farklı pazarlık gücü",
+        "body": "İki ülke arasında yılda elli milyar dolarlık ticaret olduğunu düşünün. Bu rakam tek başına hiçbir şey söylemez. Birinci ülkenin ihracatı yüzlerce kalemden oluşuyor ve her kalem için başka pazarlar varsa, kesinti onun için maliyetlidir ama yönetilebilir. İkinci ülke aynı elli milyarın kırkını tek bir üründen ve tek bir alıcıdan kazanıyorsa, kesinti onun için felakettir. Ticaret hacmi eşit, pazarlık gücü değil. Jeopolitik analizde bakılması gereken sayı toplam hacim değil, yoğunlaşma ve ikame süresidir."
+      },
+      {
+        "kind": "text",
+        "title": "Bağımlılığı silah hâline getirmek",
+        "body": "Bir ilişkinin asimetrik olduğunu bilmek, onu kullanma isteğini doğurur. Enerji akışını yavaşlatmak, gübre ihracatına kota koymak, bir hammaddenin lisansını zorlaştırmak — hepsi savaş dışı araçlardır ve etkileri hızlıdır. Ama bu araçların bir kez kullanılması, kullananın uzun vadeli konumunu bozar: alıcı taraf bir daha aynı bağımlılığı kabul etmez ve alternatif kurmaya para harcar. Kısa vadeli kazancın uzun vadeli kayıpla ödendiği bu takas, son on yılın en tekrarlanan örüntüsüdür."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Çekim modelinde mesafe üsteli neden hâlâ 1'e yakın çıkıyor?",
+        "options": [
+          "Sadece navlun maliyeti yüzünden",
+          "Navlunun yanı sıra ortak dil, hukuka aşinalık ve yüz yüze ilişki de mesafeyle azaldığı için",
+          "Gümrük vergileri mesafeye bağlı olduğu için",
+          "Ölçüm hatası olduğu için"
+        ],
+        "answerIndex": 1,
+        "explanation": "Taşıma ucuzladı ama ticaretin kurumsal ve ilişkisel maliyetleri hâlâ mesafeyle artıyor."
+      },
+      {
+        "id": "q2",
+        "prompt": "Jeopolitik güç ticaret ilişkisinde nereden doğar?",
+        "options": [
+          "Toplam ticaret hacminden",
+          "Kesintiden kimin daha çok zarar göreceğini belirleyen asimetriden",
+          "İhracat fazlasından",
+          "Ortak sınır uzunluğundan"
+        ],
+        "answerIndex": 1,
+        "explanation": "Eşit hacimli iki ilişkide, kalemleri yoğunlaşmış olan taraf her zaman zayıf taraftır."
+      },
+      {
+        "id": "q3",
+        "prompt": "Bağımlılığı bir kez silah olarak kullanmanın uzun vadeli sonucu nedir?",
+        "options": [
+          "Kalıcı bir üstünlük sağlar",
+          "Karşı taraf alternatif kurmaya yatırım yapar ve aynı bağımlılık bir daha kurulmaz",
+          "Hiçbir sonucu olmaz",
+          "Ticaret hacmini artırır"
+        ],
+        "answerIndex": 1,
+        "explanation": "Kısa vadeli kazanç, uzun vadeli konum kaybıyla ödenir; son on yılın en tekrarlanan örüntüsü budur."
+      }
+    ]
+  },
+  {
+    "id": "tedarik-zinciri",
+    "moduleId": "guc",
+    "order": 2,
+    "title": "Tedarik zincirleri ve darboğazlar",
+    "subtitle": "Ucuzluğun bedeli, çoğu zaman görünmeyen bir kırılganlıktır.",
+    "minutes": 9,
+    "keyTerms": ["tedarik zinciri", "hhi", "tam zamanında üretim", "dost ülkeye taşıma"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Modern bir ürün tek yerde üretilmez. Bir otomobilde otuz bin civarında parça vardır ve bunlar onlarca ülkeden gelir. Her parçanın kendi tedarik zinciri, o zincirin de kendi darboğazları vardır. Sistem normal zamanlarda olağanüstü verimlidir: her iş, onu en ucuza yapan yerde yapılır. Anormal zamanlarda ise aynı yapı, tek bir noktadaki aksamayı bütün zincire yayan bir iletim hattına dönüşür."
+      },
+      { "kind": "chart", "chartId": "tedarik-yogunlasmasi" },
+      {
+        "kind": "text",
+        "title": "Yoğunlaşmayı ölçmek",
+        "body": "Bir tedarik tablosunun ne kadar riskli olduğunu ölçmenin standart yolu HHI'dir: payların yüzde cinsinden karelerinin toplamı. Tek tedarikçi varsa 10.000, on eşit tedarikçi varsa 1.000 çıkar. Kareler kullanılmasının sebebi büyük payları orantısız cezalandırmaktır — riski yaratan, ortalama değil en büyük tedarikçidir. Rekabet otoriteleri 1.500'ün üstünü yoğun, 2.500'ün üstünü çok yoğun sayar. İleri çip üretiminde bu sayı 8.000'in üstüne çıkar; nadir toprak işlemede daha da yukarıdadır."
+      },
+      {
+        "kind": "list",
+        "title": "Kırılganlığın kaynakları",
+        "items": [
+          "Coğrafi yoğunlaşma: üretimin tek ülkede toplanması.",
+          "Tesis yoğunlaşması: birden çok ülkede fabrika olsa da kritik bir ara ürünün tek tesisten çıkması.",
+          "Stoksuz çalışma: tam zamanında üretim, aksamayı emecek tamponu ortadan kaldırır.",
+          "Görünmezlik: şirketlerin çoğu birinci kademe tedarikçisini bilir, üçüncü kademeyi bilmez.",
+          "Uzun kurulum süresi: yeni bir çip fabrikası ya da rafineri, karar verildikten yıllar sonra üretime geçer."
+        ]
+      },
+      {
+        "kind": "example",
+        "title": "Bir yangın, bir yıl",
+        "body": "2021'de Japonya'da bir yarı iletken fabrikasında çıkan yangın, dünya otomobil üretiminde aylarca süren aksamanın sebeplerinden biri oldu. Sorun teknik olarak küçüktü: eksik olan parçalar pahalı ve karmaşık çipler değil, araç başına birkaç dolarlık basit denetleyicilerdi. Ama o parça olmadan araç bantten inmiyordu. Kırılganlığın ölçüsü parçanın değeri değil, ikame süresidir — ve o süre yıl ile ölçülüyorsa parça ucuz olsa da kritiktir."
+      },
+      {
+        "kind": "text",
+        "title": "Dayanıklılığın maliyeti",
+        "body": "2020'den sonra 'en ucuz yerde üret' ilkesi ilk kez ciddi biçimde sorgulandı. Öne sürülen alternatifler — stok tutmak, ikinci kaynak sözleşmesi yapmak, üretimi yakına ya da siyasi olarak güvenilir ülkelere taşımak — hepsi işe yarar ve hepsi pahalıdır. Dayanıklılık bedava değildir; sigorta primi gibidir ve kesinti olmayan yıllarda saf maliyet olarak görünür. Ne kadarının gerçekten yapıldığı ise verilerde tartışmalıdır: söylem düzeyindeki değişim, ticaret akışlarındaki değişimden çok daha büyüktür."
+      },
+      {
+        "kind": "text",
+        "title": "Türkiye açısından",
+        "body": "Türkiye bu tabloda hem alıcı hem satıcıdır. Avrupa pazarına yakınlık, gümrük birliği ve mevcut sanayi tabanı, üretimi yakına taşıma eğiliminden pay almak için gerçek bir avantajdır. Ama aynı sanayi, ara malı ve yatırım malı ithalatına yüksek oranda bağlıdır: ihracat arttığında ithalat da artar. Bu yapıda dayanıklılık, ihracat pazarını çeşitlendirmekten çok ara malı tedarikini çeşitlendirmek ve derinleştirmekle kurulur."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "HHI'de payların karesi neden alınır?",
+        "options": [
+          "Hesabı kolaylaştırmak için",
+          "Büyük payları orantısız cezalandırmak için; riski yaratan en büyük tedarikçidir",
+          "Negatif değerleri önlemek için",
+          "Yüzdeye çevirmek için"
+        ],
+        "answerIndex": 1,
+        "explanation": "Kareler, tek bir hâkim tedarikçiyi dağınık bir tablodan keskin biçimde ayırır."
+      },
+      {
+        "id": "q2",
+        "prompt": "Bir parçanın kritik olup olmadığını en iyi ne gösterir?",
+        "options": [
+          "Parçanın fiyatı",
+          "İkame süresi: yerine yenisini koymak ne kadar sürüyor",
+          "Parçanın ağırlığı",
+          "Kaç ülkeye ihraç edildiği"
+        ],
+        "answerIndex": 1,
+        "explanation": "2021'deki çip krizinde eksik olan parçalar birkaç dolarlıktı ama üretim bantlarını aylarca durdurdu."
+      },
+      {
+        "id": "q3",
+        "prompt": "Tedarik dayanıklılığı hakkında hangisi doğrudur?",
+        "options": [
+          "Bedava sağlanabilir",
+          "Sigorta primi gibidir: kesinti olmayan yıllarda saf maliyet olarak görünür",
+          "Sadece devlet tarafından sağlanabilir",
+          "Verimliliği artırır"
+        ],
+        "answerIndex": 1,
+        "explanation": "Stok, ikinci kaynak ve yakına taşıma hepsi işe yarar ve hepsi pahalıdır; bu yüzden iyi zamanlarda vazgeçilir."
+      }
+    ]
+  }
+]

@@ -1,0 +1,494 @@
+[
+  {
+    "id": "yaptirim",
+    "moduleId": "guc",
+    "order": 3,
+    "title": "Yaptırım ve finansal ağlar",
+    "subtitle": "Asıl güç orduda değil, ödemenin geçtiği borularda.",
+    "minutes": 9,
+    "keyTerms": ["yaptırım", "ikincil yaptırım", "rezerv para", "swift"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Yaptırım, savaş ile hiçbir şey yapmamak arasındaki geniş alanı doldurur. Ambargo, varlık dondurma, ihracat lisansı kısıtı, seyahat yasağı, bankacılık erişiminin kesilmesi — hepsi aynı mantığın farklı sertlikteki uygulamalarıdır: hedefin davranışını, ona maliyet yükleyerek değiştirmek. Kâğıt üzerinde temiz görünen bu mantığın pratikte kaç kez işe yaradığı ise alanın en tartışmalı sorusudur."
+      },
+      {
+        "kind": "text",
+        "title": "Ağ etkisi neden bu kadar güçlü",
+        "body": "Dünya ticaretinin büyük kısmı dolar üzerinden faturalanır ve dolar ödemeleri, nihayetinde ABD bankacılık sisteminden geçen muhabir hesaplar üzerinden takas edilir. Bu, teknik bir ayrıntı gibi görünür ama muazzam bir kaldıraçtır. Bir bankaya 'bu ülkeyle iş yaparsan dolar sisteminden çıkarsın' denmesi, o bankanın işini bitirmek demektir. Bu yüzden ikincil yaptırımlar, doğrudan yaptırımlardan çok daha etkilidir: hedefin ticaret yapabileceği üçüncü ülke şirketleri, kimse onlara emir vermeden kendiliğinden çekilir. SWIFT ise para taşımaz, sadece talimat taşır; ama ağdan çıkarılan bir banka pratikte uluslararası ödeme yapamaz hâle gelir."
+      },
+      {
+        "kind": "list",
+        "title": "Yaptırımlar ne zaman işe yarar",
+        "items": [
+          "Hedef davranış dar ve tanımlıysa — bir sözleşmeye dönmek gibi — kapsamlı bir rejim değişikliğine göre çok daha başarılıdır.",
+          "Yaptırımı uygulayanlar geniş ve kararlıysa. Tek taraflı yaptırım, ticareti kesmez, sadece yön değiştirir.",
+          "Hedef ekonominin dışa açıklığı yüksekse etki büyür; kapalı ve otarşik ekonomiler daha az sarsılır.",
+          "Kaldırma sözü inandırıcıysa. Kalkmayacağına inanılan yaptırımın caydırıcı gücü kalmaz.",
+          "Hedefin siyasi yapısı, ekonomik acıyı iktidara yansıtıyorsa. Yansıtmıyorsa acı halkta kalır, karar değişmez."
+        ]
+      },
+      {
+        "kind": "example",
+        "title": "Etki, sonuç değildir",
+        "body": "Yaptırım tartışmalarındaki en yaygın karışıklık, ekonomik etkiyi siyasi sonuçla eş tutmaktır. Bir yaptırım rejimi hedef ülkenin millî gelirini yüzde on daraltabilir; bu ölçülebilir ve büyük bir etkidir. Ama aynı rejim, uygulanma sebebi olan politikayı hiç değiştirmemiş olabilir. Literatürdeki derlemeler, yaptırımların hedeflenen davranış değişikliğini sağlama oranını genellikle düşük bulur ve bu oran, hedef ne kadar hayati ise o kadar düşer. Zarar vermek kolaydır; ikna etmek başka bir iştir."
+      },
+      {
+        "kind": "text",
+        "title": "Yaptırımın kendi kendini aşındırması",
+        "body": "Finansal ağın silah olarak kullanılması, ağın kendisine olan güveni azaltır. Rezervleri dondurulabilen bir ülke, bir daha rezervini o para biriminde tutmak istemez; alternatif ödeme sistemleri, ikili para anlaşmaları ve altın alımları bu yüzden artar. Bu kaçışın hızı sıkça abartılır — doların yerine geçebilecek derinlikte ve hukuki güvencede başka bir piyasa henüz yoktur — ama yönü açıktır. Kaldıracı her kullanışta biraz kısaltan bir araçtır bu."
+      },
+      {
+        "kind": "text",
+        "title": "Aradaki ülkeler",
+        "body": "Yaptırım rejimleri, tarafların dışında kalan ülkeler için hem fırsat hem risk üretir. Fırsat, ticaretin yeni güzergâhlar araması ve aradaki ülkenin bu akışa aracılık edebilmesidir. Risk ise ikincil yaptırımdır: bankaları ve nakliyecileri, kendi hükümetlerinin izin verdiği bir işlemden başka bir ülkenin hukuku yüzünden çekilmek zorunda kalabilir. Türkiye gibi her iki tarafla da ticareti olan ülkeler bu dar alanda sürekli bir hukuki uyum yükü taşır ve bu yük, ticaretin görünen kârından büyük olabilir."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "İkincil yaptırım neden doğrudan yaptırımdan daha etkilidir?",
+        "options": [
+          "Daha ağır cezalar içerdiği için",
+          "Üçüncü ülke şirketleri dolar sisteminden çıkmayı göze alamadığı için kendiliğinden çekilir",
+          "Askerî güçle desteklendiği için",
+          "Daha uzun süre uygulandığı için"
+        ],
+        "answerIndex": 1,
+        "explanation": "Kimse emir vermeden bankalar ve nakliyeciler riski alma-maya karar verir; caydırıcılık kendiliğinden yayılır."
+      },
+      {
+        "id": "q2",
+        "prompt": "Yaptırım tartışmalarındaki en yaygın karışıklık nedir?",
+        "options": [
+          "Ekonomik etkiyi siyasi sonuçla eş tutmak",
+          "Süreyi yanlış hesaplamak",
+          "Hedef ülkeyi yanlış seçmek",
+          "Hukuki dayanağı atlamak"
+        ],
+        "answerIndex": 0,
+        "explanation": "Millî geliri yüzde on daraltan bir rejim, uygulanma sebebi olan politikayı hiç değiştirmemiş olabilir."
+      },
+      {
+        "id": "q3",
+        "prompt": "Finansal ağın silah olarak kullanılmasının uzun vadeli etkisi nedir?",
+        "options": [
+          "Ağı güçlendirir",
+          "Ağa olan güveni azaltır ve alternatif arayışını hızlandırır",
+          "Hiçbir etkisi olmaz",
+          "Faiz oranlarını düşürür"
+        ],
+        "answerIndex": 1,
+        "explanation": "Kaçışın hızı sıkça abartılır ama yönü açıktır: her kullanım kaldıracı biraz kısaltır."
+      }
+    ]
+  },
+  {
+    "id": "kurumlar-ittifaklar",
+    "moduleId": "guc",
+    "order": 4,
+    "title": "Kurumlar, ittifaklar ve caydırıcılık",
+    "subtitle": "Üstünde bir otorite olmayan bir düzende işbirliği nasıl kurulur.",
+    "minutes": 9,
+    "keyTerms": ["güvenlik ikilemi", "caydırıcılık", "beşinci madde", "veto", "yumuşak güç"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Devletler arası düzenin temel özelliği, üstünde zorlayıcı bir otorite bulunmamasıdır. Bir ülke içinde sözleşmeyi ihlal edeni mahkeme ve icra bekler; devletler arasında böyle bir mekanizma yoktur. Waltz'a göre devletlerin davranışının çoğu bu tek yapısal olgudan çıkar: kimse kimseyi korumaya mecbur olmadığı için herkes kendi güvenliğini kendi sağlamak zorundadır. Kuram güçlüdür ama eksiktir; liderlerin, iç siyasetin ve kurumların payını fazla küçümsemekle eleştirilir."
+      },
+      {
+        "kind": "text",
+        "title": "Güvenlik ikilemi",
+        "body": "Kendi güvenliğini sağlamaya çalışmanın ürettiği tuhaf sonuç şudur: bir ülkenin savunma için aldığı önlem, komşusuna saldırı hazırlığı gibi görünür. Komşu da karşılık verir, o da ilkine tehdit gibi görünür. Kimse savaş istemese bile gerilim artar. Buna güvenlik ikilemi denir ve silahlanma yarışlarının çoğu bu döngüyle açıklanır. Döngüyü kırmanın bilinen yolları vardır ve hepsi bilgi ile ilgilidir: tatbikatları önceden bildirmek, denetime izin vermek, kapasiteyi savunmaya elverişli ama saldırıya elverişsiz biçimde kurmak."
+      },
+      {
+        "kind": "text",
+        "title": "Caydırıcılığın ölçülemez başarısı",
+        "body": "Caydırıcılık, saldırının bedelini kazancından yüksek göstererek saldırıyı önlemektir. Schelling'in gösterdiği gibi, işin püf noktası tehdidin gücü değil inandırıcılığıdır — ve inandırıcılık çoğu zaman kendini bağlamakla kurulur. Geri adım atma imkânını ortadan kaldıran taraf, pazarlıkta güçlenir. Caydırıcılığın en can sıkıcı yanı ise ölçülemezliğidir: işe yaradığında hiçbir şey olmaz. Savaş çıkmadığında bunun caydırıcılık sayesinde mi yoksa zaten kimse saldırmayacağı için mi olduğunu ayırt etmenin bir yolu yoktur. Bu belirsizlik, savunma bütçesi tartışmalarının neden hiç bitmediğini de açıklar."
+      },
+      {
+        "kind": "list",
+        "title": "Kurumlar ne işe yarar",
+        "items": [
+          "Bilgi üretirler: denetim, raporlama ve ortak istatistik, tarafların birbirini yanlış okumasını azaltır.",
+          "Pazarlık maliyetini düşürürler: her sorun için sıfırdan masa kurmak gerekmez.",
+          "İtibar biriktirirler: tekrar eden ilişkide sözünde durmak, tek seferlik kazançtan değerli hâle gelir.",
+          "Odak noktası sağlarlar: birden çok makul çözüm varken herkesin aynı çözüme yönelmesini kolaylaştırır.",
+          "Zorlayamazlar. Büyük güçler anlaşmazsa kurum susar; BM Güvenlik Konseyi'ndeki veto bunun yapısal ifadesidir."
+        ]
+      },
+      {
+        "kind": "example",
+        "title": "Tek kez işletilen madde",
+        "body": "NATO'nun beşinci maddesi, üyelerden birine saldırıyı hepsine saldırı sayar. 1949'dan bu yana bu madde tarihte yalnızca bir kez, 2001'deki saldırıların ardından işletildi. Bu istatistik iki zıt biçimde okunabilir: ya madde caydırıcı olduğu için hiç gerekmedi, ya da hiç gerekmediği için caydırıcılığı sınanmadı. İkisi arasında karar vermenin verisel bir yolu yoktur ve ittifak tartışmalarının çoğu, farkında olmadan bu ayrımın üzerinde döner."
+      },
+      {
+        "kind": "text",
+        "title": "Yumuşak gücün gerçek işlevi",
+        "body": "Yumuşak güç — kültürün, eğitimin, kurumların saygınlığının ürettiği çekim — tek başına hiçbir krizi çözmez ve abartılmaya çok müsaittir. Ama ölçülebilir bir işlevi vardır: ittifakların maliyetini düşürür. Bir ülkeyle çalışmayı kendiliğinden isteyen ortakların olması, her işbirliği için pazarlık ve teşvik gerekmemesi demektir. Türkiye'nin bölgesindeki üniversite öğrencisi sayısı, sağlık turizmi, dizi ihracatı ve inşaat müteahhitliği bu kalemin somut bileşenleridir; hiçbiri bir krizi çözmez, hepsi ilişkinin zeminini ucuzlatır."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Güvenlik ikilemi nedir?",
+        "options": [
+          "İki ülkenin aynı anda saldırmak istemesi",
+          "Savunma amaçlı önlemlerin karşı tarafa tehdit gibi görünüp karşılık doğurması",
+          "Ordunun bütçesinin yetmemesi",
+          "İttifakların birbiriyle çelişmesi"
+        ],
+        "answerIndex": 1,
+        "explanation": "Kimse savaş istemese bile gerilim artar; döngüyü kırmanın yolları bildirim ve denetim gibi bilgi araçlarıdır."
+      },
+      {
+        "id": "q2",
+        "prompt": "Caydırıcılığın başarısını ölçmek neden zordur?",
+        "options": [
+          "Veriler gizli olduğu için",
+          "İşe yaradığında hiçbir şey olmaz; savaşın çıkmaması caydırıcılıkla mı yoksa niyet olmadığıyla mı açıklanır ayırt edilemez",
+          "Ölçüm yöntemi pahalı olduğu için",
+          "Ülkeler bilgi paylaşmadığı için"
+        ],
+        "answerIndex": 1,
+        "explanation": "Bu belirsizlik, savunma bütçesi tartışmalarının neden hiç sonuçlanmadığını da açıklar."
+      },
+      {
+        "id": "q3",
+        "prompt": "Uluslararası kurumların yapamadığı şey nedir?",
+        "options": [
+          "Bilgi üretmek",
+          "Pazarlık maliyetini düşürmek",
+          "Büyük güçler anlaşmadığında zorlayıcı karar almak",
+          "Ortak istatistik toplamak"
+        ],
+        "answerIndex": 2,
+        "explanation": "Güvenlik Konseyi'ndeki veto, bu sınırın yapısal ifadesidir."
+      }
+    ]
+  },
+  {
+    "id": "demografi",
+    "moduleId": "fay",
+    "order": 1,
+    "title": "Demografi: en yavaş ve en kesin değişken",
+    "subtitle": "2075'te kaç kişinin altmış yaşında olacağı bugün belli.",
+    "minutes": 9,
+    "keyTerms": ["bağımlılık oranı", "demografik fırsat penceresi", "yenilenme düzeyi", "göç"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Jeopolitikte çoğu değişken öngörülemez: seçimler, krizler, teknolojik sıçramalar. Demografi farklıdır. Bugün otuz yaşında olan insanların otuz yıl sonra altmış yaşında olacağı kesindir; belirsizlik sadece kaçının hayatta olacağında ve kaç çocuk doğacağındadır. Bu yüzden nüfus projeksiyonları, elimizdeki en güvenilir uzun vadeli tahminlerdir. Asker sayısı, vergi tabanı, emeklilik yükü ve iç pazarın büyüklüğü doğrudan bu yapıdan çıkar."
+      },
+      { "kind": "chart", "chartId": "yas-yapisi" },
+      {
+        "kind": "text",
+        "title": "Türkiye'nin dönüşü",
+        "body": "Türkiye'de toplam doğurganlık hızı 1970'lerde beşin üzerindeydi; 2000'lerin başında yenilenme düzeyi olan 2,1'e indi ve 2020'lerde 1,5'in altına düştü. Bu, tarihsel ölçekte çok hızlı bir düşüştür ve benzeri birçok ülkede görülmüştür. Sonucu iki aşamalıdır. İlk aşamada çalışma çağındaki nüfusun payı yükselir; bu, demografik fırsat penceresidir ve Türkiye bu pencerenin sonlarındadır. İkinci aşamada aynı kalabalık kuşak yaşlanır ve bağımlılık oranı hızla yükselir. İkinci aşamayı erteleyecek tek şey birinci aşamada yapılan yatırımdır."
+      },
+      {
+        "kind": "list",
+        "title": "Yaşlanan bir nüfusun somut sonuçları",
+        "items": [
+          "Emeklilik ve sağlık harcamalarının bütçe içindeki payı, başka hiçbir kalem küçülmeden büyür.",
+          "Vergi tabanı daralırken kamu harcaması artar; ikisi aynı yönde hareket etmez.",
+          "İç talep yaş yapısına göre değişir: konut ve otomobilden sağlık ve bakıma kayar.",
+          "Askere alınabilir yaş grubu küçülür; bu, teknolojiye ve profesyonel orduya geçiş baskısını artırır.",
+          "Tasarruf ve yatırım dengesi değişir; yaşlanan toplumlar net tasarruf çözücü hâline gelir."
+        ]
+      },
+      {
+        "kind": "example",
+        "title": "Üç kaldıraç, üç maliyet",
+        "body": "Bağımlılık oranını düşürmenin bilinen üç yolu vardır. Doğurganlığı artırmak en yavaş işleyendir: bugün doğan çocuk yirmi yıl sonra çalışmaya başlar ve teşviklerin doğurganlık üzerindeki etkisi araştırmalarda küçük ve geçici bulunur. Emeklilik yaşını yükseltmek en hızlı işleyendir ve grafikte etkisi anında görülür; siyasi maliyeti de en yüksek olandır. Göç ise ikisinin ortasındadır: etkisi hızlıdır ama uyum kapasitesi ve kamuoyu kabulüyle sınırlıdır. Demografi tartışmalarının çoğu, aslında bu üç kaldıraç arasındaki tercih tartışmasıdır."
+      },
+      {
+        "kind": "text",
+        "title": "Sayı güç müdür",
+        "body": "Kalabalık nüfusun kendiliğinden güç ürettiği varsayımı yanlıştır. Nüfusun güce dönüşmesi eğitim, sağlık ve istihdamdan geçer; bu üçü sağlanmadığında kalabalık bir yük kalemidir. Tersi de doğrudur: küçük ama eğitimli ve üretken bir nüfus, kendinden kat kat kalabalık ülkelerden yüksek çıktı üretebilir. Doğru soru 'kaç kişi' değil, 'kaç kişi ne üretebiliyor'dur. Türkiye'nin fırsat penceresi tartışmasının merkezinde de bu soru vardır: pencerenin kapanmasına kalan sürede, ortalama verimliliği ne kadar yükseltebiliriz."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Demografik projeksiyonlar neden diğer uzun vadeli tahminlerden güvenilirdir?",
+        "options": [
+          "Daha iyi modeller kullanıldığı için",
+          "Gelecekteki yaşlıların çoğu zaten doğmuş durumda olduğu için",
+          "Nüfus hiç değişmediği için",
+          "Devletler doğru veri verdiği için"
+        ],
+        "answerIndex": 1,
+        "explanation": "Belirsizlik sadece ölümlülük ve gelecekteki doğumlardadır; yaşlanacak kuşak zaten mevcuttur."
+      },
+      {
+        "id": "q2",
+        "prompt": "Bağımlılık oranını en hızlı düşüren kaldıraç hangisidir?",
+        "options": [
+          "Doğurganlığı artırmak",
+          "Emeklilik yaşını yükseltmek",
+          "Sağlık harcamasını artırmak",
+          "Eğitim süresini uzatmak"
+        ],
+        "answerIndex": 1,
+        "explanation": "Bugün doğan çocuk yirmi yıl sonra çalışmaya başlar; emeklilik yaşı değişikliği ise anında etki eder."
+      },
+      {
+        "id": "q3",
+        "prompt": "Kalabalık nüfus ne zaman güce dönüşür?",
+        "options": [
+          "Her zaman kendiliğinden",
+          "Eğitim, sağlık ve istihdam sağlandığında",
+          "Sadece savaş zamanında",
+          "Doğurganlık 2,1'in üzerindeyse"
+        ],
+        "answerIndex": 1,
+        "explanation": "Doğru soru 'kaç kişi' değil, 'kaç kişi ne üretebiliyor'dur."
+      }
+    ]
+  },
+  {
+    "id": "su",
+    "moduleId": "fay",
+    "order": 2,
+    "title": "Su ve sınır aşan nehirler",
+    "subtitle": "Yukarı havza fiziksel avantaj verir; hukuk bunu hakka çevirmez.",
+    "minutes": 9,
+    "keyTerms": ["sınır aşan su", "yukarı havza", "sanal su", "ortak havuz kaynağı"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Dünya nüfusunun yaklaşık yarısı, birden fazla ülkenin toprağından geçen havzalarda yaşar. Bu havzalarda yukarı havzadaki ülke fiziksel olarak avantajlıdır: barajı o yapar, kanalı o açar, akışı o düzenler. Ama bu avantajın hukuken ne kadar hak doğurduğu çözülmüş bir soru değildir. Uluslararası hukukta iki ilke karşı karşıyadır: 'hakkaniyetli ve makul kullanım' ile 'önemli zarar vermeme'. İkisi de makul, ikisi de belirsiz; ve hangi ilkenin öne çıkacağını taraflardan hangisinin yukarı havzada olduğu belirler."
+      },
+      { "kind": "chart", "chartId": "sinir-asan-su" },
+      {
+        "kind": "text",
+        "title": "Fırat ve Dicle örneği",
+        "body": "Fırat ve Dicle Türkiye'de doğar, Suriye ve Irak'tan geçer. Türkiye havzayı bir bütün olarak ele almayı ve suyun 'sınır aşan' olduğunu savunur; aşağı havza ülkeleri ise nehirleri 'uluslararası' sayıp sabit paylaşım ister. 1987'de imzalanan protokolle Türkiye sınırdan saniyede ortalama 500 metreküp bırakmayı taahhüt etti. Geçici sayılan bu düzenleme, kalıcı bir anlaşma yapılamadığı için yerinde kaldı. Kuraklık yıllarında taahhüdün tutturulması zorlaşır ve mesele teknik olmaktan çıkıp siyasi hâle gelir."
+      },
+      {
+        "kind": "list",
+        "title": "Su anlaşmazlıklarının değişmeyen unsurları",
+        "items": [
+          "Ölçüm: taraflar çoğu zaman akış miktarında bile anlaşamaz; ortak izleme istasyonu ilk ve en zor adımdır.",
+          "Mevsim: yıllık toplam yeterli olsa da yaz aylarındaki akış kritik olabilir.",
+          "Kalite: geri dönen suyun tuzluluğu ve tarım ilacı yükü, miktar kadar önemlidir.",
+          "Kuraklık: azalan suyun nasıl paylaşılacağı çoğu anlaşmada boş bırakılmış maddedir.",
+          "Bağlantılandırma: su, ticaret ve enerji dosyalarıyla birlikte pazarlık edildiğinde çözüm alanı genişler."
+        ]
+      },
+      {
+        "kind": "example",
+        "title": "Su savaşları neden çıkmadı",
+        "body": "'Gelecek savaşlar su savaşları olacak' cümlesi otuz yıldır tekrarlanır. Şimdiye kadar olan ise şudur: tarih boyunca su yüzünden çıkan devletlerarası savaş sayısı çok azdır, buna karşılık imzalanmış su anlaşması sayısı yüzlercedir. Sebep basittir — nehri askerî olarak ele geçirmek, onunla anlaşmaktan pahalıdır ve baraj vurmak iki tarafı da susuz bırakır. Bu, gerilimin olmadığı anlamına gelmez; havza içindeki yerel çatışmalar, göç ve tarım krizleri gerçektir. Ama 'su savaşı' başlığı, asıl riski — yavaş yavaş kuruyan tarım havzalarını ve oradan çıkan iç göçü — gölgeler."
+      },
+      {
+        "kind": "text",
+        "title": "Sanal su ve Türkiye'nin gerçek dengesi",
+        "body": "Bir kilo buğday üretmek yaklaşık bin litre su ister. Bu yüzden tahıl ithal eden bir ülke aslında su ithal eder; buna sanal su denir. Kurak ülkelerin çoğu su dengesini kendi topraklarında değil, ithalat kanalıyla kurar. Türkiye kişi başına düşen yenilenebilir su miktarı bakımından su zengini değil, su stresi sınırındadır ve bu miktarın büyük kısmı tarımda kullanılır. Tarımsal sulamada verimliliği artırmak — vahşi sulamadan damlama sulamaya geçiş gibi — burada yeni baraj yapmaktan daha büyük bir kaynak açar. Suyu Ostrom'un tarif ettiği anlamda ortak havuz kaynağı olarak yönetmek, yani yerel kullanıcıların kendi kurallarını kurup denetlemesini sağlamak, hem havza içinde hem sınır ötesinde işleyen tek ölçekli çözümdür."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Sınır aşan sularda karşı karşıya gelen iki hukuki ilke nedir?",
+        "options": [
+          "Egemenlik ve serbest geçiş",
+          "Hakkaniyetli ve makul kullanım ile önemli zarar vermeme",
+          "Mülkiyet ve kamulaştırma",
+          "Karşılıklılık ve eşitlik"
+        ],
+        "answerIndex": 1,
+        "explanation": "İkisi de makul, ikisi de belirsizdir; hangisinin öne çıkacağını tarafın yukarı ya da aşağı havzada olması belirler."
+      },
+      {
+        "id": "q2",
+        "prompt": "Sanal su nedir?",
+        "options": [
+          "Yer altı suyu",
+          "Bir ürünü üretmek için harcanan ve o ürünle birlikte ticarete konu olan su",
+          "Arıtılmış atık su",
+          "Baraj göllerinde buharlaşan su"
+        ],
+        "answerIndex": 1,
+        "explanation": "Tahıl ithal eden bir ülke aslında su ithal eder; kurak ülkelerin dengesi ancak bu hesapla anlaşılır."
+      },
+      {
+        "id": "q3",
+        "prompt": "'Su savaşları' söylemi hangi asıl riski gölgeler?",
+        "options": [
+          "Baraj güvenliğini",
+          "Yavaş kuruyan tarım havzalarını ve oradan çıkan iç göçü",
+          "Deniz seviyesinin yükselmesini",
+          "Su fiyatlarını"
+        ],
+        "answerIndex": 1,
+        "explanation": "Tarihte su yüzünden çıkan devletlerarası savaş çok azdır; imzalanmış su anlaşması ise yüzlercedir."
+      }
+    ]
+  },
+  {
+    "id": "enerji-gecisi",
+    "moduleId": "fay",
+    "order": 3,
+    "title": "Enerji geçişi ve yeni bağımlılıklar",
+    "subtitle": "Bağımlılık kaybolmuyor; yakıttan malzemeye taşınıyor.",
+    "minutes": 9,
+    "keyTerms": ["kritik mineral", "nadir toprak", "enterkoneksiyon", "enerji yoğunluğu"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Yenilenebilir enerjinin jeopolitiği değiştireceği doğrudur ama yaygın anlatıldığı biçimde değil. Güneş ve rüzgâr yakıt gerektirmez, bu yüzden kesintiye uğratılamaz; bu gerçek bir kazançtır. Buna karşılık türbin, panel, batarya ve iletim hattı yoğun malzeme ister: bakır, lityum, kobalt, grafit, nikel ve nadir toprak elementleri. Bağımlılık ortadan kalkmaz; sürekli akan bir yakıttan, bir kez kurulan ama tedarik zinciri yoğunlaşmış bir donanıma kayar."
+      },
+      {
+        "kind": "list",
+        "title": "İki bağımlılık türünün farkı",
+        "items": [
+          "Yakıt bağımlılığı süreklidir: akış kesilirse sistem günler içinde durur.",
+          "Malzeme bağımlılığı kuruluş anındadır: panel takıldıktan sonra yirmi yıl çalışır, tedarikçiyle ilişki bitse bile.",
+          "Yakıtın stoklanması pahalı ve sınırlıdır; malzemenin stoklanması ve geri dönüştürülmesi mümkündür.",
+          "Yakıt jeolojiye bağlıdır; malzemedeki darboğaz jeolojiden çok işleme ve rafinaj kapasitesindedir.",
+          "İşleme kapasitesi kurmak yıllar alır ama kurulabilir; petrol yatağı kurulamaz."
+        ]
+      },
+      {
+        "kind": "text",
+        "title": "'Nadir' olmayan nadir topraklar",
+        "body": "Nadir toprak elementleri adının aksine yer kabuğunda seyrek değildir; birçok ülkede ekonomik olarak çıkarılabilir yatak vardır. Asıl darboğaz, birbirine çok benzeyen bu on yedi elementi ayrıştıran kimyasal işlemdedir: süreç kirli, maliyetli ve uzmanlık ister. Bu kapasitenin büyük kısmı onlarca yıl boyunca tek bir ülkede toplandı — kısmen maliyet, kısmen çevre düzenlemelerinin başka yerlerde daha sıkı olması yüzünden. Sonuç, jeolojik değil sınai bir yoğunlaşmadır ve tam da bu yüzden değiştirilebilirdir; ama değişim yıllarla ölçülür."
+      },
+      {
+        "kind": "example",
+        "title": "Elektrik ağı yeni boru hattı",
+        "body": "Güneş ve rüzgâr üretimi dalgalı olduğu için geniş alana yayılmış ve birbirine bağlı şebekeler değerlidir: bir yerde rüzgâr durduğunda başka yerdeki fazlalık devreye girer. Bu, arz güvenliğini artırır ve depolama ihtiyacını azaltır. Ama aynı bağlantı yeni bir karşılıklı bağımlılık kurar: komşu şebekeye bağlı bir ülke, o şebekedeki arızadan ve o ülkedeki siyasi karardan etkilenir. Boru hattı siyasetinin yerini, kısmen, iletim hattı siyaseti alıyor. Türkiye'nin Avrupa şebekesine senkron bağlı olması ve komşularıyla yaptığı alışverişler bu tartışmanın içindedir."
+      },
+      {
+        "kind": "text",
+        "title": "En sessiz kaldıraç",
+        "body": "Enerji jeopolitiği tartışmalarında en az konuşulan kalem enerji yoğunluğudur: bir birim üretim için harcanan enerji miktarı. Bu sayı düştüğünde ithalat faturası, kaynak bulunmadan, boru hattı çekilmeden, hiçbir ülkeyle pazarlık yapılmadan düşer. Sanayide verimlilik yatırımı, binalarda yalıtım, ulaşımda elektrifikasyon — hiçbiri manşet olmaz ama toplamı, çoğu ülke için en büyük kaynak keşfinden büyüktür. Türkiye gibi enerjinin neredeyse tamamını ithal eden bir ülke için, bu kalem doğrudan bir dış politika kalemi sayılmalıdır."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "Enerji geçişi bağımlılığı nasıl değiştirir?",
+        "options": [
+          "Bağımlılığı tamamen ortadan kaldırır",
+          "Sürekli akan yakıttan, kuruluş anındaki malzeme ve donanım tedarikine kaydırır",
+          "Bağımlılığı artırır",
+          "Sadece elektrik fiyatlarını etkiler"
+        ],
+        "answerIndex": 1,
+        "explanation": "Panel takıldıktan sonra yirmi yıl çalışır; yakıt ise kesilirse sistem günler içinde durur."
+      },
+      {
+        "id": "q2",
+        "prompt": "Nadir toprak elementlerindeki asıl darboğaz nerededir?",
+        "options": [
+          "Yatakların azlığında",
+          "Elementleri birbirinden ayrıştıran kirli ve maliyetli işleme kapasitesinde",
+          "Taşımacılıkta",
+          "Patentlerde"
+        ],
+        "answerIndex": 1,
+        "explanation": "Yoğunlaşma jeolojik değil sınaidir; bu yüzden değiştirilebilir ama değişim yıllarla ölçülür."
+      },
+      {
+        "id": "q3",
+        "prompt": "Enerji yoğunluğunun düşmesi neden önemlidir?",
+        "options": [
+          "Elektrik faturalarını sıfırlar",
+          "Aynı üretimi daha az enerjiyle yapmayı sağlar; ithalat faturası hiçbir pazarlık yapılmadan düşer",
+          "Yeni kaynak yatakları bulunmasını sağlar",
+          "Sadece çevresel bir kazançtır"
+        ],
+        "answerIndex": 1,
+        "explanation": "Manşet olmayan bu kalem, çoğu ülke için en büyük kaynak keşfinden büyüktür."
+      }
+    ]
+  },
+  {
+    "id": "turkiyenin-konumu",
+    "moduleId": "fay",
+    "order": 4,
+    "title": "Türkiye'nin konumu",
+    "subtitle": "Konum bir imkândır, gelir değil.",
+    "minutes": 9,
+    "keyTerms": ["transit ülke", "deniz yetki alanları", "orta koridor", "konum rantı"],
+    "sections": [
+      {
+        "kind": "text",
+        "body": "Türkiye'nin konumu üzerine yazılanların çoğu aynı cümleyle başlar: köprü, kavşak, kesişim. Bu cümle doğrudur ve neredeyse hiçbir şey söylemez. Kavşak olmak kendiliğinden gelir üretmez; kavşaktan geçmeyi tercih ettiren kapasite, öngörülebilirlik ve hukuki güvence üretir. Konumun somut bileşenlerine bakmak, genel cümleyi bir envantere çevirmenin tek yoludur."
+      },
+      {
+        "kind": "list",
+        "title": "Envanter",
+        "items": [
+          "Boğazlar: Karadeniz'in tek çıkışı ve Montrö rejiminin uygulayıcısı. Ticaret açısından değil, hukuki konum açısından belirleyici.",
+          "Enerji transiti: birden çok boru hattının ve sıvılaştırılmış gaz terminalinin geçtiği bir güzergâh. Transit geliri kaleminin bütçedeki payı ise sanılandan küçüktür.",
+          "Gümrük birliği: Avrupa pazarına ayrıcalıklı erişim. Sanayi ihracatının yapısını belirleyen tek en önemli kurumsal unsur.",
+          "Orta Koridor: Hazar üzerinden Çin'e uzanan güzergâh. Deniz yoluna göre kısa, kapasite olarak ise ikisinin de çok altında.",
+          "Doğu Akdeniz: deniz yetki alanı anlaşmazlığı. Çekirdeği, adaların ne kadar deniz alanı doğurduğu sorusudur.",
+          "Su: Fırat ve Dicle'de yukarı havza ülkesi olmak; hem kaldıraç hem sürekli bir müzakere yükü."
+        ]
+      },
+      {
+        "kind": "text",
+        "title": "Kavşağın iki yüzü",
+        "body": "Kavşakta olmanın bedeli, komşuların krizlerinin doğrudan ve hızla ulaşmasıdır. Suriye'deki savaş milyonlarca insanın Türkiye'ye gelmesiyle sonuçlandı; Karadeniz'deki savaş tahıl, gübre ve enerji akışlarını doğrudan etkiledi; Kafkasya ve Irak'taki gerilimler ticaret ve enerji güzergâhlarını yıllarca kapattı. Aynı konum, iyi zamanlarda transit geliri, kötü zamanlarda göç ve güvenlik maliyeti üretir. İkisi ayrı hesaplar değildir; aynı hesabın iki kalemidir ve konumun net değeri ancak ikisi birlikte yazıldığında görünür."
+      },
+      {
+        "kind": "example",
+        "title": "Güzergâh sadakati yoktur",
+        "body": "Ticaret güzergâhları kolayca değişir. 2024'te güvenlik riski yüzünden Süveyş trafiğinin bir kısmı Ümit Burnu'na kaydı; on beşinci yüzyılda Ümit Burnu'nun keşfi Akdeniz limanlarının gelirini yıllar içinde eritmişti. Bir güzergâh üzerinde olmak kalıcı bir hak vermez. Kalıcı olan, yükün orada beklemeden, öngörülebilir bir maliyetle ve hukuki güvenceyle geçebilmesidir. Liman kapasitesi, demiryolu bağlantısı, gümrükte geçen süre ve sözleşmelerin uygulanabilirliği — konumun gelire dönüşüp dönüşmeyeceğini bu dört kalem belirler, harita değil."
+      },
+      {
+        "kind": "text",
+        "title": "Dersin özeti",
+        "body": "Bu kursun tek bir iddiası varsa şudur: coğrafya sorunun zeminini kurar, cevabını kurumlar yazar. Aynı boğaz, işleyen bir hukuk rejimiyle doksan yıl kriz üretmeyebilir; aynı nehir, ortak izleme istasyonu varsa yıllarca sorunsuz paylaşılabilir; aynı yaş yapısı, farklı emeklilik ve eğitim politikalarıyla çok farklı sonuçlar verir. Haritaya bakmak analizin başlangıcıdır, sonu değil. Bir jeopolitik iddiayla karşılaştığınızda sorulacak soru hep aynıdır: bu iddia hangi somut kısıttan çıkıyor, o kısıt ne kadar değiştirilebilir, ve kim değiştirmek istemiyor?"
+      },
+      {
+        "kind": "quote",
+        "text": "Coğrafya kader değildir; kaderin hangi masada pazarlık edileceğini belirler.",
+        "source": "Kursun kapanış cümlesi"
+      }
+    ],
+    "quiz": [
+      {
+        "id": "q1",
+        "prompt": "'Kavşak olmak' neden tek başına gelir üretmez?",
+        "options": [
+          "Kavşaklar her zaman tehlikelidir",
+          "Gelir konumdan değil, kapasite, öngörülebilirlik ve hukuki güvenceden doğar",
+          "Ticaret güzergâhları hiç değişmez",
+          "Transit ücretleri sabit olduğu için"
+        ],
+        "answerIndex": 1,
+        "explanation": "Liman kapasitesi, demiryolu bağlantısı, gümrük süresi ve sözleşmelerin uygulanabilirliği belirleyicidir."
+      },
+      {
+        "id": "q2",
+        "prompt": "Kavşakta olmanın maliyeti nasıl ortaya çıkar?",
+        "options": [
+          "Sadece altyapı yatırımı olarak",
+          "Komşuların krizlerinin doğrudan ve hızla ulaşması olarak: göç, kapanan güzergâh, güvenlik yükü",
+          "Vergi gelirlerinde düşüş olarak",
+          "Nüfus artışı olarak"
+        ],
+        "answerIndex": 1,
+        "explanation": "Transit geliri ile kriz maliyeti ayrı hesaplar değil, aynı hesabın iki kalemidir."
+      },
+      {
+        "id": "q3",
+        "prompt": "Kursun temel iddiası nedir?",
+        "options": [
+          "Coğrafya her şeyi belirler",
+          "Coğrafyanın hiçbir etkisi yoktur",
+          "Coğrafya sorunun zeminini kurar, cevabını kurumlar yazar",
+          "Haritalar güvenilmezdir"
+        ],
+        "answerIndex": 2,
+        "explanation": "Aynı boğaz, aynı nehir, aynı yaş yapısı farklı kurumlarla çok farklı sonuçlar verir."
+      }
+    ]
+  }
+]
